@@ -4,8 +4,9 @@
   "private": true,
   "description": "JSON metadata and JavaScript adapters for AppleNovelApp",
   "scripts": {
-    "validate": "node --check scripts/analyze-legado-source.js && node --check scripts/scan-legado-collections.js && node scripts/validate.js",
+    "validate": "node --check scripts/analyze-legado-source.js && node --check scripts/scan-legado-collections.js && node --check scripts/convert-legado-rules.js && node scripts/validate.js",
     "analyze-legado": "node scripts/analyze-legado-source.js",
-    "scan-legado": "node scripts/scan-legado-collections.js"
+    "scan-legado": "node scripts/scan-legado-collections.js",
+    "convert-legado": "node scripts/convert-legado-rules.js"
   }
 }
