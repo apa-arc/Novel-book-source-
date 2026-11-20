@@ -86,6 +86,7 @@ function parseLegacyChain(expression) {
   if (/^@xpath:/i.test(raw)) return {status:"manual",reason:"unsupported-xpath"};
   if (/^@json:/i.test(raw) || /^\$[.[]/.test(raw)) return {status:"manual",reason:"unsupported-jsonpath"};
   const segments=raw.split("@");
+  if (segments[0] === "" && raw.startsWith("@")) segments.shift();
   const tail=(segments[segments.length-1]||"").toLowerCase();
   const output=CHAIN_OUTPUTS.has(tail)||tail==="all" ? (segments.pop(),tail) : "text";
   const steps=[];
