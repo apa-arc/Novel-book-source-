@@ -1,0 +1,41 @@
+"use strict";
+const assert = require("node:assert/strict");
+const fs = require("node:fs");
+const os = require("node:os");
+const path = require("node:path");
+const { buildSubscription } = require("./build-subscription");
+
+const root = fs.mkdtempSync(path.join(os.tmpdir(), "novel-subscription-"));
+try {
+  fs.mkdirSync(path.join(root, "sources"));
+  fs.mkdirSync(path.join(root, "scripts"));
+  const meta = {
+    schemaVersion: 1, id: "demo-source", name: "演示书源", kind: "public-web",
+    version: "1.0.0", description: "测试", baseUrl: "https://example.com",
+    domains: ["example.com"], script: "scripts/demo-source.js", enabled: true,
+    categories: ["测试"]
+  };
+  fs.writeFileSync(path.join(root, "sources/demo-source.json"), JSON.stringify(meta));
+  fs.writeFileSync(path.join(root, "scripts/demo-source.js"), "module.exports = {};");
+
+  const index = { schemaVersion: 1, sources: [
+    { id: "template-source", name: "模板", kind: "public-web", file: "sources/template.json", enabled: false },
+    { id: "demo-source", name: "演示书源", kind: "public-web", file: "sources/demo-source.json", enabled: true }
+  ] };
+  const output = buildSubscription(index, root, "2026-11-20T00:00:00.000Z");
+  assert.equal(output.sourceCount, 1);
+  assert.equal(output.sources[0].id, "demo-source");
+  assert.equal(output.sources[0].scriptUrl, "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/demo-source.js");
+  assert.equal(output.updatedAt, "2026-11-20T00:00:00.000Z");
+
+  assert.throws(() => buildSubscription({ ...index, sources: [...index.sources, index.sources[1]] }, root), /重复 ID/);
+  assert.throws(() => buildSubscription({ ...index, sources: [{ ...index.sources[1], file: "sources/../index.json" }] }, root), /路径非法/);
+  assert.throws(() => buildSubscription({ ...index, sources: [{ ...index.sources[1], name: "错名" }] }, root), /不一致/);
+  assert.throws(() => buildSubscription({ ...index, sources: [{ ...index.sources[1], enabled: true, file: "sources/missing.json" }] }, root), /不存在/);
+  const badMeta = { ...meta, baseUrl: "http://example.com" };
+  fs.writeFileSync(path.join(root, "sources/demo-source.json"), JSON.stringify(badMeta));
+  assert.throws(() => buildSubscription(index, root), /地址或域名白名单无效/);
+  console.log("Subscription builder tests passed.");
+} finally {
+  fs.rmSync(root, { recursive: true, force: true });
+}
