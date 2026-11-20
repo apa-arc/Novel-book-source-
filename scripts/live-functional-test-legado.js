@@ -18,7 +18,7 @@ const REPORT = path.join(ROOT, "reports/live-functional-test.json");
 const KEYWORD = "斗破苍穹";
 const TIMEOUT_MS = 12000;
 const MAX_BODY = 4 * 1024 * 1024;
-const MAX_TESTS = 30;
+const MAX_TESTS = 50;
 const CONCURRENCY = 4;
 const NON_NOVEL = /漫画|動漫|动漫|有声|听书|古籍|国学|诗词|詞典|词典|百科|维基|公版|杂志|影视|短剧|网盘|音乐|播客/i;
 const SCRIPT_OR_AUTH = /@js:|<js>|\bjavascript\b|\bfunction\b|\breturn\b|\$\{/i;
@@ -147,7 +147,6 @@ function extract(node, rules, baseUrl, host) {
   const nonSelector = new Set(["bookList","chapterList","checkKeyWord","init","replaceRegex","webJs","sourceRegex","imageStyle"]);
   for (const [key, rule] of Object.entries(rules || {})) {
     if (nonSelector.has(key) || !rule || typeof rule !== "string") continue;
-    if (!rule || typeof rule !== "string") continue;
     const value = first(node, rule);
     if (value == null || value === "") continue;
     if (["bookUrl","tocUrl","chapterUrl"].includes(key)) out[key] = absolute(value, baseUrl, host);
@@ -261,7 +260,7 @@ async function main() {
       if (index >= selected.length) return;
       results[index] = await testSource(selected[index].source);
       results[index].provider = selected[index].provider;
-      console.log("tested", index + 1, "/", selected.length, results[index].status, results[index].host, results[index].error || results[index].errorCause || "");
+      console.log("tested", index + 1, "/", selected.length, results[index].status, results[index].host, [results[index].error, results[index].errorCause].filter(Boolean).join("/"));
     }
   }
   await Promise.all(Array.from({ length: CONCURRENCY }, worker));
