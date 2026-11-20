@@ -97,6 +97,7 @@ function readOutput(node,output){
 }
 function executeSelector(root,selector){
   if(!root||!selector||typeof selector!=="object") throw new Error("invalid-selector-input");
+  if(selector.engine==="self") return readOutput(root, selector.output || "text");
   if(selector.engine==="css"){
     if(typeof selector.query!=="string"||!selector.query.trim()||selector.query.length>MAX_SELECTOR_LENGTH) throw new Error("invalid-css-query");
     if(typeof root.querySelectorAll!=="function") throw new Error("dom-query-api-required");
