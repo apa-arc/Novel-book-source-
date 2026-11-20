@@ -60,7 +60,7 @@ function parseLegacyChain(expression) {
     if (bracket) {
       segment=bracket[1];
       selection=parseSelection(bracket[2]);
-      if (!selection) return {status:"manual",reason:"unsupported-index-filter"};
+      if (!selection) return {status:"manual",reason:"unsupported-attribute-filter"};
     } else {
       const excluded=segment.match(/^(.*)!(-?\d+(?::-?\d+)*)$/);
       if (excluded) {
