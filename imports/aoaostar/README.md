@@ -1,6 +1,6 @@
 # AOAOSTAR / Legado 书源扫描与导入
 
-本目录登记公开书源合集入口，作为外部书源的**发现渠道**，不是本仓库的运行时依赖。
+本目录登记公开书源合集入口，并保存 AOAOSTAR 全量书源规则快照。镜像结果经过筛选后发布到 `exports/`，不依赖运行时访问上游。
 
 ## 已登记合集
 
@@ -26,7 +26,7 @@ npm run scan-legado -- --json
 npm run scan-legado -- --output=reports/aoaostar-scan.json
 ```
 
-扫描工作流会发布去重后的元数据目录（名称、来源地址、合集位置、扫描级别和审查状态），不复制任何原始书源规则。扫描器只从固定的 `raw.githubusercontent.com/aoaostar/legado` 地址读取 JSON，检查规则字段、脚本迹象、登录和 Cookie 配置。它不执行书源规则，不保存原始规则内容、请求头、Cookie 或凭据。
+扫描工作流会发布去重后的元数据目录（名称、来源地址、合集位置、扫描级别和审查状态），不复制任何原始书源规则。扫描器只从固定的 `raw.githubusercontent.com/aoaostar/legado` 地址读取 JSON，检查规则字段、脚本迹象、登录和 Cookie 配置。规则镜像工作流会保存全量规则快照，并生成普通/成人两份 Legado 格式规则包；导入脚本不会执行书源规则，会移除登录界面/校验、Cookie Jar 和敏感认证请求头，依赖这些凭据的源默认禁用。
 
 ## 分级含义
 
@@ -44,7 +44,7 @@ npm run scan-legado -- --output=reports/aoaostar-scan.json
 1. 先扫描和去重，再逐条检查来源、授权、站点可访问性及规则语法。
 2. 仅将有合法依据、允许自动化访问的源转换为本项目的 JSON 元数据 + JavaScript 适配器。
 3. 对上游内容保留作者、原始仓库/文件链接、版本和许可证信息；上游项目 README 声明 AGPL-3.0。若要复制或再分发上游文件/代码，必须先核对对应文件的许可范围并履行许可证义务。
-4. 不导入或复用个人 Cookie、账号凭据、登录态；不绕过付费墙、验证码、DRM 或访问控制。
+4. 不导入或复用个人 Cookie、账号凭据、登录态；镜像时移除敏感认证字段并禁用依赖登录态的源。不绕过付费墙、验证码、DRM 或访问控制。
 5. 未审核记录可以出现在公开元数据目录中，但不会因此进入正式 `index.json`，也不会在 App 中默认启用。
 
-**重要：** AOAOSTAR 的公开书源合集是来源目录，不代表其中每一条书源都由 AOAOSTAR 原创或都可任意复制。配置备份也不等于小说正文备份。
+**规则镜像链接：** 普通源见 `exports/legado-ordinary.json`，成人源见 `exports/legado-adult.json`；具体数量以 `exports/aoaostar-import-report.json` 为准。该规则包为 Legado 格式，自研 App 需要支持 Legado 规则解释器才能直接执行。\n\n**重要：** AOAOSTAR 的公开书源合集不代表其中每一条规则都由 AOAOSTAR 原创或都可任意复制；上游声明 AGPL-3.0，但各条规则的来源和再分发许可仍需逐条核验。规则镜像不包含小说正文。
