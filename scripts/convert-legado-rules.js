@@ -3,7 +3,7 @@
 // Selector IR remains non-executable; runtime parity requires separate adapter tests.
 // Unsupported diagnostics expose bounded syntax tokens, never full rule expressions.
 // Bare HTML tag names are retained as tag selector steps; absent output defaults to text.
-// Full index-filter syntax is intentionally left for a separate semantics-preserving pass.
+// Index and exclusion selectors are represented as structured IR; runtime parity remains unverified.
 const fs = require("node:fs");
 const path = require("node:path");
 const RULE_GROUPS = { search:"ruleSearch", bookInfo:"ruleBookInfo", toc:"ruleToc", content:"ruleContent", explore:"ruleExplore" };
