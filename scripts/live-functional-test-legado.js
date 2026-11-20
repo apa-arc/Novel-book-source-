@@ -7,7 +7,7 @@ const fs = require("node:fs");
 const path = require("node:path");
 const crypto = require("node:crypto");
 const { parseHTML } = require("linkedom");
-const { convertSource } = require("./convert-legado-rules");
+const { parseLegacyChain } = require("./convert-legado-rules");
 const { executeSelector } = require("../runtime/selector-engine");
 const { scanArticles } = require("../runtime/text-quality");
 
@@ -75,7 +75,7 @@ function isStaticRuleGroup(source) {
 }
 function selector(rule, outputOverride) {
   if (typeof rule !== "string" || !rule.trim() || SCRIPT_OR_AUTH.test(rule)) throw new Error("unsupported-rule-expression");
-  const parsed = require("./convert-legado-rules").parseLegacyChain(rule);
+  const parsed = parseLegacyChain(rule);
   if (parsed.status !== "candidate" || !parsed.selector) throw new Error("unsupported-selector");
   return outputOverride ? { ...parsed.selector, output: outputOverride } : parsed.selector;
 }
@@ -170,11 +170,11 @@ async function testSource(source) {
   try {
     if (adultSource(source)) throw new Error("adult-functional-test-deferred");
     if (source.enabled === false) throw new Error("upstream-source-disabled");
-    if (source.header || source.loginUrl || source.loginUi || source.loginCheckJs || source.enabledCookieJar) throw new Error("login-or-request-header-required");
-    const converted = convertSource(source, 0);
-    if (converted.conversionStatus !== "candidate") throw new Error("unsupported-or-incomplete-rule-groups");
+    if (source.loginUrl || source.loginUi || source.loginCheckJs || source.enabledCookieJar) throw new Error("login-required");
+    const headers = safeHeaders(source);
+    if (!isStaticRuleGroup(source)) throw new Error("unsupported-or-incomplete-rule-groups");
     const searchUrl = simpleSearchUrl(source, KEYWORD, 1);
-    const searchPage = await fetchHtml(searchUrl, host);
+    const searchPage = await fetchHtml(searchUrl, host, headers);
     const searchItems = allNodes(searchPage.document, source.ruleSearch.bookList);
     const books = [];
     for (const item of searchItems.slice(0, 80)) {
@@ -239,13 +239,13 @@ async function main() {
   function add(source, provider) {
     if (!source || typeof source !== "object" || adultSource(source)) return;
     const label = [source.bookSourceName,source.bookSourceGroup,source.bookSourceComment].join(" ");
-    if (NON_NOVEL.test(label) || source.bookSourceType && Number(source.bookSourceType) !== 0) return;
+    if (NON_NOVEL.test(label) || source.enabled === false || source.bookSourceType && Number(source.bookSourceType) !== 0) return;
     let host;
-    try { const u = new URL(source.bookSourceUrl); if (u.protocol !== "https:") return; host = u.hostname.toLowerCase(); } catch { return; }
+    try { const u = new URL(source.bookSourceUrl); if (u.protocol !== "https:" || u.hostname.toLowerCase().endsWith(".jp")) return; host = u.hostname.toLowerCase(); } catch { return; }
     if (seen.has(host)) return;
-    const converted = convertSource(source, 0);
-    if (converted.conversionStatus !== "candidate") return;
-    if (source.header || source.loginUrl || source.loginUi || source.loginCheckJs || source.enabledCookieJar) return;
+    if (source.loginUrl || source.loginUi || source.loginCheckJs || source.enabledCookieJar) return;
+    try { safeHeaders(source); } catch { return; }
+    if (!isStaticRuleGroup(source)) return;
     if (!source.searchUrl || source.searchUrl.includes(",") || SCRIPT_OR_AUTH.test(source.searchUrl)) return;
     seen.add(host);
     candidates.push({ source, provider });
@@ -261,7 +261,7 @@ async function main() {
       if (index >= selected.length) return;
       results[index] = await testSource(selected[index].source);
       results[index].provider = selected[index].provider;
-      console.log("tested", index + 1, "/", selected.length, results[index].status, results[index].host);
+      console.log("tested", index + 1, "/", selected.length, results[index].status, results[index].host, results[index].error || results[index].errorCause || "");
     }
   }
   await Promise.all(Array.from({ length: CONCURRENCY }, worker));
