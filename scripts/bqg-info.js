@@ -39,7 +39,7 @@ const config = {
 const searchTemplate = config.search.urlTemplate;
 delete config.search.urlTemplate;
 config.search.url = (keyword, page) => searchTemplate
-  .replace(/\\{\\{keyword\\}\\}/g, encodeURIComponent(keyword))
-  .replace(/\\{\\{page\\}\\}/g, encodeURIComponent(String(page)));
+   .replaceAll("{{keyword}}", encodeURIComponent(keyword))
+  .replaceAll("{{page}}", encodeURIComponent(String(page)));
 
 module.exports = createAdapter(config);
