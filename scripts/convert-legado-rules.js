@@ -120,11 +120,21 @@ function parseLegacyChain(expression) {
       steps.push({kind:"children",name:null,index,...(selection&&selection.mode!=="index"?{selection}:{})});
       continue;
     }
-    const parts=segment.split(".");
-    let kind=parts.shift();
-    if (!["class","id","tag","text"].includes(kind)) {
-      kind="tag";
-      parts.unshift(segment);
+    if (/^[.#][a-zA-Z_][\\w-]*(?:\\s|[>+~,:\\[])/.test(segment)) {
+      return {status:"candidate",selector:{engine:"css",query:segment,output:"text"}};
+    }
+    let parts, kind;
+    if (/^\\.[a-zA-Z_][\\w-]*$/.test(segment)) {
+      kind="class"; parts=[segment.slice(1)];
+    } else if (/^#[a-zA-Z_][\\w-]*$/.test(segment)) {
+      kind="id"; parts=[segment.slice(1)];
+    } else {
+      parts=segment.split(".");
+      kind=parts.shift();
+      if (!["class","id","tag","text"].includes(kind)) {
+        kind="tag";
+        parts.unshift(segment);
+      }
     }
     const trailingIndex=parts.length>1 ? parseIndex(parts[parts.length-1]) : null;
     const hasIndex=trailingIndex!==null;
