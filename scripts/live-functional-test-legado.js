@@ -89,7 +89,7 @@ function allNodes(root, rule) {
   return result;
 }
 function hostAllowed(candidate, baseHost) {
-  const normalize = value => String(value).toLowerCase().replace(/^(www|m|wap)\\./, "");
+  const normalize = value => String(value).toLowerCase().replace(/^(www|m|wap)\./, "");
   return normalize(candidate) === normalize(baseHost);
 }
 function absolute(raw, base, host) {
