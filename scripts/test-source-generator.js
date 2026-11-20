@@ -10,7 +10,18 @@ const valid = {
   licenseEvidenceUrl: "https://example.com/license",
   metadata: {
     id: "demo-source", name: "演示书源", version: "1.0.0",
-    baseUrl: "https://example.com", domains: ["example.com"]
+    baseUrl: "https://example.com", domains: ["example.com"],
+    appConfig: {
+      searchUrl: "https://example.com/search?q={keyword}",
+      bookUrl: "https://example.com/book/{bookId}",
+      chapterListUrl: "https://example.com/chapters?bookUrl={bookUrl}",
+      chapterUrl: "https://example.com/chapter",
+      htmlRules: {
+        search: { itemSelector: ".book", titleSelector: "a.title", urlSelector: "a.title" },
+        chapters: { itemSelector: ".chapter", titleSelector: "a", urlSelector: "a" },
+        content: { contentSelector: "#content" }
+      }
+    }
   },
   selectors: {
     search: { urlTemplate: "https://example.com/?q={{keyword}}&p={{page}}" },
@@ -27,6 +38,8 @@ assert.throws(() => validateManifest({ ...valid, metadata: { ...valid.metadata, 
 assert.throws(() => validateManifest({ ...valid, metadata: { ...valid.metadata, domains: ["other.example"] } }), /invalid-domain-allowlist/);
 assert.throws(() => validateManifest({ ...valid, selectors: { ...valid.selectors, search: { urlTemplate: "https://example.com/?p={{page}}" } } }), /search-url-template/);
 assert.throws(() => validateManifest({ ...valid, selectors: { ...valid.selectors, content: { body: "password" } } }), /credential-like-field/);
+assert.throws(() => validateManifest({ ...valid, metadata: { ...valid.metadata, appConfig: { ...valid.metadata.appConfig, searchUrl: "https://outside.example/search" } } }), /app-config-url-outside-https-domain-allowlist/);
+assert.throws(() => validateManifest({ ...valid, metadata: { ...valid.metadata, appConfig: { ...valid.metadata.appConfig, htmlRules: { search: { itemSelector: ".book", titleSelector: "a" } } } } }), /app-html-rules-missing-selector/);
 
 const initialIndex = {
   schemaVersion: 1,
