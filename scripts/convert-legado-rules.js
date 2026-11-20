@@ -135,7 +135,7 @@ function parseLegacyChain(expression) {
     } else if (/^#[a-zA-Z_][\\w-]*$/.test(segment)) {
       kind="id"; parts=[segment.slice(1)];
     } else {
-      const implicitTagIndex = segment.match(/^([a-zA-Z][\\w-]*)\\.(-?\\d+)$/);
+      const implicitTagIndex = segment.match(/^([a-zA-Z][\w-]*)\.(-?\d+)$/);
       if (implicitTagIndex) {
         kind="tag";
         parts=[implicitTagIndex[1],implicitTagIndex[2]];
