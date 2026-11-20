@@ -45,5 +45,12 @@ try{
  const reversed=parseLegacyChain("-class.chapter@text");
  assert.equal(reversed.status,"candidate");
  assert.equal(reversed.selector.reverse,true);
+ const unknownOutput=parseLegacyChain("class.book@value");
+ assert.equal(unknownOutput.status,"manual");
+ assert.equal(unknownOutput.reason,"unsupported-output");
+ assert.equal(unknownOutput.outputKind,"value");
+ const unknownSelector=parseLegacyChain("xpath.div@text");
+ assert.equal(unknownSelector.status,"manual");
+ assert.equal(unknownSelector.selectorKind,"xpath");
  console.log("Legado converter fixture tests passed.");
 }finally{fs.rmSync(temp,{recursive:true,force:true});}
