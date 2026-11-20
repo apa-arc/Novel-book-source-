@@ -10,7 +10,7 @@
 |---|---|
 | [书源订阅地址](subscription.json) | 阅读器添加此链接即可获取已启用书源 |
 | [中文维基文库适配候选](docs/zh-wikisource-classics.md) | 首个古典作品来源适配器及验证边界 |
-| [文章乱码扫描器](docs/text-quality.md) | 检查替换字符、编码错位和异常控制字符 |
+| [文章质量扫描器](docs/text-quality.md) | 检查乱码、空章节、过短正文和重复内容 |
 | [书源总索引](index.json) | 查看当前登记的书源及启用状态 |
 | [全部扫描元数据（5152 条）](imports/aoaostar/public-catalog.json) | 浏览去重后的来源目录 |
 | [704 条候选转换进度](imports/aoaostar/conversion-status.json) | 查看候选转换状态与诊断统计 |
@@ -30,7 +30,7 @@
 - `sources/`：书源 JSON 配置
 - `index.json`：书源总索引
 - `schemas/`：书源格式结构定义
-- `runtime/`：独立选择器执行模块及文本质量检查
+- `runtime/`：独立选择器执行模块及文章质量检查
 - `scripts/`：扫描、去重、格式转换和校验工具
 - `imports/`：扫描目录、批次计划和审查记录；[查看 5152 条去重元数据目录](imports/aoaostar/public-catalog.json)
 - `docs/`：书源格式、兼容性和开发说明
