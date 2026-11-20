@@ -29,7 +29,8 @@ try {
   ] };
   const output = buildSubscription(index, root, "2026-11-20T00:00:00.000Z");
   assert.equal(output.sourceCount, 1);
-  assert.equal(output.sources[0].id, "demo-source");\n  assert.equal(output.sources[0].appConfig.searchUrl, "https://example.com/search");
+  assert.equal(output.sources[0].id, "demo-source");
+  assert.equal(output.sources[0].appConfig.searchUrl, "https://example.com/search");
   assert.equal(output.sources[0].scriptUrl, "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/demo-source.js");
   assert.equal(output.updatedAt, "2026-11-20T00:00:00.000Z");
 
