@@ -4,6 +4,7 @@
 // Unsupported diagnostics expose bounded syntax tokens, never full rule expressions.
 // Bare HTML tag names are retained as tag selector steps; absent output defaults to text.
 // Index and exclusion selectors are represented as structured IR; runtime parity remains unverified.
+// Non-index bracket selectors remain manual until their exact selector semantics are implemented.
 const fs = require("node:fs");
 const path = require("node:path");
 const RULE_GROUPS = { search:"ruleSearch", bookInfo:"ruleBookInfo", toc:"ruleToc", content:"ruleContent", explore:"ruleExplore" };
