@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "upstream": "https://github.com/tickmao/Novel",
+  "upstreamCommit": "7c2c4abd7f17d0124e30dbd9e01ea2e18d1349de",
+  "upstreamLicense": "MIT",
+  "upstreamUseNotice": "The upstream README/CREDITS limits the collection to non-commercial learning and sharing; original book-source copyrights remain with their authors.",
+  "upstreamFiles": {
+    "full": "sources/legado/full.json",
+    "fullBlobSha": "39aaf1103e0f2a2ab6151b6341a5e817642a0ba9",
+    "working": "sources/legado/main/working.json",
+    "workingBlobSha": "9c16857afebaf82affe21bdeb365b0804bd54862",
+    "shadow": "sources/legado/main/shadow.json",
+    "shadowBlobSha": "9aa2101b43bc24a7bc80b1700cc115d0e6005315"
+  },
+  "publishedAt": "2026-11-20T15:41:42.416951+00:00",
+  "runtimeEngineCommit": "3cb7acb2a2892e71184c1dd12c8e8d7b5a60fbb7",
+  "runtimeFingerprint": "5b6e2a468ed2b001d8b2cab608f6ca75af9ed467bdeaa9674860db1fd4422e92",
+  "validatorVersion": "legado-reading-v6:3cb7acb2a289",
+  "upstreamHealthyCount": 310,
+  "upstreamReserveCount": 37,
+  "upstreamAcceptanceStatus": "pending",
+  "upstreamAcceptanceNote": "The upstream seven-day acceptance sequence was still pending at the snapshot time; per-source reading evidence and content audit were present for the published healthy set.",
+  "filtering": {
+    "sourceScope": "Published healthy set only; excludes 37 legacy/reserve entries",
+    "requiresCurrentDeepCheck": "valid",
+    "requiresContentAudit": "pass",
+    "requiresEnabledNovel": true,
+    "excludesLoginCookieDynamicOrSecretHeaders": true,
+    "excludesNonNovelAndIPHosts": true,
+    "uniqueSourcesAfterFiltering": 75,
+    "duplicatesWithinPack": 28,
+    "duplicatesAgainstExistingSubscription": 19,
+    "expectedNewSources": 56,
+    "excluded": {
+      "unparseable-header": 26,
+      "login-or-cookie": 166,
+      "duplicateWithinPack": 28,
+      "dynamic-or-secret-header": 2,
+      "invalid-or-ip-host": 1,
+      "not-current-valid": 12
+    }
+  }
+}
