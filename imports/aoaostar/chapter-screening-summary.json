@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-20T16:05:33Z",
+  "workflowRun": 44769000925,
+  "sourceCatalog": "imports/aoaostar/public-catalog.json",
+  "totalUniqueCandidates": 385,
+  "scanBatches": 4,
+  "statusCounts": {
+    "unreachable-or-blocked": 302,
+    "manual-review": 56,
+    "needs-adapter": 14,
+    "non-novel-or-undiscovered": 10,
+    "chapter-sample-clean": 2,
+    "chapter-content-unavailable": 1
+  },
+  "note": "这是对385个归并后候选网站域名的公开章节样本筛查，不是对5152条去重书源元数据记录的删减或替代。状态仅反映本次扫描结果，不等同于书源适配成功、许可获批或可用性保证。未保存章节正文。",
+  "initiallyCleanCandidates": [
+    {
+      "id": "4cfd6bb1d038fdd0",
+      "name": "桃桃书",
+      "domain": "m.ttshu12.com",
+      "sampledChapters": 2,
+      "normal": 2,
+      "flags": [],
+      "licenseStatus": "not-assessed",
+      "adapterStatus": "not-converted"
+    },
+    {
+      "id": "10795e32c3d81fc8",
+      "name": "秒味书屋",
+      "domain": "www.tangsanbooks.com",
+      "sampledChapters": 2,
+      "normal": 2,
+      "flags": [],
+      "licenseStatus": "not-assessed",
+      "adapterStatus": "not-converted"
+    }
+  ],
+  "needsAdapter": [
+    {
+      "name": "新ak小说网",
+      "domain": "xakxsw.com",
+      "observation": "Welcome页，无公开章节链接"
+    },
+    {
+      "name": "全本小说",
+      "domain": "www.qb5.io",
+      "observation": "可见小说站首页，但未发现公开章节链接"
+    },
+    {
+      "name": "追书小说",
+      "domain": "js.jsxsapp.com",
+      "observation": "未发现公开章节链接"
+    },
+    {
+      "name": "阅友小说",
+      "domain": "sma.yueyouxs.com",
+      "observation": "未发现公开章节链接"
+    },
+    {
+      "name": "泡泡小说",
+      "domain": "www.paopaoxs.cn",
+      "observation": "首页标题为短剧百科"
+    },
+    {
+      "name": "笔趣阁⑥",
+      "domain": "wap2.xinbiquge.org",
+      "observation": "未发现公开章节链接"
+    },
+    {
+      "name": "疯读小说",
+      "domain": "fiction.fengduxiaoshuo.com",
+      "observation": "Welcome to nginx"
+    },
+    {
+      "name": "BL小说",
+      "domain": "www.xtfree.com",
+      "observation": "未发现公开章节链接"
+    },
+    {
+      "name": "242小说",
+      "domain": "www.242xs.info",
+      "observation": "首页标题为最新视频"
+    },
+    {
+      "name": "三优小说",
+      "domain": "www.3uxiaoshuo.com",
+      "observation": "未发现公开章节链接"
+    },
+    {
+      "name": "听小说",
+      "domain": "ts.txs12.com",
+      "observation": "未发现公开章节链接"
+    },
+    {
+      "name": "独步小说",
+      "domain": "www.dbxsd.com",
+      "observation": "404 Not Found"
+    },
+    {
+      "name": "新御书屋",
+      "domain": "wap.xyushuwu11.com",
+      "observation": "未发现公开章节链接"
+    }
+  ],
+  "excludedFromFurtherAutomation": [
+    {
+      "name": "疯情阅读",
+      "domain": "m.aaread.club",
+      "reason": "成人内容站点，当前项目不自动适配该类来源"
+    }
+  ],
+  "manualReviewCorrection": {
+    "id": "b8b30ac93bf5a07c",
+    "name": "久久小说①",
+    "domain": "fu44.pw",
+    "previousMisclassification": "chapter-sample-clean",
+    "correctedStatus": "manual-review",
+    "reason": "样本中存在28747字符的超长页面，不能确认是单章正文"
+  }
+}

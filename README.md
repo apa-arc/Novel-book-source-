@@ -15,6 +15,7 @@
 | [书源总索引](index.json) | 查看当前登记的书源及启用状态 |
 | [全部扫描元数据（5152 条）](imports/aoaostar/public-catalog.json) | 浏览去重后的来源目录 |
 | [704 条候选转换进度](imports/aoaostar/conversion-status.json) | 查看候选转换状态与诊断统计 |
+| [385 个候选网站章节筛查汇总](imports/aoaostar/chapter-screening-summary.json) | 查看章节样本筛查结果；网站数量不代表书源记录数量 |
 | [书源格式规范](docs/source-format.md) | 查看 JSON 与解析器接口标准 |
 | [订阅说明](docs/subscription.md) | 查看固定订阅地址、更新规则与兼容要求 |
 | [书源自动生成器](docs/source-generator.md) | 从已审查的规则清单生成书源文件 |
