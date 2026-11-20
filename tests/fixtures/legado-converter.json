@@ -1,0 +1,37 @@
+[
+  {
+    "bookSourceName": "Fixture Static",
+    "bookSourceUrl": "https://example.org",
+    "enabled": true,
+    "ruleSearch": {
+      "bookList": "class.book.0",
+      "name": "tag.a.0@text",
+      "bookUrl": "tag.a.0@href",
+      "author": "class.author.0@text"
+    },
+    "ruleBookInfo": {
+      "name": "//meta[@property='og:title']/@content"
+    },
+    "ruleToc": {
+      "chapterList": "id.list.0@tag.a",
+      "chapterName": "text",
+      "chapterUrl": "href"
+    },
+    "ruleContent": {
+      "content": "@css:.reader-content@html"
+    },
+    "ruleExplore": {}
+  },
+  {
+    "bookSourceName": "Fixture Manual",
+    "bookSourceUrl": "https://example.net",
+    "enabled": true,
+    "ruleSearch": {
+      "name": "tag.a.0@text@js: return result"
+    },
+    "ruleBookInfo": {},
+    "ruleToc": {},
+    "ruleContent": {},
+    "ruleExplore": {}
+  }
+]
