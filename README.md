@@ -12,6 +12,7 @@
 | [中文维基文库适配候选](docs/zh-wikisource-classics.md) | 首个古典作品来源适配器及验证边界 |
 | [文章质量扫描器](docs/text-quality.md) | 检查乱码、空章节、过短正文和重复内容 |
 | [正式启用质量门禁](docs/source-format.md#7-正式启用质量门禁) | 未通过许可、宿主联调和文章质量检查的源不能进入订阅 |
+| [书源四阶段功能测试器](docs/source-functional-testing.md) | 依次检查搜索、详情、目录和正文，输出质量报告 |
 | [书源总索引](index.json) | 查看当前登记的书源及启用状态 |
 | [全部扫描元数据（5152 条）](imports/aoaostar/public-catalog.json) | 浏览去重后的来源目录 |
 | [704 条候选转换进度](imports/aoaostar/conversion-status.json) | 查看候选转换状态与诊断统计 |
