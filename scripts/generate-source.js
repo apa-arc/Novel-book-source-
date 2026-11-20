@@ -6,7 +6,7 @@ const fs = require("node:fs");
 const path = require("node:path");
 const root = path.resolve(__dirname, "..");
 const ID_RE = /^[a-z0-9][a-z0-9-]{2,63}$/;
-const HOST_RE = /^(?=.{1,253}$)(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\\.)*[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?$/i;
+const HOST_RE = /^(?=.{1,253}$)(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)*[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?$/i;
 
 function fail(message) { throw new Error(message); }
 
@@ -18,7 +18,7 @@ function validateManifest(m) {
   const meta = m.metadata || {};
   if (!ID_RE.test(meta.id || "")) fail("invalid-source-id");
   if (typeof meta.name !== "string" || !meta.name.trim() || meta.name.length > 80) fail("invalid-source-name");
-  if (!/^\\d+\\.\\d+\\.\\d+$/.test(meta.version || "")) fail("invalid-source-version");
+  if (!/^\d+\.\d+\.\d+$/.test(meta.version || "")) fail("invalid-source-version");
   let base;
   try { base = new URL(meta.baseUrl); } catch { fail("invalid-base-url"); }
   if (base.protocol !== "https:" || base.username || base.password) fail("base-url-must-be-https");
@@ -32,7 +32,7 @@ function validateManifest(m) {
     }
     const json = JSON.stringify(selectors[group]);
     if (json.length > 100000) fail("selector-config-too-large");
-    if (/\\b(?:cookie|authorization|token|password)\\b/i.test(json)) fail("credential-like-field-rejected");
+    if (/\b(?:cookie|authorization|token|password)\b/i.test(json)) fail("credential-like-field-rejected");
   }
   if (typeof selectors.search.urlTemplate !== "string" ||
       !selectors.search.urlTemplate.includes("{{keyword}}")) fail("search-url-template-must-contain-keyword");
@@ -62,16 +62,16 @@ function renderFiles(manifest) {
     "const searchTemplate = config.search.urlTemplate;",
     "delete config.search.urlTemplate;",
     "config.search.url = (keyword, page) => searchTemplate",
-    '  .replace(/\\\\{\\\\{keyword\\\\}\\\\}/g, encodeURIComponent(keyword))',
-    '  .replace(/\\\\{\\\\{page\\\\}\\\\}/g, encodeURIComponent(String(page)));',
+    '  .replace(/\\{\\{keyword\\}\\}/g, encodeURIComponent(keyword))',
+    '  .replace(/\\{\\{page\\}\\}/g, encodeURIComponent(String(page)));',
     "module.exports = createAdapter(config);",
     ""
-  ].join("\\n");
+  ].join("\n");
   return {
     id,
     sourcePath: "sources/" + id + ".json",
     scriptPath: "scripts/" + id + ".js",
-    sourceContent: JSON.stringify(source, null, 2) + "\\n",
+    sourceContent: JSON.stringify(source, null, 2) + "\n",
     scriptContent: script,
     indexEntry: { id, name: source.name, kind: source.kind, file: "sources/" + id + ".json", enabled: false }
   };
@@ -123,7 +123,7 @@ function main() {
       fs.writeFileSync(sourcePath, output.sourceContent, { flag: "wx" }); created.push(sourcePath);
       fs.writeFileSync(scriptPath, output.scriptContent, { flag: "wx" }); created.push(scriptPath);
     }
-    fs.writeFileSync(tempIndex, JSON.stringify(nextIndex, null, 2) + "\\n", { flag: "wx" });
+    fs.writeFileSync(tempIndex, JSON.stringify(nextIndex, null, 2) + "\n", { flag: "wx" });
     fs.renameSync(tempIndex, indexPath);
   } catch (error) {
     for (const file of created) { try { fs.unlinkSync(file); } catch {} }
