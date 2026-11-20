@@ -32,12 +32,12 @@ jobs:
         run: node scripts/build-subscription.js
       - name: Commit updated manifests
         run: |
-          if git diff --quiet -- subscription.json adult-subscription.json; then
+          if git diff --quiet -- app-subscription.json adult-app-subscription.json; then
             echo "Subscription manifests are already up to date."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add subscription.json adult-subscription.json
+          git add app-subscription.json adult-app-subscription.json
           git commit -m "chore: update ordinary and adult subscriptions"
           git push
