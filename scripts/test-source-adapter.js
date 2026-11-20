@@ -66,7 +66,7 @@ const http = { async get(url) { requests.push(url); return { url, document: root
   assert.equal(chapters[0].chapterUrl, "https://example.test/chapter/1");
   assert.equal(chapters[1].index, 1);
   assert.deepEqual(await adapter.getContent({ chapterUrl: chapters[0].chapterUrl, http }), {
-    content: "这是正文内容"
+    title: "测试小说", content: "这是正文内容"
   });
   assert.throws(() => resolveAllowed("http://example.test/a", config.baseUrl, new Set(config.domains)));
   assert.throws(() => resolveAllowed("https://evil.test/a", config.baseUrl, new Set(config.domains)));
