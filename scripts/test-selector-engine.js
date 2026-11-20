@@ -5,7 +5,7 @@ const {executeSelector}=require("../runtime/selector-engine");
 
 function element(tag,attrs={},children=[]){
   const node={
-    nodeType:1,tagName:tag.toUpperCase(),attributes:attrs,children,childNodes:[],
+    nodeType:1,tagName:tag.toUpperCase(),attributes:attrs,children:children.filter(child=>typeof child!=="string"),childNodes:[],
     get textContent(){return this.childNodes.map(x=>x.nodeType===3?x.nodeValue:x.textContent).join("");},
     get innerHTML(){return this.childNodes.map(x=>x.nodeType===3?x.nodeValue:x.outerHTML).join("");},
     get outerHTML(){return "<"+tag+">"+this.innerHTML+"</"+tag+">";},
