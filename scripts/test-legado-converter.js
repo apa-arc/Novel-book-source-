@@ -45,10 +45,10 @@ try{
  const reversed=parseLegacyChain("-class.chapter@text");
  assert.equal(reversed.status,"candidate");
  assert.equal(reversed.selector.reverse,true);
- const unknownOutput=parseLegacyChain("class.book@value");
- assert.equal(unknownOutput.status,"manual");
- assert.equal(unknownOutput.reason,"unsupported-output");
- assert.equal(unknownOutput.outputKind,"value");
+ const valueTag=parseLegacyChain("class.book@value");
+ assert.equal(valueTag.status,"candidate");
+ assert.equal(valueTag.selector.steps[0].name,"book");
+ assert.equal(valueTag.selector.steps[1].name,"value");
  const unknownSelector=parseLegacyChain("@xpath://div");
  assert.equal(unknownSelector.status,"manual");
  assert.equal(unknownSelector.reason,"unsupported-xpath");
