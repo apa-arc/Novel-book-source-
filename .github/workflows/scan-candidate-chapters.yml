@@ -6,7 +6,7 @@ on:
       limit:
         description: "Maximum unique candidate domains to probe (1-100)"
         required: false
-        default: "40"
+        default: "100"
   push:
     branches: [main]
     paths:
@@ -34,7 +34,7 @@ jobs:
           node-version: 22
       - name: Scan public sitemap chapter samples
         env:
-          SCAN_LIMIT: \${{ github.event.inputs.limit || '40' }}
+          SCAN_LIMIT: \${{ github.event.inputs.limit || '100' }}
         run: node scripts/scan-candidate-chapters-cli.js --limit="$SCAN_LIMIT"
       - name: Upload metadata-only results
         if: always()
