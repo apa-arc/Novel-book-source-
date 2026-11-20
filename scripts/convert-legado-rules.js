@@ -28,12 +28,12 @@ function parseLegacyChain(expression) {
   }
   const segments=raw.split("@");
   const output=(segments.pop()||"text").toLowerCase();
-  if (!CHAIN_OUTPUTS.has(output) && output!=="all") return {status:"manual",reason:"unsupported-output"};
+  if (!CHAIN_OUTPUTS.has(output) && output!=="all") return {status:"manual",reason:"unsupported-output",outputKind:/^[a-z][a-z0-9_-]{0,24}$/i.test(output)?output:null};
   const steps=[];
   let reverse=false;
   for (const segmentValue of segments) {
     let segment=segmentValue.trim();
-    if (!segment) return {status:"manual",reason:"unsupported-selector-step"};
+    if (!segment) return {status:"manual",reason:"unsupported-selector-step",selectorKind:null};
     if (segment.startsWith("-")) { reverse=true; segment=segment.slice(1); }
     const parts=segment.split(".");
     const kind=parts.shift();
@@ -42,7 +42,7 @@ function parseLegacyChain(expression) {
       steps.push({kind:"children",name:null,index:null});
       continue;
     }
-    if (!["class","id","tag","text"].includes(kind) || parts.length<1) return {status:"manual",reason:"unsupported-selector-step"};
+    if (!["class","id","tag","text"].includes(kind) || parts.length<1) return {status:"manual",reason:"unsupported-selector-step",selectorKind:/^[a-z][a-z0-9_-]{0,24}$/i.test(kind||"")?kind:null};
     const trailingIndex=parts.length>1 ? parseIndex(parts[parts.length-1]) : null;
     const hasIndex=trailingIndex!==null;
     const name=hasIndex ? parts.slice(0,-1).join(".") : parts.join(".");
