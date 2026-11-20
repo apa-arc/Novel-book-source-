@@ -83,9 +83,15 @@ function readOutput(node,output){
   if(output==="textnodes") return textNodes(node);
   if(output==="owntext") return textNodes(node).join("");
   if(output==="html") return String(node.innerHTML||"");
-  if(output==="href"||output==="src"){
+  if(output==="href"||output==="src"||output==="content"){
     if(typeof node.getAttribute!=="function") return null;
     return node.getAttribute(output);
+  }
+  if(output.startsWith("attr:")){
+    const name=output.slice(5);
+    if(!/^[a-zA-Z_:][a-zA-Z0-9_.:-]{0,63}$/.test(name)) throw new Error("invalid-attribute-output");
+    if(typeof node.getAttribute!=="function") return null;
+    return node.getAttribute(name);
   }
   throw new Error("unsupported-selector-output");
 }
