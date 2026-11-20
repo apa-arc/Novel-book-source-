@@ -59,7 +59,8 @@ function buildSubscription(index, root, updatedAt = new Date().toISOString()) {
       domains: meta.domains,
       categories: Array.isArray(meta.categories) ? meta.categories : [],
       metadataUrl: RAW_BASE + item.file,
-      scriptUrl: RAW_BASE + meta.script
+      scriptUrl: RAW_BASE + meta.script,
+      ...(meta.appConfig ? { appConfig: meta.appConfig } : {})
     });
   }
 
