@@ -78,7 +78,7 @@ function parseLegacyChain(expression) {
     }
     if (segment==="children" || segment==="") {
       const index=selection&&selection.mode==="index"?selection.index:null;
-      steps.push({kind:"children",name:null,index,selection:selection&&selection.mode!=="index"?selection:null});
+      steps.push({kind:"children",name:null,index,...(selection&&selection.mode!=="index"?{selection}:{})});
       continue;
     }
     const parts=segment.split(".");
@@ -92,7 +92,7 @@ function parseLegacyChain(expression) {
     const name=hasIndex ? parts.slice(0,-1).join(".") : parts.join(".");
     if (!name) return {status:"manual",reason:"invalid-selector-index"};
     const index=hasIndex?trailingIndex:(selection&&selection.mode==="index"?selection.index:null);
-    steps.push({kind,name,index,selection:selection&&selection.mode!=="index"?selection:null});
+    steps.push({kind,name,index,...(selection&&selection.mode!=="index"?{selection}:{})});
   }
   if (!steps.length) return {status:"manual",reason:"empty-selector-chain"};
   return {status:"candidate",selector:{engine:"legado-chain",steps,output,reverse}};
