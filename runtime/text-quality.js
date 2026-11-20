@@ -24,4 +24,36 @@ function scanTextQuality(value) {
   };
 }
 
-module.exports = { scanTextQuality };
+function normalizeForDuplicateCheck(value) {
+  return String(value == null ? "" : value)
+    .replace(/\s+/gu, "")
+    .replace(/[“”‘’「」『』《》〈〉]/gu, "")
+    .trim();
+}
+
+function scanArticles(articles) {
+  const seen = new Map();
+  const results = [];
+  for (const article of Array.isArray(articles) ? articles : []) {
+    const title = String(article && article.title || "Untitled");
+    const content = String(article && article.content || "");
+    const quality = scanTextQuality(content);
+    const normalized = normalizeForDuplicateCheck(content);
+    const flags = quality.flags.slice();
+    if (normalized.length >= 80) {
+      if (seen.has(normalized)) flags.push({ rule: "duplicate-content", count: 1, duplicateOf: seen.get(normalized) });
+      else seen.set(normalized, title);
+    }
+    results.push({ title, status: flags.some(item => item.rule !== "very-short-content") ? "suspect" : flags.length ? "review" : "normal", length: quality.length, flags });
+  }
+  const summary = {
+    scanned: results.length,
+    normal: results.filter(item => item.status === "normal").length,
+    suspect: results.filter(item => item.status === "suspect").length,
+    review: results.filter(item => item.status === "review").length,
+    duplicates: results.filter(item => item.flags.some(flag => flag.rule === "duplicate-content")).length
+  };
+  return { summary, results };
+}
+
+module.exports = { scanTextQuality, scanArticles };
