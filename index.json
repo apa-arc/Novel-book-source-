@@ -8,13 +8,6 @@
       "kind": "public-web",
       "file": "sources/template.json",
       "enabled": false
-    },
-    {
-      "id": "novel-demo-source",
-      "name": "原创联调书源（星海来信）",
-      "kind": "public-web",
-      "file": "sources/novel-demo-source.json",
-      "enabled": true
     }
   ]
 }
