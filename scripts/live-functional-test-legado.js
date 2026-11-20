@@ -92,9 +92,15 @@ function allNodes(root, rule) {
   if (!Array.isArray(result)) throw new Error("list-rule-not-array");
   return result;
 }
+function registrableDomain(hostname) {
+  const labels = String(hostname).toLowerCase().split(".");
+  if (labels.length < 2) return String(hostname).toLowerCase();
+  const two = labels.slice(-2).join(".");
+  const multiLevel = new Set(["co.uk","com.cn","net.cn","org.cn","com.hk","com.tw","co.jp","com.au","net.au"]);
+  return multiLevel.has(two) && labels.length >= 3 ? labels.slice(-3).join(".") : two;
+}
 function hostAllowed(candidate, baseHost) {
-  const normalize = value => String(value).toLowerCase().replace(/^(www|m|wap)\./, "");
-  return normalize(candidate) === normalize(baseHost);
+  return registrableDomain(candidate) === registrableDomain(baseHost);
 }
 function absolute(raw, base, host) {
   const u = new URL(String(raw || ""), base);
