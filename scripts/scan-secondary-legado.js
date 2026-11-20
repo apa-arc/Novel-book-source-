@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 "use strict";
-// Read-only metadata scan of a second MIT-licensed Legado collection.
-// Does not execute rule expressions, probe sites, or copy source definitions.
 const fs=require("node:fs");
 const path=require("node:path");
 const crypto=require("node:crypto");
