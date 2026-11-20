@@ -78,10 +78,10 @@ function main() {
     name: "成人小说书源",
     description: "独立隔离的成人书源订阅"
   });
-  fs.writeFileSync(path.join(root, "subscription.json"), JSON.stringify(ordinary, null, 2) + "\n");
-  fs.writeFileSync(path.join(root, "adult-subscription.json"), JSON.stringify(adult, null, 2) + "\n");
-  console.log("普通订阅：", ordinary.sourceCount, "个已启用书源");
-  console.log("成人订阅：", adult.sourceCount, "个已启用书源");
+  fs.writeFileSync(path.join(root, "app-subscription.json"), JSON.stringify(ordinary, null, 2) + "\n");
+  fs.writeFileSync(path.join(root, "adult-app-subscription.json"), JSON.stringify(adult, null, 2) + "\n");
+  console.log("App 原生普通清单：", ordinary.sourceCount, "个已验证书源");
+  console.log("App 原生成年清单：", adult.sourceCount, "个已验证书源");
 }
 
 module.exports = { buildSubscription };
