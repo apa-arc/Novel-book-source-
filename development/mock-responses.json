@@ -1,0 +1,62 @@
+{
+  "notice": "全部为本项目原创模拟数据，不代表真实网站或真实书源。",
+  "search": {
+    "keyword": "星海来信",
+    "items": [
+      {
+        "id": "demo-book-001",
+        "title": "星海来信",
+        "author": "书源测试组",
+        "description": "一部用于阅读器联调的原创短篇。远航船收到一封来自旧地球的信，信中只有一句话：请记得抬头看星星。",
+        "bookUrl": "https://mock-api.example.invalid/book/demo-book-001",
+        "coverUrl": "https://mock-api.example.invalid/covers/demo-book-001.jpg",
+        "category": "科幻",
+        "latestChapter": "第三章 回信"
+      }
+    ]
+  },
+  "detail": {
+    "id": "demo-book-001",
+    "title": "星海来信",
+    "author": "书源测试组",
+    "description": "一部用于阅读器联调的原创短篇。远航船收到一封来自旧地球的信，信中只有一句话：请记得抬头看星星。",
+    "status": "completed",
+    "wordCount": 420,
+    "latestChapter": "第三章 回信",
+    "coverUrl": "https://mock-api.example.invalid/covers/demo-book-001.jpg"
+  },
+  "chapters": [
+    {
+      "id": "demo-chapter-001",
+      "title": "第一章 漂流瓶",
+      "index": 0,
+      "url": "https://mock-api.example.invalid/chapter/demo-chapter-001"
+    },
+    {
+      "id": "demo-chapter-002",
+      "title": "第二章 蓝色星球",
+      "index": 1,
+      "url": "https://mock-api.example.invalid/chapter/demo-chapter-002"
+    },
+    {
+      "id": "demo-chapter-003",
+      "title": "第三章 回信",
+      "index": 2,
+      "url": "https://mock-api.example.invalid/chapter/demo-chapter-003"
+    }
+  ],
+  "contents": {
+    "demo-chapter-001": {
+      "title": "第一章 漂流瓶",
+      "content": "远航船离开地球的第三百天，通讯器收到一段没有署名的文字。\n\n“如果你还能看见星星，就说明夜晚还没有输。”\n\n林澈把这句话抄进航行日志，第一次觉得漫长的宇宙并不空旷。"
+    },
+    "demo-chapter-002": {
+      "title": "第二章 蓝色星球",
+      "content": "观测窗外，一颗蓝色星球缓缓转动。林澈想起童年时海边的风，也想起母亲说过，远行的人总要有一个可以回去的方向。"
+    },
+    "demo-chapter-003": {
+      "title": "第三章 回信",
+      "content": "他对着通讯器输入回复：“我看见了。星星一直都在。”\n\n发送键亮起，远方没有立刻回答。但这一次，林澈没有感到孤单。"
+    }
+  }
+}

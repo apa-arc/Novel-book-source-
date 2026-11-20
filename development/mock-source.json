@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "id": "app-mock-json-source",
+  "name": "App 联调模拟书源（普通）",
+  "version": "0.1.0",
+  "baseUrl": "https://mock-api.example.invalid",
+  "searchUrl": "https://mock-api.example.invalid/search?q={keyword}",
+  "bookUrl": "https://mock-api.example.invalid/book/{bookId}",
+  "chapterListUrl": "https://mock-api.example.invalid/book/{bookId}/chapters",
+  "chapterUrl": "https://mock-api.example.invalid/chapter/{chapterId}",
+  "enabled": false,
+  "developmentOnly": true,
+  "category": "general",
+  "description": "仅用于 AppleNovelApp 开发阶段的本地模拟联调；不访问真实网站，不进入正式订阅。"
+}
