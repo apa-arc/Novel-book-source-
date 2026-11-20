@@ -232,6 +232,25 @@
       "type": "string",
       "format": "uri",
       "pattern": "^https://"
+    },
+    "licenseApproved": {
+      "type": "boolean"
+    },
+    "licenseEvidence": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2000
+    },
+    "hostValidated": {
+      "type": "boolean"
+    },
+    "qualityReport": {
+      "type": "string",
+      "pattern": "^quality-reports/[a-z0-9-]+\\.json$"
+    },
+    "functionalTestReport": {
+      "type": "string",
+      "pattern": "^quality-reports/[a-z0-9-]+-functional\\.json$"
     }
   }
 }
