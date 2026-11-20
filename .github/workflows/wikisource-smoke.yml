@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - "scripts/smoke-zh-wikisource.js"
+      - "runtime/text-quality.js"
       - ".github/workflows/wikisource-smoke.yml"
 
 permissions:
@@ -14,11 +15,11 @@ permissions:
 jobs:
   live-smoke:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Check live Wikisource API and pages
+      - name: Check live Wikisource API, pages, and text quality
         run: node scripts/smoke-zh-wikisource.js
