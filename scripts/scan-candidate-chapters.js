@@ -62,10 +62,11 @@ async function scanOne(c,fetchImpl){
   if(r.status==="suspect")r.reasons.push("chapter-text-quality-findings");return r;
  }catch(e){r.status="unreachable-or-blocked";r.reasons.push(String(e.message||e).slice(0,120));return r;}
 }
-async function scanCandidates({candidates,fetchImpl=fetch,limit=40}){
- const chosen=[],hostsSeen=new Set();for(const c of candidates||[]){if(!c?.baseUrl||ADULT.test(String(c.group||"")+" "+String(c.name||"")))continue;let h;try{h=new URL(c.baseUrl).hostname.toLowerCase();}catch{continue;}
- const aliases=hostAliases(h);const key=[...aliases].sort().join("|");if(hostsSeen.has(key))continue;hostsSeen.add(key);chosen.push(c);if(chosen.length>=Math.max(1,Math.min(100,Number(limit)||40)))break;}
+async function scanCandidates({candidates,fetchImpl=fetch,limit=100,offset=0}){
+ const unique=[],hostsSeen=new Set();for(const c of candidates||[]){if(!c?.baseUrl||ADULT.test(String(c.group||"")+" "+String(c.name||"")))continue;let h;try{h=new URL(c.baseUrl).hostname.toLowerCase();}catch{continue;}
+ const aliases=hostAliases(h);const key=[...aliases].sort().join("|");if(hostsSeen.has(key))continue;hostsSeen.add(key);unique.push(c);}
+ const start=Math.max(0,Number(offset)||0),size=Math.max(1,Math.min(100,Number(limit)||100));const chosen=unique.slice(start,start+size);
  const results=[];for(const c of chosen)results.push(await scanOne(c,fetchImpl));const counts={};for(const r of results)counts[r.status]=(counts[r.status]||0)+1;
- return{schemaVersion:2,generatedAt:new Date().toISOString(),mode:"public-homepage-and-sitemap-chapter-sample",candidateCount:chosen.length,counts,note:"Limited public-page sample only. Canonical www/mobile host aliases are allowed; no login, cookies, paywall bypass, upstream rules or novel text are stored. Clean sample is not license approval or full-site validation.",results};
+ return{schemaVersion:2,generatedAt:new Date().toISOString(),offset:start,totalUniqueCandidates:unique.length,mode:"public-homepage-and-sitemap-chapter-sample",candidateCount:chosen.length,counts,note:"Limited public-page sample only. Canonical www/mobile host aliases are allowed; no login, cookies, paywall bypass, upstream rules or novel text are stored. Clean sample is not license approval or full-site validation.",results};
 }
 module.exports={scanCandidates,textFromHtml,sitemapUrls,robotsSitemaps,extractLinks,hostAliases};

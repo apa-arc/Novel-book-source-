@@ -2,11 +2,6 @@ name: Scan candidate novel chapters
 
 on:
   workflow_dispatch:
-    inputs:
-      limit:
-        description: "Maximum unique candidate domains to probe (1-100)"
-        required: false
-        default: "100"
   push:
     branches: [main]
     paths:
@@ -27,20 +22,22 @@ jobs:
   scan:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        offset: [0, 100, 200, 300]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
       - name: Scan public sitemap chapter samples
-        env:
-          SCAN_LIMIT: ${{ github.event.inputs.limit || '100' }}
-        run: node scripts/scan-candidate-chapters-cli.js --limit="$SCAN_LIMIT"
+        run: node scripts/scan-candidate-chapters-cli.js --limit=100 --offset=${{ matrix.offset }}
       - name: Upload metadata-only results
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: candidate-novel-chapter-scan
+          name: candidate-novel-chapter-scan-${{ matrix.offset }}
           path: artifacts/candidate-chapter-scan.json
           if-no-files-found: error
           retention-days: 30

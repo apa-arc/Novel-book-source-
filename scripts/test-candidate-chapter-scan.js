@@ -17,5 +17,7 @@ const html="<html><head><title>测试小说 第1章 开始</title></head><body><
  throw Error("unexpected-url");};
  const report=await scanCandidates({candidates:[{id:"adult",name:"成人小说",baseUrl:"https://adult.example",group:"成人"},{id:"ok",name:"测试小说",baseUrl:"https://example.com"}],fetchImpl:fake,limit:10});
  assert.equal(report.candidateCount,1);assert.equal(report.results[0].status,"chapter-sample-clean");assert.equal(report.results[0].sampledChapters,1);assert.ok(!JSON.stringify(report).includes(chapter));assert.equal(calls.length,4);
+ const report=await scanCandidates({candidates:[{id:"first",name:"第一站",baseUrl:"https://first.example"},{id:"second",name:"第二站",baseUrl:"https://second.example"}],fetchImpl:async()=>{throw Error("blocked");},limit:1,offset:1});
+ assert.equal(report.candidateCount,1);assert.equal(report.offset,1);assert.equal(report.totalUniqueCandidates,2);assert.equal(report.results[0].id,"second");
  console.log("Candidate chapter scanner tests passed.");
 })().catch(e=>{console.error(e);process.exitCode=1;});
