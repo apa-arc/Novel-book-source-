@@ -4,56 +4,7 @@
   "name": "普通小说书源",
   "description": "所有非成人书源统一订阅",
   "repository": "https://github.com/apa-arc/Novel-book-source-",
-  "updatedAt": "2026-11-20T17:30:54.894Z",
-  "sourceCount": 1,
-  "sources": [
-    {
-      "id": "novel-demo-source",
-      "name": "原创联调书源（星海来信）",
-      "kind": "public-web",
-      "version": "1.0.0",
-      "description": "本仓库原创短篇测试源，提供真实 HTTPS 静态页面，可用于验证搜索、详情、目录和正文读取。",
-      "baseUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/demo-content/",
-      "domains": [
-        "raw.githubusercontent.com"
-      ],
-      "categories": [
-        "原创测试",
-        "科幻"
-      ],
-      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/novel-demo-source.json",
-      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/novel-demo-source.js",
-      "appConfig": {
-        "searchUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/demo-content/search.html",
-        "bookUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/demo-content/book.html",
-        "chapterListUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/demo-content/chapters.html",
-        "chapterUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/demo-content/chapter-1.html",
-        "htmlRules": {
-          "search": {
-            "itemSelector": ".book",
-            "titleSelector": ".title",
-            "urlSelector": ".title",
-            "authorSelector": ".author",
-            "descriptionSelector": ".intro",
-            "urlAttribute": "href"
-          },
-          "detail": {
-            "titleSelector": ".title",
-            "authorSelector": ".author",
-            "descriptionSelector": ".intro"
-          },
-          "chapters": {
-            "itemSelector": ".chapter",
-            "titleSelector": "a",
-            "urlSelector": "a",
-            "urlAttribute": "href"
-          },
-          "content": {
-            "contentSelector": "#content",
-            "titleSelector": ".title"
-          }
-        }
-      }
-    }
-  ]
+  "updatedAt": "2026-11-21T00:00:00Z",
+  "sourceCount": 0,
+  "sources": []
 }
