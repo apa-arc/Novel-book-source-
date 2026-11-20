@@ -43,11 +43,37 @@ async function main(){
  }
  const counts={candidate:0,partial:0,manual:0,unavailable:0};
  for(const row of rows) counts[row.status]=(counts[row.status]||0)+1;
- const report={schemaVersion:1,generatedAt:new Date().toISOString(),provider:"AOAOSTAR / Legado",sourceCount:rows.length,counts,fetchFailures:failures,note:"Sanitized selector compatibility report only. Not runnable adapters, not a license determination, and not a live availability test. Raw source definitions, headers, cookies, tokens and credentials are not stored.",sources:rows};
+ const generatedAt=new Date().toISOString();
+ const report={schemaVersion:1,generatedAt,provider:"AOAOSTAR / Legado",sourceCount:rows.length,counts,fetchFailures:failures,note:"Sanitized selector compatibility report only. Not runnable adapters, not a license determination, and not a live availability test. Raw source definitions, headers, cookies, tokens and credentials are not stored.",sources:rows};
  const out=path.join(root,"reports","aoaostar-conversion-review.json");
  fs.mkdirSync(path.dirname(out),{recursive:true});
- fs.writeFileSync(out,JSON.stringify(report,null,2)+"\n","utf8");
- console.log(JSON.stringify({sourceCount:rows.length,counts,fetchFailures:failures.length,output:out},null,2));
+ fs.writeFileSync(out,JSON.stringify(report,null,2)+"\\n","utf8");
+ // Durable public progress file: metadata and aggregate diagnostics only; no selector expressions.
+ const summarySources=rows.map(row=>{
+   const groups={};
+   for(const [name,g] of Object.entries(row.groups||{})){
+     const fields=Object.values(g.fields||{});
+     const reasons={};
+     for(const field of fields) if(field.reason) reasons[field.reason]=(reasons[field.reason]||0)+1;
+     groups[name]={status:g.status,fieldCount:fields.length,manualReasons:reasons};
+   }
+   return {
+     id:row.id,collectionId:row.collectionId,index:row.index,name:row.name,
+     baseUrl:row.baseUrl||null,conversionStatus:row.status,
+     warningCodes:row.warnings||[],groups,
+     redistributionStatus:"not-assessed",
+     runtimeStatus:"not-a-runnable-adapter"
+   };
+ });
+ const summary={
+   schemaVersion:1,generatedAt,provider:"AOAOSTAR / Legado",
+   sourceCount:rows.length,counts,fetchFailureCount:failures.length,
+   note:"Metadata-only conversion progress. Selector expressions, original rules, scripts, headers, cookies, tokens and credentials are excluded. 'candidate' means static selector parsing only, not a runnable adapter, authorization approval, or live site test.",
+   sources:summarySources
+ };
+ const summaryPath=path.join(root,"imports","aoaostar","conversion-status.json");
+ fs.writeFileSync(summaryPath,JSON.stringify(summary,null,2)+"\\n","utf8");
+ console.log(JSON.stringify({sourceCount:rows.length,counts,fetchFailures:failures.length,output:out,summary:summaryPath},null,2));
  if(failures.length) process.exitCode=1;
 }
 main().catch(e=>{console.error(e);process.exitCode=1;});
