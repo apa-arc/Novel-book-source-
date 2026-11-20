@@ -47,7 +47,7 @@ async function main(){
  const report={schemaVersion:1,generatedAt,provider:"AOAOSTAR / Legado",sourceCount:rows.length,counts,fetchFailures:failures,note:"Sanitized selector compatibility report only. Not runnable adapters, not a license determination, and not a live availability test. Raw source definitions, headers, cookies, tokens and credentials are not stored.",sources:rows};
  const out=path.join(root,"reports","aoaostar-conversion-review.json");
  fs.mkdirSync(path.dirname(out),{recursive:true});
- fs.writeFileSync(out,JSON.stringify(report,null,2)+"\\n","utf8");
+ fs.writeFileSync(out,JSON.stringify(report,null,2)+"\n","utf8");
  // Durable public progress file: metadata and aggregate diagnostics only; no selector expressions.
  const summarySources=rows.map(row=>{
    const groups={};
@@ -72,7 +72,7 @@ async function main(){
    sources:summarySources
  };
  const summaryPath=path.join(root,"imports","aoaostar","conversion-status.json");
- fs.writeFileSync(summaryPath,JSON.stringify(summary,null,2)+"\\n","utf8");
+ fs.writeFileSync(summaryPath,JSON.stringify(summary,null,2)+"\n","utf8");
  console.log(JSON.stringify({sourceCount:rows.length,counts,fetchFailures:failures.length,output:out,summary:summaryPath},null,2));
  if(failures.length) process.exitCode=1;
 }
