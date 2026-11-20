@@ -2,10 +2,7 @@
 
 const { scanTextQuality } = require("../runtime/text-quality");
 const API = "https://zh.wikisource.org/w/api.php";
-const HEADERS = {
-  "user-agent": "PersonalNovelSources-SmokeTest/1.0 (GitHub Actions; source compatibility check)",
-  "accept": "application/json"
-};
+const HEADERS = { "user-agent": "PersonalNovelSources-SmokeTest/1.0 (GitHub Actions; source compatibility check)", "accept": "application/json" };
 
 async function api(params) {
   const url = new URL(API);
@@ -16,26 +13,18 @@ async function api(params) {
   if (data.error) throw new Error("MediaWiki API error: " + data.error.code);
   return data;
 }
-
-function assert(condition, message) {
-  if (!condition) throw new Error(message);
-}
+function assert(condition, message) { if (!condition) throw new Error(message); }
 
 async function scanChapterPages() {
   console.log("[5/5] Scanning chapter source text for possible garbling...");
-  const parsed = await api({
-    action: "parse", format: "json", page: "三國志演義", prop: "links", pllimit: "max"
-  });
+  const parsed = await api({ action: "parse", format: "json", page: "三國演義", prop: "links" });
   const links = parsed.parse && parsed.parse.links || [];
   const titles = [...new Set(links.map(link => link.title).filter(title => /第\d{3}回/.test(title)))];
-  assert(titles.length > 0, "No numbered chapter links found on the work page");
+  assert(titles.length > 0, "No numbered chapter links found; page title=" + (parsed.parse && parsed.parse.title) + "; links=" + links.length);
   const report = [];
   for (let offset = 0; offset < titles.length; offset += 50) {
     const batch = titles.slice(offset, offset + 50);
-    const result = await api({
-      action: "query", format: "json", formatversion: "2",
-      titles: batch.join("|"), prop: "revisions", rvprop: "content", rvslots: "main"
-    });
+    const result = await api({ action: "query", format: "json", formatversion: "2", titles: batch.join("|"), prop: "revisions", rvprop: "content", rvslots: "main" });
     for (const page of result.query && result.query.pages || []) {
       const raw = page.revisions && page.revisions[0] && page.revisions[0].slots && page.revisions[0].slots.main && page.revisions[0].slots.main.content || "";
       const quality = scanTextQuality(raw);
@@ -46,10 +35,8 @@ async function scanChapterPages() {
   const review = report.filter(item => item.status === "review");
   console.log("  Scanned chapter pages: " + titles.length);
   console.log("  Suspected garbled pages: " + suspect.length);
-  console.log("  Pages requiring manual review (including very short): " + review.length);
-  for (const item of report.slice(0, 30)) {
-    console.log("  " + item.status.toUpperCase() + ": " + item.title + " [" + item.flags.map(flag => flag.rule + ":" + flag.count).join(", ") + "]");
-  }
+  console.log("  Pages requiring manual review: " + review.length);
+  for (const item of report.slice(0, 30)) console.log("  " + item.status.toUpperCase() + ": " + item.title + " [" + item.flags.map(flag => flag.rule + ":" + flag.count).join(", ") + "]");
   if (report.length > 30) console.log("  ... " + (report.length - 30) + " additional flagged pages omitted");
   return { scanned: titles.length, suspect: suspect.length, review: review.length };
 }
@@ -64,7 +51,7 @@ async function main() {
   console.log("  OK: " + matched.title);
 
   console.log("[2/5] Checking work page HTML...");
-  const work = await api({ action: "parse", format: "json", page: "三國志演義", prop: "displaytitle|text|sections" });
+  const work = await api({ action: "parse", format: "json", page: "三國演義", prop: "displaytitle|text|sections" });
   const workHtml = work.parse && work.parse.text && work.parse.text["*"] || "";
   assert(workHtml.length > 1000, "Work page HTML is missing or unexpectedly short");
   assert(/mw-parser-output/.test(workHtml), "Work page lacks MediaWiki parser output");
@@ -88,5 +75,4 @@ async function main() {
   const quality = await scanChapterPages();
   console.log("PASS: live Wikisource checks completed; scanned " + quality.scanned + " chapter pages.");
 }
-
 main().catch(error => { console.error("FAIL: " + error.message); process.exitCode = 1; });
