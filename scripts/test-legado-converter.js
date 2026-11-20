@@ -83,5 +83,24 @@ try{
  const unsupportedAttribute=parseLegacyChain("a[href]@text");
  assert.equal(unsupportedAttribute.status,"manual");
  assert.equal(unsupportedAttribute.reason,"unsupported-attribute-filter");
+ const andExpression=parseLegacyChain("class.title&&class.name@text");
+ assert.equal(andExpression.status,"manual");
+ assert.equal(andExpression.reason,"compound-or-transform-expression");
+ assert.deepEqual(andExpression.expression.operators,["&&"]);
+ assert.equal(andExpression.expression.operandCount,2);
+ const orExpression=parseLegacyChain("class.title||class.name@text");
+ assert.deepEqual(orExpression.expression.operators,["||"]);
+ const alternateExpression=parseLegacyChain("class.a%%class.b");
+ assert.deepEqual(alternateExpression.expression.operators,["%%"]);
+ const regexExpression=parseLegacyChain("class.title##\\\\s+## ");
+ assert.equal(regexExpression.status,"manual");
+ assert.equal(regexExpression.expression.kind,"regex-transform-or-compound");
+ assert.equal(regexExpression.expression.regexDelimiterCount,2);
+ const onlyOneRegex=parseLegacyChain("class.title##x##y###");
+ assert.equal(onlyOneRegex.expression.onlyOne,true);
+ assert.equal(onlyOneRegex.expression.regexDelimiterCount,3);
+ const quotedOperator=parseLegacyChain('a[href="x&&y"]@text');
+ assert.equal(quotedOperator.status,"manual");
+ assert.equal(quotedOperator.reason,"unsupported-attribute-filter");
  console.log("Legado converter fixture tests passed.");
 }finally{fs.rmSync(temp,{recursive:true,force:true});}
