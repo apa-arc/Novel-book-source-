@@ -34,7 +34,7 @@ jobs:
           node-version: 22
       - name: Scan public sitemap chapter samples
         env:
-          SCAN_LIMIT: \${{ github.event.inputs.limit || '100' }}
+          SCAN_LIMIT: ${{ github.event.inputs.limit || '100' }}
         run: node scripts/scan-candidate-chapters-cli.js --limit="$SCAN_LIMIT"
       - name: Upload metadata-only results
         if: always()
