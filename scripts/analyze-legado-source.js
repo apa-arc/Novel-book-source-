@@ -37,7 +37,7 @@ if (sources.length === 0 || sources.some((item) => !item || typeof item !== "obj
 }
 
 const ruleKeys = ["ruleSearch", "ruleBookInfo", "ruleToc", "ruleContent", "ruleExplore"];
-const scriptPattern = /@js:|<js>|\\bjava\\s*script\\b|\\b(function|return)\\b|\\$\\{/i;
+const scriptPattern = /@js:|<js>|\bjava\s*script\b|\b(function|return)\b|\$\{/i;
 
 function containsScriptLikeValue(value) {
   if (typeof value === "string") return scriptPattern.test(value);
@@ -60,7 +60,7 @@ function analyze(source, index) {
   const hasLoginConfig = Boolean(source.loginUrl || source.loginUi || source.loginCheckJs);
   const hasHeader = Boolean(source.header && Object.keys(source.header).length);
   const hasCookieConfig = Boolean(source.enabledCookieJar || (source.header && Object.keys(source.header).some((key) => /cookie/i.test(key))));
-  const hasHttpUrl = typeof source.bookSourceUrl === "string" && /^https?:\\/\\//i.test(source.bookSourceUrl);
+  const hasHttpUrl = typeof source.bookSourceUrl === "string" && /^https?:\/\//i.test(source.bookSourceUrl);
   const ruleCount = Object.values(rules).filter((rule) => rule.present).length;
   const hasScriptRules = Object.values(rules).some((rule) => rule.scriptLike);
   const hasAdvancedConfig = hasLoginConfig || hasCookieConfig || hasScriptRules;
