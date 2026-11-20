@@ -7,9 +7,12 @@ on:
       - "index.json"
       - "sources/**"
       - "scripts/**"
-      - "scripts/build-subscription.js"
       - ".github/workflows/build-subscription.yml"
   workflow_dispatch:
+
+concurrency:
+  group: build-source-subscription
+  cancel-in-progress: true
 
 permissions:
   contents: write
@@ -19,6 +22,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-node@v4
         with:
           node-version: 22
