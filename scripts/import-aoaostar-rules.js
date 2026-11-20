@@ -11,6 +11,8 @@ const crypto = require("node:crypto");
 const ROOT = path.resolve(__dirname, "..");
 const INPUT = path.join(ROOT, "imports/aoaostar/raw/aoaostar-full.json");
 const OUT = path.join(ROOT, "exports");
+const ROOT_ORDINARY = path.join(ROOT, "subscription.json");
+const ROOT_ADULT = path.join(ROOT, "adult-subscription.json");
 const REQUIRED = ["ruleSearch", "ruleBookInfo", "ruleToc", "ruleContent"];
 const ADULT = /🔞|成人|色情|情色|黄文|黃文|肉文|淫秽|淫穢|R18|18\+/i;
 const NON_NOVEL = /漫画|動漫|动漫|有声|听书|古籍|国学|詩詞|诗词|词典|百科|维基|公版|杂志|RSS|电子书出版/i;
@@ -71,6 +73,9 @@ function main() {
   const write = (name, data) => fs.writeFileSync(path.join(OUT, name), JSON.stringify(data, null, 2) + "\n");
   write("legado-ordinary.json", ordinary);
   write("legado-adult.json", adult);
+  // The stable public subscription URLs are native Legado JSON arrays.
+  fs.writeFileSync(ROOT_ORDINARY, JSON.stringify(ordinary, null, 2) + "\n");
+  fs.writeFileSync(ROOT_ADULT, JSON.stringify(adult, null, 2) + "\n");
   write("aoaostar-import-report.json", {
     schemaVersion: 1,
     sourceSha256: crypto.createHash("sha256").update(rawText).digest("hex"),
