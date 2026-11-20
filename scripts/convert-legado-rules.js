@@ -73,7 +73,7 @@ function main() {
   if (!sources.length || sources.some(s=>!s || typeof s!=="object" || Array.isArray(s))) throw new Error("输入必须是书源对象或书源对象数组");
   const converted=sources.map(convertSource);
   const report={schemaVersion:1,converter:"legado-selector-ir",note:"Sanitized selector IR only; not a runnable adapter. Original rule expressions and request credentials are omitted. No network requests or rule execution. Required groups: search, bookInfo, toc, content.",sourceCount:converted.length,counts:{candidate:converted.filter(s=>s.conversionStatus==="candidate").length,partial:converted.filter(s=>s.conversionStatus==="partial").length,manual:converted.filter(s=>s.conversionStatus==="manual").length},sources:converted};
-  const output=JSON.stringify(report,null,2)+"\\n";
+  const output=JSON.stringify(report,null,2)+"\n";
   if(outputArg){const target=path.resolve(outputArg.slice("--output=".length));fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,output,"utf8");console.log("转换报告已写入："+target);}else process.stdout.write(output);
 }
 main();
