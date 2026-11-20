@@ -3,38 +3,20 @@
   "provider": "AOAOSTAR / legado",
   "upstreamRepository": "https://github.com/aoaostar/legado",
   "upstreamBranch": "release",
-  "upstreamLicenseDeclared": "AGPL-3.0",
-  "purpose": "仅登记公开书源合集入口；扫描前不复制规则正文，不执行规则，不导入 App 正式索引。",
+  "upstreamLicenseDeclared": "AGPL-3.0 (upstream repository README; each file's provenance/license must still be checked)",
+  "purpose": "登记 release 分支 sources/ 目录下全部公开 JSON 合集入口；扫描时只读解析，不执行规则。未经审核的规则不进入正式书源索引。",
   "collections": [
     {
-      "id": "b778fe6b",
-      "name": "全量书源",
+      "id": "12212706",
+      "name": "书源合集 12212706",
       "category": "bookSource",
-      "url": "https://raw.githubusercontent.com/aoaostar/legado/release/sources/b778fe6b.json"
+      "url": "https://raw.githubusercontent.com/aoaostar/legado/release/sources/12212706.json"
     },
     {
-      "id": "71e56d4f",
-      "name": "XIU2 精品书源",
+      "id": "19db2f5e",
+      "name": "书源合集 19db2f5e",
       "category": "bookSource",
-      "url": "https://raw.githubusercontent.com/aoaostar/legado/release/sources/71e56d4f.json"
-    },
-    {
-      "id": "4dc410d1",
-      "name": "破冰书源",
-      "category": "bookSource",
-      "url": "https://raw.githubusercontent.com/aoaostar/legado/release/sources/4dc410d1.json"
-    },
-    {
-      "id": "e3e5d620",
-      "name": "关耳女频",
-      "category": "bookSource",
-      "url": "https://raw.githubusercontent.com/aoaostar/legado/release/sources/e3e5d620.json"
-    },
-    {
-      "id": "e29e19ee",
-      "name": "shidahuilang 书源",
-      "category": "bookSource",
-      "url": "https://raw.githubusercontent.com/aoaostar/legado/release/sources/e29e19ee.json"
+      "url": "https://raw.githubusercontent.com/aoaostar/legado/release/sources/19db2f5e.json"
     },
     {
       "id": "2a1f129b",
@@ -43,10 +25,100 @@
       "url": "https://raw.githubusercontent.com/aoaostar/legado/release/sources/2a1f129b.json"
     },
     {
+      "id": "39c60133",
+      "name": "书源合集 39c60133",
+      "category": "bookSource",
+      "url": "https://raw.githubusercontent.com/aoaostar/legado/release/sources/39c60133.json"
+    },
+    {
       "id": "3bb7b751",
       "name": "酷安 @ 开源阅读软件",
       "category": "bookSource",
       "url": "https://raw.githubusercontent.com/aoaostar/legado/release/sources/3bb7b751.json"
+    },
+    {
+      "id": "3f067eb2",
+      "name": "书源合集 3f067eb2",
+      "category": "bookSource",
+      "url": "https://raw.githubusercontent.com/aoaostar/legado/release/sources/3f067eb2.json"
+    },
+    {
+      "id": "4dc410d1",
+      "name": "破冰书源",
+      "category": "bookSource",
+      "url": "https://raw.githubusercontent.com/aoaostar/legado/release/sources/4dc410d1.json"
+    },
+    {
+      "id": "5d6324c5",
+      "name": "书源合集 5d6324c5",
+      "category": "bookSource",
+      "url": "https://raw.githubusercontent.com/aoaostar/legado/release/sources/5d6324c5.json"
+    },
+    {
+      "id": "71e56d4f",
+      "name": "XIU2 精品书源",
+      "category": "bookSource",
+      "url": "https://raw.githubusercontent.com/aoaostar/legado/release/sources/71e56d4f.json"
+    },
+    {
+      "id": "856adf0e",
+      "name": "书源合集 856adf0e",
+      "category": "bookSource",
+      "url": "https://raw.githubusercontent.com/aoaostar/legado/release/sources/856adf0e.json"
+    },
+    {
+      "id": "9955b83c",
+      "name": "书源合集 9955b83c",
+      "category": "bookSource",
+      "url": "https://raw.githubusercontent.com/aoaostar/legado/release/sources/9955b83c.json"
+    },
+    {
+      "id": "9c92e8e8",
+      "name": "书源合集 9c92e8e8",
+      "category": "bookSource",
+      "url": "https://raw.githubusercontent.com/aoaostar/legado/release/sources/9c92e8e8.json"
+    },
+    {
+      "id": "a03fcd8c",
+      "name": "书源合集 a03fcd8c",
+      "category": "bookSource",
+      "url": "https://raw.githubusercontent.com/aoaostar/legado/release/sources/a03fcd8c.json"
+    },
+    {
+      "id": "b778fe6b",
+      "name": "全量书源",
+      "category": "bookSource",
+      "url": "https://raw.githubusercontent.com/aoaostar/legado/release/sources/b778fe6b.json"
+    },
+    {
+      "id": "bc26bb5e",
+      "name": "书源合集 bc26bb5e",
+      "category": "bookSource",
+      "url": "https://raw.githubusercontent.com/aoaostar/legado/release/sources/bc26bb5e.json"
+    },
+    {
+      "id": "c5791307",
+      "name": "书源合集 c5791307",
+      "category": "bookSource",
+      "url": "https://raw.githubusercontent.com/aoaostar/legado/release/sources/c5791307.json"
+    },
+    {
+      "id": "dbc65c69",
+      "name": "书源合集 dbc65c69",
+      "category": "bookSource",
+      "url": "https://raw.githubusercontent.com/aoaostar/legado/release/sources/dbc65c69.json"
+    },
+    {
+      "id": "e29e19ee",
+      "name": "shidahuilang 书源",
+      "category": "bookSource",
+      "url": "https://raw.githubusercontent.com/aoaostar/legado/release/sources/e29e19ee.json"
+    },
+    {
+      "id": "e3e5d620",
+      "name": "关耳女频",
+      "category": "bookSource",
+      "url": "https://raw.githubusercontent.com/aoaostar/legado/release/sources/e3e5d620.json"
     }
   ]
 }
