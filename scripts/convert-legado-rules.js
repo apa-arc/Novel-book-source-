@@ -3,7 +3,8 @@
 const fs = require("node:fs");
 const path = require("node:path");
 const RULE_GROUPS = { search:"ruleSearch", bookInfo:"ruleBookInfo", toc:"ruleToc", content:"ruleContent", explore:"ruleExplore" };
-const REQUIRED_GROUPS = ["search", "bookInfo", "toc", "content"];\nconst CHAIN_OUTPUTS = new Set(["text", "html", "href", "src", "owntext", "textnodes"]);
+const REQUIRED_GROUPS = ["search", "bookInfo", "toc", "content"];
+const CHAIN_OUTPUTS = new Set(["text", "html", "href", "src", "owntext", "textnodes"]);
 const SCRIPT_RE = /@js:|<js>|\bjavascript\b|\bfunction\b|\breturn\b|\$\{/i;
 function parseIndex(token) { return /^-?\d+$/.test(token) ? Number(token) : null; }
 function parseLegacyChain(expression) {
