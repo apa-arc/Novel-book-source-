@@ -1,6 +1,6 @@
 "use strict";
 const assert = require("node:assert/strict");
-const { validateManifest } = require("./generate-source");
+const { validateManifest, renderFiles, buildBatch } = require("./generate-source");
 
 const valid = {
   licenseApproved: true,
@@ -20,4 +20,25 @@ assert.throws(() => validateManifest({ ...valid, metadata: { ...valid.metadata, 
 assert.throws(() => validateManifest({ ...valid, metadata: { ...valid.metadata, domains: ["other.example"] } }), /invalid-domain-allowlist/);
 assert.throws(() => validateManifest({ ...valid, selectors: { ...valid.selectors, search: { urlTemplate: "https://example.com/?p={{page}}" } } }), /search-url-template/);
 assert.throws(() => validateManifest({ ...valid, selectors: { ...valid.selectors, content: { body: "password" } } }), /credential-like-field/);
-console.log("Source generator manifest tests passed.");
+
+const initialIndex = {
+  schemaVersion: 1,
+  updatedAt: "2026-11-20",
+  sources: [{ id: "template-source", name: "模板", kind: "public-web", file: "sources/template.json", enabled: false }]
+};
+const batch = buildBatch(initialIndex, [valid, {
+  ...valid,
+  metadata: { ...valid.metadata, id: "second-demo", name: "第二个示例" }
+}]);
+assert.equal(batch.outputs.length, 2);
+assert.equal(batch.nextIndex.sources.length, 3);
+assert.equal(batch.nextIndex.sources[1].id, "demo-source");
+assert.equal(batch.nextIndex.sources[1].enabled, false);
+assert.match(batch.outputs[0].scriptContent, /replace\\(/);
+assert.match(batch.outputs[0].scriptContent, /createAdapter/);
+assert.throws(() => buildBatch(initialIndex, [valid, valid]), /duplicate-id-in-batch/);
+assert.throws(() => buildBatch(initialIndex, [valid, {
+  ...valid, metadata: { ...valid.metadata, id: "template-source" }
+}]), /source-id-already-indexed/);
+assert.throws(() => buildBatch(initialIndex, []), /manifest-list-must-not-be-empty/);
+console.log("Source generator batch and index tests passed.");
