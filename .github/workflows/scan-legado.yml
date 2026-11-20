@@ -10,7 +10,7 @@ on:
       - ".github/workflows/scan-legado.yml"
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   scan:
@@ -23,6 +23,18 @@ jobs:
           node-version: 22
       - name: Scan all registered collections
         run: npm run scan-legado -- --output=reports/aoaostar-scan.json
+      - name: Publish sanitized candidate review queue
+        run: |
+          node -e "const fs=require('node:fs'); const r=JSON.parse(fs.readFileSync('reports/aoaostar-scan.json','utf8')); const out={schemaVersion:1,provider:'AOAOSTAR / legado',upstreamRepository:'https://github.com/aoaostar/legado',upstreamLicense:'AGPL-3.0; verify individual source provenance before reuse',notice:'Metadata-only review queue. No source rules, cookies, headers, tokens or credentials are included. Candidate status is preliminary, not a runtime or legal approval.',generatedAt:r.generatedAt,sourceCount:r.candidateReview.length,sources:r.candidateReview.map(x=>({...x,reviewStatus:'unreviewed'}))}; fs.writeFileSync('imports/aoaostar/candidate-review.json',JSON.stringify(out,null,2)+'\\n');"
+      - name: Commit candidate review queue
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add imports/aoaostar/candidate-review.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Update sanitized AOAOSTAR candidate review queue"
+            git push
+          fi
       - name: Upload sanitized scan report
         uses: actions/upload-artifact@v4
         with:
