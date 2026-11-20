@@ -1,0 +1,46 @@
+name: Scan candidate novel chapters
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Maximum unique candidate domains to probe (1-100)"
+        required: false
+        default: "40"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/scan-candidate-chapters.js"
+      - "scripts/scan-candidate-chapters-cli.js"
+      - "runtime/text-quality.js"
+      - "imports/aoaostar/candidate-review.json"
+      - ".github/workflows/scan-candidate-chapters.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: candidate-chapter-scan
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Scan public sitemap chapter samples
+        env:
+          SCAN_LIMIT: \${{ github.event.inputs.limit || '40' }}
+        run: node scripts/scan-candidate-chapters-cli.js --limit="$SCAN_LIMIT"
+      - name: Upload metadata-only results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: candidate-novel-chapter-scan
+          path: artifacts/candidate-chapter-scan.json
+          if-no-files-found: error
+          retention-days: 30
