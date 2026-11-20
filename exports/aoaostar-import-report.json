@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-20T17:53:36.818Z",
+  "generatedAt": "2026-11-20T17:54:17.045Z",
   "upstream": "https://github.com/aoaostar/legado",
   "upstreamFile": "sources/b778fe6b.json",
   "upstreamLicenseNotice": "Upstream repository declares AGPL-3.0; individual source-rule provenance and redistribution permissions are not independently verified.",
@@ -9,8 +9,8 @@
   "stats": {
     "upstreamRecords": 3907,
     "duplicateRecords": 1,
-    "ordinary": 2984,
-    "adult": 4,
+    "ordinary": 2911,
+    "adult": 77,
     "excludedNonNovel": 223,
     "incompleteRules": 695,
     "credentialDisabled": 1224
