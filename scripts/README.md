@@ -23,4 +23,4 @@
 
 ## 自动生成书源
 
-许可审查完成后，可按 [书源自动生成器说明](../docs/source-generator.md) 准备 JSON 清单，并运行 `npm run generate-source -- path/to/approved-manifest.json`。生成的书源默认禁用；生成器不会自动下载或复制第三方规则。
+许可审查完成后，可按 [书源自动生成器说明](../docs/source-generator.md) 准备单个或多个 JSON 清单，并运行 `npm run generate-source -- manifests/` 批量生成。生成器会自动登记到 `index.json`，新书源默认禁用；它不会自动下载或复制第三方规则。
