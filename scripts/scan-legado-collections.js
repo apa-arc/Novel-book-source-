@@ -104,6 +104,8 @@ async function fetchCollection(collection) {
 
   const response = await fetch(url, { signal: AbortSignal.timeout(45000) });
   if (!response.ok) throw new Error("HTTP " + response.status);
+  const finalUrl = new URL(response.url || url.href);
+  if (finalUrl.protocol !== "https:" || finalUrl.hostname !== "raw.githubusercontent.com") throw new Error("重定向离开允许的 raw.githubusercontent.com 主机");
   const declaredLength = Number(response.headers.get("content-length") || 0);
   if (declaredLength > MAX_BYTES) throw new Error("文件超过 50 MB 安全上限");
   const text = await response.text();
@@ -119,6 +121,8 @@ async function fetchCollection(collection) {
 
 async function main() {
   const report = {
+    scanVersion: 2,
+    scanMode: "full-registered-collections-rescan",
     generatedAt: new Date().toISOString(),
     provider: catalog.provider,
     upstreamRepository: catalog.upstreamRepository,
