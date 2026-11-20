@@ -43,7 +43,7 @@
 
 仓库提供 `runtime/source-adapter.js` 的 `createAdapter(config)`，用于将声明式选择器配置接入四个统一方法。它不负责网络请求或 HTML 解析；这些能力必须由 App 注入。选择器配置仍需经过目标 App 的真实 DOM 兼容测试。
 
-## 4. 统一返回结构
+### 3.1 App JSON 兼容配置（可选）\n\n如果来源站点同时提供无需执行脚本即可读取的 JSON 接口，可在元数据中填写 `appConfig`：\n\n```json\n{\n  "appConfig": {\n    "searchUrl": "https://example.com/api/search?q={keyword}",\n    "bookUrl": "https://example.com/api/book",\n    "chapterListUrl": "https://example.com/api/chapters",\n    "chapterUrl": "https://example.com/api/chapter"\n  }\n}\n```\n\n四个地址必须为 HTTPS，主机名必须在 `domains` 白名单中。App 仅导入此配置，不执行 `scriptUrl`。没有 `appConfig` 的选择器脚本源会被 App 标记为暂不兼容。\n\n## 4. 统一返回结构
 
 ### 搜索结果
 
