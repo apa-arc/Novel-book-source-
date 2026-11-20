@@ -1,6 +1,6 @@
-# AOAOSTAR 规则镜像导出
+# 小说书源订阅导出
 
-本目录由 `scripts/import-aoaostar-rules.js` 从 AOAOSTAR/Legado 全量书源快照生成。
+本目录由 `scripts/import-aoaostar-rules.js` 生成：以 AOAOSTAR/Legado 为主，并合并经过第三方完整阅读验证、且通过本仓库凭据安全筛选的普通小说源。
 
 ## 正式订阅入口
 
@@ -17,12 +17,22 @@
 - 成人网络小说规则包：<https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/exports/legado-adult.json>
 - 导入统计：`aoaostar-import-report.json`
 
-当前快照统计（以报告文件为准）：
-- 上游记录：3907
-- 普通网络小说规则：2911
-- 成人网络小说规则：77
-- 排除非小说/古籍/漫画/有声等：223
-- 缺少搜索、详情、目录、正文任一核心规则：695
+当前数量以 `aoaostar-import-report.json` 中的 `stats` 为准：
+- `ordinary`：普通订阅总条目（含通过筛选的第三方已验证源）
+- `adult`：成人独立订阅条目
+- `thirdPartyVerifiedAdded`：本轮实际新增的第三方已验证源
+- `thirdPartyVerifiedDuplicates`：与现有普通订阅重复、未重复加入的第三方源
+- AOAOSTAR 原始扫描、去重、非小说排除、核心规则缺失和凭据禁用数量也记录在同一报告中。
+
+## 第三方已验证源
+
+另从 [tickmao/Novel](https://github.com/tickmao/Novel) 的 Legado 发布包中筛选安全子集，保留原始 Legado 规则。上游当前发布的健康集为 310 条；本仓库只选取其中当前深度检查有效、内容审核通过、无登录/Cookie Jar/动态或敏感请求头、无非小说类型的安全源，并在与 AOAOSTAR 去重后合并到普通订阅。未验证候选和 37 条 legacy/reserve 不会导入。
+
+- 安全子集：`imports/third-party/tickmao/verified-safe.json`
+- 验证来源、引擎指纹、筛选及去重统计：`imports/third-party/tickmao/validation-manifest.json`
+- 上游 MIT 许可证、作者致谢及非商业使用声明：`imports/third-party/tickmao/`
+
+上游使用 Legado JVM 引擎进行真实搜索、书籍详情、目录和章节正文检查；本仓库保留其引擎版本和验证指纹。上游七日连续验收在快照时仍为 pending，因此这不是长期稳定性保证。原始书源版权仍归各自作者；该合集按上游声明仅作非商业个人学习交流用途。
 
 ## 格式与兼容性
 
