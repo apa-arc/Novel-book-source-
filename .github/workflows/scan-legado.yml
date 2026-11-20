@@ -12,6 +12,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: aoaostar-full-rescan
+  cancel-in-progress: false
+
 jobs:
   scan:
     runs-on: ubuntu-latest
@@ -70,9 +74,11 @@ jobs:
           git add imports/aoaostar/public-catalog.json imports/aoaostar/candidate-review.json
           if ! git diff --cached --quiet; then
             git commit -m "Publish metadata-only source discovery catalogue"
+            git pull --rebase origin main
             git push
           fi
       - name: Upload sanitized scan report
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: aoaostar-scan-report
