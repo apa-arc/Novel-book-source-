@@ -1,6 +1,8 @@
 name: Scan secondary Legado source collection
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '43 5 * * *'
   push:
     branches: [main]
     paths:
