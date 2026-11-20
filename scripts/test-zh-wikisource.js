@@ -63,7 +63,7 @@ function tagged(role, value) {
   assert.equal(detail.title, "三国演义");
   const chapters = await adapter.getChapters({ bookUrl: found[0].bookUrl, http });
   assert.equal(chapters.length, 1);
-  assert.match(chapters[0].chapterUrl, /第001回/);
+  assert.match(decodeURIComponent(chapters[0].chapterUrl), /第001回/);
   const content = await adapter.getContent({ chapterUrl: chapters[0].chapterUrl, http });
   assert.equal(content.content, "正文内容测试");
   await assert.rejects(() => adapter.getContent({
