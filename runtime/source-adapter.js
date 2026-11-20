@@ -106,8 +106,8 @@ function createAdapter(config) {
         const nextUrl = resolveAllowed(next, currentUrl, safe.domains);
         const currentPath = new URL(currentUrl).pathname;
         const nextPath = new URL(nextUrl).pathname;
-        const currentMatch = currentPath.match(/^(.*\\/read\\/\d+\/\d+)(?:_(\d+))?\.html$/);
-        const nextMatch = nextPath.match(/^(.*\\/read\\/\d+\/\d+)(?:_(\d+))?\.html$/);
+        const currentMatch = currentPath.match(/^(.*\/read\/\d+\/\d+)(?:_(\d+))?\.html$/);
+        const nextMatch = nextPath.match(/^(.*\/read\/\d+\/\d+)(?:_(\d+))?\.html$/);
         if (!currentMatch || !nextMatch || currentMatch[1] !== nextMatch[1]) break;
         const currentPage = Number(currentMatch[2] || 1);
         const nextPage = Number(nextMatch[2] || 1);
