@@ -5,7 +5,7 @@
   "upstreamLicense": "MIT (repository-level declaration; site-rule provenance still needs review)",
   "upstreamFile": "books.json",
   "upstreamSha256": "0f2a1564bcd9a55ae5f9ac0e409a2bb0becd3e1bbedc5128fba71f1df8377571",
-  "generatedAt": "2026-11-20T18:00:18.827Z",
+  "generatedAt": "2026-11-20T18:00:33.902Z",
   "notice": "Metadata-only static scan. No source expressions, request headers, cookies, credentials, or novel content are copied. Static-syntax-candidate is not a live test, authorization approval, or runnable adapter.",
   "stats": {
     "upstreamRecords": 1735,
