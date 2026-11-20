@@ -1,0 +1,41 @@
+name: Scan secondary Legado source collection
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/scan-secondary-legado.js"
+      - ".github/workflows/scan-secondary-legado.yml"
+permissions:
+  contents: write
+concurrency:
+  group: secondary-legado-scan
+  cancel-in-progress: false
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Scan second collection against current AOAOSTAR snapshot
+        run: node scripts/scan-secondary-legado.js
+      - name: Commit metadata-only scan report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add imports/secondary/luanmuc-scan-report.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Scan secondary Legado novel source collection"
+            git pull --rebase origin main
+            git push
+          fi
+      - name: Upload scan report
+        uses: actions/upload-artifact@v4
+        with:
+          name: secondary-legado-scan-report
+          path: imports/secondary/luanmuc-scan-report.json
+          if-no-files-found: error
+          retention-days: 90
