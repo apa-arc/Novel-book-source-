@@ -11,6 +11,21 @@ const REQUIRED_GROUPS = ["search", "bookInfo", "toc", "content"];
 const CHAIN_OUTPUTS = new Set(["text", "html", "href", "src", "owntext", "textnodes"]);
 const SCRIPT_RE = /@js:|<js>|\bjavascript\b|\bfunction\b|\breturn\b|\$\{/i;
 function parseIndex(token) { return /^-?\d+$/.test(token) ? Number(token) : null; }
+function parseSelection(token) {
+  if (/^-?\d+$/.test(token)) return {mode:"index",index:Number(token)};
+  if (/^!?-?\d+(?::-?\d+){0,2}$/.test(token)) {
+    const exclude=token.startsWith("!");
+    const values=(exclude?token.slice(1):token).split(":").map(Number);
+    if (values.length===1 && !exclude) return {mode:"index",index:values[0]};
+    if (exclude) return {mode:"exclude",indices:values};
+    return {mode:"range",start:values[0],end:values[1],step:values.length===3?values[2]:1};
+  }
+  if (/^!?-?\d+(?:,-?\d+)+$/.test(token)) {
+    const exclude=token.startsWith("!");
+    return {mode:exclude?"exclude":"include",indices:(exclude?token.slice(1):token).split(",").map(Number)};
+  }
+  return null;
+}
 function parseLegacyChain(expression) {
   const raw = String(expression).trim();
   if (!raw) return {status:"empty"};
@@ -40,11 +55,30 @@ function parseLegacyChain(expression) {
     let segment=segmentValue.trim();
     if (!segment) return {status:"manual",reason:"unsupported-selector-step",selectorKind:null};
     if (segment.startsWith("-")) { reverse=true; segment=segment.slice(1); }
-    if (/^\[!?[-\d:,]+\]$/.test(segment) || /^-?\d+$/.test(segment)) {
-      return {status:"manual",reason:"unsupported-index-filter"};
+    let selection=null;
+    const bracket=segment.match(/^(.*)\[([^\]]+)\]$/);
+    if (bracket) {
+      segment=bracket[1];
+      selection=parseSelection(bracket[2]);
+      if (!selection) return {status:"manual",reason:"unsupported-index-filter"};
+    } else {
+      const excluded=segment.match(/^(.*)!(-?\d+(?::-?\d+)*)$/);
+      if (excluded) {
+        segment=excluded[1];
+        selection=parseSelection("!"+excluded[2]);
+      }
     }
-    if (segment==="children") {
-      steps.push({kind:"children",name:null,index:null});
+    if (/^\.(-?\d+)$/.test(segment)) {
+      steps.push({kind:"children",name:null,index:Number(segment.slice(1))});
+      continue;
+    }
+    if (/^-?\d+$/.test(segment)) {
+      steps.push({kind:"children",name:null,index:Number(segment)});
+      continue;
+    }
+    if (segment==="children" || segment==="") {
+      const index=selection&&selection.mode==="index"?selection.index:null;
+      steps.push({kind:"children",name:null,index,selection:selection&&selection.mode!=="index"?selection:null});
       continue;
     }
     const parts=segment.split(".");
@@ -57,7 +91,8 @@ function parseLegacyChain(expression) {
     const hasIndex=trailingIndex!==null;
     const name=hasIndex ? parts.slice(0,-1).join(".") : parts.join(".");
     if (!name) return {status:"manual",reason:"invalid-selector-index"};
-    steps.push({kind,name,index:hasIndex?trailingIndex:null});
+    const index=hasIndex?trailingIndex:(selection&&selection.mode==="index"?selection.index:null);
+    steps.push({kind,name,index,selection:selection&&selection.mode!=="index"?selection:null});
   }
   if (!steps.length) return {status:"manual",reason:"empty-selector-chain"};
   return {status:"candidate",selector:{engine:"legado-chain",steps,output,reverse}};
