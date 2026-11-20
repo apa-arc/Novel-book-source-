@@ -2,7 +2,7 @@
 
 - 来源主页：https://zh.wikisource.org/
 - 示例作品：《三国演义》
-- 示例章节：由维基文库搜索结果发现的 `三國演義/第001回`
+- 示例章节：`三國演義/第001回`
 - 版权政策：https://zh.wikisource.org/wiki/Wikisource:版权信息/全文
 
 ## 当前能力
@@ -11,9 +11,11 @@
 
 ## 真实联网检查
 
-GitHub Actions 的 `Wikisource live smoke test` 已通过。该检查使用 Node.js 原生 HTTPS 请求维基文库 MediaWiki API，确认搜索 API 有返回、作品页 HTML 可读取，并通过站内搜索发现第一回页面后成功读取章节 HTML。
+GitHub Actions 的 `Wikisource live smoke test` 已通过：搜索 API、作品页和第一回页面均可访问。另已通过 MediaWiki API 从《三国演义》目录发现 120 个回目页面，批量读取其原始 wikitext 并执行乱码扫描。
 
-这项检查验证的是上游 API 和页面可达性，不等于已经验证本仓库适配器在 iPhone 阅读器中的真实 DOM 解析，也不证明作品目录链接提取已完成联调。模拟 DOM 测试与真实宿主测试仍是两回事。
+本次扫描结果：120 篇、0 篇命中疑似乱码规则、0 篇因空内容或过短而需要复核。扫描规则和局限见 [文章乱码扫描器](text-quality.md)。
+
+联网检查只验证上游 API、页面可达性和文本质量规则，不等于已经验证本仓库适配器在 iPhone 阅读器中的真实 DOM 解析。模拟 DOM 测试与真实宿主测试仍是两回事。
 
 ## 版权与状态
 
@@ -21,4 +23,4 @@ GitHub Actions 的 `Wikisource live smoke test` 已通过。该检查使用 Node
 
 ## 验证边界
 
-仓库测试使用模拟 DOM fixture，验证四个接口、URL 白名单和基本解析流程。在线 smoke test 验证上游 API 与页面可达性。尚未在目标 iPhone 阅读器的真实 HTML DOM 实现中完成联调，也未完成作品级许可审查。只有完成这些工作后，才可考虑启用并发布到订阅清单。
+仓库测试使用模拟 DOM fixture，验证四个接口、URL 白名单和基本解析流程。在线 smoke test 验证上游 API、页面可达性及本次 120 回目文本的启发式乱码检查。尚未在目标 iPhone 阅读器的真实 HTML DOM 实现中完成联调，也未完成作品级许可审查。只有完成这些工作后，才可考虑启用并发布到订阅清单。
