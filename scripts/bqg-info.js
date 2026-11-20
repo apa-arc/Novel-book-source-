@@ -32,7 +32,8 @@ const config = {
   },
   content: {
     title: css("h1.readTitle"),
-    body: css("#booktxt")
+    body: css("#booktxt"),
+    nextPage: css("#linkNext", "href")
   }
 };
 
