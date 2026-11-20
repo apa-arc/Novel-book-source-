@@ -61,8 +61,11 @@ function convertSource(source,index) {
     result.groups[groupName]={status:hasManual?"partial":"candidate",fields};
   }
   if (warnings.length) result.warnings=warnings;
-  if (warnings.length || Object.values(result.groups).some(g=>g.status==="partial")) result.conversionStatus="partial";
-  if (Object.values(result.groups).every(g=>g.status==="missing")) result.conversionStatus="manual";
+  const requiredReady=REQUIRED_GROUPS.every(name=>{const g=result.groups[name];return g && g.status==="candidate" && Object.keys(g.fields).length>0 && Object.values(g.fields).every(field=>field.status==="candidate");});
+  const anyConvertible=Object.values(result.groups).some(g=>Object.values(g.fields||{}).some(field=>field.status==="candidate"));
+  if (requiredReady && warnings.length===0) result.conversionStatus="candidate";
+  else if (anyConvertible) result.conversionStatus="partial";
+  else result.conversionStatus="manual";
   return result;
 }
 function main() {
@@ -76,4 +79,5 @@ function main() {
   const output=JSON.stringify(report,null,2)+"\n";
   if(outputArg){const target=path.resolve(outputArg.slice("--output=".length));fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,output,"utf8");console.log("转换报告已写入："+target);}else process.stdout.write(output);
 }
-main();
+if (require.main === module) main();
+module.exports={convertSource,parseLegacyChain};
