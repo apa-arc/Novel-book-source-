@@ -58,7 +58,7 @@ async function scanOne(c,fetchImpl){
   }catch(e){r.reasons.push(String(e.message||e).slice(0,100));}}
   r.sampledChapters=articles.length;if(!articles.length){r.status=oversizedPages||nonChapterPages?"manual-review":"chapter-content-unavailable";return r;}
   const q=scanArticles(articles);r.quality=q.summary;r.chapterFindings=q.results.map(x=>({title:x.title,status:x.status,length:x.length,flags:x.flags}));
-  r.status=q.summary.suspect||q.summary.duplicates?"suspect":q.summary.review?"manual-review":"chapter-sample-clean";
+  r.status=oversizedPages?"manual-review":q.summary.suspect||q.summary.duplicates?"suspect":q.summary.review?"manual-review":"chapter-sample-clean";
   if(r.status==="suspect")r.reasons.push("chapter-text-quality-findings");return r;
  }catch(e){r.status="unreachable-or-blocked";r.reasons.push(String(e.message||e).slice(0,120));return r;}
 }

@@ -17,6 +17,17 @@ const html="<html><head><title>测试小说 第1章 开始</title></head><body><
  throw Error("unexpected-url");};
  const report=await scanCandidates({candidates:[{id:"adult",name:"成人小说",baseUrl:"https://adult.example",group:"成人"},{id:"ok",name:"测试小说",baseUrl:"https://example.com"}],fetchImpl:fake,limit:10});
  assert.equal(report.candidateCount,1);assert.equal(report.results[0].status,"chapter-sample-clean");assert.equal(report.results[0].sampledChapters,1);assert.ok(!JSON.stringify(report).includes(chapter));assert.equal(calls.length,4);
+ const mixedHtml="<html><head><title>测试小说 第2章 开始</title></head><body><article><p>"+("这是超长章节正文。".repeat(4000))+"</p></article></body></html>";
+ const mixedFetch=async url=>{
+ if(url==="https://mixed.example/")return response(url,"<title>测试小说</title>");
+ if(url==="https://mixed.example/robots.txt")return response(url,"Sitemap: https://mixed.example/sitemap.xml",200,"text/plain");
+ if(url==="https://mixed.example/sitemap.xml")return response(url,'<loc>https://mixed.example/read/1.html</loc><loc>https://mixed.example/read/2.html</loc>',200,"application/xml");
+ if(url==="https://mixed.example/read/1.html")return response(url,html);
+ if(url==="https://mixed.example/read/2.html")return response(url,mixedHtml);
+ throw Error("unexpected-url");
+ };
+ const mixed=await scanCandidates({candidates:[{id:"mixed",name:"测试小说",baseUrl:"https://mixed.example"}],fetchImpl:mixedFetch,limit:1});
+ assert.equal(mixed.results[0].sampledChapters,1);assert.equal(mixed.results[0].status,"manual-review");assert.ok(mixed.results[0].reasons.includes("sample-page-content-too-large-for-single-chapter"));
  const offsetReport=await scanCandidates({candidates:[{id:"first",name:"第一站",baseUrl:"https://first.example"},{id:"second",name:"第二站",baseUrl:"https://second.example"}],fetchImpl:async()=>{throw Error("blocked");},limit:1,offset:1});
  assert.equal(offsetReport.candidateCount,1);assert.equal(offsetReport.offset,1);assert.equal(offsetReport.totalUniqueCandidates,2);assert.equal(offsetReport.results[0].id,"second");
  console.log("Candidate chapter scanner tests passed.");
