@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 "use strict";
 // Selector IR remains non-executable; runtime parity requires separate adapter tests.
+// Unsupported diagnostics expose bounded syntax tokens, never full rule expressions.
 const fs = require("node:fs");
 const path = require("node:path");
 const RULE_GROUPS = { search:"ruleSearch", bookInfo:"ruleBookInfo", toc:"ruleToc", content:"ruleContent", explore:"ruleExplore" };
