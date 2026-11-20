@@ -67,9 +67,13 @@ function analyze(source, index, collection) {
       // A malformed individual source URL must not abort an entire collection.
     }
   }
+  const groupText = typeof source.bookSourceGroup === "string" ? source.bookSourceGroup : "";
+  const commentText = typeof source.bookSourceComment === "string" ? source.bookSourceComment : "";
+  const hasAccessWarning = /验证码|人机验证|Cloudflare|搜索暂不可用|暂不可用|梯子|仅发现/i.test(groupText + " " + commentText);
+  const isEnabled = source.enabled !== false;
   const advanced = hasScript || hasLogin || hasCookie;
   let level = "low";
-  if (advanced) level = "manual";
+  if (advanced || hasAccessWarning || !isEnabled) level = "manual";
   else if (hasHttpUrl && rules.length === ruleKeys.length) level = "candidate";
   else if (hasHttpUrl && rules.length >= 3) level = "partial";
 
@@ -79,11 +83,13 @@ function analyze(source, index, collection) {
     index: index + 1,
     name: typeof source.bookSourceName === "string" ? source.bookSourceName : "(未命名)",
     baseUrl,
-    group: typeof source.bookSourceGroup === "string" ? source.bookSourceGroup : null,
+    group: groupText || null,
     ruleCount: rules.length,
+    isEnabled,
     hasScript,
     hasLogin,
     hasCookie,
+    hasAccessWarning,
     level
   };
 }
