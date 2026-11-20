@@ -2,6 +2,8 @@ name: Mirror and split AOAOSTAR novel rules
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '17 4 * * *'
   push:
     branches: [main]
     paths:
