@@ -112,3 +112,15 @@
 - 启用：已验证且由维护者明确允许在索引中启用。
 
 静态转换成功、选择器语法可解析或 CI 通过，都不能单独证明书源可用或获得授权。
+
+## 7. 正式启用质量门禁
+
+将索引项 `enabled` 设为 `true` 前，元数据必须同时包含：
+
+- `licenseApproved: true` 和非空 `licenseEvidence`：记录逐项许可审查依据。
+- `hostValidated: true`：表示已在目标阅读 App 的真实 DOM/网络宿主中完成必要联调；模拟 DOM 测试或 GitHub CI 不能代替。
+- `qualityReport: "quality-reports/<id>.json"`：指向该书源对应的质量报告。
+
+质量报告必须使用 schemaVersion 1，包含匹配的 `sourceId`、`sourceVersion`、有效 `generatedAt`，并且 `summary.scanned` 大于 0，`suspect`、`review`、`duplicates` 均为 0。报告必须对应当前书源版本。启用校验和订阅构建都会执行门禁；任何一项缺失或失败都会阻止正式订阅发布。
+
+目前维基文库扫描报告是上游作品的文本检查结果，不等同于目标 App 宿主验证，也不是可直接用于启用书源的质量报告。
