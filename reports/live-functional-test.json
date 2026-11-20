@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-20T18:11:11.731Z",
+  "test": "Real search -> book detail -> chapter list -> chapter content; HTTPS same-host only; no scripts, login, cookies, CAPTCHA bypass, or content retention",
+  "keyword": "三国演义",
+  "counts": {
+    "candidatesDiscovered": 2,
+    "tested": 2,
+    "passed": 0,
+    "failed": 2,
+    "subscriptionChanges": 0
+  },
+  "note": "This report is diagnostic only. A passing live test does not itself approve rule redistribution or automatically alter subscriptions.",
+  "results": [
+    {
+      "id": "bdaa0f5699c29158",
+      "name": "望书阁ge",
+      "host": "m.wangshuge.com",
+      "category": "ordinary",
+      "status": "failed",
+      "stages": [],
+      "error": "fetch failed",
+      "provider": "AOAOSTAR"
+    },
+    {
+      "id": "74d3ec8bd8e4c479",
+      "name": "🔖笔尖中文",
+      "host": "www.biquge.info",
+      "category": "ordinary",
+      "status": "failed",
+      "stages": [],
+      "error": "fetch failed",
+      "provider": "AOAOSTAR"
+    }
+  ]
+}
