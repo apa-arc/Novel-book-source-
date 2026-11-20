@@ -80,6 +80,7 @@ function analyze(source, index, collection) {
   return {
     collectionId: collection.id,
     collectionName: collection.name,
+    collectionUrl: collection.url,
     index: index + 1,
     name: typeof source.bookSourceName === "string" ? source.bookSourceName : "(未命名)",
     baseUrl,
@@ -169,6 +170,26 @@ async function main() {
     sourcesWithoutValidHttpsUrl: report.sources.filter((item) => !item.normalizedUrl).length,
     exactUniqueByLevel: Object.fromEntries(Object.entries(uniqueByLevel).map(([level, group]) => [level, group.size]))
   };
+  // Publish a deduplicated metadata-only catalogue. Raw rules and credentials are never copied.
+  report.publicCatalog = [...exactGroups.entries()].map(([hash, group]) => {
+    const item = group[0];
+    return {
+      id: hash.slice(0, 16),
+      collectionId: item.collectionId,
+      collectionName: item.collectionName,
+      collectionUrl: item.collectionUrl,
+      index: item.index,
+      name: item.name,
+      baseUrl: item.baseUrl,
+      group: item.group,
+      ruleCount: item.ruleCount,
+      level: item.level,
+      occurrences: group.length,
+      reviewStatus: "unreviewed",
+      redistributionStatus: "not-assessed",
+      runtimeStatus: "not-converted"
+    };
+  });
   // A review queue only: this deliberately contains metadata, never executable rules or credentials.
   report.candidateReview = [...uniqueByLevel.candidate.entries()].map(([hash, item]) => ({
     id: hash.slice(0, 16),
@@ -180,7 +201,7 @@ async function main() {
     group: item.group,
     ruleCount: item.ruleCount
   }));
-  // Remove internal fingerprints and normalized URLs from the public source listing.
+  // Remove internal fingerprints and normalized URLs from the scan listing.
   for (const item of report.sources) {
     delete item.fingerprint;
     delete item.normalizedUrl;
