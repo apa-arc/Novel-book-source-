@@ -46,7 +46,7 @@ async function main(){
  const report={schemaVersion:1,generatedAt:new Date().toISOString(),provider:"AOAOSTAR / Legado",sourceCount:rows.length,counts,fetchFailures:failures,note:"Sanitized selector compatibility report only. Not runnable adapters, not a license determination, and not a live availability test. Raw source definitions, headers, cookies, tokens and credentials are not stored.",sources:rows};
  const out=path.join(root,"reports","aoaostar-conversion-review.json");
  fs.mkdirSync(path.dirname(out),{recursive:true});
- fs.writeFileSync(out,JSON.stringify(report,null,2)+"\\n","utf8");
+ fs.writeFileSync(out,JSON.stringify(report,null,2)+"\n","utf8");
  console.log(JSON.stringify({sourceCount:rows.length,counts,fetchFailures:failures.length,output:out},null,2));
  if(failures.length) process.exitCode=1;
 }
