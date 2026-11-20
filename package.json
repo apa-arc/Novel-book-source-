@@ -1,0 +1,9 @@
+{
+  "name": "apple-novel-sources",
+  "version": "0.1.0",
+  "private": true,
+  "description": "JSON metadata and JavaScript adapters for AppleNovelApp",
+  "scripts": {
+    "validate": "node scripts/validate.js"
+  }
+}
