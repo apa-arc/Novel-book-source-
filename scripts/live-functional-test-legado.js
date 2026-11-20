@@ -145,9 +145,10 @@ function simpleSearchUrl(source, keyword, page) {
     .replace(/\{\{\s*page\s*-\s*1\s*\}\}/gi, String(page - 1))
     .replace(/\{\{\s*page\s*\+\s*1\s*\}\}/gi, String(page + 1));
   const u = new URL(replaced, source.bookSourceUrl);
-  if (u.protocol !== "https:" || u.username || u.password || !u.hostname || /^(localhost|127\\.|10\\.|192\\.168\\.|172\\.(1[6-9]|2[0-9]|3[01])\\.)/i.test(u.hostname)) {
-    throw new Error("unsafe-search-url");
-  }
+  const host = u.hostname.toLowerCase();
+  const privateHost = host === "localhost" || host.endsWith(".local") || ["127.","10.","192.168.","172.16.","172.17.","172.18.","172.19.","172.20.","172.21.","172.22.","172.23.","172.24.","172.25.","172.26.","172.27.","172.28.","172.29.","172.30.","172.31."].some(prefix => host.startsWith(prefix));
+  if (u.protocol !== "https:" || u.username || u.password || !host || privateHost) throw new Error("unsafe-search-url");
+  return u.href;
   return u.href;
 }
 function extract(node, rules, baseUrl, host) {
@@ -181,6 +182,7 @@ async function testSource(source) {
     if (source.loginUrl || source.loginUi || source.loginCheckJs || source.enabledCookieJar) throw new Error("login-required");
     const headers = safeHeaders(source);
     if (!isStaticRuleGroup(source)) throw new Error("unsupported-or-incomplete-rule-groups");
+    currentStage = "search";
     const searchUrl = simpleSearchUrl(source, KEYWORD, 1);
     const searchHost = new URL(searchUrl).hostname.toLowerCase();
     const searchPage = await fetchHtml(searchUrl, searchHost, headers);
@@ -194,12 +196,14 @@ async function testSource(source) {
     const chosen = books[0];
     stage("search", { resultCount: books.length, selectedTitle: chosen.name });
 
+    currentStage = "bookDetail";
     const detailPage = await fetchHtml(chosen.bookUrl, host, headers);
     const detail = extract(detailPage.document, source.ruleBookInfo, detailPage.url, host);
     const title = detail.name || chosen.name;
     if (!title) throw new Error("book-detail-title-empty");
     stage("bookDetail", { title });
     const tocUrl = detail.tocUrl || chosen.bookUrl;
+    currentStage = "chapters";
     const tocPage = await fetchHtml(tocUrl, host, headers);
     const chapterNodes = allNodes(tocPage.document, source.ruleToc.chapterList);
     const chapters = [];
@@ -214,6 +218,7 @@ async function testSource(source) {
     stage("chapters", { chapterCount: unique.length });
     let sampled = null;
     let lastContentError = "no-chapter-content";
+    currentStage = "content";
     for (const chapter of unique.slice(0, 5)) {
       try {
         const page = await fetchHtml(chapter.url, host, headers);
