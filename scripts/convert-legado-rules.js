@@ -27,11 +27,49 @@ function parseSelection(token) {
   }
   return null;
 }
+function scanExpressionOperators(raw) {
+  const operators=[];
+  let regexDelimiterCount=0;
+  let onlyOne=false;
+  let quote=null;
+  let bracketDepth=0;
+  for(let i=0;i<raw.length;i++){
+    const ch=raw[i];
+    if(ch==="\\\\"){i++;continue;}
+    if(quote){
+      if(ch===quote) quote=null;
+      continue;
+    }
+    if(ch==="'" || ch=='"'){quote=ch;continue;}
+    if(ch==="["){bracketDepth++;continue;}
+    if(ch==="]" && bracketDepth>0){bracketDepth--;continue;}
+    if(bracketDepth>0) continue;
+    if(raw.startsWith("&&",i)){operators.push("&&");i++;continue;}
+    if(raw.startsWith("||",i)){operators.push("||");i++;continue;}
+    if(raw.startsWith("%%",i)){operators.push("%%");i++;continue;}
+    if(raw.startsWith("###",i)){onlyOne=true;regexDelimiterCount+=2;i+=2;continue;}
+    if(raw.startsWith("##",i)){regexDelimiterCount++;i++;continue;}
+  }
+  return {operators,regexDelimiterCount,onlyOne};
+}
 function parseLegacyChain(expression) {
   const raw = String(expression).trim();
   if (!raw) return {status:"empty"};
   if (SCRIPT_RE.test(raw)) return {status:"manual",reason:"script-or-template"};
-  if (raw.includes("&&") || raw.includes("##") || raw.includes("||")) return {status:"manual",reason:"compound-or-transform-expression"};
+  const expressionShape=scanExpressionOperators(raw);
+  if(expressionShape.operators.length || expressionShape.regexDelimiterCount>0) {
+    return {
+      status:"manual",
+      reason:"compound-or-transform-expression",
+      expression:{
+        kind:expressionShape.regexDelimiterCount>0?"regex-transform-or-compound":"compound",
+        operators:expressionShape.operators,
+        regexDelimiterCount:expressionShape.regexDelimiterCount,
+        onlyOne:expressionShape.onlyOne,
+        operandCount:expressionShape.operators.length?expressionShape.operators.length+1:1
+      }
+    };
+  }
   if (raw.startsWith("@css:")) {
     const body=raw.slice(5).trim();
     const match=body.match(/^(.*?)(?:@(text|html|href|src|content))?$/i);
