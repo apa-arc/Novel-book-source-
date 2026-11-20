@@ -29,7 +29,7 @@ function buildSubscription(index, root, updatedAt = new Date().toISOString()) {
         meta.name !== item.name || meta.kind !== item.kind) {
       throw new Error("书源元数据与索引不一致：" + item.id);
     }
-    if (typeof meta.version !== "string" || !/^\\d+\\.\\d+\\.\\d+$/.test(meta.version)) {
+    if (typeof meta.version !== "string" || !/^\d+\.\d+\.\d+$/.test(meta.version)) {
       throw new Error("书源版本号无效：" + item.id);
     }
     if (typeof meta.baseUrl !== "string") throw new Error("书源 baseUrl 无效：" + item.id);
@@ -77,7 +77,7 @@ function main() {
   const root = path.resolve(__dirname, "..");
   const index = JSON.parse(fs.readFileSync(path.join(root, "index.json"), "utf8"));
   const output = buildSubscription(index, root);
-  fs.writeFileSync(path.join(root, "subscription.json"), JSON.stringify(output, null, 2) + "\\n");
+  fs.writeFileSync(path.join(root, "subscription.json"), JSON.stringify(output, null, 2) + "\n");
   console.log("订阅清单已生成：", output.sourceCount, "个已启用书源");
 }
 
