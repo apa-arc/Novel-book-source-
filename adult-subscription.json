@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "subscriptionId": "apa-arc-adult-novel-book-source",
+  "name": "成人小说书源",
+  "description": "独立隔离的成人书源订阅",
+  "repository": "https://github.com/apa-arc/Novel-book-source-",
+  "updatedAt": "2026-11-21",
+  "sourceCount": 0,
+  "sources": []
+}

@@ -1,18 +1,30 @@
 # 书源订阅
 
-本仓库提供固定订阅入口，供兼容本仓库 Source Format v1 的阅读器读取。
+本仓库提供两个互相隔离的固定订阅入口，供兼容本仓库 Source Format v1 的阅读器读取。
 
-## 订阅地址
+## 普通书源订阅
 
 `https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/subscription.json`
 
-## 订阅内容
+收录所有非成人书源，不再按男频、女频、漫画、有声等题材拆分。
 
-- 仅发布 `index.json` 中 `enabled: true` 的正式书源。
-- 每项提供元数据地址和解析器脚本地址，均指向本仓库的 raw 文件。
-- 模板、未验证候选、未启用书源不会进入订阅列表。
-- 订阅清单不包含 Cookie、账号凭据、令牌或小说正文。
-- 仓库推送后由 GitHub Actions 自动重新生成订阅清单。
+## 成人书源订阅
+
+`https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/adult-subscription.json`
+
+成人书源独立索引、独立生成、独立更新，绝不混入普通订阅。
+
+## 发布规则
+
+- 普通订阅只读取 `index.json`；成人订阅只读取 `adult-index.json`。
+- 两份索引中仅 `enabled: true` 且通过许可、质量门禁和宿主四接口验证的书源会被发布。
+- 扫描目录、候选记录和分类元数据不会自动进入任一订阅。
+- 两份订阅均只包含书源元数据与解析器地址，不包含 Cookie、账号凭据、令牌或小说正文。
+- 推送索引或书源文件后，GitHub Actions 自动重新生成两个订阅清单。
+
+## 当前状态
+
+成人目录中的扫描记录不是可运行书源，也不代表已获授权。只有完成独立审核、适配和测试后，才会登记到 `adult-index.json` 并启用。当前成人订阅可以为空；不会为了凑数量导入未经授权的规则。
 
 ## 兼容性
 

@@ -8,7 +8,7 @@
 
 | 入口 | 用途 |
 |---|---|
-| [书源订阅地址](subscription.json) | 阅读器添加此链接即可获取已启用书源 |
+| [普通书源订阅](subscription.json) | 所有非成人来源统一订阅 |\n| [成人书源订阅](adult-subscription.json) | 成人来源独立订阅，与普通源隔离 |
 | [文章质量扫描器](docs/text-quality.md) | 检查乱码、空章节、过短正文和重复内容 |
 | [正式启用质量门禁](docs/source-format.md#7-正式启用质量门禁) | 未通过许可、宿主联调和文章质量检查的源不能进入订阅 |
 | [书源四阶段功能测试器](docs/source-functional-testing.md) | 依次检查搜索、详情、目录和正文，输出质量报告 |
@@ -63,5 +63,5 @@
 
 分类目录只是来源元数据清单，不代表书源已经适配或获得授权。正式订阅仍只发布通过许可审核、宿主四接口测试并在 `index.json` 中启用的书源。
 
-- [分组索引](imports/aoaostar/category-index.json)
+- [普通书源订阅索引](index.json)\n- [成人书源订阅索引](adult-index.json)\n- [分组索引](imports/aoaostar/category-index.json)
 - [完整分组目录](imports/aoaostar/categorized-catalog.json)

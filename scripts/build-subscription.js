@@ -5,19 +5,21 @@ const { validateSourceQuality } = require("../runtime/source-quality-gate");
 
 const RAW_BASE = "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/";
 
-function buildSubscription(index, root, updatedAt = new Date().toISOString()) {
+function buildSubscription(index, root, updatedAt = new Date().toISOString(), options = {}) {
   if (!index || index.schemaVersion !== 1 || !Array.isArray(index.sources)) {
     throw new Error("index.json 格式错误");
   }
-  const seen = new Set();
+  const subscriptionId = options.subscriptionId || "apa-arc-novel-book-source";
+  const name = options.name || "个人小说书源";
+  const description = options.description || "GitHub 托管的小说书源订阅清单";
   const sources = [];
+  const seen = new Set();
   for (const item of index.sources) {
     if (!item || typeof item.id !== "string" || seen.has(item.id)) {
       throw new Error("书源索引包含无效或重复 ID");
     }
     seen.add(item.id);
     if (item.enabled !== true) continue;
-
     if (typeof item.file !== "string" || !item.file.startsWith("sources/")) {
       throw new Error("启用书源元数据路径非法：" + item.id);
     }
@@ -40,7 +42,6 @@ function buildSubscription(index, root, updatedAt = new Date().toISOString()) {
         !Array.isArray(meta.domains) || !meta.domains.includes(base.hostname)) {
       throw new Error("书源地址或域名白名单无效：" + item.id);
     }
-
     if (typeof meta.script !== "string" || !meta.script.startsWith("scripts/")) {
       throw new Error("书源解析器路径非法：" + item.id);
     }
@@ -48,40 +49,39 @@ function buildSubscription(index, root, updatedAt = new Date().toISOString()) {
     if (!scriptPath.startsWith(path.join(root, "scripts") + path.sep) || !fs.existsSync(scriptPath)) {
       throw new Error("书源解析器不存在：" + item.id);
     }
-
     sources.push({
-      id: meta.id,
-      name: meta.name,
-      kind: meta.kind,
-      version: meta.version,
-      description: meta.description || "",
-      baseUrl: meta.baseUrl,
-      domains: meta.domains,
+      id: meta.id, name: meta.name, kind: meta.kind, version: meta.version,
+      description: meta.description || "", baseUrl: meta.baseUrl, domains: meta.domains,
       categories: Array.isArray(meta.categories) ? meta.categories : [],
-      metadataUrl: RAW_BASE + item.file,
-      scriptUrl: RAW_BASE + meta.script,
+      metadataUrl: RAW_BASE + item.file, scriptUrl: RAW_BASE + meta.script,
       ...(meta.appConfig ? { appConfig: meta.appConfig } : {})
     });
   }
-
   return {
-    schemaVersion: 1,
-    subscriptionId: "apa-arc-novel-book-source",
-    name: "个人小说书源",
-    description: "GitHub 托管的小说书源订阅清单",
+    schemaVersion: 1, subscriptionId, name, description,
     repository: "https://github.com/apa-arc/Novel-book-source-",
-    updatedAt,
-    sourceCount: sources.length,
-    sources
+    updatedAt, sourceCount: sources.length, sources
   };
 }
 
 function main() {
   const root = path.resolve(__dirname, "..");
-  const index = JSON.parse(fs.readFileSync(path.join(root, "index.json"), "utf8"));
-  const output = buildSubscription(index, root);
-  fs.writeFileSync(path.join(root, "subscription.json"), JSON.stringify(output, null, 2) + "\n");
-  console.log("订阅清单已生成：", output.sourceCount, "个已启用书源");
+  const ordinaryIndex = JSON.parse(fs.readFileSync(path.join(root, "index.json"), "utf8"));
+  const adultIndex = JSON.parse(fs.readFileSync(path.join(root, "adult-index.json"), "utf8"));
+  const ordinary = buildSubscription(ordinaryIndex, root, undefined, {
+    subscriptionId: "apa-arc-novel-book-source",
+    name: "普通小说书源",
+    description: "所有非成人书源统一订阅"
+  });
+  const adult = buildSubscription(adultIndex, root, undefined, {
+    subscriptionId: "apa-arc-adult-novel-book-source",
+    name: "成人小说书源",
+    description: "独立隔离的成人书源订阅"
+  });
+  fs.writeFileSync(path.join(root, "subscription.json"), JSON.stringify(ordinary, null, 2) + "\n");
+  fs.writeFileSync(path.join(root, "adult-subscription.json"), JSON.stringify(adult, null, 2) + "\n");
+  console.log("普通订阅：", ordinary.sourceCount, "个已启用书源");
+  console.log("成人订阅：", adult.sourceCount, "个已启用书源");
 }
 
 module.exports = { buildSubscription };
