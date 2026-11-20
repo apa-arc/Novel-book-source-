@@ -15,7 +15,7 @@
 - `schemas/`：书源格式结构定义
 - `runtime/`：独立选择器执行模块
 - `scripts/`：扫描、去重、格式转换和校验工具
-- `imports/`：扫描目录、批次计划和审查记录
+- `imports/`：扫描目录、批次计划和审查记录；[查看 5152 条去重元数据目录](imports/aoaostar/public-catalog.json)
 - `docs/`：书源格式、兼容性和开发说明
 - `.github/workflows/`：自动校验
 
