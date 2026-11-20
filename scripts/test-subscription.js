@@ -9,14 +9,18 @@ const root = fs.mkdtempSync(path.join(os.tmpdir(), "novel-subscription-"));
 try {
   fs.mkdirSync(path.join(root, "sources"));
   fs.mkdirSync(path.join(root, "scripts"));
+  fs.mkdirSync(path.join(root, "quality-reports"));
   const meta = {
     schemaVersion: 1, id: "demo-source", name: "演示书源", kind: "public-web",
     version: "1.0.0", description: "测试", baseUrl: "https://example.com",
     domains: ["example.com"], script: "scripts/demo-source.js", enabled: true,
-    categories: ["测试"]
+    categories: ["测试"],
+    licenseApproved: true, licenseEvidence: "测试授权记录", hostValidated: true,
+    qualityReport: "quality-reports/demo-source.json"
   };
   fs.writeFileSync(path.join(root, "sources/demo-source.json"), JSON.stringify(meta));
   fs.writeFileSync(path.join(root, "scripts/demo-source.js"), "module.exports = {};");
+  fs.writeFileSync(path.join(root, meta.qualityReport), JSON.stringify({ schemaVersion: 1, sourceId: "demo-source", sourceVersion: "1.0.0", generatedAt: "2026-11-20T00:00:00.000Z", summary: { scanned: 10, suspect: 0, review: 0, duplicates: 0 } }));
 
   const index = { schemaVersion: 1, sources: [
     { id: "template-source", name: "模板", kind: "public-web", file: "sources/template.json", enabled: false },
