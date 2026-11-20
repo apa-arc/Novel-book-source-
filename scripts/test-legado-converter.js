@@ -55,6 +55,9 @@ try{
  const rootShorthand=parseLegacyChain("@p.0@text");
  assert.equal(rootShorthand.status,"candidate");
  assert.deepEqual(rootShorthand.selector.steps[0],{kind:"tag",name:"p",index:0});
+ const titleAttr=parseLegacyChain("title");
+ assert.equal(titleAttr.status,"candidate");
+ assert.equal(titleAttr.selector.output,"attr:title");
  const currentNode=parseLegacyChain("text");
  assert.equal(currentNode.status,"candidate");
  assert.equal(currentNode.selector.engine,"self");
