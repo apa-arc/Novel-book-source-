@@ -183,20 +183,30 @@ async function testSource(source) {
     const headers = safeHeaders(source);
     if (!isStaticRuleGroup(source)) throw new Error("unsupported-or-incomplete-rule-groups");
     currentStage = "search";
-    const searchUrl = simpleSearchUrl(source, KEYWORD, 1);
-    const searchHost = new URL(searchUrl).hostname.toLowerCase();
-    const searchPage = await fetchHtml(searchUrl, searchHost, headers);
-    const searchItems = allNodes(searchPage.document, source.ruleSearch.bookList);
-    const books = [];
-    for (const item of searchItems.slice(0, 80)) {
-      const fields = extract(item, source.ruleSearch, searchPage.url, host);
-      if (fields.name && fields.bookUrl) books.push(fields);
+    let chosen = null;
+    let resultCount = 0;
+    let keywordUsed = "";
+    const terms = [...new Set([KEYWORD, source.ruleSearch.checkKeyWord, "凡人修仙传", "完美世界"].filter(x => typeof x === "string" && x.trim()))];
+    for (const term of terms) {
+      const searchUrl = simpleSearchUrl(source, term, 1);
+      const searchHost = new URL(searchUrl).hostname.toLowerCase();
+      const searchPage = await fetchHtml(searchUrl, searchHost, headers);
+      const searchItems = allNodes(searchPage.document, source.ruleSearch.bookList);
+      const books = [];
+      for (const item of searchItems.slice(0, 80)) {
+        const fields = extract(item, source.ruleSearch, searchPage.url, host);
+        if (fields.name && fields.bookUrl) books.push(fields);
+      }
+      if (books.length) {
+        chosen = books[0];
+        resultCount = books.length;
+        keywordUsed = term;
+        break;
+      }
     }
-    if (!books.length) throw new Error("search-returned-no-books");
-    const chosen = books[0];
-    stage("search", { resultCount: books.length, selectedTitle: chosen.name });
+    if (!chosen) throw new Error("search-returned-no-books");
+    stage("search", { resultCount, selectedTitle: chosen.name, keywordUsed });
 
-    currentStage = "bookDetail";
     const detailPage = await fetchHtml(chosen.bookUrl, host, headers);
     const detail = extract(detailPage.document, source.ruleBookInfo, detailPage.url, host);
     const title = detail.name || chosen.name;
