@@ -8,6 +8,8 @@ on:
     branches: [main]
     paths:
       - "scripts/import-aoaostar-rules.js"
+      - "imports/third-party/tickmao/verified-safe.json"
+      - "imports/third-party/tickmao/validation-manifest.json"
       - ".github/workflows/import-aoaostar-rules.yml"
 
 permissions:
@@ -39,7 +41,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add exports/ imports/aoaostar/raw/aoaostar-full.json subscription.json adult-subscription.json
+          git add exports/ imports/aoaostar/raw/aoaostar-full.json imports/third-party/tickmao/ subscription.json adult-subscription.json
           if ! git diff --cached --quiet; then
             git commit -m "Mirror and split AOAOSTAR novel source rules"
             git pull --rebase origin main
