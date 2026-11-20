@@ -14,11 +14,12 @@ const { scanArticles } = require("../runtime/text-quality");
 const ROOT = path.resolve(__dirname, "..");
 const AOAOSTAR = path.join(ROOT, "imports/aoaostar/raw/aoaostar-full.json");
 const SECONDARY_URL = "https://raw.githubusercontent.com/luanmuc/legado-book-sources/main/books.json";
-const REPORT = path.join(ROOT, "reports/live-functional-test.json");
+const REPORT = path.join(ROOT, "reports", `live-functional-test-${SHARD_INDEX}-of-${SHARD_COUNT}.json`);
 const KEYWORD = "斗破苍穹";
 const TIMEOUT_MS = 12000;
 const MAX_BODY = 4 * 1024 * 1024;
-const MAX_TESTS = 50;
+const SHARD_COUNT = Number(process.env.TEST_SHARD_COUNT || 32);
+const SHARD_INDEX = Number(process.env.TEST_SHARD_INDEX || 0);
 const CONCURRENCY = 4;
 const NON_NOVEL = /漫画|動漫|动漫|有声|听书|古籍|国学|诗词|詞典|词典|百科|维基|公版|杂志|影视|短剧|网盘|音乐|播客/i;
 const SCRIPT_OR_AUTH = /@js:|<js>|\bjavascript\b|\bfunction\b|\breturn\b|\$\{/i;
@@ -183,7 +184,9 @@ async function testSource(source) {
   let currentStage = "preflight";
   const stage = (name, detail) => { currentStage = name; result.stages.push({ name, status: "passed", ...detail }); };
   try {
-    if (adultSource(source)) throw new Error("adult-functional-test-deferred");
+    
+    if (NON_NOVEL.test([source.bookSourceName,source.bookSourceGroup,source.bookSourceComment].join(" "))) throw new Error("non-novel-source");
+    if (source.bookSourceType && Number(source.bookSourceType) !== 0) throw new Error("unsupported-source-type");
     if (source.enabled === false) throw new Error("upstream-source-disabled");
     if (source.loginUrl || source.loginUi || source.loginCheckJs || source.enabledCookieJar) throw new Error("login-required");
     const headers = safeHeaders(source);
@@ -265,25 +268,31 @@ async function main() {
   const response = await fetch(SECONDARY_URL, { signal: AbortSignal.timeout(60000) });
   if (!response.ok) throw new Error("secondary-upstream-http-" + response.status);
   const secondary = asArray(await response.json());
+  const ordinarySubscription = JSON.parse(fs.readFileSync(path.join(ROOT, "subscription.json"), "utf8"));
+  const adultSubscription = JSON.parse(fs.readFileSync(path.join(ROOT, "adult-subscription.json"), "utf8"));
   const seen = new Set();
   const candidates = [];
   function add(source, provider) {
-    if (!source || typeof source !== "object" || adultSource(source)) return;
+    if (!source || typeof source !== "object") return;
     const label = [source.bookSourceName,source.bookSourceGroup,source.bookSourceComment].join(" ");
-    if (NON_NOVEL.test(label) || source.enabled === false || source.bookSourceType && Number(source.bookSourceType) !== 0) return;
+    
     let host;
-    try { const u = new URL(source.bookSourceUrl); if (u.protocol !== "https:" || u.hostname.toLowerCase().endsWith(".jp")) return; host = u.hostname.toLowerCase(); } catch { return; }
-    if (seen.has(host)) return;
-    if (source.loginUrl || source.loginUi || source.loginCheckJs || source.enabledCookieJar) return;
-    try { safeHeaders(source); } catch { return; }
-    if (!isStaticRuleGroup(source)) return;
-    if (!source.searchUrl || source.searchUrl.includes(",") || SCRIPT_OR_AUTH.test(source.searchUrl)) return;
-    seen.add(host);
+    try { const u = new URL(source.bookSourceUrl); if (!["https:","http:"].includes(u.protocol)) return; host = u.hostname.toLowerCase(); } catch { return; }
+    
+    
+    
+    
+    
+    const sourceId = hash(String(source.bookSourceName) + "|" + String(source.bookSourceUrl));
+    if (seen.has(sourceId)) return;
+    seen.add(sourceId);
     candidates.push({ source, provider });
   }
-  for (const source of aoaostar) add(source, "AOAOSTAR");
-  for (const source of secondary) add(source, "luanmuc");
-  const selected = candidates.slice(0, MAX_TESTS);
+  for (const source of ordinarySubscription) add(source, "subscription-ordinary");
+  for (const source of adultSubscription) add(source, "subscription-adult");
+  for (const source of aoaostar) add(source, "AOAOSTAR-candidate");
+  for (const source of secondary) add(source, "luanmuc-candidate");
+  const selected = candidates.filter((_, index) => index % SHARD_COUNT === SHARD_INDEX);
   const results = new Array(selected.length);
   let next = 0;
   async function worker() {
@@ -304,6 +313,8 @@ async function main() {
     keyword: KEYWORD,
     counts: {
       candidatesDiscovered: candidates.length,
+      shardIndex: SHARD_INDEX,
+      shardCount: SHARD_COUNT,
       tested: results.length,
       passed: passed.length,
       failed: results.length - passed.length,
