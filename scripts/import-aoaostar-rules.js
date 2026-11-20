@@ -33,9 +33,9 @@ function sourceUrlKey(value) {
   const raw = String(value || "").trim();
   try {
     const url = new URL(raw);
-    return url.hostname.toLowerCase() + url.pathname.replace(/\\/+$/, "") + url.search;
+    return url.hostname.toLowerCase() + url.pathname.replace(/\/+$/, "") + url.search;
   } catch {
-    return raw.replace(/#.*$/, "").replace(/\\/+$/, "").toLowerCase();
+    return raw.replace(/#.*$/, "").replace(/\/+$/, "").toLowerCase();
   }
 }
 function isSafeThirdPartySource(source) {
@@ -47,12 +47,12 @@ function isSafeThirdPartySource(source) {
   if (source.header) {
     const rawHeader = typeof source.header === "string" ? source.header : JSON.stringify(source.header);
     if (/@js:|<js>|cookie|authorization|proxy-authorization|token|password|passwd|secret|api[-_]?key/i.test(rawHeader)) return false;
-    if (typeof source.header === "string" && !/^\\s*\\{[\\s\\S]*\\}\\s*$/.test(source.header)) return false;
+    if (typeof source.header === "string" && !/^\s*\{[\s\S]*\}\s*$/.test(source.header)) return false;
   }
   let url;
   try { url = new URL(source.bookSourceUrl); } catch { return false; }
   if (!["http:", "https:"].includes(url.protocol) || !url.hostname || url.hostname === "localhost" || url.hostname.endsWith(".local")) return false;
-  if (/^\\d{1,3}(?:\\.\\d{1,3}){3}(?::\\d+)?$/.test(url.hostname)) return false;
+  if (/^\d{1,3}(?:\.\d{1,3}){3}(?::\d+)?$/.test(url.hostname)) return false;
   return true;
 }
 function scrub(source) {
