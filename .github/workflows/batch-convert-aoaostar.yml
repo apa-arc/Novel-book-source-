@@ -10,7 +10,7 @@ on:
       - "scripts/convert-legado-rules.js"
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   batch-review:
@@ -25,6 +25,15 @@ jobs:
         run: npm run validate
       - name: Build sanitized report for all 704 candidates
         run: node scripts/batch-convert-aoaostar.js
+      - name: Commit metadata-only conversion progress
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+users.noreply.github.com"
+          git add imports/aoaostar/conversion-status.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Update sanitized source conversion progress"
+            git push
+          fi
       - name: Upload compatibility report
         uses: actions/upload-artifact@v4
         with:
