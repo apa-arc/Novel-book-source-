@@ -1,16 +1,16 @@
-# JavaScript 解析器接口
+# 书源解析器接口
 
-每个解析器导出以下异步方法：
+书源解析器为阅读 App 提供统一的规则入口。每个解析器按需实现以下异步方法：
 
 - `search({ keyword, page, http })`
 - `getBookDetail({ bookUrl, http })`
 - `getChapters({ bookUrl, http })`
 - `getContent({ chapterUrl, http })`
 
-返回值统一使用普通 JavaScript 对象和数组，字段见模板注释。
+返回值使用普通 JavaScript 对象和数组，字段定义以 `sources/template.json` 为准。
 
-## 网络边界
+## 运行约束
 
-解析器通过 App 注入的受限 `http` 对象请求网页。App 必须校验 HTTPS、域名白名单、重定向目标、超时、响应大小和内容类型。不要给解析器任意网络、文件或系统权限。
+解析器由阅读 App 调用，使用 App 注入的受限请求接口获取书源目标页面的数据。解析器不应拥有任意网络、文件系统或系统权限。
 
-当前模板只定义接口，不是可直接使用的网站书源。
+本仓库只维护书源配置、规则和相关工具，不托管小说网站或小说正文。模板仅用于定义书源结构，尚未配置为可用书源。
