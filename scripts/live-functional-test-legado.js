@@ -27,6 +27,42 @@ function asArray(value) { return Array.isArray(value) ? value : value ? [value] 
 function adultSource(s) { return /🔞|成人|色情|情色|R18|18\+/i.test([s.bookSourceName,s.bookSourceGroup,s.bookSourceComment,s.bookSourceUrl].join(" ")); }
 function hash(s) { return crypto.createHash("sha256").update(s).digest("hex").slice(0, 16); }
 function parseDoc(html) { return parseHTML(String(html)).document; }
+function safeHeaders(source) {
+  if (!source.header) return {};
+  let value = source.header;
+  if (typeof value === "string") { try { value = JSON.parse(value); } catch { throw new Error("unparseable-request-headers"); } }
+  if (!value || typeof value !== "object" || Array.isArray(value)) throw new Error("invalid-request-headers");
+  const allowed = new Set(["user-agent","referer","accept","accept-language"]);
+  const out = {};
+  for (const [key, val] of Object.entries(value)) {
+    const lower = key.toLowerCase();
+    if (!allowed.has(lower) || typeof val !== "string" || /cookie|authorization|token|password|secret/i.test(key + " " + val)) {
+      throw new Error("credential-or-unsupported-header");
+    }
+    out[key] = val;
+  }
+  return out;
+}
+function isStaticRuleGroup(source) {
+  const required = {
+    ruleSearch: ["bookList","name","bookUrl"],
+    ruleBookInfo: ["name"],
+    ruleToc: ["chapterList","chapterName","chapterUrl"],
+    ruleContent: ["content"]
+  };
+  for (const [group, fields] of Object.entries(required)) {
+    const rules = source[group];
+    if (!rules || typeof rules !== "object" || Array.isArray(rules)) return false;
+    for (const field of fields) {
+      if (typeof rules[field] !== "string" || !rules[field].trim()) return false;
+    }
+    for (const rule of Object.values(rules)) {
+      if (typeof rule !== "string" || !rule.trim()) continue;
+      try { selector(rule); } catch { return false; }
+    }
+  }
+  return true;
+}
 function selector(rule, outputOverride) {
   if (typeof rule !== "string" || !rule.trim() || SCRIPT_OR_AUTH.test(rule)) throw new Error("unsupported-rule-expression");
   const parsed = require("./convert-legado-rules").parseLegacyChain(rule);
@@ -49,7 +85,7 @@ function absolute(raw, base, host) {
   }
   return u.href;
 }
-async function fetchHtml(rawUrl, host) {
+async function fetchHtml(rawUrl, host, requestHeaders = {}) {
   let url = absolute(rawUrl, "https://" + host + "/", host);
   for (let redirects = 0; redirects <= 4; redirects++) {
     const controller = new AbortController();
@@ -58,7 +94,7 @@ async function fetchHtml(rawUrl, host) {
     try {
       response = await fetch(url, {
         redirect: "manual", signal: controller.signal,
-        headers: { "user-agent": "NovelSourceFunctionalTest/1.0 (+metadata-only; no auth)", "accept": "text/html,application/xhtml+xml" }
+        headers: { "user-agent": "NovelSourceFunctionalTest/1.0 (+metadata-only; no auth)", "accept": "text/html,application/xhtml+xml", ...requestHeaders }
       });
     } finally { clearTimeout(timer); }
     if ([301,302,303,307,308].includes(response.status)) {
@@ -131,13 +167,13 @@ async function testSource(source) {
     const chosen = books[0];
     stage("search", { resultCount: books.length, selectedTitle: chosen.name });
 
-    const detailPage = await fetchHtml(chosen.bookUrl, host);
+    const detailPage = await fetchHtml(chosen.bookUrl, host, headers);
     const detail = extract(detailPage.document, source.ruleBookInfo, detailPage.url, host);
     const title = detail.name || chosen.name;
     if (!title) throw new Error("book-detail-title-empty");
     stage("bookDetail", { title });
     const tocUrl = detail.tocUrl || chosen.bookUrl;
-    const tocPage = await fetchHtml(tocUrl, host);
+    const tocPage = await fetchHtml(tocUrl, host, headers);
     const chapterNodes = allNodes(tocPage.document, source.ruleToc.chapterList);
     const chapters = [];
     for (const node of chapterNodes.slice(0, 200)) {
@@ -153,7 +189,7 @@ async function testSource(source) {
     let lastContentError = "no-chapter-content";
     for (const chapter of unique.slice(0, 5)) {
       try {
-        const page = await fetchHtml(chapter.url, host);
+        const page = await fetchHtml(chapter.url, host, headers);
         const raw = first(page.document, source.ruleContent.content);
         const content = htmlToText(raw);
         const quality = scanArticles([{ title: chapter.title, content }]);
@@ -169,7 +205,7 @@ async function testSource(source) {
     stage("content", sampled);
     result.status = "passed";
   } catch (error) {
-    result.error = String(error && error.message || error).slice(0, 180);
+    result.error = String(error && error.message || error).slice(0, 180);\n    if (error && error.cause) result.errorCause = String(error.cause.code || error.cause.message || error.cause).slice(0, 180);
   }
   return result;
 }
