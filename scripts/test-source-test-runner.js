@@ -14,6 +14,7 @@ const adapter = {
   assert.equal(good.status, "passed");
   assert.equal(good.summary.sampledChapters, 2);
   assert.equal(good.articleQuality.normal, 2);
+  assert.equal(good.articleQuality.chapters.length, 2);
   const empty = await runSourceTests({ adapter: { ...adapter, getChapters: async () => [] }, http, source, profile: { keyword: "测试小说" } });
   assert.equal(empty.status, "failed");
   assert.match(empty.error, /chapter-list-empty/);
