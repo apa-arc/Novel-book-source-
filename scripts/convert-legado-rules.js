@@ -135,11 +135,17 @@ function parseLegacyChain(expression) {
     } else if (/^#[a-zA-Z_][\\w-]*$/.test(segment)) {
       kind="id"; parts=[segment.slice(1)];
     } else {
-      parts=segment.split(".");
-      kind=parts.shift();
-      if (!["class","id","tag","text"].includes(kind)) {
+      const implicitTagIndex = segment.match(/^([a-zA-Z][\\w-]*)\\.(-?\\d+)$/);
+      if (implicitTagIndex) {
         kind="tag";
-        parts.unshift(segment);
+        parts=[implicitTagIndex[1],implicitTagIndex[2]];
+      } else {
+        parts=segment.split(".");
+        kind=parts.shift();
+        if (!["class","id","tag","text"].includes(kind)) {
+          kind="tag";
+          parts.unshift(segment);
+        }
       }
     }
     const trailingIndex=parts.length>1 ? parseIndex(parts[parts.length-1]) : null;
