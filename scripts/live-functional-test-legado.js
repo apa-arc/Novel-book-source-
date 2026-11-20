@@ -99,7 +99,7 @@ function hostAllowed(candidate, baseHost) {
 function absolute(raw, base, host) {
   const u = new URL(String(raw || ""), base);
   if (u.protocol !== "https:" || u.username || u.password || !hostAllowed(u.hostname, host)) {
-    throw new Error("url-outside-https-source-host");
+    throw new Error("url-outside-https-source-host:" + u.hostname.toLowerCase() + ":expected-" + host);
   }
   return u.href;
 }
@@ -144,7 +144,11 @@ function simpleSearchUrl(source, keyword, page) {
     .replace(/\{\{\s*page\s*\}\}/gi, String(page))
     .replace(/\{\{\s*page\s*-\s*1\s*\}\}/gi, String(page - 1))
     .replace(/\{\{\s*page\s*\+\s*1\s*\}\}/gi, String(page + 1));
-  return absolute(replaced, source.bookSourceUrl, new URL(source.bookSourceUrl).hostname.toLowerCase());
+  const u = new URL(replaced, source.bookSourceUrl);
+  if (u.protocol !== "https:" || u.username || u.password || !u.hostname || /^(localhost|127\\.|10\\.|192\\.168\\.|172\\.(1[6-9]|2[0-9]|3[01])\\.)/i.test(u.hostname)) {
+    throw new Error("unsafe-search-url");
+  }
+  return u.href;
 }
 function extract(node, rules, baseUrl, host) {
   const out = {};
@@ -169,7 +173,8 @@ async function testSource(source) {
   const host = new URL(source.bookSourceUrl).hostname.toLowerCase();
   const id = hash(String(source.bookSourceName) + "|" + String(source.bookSourceUrl));
   const result = { id, name: String(source.bookSourceName || "").slice(0, 100), host, category: adultSource(source) ? "adult" : "ordinary", status: "failed", stages: [] };
-  const stage = (name, detail) => result.stages.push({ name, status: "passed", ...detail });
+  let currentStage = "preflight";
+  const stage = (name, detail) => { currentStage = name; result.stages.push({ name, status: "passed", ...detail }); };
   try {
     if (adultSource(source)) throw new Error("adult-functional-test-deferred");
     if (source.enabled === false) throw new Error("upstream-source-disabled");
@@ -177,7 +182,8 @@ async function testSource(source) {
     const headers = safeHeaders(source);
     if (!isStaticRuleGroup(source)) throw new Error("unsupported-or-incomplete-rule-groups");
     const searchUrl = simpleSearchUrl(source, KEYWORD, 1);
-    const searchPage = await fetchHtml(searchUrl, host, headers);
+    const searchHost = new URL(searchUrl).hostname.toLowerCase();
+    const searchPage = await fetchHtml(searchUrl, searchHost, headers);
     const searchItems = allNodes(searchPage.document, source.ruleSearch.bookList);
     const books = [];
     for (const item of searchItems.slice(0, 80)) {
@@ -226,7 +232,7 @@ async function testSource(source) {
     stage("content", sampled);
     result.status = "passed";
   } catch (error) {
-    result.error = String(error && error.message || error).slice(0, 180);
+    result.failedStage = currentStage;\n    result.error = String(error && error.message || error).slice(0, 180);
     if (error && error.cause) result.errorCause = String(error.cause.code || error.cause.message || error.cause).slice(0, 180);
   }
   return result;
@@ -264,7 +270,7 @@ async function main() {
       if (index >= selected.length) return;
       results[index] = await testSource(selected[index].source);
       results[index].provider = selected[index].provider;
-      console.log("tested", index + 1, "/", selected.length, results[index].status, results[index].host, [results[index].error, results[index].errorCause].filter(Boolean).join("/"));
+      console.log("tested", index + 1, "/", selected.length, results[index].status, results[index].host, [results[index].failedStage, results[index].error, results[index].errorCause].filter(Boolean).join("/"));
     }
   }
   await Promise.all(Array.from({ length: CONCURRENCY }, worker));
