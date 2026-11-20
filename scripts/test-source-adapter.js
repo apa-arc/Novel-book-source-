@@ -105,7 +105,7 @@ const http = { async get(url) { requests.push(url); return { url, document: root
     chapterUrl: "https://example.test/read/1/100.html",
     http: pagedHttp
   });
-  assert.equal(pagedContent.content, "第一段正文\\n\\n第二段正文");
+  assert.equal(pagedContent.content, "第一段正文\n\n第二段正文");
   assert.equal(pageRequests.length, 2);
   assert.ok(pageRequests[1].endsWith("_2.html"));
 
