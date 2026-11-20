@@ -1,0 +1,32 @@
+name: Scan AOAOSTAR Legado collections
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "imports/aoaostar/catalog.json"
+      - "scripts/scan-legado-collections.js"
+      - ".github/workflows/scan-legado.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Scan all registered collections
+        run: npm run scan-legado -- --output=reports/aoaostar-scan.json
+      - name: Upload sanitized scan report
+        uses: actions/upload-artifact@v4
+        with:
+          name: aoaostar-scan-report
+          path: reports/aoaostar-scan.json
+          if-no-files-found: error
+          retention-days: 90
