@@ -1,0 +1,52 @@
+name: Mirror and split AOAOSTAR novel rules
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/import-aoaostar-rules.js"
+      - ".github/workflows/import-aoaostar-rules.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: aoaostar-rule-mirror
+  cancel-in-progress: false
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Download upstream full rule snapshot
+        run: |
+          mkdir -p imports/aoaostar/raw
+          curl --fail --location --retry 4 --retry-delay 3 \
+            https://raw.githubusercontent.com/aoaostar/legado/release/sources/b778fe6b.json \
+            --output imports/aoaostar/raw/aoaostar-full.json
+          node -e "const fs=require('fs');const x=JSON.parse(fs.readFileSync('imports/aoaostar/raw/aoaostar-full.json','utf8'));console.log('Upstream source records:',Array.isArray(x)?x.length:1)"
+      - name: Mirror and split novel rules
+        run: node scripts/import-aoaostar-rules.js
+      - name: Commit rule snapshots and manifests
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add exports/ imports/aoaostar/raw/aoaostar-full.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Mirror and split AOAOSTAR novel source rules"
+            git pull --rebase origin main
+            git push
+          fi
+      - name: Upload import report
+        uses: actions/upload-artifact@v4
+        with:
+          name: aoaostar-rule-import-report
+          path: exports/aoaostar-import-report.json
+          if-no-files-found: error
+          retention-days: 90
