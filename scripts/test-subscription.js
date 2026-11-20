@@ -14,7 +14,7 @@ try {
     schemaVersion: 1, id: "demo-source", name: "演示书源", kind: "public-web",
     version: "1.0.0", description: "测试", baseUrl: "https://example.com",
     domains: ["example.com"], script: "scripts/demo-source.js", enabled: true,
-    categories: ["测试"],
+    categories: ["测试"],\n    appConfig: { searchUrl: "https://example.com/search", bookUrl: "https://example.com/book", chapterListUrl: "https://example.com/toc", chapterUrl: "https://example.com/chapter" },
     licenseApproved: true, licenseEvidence: "测试授权记录", hostValidated: true,
     qualityReport: "quality-reports/demo-source.json"
   };
@@ -28,7 +28,7 @@ try {
   ] };
   const output = buildSubscription(index, root, "2026-11-20T00:00:00.000Z");
   assert.equal(output.sourceCount, 1);
-  assert.equal(output.sources[0].id, "demo-source");
+  assert.equal(output.sources[0].id, "demo-source");\n  assert.equal(output.sources[0].appConfig.searchUrl, "https://example.com/search");
   assert.equal(output.sources[0].scriptUrl, "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/demo-source.js");
   assert.equal(output.updatedAt, "2026-11-20T00:00:00.000Z");
 
