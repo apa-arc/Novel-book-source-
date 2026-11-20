@@ -1,6 +1,6 @@
 "use strict";
 const assert = require("node:assert/strict");
-const { validateManifest, renderFiles, buildBatch } = require("./generate-source");
+const { validateManifest, buildBatch } = require("./generate-source");
 
 const valid = {
   licenseApproved: true,
@@ -35,7 +35,7 @@ assert.equal(batch.nextIndex.sources.length, 3);
 assert.equal(batch.nextIndex.sources[1].id, "demo-source");
 assert.equal(batch.nextIndex.sources[1].enabled, false);
 assert.match(batch.outputs[0].scriptContent, /replace\\(/);
-assert.match(batch.outputs[0].scriptContent, /createAdapter/);
+assert.ok(batch.outputs[0].scriptContent.includes("createAdapter"));\nconst vm = require("node:vm");\nassert.doesNotThrow(() => new vm.Script(batch.outputs[0].scriptContent));\nassert.ok(batch.outputs[0].sourceContent.endsWith("\\n"));
 assert.throws(() => buildBatch(initialIndex, [valid, valid]), /duplicate-id-in-batch/);
 assert.throws(() => buildBatch(initialIndex, [valid, {
   ...valid, metadata: { ...valid.metadata, id: "template-source" }
