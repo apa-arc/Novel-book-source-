@@ -15,7 +15,7 @@ function validateHttpUrl(value, allowedHosts) {
   return url.href;
 }
 
-async function runSourceTests({ adapter, http, profile, source, sampleChapters = 3 }) {
+async function runSourceTests({ adapter, http, profile, source, sampleChapters = 5 }) {
   const stages = [];
   const articles = [];
   const hosts = new Set((source && source.domains || []).map(x => String(x).toLowerCase()));
@@ -55,7 +55,7 @@ async function runSourceTests({ adapter, http, profile, source, sampleChapters =
       }
       return { chapterCount: items.length, duplicateUrls: 0 };
     });
-    const sample = (await adapter.getChapters({ bookUrl, http })).slice(0, Math.max(1, Math.min(10, Number(sampleChapters) || 3)));
+    const sample = (await adapter.getChapters({ bookUrl, http })).slice(0, Math.max(1, Math.min(20, Number(sampleChapters) || 5)));
     for (const chapter of sample) {
       await run("content:" + articles.length, async () => {
         const content = await adapter.getContent({ chapterUrl: validateHttpUrl(chapter.chapterUrl, hosts), http });
@@ -64,14 +64,19 @@ async function runSourceTests({ adapter, http, profile, source, sampleChapters =
         return { title: chapter.title, contentLength: content.content.length };
       });
     }
-    report.articleQuality = scanArticles(articles).summary;
+    const quality = scanArticles(articles);
+    report.articleQuality = { ...quality.summary, chapters: quality.results };
     const failed = stages.filter(item => item.status === "failed").length;
-    report.summary = { passedStages: stages.length - failed, failedStages: failed, sampledChapters: articles.length, qualityPassed: report.articleQuality.suspect === 0 && report.articleQuality.review === 0 && report.articleQuality.duplicates === 0 };
+    report.summary = { passedStages: stages.length - failed, failedStages: failed, sampledChapters: articles.length, qualityPassed: quality.summary.suspect === 0 && quality.summary.review === 0 && quality.summary.duplicates === 0 };
     if (!report.summary.qualityPassed) throw new Error("chapter-text-quality-check-failed");
     report.status = "passed";
   } catch (error) {
     report.status = "failed";
     report.error = safeError(error);
+    if (articles.length && !report.articleQuality) {
+      const quality = scanArticles(articles);
+      report.articleQuality = { ...quality.summary, chapters: quality.results };
+    }
     const failed = stages.filter(item => item.status === "failed").length;
     report.summary = { passedStages: stages.length - failed, failedStages: failed, sampledChapters: articles.length, qualityPassed: report.articleQuality ? report.articleQuality.suspect === 0 && report.articleQuality.review === 0 && report.articleQuality.duplicates === 0 : false };
   }
