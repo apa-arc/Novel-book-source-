@@ -1,0 +1,37 @@
+name: Build subscription
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "index.json"
+      - "sources/**"
+      - "scripts/**"
+      - "scripts/build-subscription.js"
+      - ".github/workflows/build-subscription.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Build subscription manifest
+        run: node scripts/build-subscription.js
+      - name: Commit updated manifest
+        run: |
+          if git diff --quiet -- subscription.json; then
+            echo "Subscription manifest is already up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add subscription.json
+          git commit -m "chore: update source subscription"
+          git push
