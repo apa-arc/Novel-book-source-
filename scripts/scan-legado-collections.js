@@ -12,6 +12,34 @@ const catalog = JSON.parse(fs.readFileSync(catalogPath, "utf8"));
 const ruleKeys = ["ruleSearch", "ruleBookInfo", "ruleToc", "ruleContent", "ruleExplore"];
 const scriptPattern = /@js:|<js>|\bjava\s*script\b|\b(function|return)\b|\$\{/i;
 const MAX_BYTES = 50 * 1024 * 1024;
+const crypto = require("node:crypto");
+
+function stableStringify(value) {
+  if (Array.isArray(value)) return "[" + value.map(stableStringify).join(",") + "]";
+  if (value && typeof value === "object") {
+    return "{" + Object.keys(value).sort().map((key) =>
+      JSON.stringify(key) + ":" + stableStringify(value[key])).join(",") + "}";
+  }
+  return JSON.stringify(value);
+}
+
+function fingerprint(source) {
+  return crypto.createHash("sha256").update(stableStringify(source)).digest("hex");
+}
+
+function normalizedSourceUrl(value) {
+  if (typeof value !== "string") return null;
+  try {
+    const url = new URL(value.trim());
+    if (url.protocol !== "https:" || !url.hostname) return null;
+    url.hash = "";
+    url.hostname = url.hostname.toLowerCase();
+    return url.toString().replace(/\\/$/, "");
+  } catch {
+    return null;
+  }
+}
+
 
 function containsScriptLikeValue(value) {
   if (typeof value === "string") return scriptPattern.test(value);
@@ -79,7 +107,7 @@ async function fetchCollection(collection) {
   if (!sources.length || sources.some((item) => !item || typeof item !== "object" || Array.isArray(item))) {
     throw new Error("JSON 顶层不是书源对象数组");
   }
-  return sources.map((source, index) => analyze(source, index, collection));
+  return sources.map((source, index) => ({ ...analyze(source, index, collection), fingerprint: fingerprint(source), normalizedUrl: normalizedSourceUrl(source.bookSourceUrl) }));
 }
 
 async function main() {
@@ -107,6 +135,35 @@ async function main() {
       report.failures.push({ id: collection.id, name: collection.name, error: error.message });
       console.error("扫描失败：" + collection.name + "：" + error.message);
     }
+  }
+
+
+  // Deduplicate exact source definitions without retaining raw rules or credentials.
+  const exactGroups = new Map();
+  const urlGroups = new Map();
+  for (const item of report.sources) {
+    if (!exactGroups.has(item.fingerprint)) exactGroups.set(item.fingerprint, []);
+    exactGroups.get(item.fingerprint).push(item);
+    if (item.normalizedUrl) {
+      if (!urlGroups.has(item.normalizedUrl)) urlGroups.set(item.normalizedUrl, []);
+      urlGroups.get(item.normalizedUrl).push(item);
+    }
+  }
+  const exactDuplicateRecords = [...exactGroups.values()].reduce((sum, group) => sum + Math.max(0, group.length - 1), 0);
+  const sameUrlGroups = [...urlGroups.values()].filter((group) => group.length > 1);
+  const exactUniqueSources = exactGroups.size;
+  report.deduplication = {
+    method: "SHA-256 of canonicalized complete source JSON; hashes only, raw rules/headers/cookies are not written",
+    exactUniqueSources,
+    exactDuplicateRecords,
+    sameUrlGroupCount: sameUrlGroups.length,
+    sameUrlRecords: sameUrlGroups.reduce((sum, group) => sum + group.length, 0),
+    sourcesWithoutValidHttpsUrl: report.sources.filter((item) => !item.normalizedUrl).length
+  };
+  // Remove internal fingerprints and normalized URLs from the public source listing.
+  for (const item of report.sources) {
+    delete item.fingerprint;
+    delete item.normalizedUrl;
   }
 
   const outputArg = process.argv.find((arg) => arg.startsWith("--output="));
