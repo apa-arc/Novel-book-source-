@@ -2,12 +2,13 @@
   "schemaVersion": 1,
   "id": "template-source",
   "name": "书源模板（未配置）",
+  "kind": "public-web",
   "version": "0.1.0",
   "description": "复制此文件并填写合法授权站点的信息后再启用。",
   "baseUrl": "https://example.com",
   "domains": ["example.com"],
   "script": "scripts/template-source.js",
   "enabled": false,
-  "categories": ["示例"],
+  "categories": ["公开网站", "示例"],
   "licenseNote": "示例配置，不提供实际内容；接入前请确认站点条款和内容授权。"
 }
