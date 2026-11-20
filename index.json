@@ -8,6 +8,13 @@
       "kind": "public-web",
       "file": "sources/template.json",
       "enabled": false
+    },
+    {
+      "id": "zh-wikisource-classics",
+      "name": "中文维基文库·古典作品",
+      "kind": "public-web",
+      "file": "sources/zh-wikisource-classics.json",
+      "enabled": false
     }
   ]
 }
