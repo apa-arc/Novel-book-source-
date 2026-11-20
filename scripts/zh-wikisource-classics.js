@@ -10,7 +10,7 @@ function checkedUrl(value, base = BASE, required = false) {
 }
 
 function text(node) {
-  return String(node && (node.innerText || node.textContent) || "").replace(/\\s+/g, " ").trim();
+  return String(node && (node.innerText || node.textContent) || "").replace(/\s+/g, " ").trim();
 }
 
 function first(root, selector) {
