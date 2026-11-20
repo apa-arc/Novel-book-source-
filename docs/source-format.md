@@ -152,14 +152,14 @@
 
 静态转换成功、选择器语法可解析或 CI 通过，都不能单独证明书源可用或获得授权。
 
-## 7. 正式启用质量门禁
+# 正式启用质量门禁
 
-将索引项 `enabled` 设为 `true` 前，元数据必须同时包含：
+将书源索引中的 `enabled` 设为 `true` 前，元数据必须同时具备：
 
-- `licenseApproved: true` 和非空 `licenseEvidence`：记录逐项许可审查依据。
-- `hostValidated: true`：表示已在目标阅读 App 的真实 DOM/网络宿主中完成必要联调；模拟 DOM 测试或 GitHub CI 不能代替。
-- `qualityReport: "quality-reports/<id>.json"`：指向该书源对应的质量报告。
+- `licenseApproved: true`、非空 `licenseEvidence`、有效的 `licenseType`（`self-owned`、`written-permission`、`open-license`、`public-domain`）及 HTTPS `licenseEvidenceUrl`。证据链接必须直接支持许可/权属主张，网站首页或“公开可访问”不算证据。
+- 完整的 `appConfig`：搜索、详情、目录、正文四个 HTTPS 接口，所有主机都必须位于 `domains` 白名单。
+- `hostValidated: true` 及 `functionalTestReport`。报告必须对应当前 sourceId/version，状态为 passed、失败阶段为 0、至少抽查 1 章，并通过文本质量检查。
+- `qualityReport`：对应当前 sourceId/version，至少扫描 1 章，乱码/可疑、需人工复核和重复正文均为 0。
 
-质量报告必须使用 schemaVersion 1，包含匹配的 `sourceId`、`sourceVersion`、有效 `generatedAt`，并且 `summary.scanned` 大于 0，`suspect`、`review`、`duplicates` 均为 0。报告必须对应当前书源版本。启用校验和订阅构建都会执行门禁；任何一项缺失或失败都会阻止正式订阅发布。
+仅有布尔值、手写说明或模拟数据不能代替测试报告。模拟源必须保持禁用，不能被计入正式订阅。订阅构建器会再次执行这些检查；任一条件不满足即拒绝发布。
 
-目前维基文库扫描报告是上游作品的文本检查结果，不等同于目标 App 宿主验证，也不是可直接用于启用书源的质量报告。

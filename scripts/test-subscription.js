@@ -15,13 +15,30 @@ try {
     version: "1.0.0", description: "测试", baseUrl: "https://example.com",
     domains: ["example.com"], script: "scripts/demo-source.js", enabled: true,
     categories: ["测试"],
-    appConfig: { searchUrl: "https://example.com/search", bookUrl: "https://example.com/book", chapterListUrl: "https://example.com/toc", chapterUrl: "https://example.com/chapter", htmlRules: { search: { itemSelector: ".book", titleSelector: "a", urlSelector: "a" } } },
-    licenseApproved: true, licenseEvidence: "测试授权记录", hostValidated: true,
-    qualityReport: "quality-reports/demo-source.json"
+    appConfig: {
+      searchUrl: "https://example.com/search?q={keyword}",
+      bookUrl: "https://example.com/book/{bookId}",
+      chapterListUrl: "https://example.com/toc/{bookId}",
+      chapterUrl: "https://example.com/chapter/{chapterId}",
+      htmlRules: { search: { itemSelector: ".book", titleSelector: "a", urlSelector: "a" } }
+    },
+    licenseApproved: true, licenseEvidence: "测试授权记录",
+    licenseType: "open-license", licenseEvidenceUrl: "https://example.com/license",
+    hostValidated: true, qualityReport: "quality-reports/demo-source.json",
+    functionalTestReport: "quality-reports/demo-source-functional.json"
   };
   fs.writeFileSync(path.join(root, "sources/demo-source.json"), JSON.stringify(meta));
   fs.writeFileSync(path.join(root, "scripts/demo-source.js"), "module.exports = {};");
-  fs.writeFileSync(path.join(root, meta.qualityReport), JSON.stringify({ schemaVersion: 1, sourceId: "demo-source", sourceVersion: "1.0.0", generatedAt: "2026-11-20T00:00:00.000Z", summary: { scanned: 10, suspect: 0, review: 0, duplicates: 0 } }));
+  fs.writeFileSync(path.join(root, meta.qualityReport), JSON.stringify({
+    schemaVersion: 1, sourceId: "demo-source", sourceVersion: "1.0.0",
+    generatedAt: "2026-11-20T00:00:00.000Z",
+    summary: { scanned: 10, suspect: 0, review: 0, duplicates: 0 }
+  }));
+  fs.writeFileSync(path.join(root, meta.functionalTestReport), JSON.stringify({
+    schemaVersion: 1, sourceId: "demo-source", sourceVersion: "1.0.0",
+    status: "passed",
+    summary: { passedStages: 6, failedStages: 0, sampledChapters: 2, qualityPassed: true }
+  }));
   const index = { schemaVersion: 1, sources: [
     { id: "template-source", name: "模板", kind: "public-web", file: "sources/template.json", enabled: false },
     { id: "demo-source", name: "演示书源", kind: "public-web", file: "sources/demo-source.json", enabled: true }
@@ -29,7 +46,7 @@ try {
   const ordinary = buildSubscription(index, root, "2026-11-20T00:00:00.000Z");
   assert.equal(ordinary.sourceCount, 1);
   assert.equal(ordinary.sources[0].id, "demo-source");
-  assert.equal(ordinary.sources[0].appConfig.searchUrl, "https://example.com/search");
+  assert.equal(ordinary.sources[0].appConfig.searchUrl, "https://example.com/search?q={keyword}");
   assert.equal(ordinary.sources[0].appConfig.htmlRules.search.itemSelector, ".book");
   assert.equal(ordinary.sources[0].scriptUrl, "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/demo-source.js");
   assert.equal(ordinary.updatedAt, "2026-11-20T00:00:00.000Z");
@@ -48,6 +65,4 @@ try {
   fs.writeFileSync(path.join(root, "sources/demo-source.json"), JSON.stringify({ ...meta, baseUrl: "http://example.com" }));
   assert.throws(() => buildSubscription(index, root), /地址或域名白名单无效/);
   console.log("Subscription builder tests passed.");
-} finally {
-  fs.rmSync(root, { recursive: true, force: true });
-}
+} finally { fs.rmSync(root, { recursive: true, force: true }); }
