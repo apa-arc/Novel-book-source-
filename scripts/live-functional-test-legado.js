@@ -137,7 +137,9 @@ function simpleSearchUrl(source, keyword, page) {
 }
 function extract(node, rules, baseUrl, host) {
   const out = {};
+  const nonSelector = new Set(["bookList","chapterList","checkKeyWord","init","replaceRegex","webJs","sourceRegex","imageStyle"]);
   for (const [key, rule] of Object.entries(rules || {})) {
+    if (nonSelector.has(key) || !rule || typeof rule !== "string") continue;
     if (!rule || typeof rule !== "string") continue;
     const value = first(node, rule);
     if (value == null || value === "") continue;
