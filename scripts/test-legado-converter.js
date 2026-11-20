@@ -52,6 +52,12 @@ try{
  const unknownSelector=parseLegacyChain("@xpath://div");
  assert.equal(unknownSelector.status,"manual");
  assert.equal(unknownSelector.reason,"unsupported-xpath");
+ const rootShorthand=parseLegacyChain("@p.0@text");
+ assert.equal(rootShorthand.status,"candidate");
+ assert.deepEqual(rootShorthand.selector.steps[0],{kind:"tag",name:"p",index:0});
+ const currentNode=parseLegacyChain("text");
+ assert.equal(currentNode.status,"candidate");
+ assert.equal(currentNode.selector.engine,"self");
  const bareTag=parseLegacyChain("a@href");
  assert.equal(bareTag.status,"candidate");
  assert.deepEqual(bareTag.selector.steps[0],{kind:"tag",name:"a",index:null});
