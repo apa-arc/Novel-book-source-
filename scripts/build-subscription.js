@@ -1,6 +1,7 @@
 "use strict";
 const fs = require("node:fs");
 const path = require("node:path");
+const { validateSourceQuality } = require("../runtime/source-quality-gate");
 
 const RAW_BASE = "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/";
 
@@ -25,6 +26,7 @@ function buildSubscription(index, root, updatedAt = new Date().toISOString()) {
       throw new Error("启用书源元数据不存在或路径非法：" + item.id);
     }
     const meta = JSON.parse(fs.readFileSync(metadataPath, "utf8"));
+    validateSourceQuality(meta, root);
     if (meta.schemaVersion !== 1 || meta.id !== item.id || meta.enabled !== true ||
         meta.name !== item.name || meta.kind !== item.kind) {
       throw new Error("书源元数据与索引不一致：" + item.id);
