@@ -1,8 +1,8 @@
 {
-  "name": "apple-novel-sources",
+  "name": "personal-novel-sources",
   "version": "0.1.0",
   "private": true,
-  "description": "JSON metadata and JavaScript adapters for AppleNovelApp",
+  "description": "Personal novel source definitions, conversion tools and validation",
   "scripts": {
     "validate": "node --check scripts/analyze-legado-source.js && node --check scripts/scan-legado-collections.js && node --check scripts/convert-legado-rules.js && node --check runtime/selector-engine.js && node scripts/test-legado-converter.js && node scripts/test-selector-engine.js && node scripts/validate.js",
     "analyze-legado": "node scripts/analyze-legado-source.js",
