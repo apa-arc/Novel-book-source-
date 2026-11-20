@@ -32,6 +32,7 @@ jobs:
           git add imports/aoaostar/conversion-status.json
           if ! git diff --cached --quiet; then
             git commit -m "Update sanitized source conversion progress"
+            git pull --rebase origin main
             git push
           fi
       - name: Upload compatibility report
