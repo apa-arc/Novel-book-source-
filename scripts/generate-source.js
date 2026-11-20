@@ -14,6 +14,8 @@ function validateAppConfig(value, base, domains) {
   if (value === undefined) return undefined;
   if (!value || typeof value !== "object" || Array.isArray(value)) fail("app-config-must-be-object");
   const endpoints = ["searchUrl", "bookUrl", "chapterListUrl", "chapterUrl"];
+  const allowedAppFields = [...endpoints, "htmlRules"];
+  if (Object.keys(value).some((key) => !allowedAppFields.includes(key))) fail("app-config-unknown-field");
   const output = {};
   for (const key of endpoints) {
     if (typeof value[key] !== "string" || !value[key].trim() || value[key].length > 2000) {
@@ -37,6 +39,7 @@ function validateAppConfig(value, base, domains) {
       chapters: { required: ["itemSelector", "titleSelector", "urlSelector"], allowed: ["itemSelector", "titleSelector", "urlSelector", "urlAttribute"] },
       content: { required: ["contentSelector"], allowed: ["contentSelector", "titleSelector"] },
     };
+    if (Object.keys(rules).some((key) => !Object.prototype.hasOwnProperty.call(groups, key))) fail("app-html-rules-unknown-group");
     const normalized = {};
     for (const [group, spec] of Object.entries(groups)) {
       if (rules[group] === undefined) continue;
