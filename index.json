@@ -1,13 +1,5 @@
 {
   "schemaVersion": 1,
   "updatedAt": "2026-11-21",
-  "sources": [
-    {
-      "id": "template-source",
-      "name": "书源模板（未配置）",
-      "kind": "public-web",
-      "file": "sources/template.json",
-      "enabled": false
-    }
-  ]
+  "sources": []
 }
