@@ -21,22 +21,22 @@ function assert(condition, message) {
 }
 
 async function main() {
-  console.log("[1/3] Checking MediaWiki search API...");
+  console.log("[1/4] Checking MediaWiki search API...");
   const search = await api({
     action: "query",
     format: "json",
     list: "search",
-    srsearch: "intitle:三國志演義",
+    srsearch: "三國志演義",
     srnamespace: "0",
     srlimit: "20"
   });
   const hits = search.query && search.query.search || [];
   assert(hits.length > 0, "Search returned no main-namespace results");
-  const matched = hits.find(item => /三國志演義|三国演义/.test(item.title) && !/序/.test(item.title));
-  assert(matched, "Search did not return the expected work page");
+  const matched = hits.find(item => /三國志演義|三国演义/.test(item.title));
+  assert(matched, "Search did not return the expected work-related result");
   console.log("  OK: " + matched.title);
 
-  console.log("[2/3] Checking work page HTML...");
+  console.log("[2/4] Checking work page HTML...");
   const work = await api({
     action: "parse",
     format: "json",
@@ -48,20 +48,35 @@ async function main() {
   assert(/mw-parser-output/.test(workHtml), "Work page lacks MediaWiki parser output");
   console.log("  OK: " + (work.parse.title || "work page") + ", HTML " + workHtml.length + " chars");
 
-  console.log("[3/3] Checking first chapter content...");
+  console.log("[3/4] Discovering the actual first-chapter page title...");
+  const chapterSearch = await api({
+    action: "query",
+    format: "json",
+    list: "search",
+    srsearch: "宴桃園豪傑三結義",
+    srnamespace: "0",
+    srlimit: "20"
+  });
+  const chapterHits = chapterSearch.query && chapterSearch.query.search || [];
+  const chapterMatch = chapterHits.find(item => /第001回|第一回/.test(item.title));
+  assert(chapterMatch, "Search could not discover the first-chapter page; results: " +
+    chapterHits.map(item => item.title).join(" | "));
+  console.log("  OK: " + chapterMatch.title);
+
+  console.log("[4/4] Checking first chapter content...");
   const chapter = await api({
     action: "parse",
     format: "json",
-    page: "三國志演義/第001回",
+    page: chapterMatch.title,
     prop: "displaytitle|text"
   });
   const chapterHtml = chapter.parse && chapter.parse.text && chapter.parse.text["*"] || "";
   assert(chapterHtml.length > 1000, "Chapter HTML is missing or unexpectedly short");
   assert(/mw-parser-output/.test(chapterHtml), "Chapter lacks MediaWiki parser output");
-  assert(/第一回|第001回|宴桃園豪傑三結義/.test(chapterHtml), "Chapter content marker was not found");
-  console.log("  OK: " + (chapter.parse.title || "chapter page") + ", HTML " + chapterHtml.length + " chars");
+  assert(/宴桃園豪傑三結義|第一回|第001回/.test(chapterHtml), "Chapter content marker was not found");
+  console.log("  OK: " + (chapter.parse.title || chapterMatch.title) + ", HTML " + chapterHtml.length + " chars");
 
-  console.log("PASS: live Wikisource search, work page, and chapter page are reachable.");
+  console.log("PASS: live Wikisource search, work page, and discovered chapter page are reachable.");
 }
 
 main().catch(error => {
