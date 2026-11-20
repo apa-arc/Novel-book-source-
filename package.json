@@ -4,11 +4,11 @@
   "private": true,
   "description": "Personal novel source definitions, conversion tools and validation",
   "scripts": {
-    "validate": "node --check scripts/analyze-legado-source.js && node --check scripts/scan-legado-collections.js && node --check scripts/convert-legado-rules.js && node --check scripts/generate-source.js && node --check runtime/selector-engine.js && node --check runtime/source-adapter.js && node scripts/test-legado-converter.js && node scripts/test-selector-engine.js && node scripts/test-source-adapter.js && node scripts/test-source-generator.js && node scripts/validate.js",
+    "validate": "node --check scripts/analyze-legado-source.js && node --check scripts/scan-legado-collections.js && node --check scripts/convert-legado-rules.js && node --check scripts/generate-source.js && node --check runtime/selector-engine.js && node --check runtime/source-adapter.js && node scripts/test-legado-converter.js && node scripts/test-selector-engine.js && node scripts/test-source-adapter.js && node scripts/test-source-generator.js && node scripts/test-subscription.js && node scripts/validate.js",
     "analyze-legado": "node scripts/analyze-legado-source.js",
     "scan-legado": "node scripts/scan-legado-collections.js",
     "convert-legado": "node scripts/convert-legado-rules.js",
-    "test": "node scripts/test-legado-converter.js && node scripts/test-selector-engine.js && node scripts/test-source-adapter.js && node --check scripts/generate-source.js && node scripts/test-source-generator.js",
+    "test": "node scripts/test-legado-converter.js && node scripts/test-selector-engine.js && node scripts/test-source-adapter.js && node --check scripts/generate-source.js && node scripts/test-source-generator.js && node scripts/test-subscription.js",
     "generate-source": "node scripts/generate-source.js"
   }
 }
