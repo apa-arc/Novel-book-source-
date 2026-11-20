@@ -47,13 +47,16 @@ async function scanOne(c,fetchImpl){
   for(const map of maps.slice(0,2)){try{const xml=await get(fetchImpl,map,hosts,5*1024*1024);r.sitemapFound=true;urls.push(...sitemapUrls(xml,base,hosts));const children=sitemapChildren(xml,base,hosts);for(const child of children.slice(0,2)){try{urls.push(...sitemapUrls(await get(fetchImpl,child,hosts,5*1024*1024),base,hosts));}catch{}}}catch{}}
   urls=[...new Set([...urls,...links.map(x=>x.url)])].slice(0,3);r.chapterPagesFound=urls.length;
   if(!urls.length){r.status=/小说|文学|阅读|书城/.test((r.siteTitle||"")+" "+c.name)?"needs-adapter":"non-novel-or-undiscovered";r.reasons.push("no-chapter-link-in-homepage-or-public-sitemap");return r;}
-  const articles=[];
-  for(const url of urls.slice(0,2)){try{const html=await get(fetchImpl,url,hosts,2*1024*1024);let content=textFromHtml(html);
-    const article=html.match(/<(article|main)[^>]*>([\s\S]*?)<\/\1\s*>/i);if(article)content=textFromHtml(article[2]);
-    const cjk=(content.match(/[\u3400-\u9fff]/g)||[]).length;
-    if(content.length>=300&&cjk>=100)articles.push({title:titleFromHtml(html)||"chapter-"+(articles.length+1),content});else r.reasons.push("sample-page-too-short-or-not-chinese-text");
+  const articles=[];let nonChapterPages=0,oversizedPages=0;
+  const chapterTitle=/(?:第[零〇一二三四五六七八九十百千万\\d]+[章节回卷]|chapter\\s*[-#]?\\s*\\d+)/i;
+  for(const url of urls.slice(0,2)){try{const html=await get(fetchImpl,url,hosts,2*1024*1024);const pageTitle=titleFromHtml(html);let content=textFromHtml(html);
+    const article=html.match(/<(article|main)[^>]*>([\\s\\S]*?)<\\/\\1\\s*>/i);if(article)content=textFromHtml(article[2]);
+    const cjk=(content.match(/[\\u3400-\\u9fff]/g)||[]).length;
+    if(content.length>30000){oversizedPages++;r.reasons.push("sample-page-content-too-large-for-single-chapter");continue;}
+    if(!chapterTitle.test(pageTitle)){nonChapterPages++;r.reasons.push("page-title-not-a-chapter-title");continue;}
+    if(content.length>=300&&cjk>=100)articles.push({title:pageTitle||"chapter-"+(articles.length+1),content});else r.reasons.push("sample-page-too-short-or-not-chinese-text");
   }catch(e){r.reasons.push(String(e.message||e).slice(0,100));}}
-  r.sampledChapters=articles.length;if(!articles.length){r.status="chapter-content-unavailable";return r;}
+  r.sampledChapters=articles.length;if(!articles.length){r.status=oversizedPages||nonChapterPages?"manual-review":"chapter-content-unavailable";return r;}
   const q=scanArticles(articles);r.quality=q.summary;r.chapterFindings=q.results.map(x=>({title:x.title,status:x.status,length:x.length,flags:x.flags}));
   r.status=q.summary.suspect||q.summary.duplicates?"suspect":q.summary.review?"manual-review":"chapter-sample-clean";
   if(r.status==="suspect")r.reasons.push("chapter-text-quality-findings");return r;
