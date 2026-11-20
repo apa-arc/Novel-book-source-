@@ -4,7 +4,7 @@
 
 ## 已登记合集
 
-合集入口见 [catalog.json](./catalog.json)，扫描后的去重元数据目录见 [public-catalog.json](./public-catalog.json)，候选审查队列见 [candidate-review.json](./candidate-review.json)。当前包括全量书源、XIU2 精品、破冰、关耳女频、shidahuilang、三舞313 和开源阅读软件等公开合集。
+合集入口见 [catalog.json](./catalog.json)，扫描后的去重元数据目录见 [public-catalog.json](./public-catalog.json)，候选审查队列见 [candidate-review.json](./candidate-review.json)，转换进度见 [conversion-status.json](./conversion-status.json)。当前包括全量书源、XIU2 精品、破冰、关耳女频、shidahuilang、三舞313 和开源阅读软件等公开合集。
 
 ## 扫描
 
@@ -34,6 +34,10 @@ npm run scan-legado -- --output=reports/aoaostar-scan.json
 - `partial`：部分核心规则齐全，仍需补充或人工检查。
 - `manual`：发现脚本、登录态或 Cookie 配置，必须人工评估；不自动执行。
 - `low`：来源地址或关键规则不足。
+
+## 转换进度
+
+执行 `batch-convert-aoaostar` 工作流后，会更新 `conversion-status.json`。该文件只保留每条候选的静态转换状态、分组字段数量和诊断代码，不公开选择器表达式或原始规则。`candidate` 仅代表静态选择器解析通过，不是可运行适配器，也不代表授权或真实网站测试通过。
 
 ## 导入原则
 
