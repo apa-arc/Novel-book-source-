@@ -8,6 +8,7 @@ assert.equal(scanTextQuality("這段文字含有替換符號 �，應標記疑�
 assert.ok(scanTextQuality("锟斤拷").flags.some(flag => flag.rule === "common-garbled-text"));
 assert.ok(scanTextQuality("Ã¤Â¸Â­Ã¦â€“â€¡").flags.some(flag => flag.rule === "utf8-mojibake"));
 assert.ok(scanTextQuality("&#x4E2D;".repeat(20)).status === "normal");
+assert.ok(scanTextQuality("&#x4E2D".repeat(20)).flags.some(flag => flag.rule === "broken-html-entity"));
 assert.ok(scanTextQuality("&amp;#x4E2D;").flags.some(flag => flag.rule === "broken-html-entity"));
 assert.ok(scanTextQuality("\uE000").flags.some(flag => flag.rule === "private-use-character"));
 assert.ok(scanTextQuality("\u0001").flags.some(flag => flag.rule === "control-character"));
