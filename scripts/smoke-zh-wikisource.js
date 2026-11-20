@@ -1,6 +1,8 @@
 "use strict";
 
-const { scanTextQuality } = require("../runtime/text-quality");
+const fs = require("node:fs");
+const path = require("node:path");
+const { scanArticles } = require("../runtime/text-quality");
 const API = "https://zh.wikisource.org/w/api.php";
 const HEADERS = { "user-agent": "PersonalNovelSources-SmokeTest/1.0 (GitHub Actions; source compatibility check)", "accept": "application/json" };
 
@@ -16,29 +18,42 @@ async function api(params) {
 function assert(condition, message) { if (!condition) throw new Error(message); }
 
 async function scanChapterPages() {
-  console.log("[5/5] Scanning chapter source text for possible garbling...");
+  console.log("[5/5] Scanning chapter source text for encoding issues, empty/short pages, and duplicates...");
   const parsed = await api({ action: "parse", format: "json", page: "三國演義", prop: "links" });
   const links = parsed.parse && parsed.parse.links || [];
   const titles = [...new Set(links.map(link => link.title || link["*"] || "").filter(title => /第\d{3}回/.test(title)))];
-  assert(titles.length > 0, "No numbered chapter links found; page title=" + (parsed.parse && parsed.parse.title) + "; links=" + links.length + "; samples=" + links.slice(0, 40).map(link => link.title || link["*"] || JSON.stringify(link)).join(" | "));
-  const report = [];
+  assert(titles.length > 0, "No numbered chapter links found; page title=" + (parsed.parse && parsed.parse.title));
+  const articles = [];
   for (let offset = 0; offset < titles.length; offset += 50) {
     const batch = titles.slice(offset, offset + 50);
     const result = await api({ action: "query", format: "json", formatversion: "2", titles: batch.join("|"), prop: "revisions", rvprop: "content", rvslots: "main" });
     for (const page of result.query && result.query.pages || []) {
-      const raw = page.revisions && page.revisions[0] && page.revisions[0].slots && page.revisions[0].slots.main && page.revisions[0].slots.main.content || "";
-      const quality = scanTextQuality(raw);
-      if (quality.status !== "normal") report.push({ title: page.title, status: quality.status, flags: quality.flags });
+      const content = page.revisions && page.revisions[0] && page.revisions[0].slots && page.revisions[0].slots.main && page.revisions[0].slots.main.content || "";
+      articles.push({ title: page.title, content });
     }
   }
-  const suspect = report.filter(item => item.status === "suspect");
-  const review = report.filter(item => item.status === "review");
-  console.log("  Scanned chapter pages: " + titles.length);
-  console.log("  Suspected garbled pages: " + suspect.length);
-  console.log("  Pages requiring manual review: " + review.length);
-  for (const item of report.slice(0, 30)) console.log("  " + item.status.toUpperCase() + ": " + item.title + " [" + item.flags.map(flag => flag.rule + ":" + flag.count).join(", ") + "]");
-  if (report.length > 30) console.log("  ... " + (report.length - 30) + " additional flagged pages omitted");
-  return { scanned: titles.length, suspect: suspect.length, review: review.length };
+  const report = scanArticles(articles);
+  console.log("  Scanned chapter pages: " + report.summary.scanned);
+  console.log("  Normal: " + report.summary.normal);
+  console.log("  Suspected issues: " + report.summary.suspect);
+  console.log("  Manual review: " + report.summary.review);
+  console.log("  Duplicate contents: " + report.summary.duplicates);
+  for (const item of report.results.filter(item => item.status !== "normal").slice(0, 30)) {
+    console.log("  " + item.status.toUpperCase() + ": " + item.title + " [" + item.flags.map(flag => flag.rule + ":" + flag.count).join(", ") + "]");
+  }
+  const output = {
+    schemaVersion: 1,
+    generatedAt: new Date().toISOString(),
+    source: "https://zh.wikisource.org/",
+    work: "三國演義",
+    contentType: "raw-wikitext",
+    note: "Heuristic quality scan only; raw wiki markup is scanned, not rendered reading-app text.",
+    summary: report.summary,
+    results: report.results
+  };
+  fs.mkdirSync(path.join(process.cwd(), "artifacts"), { recursive: true });
+  fs.writeFileSync(path.join(process.cwd(), "artifacts", "text-quality-report.json"), JSON.stringify(output, null, 2) + "\n", "utf8");
+  return report.summary;
 }
 
 async function main() {
@@ -61,7 +76,7 @@ async function main() {
   const chapterSearch = await api({ action: "query", format: "json", list: "search", srsearch: "宴桃園豪傑三結義", srnamespace: "0", srlimit: "20" });
   const chapterHits = chapterSearch.query && chapterSearch.query.search || [];
   const chapterMatch = chapterHits.find(item => /第001回|第一回/.test(item.title));
-  assert(chapterMatch, "Search could not discover the first-chapter page; results: " + chapterHits.map(item => item.title).join(" | "));
+  assert(chapterMatch, "Search could not discover the first-chapter page");
   console.log("  OK: " + chapterMatch.title);
 
   console.log("[4/5] Checking first chapter content...");
@@ -72,7 +87,7 @@ async function main() {
   assert(/宴桃園豪傑三結義|第一回|第001回/.test(chapterHtml), "Chapter content marker was not found");
   console.log("  OK: " + (chapter.parse.title || chapterMatch.title) + ", HTML " + chapterHtml.length + " chars");
 
-  const quality = await scanChapterPages();
-  console.log("PASS: live Wikisource checks completed; scanned " + quality.scanned + " chapter pages.");
+  const summary = await scanChapterPages();
+  console.log("PASS: live Wikisource checks completed; scanned " + summary.scanned + " chapter pages.");
 }
 main().catch(error => { console.error("FAIL: " + error.message); process.exitCode = 1; });
