@@ -98,8 +98,140 @@
         "chapterUrl": {
           "type": "string",
           "minLength": 1
+        },
+        "htmlRules": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "search": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "itemSelector",
+                "titleSelector",
+                "urlSelector"
+              ],
+              "properties": {
+                "itemSelector": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 300
+                },
+                "titleSelector": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 300
+                },
+                "urlSelector": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 300
+                },
+                "authorSelector": {
+                  "type": "string",
+                  "maxLength": 300
+                },
+                "descriptionSelector": {
+                  "type": "string",
+                  "maxLength": 300
+                },
+                "urlAttribute": {
+                  "type": "string",
+                  "maxLength": 40
+                },
+                "coverSelector": {
+                  "type": "string",
+                  "maxLength": 300
+                },
+                "coverAttribute": {
+                  "type": "string",
+                  "maxLength": 40
+                }
+              }
+            },
+            "detail": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "titleSelector": {
+                  "type": "string",
+                  "maxLength": 300
+                },
+                "authorSelector": {
+                  "type": "string",
+                  "maxLength": 300
+                },
+                "descriptionSelector": {
+                  "type": "string",
+                  "maxLength": 300
+                }
+              }
+            },
+            "chapters": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "itemSelector",
+                "titleSelector",
+                "urlSelector"
+              ],
+              "properties": {
+                "itemSelector": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 300
+                },
+                "titleSelector": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 300
+                },
+                "urlSelector": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 300
+                },
+                "urlAttribute": {
+                  "type": "string",
+                  "maxLength": 40
+                }
+              }
+            },
+            "content": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "contentSelector"
+              ],
+              "properties": {
+                "contentSelector": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 300
+                },
+                "titleSelector": {
+                  "type": "string",
+                  "maxLength": 300
+                }
+              }
+            }
+          }
         }
       }
+    },
+    "licenseType": {
+      "type": "string",
+      "enum": [
+        "self-owned",
+        "written-permission",
+        "open-license",
+        "public-domain"
+      ]
+    },
+    "licenseEvidenceUrl": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://"
     }
   }
 }

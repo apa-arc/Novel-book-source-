@@ -43,7 +43,46 @@
 
 仓库提供 `runtime/source-adapter.js` 的 `createAdapter(config)`，用于将声明式选择器配置接入四个统一方法。它不负责网络请求或 HTML 解析；这些能力必须由 App 注入。选择器配置仍需经过目标 App 的真实 DOM 兼容测试。
 
-### 3.1 App JSON 兼容配置（可选）\n\n如果来源站点同时提供无需执行脚本即可读取的 JSON 接口，可在元数据中填写 `appConfig`：\n\n```json\n{\n  "appConfig": {\n    "searchUrl": "https://example.com/api/search?q={keyword}",\n    "bookUrl": "https://example.com/api/book",\n    "chapterListUrl": "https://example.com/api/chapters",\n    "chapterUrl": "https://example.com/api/chapter"\n  }\n}\n```\n\n四个地址必须为 HTTPS，主机名必须在 `domains` 白名单中。App 仅导入此配置，不执行 `scriptUrl`。没有 `appConfig` 的选择器脚本源会被 App 标记为暂不兼容。\n\n## 4. 统一返回结构
+### 3.1 App 兼容配置（可选）
+
+书源可以在元数据中声明 `appConfig`，供 AppleNovelApp 直接导入。必须提供四个 HTTPS 接口地址；如果站点返回 HTML，可同时提供受限 CSS 选择器规则：
+
+```json
+{
+  "appConfig": {
+    "searchUrl": "https://example.com/search?q={keyword}",
+    "bookUrl": "https://example.com/book/{bookId}",
+    "chapterListUrl": "https://example.com/chapters?bookUrl={bookUrl}",
+    "chapterUrl": "https://example.com/chapter",
+    "htmlRules": {
+      "search": {
+        "itemSelector": ".book",
+        "titleSelector": "a.title",
+        "urlSelector": "a.title",
+        "authorSelector": ".author",
+        "descriptionSelector": ".intro"
+      },
+      "detail": {
+        "titleSelector": "h1",
+        "descriptionSelector": ".intro"
+      },
+      "chapters": {
+        "itemSelector": ".chapter",
+        "titleSelector": "a",
+        "urlSelector": "a"
+      },
+      "content": {
+        "contentSelector": "#content",
+        "titleSelector": "h1"
+      }
+    }
+  }
+}
+```
+
+四个接口地址必须为 HTTPS，主机名必须位于 `domains` 白名单内。CSS 规则只支持 App 明确实现的安全子集（标签、类、ID、属性、后代/子元素、基础位置伪类）；不支持 XPath、正则脚本或任意 JavaScript。没有 `appConfig` 的脚本源会被 App 标记为暂不兼容。CI 的解析器测试不替代目标 App 的真实站点验证。
+
+## 4. 统一返回结构
 
 ### 搜索结果
 
