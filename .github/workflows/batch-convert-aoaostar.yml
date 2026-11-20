@@ -1,0 +1,28 @@
+name: Batch compatibility review for AOAOSTAR candidates
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  batch-review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate converter and tests
+        run: npm run validate
+      - name: Build sanitized report for all 704 candidates
+        run: node scripts/batch-convert-aoaostar.js
+      - name: Upload compatibility report
+        uses: actions/upload-artifact@v4
+        with:
+          name: aoaostar-conversion-review
+          path: reports/aoaostar-conversion-review.json
+          if-no-files-found: error
+          retention-days: 90
