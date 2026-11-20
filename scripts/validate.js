@@ -1,6 +1,7 @@
 const fs = require("node:fs");
 const path = require("node:path");
 const vm = require("node:vm");
+const { validateSourceQuality } = require("../runtime/source-quality-gate");
 
 const root = path.resolve(__dirname, "..");
 const index = JSON.parse(fs.readFileSync(path.join(root, "index.json"), "utf8"));
@@ -23,6 +24,7 @@ for (const item of index.sources) {
     throw new Error("书源文件不存在或路径非法：" + item.file);
   }
   const source = JSON.parse(fs.readFileSync(filePath, "utf8"));
+  validateSourceQuality(source, root);
 
   for (const key of ["schemaVersion", "id", "name", "kind", "version", "baseUrl", "domains", "script", "enabled"]) {
     if (source[key] === undefined) throw new Error(item.file + " 缺少字段 " + key);
