@@ -27,20 +27,30 @@ function parseLegacyChain(expression) {
   }
   const segments=raw.split("@");
   const output=(segments.pop()||"text").toLowerCase();
-  if (!CHAIN_OUTPUTS.has(output)) return {status:"manual",reason:"unsupported-output"};
+  if (!CHAIN_OUTPUTS.has(output) && output!=="all") return {status:"manual",reason:"unsupported-output"};
   const steps=[];
-  for (const segment of segments) {
+  let reverse=false;
+  for (const segmentValue of segments) {
+    let segment=segmentValue.trim();
+    if (!segment) return {status:"manual",reason:"unsupported-selector-step"};
+    if (segment.startsWith("-")) { reverse=true; segment=segment.slice(1); }
     const parts=segment.split(".");
     const kind=parts.shift();
-    if (!["class","id","tag"].includes(kind) || parts.length<1) return {status:"manual",reason:"unsupported-selector-step"};
+    if (kind==="children") {
+      if (parts.length) return {status:"manual",reason:"unsupported-selector-step"};
+      steps.push({kind:"children",name:null,index:null});
+      continue;
+    }
+    if (!["class","id","tag","text"].includes(kind) || parts.length<1) return {status:"manual",reason:"unsupported-selector-step"};
     const trailingIndex=parts.length>1 ? parseIndex(parts[parts.length-1]) : null;
     const hasIndex=trailingIndex!==null;
     const name=hasIndex ? parts.slice(0,-1).join(".") : parts.join(".");
     if (!name) return {status:"manual",reason:"invalid-selector-index"};
-    steps.push({kind,name,index:hasIndex?trailingIndex:0});
+    steps.push({kind,name,index:hasIndex?trailingIndex:null});
   }
   if (!steps.length) return {status:"manual",reason:"empty-selector-chain"};
-  return {status:"candidate",selector:{engine:"legado-chain",steps,output}};
+  return {status:"candidate",selector:{engine:"legado-chain",steps,output,reverse}};
+
 }
 function convertSource(source,index) {
   let safeBaseUrl=null;
