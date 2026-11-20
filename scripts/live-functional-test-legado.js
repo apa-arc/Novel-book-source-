@@ -83,6 +83,10 @@ function first(root, rule) {
   const result = executeSelector(root, selector(rule));
   return Array.isArray(result) ? result.find(x => x != null && String(x).trim() !== "") : result;
 }
+function values(root, rule) {
+  const result = executeSelector(root, selector(rule));
+  return (Array.isArray(result) ? result : [result]).flat(Infinity).filter(x => x != null && String(x).trim() !== "");
+}
 function allNodes(root, rule) {
   const result = executeSelector(root, selector(rule, "all"));
   if (!Array.isArray(result)) throw new Error("list-rule-not-array");
@@ -207,7 +211,7 @@ async function testSource(source) {
     for (const chapter of unique.slice(0, 5)) {
       try {
         const page = await fetchHtml(chapter.url, host, headers);
-        const raw = first(page.document, source.ruleContent.content);
+        const raw = values(page.document, source.ruleContent.content).join("\n");
         const content = htmlToText(raw);
         const quality = scanArticles([{ title: chapter.title, content }]);
         if (content.length < 100 || quality.summary.suspect > 0 || quality.summary.review > 0) {
