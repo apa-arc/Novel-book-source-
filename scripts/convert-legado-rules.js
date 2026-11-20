@@ -85,6 +85,10 @@ function parseLegacyChain(expression) {
   }
   if (/^@xpath:/i.test(raw)) return {status:"manual",reason:"unsupported-xpath"};
   if (/^@json:/i.test(raw) || /^\$[.[]/.test(raw)) return {status:"manual",reason:"unsupported-jsonpath"};
+  if (/^(text|html|href|src|owntext|textnodes|textNodes|all)$/i.test(raw)) {
+    const output = raw.toLowerCase() === "textnodes" ? "textnodes" : raw.toLowerCase();
+    return {status:"candidate",selector:{engine:"self",output}};
+  }
   const segments=raw.split("@");
   if (segments[0] === "" && raw.startsWith("@")) segments.shift();
   const tail=(segments[segments.length-1]||"").toLowerCase();
