@@ -49,10 +49,9 @@ try{
  assert.equal(unknownOutput.status,"manual");
  assert.equal(unknownOutput.reason,"unsupported-output");
  assert.equal(unknownOutput.outputKind,"value");
- const unknownSelector=parseLegacyChain("xpath.div@text");
- assert.equal(unknownSelector.status,"candidate");
- assert.equal(unknownSelector.selector.steps[0].kind,"tag");
- assert.equal(unknownSelector.selector.steps[0].name,"xpath.div");
+ const unknownSelector=parseLegacyChain("@xpath://div");
+ assert.equal(unknownSelector.status,"manual");
+ assert.equal(unknownSelector.reason,"unsupported-xpath");
  const bareTag=parseLegacyChain("a@href");
  assert.equal(bareTag.status,"candidate");
  assert.deepEqual(bareTag.selector.steps[0],{kind:"tag",name:"a",index:null});
