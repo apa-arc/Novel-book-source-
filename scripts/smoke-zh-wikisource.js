@@ -20,7 +20,7 @@ async function scanChapterPages() {
   const parsed = await api({ action: "parse", format: "json", page: "三國演義", prop: "links" });
   const links = parsed.parse && parsed.parse.links || [];
   const titles = [...new Set(links.map(link => link.title).filter(title => /第\d{3}回/.test(title)))];
-  assert(titles.length > 0, "No numbered chapter links found; page title=" + (parsed.parse && parsed.parse.title) + "; links=" + links.length + "; samples=" + links.slice(0, 40).map(link => link.title).join(" | "));
+  assert(titles.length > 0, "No numbered chapter links found; page title=" + (parsed.parse && parsed.parse.title) + "; links=" + links.length + "; samples=" + links.slice(0, 40).map(link => link.title || link["*"] || JSON.stringify(link)).join(" | "));
   const report = [];
   for (let offset = 0; offset < titles.length; offset += 50) {
     const batch = titles.slice(offset, offset + 50);
