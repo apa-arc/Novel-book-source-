@@ -121,6 +121,7 @@ function parseLegacyChain(expression) {
       continue;
     }
     if (/^[.#][a-zA-Z_][\\w-]*(?:\\s|[>+~,:\\[])/.test(segment)) {
+      if (steps.length) return {status:"manual",reason:"mixed-css-and-chain"};
       return {status:"candidate",selector:{engine:"css",query:segment,output:"text"}};
     }
     let parts, kind;
