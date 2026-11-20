@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "batchId": "015",
+  "provider": "AOAOSTAR / legado",
+  "upstreamRepository": "https://github.com/aoaostar/legado",
+  "sourceCount": 4,
+  "notice": "Metadata-only processing queue. Review licensing and source provenance before reuse. No source rules or credentials are included.",
+  "sources": [
+    {
+      "id": "a1470f66ffbf7736",
+      "collectionId": "e29e19ee",
+      "collectionName": "shidahuilang 书源",
+      "index": 899,
+      "name": "禁漫大王🎃",
+      "baseUrl": "https://jmdw6.org",
+      "group": "轩1",
+      "ruleCount": 5,
+      "reviewStatus": "unreviewed",
+      "batchId": "015",
+      "queuePosition": 701,
+      "processingStatus": "unreviewed"
+    },
+    {
+      "id": "ae352a3e3c598731",
+      "collectionId": "e29e19ee",
+      "collectionName": "shidahuilang 书源",
+      "index": 900,
+      "name": "新御书屋",
+      "baseUrl": "https://wap.xyushuwu11.com",
+      "group": "18",
+      "ruleCount": 5,
+      "reviewStatus": "unreviewed",
+      "batchId": "015",
+      "queuePosition": 702,
+      "processingStatus": "unreviewed"
+    },
+    {
+      "id": "44ca361c72215e5a",
+      "collectionId": "e29e19ee",
+      "collectionName": "shidahuilang 书源",
+      "index": 901,
+      "name": "禁漫大王",
+      "baseUrl": "https://jmdw6.org",
+      "group": null,
+      "ruleCount": 5,
+      "reviewStatus": "unreviewed",
+      "batchId": "015",
+      "queuePosition": 703,
+      "processingStatus": "unreviewed"
+    },
+    {
+      "id": "2dd5f43d30d1a170",
+      "collectionId": "e29e19ee",
+      "collectionName": "shidahuilang 书源",
+      "index": 914,
+      "name": "ꂵ 30读书",
+      "baseUrl": "https://www.30dushu.com",
+      "group": "✦优",
+      "ruleCount": 5,
+      "reviewStatus": "unreviewed",
+      "batchId": "015",
+      "queuePosition": 704,
+      "processingStatus": "unreviewed"
+    }
+  ]
+}
