@@ -74,7 +74,7 @@ function createAdapter() {
         if (!href) continue;
         let decoded = href;
         try { decoded = decodeURIComponent(href); } catch {}
-        if (!/\\/第\\d{3}回(?:$|[?#])/.test(decoded)) continue;
+        if (!/\/第\d{3}回(?:$|[?#])/.test(decoded)) continue;
         const chapterUrl = checkedUrl(href, bookUrl);
         const title = text(link);
         if (!chapterUrl || !title || seen.has(chapterUrl)) continue;
