@@ -80,5 +80,8 @@ try{
  assert.deepEqual(excludeSuffix.selector.steps[0].selection,{mode:"exclude",indices:[0,2]});
  const implicitBracket=parseLegacyChain("head@[1]@text");
  assert.deepEqual(implicitBracket.selector.steps[1],{kind:"children",name:null,index:1});
+ const unsupportedAttribute=parseLegacyChain("a[href]@text");
+ assert.equal(unsupportedAttribute.status,"manual");
+ assert.equal(unsupportedAttribute.reason,"unsupported-attribute-filter");
  console.log("Legado converter fixture tests passed.");
 }finally{fs.rmSync(temp,{recursive:true,force:true});}
