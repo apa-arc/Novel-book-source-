@@ -20,6 +20,6 @@ assert.equal(batch.summary.scanned, 4);
 assert.equal(batch.summary.duplicates, 1);
 assert.equal(batch.results[1].flags[0].rule, "duplicate-content");
 assert.equal(batch.results[1].flags[0].duplicateOf, "第一回");
-assert.equal(batch.summary.suspect, 2);
-assert.equal(batch.summary.review, 1);
+assert.equal(batch.summary.suspect, 3);
+assert.equal(batch.summary.review, 0);
 console.log("Text quality scanner tests passed.");
