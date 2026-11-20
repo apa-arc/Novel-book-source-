@@ -50,14 +50,23 @@ function isStaticRuleGroup(source) {
     ruleToc: ["chapterList","chapterName","chapterUrl"],
     ruleContent: ["content"]
   };
+  const selectorFields = {
+    ruleSearch: ["bookList","name","author","bookUrl","coverUrl","intro","kind","lastChapter","wordCount"],
+    ruleBookInfo: ["name","author","intro","coverUrl","tocUrl","kind","lastChapter","wordCount"],
+    ruleToc: ["chapterList","chapterName","chapterUrl","isVolume","nextTocUrl","updateTime"],
+    ruleContent: ["content","nextContentUrl"]
+  };
   for (const [group, fields] of Object.entries(required)) {
     const rules = source[group];
     if (!rules || typeof rules !== "object" || Array.isArray(rules)) return false;
+    for (const field of fields) if (typeof rules[field] !== "string" || !rules[field].trim()) return false;
+  }
+  if (source.ruleBookInfo.init || source.ruleContent.replaceRegex || source.ruleContent.webJs || source.ruleContent.sourceRegex) return false;
+  for (const [group, fields] of Object.entries(selectorFields)) {
+    const rules = source[group] || {};
     for (const field of fields) {
-      if (typeof rules[field] !== "string" || !rules[field].trim()) return false;
-    }
-    for (const rule of Object.values(rules)) {
-      if (typeof rule !== "string" || !rule.trim()) continue;
+      const rule = rules[field];
+      if (!rule) continue;
       try { selector(rule); } catch { return false; }
     }
   }
