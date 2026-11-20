@@ -2,7 +2,16 @@
 
 本目录由 `scripts/import-aoaostar-rules.js` 从 AOAOSTAR/Legado 全量书源快照生成。
 
-## 可直接获取的规则包
+## 正式订阅入口
+
+以下两个仓库根目录链接现已作为稳定订阅地址，内容为 Legado 原生 JSON 数组，可直接导入支持 Legado 书源格式的阅读器：
+
+- 普通订阅：<https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/subscription.json>
+- 成人订阅：<https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/adult-subscription.json>
+
+其中 App 原生清单另存为 `app-subscription.json` 和 `adult-app-subscription.json`，只收录通过本仓库自定义质量门禁的适配源；不会把未经实测的 Legado 规则冒充 App 原生源。
+
+## 可直接获取的镜像规则包
 
 - 普通网络小说规则包：<https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/exports/legado-ordinary.json>
 - 成人网络小说规则包：<https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/exports/legado-adult.json>
