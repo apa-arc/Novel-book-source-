@@ -37,7 +37,7 @@ async function main(){
   const converted=convertSource(arr[candidate.index-1],candidate.index-1);
   const groups={};
   for(const [name,g] of Object.entries(converted.groups)){
-    groups[name]={status:g.status,fields:Object.fromEntries(Object.entries(g.fields||{}).map(([field,v])=>[field,{status:v.status,reason:v.reason||null,selector:v.selector||null}]))};
+    groups[name]={status:g.status,fields:Object.fromEntries(Object.entries(g.fields||{}).map(([field,v])=>[field,{status:v.status,reason:v.reason||null,selector:v.selector||null,outputKind:v.outputKind||null,selectorKind:v.selectorKind||null}]))};
   }
   rows.push({id:candidate.id,collectionId:candidate.collectionId,index:candidate.index,name:candidate.name,baseUrl:converted.baseUrl,status:converted.conversionStatus,warnings:converted.warnings||[],groups});
  }
