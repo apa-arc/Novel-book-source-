@@ -20,3 +20,7 @@
 `runtime/source-adapter.js` 导出 `createAdapter(config)`，将声明式选择器映射为 `search`、`getBookDetail`、`getChapters`、`getContent`。宿主传入 `http.get(url)`，返回 `{ document, url? }`；`document` 必须是宿主 HTML 解析器生成的 DOM。运行时会校验请求 URL 和重定向后的最终 URL 是否为 HTTPS 且主机在 `domains` 白名单内。它不自行联网、不解析 HTML、不执行上游脚本，也不提供 Cookie/登录态。
 
 运行测试：`npm test`。目前测试使用模拟 DOM，不代表已通过 iOS App 或真实网站验证。
+
+## 自动生成书源
+
+许可审查完成后，可按 [书源自动生成器说明](../docs/source-generator.md) 准备 JSON 清单，并运行 `npm run generate-source -- path/to/approved-manifest.json`。生成的书源默认禁用；生成器不会自动下载或复制第三方规则。
