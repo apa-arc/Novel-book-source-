@@ -46,7 +46,7 @@ function safeHeaders(source) {
 function isStaticRuleGroup(source) {
   const required = {
     ruleSearch: ["bookList","name","bookUrl"],
-    ruleBookInfo: ["name"],
+    ruleBookInfo: [],
     ruleToc: ["chapterList","chapterName","chapterUrl"],
     ruleContent: ["content"]
   };
@@ -62,6 +62,7 @@ function isStaticRuleGroup(source) {
     for (const field of fields) if (typeof rules[field] !== "string" || !rules[field].trim()) return false;
   }
   if (source.ruleBookInfo.init || source.ruleContent.replaceRegex || source.ruleContent.webJs || source.ruleContent.sourceRegex) return false;
+  if (!["name","author","intro","coverUrl","tocUrl","kind","lastChapter","wordCount"].some(key => typeof source.ruleBookInfo[key] === "string" && source.ruleBookInfo[key].trim())) return false;
   for (const [group, fields] of Object.entries(selectorFields)) {
     const rules = source[group] || {};
     for (const field of fields) {
