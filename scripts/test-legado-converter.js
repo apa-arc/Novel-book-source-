@@ -4,7 +4,7 @@ const assert=require("node:assert/strict");
 const fs=require("node:fs");
 const os=require("node:os");
 const path=require("node:path");
-const {spawnSync}=require("node:child_process");
+const {spawnSync}=require("node:child_process");\nconst {parseLegacyChain}=require("./convert-legado-rules");
 const root=path.resolve(__dirname,"..");
 const fixture=path.join(root,"tests/fixtures/legado-converter.json");
 const temp=fs.mkdtempSync(path.join(os.tmpdir(),"legado-ir-"));
@@ -19,5 +19,17 @@ try{
  assert.equal(report.sources[0].groups.content.fields.content.selector.engine,"css");
  assert.equal(report.sources[1].groups.search.fields.name.status,"manual");
  assert.equal(report.sources[1].groups.search.fields.name.reason,"script-or-template");
+ const dotted=parseLegacyChain("class.chapter.title@html");
+ assert.equal(dotted.status,"candidate");
+ assert.deepEqual(dotted.selector.steps,[{kind:"class",name:"chapter.title",index:0}]);
+ assert.equal(dotted.selector.output,"html");
+ const ownText=parseLegacyChain("class.content.0@ownText");
+ assert.equal(ownText.status,"candidate");
+ assert.equal(ownText.selector.output,"owntext");
+ const textNodes=parseLegacyChain("tag.p.0@textNodes");
+ assert.equal(textNodes.status,"candidate");
+ assert.equal(textNodes.selector.output,"textnodes");
+ const indexed=parseLegacyChain("class.chapter.2@text");
+ assert.equal(indexed.selector.steps[0].index,2);
  console.log("Legado converter fixture tests passed.");
 }finally{fs.rmSync(temp,{recursive:true,force:true});}
