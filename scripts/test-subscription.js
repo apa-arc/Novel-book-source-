@@ -14,7 +14,8 @@ try {
     schemaVersion: 1, id: "demo-source", name: "演示书源", kind: "public-web",
     version: "1.0.0", description: "测试", baseUrl: "https://example.com",
     domains: ["example.com"], script: "scripts/demo-source.js", enabled: true,
-    categories: ["测试"],\n    appConfig: { searchUrl: "https://example.com/search", bookUrl: "https://example.com/book", chapterListUrl: "https://example.com/toc", chapterUrl: "https://example.com/chapter" },
+    categories: ["测试"],
+    appConfig: { searchUrl: "https://example.com/search", bookUrl: "https://example.com/book", chapterListUrl: "https://example.com/toc", chapterUrl: "https://example.com/chapter" },
     licenseApproved: true, licenseEvidence: "测试授权记录", hostValidated: true,
     qualityReport: "quality-reports/demo-source.json"
   };
