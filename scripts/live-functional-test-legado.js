@@ -343,3 +343,5 @@ async function main() {
   console.log(JSON.stringify(report.counts, null, 2));
 }
 main().catch(error => { console.error(error); process.exit(1); });
+
+// Fresh full-subscription verification trigger: 2026-11-21.
