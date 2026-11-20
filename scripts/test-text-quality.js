@@ -7,6 +7,11 @@ assert.equal(scanTextQuality(clean).status, "normal");
 assert.equal(scanTextQuality("這段文字含有替換符號 �，應標記疑似亂碼。").status, "suspect");
 assert.ok(scanTextQuality("锟斤拷").flags.some(flag => flag.rule === "common-garbled-text"));
 assert.ok(scanTextQuality("Ã¤Â¸Â­Ã¦â€“â€¡").flags.some(flag => flag.rule === "utf8-mojibake"));
+assert.ok(scanTextQuality("&#x4E2D;").status === "normal");
+assert.ok(scanTextQuality("&amp;#x4E2D;").flags.some(flag => flag.rule === "broken-html-entity"));
+assert.ok(scanTextQuality("\uE000").flags.some(flag => flag.rule === "private-use-character"));
+assert.ok(scanTextQuality("\u0001").flags.some(flag => flag.rule === "control-character"));
+assert.ok(scanTextQuality("正常文字\u3000繁體字與异体字").status === "normal");
 assert.ok(scanTextQuality("").flags.some(flag => flag.rule === "empty-content"));
 assert.equal(scanTextQuality("短").status, "review");
 
