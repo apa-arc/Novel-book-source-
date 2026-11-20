@@ -56,8 +56,11 @@ for (const item of index.sources) {
     throw new Error("解析器文件不存在或路径非法：" + source.script);
   }
   const module = { exports: {} };
-  const context = vm.createContext({ module, exports: module.exports, require: request => {\n    if (request === "../runtime/source-adapter") return require("../runtime/source-adapter");\n    throw new Error("书源解析器禁止加载未授权模块：" + request);\n  } });
-  const code = fs.readFileSync(scriptPath, "utf8");
+  const context = vm.createContext({ module, exports: module.exports, require: request => {
+    if (request === "../runtime/source-adapter") return require("../runtime/source-adapter");
+    throw new Error("书源解析器禁止加载未授权模块：" + request);
+  } });
+    const code = fs.readFileSync(scriptPath, "utf8");
   new vm.Script(code, { filename: source.script }).runInContext(context, { timeout: 1000 });
   const adapter = module.exports;
   for (const method of ["search", "getBookDetail", "getChapters", "getContent"]) {
