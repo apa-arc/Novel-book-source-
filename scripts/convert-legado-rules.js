@@ -2,45 +2,45 @@
 "use strict";
 const fs = require("node:fs");
 const path = require("node:path");
-const RULE_GROUPS = { search:"ruleSearch", bookInfo:"ruleBookInfo", toc:"ruleToc", content:"ruleContent", explore:"ruleExplore" };
+const RULE_GROUPS = { search:"ruleSearch", bookInfo:"ruleBookInfo", toc:"ruleToc", content:"ruleContent", explore:"ruleExplore" };\nconst REQUIRED_GROUPS = ["search", "bookInfo", "toc", "content"];
 const SCRIPT_RE = /@js:|<js>|\bjavascript\b|\bfunction\b|\breturn\b|\$\{/i;
 function parseIndex(token) { return /^-?\d+$/.test(token) ? Number(token) : null; }
 function parseLegacyChain(expression) {
   const raw = String(expression).trim();
-  if (!raw) return {status:"empty",expression:raw};
-  if (SCRIPT_RE.test(raw)) return {status:"manual",reason:"script-or-template",expression:raw};
-  if (raw.includes("&&") || raw.includes("##") || raw.includes("||")) return {status:"manual",reason:"compound-or-transform-expression",expression:raw};
+  if (!raw) return {status:"empty"};
+  if (SCRIPT_RE.test(raw)) return {status:"manual",reason:"script-or-template"};
+  if (raw.includes("&&") || raw.includes("##") || raw.includes("||")) return {status:"manual",reason:"compound-or-transform-expression"};
   if (raw.startsWith("@css:")) {
     const body=raw.slice(5).trim();
     const match=body.match(/^(.*?)(?:@(text|html|href|src|content))?$/i);
-    if (!match || !match[1]) return {status:"manual",reason:"unsupported-css-expression",expression:raw};
-    return {status:"candidate",selector:{engine:"css",query:match[1],output:(match[2]||"text").toLowerCase()},expression:raw};
+    if (!match || !match[1]) return {status:"manual",reason:"unsupported-css-expression"};
+    return {status:"candidate",selector:{engine:"css",query:match[1],output:(match[2]||"text").toLowerCase()}};
   }
   if (raw.startsWith("//")) {
     const match=raw.match(/^\/\/([a-zA-Z][\w-]*)(?:\[@([\w:-]+)=['"]([^'"]+)['"]\])?\/@([\w:-]+)$/);
-    if (!match) return {status:"manual",reason:"unsupported-xpath",expression:raw};
+    if (!match) return {status:"manual",reason:"unsupported-xpath"};
     const [,tag,attr,value,out]=match;
     const query=attr ? tag+"["+attr+"=\""+value.replace(/"/g,'\\"')+"\"]" : tag;
-    return {status:"candidate",selector:{engine:"css",query,output:out==="text"?"text":"attr:"+out},expression:raw};
+    return {status:"candidate",selector:{engine:"css",query,output:out==="text"?"text":"attr:"+out}};
   }
   const segments=raw.split("@");
   const output=(segments.pop()||"text").toLowerCase();
-  if (!["text","html","href","src"].includes(output)) return {status:"manual",reason:"unsupported-output",expression:raw};
+  if (!["text","html","href","src"].includes(output)) return {status:"manual",reason:"unsupported-output"};
   const steps=[];
   for (const segment of segments) {
     const parts=segment.split(".");
     const kind=parts.shift();
-    if (!["class","id","tag"].includes(kind) || parts.length<1) return {status:"manual",reason:"unsupported-selector-step",expression:raw};
+    if (!["class","id","tag"].includes(kind) || parts.length<1) return {status:"manual",reason:"unsupported-selector-step"};
     const index=parts.length>1 ? parseIndex(parts[parts.length-1]) : 0;
     const name=parts.length>1 ? parts.slice(0,-1).join(".") : parts[0];
-    if (!name || (parts.length>1 && index===null)) return {status:"manual",reason:"invalid-selector-index",expression:raw};
+    if (!name || (parts.length>1 && index===null)) return {status:"manual",reason:"invalid-selector-index"};
     steps.push({kind,name,index:index===null?0:index});
   }
-  if (!steps.length) return {status:"manual",reason:"empty-selector-chain",expression:raw};
-  return {status:"candidate",selector:{engine:"legado-chain",steps,output},expression:raw};
+  if (!steps.length) return {status:"manual",reason:"empty-selector-chain"};
+  return {status:"candidate",selector:{engine:"legado-chain",steps,output}};
 }
 function convertSource(source,index) {
-  const result={sourceIndex:index+1,name:source.bookSourceName||"(未命名)",baseUrl:source.bookSourceUrl||null,sourceEnabled:source.enabled!==false,conversionStatus:"candidate",groups:{}};
+  let safeBaseUrl=null;\n  try { const u=new URL(source.bookSourceUrl); if(u.protocol==="https:") safeBaseUrl=u.origin; } catch {}\n  const result={sourceIndex:index+1,name:source.bookSourceName||"(未命名)",baseUrl:safeBaseUrl,sourceEnabled:source.enabled!==false,conversionStatus:"manual",groups:{}};
   const warnings=[];
   if (!result.baseUrl || !/^https:\/\//i.test(result.baseUrl)) warnings.push("https-required");
   if (source.enabled===false) warnings.push("disabled-upstream");
@@ -69,7 +69,7 @@ function main() {
   const sources=Array.isArray(parsed)?parsed:[parsed];
   if (!sources.length || sources.some(s=>!s || typeof s!=="object" || Array.isArray(s))) throw new Error("输入必须是书源对象或书源对象数组");
   const converted=sources.map(convertSource);
-  const report={schemaVersion:1,converter:"legado-selector-ir",note:"Selector IR only; not a runnable adapter. No network requests or rule execution. Manual fields require review.",sourceCount:converted.length,counts:{candidate:converted.filter(s=>s.conversionStatus==="candidate").length,partial:converted.filter(s=>s.conversionStatus==="partial").length,manual:converted.filter(s=>s.conversionStatus==="manual").length},sources:converted};
+  const report={schemaVersion:1,converter:"legado-selector-ir",note:"Sanitized selector IR only; not a runnable adapter. Original rule expressions and request credentials are omitted. No network requests or rule execution. Required groups: search, bookInfo, toc, content.",sourceCount:converted.length,counts:{candidate:converted.filter(s=>s.conversionStatus==="candidate").length,partial:converted.filter(s=>s.conversionStatus==="partial").length,manual:converted.filter(s=>s.conversionStatus==="manual").length},sources:converted};
   const output=JSON.stringify(report,null,2)+"\n";
   if(outputArg){const target=path.resolve(outputArg.slice("--output=".length));fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,output,"utf8");console.log("转换报告已写入："+target);}else process.stdout.write(output);
 }
