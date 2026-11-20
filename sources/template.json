@@ -4,11 +4,11 @@
   "name": "书源模板（未配置）",
   "kind": "public-web",
   "version": "0.1.0",
-  "description": "复制此文件并填写合法授权站点的信息后再启用。",
+  "description": "复制此文件并填写具有合法使用依据的来源信息后再启用。",
   "baseUrl": "https://example.com",
   "domains": ["example.com"],
   "script": "scripts/template-source.js",
   "enabled": false,
-  "categories": ["公开网站", "示例"],
-  "licenseNote": "示例配置，不提供实际内容；接入前请确认站点条款和内容授权。"
+  "categories": ["模板"],
+  "licenseNote": "示例配置，不提供实际内容；启用前必须确认规则的合法使用和分发依据。"
 }
