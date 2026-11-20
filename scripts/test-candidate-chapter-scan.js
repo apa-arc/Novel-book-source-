@@ -7,7 +7,7 @@ assert.deepEqual(sitemapUrls('<loc>https://example.com/book/123/1.html</loc><loc
 assert.deepEqual(robotsSitemaps("Sitemap: https://example.com/sitemap.xml","https://example.com","example.com"),["https://example.com/sitemap.xml"]);
 function response(url,body,status=200,type="text/html"){return{ok:status>=200&&status<300,status,url,headers:{get:()=>type},arrayBuffer:async()=>Buffer.from(body,"utf8")};}
 const chapter="第一章 开始\n"+"这是一段正常的中文小说正文，内容连续完整，没有乱码字符。".repeat(20);
-const html="<html><head><title>测试小说网</title></head><body><article><p>"+chapter+"</p></article></body></html>";
+const html="<html><head><title>测试小说 第1章 开始</title></head><body><article><p>"+chapter+"</p></article></body></html>";
 (async()=>{
  const calls=[];const fake=async url=>{calls.push(url);
  if(url==="https://example.com/")return response(url,"<title>小说阅读</title>");
