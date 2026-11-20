@@ -89,6 +89,9 @@ function parseLegacyChain(expression) {
     const output = raw.toLowerCase() === "textnodes" ? "textnodes" : raw.toLowerCase();
     return {status:"candidate",selector:{engine:"self",output}};
   }
+  if (/^(title|alt|value|content|id|class|data-[a-zA-Z0-9_-]+)$/i.test(raw)) {
+    return {status:"candidate",selector:{engine:"self",output:"attr:"+raw.toLowerCase()}};
+  }
   const segments=raw.split("@");
   if (segments[0] === "" && raw.startsWith("@")) segments.shift();
   const tail=(segments[segments.length-1]||"").toLowerCase();
