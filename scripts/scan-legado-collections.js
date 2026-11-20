@@ -141,6 +141,7 @@ async function main() {
   // Deduplicate exact source definitions without retaining raw rules or credentials.
   const exactGroups = new Map();
   const urlGroups = new Map();
+  const uniqueByLevel = { candidate: new Map(), partial: new Map(), manual: new Map(), low: new Map() };
   for (const item of report.sources) {
     if (!exactGroups.has(item.fingerprint)) exactGroups.set(item.fingerprint, []);
     exactGroups.get(item.fingerprint).push(item);
@@ -148,6 +149,7 @@ async function main() {
       if (!urlGroups.has(item.normalizedUrl)) urlGroups.set(item.normalizedUrl, []);
       urlGroups.get(item.normalizedUrl).push(item);
     }
+    uniqueByLevel[item.level].set(item.fingerprint, item);
   }
   const exactDuplicateRecords = [...exactGroups.values()].reduce((sum, group) => sum + Math.max(0, group.length - 1), 0);
   const sameUrlGroups = [...urlGroups.values()].filter((group) => group.length > 1);
@@ -158,8 +160,20 @@ async function main() {
     exactDuplicateRecords,
     sameUrlGroupCount: sameUrlGroups.length,
     sameUrlRecords: sameUrlGroups.reduce((sum, group) => sum + group.length, 0),
-    sourcesWithoutValidHttpsUrl: report.sources.filter((item) => !item.normalizedUrl).length
+    sourcesWithoutValidHttpsUrl: report.sources.filter((item) => !item.normalizedUrl).length,
+    exactUniqueByLevel: Object.fromEntries(Object.entries(uniqueByLevel).map(([level, group]) => [level, group.size]))
   };
+  // A review queue only: this deliberately contains metadata, never executable rules or credentials.
+  report.candidateReview = [...uniqueByLevel.candidate.entries()].map(([hash, item]) => ({
+    id: hash.slice(0, 16),
+    collectionId: item.collectionId,
+    collectionName: item.collectionName,
+    index: item.index,
+    name: item.name,
+    baseUrl: item.baseUrl,
+    group: item.group,
+    ruleCount: item.ruleCount
+  }));
   // Remove internal fingerprints and normalized URLs from the public source listing.
   for (const item of report.sources) {
     delete item.fingerprint;
