@@ -10,6 +10,58 @@ const HOST_RE = /^(?=.{1,253}$)(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)*[a-z0-
 
 function fail(message) { throw new Error(message); }
 
+function validateAppConfig(value, base, domains) {
+  if (value === undefined) return undefined;
+  if (!value || typeof value !== "object" || Array.isArray(value)) fail("app-config-must-be-object");
+  const endpoints = ["searchUrl", "bookUrl", "chapterListUrl", "chapterUrl"];
+  const output = {};
+  for (const key of endpoints) {
+    if (typeof value[key] !== "string" || !value[key].trim() || value[key].length > 2000) {
+      fail("app-config-missing-or-invalid:" + key);
+    }
+    let endpoint;
+    try { endpoint = new URL(value[key], base); } catch { fail("app-config-invalid-url:" + key); }
+    if (endpoint.protocol !== "https:" || endpoint.username || endpoint.password ||
+        !domains.includes(endpoint.hostname.toLowerCase())) {
+      fail("app-config-url-outside-https-domain-allowlist:" + key);
+    }
+    output[key] = value[key];
+  }
+
+  if (value.htmlRules !== undefined) {
+    const rules = value.htmlRules;
+    if (!rules || typeof rules !== "object" || Array.isArray(rules)) fail("app-html-rules-must-be-object");
+    const groups = {
+      search: { required: ["itemSelector", "titleSelector", "urlSelector"], allowed: ["itemSelector", "titleSelector", "urlSelector", "authorSelector", "descriptionSelector", "urlAttribute", "coverSelector", "coverAttribute"] },
+      detail: { required: [], allowed: ["titleSelector", "authorSelector", "descriptionSelector"] },
+      chapters: { required: ["itemSelector", "titleSelector", "urlSelector"], allowed: ["itemSelector", "titleSelector", "urlSelector", "urlAttribute"] },
+      content: { required: ["contentSelector"], allowed: ["contentSelector", "titleSelector"] },
+    };
+    const normalized = {};
+    for (const [group, spec] of Object.entries(groups)) {
+      if (rules[group] === undefined) continue;
+      const raw = rules[group];
+      if (!raw || typeof raw !== "object" || Array.isArray(raw)) fail("app-html-rules-invalid-group:" + group);
+      const item = {};
+      for (const key of Object.keys(raw)) {
+        if (!spec.allowed.includes(key)) fail("app-html-rules-unknown-field:" + group + "." + key);
+      }
+      for (const key of spec.allowed) {
+        if (raw[key] === undefined) continue;
+        if (typeof raw[key] !== "string" || !raw[key].trim() || raw[key].length > 300) {
+          fail("app-html-rules-invalid-selector:" + group + "." + key);
+        }
+        item[key] = raw[key].trim();
+      }
+      for (const key of spec.required) if (!item[key]) fail("app-html-rules-missing-selector:" + group + "." + key);
+      normalized[group] = item;
+    }
+    if (!Object.keys(normalized).length) fail("app-html-rules-empty");
+    output.htmlRules = normalized;
+  }
+  return output;
+}
+
 function validateManifest(m) {
   if (!m || typeof m !== "object" || Array.isArray(m)) fail("manifest-must-be-object");
   if (m.licenseApproved !== true || typeof m.licenseEvidence !== "string" || !m.licenseEvidence.trim()) {
@@ -41,11 +93,13 @@ function validateManifest(m) {
   }
   if (typeof selectors.search.urlTemplate !== "string" ||
       !selectors.search.urlTemplate.includes("{{keyword}}")) fail("search-url-template-must-contain-keyword");
-  return { meta, selectors, base };
+  const domains = meta.domains.map(x => x.toLowerCase());
+  const appConfig = validateAppConfig(meta.appConfig, base, domains);
+  return { meta, selectors, base, appConfig };
 }
 
 function renderFiles(manifest) {
-  const { meta, selectors, base } = validateManifest(manifest);
+  const { meta, selectors, base, appConfig } = validateManifest(manifest);
   const id = meta.id;
   const source = {
     schemaVersion: 1, id, name: meta.name,
@@ -59,7 +113,8 @@ function renderFiles(manifest) {
     categories: Array.isArray(meta.categories) ? meta.categories : [],
     licenseType: manifest.licenseType,
     licenseEvidenceUrl: new URL(manifest.licenseEvidenceUrl).href,
-    licenseNote: "许可审查依据：" + manifest.licenseEvidence.trim()
+    licenseNote: "许可审查依据：" + manifest.licenseEvidence.trim(),
+    ...(appConfig ? { appConfig } : {})
   };
   const config = { baseUrl: source.baseUrl, domains: source.domains, ...selectors };
   const script = [
