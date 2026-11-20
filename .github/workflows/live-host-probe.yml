@@ -1,0 +1,46 @@
+name: Live probe novel source hosts
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/live-host-probe.js"
+      - "imports/aoaostar/raw/aoaostar-full.json"
+      - "imports/secondary/luanmuc-scan-report.json"
+      - ".github/workflows/live-host-probe.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: live-host-probe
+  cancel-in-progress: false
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Probe real source hosts
+        run: node scripts/live-host-probe.js
+      - name: Publish connectivity report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+users.noreply.github.com"
+          git add reports/live-host-probe.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Add live novel source host probe report"
+            git pull --rebase origin main
+            git push
+          fi
+      - name: Upload full report
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-host-probe-report
+          path: reports/live-host-probe.json
+          retention-days: 90
