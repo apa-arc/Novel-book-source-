@@ -5,7 +5,7 @@ const { scanTextQuality } = require("../runtime/text-quality");
 const clean = "第一回 宴桃園豪傑三結義，斬黃巾英雄首立功。這是一段正常的繁體中文古典小說正文。".repeat(4);
 assert.equal(scanTextQuality(clean).status, "normal");
 assert.equal(scanTextQuality("這段文字含有替換符號 �，應標記疑似亂碼。").status, "suspect");
-assert.ok(scanTextQuality("鍟斤拷").flags.some(flag => flag.rule === "common-garbled-text"));
+assert.ok(scanTextQuality("锟斤拷").flags.some(flag => flag.rule === "common-garbled-text"));
 assert.ok(scanTextQuality("Ã¤Â¸Â­Ã¦â€“â€¡").flags.some(flag => flag.rule === "utf8-mojibake"));
 assert.ok(scanTextQuality("").flags.some(flag => flag.rule === "empty-content"));
 assert.equal(scanTextQuality("短").status, "review");
