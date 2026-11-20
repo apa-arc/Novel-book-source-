@@ -7,7 +7,8 @@ function hostAliases(host) {
   const h = host.toLowerCase(), root = /^(www|m|mobile)\./i.test(h) ? h.replace(/^[^.]+\./, "") : h;
   return new Set([h, root, "www."+root, "m."+root]);
 }
-function allowed(url, hosts) { return url.protocol==="https:" && !url.username && !url.password && hosts.has(url.hostname.toLowerCase()); }
+function normalizeHosts(hosts){return hosts instanceof Set?hosts:hostAliases(String(hosts));}
+function allowed(url, hosts) { return url.protocol==="https:" && !url.username && !url.password && normalizeHosts(hosts).has(url.hostname.toLowerCase()); }
 function textFromHtml(html) {
  return String(html||"").replace(/<!--[\s\S]*?-->/g," ").replace(/<(script|style|noscript|svg|nav|header|footer|form)[^>]*>[\s\S]*?<\/\1\s*>/gi," ")
  .replace(/<br\s*\/?>|<\/p\s*>|<\/div\s*>|<\/article\s*>|<\/section\s*>/gi,"\n").replace(/<[^>]+>/g," ")
