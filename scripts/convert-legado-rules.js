@@ -35,7 +35,7 @@ function scanExpressionOperators(raw) {
   let bracketDepth=0;
   for(let i=0;i<raw.length;i++){
     const ch=raw[i];
-    if(ch==="\\\\"){i++;continue;}
+    if(ch==="\\"){i++;continue;}
     if(quote){
       if(ch===quote) quote=null;
       continue;
@@ -47,7 +47,7 @@ function scanExpressionOperators(raw) {
     if(raw.startsWith("&&",i)){operators.push("&&");i++;continue;}
     if(raw.startsWith("||",i)){operators.push("||");i++;continue;}
     if(raw.startsWith("%%",i)){operators.push("%%");i++;continue;}
-    if(raw.startsWith("###",i)){onlyOne=true;regexDelimiterCount+=2;i+=2;continue;}
+    if(raw.startsWith("###",i)){onlyOne=true;regexDelimiterCount++;i+=2;continue;}
     if(raw.startsWith("##",i)){regexDelimiterCount++;i++;continue;}
   }
   return {operators,regexDelimiterCount,onlyOne};
