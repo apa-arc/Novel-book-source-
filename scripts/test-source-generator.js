@@ -39,6 +39,8 @@ assert.throws(() => validateManifest({ ...valid, metadata: { ...valid.metadata, 
 assert.throws(() => validateManifest({ ...valid, selectors: { ...valid.selectors, search: { urlTemplate: "https://example.com/?p={{page}}" } } }), /search-url-template/);
 assert.throws(() => validateManifest({ ...valid, selectors: { ...valid.selectors, content: { body: "password" } } }), /credential-like-field/);
 assert.throws(() => validateManifest({ ...valid, metadata: { ...valid.metadata, appConfig: { ...valid.metadata.appConfig, searchUrl: "https://outside.example/search" } } }), /app-config-url-outside-https-domain-allowlist/);
+assert.throws(() => validateManifest({ ...valid, metadata: { ...valid.metadata, appConfig: { ...valid.metadata.appConfig, unexpected: true } } }), /app-config-unknown-field/);
+assert.throws(() => validateManifest({ ...valid, metadata: { ...valid.metadata, appConfig: { ...valid.metadata.appConfig, htmlRules: { extra: {} } } } }), /app-html-rules-unknown-group/);
 assert.throws(() => validateManifest({ ...valid, metadata: { ...valid.metadata, appConfig: { ...valid.metadata.appConfig, htmlRules: { search: { itemSelector: ".book", titleSelector: "a" } } } } }), /app-html-rules-missing-selector/);
 
 const initialIndex = {
