@@ -2,7 +2,8 @@
 "use strict";
 const fs = require("node:fs");
 const path = require("node:path");
-const RULE_GROUPS = { search:"ruleSearch", bookInfo:"ruleBookInfo", toc:"ruleToc", content:"ruleContent", explore:"ruleExplore" };\nconst REQUIRED_GROUPS = ["search", "bookInfo", "toc", "content"];
+const RULE_GROUPS = { search:"ruleSearch", bookInfo:"ruleBookInfo", toc:"ruleToc", content:"ruleContent", explore:"ruleExplore" };
+const REQUIRED_GROUPS = ["search", "bookInfo", "toc", "content"];
 const SCRIPT_RE = /@js:|<js>|\bjavascript\b|\bfunction\b|\breturn\b|\$\{/i;
 function parseIndex(token) { return /^-?\d+$/.test(token) ? Number(token) : null; }
 function parseLegacyChain(expression) {
@@ -40,7 +41,9 @@ function parseLegacyChain(expression) {
   return {status:"candidate",selector:{engine:"legado-chain",steps,output}};
 }
 function convertSource(source,index) {
-  let safeBaseUrl=null;\n  try { const u=new URL(source.bookSourceUrl); if(u.protocol==="https:") safeBaseUrl=u.origin; } catch {}\n  const result={sourceIndex:index+1,name:source.bookSourceName||"(未命名)",baseUrl:safeBaseUrl,sourceEnabled:source.enabled!==false,conversionStatus:"manual",groups:{}};
+  let safeBaseUrl=null;
+  try { const u=new URL(source.bookSourceUrl); if(u.protocol==="https:") safeBaseUrl=u.origin; } catch {}
+  const result={sourceIndex:index+1,name:source.bookSourceName||"(未命名)",baseUrl:safeBaseUrl,sourceEnabled:source.enabled!==false,conversionStatus:"manual",groups:{}};
   const warnings=[];
   if (!result.baseUrl || !/^https:\/\//i.test(result.baseUrl)) warnings.push("https-required");
   if (source.enabled===false) warnings.push("disabled-upstream");
@@ -70,7 +73,8 @@ function main() {
   if (!sources.length || sources.some(s=>!s || typeof s!=="object" || Array.isArray(s))) throw new Error("输入必须是书源对象或书源对象数组");
   const converted=sources.map(convertSource);
   const report={schemaVersion:1,converter:"legado-selector-ir",note:"Sanitized selector IR only; not a runnable adapter. Original rule expressions and request credentials are omitted. No network requests or rule execution. Required groups: search, bookInfo, toc, content.",sourceCount:converted.length,counts:{candidate:converted.filter(s=>s.conversionStatus==="candidate").length,partial:converted.filter(s=>s.conversionStatus==="partial").length,manual:converted.filter(s=>s.conversionStatus==="manual").length},sources:converted};
-  const output=JSON.stringify(report,null,2)+"\n";
+  const output=JSON.stringify(report,null,2)+"
+";
   if(outputArg){const target=path.resolve(outputArg.slice("--output=".length));fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,output,"utf8");console.log("转换报告已写入："+target);}else process.stdout.write(output);
 }
 main();
