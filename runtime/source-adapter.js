@@ -86,12 +86,35 @@ function createAdapter(config) {
       })).filter(item => item.title && item.chapterUrl);
     },
     async getContent({ chapterUrl, http }) {
-      const url = resolveAllowed(chapterUrl, safe.baseUrl, safe.domains, true);
-      const document = await load(url, http);
-      const title = first(document, config.content?.title);
-      const content = first(document, config.content?.body);
-      if (typeof content !== "string" || !content.trim()) throw new Error("chapter-content-empty");
-      return { ...(title ? { title: String(title).trim() } : {}), content: content.trim() };
+      let currentUrl = resolveAllowed(chapterUrl, safe.baseUrl, safe.domains, true);
+      const visited = new Set();
+      const parts = [];
+      let title;
+      for (let page = 0; page < 12; page++) {
+        if (visited.has(currentUrl)) throw new Error("chapter-page-cycle");
+        visited.add(currentUrl);
+        const document = await load(currentUrl, http);
+        if (!title) title = first(document, config.content?.title);
+        const body = first(document, config.content?.body);
+        if (typeof body !== "string" || !body.trim()) {
+          if (parts.length === 0) throw new Error("chapter-content-empty");
+          break;
+        }
+        parts.push(body.trim());
+        const next = first(document, config.content?.nextPage);
+        if (typeof next !== "string" || !next.trim()) break;
+        const nextUrl = resolveAllowed(next, currentUrl, safe.domains);
+        const currentPath = new URL(currentUrl).pathname;
+        const nextPath = new URL(nextUrl).pathname;
+        const currentMatch = currentPath.match(/^(.*\\/read\\/\\d+\\/\\d+)(?:_(\\d+))?\\.html$/);
+        const nextMatch = nextPath.match(/^(.*\\/read\\/\\d+\\/\\d+)(?:_(\\d+))?\\.html$/);
+        if (!currentMatch || !nextMatch || currentMatch[1] !== nextMatch[1]) break;
+        const currentPage = Number(currentMatch[2] || 1);
+        const nextPage = Number(nextMatch[2] || 1);
+        if (nextPage <= currentPage) break;
+        currentUrl = nextUrl;
+      }
+      return { ...(title ? { title: String(title).trim() } : {}), content: parts.join("\\n\\n") };
     }
   };
 }
