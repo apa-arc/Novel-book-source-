@@ -48,7 +48,8 @@ function scrub(source) {
 }
 function main() {
   if (!fs.existsSync(INPUT)) throw new Error("缺少上游快照：" + INPUT);
-  const parsed = JSON.parse(fs.readFileSync(INPUT, "utf8"));
+  const rawText = fs.readFileSync(INPUT, "utf8");
+  const parsed = JSON.parse(rawText);
   const input = Array.isArray(parsed) ? parsed : [parsed];
   const ordinary = [], adult = [], review = [];
   const seen = new Set();
@@ -72,7 +73,7 @@ function main() {
   write("legado-adult.json", adult);
   write("aoaostar-import-report.json", {
     schemaVersion: 1,
-    generatedAt: new Date().toISOString(),
+    sourceSha256: crypto.createHash("sha256").update(rawText).digest("hex"),
     upstream: "https://github.com/aoaostar/legado",
     upstreamFile: "sources/b778fe6b.json",
     upstreamLicenseNotice: "Upstream repository declares AGPL-3.0; individual source-rule provenance and redistribution permissions are not independently verified.",
