@@ -26,7 +26,19 @@ function analyze(source, index, collection) {
   const hasLogin = Boolean(source.loginUrl || source.loginUi || source.loginCheckJs);
   const hasCookie = Boolean(source.enabledCookieJar ||
     Object.keys(source.header || {}).some((key) => /cookie/i.test(key)));
-  const hasHttpUrl = typeof source.bookSourceUrl === "string" && /^https:\/\//i.test(source.bookSourceUrl);
+  let baseUrl = null;
+  let hasHttpUrl = false;
+  if (typeof source.bookSourceUrl === "string" && /^https:\/\//i.test(source.bookSourceUrl.trim())) {
+    try {
+      const parsedUrl = new URL(source.bookSourceUrl.trim());
+      if (parsedUrl.protocol === "https:" && parsedUrl.hostname) {
+        hasHttpUrl = true;
+        baseUrl = parsedUrl.origin;
+      }
+    } catch {
+      // A malformed individual source URL must not abort an entire collection.
+    }
+  }
   const advanced = hasScript || hasLogin || hasCookie;
   let level = "low";
   if (advanced) level = "manual";
@@ -38,7 +50,7 @@ function analyze(source, index, collection) {
     collectionName: collection.name,
     index: index + 1,
     name: typeof source.bookSourceName === "string" ? source.bookSourceName : "(未命名)",
-    baseUrl: hasHttpUrl ? new URL(source.bookSourceUrl).origin : null,
+    baseUrl,
     group: typeof source.bookSourceGroup === "string" ? source.bookSourceGroup : null,
     ruleCount: rules.length,
     hasScript,
