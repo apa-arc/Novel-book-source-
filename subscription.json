@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "subscriptionId": "apa-arc-novel-book-source",
-  "name": "个人小说书源",
-  "description": "GitHub 托管的小说书源订阅清单",
+  "name": "普通小说书源",
+  "description": "所有非成人书源统一订阅",
   "repository": "https://github.com/apa-arc/Novel-book-source-",
-  "updatedAt": "2026-11-20T16:03:45.998Z",
+  "updatedAt": "2026-11-20T16:23:42.843Z",
   "sourceCount": 0,
   "sources": []
 }
