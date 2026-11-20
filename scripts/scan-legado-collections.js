@@ -34,7 +34,7 @@ function normalizedSourceUrl(value) {
     if (url.protocol !== "https:" || !url.hostname) return null;
     url.hash = "";
     url.hostname = url.hostname.toLowerCase();
-    return url.toString().replace(/\\/$/, "");
+    return url.toString().replace(/\/$/, "");
   } catch {
     return null;
   }
