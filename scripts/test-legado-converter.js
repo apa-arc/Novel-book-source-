@@ -50,7 +50,21 @@ try{
  assert.equal(unknownOutput.reason,"unsupported-output");
  assert.equal(unknownOutput.outputKind,"value");
  const unknownSelector=parseLegacyChain("xpath.div@text");
- assert.equal(unknownSelector.status,"manual");
- assert.equal(unknownSelector.selectorKind,"xpath");
+ assert.equal(unknownSelector.status,"candidate");
+ assert.equal(unknownSelector.selector.steps[0].kind,"tag");
+ assert.equal(unknownSelector.selector.steps[0].name,"xpath.div");
+ const bareTag=parseLegacyChain("a@href");
+ assert.equal(bareTag.status,"candidate");
+ assert.deepEqual(bareTag.selector.steps[0],{kind:"tag",name:"a",index:null});
+ const implicitText=parseLegacyChain("div@a");
+ assert.equal(implicitText.status,"candidate");
+ assert.deepEqual(implicitText.selector.steps[0],{kind:"tag",name:"div",index:null});
+ assert.equal(implicitText.selector.output,"text");
+ const chainedBareTags=parseLegacyChain("div@a@text");
+ assert.equal(chainedBareTags.status,"candidate");
+ assert.deepEqual(chainedBareTags.selector.steps.map(x=>x.name),["div","a"]);
+ const jsonPath=parseLegacyChain("@json:$.items");
+ assert.equal(jsonPath.status,"manual");
+ assert.equal(jsonPath.reason,"unsupported-jsonpath");
  console.log("Legado converter fixture tests passed.");
 }finally{fs.rmSync(temp,{recursive:true,force:true});}
