@@ -33,10 +33,11 @@ function parseLegacyChain(expression) {
     const parts=segment.split(".");
     const kind=parts.shift();
     if (!["class","id","tag"].includes(kind) || parts.length<1) return {status:"manual",reason:"unsupported-selector-step"};
-    const index=parts.length>1 ? parseIndex(parts[parts.length-1]) : 0;
-    const name=parts.length>1 ? parts.slice(0,-1).join(".") : parts[0];
-    if (!name || (parts.length>1 && index===null)) return {status:"manual",reason:"invalid-selector-index"};
-    steps.push({kind,name,index:index===null?0:index});
+    const trailingIndex=parts.length>1 ? parseIndex(parts[parts.length-1]) : null;
+    const hasIndex=trailingIndex!==null;
+    const name=hasIndex ? parts.slice(0,-1).join(".") : parts.join(".");
+    if (!name) return {status:"manual",reason:"invalid-selector-index"};
+    steps.push({kind,name,index:hasIndex?trailingIndex:0});
   }
   if (!steps.length) return {status:"manual",reason:"empty-selector-chain"};
   return {status:"candidate",selector:{engine:"legado-chain",steps,output}};
