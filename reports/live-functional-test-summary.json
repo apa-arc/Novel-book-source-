@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "workflow": "Live functional tests for novel sources",
+  "runId": 44798858016,
+  "runUrl": "https://github.com/apa-arc/Novel-book-source-/actions/runs/44798858016",
+  "commit": "fe6589ba91a03ba5f13448ef86b1e5ad642ae122",
+  "result": "completed",
+  "method": "For every official subscription entry and every unique upstream candidate, execute real search -> book detail -> chapter list -> chapter content. No login, cookies, CAPTCHA bypass, or arbitrary rule JavaScript.",
+  "shards": 32,
+  "counts": {
+    "officialSubscription": {
+      "ordinary": 2966,
+      "adult": 76,
+      "total": 3042
+    },
+    "upstreamCandidates": {
+      "aoaostar": 3906,
+      "secondary": 1735,
+      "total": 5641
+    },
+    "totalTested": 8683,
+    "passed": 1,
+    "failed": 8682,
+    "subscriptionChanges": 0
+  },
+  "passedSources": [
+    {
+      "name": "全本小说",
+      "host": "www.bond-y.com",
+      "provider": "subscription-ordinary",
+      "keyword": "斗破苍穹",
+      "searchResults": 49,
+      "chapterCount": 50,
+      "contentLength": 1785,
+      "quality": {
+        "suspect": 0,
+        "review": 0,
+        "duplicates": 0
+      }
+    }
+  ],
+  "failureStages": {
+    "preflight": 8533,
+    "search": 149
+  },
+  "topFailureReasons": {
+    "unsupported-or-incomplete-rule-groups": 3757,
+    "login-required": 2676,
+    "upstream-source-disabled": 1253,
+    "non-novel-source": 255,
+    "credential-or-unsupported-header": 210,
+    "unsupported-source-type": 129,
+    "Invalid URL": 128,
+    "unparseable-request-headers": 125,
+    "unsupported-search-url": 48,
+    "unsafe-search-url": 41,
+    "fetch failed": 30,
+    "search-returned-no-books": 12
+  },
+  "providerResults": {
+    "subscription-ordinary": {
+      "tested": 2966,
+      "passed": 1,
+      "failed": 2965
+    },
+    "subscription-adult": {
+      "tested": 76,
+      "passed": 0,
+      "failed": 76
+    },
+    "AOAOSTAR-candidate": {
+      "tested": 3906,
+      "passed": 0,
+      "failed": 3906
+    },
+    "luanmuc-candidate": {
+      "tested": 1735,
+      "passed": 0,
+      "failed": 1735
+    }
+  },
+  "note": "A source is counted as passed only when search, book detail, chapter list, and chapter content all pass. Test completion does not imply redistribution permission. No subscription files were modified by this test run."
+}
