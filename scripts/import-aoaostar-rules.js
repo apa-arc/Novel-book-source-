@@ -15,7 +15,7 @@ const ROOT_ORDINARY = path.join(ROOT, "subscription.json");
 const ROOT_ADULT = path.join(ROOT, "adult-subscription.json");
 const REQUIRED = ["ruleSearch", "ruleBookInfo", "ruleToc", "ruleContent"];
 const ADULT = /🔞|成人|色情|情色|黄文|黃文|肉文|淫秽|淫穢|R18|18\+/i;
-const NON_NOVEL = /漫画|動漫|动漫|有声|听书|古籍|国学|詩詞|诗词|词典|百科|维基|公版|杂志|RSS|电子书出版/i;
+const NON_NOVEL = /漫画|動漫|动漫|有声|听书|古籍|国学|詩詞|诗词|词典|百科|维基|公版|杂志|RSS|电子书出版|电影|電影|影视|影視|视频|視頻|播放器|直播|短剧|短視頻|短视频|音乐|音樂|播客|电台|電台/i;
 const SECRET_KEY = /^(cookie|set-cookie|authorization|proxy-authorization|x-api-key|api[-_]?key|access[-_]?token|token|password|passwd|secret)$/i;
 
 function canonical(value) {
