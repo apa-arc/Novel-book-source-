@@ -1,5 +1,13 @@
 {
   "schemaVersion": 1,
   "updatedAt": "2026-11-21",
-  "sources": []
-}
+  "sources": [
+    {
+      "id": "bqg-info",
+      "name": "笔趣阁info（第三方）",
+      "kind": "public-web",
+      "file": "sources/bqg-info.json",
+      "enabled": false
+    }
+  ]
+}\n
