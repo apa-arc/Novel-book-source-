@@ -1,0 +1,233 @@
+#!/usr/bin/env node
+"use strict";
+
+// Read-only, bounded live tests for simple Legado HTML/GET sources.
+// No rule JavaScript, login, cookies, challenge bypass, or novel text is stored.
+const fs = require("node:fs");
+const path = require("node:path");
+const crypto = require("node:crypto");
+const { parseHTML } = require("linkedom");
+const { convertSource } = require("./convert-legado-rules");
+const { executeSelector } = require("../runtime/selector-engine");
+const { scanArticles } = require("../runtime/text-quality");
+
+const ROOT = path.resolve(__dirname, "..");
+const AOAOSTAR = path.join(ROOT, "imports/aoaostar/raw/aoaostar-full.json");
+const SECONDARY_URL = "https://raw.githubusercontent.com/luanmuc/legado-book-sources/main/books.json";
+const REPORT = path.join(ROOT, "reports/live-functional-test.json");
+const KEYWORD = "三国演义";
+const TIMEOUT_MS = 12000;
+const MAX_BODY = 4 * 1024 * 1024;
+const MAX_TESTS = 30;
+const CONCURRENCY = 4;
+const NON_NOVEL = /漫画|動漫|动漫|有声|听书|古籍|国学|诗词|詞典|词典|百科|维基|公版|杂志|影视|短剧|网盘|音乐|播客/i;
+const SCRIPT_OR_AUTH = /@js:|<js>|\bjavascript\b|\bfunction\b|\breturn\b|\$\{/i;
+
+function asArray(value) { return Array.isArray(value) ? value : value ? [value] : []; }
+function adultSource(s) { return /🔞|成人|色情|情色|R18|18\+/i.test([s.bookSourceName,s.bookSourceGroup,s.bookSourceComment,s.bookSourceUrl].join(" ")); }
+function hash(s) { return crypto.createHash("sha256").update(s).digest("hex").slice(0, 16); }
+function parseDoc(html) { return parseHTML(String(html)).document; }
+function selector(rule, outputOverride) {
+  if (typeof rule !== "string" || !rule.trim() || SCRIPT_OR_AUTH.test(rule)) throw new Error("unsupported-rule-expression");
+  const parsed = require("./convert-legado-rules").parseLegacyChain(rule);
+  if (parsed.status !== "candidate" || !parsed.selector) throw new Error("unsupported-selector");
+  return outputOverride ? { ...parsed.selector, output: outputOverride } : parsed.selector;
+}
+function first(root, rule) {
+  const result = executeSelector(root, selector(rule));
+  return Array.isArray(result) ? result.find(x => x != null && String(x).trim() !== "") : result;
+}
+function allNodes(root, rule) {
+  const result = executeSelector(root, selector(rule, "all"));
+  if (!Array.isArray(result)) throw new Error("list-rule-not-array");
+  return result;
+}
+function absolute(raw, base, host) {
+  const u = new URL(String(raw || ""), base);
+  if (u.protocol !== "https:" || u.username || u.password || u.hostname.toLowerCase() !== host) {
+    throw new Error("url-outside-https-source-host");
+  }
+  return u.href;
+}
+async function fetchHtml(rawUrl, host) {
+  let url = absolute(rawUrl, "https://" + host + "/", host);
+  for (let redirects = 0; redirects <= 4; redirects++) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
+    let response;
+    try {
+      response = await fetch(url, {
+        redirect: "manual", signal: controller.signal,
+        headers: { "user-agent": "NovelSourceFunctionalTest/1.0 (+metadata-only; no auth)", "accept": "text/html,application/xhtml+xml" }
+      });
+    } finally { clearTimeout(timer); }
+    if ([301,302,303,307,308].includes(response.status)) {
+      const location = response.headers.get("location");
+      if (!location) throw new Error("redirect-without-location");
+      url = absolute(location, url, host);
+      continue;
+    }
+    if (!response.ok) throw new Error("http-" + response.status);
+    const type = response.headers.get("content-type") || "";
+    if (type && !/html|xml|text/i.test(type)) throw new Error("unexpected-content-type");
+    const body = await response.text();
+    if (body.length > MAX_BODY) throw new Error("response-too-large");
+    if (/验证码|captcha|访问验证|安全验证|人机验证|cloudflare|just a moment|access denied/i.test(body.slice(0, 60000))) {
+      throw new Error("challenge-or-access-denied");
+    }
+    if (!/<(?:!doctype\s+html|html|body|div|table)\b/i.test(body)) throw new Error("not-html");
+    return { url, document: parseDoc(body) };
+  }
+  throw new Error("too-many-redirects");
+}
+function simpleSearchUrl(source, keyword, page) {
+  const raw = String(source.searchUrl || "").trim();
+  if (!raw || raw.includes(",") || SCRIPT_OR_AUTH.test(raw) || /webView|cookie|header/i.test(raw)) {
+    throw new Error("unsupported-search-url");
+  }
+  const replaced = raw
+    .replace(/\{\{\s*key\s*\}\}/gi, encodeURIComponent(keyword))
+    .replace(/\{\{\s*page\s*\}\}/gi, String(page));
+  return absolute(replaced, source.bookSourceUrl, new URL(source.bookSourceUrl).hostname.toLowerCase());
+}
+function extract(node, rules, baseUrl, host) {
+  const out = {};
+  for (const [key, rule] of Object.entries(rules || {})) {
+    if (!rule || typeof rule !== "string") continue;
+    const value = first(node, rule);
+    if (value == null || value === "") continue;
+    if (["bookUrl","tocUrl","chapterUrl"].includes(key)) out[key] = absolute(value, baseUrl, host);
+    else out[key] = String(value).replace(/\s+/g, " ").trim();
+  }
+  return out;
+}
+function htmlToText(value) {
+  const doc = parseDoc("<html><body><div id=\"root\">" + String(value || "") + "</div></body></html>");
+  const root = doc.querySelector("#root");
+  if (!root) return "";
+  for (const el of Array.from(root.querySelectorAll("script,style,iframe,form,button"))) el.remove();
+  return String(root.textContent || "").replace(/\u00a0/g, " ").replace(/[ \t]+/g, " ").replace(/\n\s*\n+/g, "\n").trim();
+}
+async function testSource(source) {
+  const host = new URL(source.bookSourceUrl).hostname.toLowerCase();
+  const id = hash(String(source.bookSourceName) + "|" + String(source.bookSourceUrl));
+  const result = { id, name: String(source.bookSourceName || "").slice(0, 100), host, category: adultSource(source) ? "adult" : "ordinary", status: "failed", stages: [] };
+  const stage = (name, detail) => result.stages.push({ name, status: "passed", ...detail });
+  try {
+    if (adultSource(source)) throw new Error("adult-functional-test-deferred");
+    if (source.enabled === false) throw new Error("upstream-source-disabled");
+    if (source.header || source.loginUrl || source.loginUi || source.loginCheckJs || source.enabledCookieJar) throw new Error("login-or-request-header-required");
+    const converted = convertSource(source, 0);
+    if (converted.conversionStatus !== "candidate") throw new Error("unsupported-or-incomplete-rule-groups");
+    const searchUrl = simpleSearchUrl(source, KEYWORD, 1);
+    const searchPage = await fetchHtml(searchUrl, host);
+    const searchItems = allNodes(searchPage.document, source.ruleSearch.bookList);
+    const books = [];
+    for (const item of searchItems.slice(0, 80)) {
+      const fields = extract(item, source.ruleSearch, searchPage.url, host);
+      if (fields.name && fields.bookUrl) books.push(fields);
+    }
+    if (!books.length) throw new Error("search-returned-no-books");
+    const chosen = books[0];
+    stage("search", { resultCount: books.length, selectedTitle: chosen.name });
+
+    const detailPage = await fetchHtml(chosen.bookUrl, host);
+    const detail = extract(detailPage.document, source.ruleBookInfo, detailPage.url, host);
+    const title = detail.name || chosen.name;
+    if (!title) throw new Error("book-detail-title-empty");
+    stage("bookDetail", { title });
+    const tocUrl = detail.tocUrl || chosen.bookUrl;
+    const tocPage = await fetchHtml(tocUrl, host);
+    const chapterNodes = allNodes(tocPage.document, source.ruleToc.chapterList);
+    const chapters = [];
+    for (const node of chapterNodes.slice(0, 200)) {
+      const name = first(node, source.ruleToc.chapterName);
+      const url = first(node, source.ruleToc.chapterUrl);
+      if (!name || !url) continue;
+      chapters.push({ title: String(name).trim(), url: absolute(url, tocPage.url, host) });
+    }
+    const unique = [...new Map(chapters.map(x => [x.url, x])).values()];
+    if (unique.length < 2) throw new Error("chapter-list-empty-or-duplicate");
+    stage("chapters", { chapterCount: unique.length });
+    let sampled = null;
+    let lastContentError = "no-chapter-content";
+    for (const chapter of unique.slice(0, 5)) {
+      try {
+        const page = await fetchHtml(chapter.url, host);
+        const raw = first(page.document, source.ruleContent.content);
+        const content = htmlToText(raw);
+        const quality = scanArticles([{ title: chapter.title, content }]);
+        if (content.length < 100 || quality.summary.suspect > 0 || quality.summary.review > 0) {
+          lastContentError = "chapter-text-quality-failed";
+          continue;
+        }
+        sampled = { title: chapter.title, length: content.length, quality: quality.summary };
+        break;
+      } catch (error) { lastContentError = String(error.message || error).slice(0, 120); }
+    }
+    if (!sampled) throw new Error(lastContentError);
+    stage("content", sampled);
+    result.status = "passed";
+  } catch (error) {
+    result.error = String(error && error.message || error).slice(0, 180);
+  }
+  return result;
+}
+async function main() {
+  if (!fs.existsSync(AOAOSTAR)) throw new Error("missing-AOAOSTAR-snapshot");
+  const aoaostar = asArray(JSON.parse(fs.readFileSync(AOAOSTAR, "utf8")));
+  const response = await fetch(SECONDARY_URL, { signal: AbortSignal.timeout(60000) });
+  if (!response.ok) throw new Error("secondary-upstream-http-" + response.status);
+  const secondary = asArray(await response.json());
+  const seen = new Set();
+  const candidates = [];
+  function add(source, provider) {
+    if (!source || typeof source !== "object" || adultSource(source)) return;
+    const label = [source.bookSourceName,source.bookSourceGroup,source.bookSourceComment].join(" ");
+    if (NON_NOVEL.test(label) || source.bookSourceType && Number(source.bookSourceType) !== 0) return;
+    let host;
+    try { const u = new URL(source.bookSourceUrl); if (u.protocol !== "https:") return; host = u.hostname.toLowerCase(); } catch { return; }
+    if (seen.has(host)) return;
+    const converted = convertSource(source, 0);
+    if (converted.conversionStatus !== "candidate") return;
+    if (source.header || source.loginUrl || source.loginUi || source.loginCheckJs || source.enabledCookieJar) return;
+    if (!source.searchUrl || source.searchUrl.includes(",") || SCRIPT_OR_AUTH.test(source.searchUrl)) return;
+    seen.add(host);
+    candidates.push({ source, provider });
+  }
+  for (const source of aoaostar) add(source, "AOAOSTAR");
+  for (const source of secondary) add(source, "luanmuc");
+  const selected = candidates.slice(0, MAX_TESTS);
+  const results = new Array(selected.length);
+  let next = 0;
+  async function worker() {
+    while (true) {
+      const index = next++;
+      if (index >= selected.length) return;
+      results[index] = await testSource(selected[index].source);
+      results[index].provider = selected[index].provider;
+      console.log("tested", index + 1, "/", selected.length, results[index].status, results[index].host);
+    }
+  }
+  await Promise.all(Array.from({ length: CONCURRENCY }, worker));
+  const passed = results.filter(x => x.status === "passed");
+  const report = {
+    schemaVersion: 1,
+    generatedAt: new Date().toISOString(),
+    test: "Real search -> book detail -> chapter list -> chapter content; HTTPS same-host only; no scripts, login, cookies, CAPTCHA bypass, or content retention",
+    keyword: KEYWORD,
+    counts: {
+      candidatesDiscovered: candidates.length,
+      tested: results.length,
+      passed: passed.length,
+      failed: results.length - passed.length,
+      subscriptionChanges: 0
+    },
+    note: "This report is diagnostic only. A passing live test does not itself approve rule redistribution or automatically alter subscriptions.",
+    results
+  };
+  fs.mkdirSync(path.dirname(REPORT), { recursive: true });
+  fs.writeFileSync(REPORT, JSON.stringify(report, null, 2) + "\n");
+  console.log(JSON.stringify(report.counts, null, 2));
+}
+main().catch(error => { console.error(error); process.exit(1); });
