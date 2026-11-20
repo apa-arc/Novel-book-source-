@@ -65,5 +65,20 @@ try{
  const jsonPath=parseLegacyChain("@json:$.items");
  assert.equal(jsonPath.status,"manual");
  assert.equal(jsonPath.reason,"unsupported-jsonpath");
+ const implicitIndex=parseLegacyChain("head@.1@text");
+ assert.equal(implicitIndex.status,"candidate");
+ assert.deepEqual(implicitIndex.selector.steps[1],{kind:"children",name:null,index:1});
+ const bracketIndex=parseLegacyChain("tag.div[1]@text");
+ assert.equal(bracketIndex.selector.steps[0].index,1);
+ const includeIndices=parseLegacyChain("tag.div[0,2,4]@text");
+ assert.deepEqual(includeIndices.selector.steps[0].selection,{mode:"include",indices:[0,2,4]});
+ const excludeIndices=parseLegacyChain("tag.div[!0,2]@text");
+ assert.deepEqual(excludeIndices.selector.steps[0].selection,{mode:"exclude",indices:[0,2]});
+ const rangeIndices=parseLegacyChain("tag.div[0:10:2]@text");
+ assert.deepEqual(rangeIndices.selector.steps[0].selection,{mode:"range",start:0,end:10,step:2});
+ const excludeSuffix=parseLegacyChain("tag.div!0:2@text");
+ assert.deepEqual(excludeSuffix.selector.steps[0].selection,{mode:"exclude",indices:[0,2]});
+ const implicitBracket=parseLegacyChain("head@[1]@text");
+ assert.deepEqual(implicitBracket.selector.steps[1],{kind:"children",name:null,index:1});
  console.log("Legado converter fixture tests passed.");
 }finally{fs.rmSync(temp,{recursive:true,force:true});}
