@@ -51,7 +51,7 @@ function isSafeThirdPartySource(source) {
   }
   let url;
   try { url = new URL(source.bookSourceUrl); } catch { return false; }
-  if (!["http:", "https:"].includes(url.protocol) || !url.hostname || url.hostname === "localhost" || url.hostname.endsWith(".local")) return false;
+  if (!["http:", "https:"].includes(url.protocol) || !url.hostname || url.username || url.password || url.hostname === "localhost" || url.hostname.endsWith(".local")) return false;
   if (/^\d{1,3}(?:\.\d{1,3}){3}(?::\d+)?$/.test(url.hostname)) return false;
   return true;
 }
