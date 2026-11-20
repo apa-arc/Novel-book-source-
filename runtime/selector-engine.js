@@ -1,0 +1,119 @@
+#!/usr/bin/env node
+"use strict";
+
+// Executes only the project's bounded selector IR against a caller-supplied DOM.
+// No fetching, eval, script execution, cookies, or filesystem access is provided.
+const MAX_STEPS=32;
+const MAX_RESULTS=5000;
+const MAX_SELECTOR_LENGTH=2048;
+
+function asArray(value){return Array.from(value||[]);}
+function descendants(root){
+  const out=[];
+  const stack=asArray(root&&root.children).reverse();
+  while(stack.length){
+    const node=stack.pop();
+    out.push(node);
+    const kids=asArray(node&&node.children);
+    for(let i=kids.length-1;i>=0;i--) stack.push(kids[i]);
+    if(out.length>MAX_RESULTS) throw new Error("selector-result-limit");
+  }
+  return out;
+}
+function cssEscape(value){
+  return String(value).replace(/[^a-zA-Z0-9_-]/g,ch=>"\\"+ch);
+}
+function normalizeIndex(index,length){
+  if(!Number.isInteger(index)) return -1;
+  const n=index<0?length+index:index;
+  return n>=0&&n<length?n:-1;
+}
+function applySelection(items,step){
+  let selected=items;
+  if(step.selection){
+    const s=step.selection;
+    if(s.mode==="include"){
+      selected=(s.indices||[]).map(i=>normalizeIndex(i,items.length)).filter(i=>i>=0).map(i=>items[i]);
+    }else if(s.mode==="exclude"){
+      const excluded=new Set((s.indices||[]).map(i=>normalizeIndex(i,items.length)).filter(i=>i>=0));
+      selected=items.filter((_,i)=>!excluded.has(i));
+    }else if(s.mode==="range"){
+      const start=normalizeIndex(s.start,items.length);
+      const end=normalizeIndex(s.end,items.length);
+      const stepSize=s.step===undefined?1:s.step;
+      if(!Number.isInteger(stepSize)||stepSize<=0) throw new Error("invalid-range-step");
+      if(start<0||end<0) selected=[];
+      else {
+        selected=[];
+        for(let i=start;i<=end&&i<items.length;i+=stepSize) selected.push(items[i]);
+      }
+    }else if(s.mode!=="index") throw new Error("unsupported-selection-mode");
+  }
+  if(Number.isInteger(step.index)){
+    const i=normalizeIndex(step.index,selected.length);
+    selected=i<0?[]:[selected[i]];
+  }
+  return selected;
+}
+function matchStep(context,step){
+  const kind=step.kind;
+  if(kind==="children") return asArray(context.children);
+  if(kind==="tag"||kind==="class"||kind==="id"){
+    if(typeof step.name!=="string"||!step.name||step.name.length>256) throw new Error("invalid-selector-name");
+    let query;
+    if(kind==="tag"){
+      if(!/^[a-zA-Z][a-zA-Z0-9-]*$/.test(step.name)) throw new Error("invalid-tag-name");
+      query=step.name;
+    }else query=(kind==="class"?".":"#")+cssEscape(step.name);
+    if(typeof context.querySelectorAll!=="function") throw new Error("dom-query-api-required");
+    return asArray(context.querySelectorAll(query));
+  }
+  if(kind==="text"){
+    if(typeof step.name!=="string"||step.name.length>256) throw new Error("invalid-text-query");
+    return descendants(context).filter(node=>String(node.textContent||"").includes(step.name));
+  }
+  throw new Error("unsupported-selector-step");
+}
+function textNodes(node){
+  return asArray(node.childNodes).filter(child=>child&&child.nodeType===3).map(child=>child.nodeValue||child.textContent||"");
+}
+function readOutput(node,output){
+  if(output==="all") return node;
+  if(output==="text") return String(node.textContent||"");
+  if(output==="textnodes") return textNodes(node);
+  if(output==="owntext") return textNodes(node).join("");
+  if(output==="html") return String(node.innerHTML||"");
+  if(output==="href"||output==="src"){
+    if(typeof node.getAttribute!=="function") return null;
+    return node.getAttribute(output);
+  }
+  throw new Error("unsupported-selector-output");
+}
+function executeSelector(root,selector){
+  if(!root||!selector||typeof selector!=="object") throw new Error("invalid-selector-input");
+  if(selector.engine==="css"){
+    if(typeof selector.query!=="string"||!selector.query.trim()||selector.query.length>MAX_SELECTOR_LENGTH) throw new Error("invalid-css-query");
+    if(typeof root.querySelectorAll!=="function") throw new Error("dom-query-api-required");
+    let nodes=asArray(root.querySelectorAll(selector.query));
+    if(nodes.length>MAX_RESULTS) throw new Error("selector-result-limit");
+    if(selector.reverse) nodes.reverse();
+    return nodes.map(node=>readOutput(node,selector.output||"text"));
+  }
+  if(selector.engine!=="legado-chain") throw new Error("unsupported-selector-engine");
+  if(!Array.isArray(selector.steps)||!selector.steps.length||selector.steps.length>MAX_STEPS) throw new Error("invalid-selector-steps");
+  let current=[root];
+  for(const step of selector.steps){
+    const next=[];
+    for(const context of current){
+      next.push(...applySelection(matchStep(context,step),step));
+      if(next.length>MAX_RESULTS) throw new Error("selector-result-limit");
+    }
+    current=next;
+    if(!current.length) break;
+  }
+  if(selector.reverse) current.reverse();
+  if(selector.output==="all") return current;
+  return current.map(node=>readOutput(node,selector.output||"text"));
+}
+
+module.exports={executeSelector};
