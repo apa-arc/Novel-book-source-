@@ -14,12 +14,13 @@ const { scanArticles } = require("../runtime/text-quality");
 const ROOT = path.resolve(__dirname, "..");
 const AOAOSTAR = path.join(ROOT, "imports/aoaostar/raw/aoaostar-full.json");
 const SECONDARY_URL = "https://raw.githubusercontent.com/luanmuc/legado-book-sources/main/books.json";
-const REPORT = path.join(ROOT, "reports", `live-functional-test-${SHARD_INDEX}-of-${SHARD_COUNT}.json`);
+
 const KEYWORD = "斗破苍穹";
 const TIMEOUT_MS = 12000;
 const MAX_BODY = 4 * 1024 * 1024;
 const SHARD_COUNT = Number(process.env.TEST_SHARD_COUNT || 32);
 const SHARD_INDEX = Number(process.env.TEST_SHARD_INDEX || 0);
+const REPORT = path.join(ROOT, "reports", `live-functional-test-${SHARD_INDEX}-of-${SHARD_COUNT}.json`);
 const CONCURRENCY = 4;
 const NON_NOVEL = /漫画|動漫|动漫|有声|听书|古籍|国学|诗词|詞典|词典|百科|维基|公版|杂志|影视|短剧|网盘|音乐|播客/i;
 const SCRIPT_OR_AUTH = /@js:|<js>|\bjavascript\b|\bfunction\b|\breturn\b|\$\{/i;
