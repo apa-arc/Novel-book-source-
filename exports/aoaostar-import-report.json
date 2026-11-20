@@ -5,15 +5,31 @@
   "upstreamFile": "sources/b778fe6b.json",
   "upstreamLicenseNotice": "Upstream repository declares AGPL-3.0; individual source-rule provenance and redistribution permissions are not independently verified.",
   "format": "Legado bookSource JSON array; original rule groups are retained and not executed by this script.",
+  "thirdParty": {
+    "upstream": "https://github.com/tickmao/Novel",
+    "upstreamCommit": "7c2c4abd7f17d0124e30dbd9e01ea2e18d1349de",
+    "license": "MIT; upstream README/CREDITS restrict this collection to non-commercial learning and sharing; original source copyrights remain with their authors.",
+    "validation": "Current published healthy Legado set; engine commit 3cb7acb2a2892e71184c1dd12c8e8d7b5a60fbb7; validator legado-reading-v6:3cb7acb2a289; runtime fingerprint 5b6e2a468ed2b001d8b2cab608f6ca75af9ed467bdeaa9674860db1fd4422e92.",
+    "manifest": "imports/third-party/tickmao/validation-manifest.json",
+    "input": "imports/third-party/tickmao/verified-safe.json",
+    "records": 75,
+    "added": 56,
+    "duplicates": 16,
+    "rejected": 3
+  },
   "sanitization": "Login UI/checks, cookie jars and sensitive authentication header fields are removed. Sources requiring those credentials are disabled.",
   "stats": {
     "upstreamRecords": 3907,
     "duplicateRecords": 1,
-    "ordinary": 2910,
+    "ordinary": 2966,
     "adult": 76,
     "excludedNonNovel": 230,
     "incompleteRules": 690,
-    "credentialDisabled": 1224
+    "credentialDisabled": 1224,
+    "thirdPartyVerifiedSourceRecords": 75,
+    "thirdPartyVerifiedAdded": 56,
+    "thirdPartyVerifiedDuplicates": 16,
+    "thirdPartyVerifiedRejected": 3
   },
   "outputs": {
     "ordinary": "exports/legado-ordinary.json",
