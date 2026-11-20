@@ -29,7 +29,7 @@
     "excludesNonNovelAndIPHosts": true,
     "uniqueSourcesAfterFiltering": 75,
     "duplicatesWithinPack": 28,
-    "duplicatesAgainstExistingSubscription": 19,
+    "duplicatesAgainstExistingSubscription": 16,
     "expectedNewSources": 56,
     "excluded": {
       "unparseable-header": 26,
@@ -38,6 +38,9 @@
       "dynamic-or-secret-header": 2,
       "invalid-or-ip-host": 1,
       "not-current-valid": 12
-    }
+    },
+    "precheckPotentialOverlap": 19,
+    "localImporterRejected": 3,
+    "addedToOrdinarySubscription": 56
   }
 }
