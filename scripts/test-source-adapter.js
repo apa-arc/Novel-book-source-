@@ -73,5 +73,41 @@ const http = { async get(url) { requests.push(url); return { url, document: root
   assert.throws(() => resolveAllowed("https://user:pass@example.test/a", config.baseUrl, new Set(config.domains)));
   const badHttp = { async get(url) { return { url: "https://evil.test/redirect", document: root }; } };
   await assert.rejects(() => adapter.getBookDetail({ bookUrl: "https://example.test/book/1", http: badHttp }), /allowlist/);
+
+  const pageOne = node("main", {}, "", [
+    node("h1", {}, "第一章"),
+    node("div", { id: "body" }, "第一段正文"),
+    node("a", { id: "next", href: "https://example.test/read/1/100_2.html" }, "下一页")
+  ]);
+  const pageTwo = node("main", {}, "", [
+    node("h1", {}, "第一章"),
+    node("div", { id: "body" }, "第二段正文"),
+    node("a", { id: "next", href: "https://example.test/read/1/101.html" }, "下一章")
+  ]);
+  const pagedConfig = {
+    baseUrl: "https://example.test",
+    domains: ["example.test"],
+    content: {
+      title: { engine: "css", query: "h1", output: "text" },
+      body: { engine: "css", query: "#body", output: "text" },
+      nextPage: { engine: "css", query: "#next", output: "href" }
+    }
+  };
+  const pageRequests = [];
+  const pagedHttp = {
+    async get(url) {
+      pageRequests.push(url);
+      return { url, document: url.endsWith("_2.html") ? pageTwo : pageOne };
+    }
+  };
+  const pagedAdapter = createAdapter(pagedConfig);
+  const pagedContent = await pagedAdapter.getContent({
+    chapterUrl: "https://example.test/read/1/100.html",
+    http: pagedHttp
+  });
+  assert.equal(pagedContent.content, "第一段正文\\n\\n第二段正文");
+  assert.equal(pageRequests.length, 2);
+  assert.ok(pageRequests[1].endsWith("_2.html"));
+
   console.log("Source adapter runtime fixture tests passed.");
 })().catch(error => { console.error(error); process.exitCode = 1; });
