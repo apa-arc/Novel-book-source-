@@ -205,7 +205,8 @@ async function testSource(source) {
     stage("content", sampled);
     result.status = "passed";
   } catch (error) {
-    result.error = String(error && error.message || error).slice(0, 180);\n    if (error && error.cause) result.errorCause = String(error.cause.code || error.cause.message || error.cause).slice(0, 180);
+    result.error = String(error && error.message || error).slice(0, 180);
+    if (error && error.cause) result.errorCause = String(error.cause.code || error.cause.message || error.cause).slice(0, 180);
   }
   return result;
 }
