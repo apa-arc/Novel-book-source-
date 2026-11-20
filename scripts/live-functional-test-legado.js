@@ -178,10 +178,20 @@ function htmlToText(value) {
   for (const el of Array.from(root.querySelectorAll("script,style,iframe,form,button"))) el.remove();
   return String(root.textContent || "").replace(/\u00a0/g, " ").replace(/[ \t]+/g, " ").replace(/\n\s*\n+/g, "\n").trim();
 }
-async function testSource(source) {
-  const host = new URL(source.bookSourceUrl).hostname.toLowerCase();
-  const id = hash(String(source.bookSourceName) + "|" + String(source.bookSourceUrl));
+async function testSource(source, testId) {
+  let host = "";
+  const id = testId || hash(JSON.stringify(source));
   const result = { id, name: String(source.bookSourceName || "").slice(0, 100), host, category: adultSource(source) ? "adult" : "ordinary", status: "failed", stages: [] };
+  try {
+    const parsedSourceUrl = new URL(String(source.bookSourceUrl || ""));
+    host = parsedSourceUrl.hostname.toLowerCase();
+    if (!host || !["https:","http:"].includes(parsedSourceUrl.protocol)) throw new Error("invalid-source-url");
+    result.host = host;
+  } catch (error) {
+    result.failedStage = "preflight";
+    result.error = String(error && error.message || error).slice(0, 180);
+    return result;
+  }
   let currentStage = "preflight";
   const stage = (name, detail) => { currentStage = name; result.stages.push({ name, status: "passed", ...detail }); };
   try {
@@ -271,28 +281,26 @@ async function main() {
   const secondary = asArray(await response.json());
   const ordinarySubscription = JSON.parse(fs.readFileSync(path.join(ROOT, "subscription.json"), "utf8"));
   const adultSubscription = JSON.parse(fs.readFileSync(path.join(ROOT, "adult-subscription.json"), "utf8"));
-  const seen = new Set();
+  const seenCandidateSignatures = new Set();
   const candidates = [];
-  function add(source, provider) {
-    if (!source || typeof source !== "object") return;
-    const label = [source.bookSourceName,source.bookSourceGroup,source.bookSourceComment].join(" ");
-    
-    let host;
-    try { const u = new URL(source.bookSourceUrl); if (!["https:","http:"].includes(u.protocol)) return; host = u.hostname.toLowerCase(); } catch { return; }
-    
-    
-    
-    
-    
-    const sourceId = hash(String(source.bookSourceName) + "|" + String(source.bookSourceUrl));
-    if (seen.has(sourceId)) return;
-    seen.add(sourceId);
-    candidates.push({ source, provider });
+  function signature(source) { return hash(JSON.stringify(source)); }
+  function addSubscription(source, provider, index) {
+    if (!source || typeof source !== "object" || Array.isArray(source)) return;
+    const sig = signature(source);
+    candidates.push({ source, provider, testId: hash(provider + "|" + index + "|" + sig) });
+    seenCandidateSignatures.add(sig);
   }
-  for (const source of ordinarySubscription) add(source, "subscription-ordinary");
-  for (const source of adultSubscription) add(source, "subscription-adult");
-  for (const source of aoaostar) add(source, "AOAOSTAR-candidate");
-  for (const source of secondary) add(source, "luanmuc-candidate");
+  function addCandidate(source, provider) {
+    if (!source || typeof source !== "object" || Array.isArray(source)) return;
+    const sig = signature(source);
+    if (seenCandidateSignatures.has(sig)) return;
+    seenCandidateSignatures.add(sig);
+    candidates.push({ source, provider, testId: sig });
+  }
+  ordinarySubscription.forEach((source, index) => addSubscription(source, "subscription-ordinary", index));
+  adultSubscription.forEach((source, index) => addSubscription(source, "subscription-adult", index));
+  for (const source of aoaostar) addCandidate(source, "AOAOSTAR-candidate");
+  for (const source of secondary) addCandidate(source, "luanmuc-candidate");
   const selected = candidates.filter((_, index) => index % SHARD_COUNT === SHARD_INDEX);
   const results = new Array(selected.length);
   let next = 0;
@@ -300,7 +308,7 @@ async function main() {
     while (true) {
       const index = next++;
       if (index >= selected.length) return;
-      results[index] = await testSource(selected[index].source);
+      results[index] = await testSource(selected[index].source, selected[index].testId);
       results[index].provider = selected[index].provider;
       console.log("tested", index + 1, "/", selected.length, results[index].status, results[index].host, [results[index].failedStage, results[index].error, results[index].errorCause].filter(Boolean).join("/"));
     }
@@ -314,6 +322,12 @@ async function main() {
     keyword: KEYWORD,
     counts: {
       candidatesDiscovered: candidates.length,
+      inputCounts: {
+        subscriptionOrdinary: ordinarySubscription.length,
+        subscriptionAdult: adultSubscription.length,
+        aoaostarSnapshot: aoaostar.length,
+        secondarySnapshot: secondary.length
+      },
       shardIndex: SHARD_INDEX,
       shardCount: SHARD_COUNT,
       tested: results.length,
