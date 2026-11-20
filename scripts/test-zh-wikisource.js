@@ -43,7 +43,7 @@ function tagged(role, value) {
     responses.push(url);
     if (url.includes("Special:Search")) {
       const link = tagged("searchLink", { text: "三国演义", href: "https://zh.wikisource.org/zh-hans/三國志演義" });
-      const result = tagged("searchResult", { children: [link, tagged("snippet", { text: "明代章回小说" })] });
+      const result = tagged("searchResult", { children: [link, tagged("snippet", { text: "明代   章回小说" })] });
       return { document: doc([result]), url };
     }
     if (decodeURIComponent(url).includes("/三國志演義")) {
@@ -58,7 +58,7 @@ function tagged(role, value) {
   } };
   const found = await adapter.search({ keyword: "三国演义", page: 1, http });
   assert.equal(found.length, 1);
-  assert.equal(found[0].title, "三国演义");
+  assert.equal(found[0].title, "三国演义");\n  assert.equal(found[0].intro, "明代 章回小说");
   const detail = await adapter.getBookDetail({ bookUrl: found[0].bookUrl, http });
   assert.equal(detail.title, "三国演义");
   const chapters = await adapter.getChapters({ bookUrl: found[0].bookUrl, http });
