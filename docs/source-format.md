@@ -39,7 +39,9 @@
 - `getChapters({ bookUrl, http })`
 - `getContent({ chapterUrl, http })`
 
-请求能力由阅读 App 提供受限的 `http` 参数。解析器不得自行使用全局网络 API、文件系统、动态代码执行或未声明的系统能力。
+请求能力由阅读 App 提供受限的 `http` 参数。当前通用运行时约定 `http.get(url)` 返回 `{ document, url? }`：`document` 是由 App 自己的 HTML 解析器产生的 DOM 根节点，`url` 是最终响应 URL（如有）。运行时会再次检查最终 URL 的 HTTPS 和域名白名单。解析器不得自行使用全局网络 API、文件系统、动态代码执行或未声明的系统能力。
+
+仓库提供 `runtime/source-adapter.js` 的 `createAdapter(config)`，用于将声明式选择器配置接入四个统一方法。它不负责网络请求或 HTML 解析；这些能力必须由 App 注入。选择器配置仍需经过目标 App 的真实 DOM 兼容测试。
 
 ## 4. 统一返回结构
 
