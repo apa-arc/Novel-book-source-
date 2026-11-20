@@ -1,0 +1,50 @@
+name: Live functional tests for novel sources
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/live-functional-test-legado.js"
+      - "scripts/convert-legado-rules.js"
+      - "runtime/selector-engine.js"
+      - "runtime/text-quality.js"
+      - "imports/aoaostar/raw/aoaostar-full.json"
+      - ".github/workflows/live-functional-test-legado.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: live-functional-test-legado
+  cancel-in-progress: false
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install bounded HTML parser
+        run: npm install --no-save --no-package-lock linkedom
+      - name: Run real source functional tests
+        run: node scripts/live-functional-test-legado.js
+      - name: Publish diagnostic report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+users.noreply.github.com"
+          git add reports/live-functional-test.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Add live novel source functional test report"
+            git pull --rebase origin main
+            git push
+          fi
+      - name: Upload report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-functional-test-report
+          path: reports/live-functional-test.json
+          retention-days: 90
