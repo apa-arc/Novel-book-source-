@@ -2,6 +2,12 @@ name: Batch compatibility review for AOAOSTAR candidates
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/batch-convert-aoaostar.js"
+      - ".github/workflows/batch-convert-aoaostar.yml"
+      - "scripts/convert-legado-rules.js"
 
 permissions:
   contents: read
