@@ -12,7 +12,7 @@ const ROOT = path.resolve(__dirname, "..");
 const INPUT = path.join(ROOT, "imports/aoaostar/raw/aoaostar-full.json");
 const OUT = path.join(ROOT, "exports");
 const REQUIRED = ["ruleSearch", "ruleBookInfo", "ruleToc", "ruleContent"];
-const ADULT = /成人|色情|情色|黄文|黃文|肉文|淫秽|淫穢|18\s*\+|r\\s*18|成人视频|成人小说/i;
+const ADULT = /🔞|成人|色情|情色|黄文|黃文|肉文|淫秽|淫穢|R18|18\+/i;
 const NON_NOVEL = /漫画|動漫|动漫|有声|听书|古籍|国学|詩詞|诗词|词典|百科|维基|公版|杂志|RSS|电子书出版/i;
 const SECRET_KEY = /^(cookie|set-cookie|authorization|proxy-authorization|x-api-key|api[-_]?key|access[-_]?token|token|password|passwd|secret)$/i;
 
