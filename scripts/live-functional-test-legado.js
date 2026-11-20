@@ -137,7 +137,9 @@ function simpleSearchUrl(source, keyword, page) {
   }
   const replaced = raw
     .replace(/\{\{\s*key\s*\}\}/gi, encodeURIComponent(keyword))
-    .replace(/\{\{\s*page\s*\}\}/gi, String(page));
+    .replace(/\{\{\s*page\s*\}\}/gi, String(page))
+    .replace(/\{\{\s*page\s*-\s*1\s*\}\}/gi, String(page - 1))
+    .replace(/\{\{\s*page\s*\+\s*1\s*\}\}/gi, String(page + 1));
   return absolute(replaced, source.bookSourceUrl, new URL(source.bookSourceUrl).hostname.toLowerCase());
 }
 function extract(node, rules, baseUrl, host) {
