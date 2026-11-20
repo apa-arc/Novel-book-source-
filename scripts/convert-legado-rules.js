@@ -3,7 +3,7 @@
 const fs = require("node:fs");
 const path = require("node:path");
 const RULE_GROUPS = { search:"ruleSearch", bookInfo:"ruleBookInfo", toc:"ruleToc", content:"ruleContent", explore:"ruleExplore" };
-const REQUIRED_GROUPS = ["search", "bookInfo", "toc", "content"];
+const REQUIRED_GROUPS = ["search", "bookInfo", "toc", "content"];\nconst CHAIN_OUTPUTS = new Set(["text", "html", "href", "src", "owntext", "textnodes"]);
 const SCRIPT_RE = /@js:|<js>|\bjavascript\b|\bfunction\b|\breturn\b|\$\{/i;
 function parseIndex(token) { return /^-?\d+$/.test(token) ? Number(token) : null; }
 function parseLegacyChain(expression) {
@@ -26,7 +26,7 @@ function parseLegacyChain(expression) {
   }
   const segments=raw.split("@");
   const output=(segments.pop()||"text").toLowerCase();
-  if (!["text","html","href","src"].includes(output)) return {status:"manual",reason:"unsupported-output"};
+  if (!CHAIN_OUTPUTS.has(output)) return {status:"manual",reason:"unsupported-output"};
   const steps=[];
   for (const segment of segments) {
     const parts=segment.split(".");
