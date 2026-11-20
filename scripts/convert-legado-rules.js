@@ -27,23 +27,30 @@ function parseLegacyChain(expression) {
     const query=attr ? tag+"["+attr+"=\""+value.replace(/"/g,'\\"')+"\"]" : tag;
     return {status:"candidate",selector:{engine:"css",query,output:out==="text"?"text":"attr:"+out}};
   }
+  if (/^@xpath:/i.test(raw)) return {status:"manual",reason:"unsupported-xpath"};
+  if (/^@json:/i.test(raw) || /^\$[.[]/.test(raw)) return {status:"manual",reason:"unsupported-jsonpath"};
   const segments=raw.split("@");
-  const output=(segments.pop()||"text").toLowerCase();
-  if (!CHAIN_OUTPUTS.has(output) && output!=="all") return {status:"manual",reason:"unsupported-output",outputKind:/^[a-z][a-z0-9_-]{0,24}$/i.test(output)?output:null};
+  const tail=(segments[segments.length-1]||"").toLowerCase();
+  const output=CHAIN_OUTPUTS.has(tail)||tail==="all" ? (segments.pop(),tail) : "text";
   const steps=[];
   let reverse=false;
   for (const segmentValue of segments) {
     let segment=segmentValue.trim();
     if (!segment) return {status:"manual",reason:"unsupported-selector-step",selectorKind:null};
     if (segment.startsWith("-")) { reverse=true; segment=segment.slice(1); }
-    const parts=segment.split(".");
-    const kind=parts.shift();
-    if (kind==="children") {
-      if (parts.length) return {status:"manual",reason:"unsupported-selector-step"};
+    if (/^\[!?[-\d:,]+\]$/.test(segment) || /^-?\d+$/.test(segment)) {
+      return {status:"manual",reason:"unsupported-index-filter"};
+    }
+    if (segment==="children") {
       steps.push({kind:"children",name:null,index:null});
       continue;
     }
-    if (!["class","id","tag","text"].includes(kind) || parts.length<1) return {status:"manual",reason:"unsupported-selector-step",selectorKind:/^[a-z][a-z0-9_-]{0,24}$/i.test(kind||"")?kind:null};
+    const parts=segment.split(".");
+    let kind=parts.shift();
+    if (!["class","id","tag","text"].includes(kind)) {
+      kind="tag";
+      parts.unshift(segment);
+    }
     const trailingIndex=parts.length>1 ? parseIndex(parts[parts.length-1]) : null;
     const hasIndex=trailingIndex!==null;
     const name=hasIndex ? parts.slice(0,-1).join(".") : parts.join(".");
