@@ -15,7 +15,7 @@ const ROOT = path.resolve(__dirname, "..");
 const AOAOSTAR = path.join(ROOT, "imports/aoaostar/raw/aoaostar-full.json");
 const SECONDARY_URL = "https://raw.githubusercontent.com/luanmuc/legado-book-sources/main/books.json";
 const REPORT = path.join(ROOT, "reports/live-functional-test.json");
-const KEYWORD = "三国演义";
+const KEYWORD = "斗破苍穹";
 const TIMEOUT_MS = 12000;
 const MAX_BODY = 4 * 1024 * 1024;
 const MAX_TESTS = 30;
@@ -88,9 +88,13 @@ function allNodes(root, rule) {
   if (!Array.isArray(result)) throw new Error("list-rule-not-array");
   return result;
 }
+function hostAllowed(candidate, baseHost) {
+  const normalize = value => String(value).toLowerCase().replace(/^(www|m|wap)\\./, "");
+  return normalize(candidate) === normalize(baseHost);
+}
 function absolute(raw, base, host) {
   const u = new URL(String(raw || ""), base);
-  if (u.protocol !== "https:" || u.username || u.password || u.hostname.toLowerCase() !== host) {
+  if (u.protocol !== "https:" || u.username || u.password || !hostAllowed(u.hostname, host)) {
     throw new Error("url-outside-https-source-host");
   }
   return u.href;
