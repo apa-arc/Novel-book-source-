@@ -22,7 +22,7 @@ try{
  assert.equal(report.sources[1].groups.search.fields.name.reason,"script-or-template");
  const dotted=parseLegacyChain("class.chapter.title@html");
  assert.equal(dotted.status,"candidate");
- assert.deepEqual(dotted.selector.steps,[{kind:"class",name:"chapter.title",index:0}]);
+ assert.deepEqual(dotted.selector.steps,[{kind:"class",name:"chapter.title",index:null}]);
  assert.equal(dotted.selector.output,"html");
  const ownText=parseLegacyChain("class.content.0@ownText");
  assert.equal(ownText.status,"candidate");
@@ -32,5 +32,18 @@ try{
  assert.equal(textNodes.selector.output,"textnodes");
  const indexed=parseLegacyChain("class.chapter.2@text");
  assert.equal(indexed.selector.steps[0].index,2);
+ const textMatch=parseLegacyChain("text.小说@text");
+ assert.equal(textMatch.status,"candidate");
+ assert.deepEqual(textMatch.selector.steps[0],{kind:"text",name:"小说",index:null});
+ const children=parseLegacyChain("children@html");
+ assert.equal(children.status,"candidate");
+ assert.deepEqual(children.selector.steps[0],{kind:"children",name:null,index:null});
+ const allMatches=parseLegacyChain("class.book@all");
+ assert.equal(allMatches.status,"candidate");
+ assert.equal(allMatches.selector.steps[0].index,null);
+ assert.equal(allMatches.selector.output,"all");
+ const reversed=parseLegacyChain("-class.chapter@text");
+ assert.equal(reversed.status,"candidate");
+ assert.equal(reversed.selector.reverse,true);
  console.log("Legado converter fixture tests passed.");
 }finally{fs.rmSync(temp,{recursive:true,force:true});}
