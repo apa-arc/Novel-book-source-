@@ -27,8 +27,8 @@ const root = node("main", {}, "", [
     node("a", { class: "title", href: "/book/1" }, "测试小说"),
     node("span", { class: "author" }, "作者甲")
   ]),
-  node("a", { class: "chapter", href: "/chapter/1" }, "第一章"),
-  node("a", { class: "chapter", href: "/chapter/2" }, "第二章"),
+  node("div", { class: "chapter" }, "", [node("a", { href: "/chapter/1" }, "第一章")]),
+  node("div", { class: "chapter" }, "", [node("a", { href: "/chapter/2" }, "第二章")]),
   node("div", { class: "body" }, "这是正文内容")
 ]);
 const selector = (kind, name, output = "text") => chain([{ kind, name, index: null }], output);
