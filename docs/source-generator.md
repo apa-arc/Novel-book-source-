@@ -18,7 +18,9 @@ npm run validate
 ```json
 {
   "licenseApproved": true,
-  "licenseEvidence": "填写许可协议名称、授权链接或自有规则说明",
+  "licenseEvidence": "填写许可协议名称、授权内容摘要或自有规则权属说明",
+  "licenseType": "open-license",
+  "licenseEvidenceUrl": "https://example.com/license",
   "metadata": {
     "id": "my-demo-source",
     "name": "我的示例书源",
@@ -63,6 +65,6 @@ npm run validate
 npm run generate-source -- manifests/
 ```
 
-每个书源会生成 `sources/<id>.json` 和 `scripts/<id>.js`，并自动追加到 `index.json`。所有清单会先整体校验：只要存在重复 ID、已登记 ID、缺少许可审查或非法域名，整批就会停止，不会写入部分书源。新源始终以 `enabled=false` 登记。
+每个书源会生成 `sources/<id>.json` 和 `scripts/<id>.js`，并自动追加到 `index.json`。所有清单会先整体校验：只要存在重复 ID、已登记 ID、缺少许可审查、缺少 HTTPS 许可证据链接、许可类型不明确或非法域名，整批就会停止，不会写入部分书源。许可类型仅允许 `self-owned`、`written-permission`、`open-license`、`public-domain`。证据链接必须指向能支持对应权利主张的官方协议、授权文件或权属材料；随意填写网站首页或“公开可访问”不构成许可证明。新源始终以 `enabled=false` 登记。
 
 生成器会先写入新文件，再原子替换索引；写入失败时会清理本批已创建的文件。正式启用前仍须完成真实 App 环境测试与人工审查。

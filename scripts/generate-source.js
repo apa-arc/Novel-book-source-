@@ -15,6 +15,11 @@ function validateManifest(m) {
   if (m.licenseApproved !== true || typeof m.licenseEvidence !== "string" || !m.licenseEvidence.trim()) {
     fail("license-review-required");
   }
+  const allowedLicenseTypes = new Set(["self-owned", "written-permission", "open-license", "public-domain"]);
+  if (!allowedLicenseTypes.has(m.licenseType)) fail("license-type-required");
+  let evidenceUrl;
+  try { evidenceUrl = new URL(m.licenseEvidenceUrl); } catch { fail("license-evidence-url-required"); }
+  if (evidenceUrl.protocol !== "https:" || evidenceUrl.username || evidenceUrl.password) fail("license-evidence-url-must-be-https");
   const meta = m.metadata || {};
   if (!ID_RE.test(meta.id || "")) fail("invalid-source-id");
   if (typeof meta.name !== "string" || !meta.name.trim() || meta.name.length > 80) fail("invalid-source-name");
@@ -52,6 +57,8 @@ function renderFiles(manifest) {
     script: "scripts/" + id + ".js",
     enabled: false,
     categories: Array.isArray(meta.categories) ? meta.categories : [],
+    licenseType: manifest.licenseType,
+    licenseEvidenceUrl: new URL(manifest.licenseEvidenceUrl).href,
     licenseNote: "许可审查依据：" + manifest.licenseEvidence.trim()
   };
   const config = { baseUrl: source.baseUrl, domains: source.domains, ...selectors };

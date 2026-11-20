@@ -5,7 +5,9 @@ const { validateManifest, buildBatch } = require("./generate-source");
 
 const valid = {
   licenseApproved: true,
-  licenseEvidence: "自有规则或明确授权",
+  licenseEvidence: "自有规则并保留权属记录",
+  licenseType: "self-owned",
+  licenseEvidenceUrl: "https://example.com/license",
   metadata: {
     id: "demo-source", name: "演示书源", version: "1.0.0",
     baseUrl: "https://example.com", domains: ["example.com"]
@@ -18,6 +20,9 @@ const valid = {
 
 assert.equal(validateManifest(valid).meta.id, "demo-source");
 assert.throws(() => validateManifest({ ...valid, licenseApproved: false }), /license-review-required/);
+assert.throws(() => validateManifest({ ...valid, licenseType: "unknown" }), /license-type-required/);
+assert.throws(() => validateManifest({ ...valid, licenseEvidenceUrl: "" }), /license-evidence-url-required/);
+assert.throws(() => validateManifest({ ...valid, licenseEvidenceUrl: "http://example.com/license" }), /license-evidence-url-must-be-https/);
 assert.throws(() => validateManifest({ ...valid, metadata: { ...valid.metadata, baseUrl: "http://example.com" } }), /base-url-must-be-https/);
 assert.throws(() => validateManifest({ ...valid, metadata: { ...valid.metadata, domains: ["other.example"] } }), /invalid-domain-allowlist/);
 assert.throws(() => validateManifest({ ...valid, selectors: { ...valid.selectors, search: { urlTemplate: "https://example.com/?p={{page}}" } } }), /search-url-template/);
