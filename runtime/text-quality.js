@@ -4,6 +4,8 @@ const SUSPECT_PATTERNS = [
   ["replacement-character", /\uFFFD/gu],
   ["utf8-mojibake", /(?:Ã[\u0080-\u00FF]|Â[\u0080-\u00FF]|â(?:€|™|œ|€¦|€“|€”|€™)|ä¸[\u0080-\u00FF]|å[\u0080-\u00FF]|æ[\u0080-\u00FF]|ï¿½|ðŸ)/gu],
   ["common-garbled-text", /(?:锟斤拷|烫烫烫|屯屯屯)/gu],
+  ["broken-html-entity", /(?:&amp;#(?:x[0-9a-f]+|[0-9]+);|&#(?:x[0-9a-f]+|[0-9]+)(?!;)|&(?:nbsp|amp|lt|gt|quot)(?!;))/giu],
+  ["private-use-character", /[\uE000-\uF8FF\u{F0000}-\u{FFFFD}\u{100000}-\u{10FFFD}]/gu],
   ["control-character", /[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F-\u009F]/gu]
 ];
 
@@ -17,8 +19,9 @@ function scanTextQuality(value) {
   }
   if (!content.trim()) flags.push({ rule: "empty-content", count: 1 });
   else if (content.trim().length < 80) flags.push({ rule: "very-short-content", count: 1 });
+  const suspect = flags.some(item => !["very-short-content"].includes(item.rule));
   return {
-    status: flags.some(item => item.rule !== "very-short-content") ? "suspect" : flags.length ? "review" : "normal",
+    status: suspect ? "suspect" : flags.length ? "review" : "normal",
     length: content.length,
     flags
   };
@@ -44,7 +47,8 @@ function scanArticles(articles) {
       if (seen.has(normalized)) flags.push({ rule: "duplicate-content", count: 1, duplicateOf: seen.get(normalized) });
       else seen.set(normalized, title);
     }
-    results.push({ title, status: flags.some(item => item.rule !== "very-short-content") ? "suspect" : flags.length ? "review" : "normal", length: quality.length, flags });
+    const suspect = flags.some(item => !["very-short-content"].includes(item.rule));
+    results.push({ title, status: suspect ? "suspect" : flags.length ? "review" : "normal", length: quality.length, flags });
   }
   const summary = {
     scanned: results.length,
