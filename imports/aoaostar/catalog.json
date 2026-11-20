@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "provider": "AOAOSTAR / legado",
+  "upstreamRepository": "https://github.com/aoaostar/legado",
+  "upstreamBranch": "release",
+  "upstreamLicenseDeclared": "AGPL-3.0",
+  "purpose": "仅登记公开书源合集入口；扫描前不复制规则正文，不执行规则，不导入 App 正式索引。",
+  "collections": [
+    {
+      "id": "b778fe6b",
+      "name": "全量书源",
+      "category": "bookSource",
+      "url": "https://raw.githubusercontent.com/aoaostar/legado/release/sources/b778fe6b.json"
+    },
+    {
+      "id": "71e56d4f",
+      "name": "XIU2 精品书源",
+      "category": "bookSource",
+      "url": "https://raw.githubusercontent.com/aoaostar/legado/release/sources/71e56d4f.json"
+    },
+    {
+      "id": "4dc410d1",
+      "name": "破冰书源",
+      "category": "bookSource",
+      "url": "https://raw.githubusercontent.com/aoaostar/legado/release/sources/4dc410d1.json"
+    },
+    {
+      "id": "e3e5d620",
+      "name": "关耳女频",
+      "category": "bookSource",
+      "url": "https://raw.githubusercontent.com/aoaostar/legado/release/sources/e3e5d620.json"
+    },
+    {
+      "id": "e29e19ee",
+      "name": "shidahuilang 书源",
+      "category": "bookSource",
+      "url": "https://raw.githubusercontent.com/aoaostar/legado/release/sources/e29e19ee.json"
+    },
+    {
+      "id": "2a1f129b",
+      "name": "酷安 @ 三舞313书源",
+      "category": "bookSource",
+      "url": "https://raw.githubusercontent.com/aoaostar/legado/release/sources/2a1f129b.json"
+    },
+    {
+      "id": "3bb7b751",
+      "name": "酷安 @ 开源阅读软件",
+      "category": "bookSource",
+      "url": "https://raw.githubusercontent.com/aoaostar/legado/release/sources/3bb7b751.json"
+    }
+  ]
+}
