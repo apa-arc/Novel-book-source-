@@ -34,7 +34,7 @@ for (const item of index.sources) {
   if (!/^[a-z0-9][a-z0-9-]{2,63}$/.test(source.id)) {
     throw new Error(item.file + " id 格式错误");
   }
-  if (!/^\\d+\\.\\d+\\.\\d+$/.test(source.version)) {
+  if (!/^\d+\.\d+\.\d+$/.test(source.version)) {
     throw new Error(item.file + " version 必须使用 x.y.z 格式");
   }
 
@@ -44,7 +44,7 @@ for (const item of index.sources) {
   }
   if (!Array.isArray(source.domains) || source.domains.length === 0 ||
       !source.domains.every(domain => typeof domain === "string" &&
-        /^(?=.{1,253}$)(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\\.)*[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?$/i.test(domain))) {
+        /^(?=.{1,253}$)(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)*[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?$/i.test(domain))) {
     throw new Error(item.file + " domains 必须是有效主机名数组");
   }
   if (!source.domains.includes(base.hostname)) {
