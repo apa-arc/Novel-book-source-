@@ -83,4 +83,7 @@ function main() {
   console.log(JSON.stringify({ id, source: path.relative(root, sourcePath), script: path.relative(root, scriptPath), enabled: false }, null, 2));
 }
 
-try { main(); } catch (error) { console.error(error.message); process.exitCode = 1; }
+module.exports = { validateManifest };
+if (require.main === module) {
+  try { main(); } catch (error) { console.error(error.message); process.exitCode = 1; }
+}
