@@ -47,3 +47,15 @@ node scripts/analyze-legado-source.js ./path/to/sources.json --json
 - 不迁移 Cookie、账号密码、令牌或其他登录凭据。
 - 不绕过登录、订阅付费、验证码、DRM 或站点访问限制。
 - 只适配有合法访问依据且允许自动化访问的来源。
+
+## 已覆盖的链式选择器子集
+
+当前中间表示解析器在保守边界内识别以下 JSOUP 链式步骤：
+
+- `class.name`、`id.name`、`tag.name`：名称选择；未写索引时保留为“全部匹配”，显式 `.0` 等才保留索引。
+- `text.keyword`：按文本片段匹配。
+- `children`：子元素步骤，不接受名称参数。
+- 链式输出：`text`、`textNodes`、`ownText`、`html`、`href`、`src`、`all`。
+- 规则段前的 `-` 会记录为反转标记。
+
+这只是语法识别和中间表示，不代表 iOS 运行时已实现相同的 DOM 选择、负索引、过滤、正则替换或组合规则。带排除索引、区间、多选择、复杂 XPath、JSONPath、正则/模板变换以及 `&&` / `||` 的规则仍需单独解析和测试；未覆盖的语法继续标记人工处理。
