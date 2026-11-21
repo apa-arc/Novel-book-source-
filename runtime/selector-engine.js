@@ -101,7 +101,30 @@ function readOutput(node,output){
   throw new Error("unsupported-selector-output");
 }
 function executeSelector(root,selector){
-  if(!root||!selector||typeof selector!=="object") throw new Error("invalid-selector-input");
+  if(root==null||!selector||typeof selector!=="object") throw new Error("invalid-selector-input");
+  if(selector.engine==="json"){
+    if(!Array.isArray(selector.path)||!selector.path.length||selector.path.length>32) throw new Error("invalid-json-path");
+    let current=[root];
+    for(const step of selector.path){
+      const next=[];
+      for(const value of current){
+        if(step.kind==="property"){
+          if(value&&typeof value==="object"&&!Array.isArray(value)&&Object.prototype.hasOwnProperty.call(value,step.name)) next.push(value[step.name]);
+        }else if(step.kind==="index"){
+          if(Array.isArray(value)){
+            const index=step.index<0?value.length+step.index:step.index;
+            if(index>=0&&index<value.length) next.push(value[index]);
+          }
+        }else if(step.kind==="wildcard"){
+          if(Array.isArray(value)) next.push(...value);
+          else if(value&&typeof value==="object") next.push(...Object.values(value));
+        }else throw new Error("unsupported-json-path-step");
+      }
+      current=next;
+      if(!current.length) return [];
+    }
+    return current.length===1?current[0]:current;
+  }
   if(selector.engine==="literal") return String(selector.value==null?"":selector.value);
   if(selector.engine==="composite"){
     if(!Array.isArray(selector.parts)||!selector.parts.length||selector.parts.length>32) throw new Error("invalid-composite-selector");
