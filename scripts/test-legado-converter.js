@@ -165,5 +165,21 @@ try{
  const quotedOperator=parseLegacyChain('a[href="x&&y"]@text');
  assert.equal(quotedOperator.status,"candidate");
  assert.deepEqual(quotedOperator.selector.steps,[{kind:"css",query:'a[href="x&&y"]'}]);
+ const warningSource=convertSource({
+   bookSourceName:"带登录配置的公开源",
+   bookSourceUrl:"https://example.com",
+   enabled:false,
+   loginUrl:"https://example.com/login",
+   header:{"User-Agent":"Test"},
+   ruleSearch:{bookList:"tag.div"},
+   ruleBookInfo:{name:"tag.h1@text"},
+   ruleToc:{chapterList:"tag.li"},
+   ruleContent:{content:"id.content@html"}
+ },0);
+ assert.equal(warningSource.conversionStatus,"candidate");
+ assert.ok(warningSource.warnings.includes("disabled-upstream"));
+ assert.ok(warningSource.warnings.includes("login-config-present"));
+ assert.ok(warningSource.warnings.includes("request-header-or-cookie-config-present"));
+ assert.equal(warningSource.groups.explore.status,"missing");
  console.log("Legado converter fixture tests passed.");
 }finally{fs.rmSync(temp,{recursive:true,force:true});}
