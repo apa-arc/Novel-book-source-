@@ -40,8 +40,37 @@ const modes = [
 ];
 
 async function runOne(source: NovelSource, keyword: string, mode: typeof modes[number]) {
+  const exchanges: Array<Record<string, unknown>> = [];
+  const instrumentedFetch = (async (input: RequestInfo | URL, init: RequestInit = {}) => {
+    const requestUrl = String(input);
+    try {
+      const response = await mode.fetchImpl(input, init);
+      let bodyPreview = "";
+      try {
+        bodyPreview = (await response.clone().text()).replace(/\\s+/g, " ").slice(0, 360);
+      } catch {
+        bodyPreview = "[response body unavailable]";
+      }
+      exchanges.push({
+        requestUrl,
+        status: response.status,
+        finalUrl: response.url,
+        redirected: response.redirected,
+        contentType: response.headers.get("content-type"),
+        bodyPreview,
+      });
+      return response;
+    } catch (error) {
+      exchanges.push({
+        requestUrl,
+        errorName: error instanceof Error ? error.name : "UnknownError",
+        error: error instanceof Error ? error.message : String(error),
+      });
+      throw error;
+    }
+  }) as typeof fetch;
   try {
-    const client = createSourceHttpClient(source, mode.fetchImpl);
+    const client = createSourceHttpClient(source, instrumentedFetch);
     const page = await searchNovelSource(source, keyword, client);
     return {
       id: source.id,
@@ -51,6 +80,7 @@ async function runOne(source: NovelSource, keyword: string, mode: typeof modes[n
       outcome: "parsed",
       resultCount: page.items.length,
       firstTitles: page.items.slice(0, 5).map((item) => item.title),
+      exchanges,
     };
   } catch (error) {
     return {
@@ -60,6 +90,7 @@ async function runOne(source: NovelSource, keyword: string, mode: typeof modes[n
       mode: mode.name,
       outcome: "failed",
       error: error instanceof Error ? error.message : String(error),
+      exchanges,
     };
   }
 }
