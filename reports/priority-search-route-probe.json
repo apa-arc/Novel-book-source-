@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T15:17:51.989Z",
+  "generatedAt": "2026-11-21T15:19:29.602Z",
   "keywords": [
     "斗罗大陆",
     "斗破苍穹"
@@ -9,8 +9,8 @@
   "note": "仅探测已发现的公开 GET 搜索路由；不执行站点 JavaScript、不登录、不绕过访问控制、不读取或保存小说正文。搜索入口响应不等于 App 兼容或可正式导入。",
   "counts": {
     "total": 24,
-    "request-error": 5,
-    "http-success-no-keyword-hit": 11,
+    "request-error": 11,
+    "http-success-no-keyword-hit": 5,
     "redirect-target-no-keyword-hit": 8
   },
   "results": [
@@ -22,7 +22,7 @@
       "path": "/storySearch/search?keyword={keyword}",
       "classification": "request-error",
       "error": "TimeoutError: The operation was aborted due to timeout",
-      "elapsedMs": 12002
+      "elapsedMs": 12004
     },
     {
       "id": "hotread-mobile",
@@ -36,7 +36,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 4984
+      "elapsedMs": 1002
     },
     {
       "id": "hotread-mobile",
@@ -44,13 +44,9 @@
       "baseUrl": "https://mobile.hotread.com/",
       "keyword": "斗罗大陆",
       "path": "/storySearch/search?key={keyword}",
-      "status": 200,
-      "contentType": "text/html;charset=UTF-8",
-      "title": "小说排行榜_火星小说|好看的免费小说下载网",
-      "hasKeyword": false,
-      "links": [],
-      "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 4977
+      "classification": "request-error",
+      "error": "TimeoutError: The operation was aborted due to timeout",
+      "elapsedMs": 11999
     },
     {
       "id": "hotread-mobile",
@@ -58,13 +54,9 @@
       "baseUrl": "https://mobile.hotread.com/",
       "keyword": "斗罗大陆",
       "path": "/storySearch/search?searchKey={keyword}",
-      "status": 200,
-      "contentType": "text/html;charset=UTF-8",
-      "title": "小说排行榜_火星小说|好看的免费小说下载网",
-      "hasKeyword": false,
-      "links": [],
-      "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 4980
+      "classification": "request-error",
+      "error": "TimeoutError: The operation was aborted due to timeout",
+      "elapsedMs": 12002
     },
     {
       "id": "hotread-mobile",
@@ -72,9 +64,13 @@
       "baseUrl": "https://mobile.hotread.com/",
       "keyword": "斗罗大陆",
       "path": "/storySearch/search?wd={keyword}",
-      "classification": "request-error",
-      "error": "TimeoutError: The operation was aborted due to timeout",
-      "elapsedMs": 12001
+      "status": 200,
+      "contentType": "text/html;charset=UTF-8",
+      "title": "小说排行榜_火星小说|好看的免费小说下载网",
+      "hasKeyword": false,
+      "links": [],
+      "classification": "http-success-no-keyword-hit",
+      "elapsedMs": 1372
     },
     {
       "id": "hotread-mobile",
@@ -82,13 +78,9 @@
       "baseUrl": "https://mobile.hotread.com/",
       "keyword": "斗罗大陆",
       "path": "/storySearch/search?word={keyword}",
-      "status": 200,
-      "contentType": "text/html;charset=UTF-8",
-      "title": "小说排行榜_火星小说|好看的免费小说下载网",
-      "hasKeyword": false,
-      "links": [],
-      "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 4996
+      "classification": "request-error",
+      "error": "TimeoutError: The operation was aborted due to timeout",
+      "elapsedMs": 12001
     },
     {
       "id": "hotread-mobile",
@@ -102,7 +94,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 396
+      "elapsedMs": 244
     },
     {
       "id": "hotread-mobile",
@@ -110,6 +102,20 @@
       "baseUrl": "https://mobile.hotread.com/",
       "keyword": "斗罗大陆",
       "path": "/storySearch/search?bookName={keyword}",
+      "status": 200,
+      "contentType": "text/html;charset=UTF-8",
+      "title": "小说排行榜_火星小说|好看的免费小说下载网",
+      "hasKeyword": false,
+      "links": [],
+      "classification": "http-success-no-keyword-hit",
+      "elapsedMs": 454
+    },
+    {
+      "id": "hotread-mobile",
+      "name": "火星小说",
+      "baseUrl": "https://mobile.hotread.com/",
+      "keyword": "斗破苍穹",
+      "path": "/storySearch/search?keyword={keyword}",
       "classification": "request-error",
       "error": "TimeoutError: The operation was aborted due to timeout",
       "elapsedMs": 12000
@@ -119,21 +125,17 @@
       "name": "火星小说",
       "baseUrl": "https://mobile.hotread.com/",
       "keyword": "斗破苍穹",
-      "path": "/storySearch/search?keyword={keyword}",
-      "status": 200,
-      "contentType": "text/html;charset=UTF-8",
-      "title": "小说排行榜_火星小说|好看的免费小说下载网",
-      "hasKeyword": false,
-      "links": [],
-      "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 375
+      "path": "/storySearch/search?searchkey={keyword}",
+      "classification": "request-error",
+      "error": "TimeoutError: The operation was aborted due to timeout",
+      "elapsedMs": 12000
     },
     {
       "id": "hotread-mobile",
       "name": "火星小说",
       "baseUrl": "https://mobile.hotread.com/",
       "keyword": "斗破苍穹",
-      "path": "/storySearch/search?searchkey={keyword}",
+      "path": "/storySearch/search?key={keyword}",
       "classification": "request-error",
       "error": "TimeoutError: The operation was aborted due to timeout",
       "elapsedMs": 12001
@@ -143,28 +145,10 @@
       "name": "火星小说",
       "baseUrl": "https://mobile.hotread.com/",
       "keyword": "斗破苍穹",
-      "path": "/storySearch/search?key={keyword}",
-      "status": 200,
-      "contentType": "text/html;charset=UTF-8",
-      "title": "小说排行榜_火星小说|好看的免费小说下载网",
-      "hasKeyword": false,
-      "links": [],
-      "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 394
-    },
-    {
-      "id": "hotread-mobile",
-      "name": "火星小说",
-      "baseUrl": "https://mobile.hotread.com/",
-      "keyword": "斗破苍穹",
       "path": "/storySearch/search?searchKey={keyword}",
-      "status": 200,
-      "contentType": "text/html;charset=UTF-8",
-      "title": "小说排行榜_火星小说|好看的免费小说下载网",
-      "hasKeyword": false,
-      "links": [],
-      "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 385
+      "classification": "request-error",
+      "error": "TimeoutError: The operation was aborted due to timeout",
+      "elapsedMs": 12002
     },
     {
       "id": "hotread-mobile",
@@ -172,13 +156,9 @@
       "baseUrl": "https://mobile.hotread.com/",
       "keyword": "斗破苍穹",
       "path": "/storySearch/search?wd={keyword}",
-      "status": 200,
-      "contentType": "text/html;charset=UTF-8",
-      "title": "小说排行榜_火星小说|好看的免费小说下载网",
-      "hasKeyword": false,
-      "links": [],
-      "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 423
+      "classification": "request-error",
+      "error": "TimeoutError: The operation was aborted due to timeout",
+      "elapsedMs": 12001
     },
     {
       "id": "hotread-mobile",
@@ -186,13 +166,9 @@
       "baseUrl": "https://mobile.hotread.com/",
       "keyword": "斗破苍穹",
       "path": "/storySearch/search?word={keyword}",
-      "status": 200,
-      "contentType": "text/html;charset=UTF-8",
-      "title": "小说排行榜_火星小说|好看的免费小说下载网",
-      "hasKeyword": false,
-      "links": [],
-      "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 418
+      "classification": "request-error",
+      "error": "TimeoutError: The operation was aborted due to timeout",
+      "elapsedMs": 12002
     },
     {
       "id": "hotread-mobile",
@@ -206,7 +182,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 544
+      "elapsedMs": 6199
     },
     {
       "id": "hotread-mobile",
@@ -216,7 +192,7 @@
       "path": "/storySearch/search?bookName={keyword}",
       "classification": "request-error",
       "error": "TimeoutError: The operation was aborted due to timeout",
-      "elapsedMs": 12002
+      "elapsedMs": 12001
     },
     {
       "id": "luochu-mobile",
@@ -258,7 +234,7 @@
         }
       ],
       "classification": "redirect-target-no-keyword-hit",
-      "elapsedMs": 3116
+      "elapsedMs": 2766
     },
     {
       "id": "luochu-mobile",
@@ -266,258 +242,6 @@
       "baseUrl": "https://m.luochu.com/",
       "keyword": "斗罗大陆",
       "path": "/book/search?searchkey={keyword}",
-      "status": 302,
-      "redirectHost": "m.luochu.com",
-      "redirectPath": "/user/login.aspx",
-      "followedStatus": 200,
-      "contentType": "text/html; charset=utf-8",
-      "title": "账号登录_落初文学",
-      "hasKeyword": false,
-      "links": [
-        {
-          "title": "立即注册",
-          "host": "m.luochu.com"
-        },
-        {
-          "title": "《中华人民共和国未成年人保护法》（网络防沉迷）",
-          "host": "m.luochu.com"
-        },
-        {
-          "title": "首页",
-          "host": "m.luochu.com"
-        },
-        {
-          "title": "书架",
-          "host": "m.luochu.com"
-        },
-        {
-          "title": "客服",
-          "host": "m.luochu.com"
-        },
-        {
-          "title": "充值",
-          "host": "m.luochu.com"
-        }
-      ],
-      "classification": "redirect-target-no-keyword-hit",
-      "elapsedMs": 1833
-    },
-    {
-      "id": "luochu-mobile",
-      "name": "落初文学",
-      "baseUrl": "https://m.luochu.com/",
-      "keyword": "斗罗大陆",
-      "path": "/book/search?key={keyword}",
-      "status": 302,
-      "redirectHost": "m.luochu.com",
-      "redirectPath": "/user/login.aspx",
-      "followedStatus": 200,
-      "contentType": "text/html; charset=utf-8",
-      "title": "账号登录_落初文学",
-      "hasKeyword": false,
-      "links": [
-        {
-          "title": "立即注册",
-          "host": "m.luochu.com"
-        },
-        {
-          "title": "《中华人民共和国未成年人保护法》（网络防沉迷）",
-          "host": "m.luochu.com"
-        },
-        {
-          "title": "首页",
-          "host": "m.luochu.com"
-        },
-        {
-          "title": "书架",
-          "host": "m.luochu.com"
-        },
-        {
-          "title": "客服",
-          "host": "m.luochu.com"
-        },
-        {
-          "title": "充值",
-          "host": "m.luochu.com"
-        }
-      ],
-      "classification": "redirect-target-no-keyword-hit",
-      "elapsedMs": 2046
-    },
-    {
-      "id": "luochu-mobile",
-      "name": "落初文学",
-      "baseUrl": "https://m.luochu.com/",
-      "keyword": "斗罗大陆",
-      "path": "/book/search?name={keyword}",
-      "status": 302,
-      "redirectHost": "m.luochu.com",
-      "redirectPath": "/user/login.aspx",
-      "followedStatus": 200,
-      "contentType": "text/html; charset=utf-8",
-      "title": "账号登录_落初文学",
-      "hasKeyword": false,
-      "links": [
-        {
-          "title": "立即注册",
-          "host": "m.luochu.com"
-        },
-        {
-          "title": "《中华人民共和国未成年人保护法》（网络防沉迷）",
-          "host": "m.luochu.com"
-        },
-        {
-          "title": "首页",
-          "host": "m.luochu.com"
-        },
-        {
-          "title": "书架",
-          "host": "m.luochu.com"
-        },
-        {
-          "title": "客服",
-          "host": "m.luochu.com"
-        },
-        {
-          "title": "充值",
-          "host": "m.luochu.com"
-        }
-      ],
-      "classification": "redirect-target-no-keyword-hit",
-      "elapsedMs": 1660
-    },
-    {
-      "id": "luochu-mobile",
-      "name": "落初文学",
-      "baseUrl": "https://m.luochu.com/",
-      "keyword": "斗破苍穹",
-      "path": "/book/search?keyword={keyword}",
-      "status": 302,
-      "redirectHost": "m.luochu.com",
-      "redirectPath": "/user/login.aspx",
-      "followedStatus": 200,
-      "contentType": "text/html; charset=utf-8",
-      "title": "账号登录_落初文学",
-      "hasKeyword": false,
-      "links": [
-        {
-          "title": "立即注册",
-          "host": "m.luochu.com"
-        },
-        {
-          "title": "《中华人民共和国未成年人保护法》（网络防沉迷）",
-          "host": "m.luochu.com"
-        },
-        {
-          "title": "首页",
-          "host": "m.luochu.com"
-        },
-        {
-          "title": "书架",
-          "host": "m.luochu.com"
-        },
-        {
-          "title": "客服",
-          "host": "m.luochu.com"
-        },
-        {
-          "title": "充值",
-          "host": "m.luochu.com"
-        }
-      ],
-      "classification": "redirect-target-no-keyword-hit",
-      "elapsedMs": 2419
-    },
-    {
-      "id": "luochu-mobile",
-      "name": "落初文学",
-      "baseUrl": "https://m.luochu.com/",
-      "keyword": "斗破苍穹",
-      "path": "/book/search?searchkey={keyword}",
-      "status": 302,
-      "redirectHost": "m.luochu.com",
-      "redirectPath": "/user/login.aspx",
-      "followedStatus": 200,
-      "contentType": "text/html; charset=utf-8",
-      "title": "账号登录_落初文学",
-      "hasKeyword": false,
-      "links": [
-        {
-          "title": "立即注册",
-          "host": "m.luochu.com"
-        },
-        {
-          "title": "《中华人民共和国未成年人保护法》（网络防沉迷）",
-          "host": "m.luochu.com"
-        },
-        {
-          "title": "首页",
-          "host": "m.luochu.com"
-        },
-        {
-          "title": "书架",
-          "host": "m.luochu.com"
-        },
-        {
-          "title": "客服",
-          "host": "m.luochu.com"
-        },
-        {
-          "title": "充值",
-          "host": "m.luochu.com"
-        }
-      ],
-      "classification": "redirect-target-no-keyword-hit",
-      "elapsedMs": 1687
-    },
-    {
-      "id": "luochu-mobile",
-      "name": "落初文学",
-      "baseUrl": "https://m.luochu.com/",
-      "keyword": "斗破苍穹",
-      "path": "/book/search?key={keyword}",
-      "status": 302,
-      "redirectHost": "m.luochu.com",
-      "redirectPath": "/user/login.aspx",
-      "followedStatus": 200,
-      "contentType": "text/html; charset=utf-8",
-      "title": "账号登录_落初文学",
-      "hasKeyword": false,
-      "links": [
-        {
-          "title": "立即注册",
-          "host": "m.luochu.com"
-        },
-        {
-          "title": "《中华人民共和国未成年人保护法》（网络防沉迷）",
-          "host": "m.luochu.com"
-        },
-        {
-          "title": "首页",
-          "host": "m.luochu.com"
-        },
-        {
-          "title": "书架",
-          "host": "m.luochu.com"
-        },
-        {
-          "title": "客服",
-          "host": "m.luochu.com"
-        },
-        {
-          "title": "充值",
-          "host": "m.luochu.com"
-        }
-      ],
-      "classification": "redirect-target-no-keyword-hit",
-      "elapsedMs": 1730
-    },
-    {
-      "id": "luochu-mobile",
-      "name": "落初文学",
-      "baseUrl": "https://m.luochu.com/",
-      "keyword": "斗破苍穹",
-      "path": "/book/search?name={keyword}",
       "status": 302,
       "redirectHost": "m.luochu.com",
       "redirectPath": "/user/login.aspx",
@@ -553,6 +277,258 @@
       ],
       "classification": "redirect-target-no-keyword-hit",
       "elapsedMs": 1719
+    },
+    {
+      "id": "luochu-mobile",
+      "name": "落初文学",
+      "baseUrl": "https://m.luochu.com/",
+      "keyword": "斗罗大陆",
+      "path": "/book/search?key={keyword}",
+      "status": 302,
+      "redirectHost": "m.luochu.com",
+      "redirectPath": "/user/login.aspx",
+      "followedStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "title": "账号登录_落初文学",
+      "hasKeyword": false,
+      "links": [
+        {
+          "title": "立即注册",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "《中华人民共和国未成年人保护法》（网络防沉迷）",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "首页",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "书架",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "客服",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "充值",
+          "host": "m.luochu.com"
+        }
+      ],
+      "classification": "redirect-target-no-keyword-hit",
+      "elapsedMs": 1791
+    },
+    {
+      "id": "luochu-mobile",
+      "name": "落初文学",
+      "baseUrl": "https://m.luochu.com/",
+      "keyword": "斗罗大陆",
+      "path": "/book/search?name={keyword}",
+      "status": 302,
+      "redirectHost": "m.luochu.com",
+      "redirectPath": "/user/login.aspx",
+      "followedStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "title": "账号登录_落初文学",
+      "hasKeyword": false,
+      "links": [
+        {
+          "title": "立即注册",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "《中华人民共和国未成年人保护法》（网络防沉迷）",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "首页",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "书架",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "客服",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "充值",
+          "host": "m.luochu.com"
+        }
+      ],
+      "classification": "redirect-target-no-keyword-hit",
+      "elapsedMs": 1816
+    },
+    {
+      "id": "luochu-mobile",
+      "name": "落初文学",
+      "baseUrl": "https://m.luochu.com/",
+      "keyword": "斗破苍穹",
+      "path": "/book/search?keyword={keyword}",
+      "status": 302,
+      "redirectHost": "m.luochu.com",
+      "redirectPath": "/user/login.aspx",
+      "followedStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "title": "账号登录_落初文学",
+      "hasKeyword": false,
+      "links": [
+        {
+          "title": "立即注册",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "《中华人民共和国未成年人保护法》（网络防沉迷）",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "首页",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "书架",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "客服",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "充值",
+          "host": "m.luochu.com"
+        }
+      ],
+      "classification": "redirect-target-no-keyword-hit",
+      "elapsedMs": 2253
+    },
+    {
+      "id": "luochu-mobile",
+      "name": "落初文学",
+      "baseUrl": "https://m.luochu.com/",
+      "keyword": "斗破苍穹",
+      "path": "/book/search?searchkey={keyword}",
+      "status": 302,
+      "redirectHost": "m.luochu.com",
+      "redirectPath": "/user/login.aspx",
+      "followedStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "title": "账号登录_落初文学",
+      "hasKeyword": false,
+      "links": [
+        {
+          "title": "立即注册",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "《中华人民共和国未成年人保护法》（网络防沉迷）",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "首页",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "书架",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "客服",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "充值",
+          "host": "m.luochu.com"
+        }
+      ],
+      "classification": "redirect-target-no-keyword-hit",
+      "elapsedMs": 2110
+    },
+    {
+      "id": "luochu-mobile",
+      "name": "落初文学",
+      "baseUrl": "https://m.luochu.com/",
+      "keyword": "斗破苍穹",
+      "path": "/book/search?key={keyword}",
+      "status": 302,
+      "redirectHost": "m.luochu.com",
+      "redirectPath": "/user/login.aspx",
+      "followedStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "title": "账号登录_落初文学",
+      "hasKeyword": false,
+      "links": [
+        {
+          "title": "立即注册",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "《中华人民共和国未成年人保护法》（网络防沉迷）",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "首页",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "书架",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "客服",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "充值",
+          "host": "m.luochu.com"
+        }
+      ],
+      "classification": "redirect-target-no-keyword-hit",
+      "elapsedMs": 1619
+    },
+    {
+      "id": "luochu-mobile",
+      "name": "落初文学",
+      "baseUrl": "https://m.luochu.com/",
+      "keyword": "斗破苍穹",
+      "path": "/book/search?name={keyword}",
+      "status": 302,
+      "redirectHost": "m.luochu.com",
+      "redirectPath": "/user/login.aspx",
+      "followedStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "title": "账号登录_落初文学",
+      "hasKeyword": false,
+      "links": [
+        {
+          "title": "立即注册",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "《中华人民共和国未成年人保护法》（网络防沉迷）",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "首页",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "书架",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "客服",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "充值",
+          "host": "m.luochu.com"
+        }
+      ],
+      "classification": "redirect-target-no-keyword-hit",
+      "elapsedMs": 1396
     }
   ]
 }
