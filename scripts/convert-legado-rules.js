@@ -105,9 +105,22 @@ function parseLegacyChain(expression) {
     let selection=null;
     const bracket=segment.match(/^(.*)\[([^\]]+)\]$/);
     if (bracket) {
+      const originalSegment=segment;
       segment=bracket[1];
       selection=parseSelection(bracket[2]);
-      if (!selection) return {status:"manual",reason:"unsupported-attribute-filter"};
+      if (!selection) {
+        let query=null;
+        const tagAttr=originalSegment.match(/^tag\.([a-zA-Z][\\w-]*)(\\[[^\\]]+\\])$/);
+        const classAttr=originalSegment.match(/^class\.([a-zA-Z_][\\w-]*)(\\[[^\\]]+\\])$/);
+        const idAttr=originalSegment.match(/^id\.([a-zA-Z_][\\w-]*)(\\[[^\\]]+\\])$/);
+        if(tagAttr) query=tagAttr[1]+tagAttr[2];
+        else if(classAttr) query="."+classAttr[1]+classAttr[2];
+        else if(idAttr) query="#"+idAttr[1]+idAttr[2];
+        else if(/^[a-zA-Z][\\w-]*(?:\\[[^\\]]+\\])+$/.test(originalSegment)) query=originalSegment;
+        if(!query) return {status:"manual",reason:"unsupported-attribute-filter"};
+        steps.push({kind:"css",query});
+        continue;
+      }
     } else {
       const excluded=segment.match(/^(.*)!(-?\d+(?::-?\d+)*)$/);
       if (excluded) {
