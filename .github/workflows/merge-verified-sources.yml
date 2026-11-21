@@ -42,5 +42,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add subscription.json adult-subscription.json reports/verified-source-merge-summary.json reports/live-functional-test-summary.json
-          git commit -m "chore: add functionally verified ordinary sources"
+          git commit -m "chore: sync functionally verified sources to subscriptions"
           git push
