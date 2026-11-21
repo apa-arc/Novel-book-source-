@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "id": "diyibanzhu-111",
+  "name": "第一版主111",
+  "kind": "public-web",
+  "version": "1.0.0",
+  "description": "成人与综合小说站点；先并入统一小说源，后续根据 App 实测修正规则。",
+  "baseUrl": "https://www.111bz.cc/",
+  "domains": [
+    "www.111bz.cc"
+  ],
+  "script": "scripts/diyibanzhu-111.js",
+  "enabled": true,
+  "testOnly": true,
+  "testOnlyReason": "已依据现有公开书源规则转换为 App 原生配置；搜索与章节接口尚待 App 真机联调，发现问题后继续修复。",
+  "licenseApproved": true,
+  "licenseType": "open-license",
+  "licenseEvidence": "适配规则参考 aoaostar/legado 公共书源仓库；仓库 README 标示 AGPL-3.0。此说明仅涉及规则代码来源，不代表站点对小说正文作出授权。",
+  "licenseEvidenceUrl": "https://github.com/aoaostar/legado/blob/release/README.md",
+  "hostValidated": false,
+  "appConfig": {
+    "searchUrl": "https://www.111bz.cc/modules/article/search.php?searchkey={keyword}&searchtype=articlename&page={page}",
+    "bookUrl": "https://www.111bz.cc/{bookUrl}",
+    "chapterListUrl": "https://www.111bz.cc/{bookUrl}",
+    "chapterUrl": "https://www.111bz.cc/{chapterUrl}",
+    "htmlRules": {
+      "search": {
+        "itemSelector": "tbody#nr tr",
+        "titleSelector": "td.odd a",
+        "urlSelector": "td.odd a",
+        "authorSelector": "td.even"
+      },
+      "detail": {
+        "titleSelector": "h1",
+        "authorSelector": "#info p",
+        "descriptionSelector": "#intro"
+      },
+      "chapters": {
+        "itemSelector": "dl dd",
+        "titleSelector": "a",
+        "urlSelector": "a"
+      },
+      "content": {
+        "contentSelector": "#content",
+        "titleSelector": "h1"
+      }
+    }
+  }
+}
