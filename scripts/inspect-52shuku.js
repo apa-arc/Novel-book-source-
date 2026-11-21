@@ -16,6 +16,8 @@ function ancestors(node){const out=[];let n=node;for(let i=0;n&&i<5;i++,n=n.pare
   const search=await get(url.href),sd=parseHTML(search.html).document;
   const anchors=[...sd.querySelectorAll("a[href]")].map(a=>({text:norm(a.textContent,120),href:a.getAttribute("href")||""})).filter(a=>a.text&&a.href).slice(0,100);
   const candidates=[...sd.querySelectorAll("li,article,div")].map(summary).filter(x=>x.textLength>30).sort((a,b)=>b.textLength-a.textLength).slice(0,20);
+  const forms=[...sd.querySelectorAll("form")].map(f=>({action:f.getAttribute("action")||"",method:f.getAttribute("method")||"GET",inputs:[...f.querySelectorAll("input")].map(e=>({name:e.getAttribute("name")||"",type:e.getAttribute("type")||"",placeholder:e.getAttribute("placeholder")||""}))}));
+  const searchItems=[...sd.querySelectorAll("a[href]")].filter(a=>a.textContent.includes(keyword)).slice(0,30).map(a=>({text:norm(a.textContent,150),href:a.getAttribute("href"),parent:a.parentElement?.parentElement?.outerHTML?.slice(0,1500)||""}));
   const resultNode=[...sd.querySelectorAll("a[href]")].find(a=>a.textContent.includes(keyword)&&a.getAttribute("href")?.includes("/wuxia/"));
   const searchResultAncestors=resultNode?ancestors(resultNode):[];
   const result={keyword,search:{status:search.status,url:search.url,contentType:search.contentType,title:norm(sd.querySelector("title")?.textContent),body:norm(sd.body?.textContent),anchors,candidates,searchResultAncestors}};
