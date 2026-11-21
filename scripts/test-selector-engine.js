@@ -43,6 +43,15 @@ assert.equal(executeSelector(a,{engine:"self",output:"href"}),"/1");
 assert.deepEqual(executeSelector(root,chain([{kind:"class",name:"list",index:null},{kind:"tag",name:"a",index:null}],"href")),["/1","/2","/3"]);
 assert.deepEqual(executeSelector(root,{engine:"css",query:"a",output:"attr:href"}),["/1","/2","/3"]);
 assert.deepEqual(executeSelector(root,chain([{kind:"css",query:'a[href="/2"]'}],"href")),["/2"]);
+assert.equal(executeSelector(root,{engine:"composite",operator:"concat",parts:[
+  {engine:"css",query:".list",output:"text"},
+  {engine:"literal",value:" - 附加"}
+]}),"第一章第二章第三章 - 附加");
+assert.equal(executeSelector(root,{engine:"composite",operator:"fallback",parts:[
+  {engine:"css",query:".missing",output:"text"},
+  {engine:"css",query:".list",output:"text"}
+]}),"第一章第二章第三章");
+assert.equal(executeSelector(root,{engine:"replace",input:{engine:"css",query:".list",output:"text"},pattern:"第一",replacement:"第壹"}),"第壹章第二章第三章");
 assert.deepEqual(executeSelector(root,chain([{kind:"class",name:"list",index:null},{kind:"tag",name:"a",index:0}],"all")).length,1);
 assert.throws(()=>executeSelector(root,chain([{kind:"script",name:"x"}])),/unsupported-selector-step/);
 assert.throws(()=>executeSelector(root,{engine:"legado-chain",steps:Array(33).fill({kind:"children"})}),/invalid-selector-steps/);
