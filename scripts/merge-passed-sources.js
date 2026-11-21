@@ -71,7 +71,7 @@ function main() {
     added.push(source);
   }
   if (added.length) {
-    fs.writeFileSync(SUBSCRIPTION, JSON.stringify(current.concat(added), null, 2) + "\\n", "utf8");
+    fs.writeFileSync(SUBSCRIPTION, JSON.stringify(current.concat(added), null, 2) + "\n", "utf8");
   }
   const summary = {
     schemaVersion: 1,
@@ -83,7 +83,7 @@ function main() {
     addedSources: added.map(source => ({ name: source.bookSourceName, url: source.bookSourceUrl }))
   };
   fs.mkdirSync(path.join(ROOT, "reports"), { recursive: true });
-  fs.writeFileSync(path.join(ROOT, "reports", "verified-source-merge-summary.json"), JSON.stringify(summary, null, 2) + "\\n");
+  fs.writeFileSync(path.join(ROOT, "reports", "verified-source-merge-summary.json"), JSON.stringify(summary, null, 2) + "\n");
   console.log(JSON.stringify(summary, null, 2));
 }
 main();
