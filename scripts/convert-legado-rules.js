@@ -9,7 +9,7 @@ const fs = require("node:fs");
 const path = require("node:path");
 const RULE_GROUPS = { search:"ruleSearch", bookInfo:"ruleBookInfo", toc:"ruleToc", content:"ruleContent", explore:"ruleExplore" };
 const REQUIRED_GROUPS = ["search", "bookInfo", "toc", "content"];
-const CHAIN_OUTPUTS = new Set(["text", "html", "href", "src", "owntext", "textnodes"]);
+const CHAIN_OUTPUTS = new Set(["text", "html", "href", "src", "content", "owntext", "textnodes"]);
 const SCRIPT_RE = /@js:|<js>|\bjavascript\b|\bfunction\b|\breturn\b|\$\{/i;
 function parseIndex(token) { return /^-?\d+$/.test(token) ? Number(token) : null; }
 function parseSelection(token) {
@@ -52,24 +52,59 @@ function scanExpressionOperators(raw) {
   }
   return {operators,regexDelimiterCount,onlyOne};
 }
+function splitTopLevel(raw, operator) {
+  const parts=[];
+  let quote=null, bracketDepth=0, parenDepth=0;
+  for(let i=0;i<raw.length;i++){
+    const ch=raw[i];
+    if(ch==="\\\\"){i++;continue;}
+    if(quote){if(ch===quote) quote=null;continue;}
+    if(ch==="'"||ch=='"'){quote=ch;continue;}
+    if(ch==="["){bracketDepth++;continue;}
+    if(ch==="]"&&bracketDepth>0){bracketDepth--;continue;}
+    if(bracketDepth>0) continue;
+    if(ch==="("){parenDepth++;continue;}
+    if(ch===")"&&parenDepth>0){parenDepth--;continue;}
+    if(parenDepth===0&&raw.startsWith(operator,i)){
+      parts.push(raw.slice(parts.length?undefined:0,i).trim());
+      i+=operator.length-1;
+      // Continue from the end of this operand without losing prior boundaries.
+      const last=parts.length-1;
+      parts[last]=parts[last]||"";
+      raw=raw.slice(i+1);
+      i=-1;
+    }
+  }
+  return parts.length?parts.concat(raw.trim()):null;
+}
 function parseLegacyChain(expression) {
-  const raw = String(expression).trim();
+  let raw = String(expression).trim();
   if (!raw) return {status:"empty"};
   if (SCRIPT_RE.test(raw)) return {status:"manual",reason:"script-or-template"};
-  const expressionShape=scanExpressionOperators(raw);
-  if(expressionShape.operators.length || expressionShape.regexDelimiterCount>0) {
-    return {
-      status:"manual",
-      reason:"compound-or-transform-expression",
-      expression:{
-        kind:expressionShape.regexDelimiterCount>0?"regex-transform-or-compound":"compound",
-        operators:expressionShape.operators,
-        regexDelimiterCount:expressionShape.regexDelimiterCount,
-        onlyOne:expressionShape.onlyOne,
-        operandCount:expressionShape.operators.length?expressionShape.operators.length+1:1
-      }
-    };
+  if(raw.includes("###")) return {status:"manual",reason:"unsupported-regex-mode"};
+  const regexParts=splitTopLevel(raw,"##");
+  if(regexParts){
+    if(regexParts.length<2||regexParts.length>3||!regexParts[0]||!regexParts[1]||regexParts[1].length>256) return {status:"manual",reason:"unsupported-regex-transform"};
+    const base=parseLegacyChain(regexParts[0]);
+    if(base.status!=="candidate") return base;
+    return {status:"candidate",selector:{engine:"replace",input:base.selector,pattern:regexParts[1],replacement:regexParts[2]||""}};
   }
+  const fallbackParts=splitTopLevel(raw,"||");
+  if(fallbackParts){
+    const parts=fallbackParts.map(parseLegacyChain);
+    if(parts.some(x=>x.status!=="candidate")) return {status:"manual",reason:"unsupported-fallback-part"};
+    return {status:"candidate",selector:{engine:"composite",operator:"fallback",parts:parts.map(x=>x.selector)}};
+  }
+  const concatParts=splitTopLevel(raw,"&&");
+  if(concatParts){
+    const parts=concatParts.map(parseLegacyChain);
+    if(parts.some(x=>x.status!=="candidate")) return {status:"manual",reason:"unsupported-concat-part"};
+    return {status:"candidate",selector:{engine:"composite",operator:"concat",parts:parts.map(x=>x.selector)}};
+  }
+  if(raw.startsWith("@text:")) return {status:"candidate",selector:{engine:"literal",value:raw.slice(6)}};
+  if(raw.startsWith("@@")) raw=raw.slice(2);
+  const expressionShape=scanExpressionOperators(raw);
+  if(expressionShape.operators.length || expressionShape.regexDelimiterCount>0) return {status:"manual",reason:"unsupported-compound-expression"};
   if (raw.startsWith("@css:")) {
     const body=raw.slice(5).trim();
     const match=body.match(/^(.*?)(?:@(text|html|href|src|content))?$/i);
