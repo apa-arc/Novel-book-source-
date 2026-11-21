@@ -98,7 +98,7 @@ assert.deepEqual(unioned,["a","c"]);
 const filtered=executeSelector({items:[{id:1,active:true},{id:2,active:false}]},{engine:"json",path:[
   {kind:"property",name:"items"},{kind:"filter",key:"active",operator:"=",value:"true"}
 ]});
-assert.deepEqual(filtered,[{id:1,active:true}]);
+assert.deepEqual(filtered,{id:1,active:true});
 const recursiveFiltered=executeSelector({data:{a:{hasContent:true},b:{hasContent:false}}},{engine:"json",path:[
   {kind:"recursiveFilter",key:"hasContent",operator:"exists"}
 ]});
