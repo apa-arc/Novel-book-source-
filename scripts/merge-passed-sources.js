@@ -133,7 +133,55 @@ function mergeIntoSubscription(filePath, valid, expectedAdult) {
     updatedSources: updated.map(source => ({ name: source.bookSourceName, url: source.bookSourceUrl }))
   };
 }
+function aggregateFunctionalReports() {
+  const reportFiles = walk(ARTIFACTS).filter(file => /live-functional-test-\d+-of-\d+\.json$/.test(file));
+  const results = [];
+  for (const file of reportFiles) {
+    const report = JSON.parse(fs.readFileSync(file, "utf8"));
+    if (Array.isArray(report.results)) results.push(...report.results);
+  }
+  const statusCounts = {};
+  const providerCounts = {};
+  const uniquePassed = new Map();
+  let passedRecords = 0;
+  for (const item of results) {
+    statusCounts[item.status] = (statusCounts[item.status] || 0) + 1;
+    const provider = item.provider || "unknown";
+    if (!providerCounts[provider]) providerCounts[provider] = {};
+    providerCounts[provider][item.status] = (providerCounts[provider][item.status] || 0) + 1;
+    if (item.status !== "passed") continue;
+    passedRecords++;
+    const key = [item.category || "ordinary", item.host || "", item.name || ""].join("|").toLowerCase();
+    const contentStage = (item.stages || []).find(stage => stage.name === "content");
+    if (!uniquePassed.has(key)) {
+      uniquePassed.set(key, {
+        name: item.name || "",
+        host: item.host || "",
+        category: item.category || "ordinary",
+        contentLength: contentStage ? Number(contentStage.length) || 0 : 0,
+        providers: [provider]
+      });
+    } else if (!uniquePassed.get(key).providers.includes(provider)) {
+      uniquePassed.get(key).providers.push(provider);
+    }
+  }
+  const passedSources = Array.from(uniquePassed.values());
+  return {
+    schemaVersion: 1,
+    generatedAt: new Date().toISOString(),
+    testedRecords: results.length,
+    statusCounts,
+    providerCounts,
+    passedRecords,
+    passedUniqueCount: passedSources.length,
+    ordinaryPassedUnique: passedSources.filter(item => item.category === "ordinary").length,
+    adultPassedUnique: passedSources.filter(item => item.category === "adult").length,
+    passedUniqueSources: passedSources
+  };
+}
+
 function main() {
+  const functionalSummary = aggregateFunctionalReports();
   const ordinaryCandidates = collectCandidates(false);
   const adultCandidates = collectCandidates(true);
   const ordinaryValid = ordinaryCandidates.filter(source => validateCandidate(source, false));
@@ -157,6 +205,7 @@ function main() {
   };
   fs.mkdirSync(path.join(ROOT, "reports"), { recursive: true });
   fs.writeFileSync(path.join(ROOT, "reports", "verified-source-merge-summary.json"), JSON.stringify(summary, null, 2) + "\n");
-  console.log(JSON.stringify(summary, null, 2));
+  fs.writeFileSync(path.join(ROOT, "reports", "live-functional-test-summary.json"), JSON.stringify(functionalSummary, null, 2) + "\n");
+  console.log(JSON.stringify({ functional: functionalSummary, merge: summary }, null, 2));
 }
 main();
