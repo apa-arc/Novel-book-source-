@@ -3,7 +3,7 @@
   "id": "biquluo-la",
   "name": "壁落小说",
   "kind": "public-web",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "baseUrl": "https://www.biquluo.la/",
   "domains": [
     "www.biquluo.la"
@@ -26,7 +26,8 @@
         "itemSelector": ".novelslist2 li",
         "titleSelector": ".s2 a",
         "urlSelector": ".s2 a",
-        "authorSelector": ".s4"
+        "authorSelector": ".s4",
+        "coverSelector": "img"
       },
       "detail": {
         "titleSelector": "#info h1",
