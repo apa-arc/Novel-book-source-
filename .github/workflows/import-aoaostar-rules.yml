@@ -9,7 +9,6 @@ on:
     paths:
       - "scripts/import-aoaostar-rules.js"
       - "scripts/batch-convert-aoaostar.js"
-      - ".github/workflows/auto-expand-source-catalog.yml"
       - "imports/third-party/tickmao/verified-safe.json"
       - "imports/third-party/tickmao/validation-manifest.json"
       - ".github/workflows/import-aoaostar-rules.yml"
@@ -39,11 +38,13 @@ jobs:
           node -e "const fs=require('fs');const x=JSON.parse(fs.readFileSync('imports/aoaostar/raw/aoaostar-full.json','utf8'));console.log('Upstream source records:',Array.isArray(x)?x.length:1)"
       - name: Mirror and split novel rules
         run: node scripts/import-aoaostar-rules.js
+      - name: Batch-convert all registered candidates into compatibility review
+        run: node scripts/batch-convert-aoaostar.js
       - name: Commit rule snapshots and manifests
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add exports/ imports/aoaostar/raw/aoaostar-full.json imports/third-party/tickmao/
+          git add exports/ reports/aoaostar-conversion-review.json imports/aoaostar/conversion-status.json imports/aoaostar/raw/aoaostar-full.json imports/third-party/tickmao/
           if ! git diff --cached --quiet; then
             git commit -m "Mirror and split AOAOSTAR novel source rules"
             git pull --rebase origin main
