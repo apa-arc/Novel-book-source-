@@ -16,7 +16,7 @@ const html="<html><head><title>测试小说 第1章 开始</title></head><body><
  if(url==="https://example.com/book/123/1.html")return response(url,html);
  throw Error("unexpected-url");};
  const report=await scanCandidates({candidates:[{id:"adult",name:"成人小说",baseUrl:"https://adult.example",group:"成人"},{id:"adult-emoji",name:"普通名称",baseUrl:"https://adult-emoji.example",group:"🔞"},{id:"manga",name:"漫画站",baseUrl:"https://manga.example",group:"漫画"},{id:"ok",name:"测试小说",baseUrl:"https://example.com"}],fetchImpl:async url=>{if(url.includes("adult.example"))throw Error("blocked");return fake(url);},limit:10});
- assert.equal(report.candidateCount,3);assert.equal(report.results.find(x=>x.id==="ok").status,"chapter-sample-clean");assert.equal(report.results.find(x=>x.id==="adult").status,"manual-review");assert.equal(report.results.find(x=>x.id==="adult-emoji").status,"manual-review");assert.ok(!JSON.stringify(report).includes(chapter));assert.equal(calls.length,4);
+ assert.equal(report.candidateCount,3);assert.equal(report.results.find(x=>x.id==="ok").status,"chapter-sample-clean");assert.equal(report.results.find(x=>x.id==="adult").status,"manual-review");assert.equal(report.results.find(x=>x.id==="adult-emoji").status,"manual-review");assert.ok(!JSON.stringify(report).includes(chapter));assert.equal(calls.length,5);
  const mixedHtml="<html><head><title>测试小说 第2章 开始</title></head><body><article><p>"+("这是超长章节正文。".repeat(4000))+"</p></article></body></html>";
  const mixedFetch=async url=>{
  if(url==="https://mixed.example/")return response(url,"<title>测试小说</title>");
