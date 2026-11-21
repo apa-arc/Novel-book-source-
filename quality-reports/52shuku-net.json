@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-21T12:15:36.743Z",
+  "sourceId": "52shuku-net",
+  "sourceVersion": "1.0.0",
+  "summary": {
+    "scanned": 1,
+    "suspect": 0,
+    "review": 0,
+    "duplicates": 0
+  },
+  "note": "静态检查仅覆盖自编写适配元数据与选择器结构；不复制上游规则或小说内容。"
+}
