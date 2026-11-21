@@ -15,7 +15,9 @@
     "consecutiveFailureThreshold": 3,
     "oneFailureDoesNotRemoveSource": true,
     "backupsRetained": true,
-    "reactivationRequiresAllFourStagesAndQualityLicenseEvidence": true
+    "reactivationRequiresAllFourStagesAndQualityLicenseEvidence": true,
+    "automaticQuarantineDisabledPendingValidatedAppTest": true,
+    "userConfirmedBaseline": true
   },
   "sources": {
     "biquluo-la": {
@@ -82,11 +84,13 @@
           }
         }
       },
-      "baseline": true
+      "baseline": true,
+      "userConfirmedWorking": true,
+      "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。"
     },
     "jiuyi-91zww": {
       "checks": 1,
-      "consecutiveFailures": 1,
+      "consecutiveFailures": 0,
       "lastCheckedAt": "2026-11-21T15:03:20.552Z",
       "lastStatus": "failed",
       "lastResult": {
@@ -120,11 +124,13 @@
           }
         }
       },
-      "baseline": true
+      "baseline": true,
+      "userConfirmedWorking": true,
+      "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。"
     },
     "xinbiquge-info": {
       "checks": 1,
-      "consecutiveFailures": 1,
+      "consecutiveFailures": 0,
       "lastCheckedAt": "2026-11-21T15:03:20.552Z",
       "lastStatus": "failed",
       "lastResult": {
@@ -178,7 +184,9 @@
           }
         }
       },
-      "baseline": true
+      "baseline": true,
+      "userConfirmedWorking": true,
+      "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。"
     },
     "biquge-17177": {
       "checks": 1,
@@ -244,11 +252,13 @@
           }
         }
       },
-      "baseline": true
+      "baseline": true,
+      "userConfirmedWorking": true,
+      "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。"
     },
     "d8zw-com": {
       "checks": 1,
-      "consecutiveFailures": 1,
+      "consecutiveFailures": 0,
       "lastCheckedAt": "2026-11-21T15:03:20.552Z",
       "lastStatus": "failed",
       "lastResult": {
@@ -302,7 +312,9 @@
           }
         }
       },
-      "baseline": true
+      "baseline": true,
+      "userConfirmedWorking": true,
+      "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。"
     },
     "bqg-info": {
       "checks": 1,
@@ -368,11 +380,13 @@
           }
         }
       },
-      "baseline": true
+      "baseline": true,
+      "userConfirmedWorking": true,
+      "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。"
     },
     "xqianqian-m": {
       "checks": 1,
-      "consecutiveFailures": 1,
+      "consecutiveFailures": 0,
       "lastCheckedAt": "2026-11-21T15:03:20.552Z",
       "lastStatus": "failed",
       "lastResult": {
@@ -406,11 +420,13 @@
           }
         }
       },
-      "baseline": true
+      "baseline": true,
+      "userConfirmedWorking": true,
+      "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。"
     },
     "douhua-wenxue": {
       "checks": 1,
-      "consecutiveFailures": 1,
+      "consecutiveFailures": 0,
       "lastCheckedAt": "2026-11-21T15:03:20.552Z",
       "lastStatus": "failed",
       "lastResult": {
@@ -444,11 +460,13 @@
           }
         }
       },
-      "baseline": true
+      "baseline": true,
+      "userConfirmedWorking": true,
+      "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。"
     },
     "iyueba-net": {
       "checks": 1,
-      "consecutiveFailures": 1,
+      "consecutiveFailures": 0,
       "lastCheckedAt": "2026-11-21T15:03:20.552Z",
       "lastStatus": "failed",
       "lastResult": {
@@ -482,7 +500,9 @@
           }
         }
       },
-      "baseline": true
+      "baseline": true,
+      "userConfirmedWorking": true,
+      "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。"
     },
     "52shuku-net": {
       "checks": 1,
@@ -548,7 +568,9 @@
           }
         }
       },
-      "baseline": true
+      "baseline": true,
+      "userConfirmedWorking": true,
+      "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。"
     }
   }
 }
