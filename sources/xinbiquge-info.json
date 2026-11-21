@@ -3,7 +3,7 @@
   "id": "xinbiquge-info",
   "name": "新笔趣阁小说网",
   "kind": "public-web",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "baseUrl": "https://www.xbiquge.info/",
   "domains": [
     "www.xbiquge.info"
@@ -26,7 +26,8 @@
         "itemSelector": ".box.hot dl",
         "titleSelector": "dd h3 a",
         "urlSelector": "dd h3 a",
-        "authorSelector": "dd.book_other span"
+        "authorSelector": "dd.book_other span",
+        "coverSelector": "img"
       },
       "detail": {
         "titleSelector": "h1",
