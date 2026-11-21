@@ -64,6 +64,7 @@ assert.deepEqual(executeSelector(root,{engine:"xpath",steps:[
 ],output:"text"}),["第一章第二章第三章"]);
 assert.equal(executeSelector(a,{engine:"self",output:"text"}),"第一章");
 assert.equal(executeSelector(a,{engine:"self",output:"href"}),"/1");
+assert.equal(executeSelector(a,{engine:"self",output:"class"}),"chapter");
 assert.deepEqual(executeSelector(root,chain([{kind:"class",name:"list",index:null},{kind:"tag",name:"a",index:null}],"href")),["/1","/2","/3"]);
 assert.deepEqual(executeSelector(root,{engine:"css",query:"a",output:"attr:href"}),["/1","/2","/3"]);
 assert.deepEqual(executeSelector(root,chain([{kind:"css",query:'a[href="/2"]'}],"href")),["/2"]);
