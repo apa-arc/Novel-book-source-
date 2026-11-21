@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T11:46:44.493Z",
+  "generatedAt": "2026-11-21T11:47:24.487Z",
   "provider": "multi-repository metadata-only discovery",
   "notice": "仅保留书源名称、HTTPS站点地址和分组元数据；不复制规则、请求头、Cookie、凭据或小说正文。静态规则候选不是 App 可用源；必须独立适配并通过搜索、详情、目录、正文测试。成人/绅士/付费/非小说/脚本/登录态来源已排除。",
   "upstreams": [
@@ -26,22 +26,22 @@
   "stats": {
     "scaryburial-main-1944": {
       "records": 1895,
-      "adult": 164,
+      "adult": 166,
       "nonNovel": 297,
       "paywall": 103,
       "nonHttps": 478,
       "loginOrCookie": 554,
       "script": 157,
       "duplicate": 30,
-      "accepted": 112
+      "accepted": 110
     },
     "huanqingsha-main": {
       "records": 1594,
-      "adult": 125,
+      "adult": 126,
       "nonNovel": 138,
       "paywall": 64,
       "nonHttps": 527,
-      "loginOrCookie": 400,
+      "loginOrCookie": 399,
       "script": 120,
       "duplicate": 63,
       "accepted": 128
@@ -59,17 +59,17 @@
     },
     "liufuyou-yck-metadata": {
       "records": 120,
-      "adult": 6,
+      "adult": 7,
       "nonNovel": 0,
       "paywall": 0,
       "nonHttps": 0,
       "loginOrCookie": 0,
       "script": 0,
       "duplicate": 27,
-      "accepted": 87
+      "accepted": 86
     }
   },
-  "sourceCount": 327,
+  "sourceCount": 324,
   "sources": [
     {
       "id": "c8e02d71c02eb1fa",
@@ -453,19 +453,6 @@
       "name": "📖 笔趣阁网",
       "baseUrl": "https://m.shengxu5w.com/",
       "host": "m.shengxu5w.com",
-      "group": "📖 小说",
-      "upstream": "Daiaji LegadoSource",
-      "upstreamFile": "imports/third-party/liufuyou/candidate-catalog.json",
-      "upstreamLicense": "not-assessed",
-      "ruleClass": "metadata-only-not-converted",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
-      "id": "89a9344db7606bbd",
-      "name": "📖 笔趣阁网",
-      "baseUrl": "https://m.bqg18.cc/",
-      "host": "m.bqg18.cc",
       "group": "📖 小说",
       "upstream": "Daiaji LegadoSource",
       "upstreamFile": "imports/third-party/liufuyou/candidate-catalog.json",
@@ -2737,19 +2724,6 @@
       "runtimeStatus": "not-converted"
     },
     {
-      "id": "9e9ecabe1f9dae2a",
-      "name": "萝莉文学",
-      "baseUrl": "https://www.luoliwx.xn--net-s18d/",
-      "host": "www.luoliwx.xn--net-s18d",
-      "group": "女频",
-      "upstream": "scaryburial/legado-book-sources",
-      "upstreamFile": "https://raw.githubusercontent.com/scaryburial/legado-book-sources/master/main/Main-BookSources-1944.json",
-      "upstreamLicense": "not-declared",
-      "ruleClass": "static-no-script-no-login",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
       "id": "ed8059ea9fa609b1",
       "name": "落霞读书",
       "baseUrl": "https://luoxiadushu.com/",
@@ -4278,19 +4252,6 @@
       "group": "校验可用",
       "upstream": "huanqingsha/legado-book-sources",
       "upstreamFile": "https://raw.githubusercontent.com/huanqingsha/legado-book-sources/main/legado-book-sources.json",
-      "upstreamLicense": "not-declared",
-      "ruleClass": "static-no-script-no-login",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
-      "id": "b261e3fb1d24daa4",
-      "name": "BL文库tv",
-      "baseUrl": "https://m.blwenku.tv/",
-      "host": "m.blwenku.tv",
-      "group": "女频",
-      "upstream": "scaryburial/legado-book-sources",
-      "upstreamFile": "https://raw.githubusercontent.com/scaryburial/legado-book-sources/master/main/Main-BookSources-1944.json",
       "upstreamLicense": "not-declared",
       "ruleClass": "static-no-script-no-login",
       "redistributionStatus": "not-assessed",
