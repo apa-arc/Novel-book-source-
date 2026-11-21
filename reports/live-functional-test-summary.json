@@ -1,29 +1,29 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T09:15:39.976Z",
+  "generatedAt": "2026-11-21T09:19:08.625Z",
   "testedRecords": 5308,
   "statusCounts": {
     "unsupported": 3503,
-    "failed": 439,
-    "unverified": 818,
+    "failed": 442,
+    "unverified": 817,
     "excluded": 227,
-    "blocked": 314,
+    "blocked": 312,
     "passed": 7
   },
   "providerCounts": {
     "AOAOSTAR-candidate": {
       "unsupported": 2494,
-      "failed": 310,
-      "unverified": 566,
+      "failed": 314,
+      "unverified": 565,
       "excluded": 221,
-      "blocked": 218,
+      "blocked": 215,
       "passed": 2
     },
     "luanmuc-candidate": {
       "unsupported": 1009,
       "unverified": 252,
-      "failed": 129,
-      "blocked": 96,
+      "failed": 128,
+      "blocked": 97,
       "excluded": 6,
       "passed": 5
     }
