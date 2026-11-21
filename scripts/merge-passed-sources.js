@@ -183,11 +183,8 @@ function aggregateFunctionalReports() {
 function main() {
   const functionalSummary = aggregateFunctionalReports();
   const ordinaryCandidates = collectCandidates(false);
-  const adultCandidates = collectCandidates(true);
   const ordinaryValid = ordinaryCandidates.filter(source => validateCandidate(source, false));
-  const adultValid = adultCandidates.filter(source => validateCandidate(source, true));
   const ordinary = mergeIntoSubscription(SUBSCRIPTION, ordinaryValid, false);
-  const adult = mergeIntoSubscription(path.join(ROOT, "adult-subscription.json"), adultValid, true);
   const summary = {
     schemaVersion: 1,
     generatedAt: new Date().toISOString(),
@@ -197,11 +194,7 @@ function main() {
       valid: ordinaryValid.length,
       ...ordinary
     },
-    adult: {
-      candidates: adultCandidates.length,
-      valid: adultValid.length,
-      ...adult
-    }
+    policy: "Only ordinary novel sources are merged. Adult sources are excluded from the repository subscription."
   };
   fs.mkdirSync(path.join(ROOT, "reports"), { recursive: true });
   fs.writeFileSync(path.join(ROOT, "reports", "verified-source-merge-summary.json"), JSON.stringify(summary, null, 2) + "\n");
