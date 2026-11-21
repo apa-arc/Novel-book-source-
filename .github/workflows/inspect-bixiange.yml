@@ -1,0 +1,29 @@
+name: Inspect reachable novel candidate for native adapter
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/inspect-bixiange.js"
+      - ".github/workflows/inspect-bixiange.yml"
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install HTML parser
+        run: npm install --no-save --no-package-lock linkedom
+      - name: Inspect homepage, book, and chapter structure
+        run: node scripts/inspect-bixiange.js
+      - name: Upload sanitized page structure
+        uses: actions/upload-artifact@v4
+        with:
+          name: bixiange-inspection
+          path: reports/bixiange-inspection.json
+          retention-days: 30
