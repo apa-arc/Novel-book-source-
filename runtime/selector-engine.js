@@ -136,17 +136,45 @@ function executeSelector(root,selector,context={}){
             const index=step.index<0?value.length+step.index:step.index;
             if(index>=0&&index<value.length) next.push(value[index]);
           }
+        }else if(step.kind==="union"){
+          if(Array.isArray(value)) for(const rawIndex of step.indices){const index=rawIndex<0?value.length+rawIndex:rawIndex;if(index>=0&&index<value.length) next.push(value[index]);}
+        }else if(step.kind==="slice"){
+          if(Array.isArray(value)){
+            const stride=step.step||1;
+            if(stride>0){
+              let start=step.start==null?0:step.start<0?Math.max(0,value.length+step.start):Math.min(value.length,step.start);
+              let end=step.end==null?value.length:step.end<0?Math.max(0,value.length+step.end):Math.min(value.length,step.end);
+              for(let index=start;index<end&&next.length<MAX_RESULTS;index+=stride) next.push(value[index]);
+            }else{
+              let start=step.start==null?value.length-1:step.start<0?value.length+step.start:step.start;
+              let end=step.end==null?-1:step.end<0?value.length+step.end:step.end;
+              for(let index=start;index>end&&index>=0&&next.length<MAX_RESULTS;index+=stride) if(index<value.length) next.push(value[index]);
+            }
+          }
+        }else if(step.kind==="filter"){
+          const candidates=Array.isArray(value)?value:value&&typeof value==="object"?Object.values(value):[];
+          for(const candidate of candidates){
+            if(!candidate||typeof candidate!=="object") continue;
+            const exists=Object.prototype.hasOwnProperty.call(candidate,step.key);
+            if(step.operator==="exists"&&exists) next.push(candidate);
+            else if(step.operator==="="||step.operator==="=="){if(exists&&String(candidate[step.key])===String(step.value)) next.push(candidate);}
+            else if(step.operator==="!="){if(!exists||String(candidate[step.key])!==String(step.value)) next.push(candidate);}
+          }
         }else if(step.kind==="wildcard"){
           if(Array.isArray(value)) next.push(...value);
           else if(value&&typeof value==="object") next.push(...Object.values(value));
-        }else if(step.kind==="recursiveProperty"||step.kind==="recursiveWildcard"){
+        }else if(step.kind==="recursiveProperty"||step.kind==="recursiveWildcard"||step.kind==="recursiveFilter"){
           const budget={visited:0};
           const collect=(node,depth)=>{
             if(node==null||typeof node!=="object"||depth>32||budget.visited>20000) return;
             budget.visited++;
             if(Array.isArray(node)){for(const child of node) collect(child,depth+1);return;}
             for(const [key,child] of Object.entries(node)){
-              if(step.kind==="recursiveWildcard"||key===step.name) next.push(child);
+              if(step.kind==="recursiveWildcard"||step.kind==="recursiveProperty"&&key===step.name) next.push(child);
+              if(step.kind==="recursiveFilter"&&child&&typeof child==="object"){
+                const exists=Object.prototype.hasOwnProperty.call(child,step.key);
+                if(step.operator==="exists"&&exists|| (step.operator==="="||step.operator==="==")&&exists&&String(child[step.key])===String(step.value)||step.operator==="!="&&(!exists||String(child[step.key])!==String(step.value))) next.push(child);
+              }
               collect(child,depth+1);
               if(next.length>MAX_RESULTS) throw new Error("json-result-limit");
             }
