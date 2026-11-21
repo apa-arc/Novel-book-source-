@@ -1,0 +1,42 @@
+name: Export passed ordinary source candidates
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/export-passed-candidates.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [13, 21, 23]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install bounded HTML parser
+        run: npm install --no-save --no-package-lock linkedom
+      - name: Re-run only shards containing passed ordinary candidates
+        env:
+          TEST_SHARD_INDEX: ${{ matrix.shard }}
+          TEST_SHARD_COUNT: 32
+        run: node scripts/live-functional-test-legado.js
+      - name: Upload sanitized test report and passed source rules
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: passed-source-export-${{ matrix.shard }}
+          path: |
+            reports/live-functional-test-${{ matrix.shard }}-of-32.json
+            reports/live-functional-test-passed-sources-${{ matrix.shard }}-of-32.json
+          if-no-files-found: error
+          retention-days: 30
