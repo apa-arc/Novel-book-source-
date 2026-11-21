@@ -3,7 +3,7 @@
   "id": "biquluo-la",
   "name": "壁落小说",
   "kind": "public-web",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "baseUrl": "https://www.biquluo.la/",
   "domains": [
     "www.biquluo.la"
