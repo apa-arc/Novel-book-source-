@@ -1,16 +1,17 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T14:42:19.862Z",
+  "generatedAt": "2026-11-21T14:43:41.327Z",
   "keywords": [
     "斗罗大陆",
     "斗破苍穹"
   ],
-  "candidateCount": 3,
+  "candidateCount": 2,
   "note": "仅探测已发现的公开 GET 搜索路由；不执行站点 JavaScript、不登录、不绕过访问控制、不读取或保存小说正文。搜索入口响应不等于 App 兼容或可正式导入。",
   "counts": {
     "total": 24,
-    "http-success-no-keyword-hit": 16,
-    "redirect": 8
+    "http-success-no-keyword-hit": 10,
+    "http-error": 6,
+    "redirect-target-no-keyword-hit": 8
   },
   "results": [
     {
@@ -25,7 +26,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 1695
+      "elapsedMs": 2015
     },
     {
       "id": "hotread-mobile",
@@ -39,7 +40,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 3608
+      "elapsedMs": 1954
     },
     {
       "id": "hotread-mobile",
@@ -53,7 +54,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 1869
+      "elapsedMs": 2914
     },
     {
       "id": "hotread-mobile",
@@ -67,7 +68,63 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 3663
+      "elapsedMs": 2896
+    },
+    {
+      "id": "hotread-mobile",
+      "name": "火星小说",
+      "baseUrl": "https://mobile.hotread.com/",
+      "keyword": "斗罗大陆",
+      "path": "/storySearch/search?wd={keyword}",
+      "status": 200,
+      "contentType": "text/html;charset=UTF-8",
+      "title": "小说排行榜_火星小说|好看的免费小说下载网",
+      "hasKeyword": false,
+      "links": [],
+      "classification": "http-success-no-keyword-hit",
+      "elapsedMs": 1805
+    },
+    {
+      "id": "hotread-mobile",
+      "name": "火星小说",
+      "baseUrl": "https://mobile.hotread.com/",
+      "keyword": "斗罗大陆",
+      "path": "/storySearch/search?word={keyword}",
+      "status": 502,
+      "contentType": "text/html",
+      "title": "502 Bad Gateway",
+      "hasKeyword": false,
+      "links": [],
+      "classification": "http-error",
+      "elapsedMs": 1708
+    },
+    {
+      "id": "hotread-mobile",
+      "name": "火星小说",
+      "baseUrl": "https://mobile.hotread.com/",
+      "keyword": "斗罗大陆",
+      "path": "/storySearch/search?q={keyword}",
+      "status": 502,
+      "contentType": "text/html",
+      "title": "502 Bad Gateway",
+      "hasKeyword": false,
+      "links": [],
+      "classification": "http-error",
+      "elapsedMs": 901
+    },
+    {
+      "id": "hotread-mobile",
+      "name": "火星小说",
+      "baseUrl": "https://mobile.hotread.com/",
+      "keyword": "斗罗大陆",
+      "path": "/storySearch/search?bookName={keyword}",
+      "status": 502,
+      "contentType": "text/html",
+      "title": "502 Bad Gateway",
+      "hasKeyword": false,
+      "links": [],
+      "classification": "http-error",
+      "elapsedMs": 208
     },
     {
       "id": "hotread-mobile",
@@ -75,13 +132,13 @@
       "baseUrl": "https://mobile.hotread.com/",
       "keyword": "斗破苍穹",
       "path": "/storySearch/search?keyword={keyword}",
-      "status": 200,
-      "contentType": "text/html;charset=UTF-8",
-      "title": "小说排行榜_火星小说|好看的免费小说下载网",
+      "status": 502,
+      "contentType": "text/html",
+      "title": "502 Bad Gateway",
       "hasKeyword": false,
       "links": [],
-      "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 2308
+      "classification": "http-error",
+      "elapsedMs": 211
     },
     {
       "id": "hotread-mobile",
@@ -89,20 +146,6 @@
       "baseUrl": "https://mobile.hotread.com/",
       "keyword": "斗破苍穹",
       "path": "/storySearch/search?searchkey={keyword}",
-      "status": 200,
-      "contentType": "text/html;charset=UTF-8",
-      "title": "小说排行榜_火星小说|好看的免费小说下载网",
-      "hasKeyword": false,
-      "links": [],
-      "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 3654
-    },
-    {
-      "id": "hotread-mobile",
-      "name": "火星小说",
-      "baseUrl": "https://mobile.hotread.com/",
-      "keyword": "斗破苍穹",
-      "path": "/storySearch/search?key={keyword}",
       "status": 200,
       "contentType": "text/html;charset=UTF-8",
       "title": "小说排行榜_火星小说|好看的免费小说下载网",
@@ -116,14 +159,84 @@
       "name": "火星小说",
       "baseUrl": "https://mobile.hotread.com/",
       "keyword": "斗破苍穹",
+      "path": "/storySearch/search?key={keyword}",
+      "status": 502,
+      "contentType": "text/html",
+      "title": "502 Bad Gateway",
+      "hasKeyword": false,
+      "links": [],
+      "classification": "http-error",
+      "elapsedMs": 214
+    },
+    {
+      "id": "hotread-mobile",
+      "name": "火星小说",
+      "baseUrl": "https://mobile.hotread.com/",
+      "keyword": "斗破苍穹",
       "path": "/storySearch/search?searchKey={keyword}",
+      "status": 502,
+      "contentType": "text/html",
+      "title": "502 Bad Gateway",
+      "hasKeyword": false,
+      "links": [],
+      "classification": "http-error",
+      "elapsedMs": 209
+    },
+    {
+      "id": "hotread-mobile",
+      "name": "火星小说",
+      "baseUrl": "https://mobile.hotread.com/",
+      "keyword": "斗破苍穹",
+      "path": "/storySearch/search?wd={keyword}",
       "status": 200,
       "contentType": "text/html;charset=UTF-8",
       "title": "小说排行榜_火星小说|好看的免费小说下载网",
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 322
+      "elapsedMs": 651
+    },
+    {
+      "id": "hotread-mobile",
+      "name": "火星小说",
+      "baseUrl": "https://mobile.hotread.com/",
+      "keyword": "斗破苍穹",
+      "path": "/storySearch/search?word={keyword}",
+      "status": 200,
+      "contentType": "text/html;charset=UTF-8",
+      "title": "小说排行榜_火星小说|好看的免费小说下载网",
+      "hasKeyword": false,
+      "links": [],
+      "classification": "http-success-no-keyword-hit",
+      "elapsedMs": 406
+    },
+    {
+      "id": "hotread-mobile",
+      "name": "火星小说",
+      "baseUrl": "https://mobile.hotread.com/",
+      "keyword": "斗破苍穹",
+      "path": "/storySearch/search?q={keyword}",
+      "status": 200,
+      "contentType": "text/html;charset=UTF-8",
+      "title": "小说排行榜_火星小说|好看的免费小说下载网",
+      "hasKeyword": false,
+      "links": [],
+      "classification": "http-success-no-keyword-hit",
+      "elapsedMs": 331
+    },
+    {
+      "id": "hotread-mobile",
+      "name": "火星小说",
+      "baseUrl": "https://mobile.hotread.com/",
+      "keyword": "斗破苍穹",
+      "path": "/storySearch/search?bookName={keyword}",
+      "status": 200,
+      "contentType": "text/html;charset=UTF-8",
+      "title": "小说排行榜_火星小说|好看的免费小说下载网",
+      "hasKeyword": false,
+      "links": [],
+      "classification": "http-success-no-keyword-hit",
+      "elapsedMs": 434
     },
     {
       "id": "luochu-mobile",
@@ -132,9 +245,40 @@
       "keyword": "斗罗大陆",
       "path": "/book/search?keyword={keyword}",
       "status": 302,
-      "classification": "redirect",
       "redirectHost": "m.luochu.com",
-      "elapsedMs": 1638
+      "redirectPath": "/user/login.aspx",
+      "followedStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "title": "账号登录_落初文学",
+      "hasKeyword": false,
+      "links": [
+        {
+          "title": "立即注册",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "《中华人民共和国未成年人保护法》（网络防沉迷）",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "首页",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "书架",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "客服",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "充值",
+          "host": "m.luochu.com"
+        }
+      ],
+      "classification": "redirect-target-no-keyword-hit",
+      "elapsedMs": 3217
     },
     {
       "id": "luochu-mobile",
@@ -143,9 +287,40 @@
       "keyword": "斗罗大陆",
       "path": "/book/search?searchkey={keyword}",
       "status": 302,
-      "classification": "redirect",
       "redirectHost": "m.luochu.com",
-      "elapsedMs": 1226
+      "redirectPath": "/user/login.aspx",
+      "followedStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "title": "账号登录_落初文学",
+      "hasKeyword": false,
+      "links": [
+        {
+          "title": "立即注册",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "《中华人民共和国未成年人保护法》（网络防沉迷）",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "首页",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "书架",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "客服",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "充值",
+          "host": "m.luochu.com"
+        }
+      ],
+      "classification": "redirect-target-no-keyword-hit",
+      "elapsedMs": 2499
     },
     {
       "id": "luochu-mobile",
@@ -154,9 +329,40 @@
       "keyword": "斗罗大陆",
       "path": "/book/search?key={keyword}",
       "status": 302,
-      "classification": "redirect",
       "redirectHost": "m.luochu.com",
-      "elapsedMs": 958
+      "redirectPath": "/user/login.aspx",
+      "followedStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "title": "账号登录_落初文学",
+      "hasKeyword": false,
+      "links": [
+        {
+          "title": "立即注册",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "《中华人民共和国未成年人保护法》（网络防沉迷）",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "首页",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "书架",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "客服",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "充值",
+          "host": "m.luochu.com"
+        }
+      ],
+      "classification": "redirect-target-no-keyword-hit",
+      "elapsedMs": 2408
     },
     {
       "id": "luochu-mobile",
@@ -165,9 +371,40 @@
       "keyword": "斗罗大陆",
       "path": "/book/search?name={keyword}",
       "status": 302,
-      "classification": "redirect",
       "redirectHost": "m.luochu.com",
-      "elapsedMs": 1165
+      "redirectPath": "/user/login.aspx",
+      "followedStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "title": "账号登录_落初文学",
+      "hasKeyword": false,
+      "links": [
+        {
+          "title": "立即注册",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "《中华人民共和国未成年人保护法》（网络防沉迷）",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "首页",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "书架",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "客服",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "充值",
+          "host": "m.luochu.com"
+        }
+      ],
+      "classification": "redirect-target-no-keyword-hit",
+      "elapsedMs": 2315
     },
     {
       "id": "luochu-mobile",
@@ -176,9 +413,40 @@
       "keyword": "斗破苍穹",
       "path": "/book/search?keyword={keyword}",
       "status": 302,
-      "classification": "redirect",
       "redirectHost": "m.luochu.com",
-      "elapsedMs": 783
+      "redirectPath": "/user/login.aspx",
+      "followedStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "title": "账号登录_落初文学",
+      "hasKeyword": false,
+      "links": [
+        {
+          "title": "立即注册",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "《中华人民共和国未成年人保护法》（网络防沉迷）",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "首页",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "书架",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "客服",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "充值",
+          "host": "m.luochu.com"
+        }
+      ],
+      "classification": "redirect-target-no-keyword-hit",
+      "elapsedMs": 2622
     },
     {
       "id": "luochu-mobile",
@@ -187,9 +455,40 @@
       "keyword": "斗破苍穹",
       "path": "/book/search?searchkey={keyword}",
       "status": 302,
-      "classification": "redirect",
       "redirectHost": "m.luochu.com",
-      "elapsedMs": 507
+      "redirectPath": "/user/login.aspx",
+      "followedStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "title": "账号登录_落初文学",
+      "hasKeyword": false,
+      "links": [
+        {
+          "title": "立即注册",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "《中华人民共和国未成年人保护法》（网络防沉迷）",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "首页",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "书架",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "客服",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "充值",
+          "host": "m.luochu.com"
+        }
+      ],
+      "classification": "redirect-target-no-keyword-hit",
+      "elapsedMs": 2392
     },
     {
       "id": "luochu-mobile",
@@ -198,9 +497,40 @@
       "keyword": "斗破苍穹",
       "path": "/book/search?key={keyword}",
       "status": 302,
-      "classification": "redirect",
       "redirectHost": "m.luochu.com",
-      "elapsedMs": 768
+      "redirectPath": "/user/login.aspx",
+      "followedStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "title": "账号登录_落初文学",
+      "hasKeyword": false,
+      "links": [
+        {
+          "title": "立即注册",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "《中华人民共和国未成年人保护法》（网络防沉迷）",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "首页",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "书架",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "客服",
+          "host": "m.luochu.com"
+        },
+        {
+          "title": "充值",
+          "host": "m.luochu.com"
+        }
+      ],
+      "classification": "redirect-target-no-keyword-hit",
+      "elapsedMs": 1664
     },
     {
       "id": "luochu-mobile",
@@ -209,321 +539,40 @@
       "keyword": "斗破苍穹",
       "path": "/book/search?name={keyword}",
       "status": 302,
-      "classification": "redirect",
       "redirectHost": "m.luochu.com",
-      "elapsedMs": 1210
-    },
-    {
-      "id": "lulushu-mobile",
-      "name": "露露书",
-      "baseUrl": "https://m.lulushu123.net/",
-      "keyword": "斗罗大陆",
-      "path": "/home/search?keyword={keyword}",
-      "status": 200,
+      "redirectPath": "/user/login.aspx",
+      "followedStatus": 200,
       "contentType": "text/html; charset=utf-8",
-      "title": "小说搜索_露露书",
+      "title": "账号登录_落初文学",
       "hasKeyword": false,
       "links": [
         {
-          "title": "豪乳老师刘艳",
-          "host": "m.lulushu123.net"
+          "title": "立即注册",
+          "host": "m.luochu.com"
         },
         {
-          "title": "都市偷心龙爪手",
-          "host": "m.lulushu123.net"
+          "title": "《中华人民共和国未成年人保护法》（网络防沉迷）",
+          "host": "m.luochu.com"
         },
         {
-          "title": "母上攻略",
-          "host": "m.lulushu123.net"
+          "title": "首页",
+          "host": "m.luochu.com"
         },
         {
-          "title": "翁媳乱情",
-          "host": "m.lulushu123.net"
+          "title": "书架",
+          "host": "m.luochu.com"
         },
         {
-          "title": "截胡完美校草的红颜们",
-          "host": "m.lulushu123.net"
+          "title": "客服",
+          "host": "m.luochu.com"
         },
         {
-          "title": "女神攻略调教手册",
-          "host": "m.lulushu123.net"
+          "title": "充值",
+          "host": "m.luochu.com"
         }
       ],
-      "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 258
-    },
-    {
-      "id": "lulushu-mobile",
-      "name": "露露书",
-      "baseUrl": "https://m.lulushu123.net/",
-      "keyword": "斗罗大陆",
-      "path": "/home/search?searchkey={keyword}",
-      "status": 200,
-      "contentType": "text/html; charset=utf-8",
-      "title": "小说搜索_露露书",
-      "hasKeyword": false,
-      "links": [
-        {
-          "title": "豪乳老师刘艳",
-          "host": "m.lulushu123.net"
-        },
-        {
-          "title": "都市偷心龙爪手",
-          "host": "m.lulushu123.net"
-        },
-        {
-          "title": "母上攻略",
-          "host": "m.lulushu123.net"
-        },
-        {
-          "title": "翁媳乱情",
-          "host": "m.lulushu123.net"
-        },
-        {
-          "title": "截胡完美校草的红颜们",
-          "host": "m.lulushu123.net"
-        },
-        {
-          "title": "女神攻略调教手册",
-          "host": "m.lulushu123.net"
-        }
-      ],
-      "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 93
-    },
-    {
-      "id": "lulushu-mobile",
-      "name": "露露书",
-      "baseUrl": "https://m.lulushu123.net/",
-      "keyword": "斗罗大陆",
-      "path": "/home/search?key={keyword}",
-      "status": 200,
-      "contentType": "text/html; charset=utf-8",
-      "title": "小说搜索_露露书",
-      "hasKeyword": false,
-      "links": [
-        {
-          "title": "豪乳老师刘艳",
-          "host": "m.lulushu123.net"
-        },
-        {
-          "title": "都市偷心龙爪手",
-          "host": "m.lulushu123.net"
-        },
-        {
-          "title": "母上攻略",
-          "host": "m.lulushu123.net"
-        },
-        {
-          "title": "翁媳乱情",
-          "host": "m.lulushu123.net"
-        },
-        {
-          "title": "截胡完美校草的红颜们",
-          "host": "m.lulushu123.net"
-        },
-        {
-          "title": "女神攻略调教手册",
-          "host": "m.lulushu123.net"
-        }
-      ],
-      "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 203
-    },
-    {
-      "id": "lulushu-mobile",
-      "name": "露露书",
-      "baseUrl": "https://m.lulushu123.net/",
-      "keyword": "斗罗大陆",
-      "path": "/home/search?name={keyword}",
-      "status": 200,
-      "contentType": "text/html; charset=utf-8",
-      "title": "小说搜索_露露书",
-      "hasKeyword": false,
-      "links": [
-        {
-          "title": "豪乳老师刘艳",
-          "host": "m.lulushu123.net"
-        },
-        {
-          "title": "都市偷心龙爪手",
-          "host": "m.lulushu123.net"
-        },
-        {
-          "title": "母上攻略",
-          "host": "m.lulushu123.net"
-        },
-        {
-          "title": "翁媳乱情",
-          "host": "m.lulushu123.net"
-        },
-        {
-          "title": "截胡完美校草的红颜们",
-          "host": "m.lulushu123.net"
-        },
-        {
-          "title": "女神攻略调教手册",
-          "host": "m.lulushu123.net"
-        }
-      ],
-      "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 88
-    },
-    {
-      "id": "lulushu-mobile",
-      "name": "露露书",
-      "baseUrl": "https://m.lulushu123.net/",
-      "keyword": "斗破苍穹",
-      "path": "/home/search?keyword={keyword}",
-      "status": 200,
-      "contentType": "text/html; charset=utf-8",
-      "title": "小说搜索_露露书",
-      "hasKeyword": false,
-      "links": [
-        {
-          "title": "豪乳老师刘艳",
-          "host": "m.lulushu123.net"
-        },
-        {
-          "title": "都市偷心龙爪手",
-          "host": "m.lulushu123.net"
-        },
-        {
-          "title": "母上攻略",
-          "host": "m.lulushu123.net"
-        },
-        {
-          "title": "翁媳乱情",
-          "host": "m.lulushu123.net"
-        },
-        {
-          "title": "截胡完美校草的红颜们",
-          "host": "m.lulushu123.net"
-        },
-        {
-          "title": "女神攻略调教手册",
-          "host": "m.lulushu123.net"
-        }
-      ],
-      "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 90
-    },
-    {
-      "id": "lulushu-mobile",
-      "name": "露露书",
-      "baseUrl": "https://m.lulushu123.net/",
-      "keyword": "斗破苍穹",
-      "path": "/home/search?searchkey={keyword}",
-      "status": 200,
-      "contentType": "text/html; charset=utf-8",
-      "title": "小说搜索_露露书",
-      "hasKeyword": false,
-      "links": [
-        {
-          "title": "豪乳老师刘艳",
-          "host": "m.lulushu123.net"
-        },
-        {
-          "title": "都市偷心龙爪手",
-          "host": "m.lulushu123.net"
-        },
-        {
-          "title": "母上攻略",
-          "host": "m.lulushu123.net"
-        },
-        {
-          "title": "翁媳乱情",
-          "host": "m.lulushu123.net"
-        },
-        {
-          "title": "截胡完美校草的红颜们",
-          "host": "m.lulushu123.net"
-        },
-        {
-          "title": "女神攻略调教手册",
-          "host": "m.lulushu123.net"
-        }
-      ],
-      "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 193
-    },
-    {
-      "id": "lulushu-mobile",
-      "name": "露露书",
-      "baseUrl": "https://m.lulushu123.net/",
-      "keyword": "斗破苍穹",
-      "path": "/home/search?key={keyword}",
-      "status": 200,
-      "contentType": "text/html; charset=utf-8",
-      "title": "小说搜索_露露书",
-      "hasKeyword": false,
-      "links": [
-        {
-          "title": "豪乳老师刘艳",
-          "host": "m.lulushu123.net"
-        },
-        {
-          "title": "都市偷心龙爪手",
-          "host": "m.lulushu123.net"
-        },
-        {
-          "title": "母上攻略",
-          "host": "m.lulushu123.net"
-        },
-        {
-          "title": "翁媳乱情",
-          "host": "m.lulushu123.net"
-        },
-        {
-          "title": "截胡完美校草的红颜们",
-          "host": "m.lulushu123.net"
-        },
-        {
-          "title": "女神攻略调教手册",
-          "host": "m.lulushu123.net"
-        }
-      ],
-      "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 93
-    },
-    {
-      "id": "lulushu-mobile",
-      "name": "露露书",
-      "baseUrl": "https://m.lulushu123.net/",
-      "keyword": "斗破苍穹",
-      "path": "/home/search?name={keyword}",
-      "status": 200,
-      "contentType": "text/html; charset=utf-8",
-      "title": "小说搜索_露露书",
-      "hasKeyword": false,
-      "links": [
-        {
-          "title": "豪乳老师刘艳",
-          "host": "m.lulushu123.net"
-        },
-        {
-          "title": "都市偷心龙爪手",
-          "host": "m.lulushu123.net"
-        },
-        {
-          "title": "母上攻略",
-          "host": "m.lulushu123.net"
-        },
-        {
-          "title": "翁媳乱情",
-          "host": "m.lulushu123.net"
-        },
-        {
-          "title": "截胡完美校草的红颜们",
-          "host": "m.lulushu123.net"
-        },
-        {
-          "title": "女神攻略调教手册",
-          "host": "m.lulushu123.net"
-        }
-      ],
-      "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 96
+      "classification": "redirect-target-no-keyword-hit",
+      "elapsedMs": 1491
     }
   ]
 }
