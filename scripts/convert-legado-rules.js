@@ -319,7 +319,7 @@ function convertSource(source,index) {
   if (warnings.length) result.warnings=warnings;
   const requiredReady=REQUIRED_GROUPS.every(name=>{const g=result.groups[name];return g && g.status==="candidate" && Object.keys(g.fields).length>0 && Object.values(g.fields).every(field=>field.status==="candidate");});
   const anyConvertible=Object.values(result.groups).some(g=>Object.values(g.fields||{}).some(field=>field.status==="candidate"));
-  if (requiredReady && warnings.length===0) result.conversionStatus="candidate";
+  if (requiredReady) result.conversionStatus="candidate";
   else if (anyConvertible) result.conversionStatus="partial";
   else result.conversionStatus="manual";
   return result;
