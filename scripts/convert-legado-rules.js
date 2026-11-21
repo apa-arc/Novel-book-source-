@@ -184,9 +184,15 @@ function parseSimpleXPath(expression) {
     if(!segment) return null;
     let stepAxis=axis,tag="*",rest=segment;
     if(rest===".."){stepAxis="parent";rest="";}
-    else if(rest.startsWith("following-sibling::")){stepAxis="followingSibling";rest=rest.slice("following-sibling::".length);}
-    else if(rest.startsWith("preceding-sibling::")){stepAxis="precedingSibling";rest=rest.slice(19);}
-    else{
+    else if(rest.startsWith("following-sibling::")||rest.startsWith("preceding-sibling::")){
+      const following=rest.startsWith("following-sibling::");
+      stepAxis=following?"followingSibling":"precedingSibling";
+      rest=rest.slice(following?"following-sibling::".length:"preceding-sibling::".length);
+      const name=rest.match(/^([A-Za-z*][\w*-]*)/);
+      if(!name) return null;
+      tag=name[1];
+      rest=rest.slice(name[1].length);
+    }else{
       const name=rest.match(/^([A-Za-z*][\w*-]*)/);
       if(!name) return null;
       tag=name[1];
