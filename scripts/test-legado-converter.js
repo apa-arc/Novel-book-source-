@@ -107,6 +107,12 @@ try{
  assert.deepEqual(exactAttribute.selector.steps,[{kind:"css",query:'a[href="/book/1"]'}]);
  const classAttribute=parseLegacyChain("class.chapter[data-id]@text");
  assert.deepEqual(classAttribute.selector.steps,[{kind:"css",query:".chapter[data-id]"}]);
+ const multiTagAttribute=parseLegacyChain("tag.a[href][title]@href");
+ assert.deepEqual(multiTagAttribute.selector.steps,[{kind:"css",query:"a[href][title]"}]);
+ const compoundCssAttribute=parseLegacyChain("div.chapter[data-id]@text");
+ assert.deepEqual(compoundCssAttribute.selector.steps,[{kind:"css",query:"div.chapter[data-id]"}]);
+ const leadingClassAttribute=parseLegacyChain(".chapter[data-id]@text");
+ assert.deepEqual(leadingClassAttribute.selector.steps,[{kind:"css",query:".chapter[data-id]"}]);
  const andExpression=parseLegacyChain("class.title&&class.name@text");
  assert.equal(andExpression.status,"candidate");
  assert.equal(andExpression.selector.engine,"composite");
