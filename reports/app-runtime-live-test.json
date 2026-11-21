@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-21T15:45:01.243Z",
-  "testStandard": "AppleNovelApp runtime: searchNovelSource -> fetchNovelChapterList -> optional fetchNovelDetail -> fetchNovelChapterContent",
+  "generatedAt": "2026-11-21T16:40:59.541Z",
+  "testStandard": "AppleNovelApp search semantics + separately reported reading stages; Node network errors are environment-inconclusive",
   "keywords": [
     "斗罗大陆",
     "斗破苍穹"
@@ -9,12 +9,16 @@
     "total": 10,
     "appCompatible": 10,
     "appUnsupported": 0,
-    "readableBoth": 4,
-    "readableOne": 1,
+    "readableBoth": 5,
+    "readableOne": 0,
     "searchOrCatalogOnly": 3,
-    "failed": 2,
+    "environmentInconclusive": 2,
+    "failed": 0,
+    "searchPassed": 16,
+    "searchFailed": 0,
+    "searchInconclusive": 4,
     "searchRequestsPassed": 16,
-    "chapterContentPassed": 9
+    "chapterContentPassed": 10
   },
   "results": [
     {
@@ -25,6 +29,8 @@
         "斗罗大陆": {
           "keyword": "斗罗大陆",
           "status": "readable",
+          "searchStatus": "passed",
+          "readingStatus": "readable",
           "stages": [
             {
               "stage": "搜索",
@@ -53,6 +59,8 @@
         "斗破苍穹": {
           "keyword": "斗破苍穹",
           "status": "readable",
+          "searchStatus": "passed",
+          "readingStatus": "readable",
           "stages": [
             {
               "stage": "搜索",
@@ -88,6 +96,8 @@
         "斗罗大陆": {
           "keyword": "斗罗大陆",
           "status": "search-only",
+          "searchStatus": "passed",
+          "readingStatus": "not-tested",
           "stages": [
             {
               "stage": "搜索",
@@ -97,7 +107,7 @@
             {
               "stage": "目录",
               "status": "skipped",
-              "detail": "搜索成功，但本次关键词没有返回书目"
+              "detail": "搜索请求及解析成功，但本次关键词返回 0 条；按 App 搜索日志仍计为成功"
             },
             {
               "stage": "详情",
@@ -115,6 +125,8 @@
         "斗破苍穹": {
           "keyword": "斗破苍穹",
           "status": "search-only",
+          "searchStatus": "passed",
+          "readingStatus": "not-tested",
           "stages": [
             {
               "stage": "搜索",
@@ -124,7 +136,7 @@
             {
               "stage": "目录",
               "status": "skipped",
-              "detail": "搜索成功，但本次关键词没有返回书目"
+              "detail": "搜索请求及解析成功，但本次关键词返回 0 条；按 App 搜索日志仍计为成功"
             },
             {
               "stage": "详情",
@@ -149,6 +161,8 @@
         "斗罗大陆": {
           "keyword": "斗罗大陆",
           "status": "search-only",
+          "searchStatus": "passed",
+          "readingStatus": "catalog-failed",
           "stages": [
             {
               "stage": "搜索",
@@ -172,12 +186,14 @@
             }
           ],
           "resultCount": 20,
-          "selectedTitle": "[网游]斗罗大陆之永恒龙魂",
+          "selectedTitle": "[网游]究极传导恐兽屹立在斗罗大陆之上",
           "error": "书源服务器返回 HTTP 404。"
         },
         "斗破苍穹": {
           "keyword": "斗破苍穹",
           "status": "search-only",
+          "searchStatus": "passed",
+          "readingStatus": "catalog-failed",
           "stages": [
             {
               "stage": "搜索",
@@ -209,11 +225,13 @@
     {
       "id": "biquge-17177",
       "name": "笔趣阁小说网（17177）",
-      "status": "readable-one",
+      "status": "readable-both",
       "terms": {
         "斗罗大陆": {
           "keyword": "斗罗大陆",
           "status": "readable",
+          "searchStatus": "passed",
+          "readingStatus": "readable",
           "stages": [
             {
               "stage": "搜索",
@@ -223,25 +241,27 @@
             {
               "stage": "目录",
               "status": "passed",
-              "detail": "获取 61 章；首章「引子。古月娜，唐胤」"
+              "detail": "获取 100 章；首章「第1章 一切开始，直至史莱克。（三章合一）」"
             },
             {
               "stage": "详情（可选）",
               "status": "passed",
-              "detail": "详情页读取成功：[网游]斗罗大陆之胤月传说"
+              "detail": "详情页读取成功：[网游]斗罗大陆之永恒龙魂"
             },
             {
               "stage": "正文",
               "status": "passed",
-              "detail": "首章正文读取成功（1272 字符）"
+              "detail": "首章正文读取成功（3750 字符）"
             }
           ],
           "resultCount": 20,
-          "selectedTitle": "[网游]斗罗大陆之胤月传说"
+          "selectedTitle": "[网游]斗罗大陆之永恒龙魂"
         },
         "斗破苍穹": {
           "keyword": "斗破苍穹",
-          "status": "search-only",
+          "status": "readable",
+          "searchStatus": "passed",
+          "readingStatus": "readable",
           "stages": [
             {
               "stage": "搜索",
@@ -250,23 +270,22 @@
             },
             {
               "stage": "目录",
-              "status": "failed",
-              "detail": "书源服务器返回 HTTP 404。"
+              "status": "passed",
+              "detail": "获取 100 章；首章「第1章 梦开始的地方」"
             },
             {
-              "stage": "详情",
-              "status": "skipped",
-              "detail": "App 阅读流程先加载目录；目录失败后不会继续详情请求"
+              "stage": "详情（可选）",
+              "status": "passed",
+              "detail": "详情页读取成功：[网游]斗破苍穹之财动乾坤"
             },
             {
               "stage": "正文",
-              "status": "skipped",
-              "detail": "目录不可用，无法取得章节链接"
+              "status": "passed",
+              "detail": "首章正文读取成功（652 字符）"
             }
           ],
           "resultCount": 17,
-          "selectedTitle": "[玄幻]斗破苍穹：与女王陛下的爱恨情仇",
-          "error": "书源服务器返回 HTTP 404。"
+          "selectedTitle": "[网游]斗破苍穹之财动乾坤"
         }
       }
     },
@@ -278,6 +297,8 @@
         "斗罗大陆": {
           "keyword": "斗罗大陆",
           "status": "search-only",
+          "searchStatus": "passed",
+          "readingStatus": "catalog-failed",
           "stages": [
             {
               "stage": "搜索",
@@ -301,12 +322,14 @@
             }
           ],
           "resultCount": 20,
-          "selectedTitle": "[网游]斗罗大陆龙王传说里的JOJO",
+          "selectedTitle": "[玄幻]斗罗大陆",
           "error": "书源服务器返回 HTTP 404。"
         },
         "斗破苍穹": {
           "keyword": "斗破苍穹",
           "status": "search-only",
+          "searchStatus": "passed",
+          "readingStatus": "catalog-failed",
           "stages": [
             {
               "stage": "搜索",
@@ -343,6 +366,8 @@
         "斗罗大陆": {
           "keyword": "斗罗大陆",
           "status": "readable",
+          "searchStatus": "passed",
+          "readingStatus": "readable",
           "stages": [
             {
               "stage": "搜索",
@@ -362,7 +387,7 @@
             {
               "stage": "正文",
               "status": "passed",
-              "detail": "首章正文读取成功（2180 字符）"
+              "detail": "首章正文读取成功（2181 字符）"
             }
           ],
           "resultCount": 35,
@@ -371,6 +396,8 @@
         "斗破苍穹": {
           "keyword": "斗破苍穹",
           "status": "readable",
+          "searchStatus": "passed",
+          "readingStatus": "readable",
           "stages": [
             {
               "stage": "搜索",
@@ -390,7 +417,7 @@
             {
               "stage": "正文",
               "status": "passed",
-              "detail": "首章正文读取成功（1172 字符）"
+              "detail": "首章正文读取成功（1166 字符）"
             }
           ],
           "resultCount": 12,
@@ -401,15 +428,17 @@
     {
       "id": "xqianqian-m",
       "name": "千千小说",
-      "status": "failed",
+      "status": "environment-inconclusive",
       "terms": {
         "斗罗大陆": {
           "keyword": "斗罗大陆",
-          "status": "failed",
+          "status": "search-inconclusive",
+          "searchStatus": "inconclusive",
+          "readingStatus": "not-tested",
           "stages": [
             {
               "stage": "搜索",
-              "status": "failed",
+              "status": "inconclusive",
               "detail": "书源网络请求失败，请检查网络或站点状态。"
             },
             {
@@ -432,11 +461,13 @@
         },
         "斗破苍穹": {
           "keyword": "斗破苍穹",
-          "status": "failed",
+          "status": "search-inconclusive",
+          "searchStatus": "inconclusive",
+          "readingStatus": "not-tested",
           "stages": [
             {
               "stage": "搜索",
-              "status": "failed",
+              "status": "inconclusive",
               "detail": "书源网络请求失败，请检查网络或站点状态。"
             },
             {
@@ -467,6 +498,8 @@
         "斗罗大陆": {
           "keyword": "斗罗大陆",
           "status": "readable",
+          "searchStatus": "passed",
+          "readingStatus": "readable",
           "stages": [
             {
               "stage": "搜索",
@@ -495,6 +528,8 @@
         "斗破苍穹": {
           "keyword": "斗破苍穹",
           "status": "readable",
+          "searchStatus": "passed",
+          "readingStatus": "readable",
           "stages": [
             {
               "stage": "搜索",
@@ -525,15 +560,17 @@
     {
       "id": "iyueba-net",
       "name": "爱阅吧网",
-      "status": "failed",
+      "status": "environment-inconclusive",
       "terms": {
         "斗罗大陆": {
           "keyword": "斗罗大陆",
-          "status": "failed",
+          "status": "search-inconclusive",
+          "searchStatus": "inconclusive",
+          "readingStatus": "not-tested",
           "stages": [
             {
               "stage": "搜索",
-              "status": "failed",
+              "status": "inconclusive",
               "detail": "书源服务器返回 HTTP 403。"
             },
             {
@@ -556,11 +593,13 @@
         },
         "斗破苍穹": {
           "keyword": "斗破苍穹",
-          "status": "failed",
+          "status": "search-inconclusive",
+          "searchStatus": "inconclusive",
+          "readingStatus": "not-tested",
           "stages": [
             {
               "stage": "搜索",
-              "status": "failed",
+              "status": "inconclusive",
               "detail": "书源服务器返回 HTTP 403。"
             },
             {
@@ -591,6 +630,8 @@
         "斗罗大陆": {
           "keyword": "斗罗大陆",
           "status": "readable",
+          "searchStatus": "passed",
+          "readingStatus": "readable",
           "stages": [
             {
               "stage": "搜索",
@@ -619,6 +660,8 @@
         "斗破苍穹": {
           "keyword": "斗破苍穹",
           "status": "readable",
+          "searchStatus": "passed",
+          "readingStatus": "readable",
           "stages": [
             {
               "stage": "搜索",
