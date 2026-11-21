@@ -1,0 +1,1332 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-21T12:33:36.369Z",
+  "note": "只检查公开 HTTPS 首页和 GET 搜索路由，不登录、不读取或保存小说正文。",
+  "results": [
+    {
+      "name": "闪舞小说",
+      "base": "https://www.35xss.net/",
+      "home": {
+        "status": 200,
+        "url": "https://www.35xss.net/",
+        "contentType": "text/html; charset=utf-8",
+        "title": "闪舞小说网_最好的无广告小说阅读网_新闪舞小说网(35xss.net)",
+        "body": "首页 书库 热门榜 推荐榜 收藏榜 连载榜 完结榜 login(); 闪舞小说网35xss.net search('/search.html'); TOP榜写作榜手机小说 最近更新新书入库全部小说 小说首页 玄幻 武侠 都市 历史 游戏 科幻 恐怖 其他 古代 现代 幻想 游戏 浪漫 言情 科幻 其他 破金我被骗到缅北的那些年 你以为缅北是遍地黄金，能躺着挣钱的天堂？不，这里是水深火热的人间炼狱！电棍殴打、拔牙断指，只是家常便饭的小儿科…… 你以为这里只是人间炼狱？不，这里还是知识的海洋！金融货币、美容瑜伽，你都要从零开始学习！因为在这里，你不再是你，你是一个面容姣好，从事金融工作的优质白领女性！而这，只是你千百个身份的其 天天不休狂狮少帅 94年的夏天，米尔沃尔青年军在少帅奥德里奇率领下势要改写百年无冠的历史。 那一抹狂狮的深蓝，立志席卷欧洲...... 夜十三特种兵在都市 杨洛曾经是一名让所有国家军人闻名丧胆的兵王,他是地下世界大名鼎鼎的杀手法官,他是世界医学界里天才医生,他掌握着神秘组织高买.他性格嚣张狂妄,为达目的不折手段.在这繁华的都市,杨洛上演了一场激情四射的热血人生. 流年非水中场统治者 这是一个天使和魔鬼赋予一身的人，从少年到现在。无论在哪里，他都意味着天才和胜利，也意味着狂放不羁和惹事生非。---------------摘自2019年《法国足球》绝对巨星PS:已有完本著作《最强边锋》370万字，人品保证，放心收藏！ 经典推荐 [都市]重生香江之1978蜜汁鸡翅膀 [历史]穷鬼的上下两千年非玩家角色 [幻想]AA互撩笔记我选择猫车 [游戏]我有无限掠夺加速系统猪肉乱炖 [都市]透视小神医黑咖啡 [武侠]烂柯棋缘真费事 [恐怖]我的治愈系游戏我会修空调 [玄幻]全球游戏化：神级内测玩家相思洗红豆 [其他]种菜骷髅的异域开荒情终流水 总点击 斗破苍穹 这里是属于斗气的世界，没有花俏艳丽的魔法，有的，仅仅是繁衍到巅峰的斗气！ 新书等级制度：斗者，斗师，大斗师，斗灵，斗王，斗皇，斗宗，斗尊，斗圣，斗帝。 …… 吴磊、林允主演的同名电视剧9月3日起周一到周三每晚22：00登陆湖南卫视，腾讯视频全网独播。 完美世界/辰东 凡人修仙传/忘语 我被骗到缅北的那些年/破金 恰似寒光遇骄阳/囧囧有妖 妙手生香/董无渊 武动乾坤/天蚕土豆 吞噬星空/我吃西红柿 官居一品/三戒大师 遮天/辰东 当满级大佬翻车以后/纳兰闲 混在韩娱当老师，纵横半岛成财阀/下顿饭加肉 穿越六十年代农家女/红烧豆腐干 总推荐 透视邪医混花都 穷学生陈轩，无意中获得绝世邪医传承，习得医道圣手，开启透视神瞳，从此纵横花都，恣意风流！各路极品美女纷纷而来，陈轩表示我全都要！ 修仙就是这样子的/凤嘲凰 重生之巨变/永远的大洋芋 烂柯棋缘/真费事 黄金渔场/全金属弹壳 超绝透视眼/月醉 这个外挂过"
+      },
+      "forms": [],
+      "inputs": [],
+      "scripts": [
+        "/tpl/pc/js/common.js?v=0.66changecdn",
+        "/WordPress/Plugins/App.js?id=804&sign=1795264414000"
+      ],
+      "inlineScripts": [
+        "search('/search.html');"
+      ],
+      "checks": [
+        {
+          "path": "/search.html?searchkey=斗罗大陆",
+          "status": 200,
+          "url": "https://www.35xss.net/search.html?searchkey=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "contentType": "text/html; charset=utf-8",
+          "title": "小说搜索_首页_闪舞小说网(35xss.net)",
+          "containsKeyword": false,
+          "body": "首页 书库 热门榜 推荐榜 收藏榜 连载榜 完结榜 login(); 闪舞小说网35xss.net search('/search.html'); TOP榜写作榜手机小说 最近更新新书入库全部小说 小说首页 玄幻 武侠 都市 历史 游戏 科幻 恐怖 其他 古代 现代 幻想 游戏 浪漫 言情 科幻 其他 首页 | 点击榜 | 推荐榜 | 收藏榜 | 新书榜 | 最近更新 | 临时书架 手机版 | 分类 | 排行榜 | 作者大全 | 全部小说 | 全本小说 | 会员书架 本站所有小说为转载作品，所有章节均由网友上传，转载至本站只是为了宣传本书让更多读者欣赏。 Copyright © 2026 闪舞小说网(35xss.net) 网站地图 All Rights Reserved. DMCA版权投诉邮箱:bookcopy2026@outlook.com var _hmt = _hmt || []; (function () { var hm = document.createElement(\"script\"); hm.src = \"https://hm.baidu.com/hm.js?e1f787e0bd36cc1abe1ed6d16d6262c6\"; var s = document.getElementsByTagName(\"script\")[0]; s.parentNode.insertBefore(hm, s); })();",
+          "links": [
+            {
+              "text": "首页",
+              "href": "https://www.35xss.net"
+            },
+            {
+              "text": "书库",
+              "href": "/shuku/"
+            },
+            {
+              "text": "热门榜",
+              "href": "/top/allvisit/"
+            },
+            {
+              "text": "推荐榜",
+              "href": "/top/allvote/"
+            },
+            {
+              "text": "收藏榜",
+              "href": "/top/goodnum/"
+            },
+            {
+              "text": "连载榜",
+              "href": "/sort.html"
+            },
+            {
+              "text": "完结榜",
+              "href": "/quanben/"
+            },
+            {
+              "text": "闪舞小说网",
+              "href": "https://www.35xss.net"
+            },
+            {
+              "text": "TOP榜",
+              "href": "/top/"
+            },
+            {
+              "text": "写作榜",
+              "href": "/author/"
+            },
+            {
+              "text": "手机小说",
+              "href": "https://m.35xss.net"
+            },
+            {
+              "text": "最近更新",
+              "href": "/top/lastupdate/"
+            },
+            {
+              "text": "新书入库",
+              "href": "/top/postdate/"
+            },
+            {
+              "text": "全部小说",
+              "href": "/all/"
+            },
+            {
+              "text": "小说首页",
+              "href": "https://www.35xss.net"
+            },
+            {
+              "text": "玄幻",
+              "href": "/xuanhuan/"
+            },
+            {
+              "text": "武侠",
+              "href": "/wuxia/"
+            },
+            {
+              "text": "都市",
+              "href": "/dushi/"
+            },
+            {
+              "text": "历史",
+              "href": "/lishi/"
+            },
+            {
+              "text": "游戏",
+              "href": "/youxi/"
+            },
+            {
+              "text": "科幻",
+              "href": "/kehuan/"
+            },
+            {
+              "text": "恐怖",
+              "href": "/xuanyi/"
+            },
+            {
+              "text": "其他",
+              "href": "/qita/"
+            },
+            {
+              "text": "古代",
+              "href": "/guyan/"
+            },
+            {
+              "text": "现代",
+              "href": "/xianyan/"
+            },
+            {
+              "text": "幻想",
+              "href": "/huanqing/"
+            },
+            {
+              "text": "游戏",
+              "href": "/zongcai/"
+            },
+            {
+              "text": "浪漫",
+              "href": "/qingchun/"
+            },
+            {
+              "text": "言情",
+              "href": "/wangluo/"
+            },
+            {
+              "text": "科幻",
+              "href": "/mmkehuan/"
+            },
+            {
+              "text": "其他",
+              "href": "/mmqita/"
+            },
+            {
+              "text": "首页",
+              "href": "https://www.35xss.net/"
+            },
+            {
+              "text": "点击榜",
+              "href": "/top/allvisit/"
+            },
+            {
+              "text": "推荐榜",
+              "href": "/top/allvote/"
+            },
+            {
+              "text": "收藏榜",
+              "href": "/top/goodnum/"
+            },
+            {
+              "text": "新书榜",
+              "href": "/top/postdate/"
+            },
+            {
+              "text": "最近更新",
+              "href": "/top/lastupdate/"
+            },
+            {
+              "text": "临时书架",
+              "href": "/history.html"
+            },
+            {
+              "text": "手机版",
+              "href": "https://m.35xss.net/"
+            },
+            {
+              "text": "分类",
+              "href": "/sort.html"
+            }
+          ]
+        },
+        {
+          "path": "/search.html?keyword=斗罗大陆",
+          "status": 200,
+          "url": "https://www.35xss.net/search.html?keyword=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "contentType": "text/html; charset=utf-8",
+          "title": "小说搜索_首页_闪舞小说网(35xss.net)",
+          "containsKeyword": false,
+          "body": "首页 书库 热门榜 推荐榜 收藏榜 连载榜 完结榜 login(); 闪舞小说网35xss.net search('/search.html'); TOP榜写作榜手机小说 最近更新新书入库全部小说 小说首页 玄幻 武侠 都市 历史 游戏 科幻 恐怖 其他 古代 现代 幻想 游戏 浪漫 言情 科幻 其他 首页 | 点击榜 | 推荐榜 | 收藏榜 | 新书榜 | 最近更新 | 临时书架 手机版 | 分类 | 排行榜 | 作者大全 | 全部小说 | 全本小说 | 会员书架 本站所有小说为转载作品，所有章节均由网友上传，转载至本站只是为了宣传本书让更多读者欣赏。 Copyright © 2026 闪舞小说网(35xss.net) 网站地图 All Rights Reserved. DMCA版权投诉邮箱:bookcopy2026@outlook.com var _hmt = _hmt || []; (function () { var hm = document.createElement(\"script\"); hm.src = \"https://hm.baidu.com/hm.js?e1f787e0bd36cc1abe1ed6d16d6262c6\"; var s = document.getElementsByTagName(\"script\")[0]; s.parentNode.insertBefore(hm, s); })();",
+          "links": [
+            {
+              "text": "首页",
+              "href": "https://www.35xss.net"
+            },
+            {
+              "text": "书库",
+              "href": "/shuku/"
+            },
+            {
+              "text": "热门榜",
+              "href": "/top/allvisit/"
+            },
+            {
+              "text": "推荐榜",
+              "href": "/top/allvote/"
+            },
+            {
+              "text": "收藏榜",
+              "href": "/top/goodnum/"
+            },
+            {
+              "text": "连载榜",
+              "href": "/sort.html"
+            },
+            {
+              "text": "完结榜",
+              "href": "/quanben/"
+            },
+            {
+              "text": "闪舞小说网",
+              "href": "https://www.35xss.net"
+            },
+            {
+              "text": "TOP榜",
+              "href": "/top/"
+            },
+            {
+              "text": "写作榜",
+              "href": "/author/"
+            },
+            {
+              "text": "手机小说",
+              "href": "https://m.35xss.net"
+            },
+            {
+              "text": "最近更新",
+              "href": "/top/lastupdate/"
+            },
+            {
+              "text": "新书入库",
+              "href": "/top/postdate/"
+            },
+            {
+              "text": "全部小说",
+              "href": "/all/"
+            },
+            {
+              "text": "小说首页",
+              "href": "https://www.35xss.net"
+            },
+            {
+              "text": "玄幻",
+              "href": "/xuanhuan/"
+            },
+            {
+              "text": "武侠",
+              "href": "/wuxia/"
+            },
+            {
+              "text": "都市",
+              "href": "/dushi/"
+            },
+            {
+              "text": "历史",
+              "href": "/lishi/"
+            },
+            {
+              "text": "游戏",
+              "href": "/youxi/"
+            },
+            {
+              "text": "科幻",
+              "href": "/kehuan/"
+            },
+            {
+              "text": "恐怖",
+              "href": "/xuanyi/"
+            },
+            {
+              "text": "其他",
+              "href": "/qita/"
+            },
+            {
+              "text": "古代",
+              "href": "/guyan/"
+            },
+            {
+              "text": "现代",
+              "href": "/xianyan/"
+            },
+            {
+              "text": "幻想",
+              "href": "/huanqing/"
+            },
+            {
+              "text": "游戏",
+              "href": "/zongcai/"
+            },
+            {
+              "text": "浪漫",
+              "href": "/qingchun/"
+            },
+            {
+              "text": "言情",
+              "href": "/wangluo/"
+            },
+            {
+              "text": "科幻",
+              "href": "/mmkehuan/"
+            },
+            {
+              "text": "其他",
+              "href": "/mmqita/"
+            },
+            {
+              "text": "首页",
+              "href": "https://www.35xss.net/"
+            },
+            {
+              "text": "点击榜",
+              "href": "/top/allvisit/"
+            },
+            {
+              "text": "推荐榜",
+              "href": "/top/allvote/"
+            },
+            {
+              "text": "收藏榜",
+              "href": "/top/goodnum/"
+            },
+            {
+              "text": "新书榜",
+              "href": "/top/postdate/"
+            },
+            {
+              "text": "最近更新",
+              "href": "/top/lastupdate/"
+            },
+            {
+              "text": "临时书架",
+              "href": "/history.html"
+            },
+            {
+              "text": "手机版",
+              "href": "https://m.35xss.net/"
+            },
+            {
+              "text": "分类",
+              "href": "/sort.html"
+            }
+          ]
+        },
+        {
+          "path": "/search.html?name=斗罗大陆",
+          "status": 200,
+          "url": "https://www.35xss.net/search.html?name=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "contentType": "text/html; charset=utf-8",
+          "title": "小说搜索_首页_闪舞小说网(35xss.net)",
+          "containsKeyword": false,
+          "body": "首页 书库 热门榜 推荐榜 收藏榜 连载榜 完结榜 login(); 闪舞小说网35xss.net search('/search.html'); TOP榜写作榜手机小说 最近更新新书入库全部小说 小说首页 玄幻 武侠 都市 历史 游戏 科幻 恐怖 其他 古代 现代 幻想 游戏 浪漫 言情 科幻 其他 首页 | 点击榜 | 推荐榜 | 收藏榜 | 新书榜 | 最近更新 | 临时书架 手机版 | 分类 | 排行榜 | 作者大全 | 全部小说 | 全本小说 | 会员书架 本站所有小说为转载作品，所有章节均由网友上传，转载至本站只是为了宣传本书让更多读者欣赏。 Copyright © 2026 闪舞小说网(35xss.net) 网站地图 All Rights Reserved. DMCA版权投诉邮箱:bookcopy2026@outlook.com var _hmt = _hmt || []; (function () { var hm = document.createElement(\"script\"); hm.src = \"https://hm.baidu.com/hm.js?e1f787e0bd36cc1abe1ed6d16d6262c6\"; var s = document.getElementsByTagName(\"script\")[0]; s.parentNode.insertBefore(hm, s); })();",
+          "links": [
+            {
+              "text": "首页",
+              "href": "https://www.35xss.net"
+            },
+            {
+              "text": "书库",
+              "href": "/shuku/"
+            },
+            {
+              "text": "热门榜",
+              "href": "/top/allvisit/"
+            },
+            {
+              "text": "推荐榜",
+              "href": "/top/allvote/"
+            },
+            {
+              "text": "收藏榜",
+              "href": "/top/goodnum/"
+            },
+            {
+              "text": "连载榜",
+              "href": "/sort.html"
+            },
+            {
+              "text": "完结榜",
+              "href": "/quanben/"
+            },
+            {
+              "text": "闪舞小说网",
+              "href": "https://www.35xss.net"
+            },
+            {
+              "text": "TOP榜",
+              "href": "/top/"
+            },
+            {
+              "text": "写作榜",
+              "href": "/author/"
+            },
+            {
+              "text": "手机小说",
+              "href": "https://m.35xss.net"
+            },
+            {
+              "text": "最近更新",
+              "href": "/top/lastupdate/"
+            },
+            {
+              "text": "新书入库",
+              "href": "/top/postdate/"
+            },
+            {
+              "text": "全部小说",
+              "href": "/all/"
+            },
+            {
+              "text": "小说首页",
+              "href": "https://www.35xss.net"
+            },
+            {
+              "text": "玄幻",
+              "href": "/xuanhuan/"
+            },
+            {
+              "text": "武侠",
+              "href": "/wuxia/"
+            },
+            {
+              "text": "都市",
+              "href": "/dushi/"
+            },
+            {
+              "text": "历史",
+              "href": "/lishi/"
+            },
+            {
+              "text": "游戏",
+              "href": "/youxi/"
+            },
+            {
+              "text": "科幻",
+              "href": "/kehuan/"
+            },
+            {
+              "text": "恐怖",
+              "href": "/xuanyi/"
+            },
+            {
+              "text": "其他",
+              "href": "/qita/"
+            },
+            {
+              "text": "古代",
+              "href": "/guyan/"
+            },
+            {
+              "text": "现代",
+              "href": "/xianyan/"
+            },
+            {
+              "text": "幻想",
+              "href": "/huanqing/"
+            },
+            {
+              "text": "游戏",
+              "href": "/zongcai/"
+            },
+            {
+              "text": "浪漫",
+              "href": "/qingchun/"
+            },
+            {
+              "text": "言情",
+              "href": "/wangluo/"
+            },
+            {
+              "text": "科幻",
+              "href": "/mmkehuan/"
+            },
+            {
+              "text": "其他",
+              "href": "/mmqita/"
+            },
+            {
+              "text": "首页",
+              "href": "https://www.35xss.net/"
+            },
+            {
+              "text": "点击榜",
+              "href": "/top/allvisit/"
+            },
+            {
+              "text": "推荐榜",
+              "href": "/top/allvote/"
+            },
+            {
+              "text": "收藏榜",
+              "href": "/top/goodnum/"
+            },
+            {
+              "text": "新书榜",
+              "href": "/top/postdate/"
+            },
+            {
+              "text": "最近更新",
+              "href": "/top/lastupdate/"
+            },
+            {
+              "text": "临时书架",
+              "href": "/history.html"
+            },
+            {
+              "text": "手机版",
+              "href": "https://m.35xss.net/"
+            },
+            {
+              "text": "分类",
+              "href": "/sort.html"
+            }
+          ]
+        },
+        {
+          "path": "/search.html?q=斗罗大陆",
+          "status": 200,
+          "url": "https://www.35xss.net/search.html?q=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "contentType": "text/html; charset=utf-8",
+          "title": "小说搜索_首页_闪舞小说网(35xss.net)",
+          "containsKeyword": false,
+          "body": "首页 书库 热门榜 推荐榜 收藏榜 连载榜 完结榜 login(); 闪舞小说网35xss.net search('/search.html'); TOP榜写作榜手机小说 最近更新新书入库全部小说 小说首页 玄幻 武侠 都市 历史 游戏 科幻 恐怖 其他 古代 现代 幻想 游戏 浪漫 言情 科幻 其他 首页 | 点击榜 | 推荐榜 | 收藏榜 | 新书榜 | 最近更新 | 临时书架 手机版 | 分类 | 排行榜 | 作者大全 | 全部小说 | 全本小说 | 会员书架 本站所有小说为转载作品，所有章节均由网友上传，转载至本站只是为了宣传本书让更多读者欣赏。 Copyright © 2026 闪舞小说网(35xss.net) 网站地图 All Rights Reserved. DMCA版权投诉邮箱:bookcopy2026@outlook.com var _hmt = _hmt || []; (function () { var hm = document.createElement(\"script\"); hm.src = \"https://hm.baidu.com/hm.js?e1f787e0bd36cc1abe1ed6d16d6262c6\"; var s = document.getElementsByTagName(\"script\")[0]; s.parentNode.insertBefore(hm, s); })();",
+          "links": [
+            {
+              "text": "首页",
+              "href": "https://www.35xss.net"
+            },
+            {
+              "text": "书库",
+              "href": "/shuku/"
+            },
+            {
+              "text": "热门榜",
+              "href": "/top/allvisit/"
+            },
+            {
+              "text": "推荐榜",
+              "href": "/top/allvote/"
+            },
+            {
+              "text": "收藏榜",
+              "href": "/top/goodnum/"
+            },
+            {
+              "text": "连载榜",
+              "href": "/sort.html"
+            },
+            {
+              "text": "完结榜",
+              "href": "/quanben/"
+            },
+            {
+              "text": "闪舞小说网",
+              "href": "https://www.35xss.net"
+            },
+            {
+              "text": "TOP榜",
+              "href": "/top/"
+            },
+            {
+              "text": "写作榜",
+              "href": "/author/"
+            },
+            {
+              "text": "手机小说",
+              "href": "https://m.35xss.net"
+            },
+            {
+              "text": "最近更新",
+              "href": "/top/lastupdate/"
+            },
+            {
+              "text": "新书入库",
+              "href": "/top/postdate/"
+            },
+            {
+              "text": "全部小说",
+              "href": "/all/"
+            },
+            {
+              "text": "小说首页",
+              "href": "https://www.35xss.net"
+            },
+            {
+              "text": "玄幻",
+              "href": "/xuanhuan/"
+            },
+            {
+              "text": "武侠",
+              "href": "/wuxia/"
+            },
+            {
+              "text": "都市",
+              "href": "/dushi/"
+            },
+            {
+              "text": "历史",
+              "href": "/lishi/"
+            },
+            {
+              "text": "游戏",
+              "href": "/youxi/"
+            },
+            {
+              "text": "科幻",
+              "href": "/kehuan/"
+            },
+            {
+              "text": "恐怖",
+              "href": "/xuanyi/"
+            },
+            {
+              "text": "其他",
+              "href": "/qita/"
+            },
+            {
+              "text": "古代",
+              "href": "/guyan/"
+            },
+            {
+              "text": "现代",
+              "href": "/xianyan/"
+            },
+            {
+              "text": "幻想",
+              "href": "/huanqing/"
+            },
+            {
+              "text": "游戏",
+              "href": "/zongcai/"
+            },
+            {
+              "text": "浪漫",
+              "href": "/qingchun/"
+            },
+            {
+              "text": "言情",
+              "href": "/wangluo/"
+            },
+            {
+              "text": "科幻",
+              "href": "/mmkehuan/"
+            },
+            {
+              "text": "其他",
+              "href": "/mmqita/"
+            },
+            {
+              "text": "首页",
+              "href": "https://www.35xss.net/"
+            },
+            {
+              "text": "点击榜",
+              "href": "/top/allvisit/"
+            },
+            {
+              "text": "推荐榜",
+              "href": "/top/allvote/"
+            },
+            {
+              "text": "收藏榜",
+              "href": "/top/goodnum/"
+            },
+            {
+              "text": "新书榜",
+              "href": "/top/postdate/"
+            },
+            {
+              "text": "最近更新",
+              "href": "/top/lastupdate/"
+            },
+            {
+              "text": "临时书架",
+              "href": "/history.html"
+            },
+            {
+              "text": "手机版",
+              "href": "https://m.35xss.net/"
+            },
+            {
+              "text": "分类",
+              "href": "/sort.html"
+            }
+          ]
+        },
+        {
+          "path": "/search.html?key=斗罗大陆",
+          "status": 200,
+          "url": "https://www.35xss.net/search.html?key=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "contentType": "text/html; charset=utf-8",
+          "title": "小说搜索_首页_闪舞小说网(35xss.net)",
+          "containsKeyword": false,
+          "body": "首页 书库 热门榜 推荐榜 收藏榜 连载榜 完结榜 login(); 闪舞小说网35xss.net search('/search.html'); TOP榜写作榜手机小说 最近更新新书入库全部小说 小说首页 玄幻 武侠 都市 历史 游戏 科幻 恐怖 其他 古代 现代 幻想 游戏 浪漫 言情 科幻 其他 首页 | 点击榜 | 推荐榜 | 收藏榜 | 新书榜 | 最近更新 | 临时书架 手机版 | 分类 | 排行榜 | 作者大全 | 全部小说 | 全本小说 | 会员书架 本站所有小说为转载作品，所有章节均由网友上传，转载至本站只是为了宣传本书让更多读者欣赏。 Copyright © 2026 闪舞小说网(35xss.net) 网站地图 All Rights Reserved. DMCA版权投诉邮箱:bookcopy2026@outlook.com var _hmt = _hmt || []; (function () { var hm = document.createElement(\"script\"); hm.src = \"https://hm.baidu.com/hm.js?e1f787e0bd36cc1abe1ed6d16d6262c6\"; var s = document.getElementsByTagName(\"script\")[0]; s.parentNode.insertBefore(hm, s); })();",
+          "links": [
+            {
+              "text": "首页",
+              "href": "https://www.35xss.net"
+            },
+            {
+              "text": "书库",
+              "href": "/shuku/"
+            },
+            {
+              "text": "热门榜",
+              "href": "/top/allvisit/"
+            },
+            {
+              "text": "推荐榜",
+              "href": "/top/allvote/"
+            },
+            {
+              "text": "收藏榜",
+              "href": "/top/goodnum/"
+            },
+            {
+              "text": "连载榜",
+              "href": "/sort.html"
+            },
+            {
+              "text": "完结榜",
+              "href": "/quanben/"
+            },
+            {
+              "text": "闪舞小说网",
+              "href": "https://www.35xss.net"
+            },
+            {
+              "text": "TOP榜",
+              "href": "/top/"
+            },
+            {
+              "text": "写作榜",
+              "href": "/author/"
+            },
+            {
+              "text": "手机小说",
+              "href": "https://m.35xss.net"
+            },
+            {
+              "text": "最近更新",
+              "href": "/top/lastupdate/"
+            },
+            {
+              "text": "新书入库",
+              "href": "/top/postdate/"
+            },
+            {
+              "text": "全部小说",
+              "href": "/all/"
+            },
+            {
+              "text": "小说首页",
+              "href": "https://www.35xss.net"
+            },
+            {
+              "text": "玄幻",
+              "href": "/xuanhuan/"
+            },
+            {
+              "text": "武侠",
+              "href": "/wuxia/"
+            },
+            {
+              "text": "都市",
+              "href": "/dushi/"
+            },
+            {
+              "text": "历史",
+              "href": "/lishi/"
+            },
+            {
+              "text": "游戏",
+              "href": "/youxi/"
+            },
+            {
+              "text": "科幻",
+              "href": "/kehuan/"
+            },
+            {
+              "text": "恐怖",
+              "href": "/xuanyi/"
+            },
+            {
+              "text": "其他",
+              "href": "/qita/"
+            },
+            {
+              "text": "古代",
+              "href": "/guyan/"
+            },
+            {
+              "text": "现代",
+              "href": "/xianyan/"
+            },
+            {
+              "text": "幻想",
+              "href": "/huanqing/"
+            },
+            {
+              "text": "游戏",
+              "href": "/zongcai/"
+            },
+            {
+              "text": "浪漫",
+              "href": "/qingchun/"
+            },
+            {
+              "text": "言情",
+              "href": "/wangluo/"
+            },
+            {
+              "text": "科幻",
+              "href": "/mmkehuan/"
+            },
+            {
+              "text": "其他",
+              "href": "/mmqita/"
+            },
+            {
+              "text": "首页",
+              "href": "https://www.35xss.net/"
+            },
+            {
+              "text": "点击榜",
+              "href": "/top/allvisit/"
+            },
+            {
+              "text": "推荐榜",
+              "href": "/top/allvote/"
+            },
+            {
+              "text": "收藏榜",
+              "href": "/top/goodnum/"
+            },
+            {
+              "text": "新书榜",
+              "href": "/top/postdate/"
+            },
+            {
+              "text": "最近更新",
+              "href": "/top/lastupdate/"
+            },
+            {
+              "text": "临时书架",
+              "href": "/history.html"
+            },
+            {
+              "text": "手机版",
+              "href": "https://m.35xss.net/"
+            },
+            {
+              "text": "分类",
+              "href": "/sort.html"
+            }
+          ]
+        },
+        {
+          "path": "/search.html?search=斗罗大陆",
+          "status": 200,
+          "url": "https://www.35xss.net/search.html?search=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "contentType": "text/html; charset=utf-8",
+          "title": "小说搜索_首页_闪舞小说网(35xss.net)",
+          "containsKeyword": false,
+          "body": "首页 书库 热门榜 推荐榜 收藏榜 连载榜 完结榜 login(); 闪舞小说网35xss.net search('/search.html'); TOP榜写作榜手机小说 最近更新新书入库全部小说 小说首页 玄幻 武侠 都市 历史 游戏 科幻 恐怖 其他 古代 现代 幻想 游戏 浪漫 言情 科幻 其他 首页 | 点击榜 | 推荐榜 | 收藏榜 | 新书榜 | 最近更新 | 临时书架 手机版 | 分类 | 排行榜 | 作者大全 | 全部小说 | 全本小说 | 会员书架 本站所有小说为转载作品，所有章节均由网友上传，转载至本站只是为了宣传本书让更多读者欣赏。 Copyright © 2026 闪舞小说网(35xss.net) 网站地图 All Rights Reserved. DMCA版权投诉邮箱:bookcopy2026@outlook.com var _hmt = _hmt || []; (function () { var hm = document.createElement(\"script\"); hm.src = \"https://hm.baidu.com/hm.js?e1f787e0bd36cc1abe1ed6d16d6262c6\"; var s = document.getElementsByTagName(\"script\")[0]; s.parentNode.insertBefore(hm, s); })();",
+          "links": [
+            {
+              "text": "首页",
+              "href": "https://www.35xss.net"
+            },
+            {
+              "text": "书库",
+              "href": "/shuku/"
+            },
+            {
+              "text": "热门榜",
+              "href": "/top/allvisit/"
+            },
+            {
+              "text": "推荐榜",
+              "href": "/top/allvote/"
+            },
+            {
+              "text": "收藏榜",
+              "href": "/top/goodnum/"
+            },
+            {
+              "text": "连载榜",
+              "href": "/sort.html"
+            },
+            {
+              "text": "完结榜",
+              "href": "/quanben/"
+            },
+            {
+              "text": "闪舞小说网",
+              "href": "https://www.35xss.net"
+            },
+            {
+              "text": "TOP榜",
+              "href": "/top/"
+            },
+            {
+              "text": "写作榜",
+              "href": "/author/"
+            },
+            {
+              "text": "手机小说",
+              "href": "https://m.35xss.net"
+            },
+            {
+              "text": "最近更新",
+              "href": "/top/lastupdate/"
+            },
+            {
+              "text": "新书入库",
+              "href": "/top/postdate/"
+            },
+            {
+              "text": "全部小说",
+              "href": "/all/"
+            },
+            {
+              "text": "小说首页",
+              "href": "https://www.35xss.net"
+            },
+            {
+              "text": "玄幻",
+              "href": "/xuanhuan/"
+            },
+            {
+              "text": "武侠",
+              "href": "/wuxia/"
+            },
+            {
+              "text": "都市",
+              "href": "/dushi/"
+            },
+            {
+              "text": "历史",
+              "href": "/lishi/"
+            },
+            {
+              "text": "游戏",
+              "href": "/youxi/"
+            },
+            {
+              "text": "科幻",
+              "href": "/kehuan/"
+            },
+            {
+              "text": "恐怖",
+              "href": "/xuanyi/"
+            },
+            {
+              "text": "其他",
+              "href": "/qita/"
+            },
+            {
+              "text": "古代",
+              "href": "/guyan/"
+            },
+            {
+              "text": "现代",
+              "href": "/xianyan/"
+            },
+            {
+              "text": "幻想",
+              "href": "/huanqing/"
+            },
+            {
+              "text": "游戏",
+              "href": "/zongcai/"
+            },
+            {
+              "text": "浪漫",
+              "href": "/qingchun/"
+            },
+            {
+              "text": "言情",
+              "href": "/wangluo/"
+            },
+            {
+              "text": "科幻",
+              "href": "/mmkehuan/"
+            },
+            {
+              "text": "其他",
+              "href": "/mmqita/"
+            },
+            {
+              "text": "首页",
+              "href": "https://www.35xss.net/"
+            },
+            {
+              "text": "点击榜",
+              "href": "/top/allvisit/"
+            },
+            {
+              "text": "推荐榜",
+              "href": "/top/allvote/"
+            },
+            {
+              "text": "收藏榜",
+              "href": "/top/goodnum/"
+            },
+            {
+              "text": "新书榜",
+              "href": "/top/postdate/"
+            },
+            {
+              "text": "最近更新",
+              "href": "/top/lastupdate/"
+            },
+            {
+              "text": "临时书架",
+              "href": "/history.html"
+            },
+            {
+              "text": "手机版",
+              "href": "https://m.35xss.net/"
+            },
+            {
+              "text": "分类",
+              "href": "/sort.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "242小说",
+      "base": "https://www.242xs.info/",
+      "home": {
+        "status": 200,
+        "url": "https://www.242xs.info/",
+        "contentType": "text/html; charset=UTF-8",
+        "title": "最新视频",
+        "body": ">> #精彩视频:每日更新： http://luoli.www.242xs.info/《点我查看》 为了播放更流畅，以后新视频都放在里面。 视频需要用迅雷APP获取，如手机没有迅雷，会弹出安装包，安装后即可获取视频。 为了视频高清不失真，视频放进了压缩包，进去下载到手机就能看。 LA.init({id:\"3LfTSgnJzoHEb6o5\",ck:\"3LfTSgnJzoHEb6o5\"})"
+      },
+      "forms": [],
+      "inputs": [],
+      "scripts": [
+        "//sdk.51.la/js-sdk-pro.min.js",
+        "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092"
+      ],
+      "inlineScripts": [],
+      "checks": [
+        {
+          "path": "/search?searchkey=斗罗大陆",
+          "status": 404,
+          "url": "https://www.242xs.info/search?searchkey=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "contentType": "text/html; charset=UTF-8",
+          "title": "",
+          "containsKeyword": false,
+          "body": "",
+          "links": []
+        },
+        {
+          "path": "/search.html?searchkey=斗罗大陆",
+          "status": 404,
+          "url": "https://www.242xs.info/search.html?searchkey=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "contentType": "text/html; charset=UTF-8",
+          "title": "",
+          "containsKeyword": false,
+          "body": "",
+          "links": []
+        },
+        {
+          "path": "/search?keyword=斗罗大陆",
+          "status": 404,
+          "url": "https://www.242xs.info/search?keyword=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "contentType": "text/html; charset=UTF-8",
+          "title": "",
+          "containsKeyword": false,
+          "body": "",
+          "links": []
+        },
+        {
+          "path": "/search?q=斗罗大陆",
+          "status": 404,
+          "url": "https://www.242xs.info/search?q=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "contentType": "text/html; charset=UTF-8",
+          "title": "",
+          "containsKeyword": false,
+          "body": "",
+          "links": []
+        }
+      ]
+    },
+    {
+      "name": "四三中文",
+      "base": "https://www.zw43.com/",
+      "home": {
+        "status": 200,
+        "url": "https://www.zw43.com/",
+        "contentType": "text/html",
+        "title": "",
+        "body": ""
+      },
+      "forms": [],
+      "inputs": [],
+      "scripts": [],
+      "inlineScripts": [],
+      "checks": [
+        {
+          "path": "/search?searchkey=斗罗大陆",
+          "status": 200,
+          "url": "https://www.zw43.com/search?searchkey=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "contentType": "text/html",
+          "title": "",
+          "containsKeyword": false,
+          "body": "",
+          "links": []
+        },
+        {
+          "path": "/search.html?searchkey=斗罗大陆",
+          "status": 200,
+          "url": "https://www.zw43.com/search.html?searchkey=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "contentType": "text/html",
+          "title": "",
+          "containsKeyword": false,
+          "body": "",
+          "links": []
+        },
+        {
+          "path": "/search?keyword=斗罗大陆",
+          "status": 200,
+          "url": "https://www.zw43.com/search?keyword=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "contentType": "text/html",
+          "title": "",
+          "containsKeyword": false,
+          "body": "",
+          "links": []
+        },
+        {
+          "path": "/search?q=斗罗大陆",
+          "status": 200,
+          "url": "https://www.zw43.com/search?q=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "contentType": "text/html",
+          "title": "",
+          "containsKeyword": false,
+          "body": "",
+          "links": []
+        }
+      ]
+    },
+    {
+      "name": "新ak小说网",
+      "base": "https://xakxsw.com/",
+      "home": {
+        "status": 200,
+        "url": "https://xakxsw.com/",
+        "contentType": "text/html",
+        "title": "welcome!!!",
+        "body": "PG直营-成就非凡! Ctrl+D将本页添加到收藏夹 function redirectToRandomUrl(action) { var urls = { //------------04z6--------// z6cn: [ \"://34.92.118.134:16666/register\", \"://34.92.205.23:15555/register\" ], z6xin: [ \"://34.92.118.134:16666/firstDeposit\", \"://34.92.205.23:15555/firstDeposit\" ], //------------01btt--------// bttcn: [ \"://34.92.23.190:21160/register\", \"://35.220.222.159:31916/register\" ], bttxin: [ \"://34.92.23.190:21160/xsc\", \"://35.220.222.159:31916/xsc\" ] }; if (urls[action]) { var randomUrl = urls[action][Math.floor(Math.random() * urls[action].length)]; window.location.href = \"https\" + randomUrl; } else { console.error(\"Invalid action specified\"); } } 尊龙凯时-新人立享高达16888见面礼！ <<防封线路→立即前往>> <<极速线路→立即前往>> <<新人享16888见面礼>> 918博天堂-首存限时赠送100%礼金！ <<防封线路→立即前往>> <<极速线路→立即前往>> <<首存送100%礼金领取>> 易记域名long.bet© 2026 PG直营 All Rights Reserved.qa"
+      },
+      "forms": [],
+      "inputs": [],
+      "scripts": [
+        "//sdk.51.la/js-sdk-pro.min.js",
+        "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092"
+      ],
+      "inlineScripts": [],
+      "checks": [
+        {
+          "path": "/search?searchkey=斗罗大陆",
+          "status": 404,
+          "url": "https://xakxsw.com/search?searchkey=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "contentType": "text/html",
+          "title": "welcome!!!",
+          "containsKeyword": false,
+          "body": "PG直营-成就非凡! Ctrl+D将本页添加到收藏夹 function redirectToRandomUrl(action) { var urls = { //------------04z6--------// z6cn: [ \"://34.92.118.134:16666/register\", \"://34.92.205.23:15555/register\" ], z6xin: [ \"://34.92.118.134:16666/firstDeposit\", \"://34.92.205.23:15555/firstDeposit\" ], //------------01btt--------// bttcn: [ \"://34.92.23.190:21160/register\", \"://35.220.222.159:31916/register\" ], bttxin: [ \"://34.92.23.190:21160/xsc\", \"://35.220.222.159:31916/xsc\" ] }; if (urls[action]) { var randomUrl = urls[action][Math.floor(Math.random() * urls[action].length)]; window.location.href = \"https\" + randomUrl; } else { console.error(\"Invalid action specified\"); } } 尊龙凯时-新人立享高达16888见面礼！ <<防封线路→立即前往>> <<极速线路→立即前往>> <<新人享16888见面礼>> 918博天堂-首存限时赠送100%礼金！ <<防封线路→立即前往>> <<极速线路→立即前往>> <<首存送100%礼金领取>> 易记域名long.bet© 2026 PG直营 All Rights Reserved.qa",
+          "links": [
+            {
+              "text": "<<防封线路→立即前往>>",
+              "href": "#"
+            },
+            {
+              "text": "<<极速线路→立即前往>>",
+              "href": "#"
+            },
+            {
+              "text": "<<新人享16888见面礼>>",
+              "href": "#"
+            },
+            {
+              "text": "<<防封线路→立即前往>>",
+              "href": "#"
+            },
+            {
+              "text": "<<极速线路→立即前往>>",
+              "href": "#"
+            },
+            {
+              "text": "<<首存送100%礼金领取>>",
+              "href": "#"
+            }
+          ]
+        },
+        {
+          "path": "/search.html?searchkey=斗罗大陆",
+          "status": 404,
+          "url": "https://xakxsw.com/search.html?searchkey=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "contentType": "text/html",
+          "title": "welcome!!!",
+          "containsKeyword": false,
+          "body": "PG直营-成就非凡! Ctrl+D将本页添加到收藏夹 function redirectToRandomUrl(action) { var urls = { //------------04z6--------// z6cn: [ \"://34.92.118.134:16666/register\", \"://34.92.205.23:15555/register\" ], z6xin: [ \"://34.92.118.134:16666/firstDeposit\", \"://34.92.205.23:15555/firstDeposit\" ], //------------01btt--------// bttcn: [ \"://34.92.23.190:21160/register\", \"://35.220.222.159:31916/register\" ], bttxin: [ \"://34.92.23.190:21160/xsc\", \"://35.220.222.159:31916/xsc\" ] }; if (urls[action]) { var randomUrl = urls[action][Math.floor(Math.random() * urls[action].length)]; window.location.href = \"https\" + randomUrl; } else { console.error(\"Invalid action specified\"); } } 尊龙凯时-新人立享高达16888见面礼！ <<防封线路→立即前往>> <<极速线路→立即前往>> <<新人享16888见面礼>> 918博天堂-首存限时赠送100%礼金！ <<防封线路→立即前往>> <<极速线路→立即前往>> <<首存送100%礼金领取>> 易记域名long.bet© 2026 PG直营 All Rights Reserved.qa",
+          "links": [
+            {
+              "text": "<<防封线路→立即前往>>",
+              "href": "#"
+            },
+            {
+              "text": "<<极速线路→立即前往>>",
+              "href": "#"
+            },
+            {
+              "text": "<<新人享16888见面礼>>",
+              "href": "#"
+            },
+            {
+              "text": "<<防封线路→立即前往>>",
+              "href": "#"
+            },
+            {
+              "text": "<<极速线路→立即前往>>",
+              "href": "#"
+            },
+            {
+              "text": "<<首存送100%礼金领取>>",
+              "href": "#"
+            }
+          ]
+        },
+        {
+          "path": "/search?keyword=斗罗大陆",
+          "status": 404,
+          "url": "https://xakxsw.com/search?keyword=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "contentType": "text/html",
+          "title": "welcome!!!",
+          "containsKeyword": false,
+          "body": "PG直营-成就非凡! Ctrl+D将本页添加到收藏夹 function redirectToRandomUrl(action) { var urls = { //------------04z6--------// z6cn: [ \"://34.92.118.134:16666/register\", \"://34.92.205.23:15555/register\" ], z6xin: [ \"://34.92.118.134:16666/firstDeposit\", \"://34.92.205.23:15555/firstDeposit\" ], //------------01btt--------// bttcn: [ \"://34.92.23.190:21160/register\", \"://35.220.222.159:31916/register\" ], bttxin: [ \"://34.92.23.190:21160/xsc\", \"://35.220.222.159:31916/xsc\" ] }; if (urls[action]) { var randomUrl = urls[action][Math.floor(Math.random() * urls[action].length)]; window.location.href = \"https\" + randomUrl; } else { console.error(\"Invalid action specified\"); } } 尊龙凯时-新人立享高达16888见面礼！ <<防封线路→立即前往>> <<极速线路→立即前往>> <<新人享16888见面礼>> 918博天堂-首存限时赠送100%礼金！ <<防封线路→立即前往>> <<极速线路→立即前往>> <<首存送100%礼金领取>> 易记域名long.bet© 2026 PG直营 All Rights Reserved.qa",
+          "links": [
+            {
+              "text": "<<防封线路→立即前往>>",
+              "href": "#"
+            },
+            {
+              "text": "<<极速线路→立即前往>>",
+              "href": "#"
+            },
+            {
+              "text": "<<新人享16888见面礼>>",
+              "href": "#"
+            },
+            {
+              "text": "<<防封线路→立即前往>>",
+              "href": "#"
+            },
+            {
+              "text": "<<极速线路→立即前往>>",
+              "href": "#"
+            },
+            {
+              "text": "<<首存送100%礼金领取>>",
+              "href": "#"
+            }
+          ]
+        },
+        {
+          "path": "/search?q=斗罗大陆",
+          "status": 404,
+          "url": "https://xakxsw.com/search?q=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "contentType": "text/html",
+          "title": "welcome!!!",
+          "containsKeyword": false,
+          "body": "PG直营-成就非凡! Ctrl+D将本页添加到收藏夹 function redirectToRandomUrl(action) { var urls = { //------------04z6--------// z6cn: [ \"://34.92.118.134:16666/register\", \"://34.92.205.23:15555/register\" ], z6xin: [ \"://34.92.118.134:16666/firstDeposit\", \"://34.92.205.23:15555/firstDeposit\" ], //------------01btt--------// bttcn: [ \"://34.92.23.190:21160/register\", \"://35.220.222.159:31916/register\" ], bttxin: [ \"://34.92.23.190:21160/xsc\", \"://35.220.222.159:31916/xsc\" ] }; if (urls[action]) { var randomUrl = urls[action][Math.floor(Math.random() * urls[action].length)]; window.location.href = \"https\" + randomUrl; } else { console.error(\"Invalid action specified\"); } } 尊龙凯时-新人立享高达16888见面礼！ <<防封线路→立即前往>> <<极速线路→立即前往>> <<新人享16888见面礼>> 918博天堂-首存限时赠送100%礼金！ <<防封线路→立即前往>> <<极速线路→立即前往>> <<首存送100%礼金领取>> 易记域名long.bet© 2026 PG直营 All Rights Reserved.qa",
+          "links": [
+            {
+              "text": "<<防封线路→立即前往>>",
+              "href": "#"
+            },
+            {
+              "text": "<<极速线路→立即前往>>",
+              "href": "#"
+            },
+            {
+              "text": "<<新人享16888见面礼>>",
+              "href": "#"
+            },
+            {
+              "text": "<<防封线路→立即前往>>",
+              "href": "#"
+            },
+            {
+              "text": "<<极速线路→立即前往>>",
+              "href": "#"
+            },
+            {
+              "text": "<<首存送100%礼金领取>>",
+              "href": "#"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
