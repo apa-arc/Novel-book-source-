@@ -383,6 +383,9 @@ async function main() {
   if (!response.ok) throw new Error("secondary-upstream-http-" + response.status);
   const secondary = asArray(await response.json());
   const ordinarySubscription = JSON.parse(fs.readFileSync(path.join(ROOT, "subscription.json"), "utf8"));
+  // The app feed uses the repository's native metadata schema, not Legado's
+  // bookSource JSON schema. Do not feed these records into the Legado parser.
+  const ordinarySubscriptionSources = Array.isArray(ordinarySubscription.sources) ? ordinarySubscription.sources : [];
   // Adult sources are intentionally excluded from this repository and all test matrices.
   const adultSubscription = [];
   const seenCandidateSignatures = new Set();
@@ -401,8 +404,10 @@ async function main() {
     seenCandidateSignatures.add(sig);
     candidates.push({ source, provider, testId: sig });
   }
-  ordinarySubscription.forEach((source, index) => addSubscription(source, "subscription-ordinary", index));
-  adultSubscription.forEach((source, index) => addSubscription(source, "subscription-adult", index));
+  // Native app subscription sources are verified by the app-adapter test suite,
+  // not by this Legado-only functional runner.
+  void ordinarySubscriptionSources;
+  void adultSubscription;
   for (const source of aoaostar) if (!adultSource(source)) addCandidate(source, "AOAOSTAR-candidate");
   for (const source of secondary) if (!adultSource(source)) addCandidate(source, "luanmuc-candidate");
   const selected = candidates.filter((_, index) => index % SHARD_COUNT === SHARD_INDEX);
@@ -446,8 +451,8 @@ async function main() {
     counts: {
       candidatesDiscovered: candidates.length,
       inputCounts: {
-        subscriptionOrdinary: ordinarySubscription.length,
-        subscriptionAdult: adultSubscription.length,
+        subscriptionOrdinaryNative: ordinarySubscriptionSources.length,
+        subscriptionAdult: 0,
         aoaostarSnapshot: aoaostar.length,
         secondarySnapshot: secondary.length
       },
