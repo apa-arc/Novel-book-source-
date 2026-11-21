@@ -3,7 +3,7 @@
   "id": "d8zw-com",
   "name": "第八中文网",
   "kind": "public-web",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "baseUrl": "https://www.d8zw.com/",
   "domains": [
     "www.d8zw.com"
