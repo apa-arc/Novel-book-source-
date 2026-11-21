@@ -162,6 +162,17 @@ try{
  const literal=parseLegacyChain("@text: - 作者：");
  assert.equal(literal.status,"candidate");
  assert.equal(literal.selector.value," - 作者：");
+ const legacyText=parseLegacyChain("text.字数@text");
+ assert.equal(legacyText.status,"candidate");
+ assert.equal(legacyText.selector.value,"字数");
+ const standaloneRegex=parseLegacyChain("##最新网址.*");
+ assert.equal(standaloneRegex.status,"candidate");
+ assert.equal(standaloneRegex.selector.engine,"replace");
+ assert.equal(standaloneRegex.selector.input.engine,"self");
+ const chainedRegex=parseLegacyChain("class.title@text##a##b##c##d");
+ assert.equal(chainedRegex.status,"candidate");
+ assert.equal(chainedRegex.selector.engine,"replace");
+ assert.equal(chainedRegex.selector.input.engine,"replace");
  const quotedOperator=parseLegacyChain('a[href="x&&y"]@text');
  assert.equal(quotedOperator.status,"candidate");
  assert.deepEqual(quotedOperator.selector.steps,[{kind:"css",query:'a[href="x&&y"]'}]);
