@@ -16,9 +16,9 @@ assert.ok(scanTextQuality("正常文字\u3000繁體字與异体字".repeat(10)).
 assert.ok(scanTextQuality("").flags.some(flag => flag.rule === "empty-content"));
 assert.equal(scanTextQuality("短").status, "review");
 
-const promoSample = "第一章\\n主角推门走进院子，屋内灯火通明。\\n你说说一日暴富，神通者最新最快更新，點擊直達\\n京東搜索：福利大紅包962，領取至高26888元雙11紅包。\\n主角抬头看向窗外。";
+const promoSample = "第一章\n主角推门走进院子，屋内灯火通明。\n本章未完，点击下方红色链接，免费看神通者完整章节内容\n神通者最新最快更新，点击直达\n京東搜索：福利大紅包962，領取至高26888元雙11紅包。\n主角抬头看向窗外。";
 const cleanedPromo = cleanPromotionalContent(promoSample);
-assert.equal(cleanedPromo.removedBlocks, 2);
+assert.equal(cleanedPromo.removedBlocks, 3);
 assert.ok(cleanedPromo.content.includes("主角推门走进院子"));
 assert.ok(cleanedPromo.content.includes("主角抬头看向窗外"));
 assert.ok(!cleanedPromo.content.includes("京東搜索"));
