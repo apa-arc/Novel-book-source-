@@ -3,7 +3,7 @@ const assert = require("node:assert/strict");
 const { buildCandidateAssessment } = require("../scripts/aggregate-candidate-assessment");
 
 const review = {
-  sourceCount: 4,
+  sourceCount: 5,
   sources: [
     { id: "normal-www", name: "普通书源", group: "普通", baseUrl: "https://www.example.com/" },
     { id: "normal-mobile", name: "普通书源别名", group: "普通", baseUrl: "https://m.example.com/" },
