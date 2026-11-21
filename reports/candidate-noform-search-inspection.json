@@ -1,0 +1,1001 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-21T11:58:38.201Z",
+  "note": "只检查首页 DOM 中的表单、搜索控件、搜索链接和脚本引用，不执行页面 JavaScript、不登录、不读取小说正文。",
+  "counts": {
+    "total": 29,
+    "withForms": 2,
+    "withSearchInputs": 7,
+    "withSearchLinks": 4,
+    "errors": 2
+  },
+  "results": [
+    {
+      "id": "42074fb0129d50c0",
+      "name": "🌸夜伴书屋",
+      "host": "www.yeban360.com",
+      "status": 200,
+      "url": "https://www.yeban360.com/",
+      "contentType": "text/html",
+      "title": "",
+      "forms": [],
+      "inputs": [],
+      "searchAnchors": [],
+      "scripts": [],
+      "searchText": [],
+      "elapsedMs": 133
+    },
+    {
+      "id": "113620b008c73d12",
+      "name": "🍊 17K小说网",
+      "host": "h5.17k.com",
+      "status": 200,
+      "url": "https://h5.17k.com/",
+      "contentType": "text/html",
+      "title": "小说_17K小说网|最新小说下载\n\t\t-17K小说网\n\t",
+      "forms": [],
+      "inputs": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "",
+          "placeholder": "",
+          "onclick": "k.search(this.value)",
+          "id": "keyInput",
+          "className": "key"
+        }
+      ],
+      "searchAnchors": [],
+      "scripts": [
+        "//g.alicdn.com/frontend-lib/frontend-lib/2.3.74/antidom.js",
+        "//o.alicdn.com/frontend-lib/common-lib/jquery.min.js",
+        "//static.17k.com/lib/vConsole/vconsole.min.js?v=0925",
+        "//static.17k.com/js/main.js?v=0925",
+        "//static.17k.com/h5/js/main_old.js",
+        "//static.17k.com/h5/js/main.js?v=0928",
+        "//static.17k.com/lib/swiper/swiper.js",
+        "//static.17k.com/h5/js/index.js?v=0928",
+        "//static.17k.com/h5/js/feedback.js",
+        "https://zz.bdstatic.com/linksubmit/push.js",
+        "//static.17k.com/js/count.js?v=20200909"
+      ],
+      "searchText": [],
+      "elapsedMs": 1051
+    },
+    {
+      "id": "0a33c50aa9ae53bc",
+      "name": "🎉爱奇艺文学#嘚嘚21.0201",
+      "host": "wenxue.iqiyi.com",
+      "status": 200,
+      "url": "https://wenxue.iqiyi.com/",
+      "contentType": "text/html;charset=UTF-8",
+      "title": "爱奇艺小说-热门小说在线阅读-小说排行榜-影视原著小说推荐",
+      "forms": [],
+      "inputs": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "",
+          "placeholder": "",
+          "onclick": "",
+          "id": "searchInput",
+          "className": "searchInput"
+        }
+      ],
+      "searchAnchors": [],
+      "scripts": [
+        "//static.iqiyi.com/js/lib/sea1.2.js"
+      ],
+      "searchText": [],
+      "elapsedMs": 2333
+    },
+    {
+      "id": "eeebb070313d8d06",
+      "name": "🎉笔趣库②",
+      "host": "www.c66c.com",
+      "status": 200,
+      "url": "https://www.c66c.com/",
+      "contentType": "text/html",
+      "title": "",
+      "forms": [],
+      "inputs": [],
+      "searchAnchors": [],
+      "scripts": [],
+      "searchText": [],
+      "elapsedMs": 309
+    },
+    {
+      "id": "5335172e28834cf1",
+      "name": "📖 火星小说",
+      "host": "mobile.hotread.com",
+      "status": 200,
+      "url": "https://mobile.hotread.com/",
+      "contentType": "text/html;charset=UTF-8",
+      "title": "小说排行榜_火星小说_完本小说免费下载，原创小说",
+      "forms": [],
+      "inputs": [],
+      "searchAnchors": [
+        {
+          "text": "",
+          "href": "/search"
+        }
+      ],
+      "scripts": [
+        "//c.hotread.com/assets/js/vue.min.js",
+        "//c.hotread.com/assets/js/vue-resource-polyfill.min.js",
+        "//c.hotread.com/assets/js/swiper.min.js",
+        "//c.hotread.com/assets/js/vue.min.js",
+        "//c.hotread.com/assets/js/vue-resource-polyfill.min.js",
+        "https://res.wx.qq.com/open/js/jweixin-1.2.0.js",
+        "//c.hotread.com/wap/fastclick.min.js"
+      ],
+      "searchText": [
+        "location.href = '/storySearch/search';"
+      ],
+      "elapsedMs": 1466
+    },
+    {
+      "id": "cd82a9b4182c254e",
+      "name": "📖 落初文学",
+      "host": "m.luochu.com",
+      "status": 200,
+      "url": "https://m.luochu.com/",
+      "contentType": "text/html; charset=utf-8",
+      "title": "\r\n        落初文学_原创网络文学,免费手机小说阅读",
+      "forms": [],
+      "inputs": [],
+      "searchAnchors": [
+        {
+          "text": "搜索书名、作者、主角",
+          "href": "/book/search"
+        }
+      ],
+      "scripts": [
+        "//res.luochu.com/resource/js/jquery.min.js",
+        "//res.luochu.com/m/script/tongji.baidu.js",
+        "https://res.luochu.com/js/swiper.min.js"
+      ],
+      "searchText": [
+        "搜索书名、作者、主角"
+      ],
+      "elapsedMs": 2196
+    },
+    {
+      "id": "f2bc474f6331f889",
+      "name": "📥 知乎趣集",
+      "host": "ifun.cool",
+      "status": 200,
+      "url": "https://ifun.cool/",
+      "contentType": "text/html;charset=utf-8",
+      "title": "CoolGame-你的私人游戏仓库",
+      "forms": [],
+      "inputs": [
+        {
+          "tag": "button",
+          "type": "button",
+          "name": "",
+          "placeholder": "",
+          "onclick": "",
+          "id": "",
+          "className": "font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:c"
+        }
+      ],
+      "searchAnchors": [],
+      "scripts": [
+        "https://www.googletagmanager.com/gtag/js?id=G-BHC20W0PL0",
+        "https://hm.baidu.com/hm.js?0c0d824c95118ea622a79b2abe9219d4",
+        "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9623514389930510",
+        "/_nuxt/C5K1pwWE.js",
+        "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092"
+      ],
+      "searchText": [
+        "最近动态发现正在发生的新鲜事9小时前访客 发布了异度之刃3|官方中文|本体+3.0.... 9小时前访客 发布了星之海|官方中文|本体+3.0.60... 1天前访客 发布了希尔维娅 败北传承 Cielvia-... 2天前访客 发布了生前夜初代|移植版|60帧+国语配音... 2天前访客 发布了泪之境 Tearscape|官方中文... 3天前访客 发布了战神1+2合集|汉化移植版|...  加入讨论分享硬核体验、速通技巧与二创心得，让每一份热爱都不被埋没。置顶2022-09-19Switch近期爆火游戏 汇总贴以后仅顶置这一个帖 会把热门游戏都更新在这里 就不一个一个的顶置了 看着会比较杂乱 有些小伙伴也不好找资源 点击游戏名字 即可传送过去 ============= SD高达 激斗同盟 浪漫沙加 未知领域 吃豆人 吃遍世界83380查看更多阿里云盘 最强1006部作品合集[持续更新]2022-09-19 0[置顶] 《PS4中文游戏全集16T无重复》 天翼云盘+115网盘下载2022-11-03 0【重磅】过千部单机游戏下载 绝顶资源 - 持续更新2022-11-12 0最新文章查看更多异度之刃3|官方中文|本体+3.0.0升补+4DLC|NSP|异度神剑3|异度之刃3 為了生存而戰，為了戰鬥而生。 連繫過去與未來，生2026-11-2100星之海|官方中文|本体+3.0.60151a升补+1DLC|NSP|原版|下载在底部 《星之海 Sea of Stars》承载着Sabotage工2026-11-2100希尔维娅 败北传承 Cielvia-Inherited By Defeat|官方中文|本体+1.01升补|NSP|使用PC介绍2026-11-2000生前夜初代|移植版|60帧+国语配音+地图+任务+即时存档|《寄生前夜》（Parasite Eve）是史克威尔（Square，现史克2026-11-1900泪之境 Tearscape|官方中文|本体+1.0.2升补|NSP|介绍使用的是PC版和NS版一模一样的 ...2026-11-1900战神1+2合集|汉化移植版|《战神1》（凡人的救赎与弑神）： ...2026-11-1800最终幻想13-2|官方中文|移植版|...2026-11-1800仙剑奇侠传5|官方中文|移植版|...2026-11-1800宝可梦GS Vitro|移植版|《宝可梦GS Vitro》（Pokémon GS Vitro）是由海外同2026-11-1800刀魂2|移植版|游戏的故事背景围绕着两把拥有神秘力量的传奇兵刃展开：一把是滋生邪恶与毁灭2026-11-1800热门趋势1阿里云盘 最强1006部作品合集[持续更新] 1809832022-09-192Switch近期爆火游戏 汇总贴 833802022-09-193【重磅】过千部单机游戏下载 绝顶资源 - 持续更新 787022022-11-124[置顶] 《PS4中文游戏全集16T无重复》 天翼云盘+115网盘下载 664782022-11-035【汉化更新V2】【更新步兵补丁】【小妖怪分享网独家汉化】☆援助怀孕学园☆ Declining Birth 精翻汉化版 解压即撸【3.24G】 410502023-08-04查看更多最新发布异度之刃3|官方中文|本体+3.0.0升补+4DLC|NSP|2026-11-21星之海|官方中文|本体+3.0.60151a升补+1DLC|NSP|原版|2026-11-21希尔维娅 败北传承 Cielvia-Inherited By Defeat|官方中文|本体+1.01升补|NSP|2026-11-20生前夜初代|移植版|60帧+国语配音+地图+任务+即时存档|2026-11-19泪之境 Tearscape|官方中文|本体+1.0.2升补|NSP|2026-11-19查看更多[[\"ShallowReactive\",1],{\"data\":2,\"state\":289,\"once\":1064,\"_errors\":1065,\"serverRendered\":294,\"path\":1067},[\"ShallowReactive\",3],{\"getFeaturedArticlesData\":4,\"getRecentArticlesData\":71,\"communityDynamicData\":194,\"asideHotArticles\":218,\"asideLatestArticles\":257},{\"articles\":5,\"counts\":53},[6,30,43,57],{\"id\":7,\"articleId\":8,\"title\":9,\"summary\":10,\"status\":11,\"createAt\":12,\"updateAt\":13,\"del\":11,\"authorId\":11,\"slug\":14,\"cover\":15,\"categoryId\":16,\"topicId\":18,\"languageId\":11,\"publishAt\":12,\"views\":19,\"metaTitle\":9,\"metaDescription\":10,\"metaKeywords\":20,\"advantage\":18,\"defect\":18,\"timeline\":21,\"userScore\":22,\"aiScore\":22,\"tags\":23,\"sortId\":24,\"top\":11,\"likes\":25,\"recommend\":25,\"shelves\":11,\"authorName\":26,\"authorEmail\":27,\"authorAvatar\":28,\"authorRoleId\":11,\"commentCount\":29},323,15805,\"Switch近期爆火游戏 汇总贴\",\"以后仅顶置这一个帖 会把热门游戏都更新在这里 就不一个一个的顶置了 看着会比较杂乱 有些小伙伴也不好找资源 点击游戏名字 即可传送过去 ============= SD高达 激斗同盟 浪漫沙加 未知领域 吃豆人 吃遍世界 双点校园 数码宝贝 绝境求生 异度之刃3 信长之野望 新生 时空勇士 卡普空格斗合集 火焰纹章 无双 风花雪月 日版中文 火焰纹章 无双 风花雪月 美版中文 AI 梦境档桉 涅槃肇始 忍者神龟 施莱德的复仇 怪物猎人崛起 曙光 马里奥前锋对战联赛足球 鬼灭之\",1,\"2022-09-19 09:38:09\",\"2026-07-24 10:01:35\",\"tom-clancys-the-division-review\",[],[17],2,null,83380,\"\",[],\"0.0\",[],50,0,\"CoolGame\",\"service@ifun.cool\",\"https://picsum.photos/id/0/200/200\",\"0\",{\"id\":31,\"articleId\":32,\"title\":33,\"summary\":34,\"status\":11,\"createAt\":35,\"updateAt\":36,\"del\":11,\"authorId\":11,\"slug\":37,\"cover\":38,\"categoryId\":39,\"topicId\":18,\"languageId\":11,\"publishAt\":35,\"views\":40,\"metaTitle\":33,\"metaDescription\":34,\"metaKeywords\":20,\"advantage\":18,\"defect\":18,\"timeline\":41,\"userScore\":22,\"aiScore\":22,\"tags\":42,\"sortId\":24,\"top\":11,\"likes\":25,\"recommend\":25,\"shelves\":11,\"authorName\":26,\"authorEmail\":27,\"authorAvatar\":28,\"authorRoleId\":11,\"commentCount\":29},1192,15765,\"阿里云盘 最强1006部作品合集[持续更新]\",\"如果游戏后缀是PDF 删除即可 解压密码：xxxxx520.com 查询游戏 CTRL+F 「switch520阿里云盘ns游戏目录」 https://www.aliyundrive.com/s/RRtSr1NfLY6 「switch520(1)」 https://www.aliyundrive.com/s/nsbLxAGaXkF 「switch520(2)」 https://www.aliyundrive.com/s/xDSGAMnHx7v 「switch520(3)」 h\",\"2022-09-19 09:40:20\",\"2026-07-19 00:20:26\",\"a-li-yun-pan-zui-qiang-938-bu-zuo-pin-he-ji-geng-xin\",[],[11],180983,[],[],{\"id\":44,\"articleId\":45,\"title\":46,\"summary\":47,\"status\":11,\"createAt\":48,\"updateAt\":49,\"del\":11,\"authorId\":11,\"slug\":50,\"cover\":51,\"categoryId\":52,\"topicId\":18,\"languageId\":11,\"publishAt\":48,\"views\":54,\"metaTitle\":46,\"metaDescription\":47,\"metaKeywords\":20,\"advantage\":18,\"defect\":18,\"timeline\":55,\"userScore\":22,\"aiScore\":22,\"tags\":56,\"sortId\":24,\"top\":11,\"likes\":25,\"recommend\":25,\"shelves\":11,\"authorName\":26,\"authorEmail\":27,\"authorAvatar\":28,\"authorRoleId\":11,\"commentCount\":29},1359,15756,\"[置顶] 《PS4中文游戏全集16T无重复》 天翼云盘+115网盘下载\",\"﻿ 天翼云盘和115网盘的区别在于，天翼云盘非会员有每天200G的高速流量，下载几个游戏足够用，适合一般下载用户。115网盘资历老、空间大，很多人有几十上百T的空间，适合收藏和大批量下载用户。 5.05主机可以运行所有5.05版本游戏和绝大多数高版本降级5.05游戏，游戏兼容率99%。 6.72及更高系统版本的主机可以升级9.00系统，游戏兼容率几乎达100%。5.05系统可以不用急于升级。 游戏清单（下载地址在本页面底部）： 428 被封锁的涩谷 428 Shibuya S\",\"2022-11-03 11:17:24\",\"2026-07-19 00:13:39\",\"zhi-ding-ps4-you-xi-quan-ji-14t-tian-yi-yun-pan-115-wang-pan-xia-zai\",[],[53],4,66478,[],[],{\"id\":58,\"articleId\":59,\"title\":60,\"summary\":61,\"status\":11,\"createAt\":62,\"updateAt\":63,\"del\":11,\"authorId\":11,\"slug\":64,\"cover\":65,\"categoryId\":66,\"topicId\":18,\"languageId\":11,\"publishAt\":62,\"views\":68,\"metaTitle\":60,\"metaDescription\":61,\"metaKeywords\":20,\"advantage\":18,\"defect\":18,\"timeline\":69,\"userScore\":22,\"aiScore\":22,\"tags\":70,\"sortId\":24,\"top\":11,\"likes\":25,\"recommend\":25,\"shelves\":11,\"authorName\":26,\"authorEmail\":27,\"authorAvatar\":28,\"authorRoleId\":11,\"commentCount\":29},2831,15120,\"【重磅】过千部单机游戏下载 绝顶资源 - 持续更新\",\"本页游戏搜索方法 当前页面按下“Ctrl+F”查找功能出现在右上角，输入游戏的关键词可快速查找游戏。 ① 不要输入游戏全名，使用模糊搜索！ 例如：使命、战地、三国、红色、帝国、古墓、刺客等，这样搜！ ② 遇到个别失效的游戏链接就往下继续搜索，有些游戏分享了多个更新版链接。很多小白咨询为什么失效？ 百度官方随时可能取消某些分享，导致已分享链接失效，这很正常。 ③ 需要某游戏某个版本的，请按①搜索游戏， 打开合集下载链接后点击合集，再选择某单个版本下载！ 有些小白咨询：要使命11\",\"2022-11-12 16:06:39\",\"2026-07-23 12:47:14\",\"zhong-bang-guo-qian-bu-dan-ji-you-xi-xia-zai-jue-ding-zi-yuan-chi-xu-geng-xin\",[],[67],3,78702,[],[],{\"articles\":72,\"counts\":193},[73,86,98,110,122,134,146,158,169,181],{\"id\":74,\"articleId\":74,\"title\":75,\"summary\":76,\"status\":11,\"createAt\":77,\"updateAt\":77,\"del\":11,\"authorId\":18,\"slug\":78,\"cover\":79,\"categoryId\":83,\"topicId\":18,\"languageId\":11,\"publishAt\":77,\"views\":84,\"metaTitle\":18,\"metaDescription\":18,\"metaKeywords\":18,\"advantage\":18,\"defect\":18,\"timeline\":18,\"userScore\":22,\"aiScore\":22,\"tags\":85,\"sortId\":24,\"top\":25,\"likes\":25,\"recommend\":25,\"shelves\":11,\"authorName\":18,\"authorEmail\":18,\"authorAvatar\":18,\"authorRoleId\":18,\"commentCount\":29},16813,\"异度之刃3|官方中文|本体+3.0.0升补+4DLC|NSP|\",\"异度神剑3|异度之刃3 為了生存而戰，為了戰鬥而生。 連繫過去與未來，生命的故事。 ...\",\"2026-11-21 10:05:43\",\"异度之刃3-官方中文-本体-3-0-0升补-4dlc-nsp\",[80],{\"url\":81,\"name\":82},\"https://img-eshop.cdn.nintendo.net/i/0ac5696ab20a973a48d2d5b9c3c8863e325a61b89ce31db49e045400e33664f1.jpg?w=1000\",\"cover\",[17],35,[],{\"id\":87,\"articleId\":87,\"title\":88,\"summary\":89,\"status\":11,\"createAt\":90,\"updateAt\":90,\"del\":11,\"authorId\":18,\"slug\":91,\"cover\":92,\"categoryId\":95,\"topicId\":18,\"languageId\":11,\"publishAt\":90,\"views\":96,\"metaTitle\":18,\"metaDescription\":18,\"metaKeywords\":18,\"advantage\":18,\"defect\":18,\"timeline\":18,\"userScore\":22,\"aiScore\":22,\"tags\":97,\"sortId\":24,\"top\":25,\"likes\":25,\"recommend\":25,\"shelves\":11,\"authorName\":18,\"authorEmail\":18,\"authorAvatar\":18,\"authorRoleId\":18,\"commentCount\":29},16812,\"星之海|官方中文|本体+3.0.60151a升补+1DLC|NSP|原版|\",\"下载在底部 《星之海 Sea of Stars》承载着Sabotage工作室的目标——用现代的方式重现经典角色扮演游戏： ...\",\"2026-11-21 10:05:34\",\"星之海-官方中文-本体-3-0-60151a升补-1dlc-nsp-原版\",[93],{\"url\":94,\"name\":82},\"https://shared.cdn.queniuqe.com/store_item_assets/steam/apps/1244090/extras/Steam_steam-content-header.png?t=1692718109\",[17],28,[],{\"id\":99,\"articleId\":99,\"title\":100,\"summary\":101,\"status\":11,\"createAt\":102,\"updateAt\":102,\"del\":11,\"authorId\":18,\"slug\":103,\"cover\":104,\"categoryId\":107,\"topicId\":18,\"languageId\":11,\"publishAt\":102,\"views\":108,\"metaTitle\":18,\"metaDescription\":18,\"metaKeywords\":18,\"advantage\":18,\"defect\":18,\"timeline\":18,\"userScore\":22,\"aiScore\":22,\"tags\":109,\"sortId\":24,\"top\":25,\"likes\":25,\"recommend\":25,\"shelves\":11,\"authorName\":18,\"authorEmail\":18,\"authorAvatar\":18,\"authorRoleId\":18,\"commentCount\":29},16811,\"希尔维娅 败北传承 Cielvia-Inherited By Defeat|官方中文|本体+1.01升补|NSP|\",\"使用PC介绍\",\"2026-11-20 13:05:21\",\"希尔维娅-败北传承-cielvia-inherited-by-defeat-官方中文-本体-1-01升补-nsp\",[105],{\"url\":106,\"name\":82},\"https://shared.cdn.queniuqe.com/store_item_assets/steam/apps/4835610/425e3f4e6edfed8bb5716996633a8ad9580301cd/capsule_616x353.jpg?t=1792400514\",[17],46,[],{\"id\":111,\"articleId\":111,\"title\":112,\"summary\":113,\"status\":11,\"createAt\":114,\"updateAt\":114,\"del\":11,\"authorId\":18,\"slug\":115,\"cover\":116,\"categoryId\":119,\"topicId\":18,\"languageId\":11,\"publishAt\":114,\"views\":120,\"metaTitle\":18,\"metaDescription\":18,\"metaKeywords\":18,\"advantage\":18,\"defect\":18,\"timeline\":18,\"userScore\":22,\"aiScore\":22,\"tags\":121,\"sortId\":24,\"top\":25,\"likes\":25,\"recommend\":25,\"shelves\":11,\"authorName\":18,\"authorEmail\":18,\"authorAvatar\":18,\"authorRoleId\":18,\"commentCount\":29},16810,\"生前夜初代|移植版|60帧+国语配音+地图+任务+即时存档|\",\"《寄生前夜》（Parasite Eve）是史克威尔（Square，现史克威尔艾尼克斯）在 PlayStation 平台推出的经典“电影式 ...\",\"2026-11-19 12:05:36\",\"生前夜初代-移植版-60帧-国语配音-地图-任务-即时存档\",[117],{\"url\":118,\"name\":82},\"https://img.odbgo.com/i/2026/11/19/6afe51f4f1f19.jpg\",[17],78,[],{\"id\":123,\"articleId\":123,\"title\":124,\"summary\":125,\"status\":11,\"createAt\":126,\"updateAt\":126,\"del\":11,\"authorId\":18,\"slug\":127,\"cover\":128,\"categoryId\":131,\"topicId\":18,\"languageId\":11,\"publishAt\":126,\"views\":132,\"metaTitle\":18,\"metaDescription\":18,\"metaKeywords\":18,\"advantage\":18,\"defect\":18,\"timeline\":18,\"userScore\":22,\"aiScore\":22,\"tags\":133,\"sortId\":24,\"top\":25,\"likes\":25,\"recommend\":25,\"shelves\":11,\"authorName\":18,\"authorEmail\":18,\"authorAvatar\":18,\"authorRoleId\":18,\"commentCount\":29},16809,\"泪之境 Tearscape|官方中文|本体+1.0.2升补|NSP|\",\"介绍使用的是PC版和NS版一模一样的 ...\",\"2026-11-19 12:05:32\",\"泪之境-tearscape-官方中文-本体-1-0-2升补-nsp\",[129],{\"url\":130,\"name\":82},\"https://shared.cdn.queniuqe.com/store_item_assets/steam/apps/3216340/8899c176b93c8ad4c6affc10d4e758f499ca80d1/capsule_616x353.jpg?t=1790339703\",[17],47,[],{\"id\":135,\"articleId\":135,\"title\":136,\"summary\":137,\"status\":11,\"createAt\":138,\"updateAt\":138,\"del\":11,\"authorId\":18,\"slug\":139,\"cover\":140,\"categoryId\":143,\"topicId\":18,\"languageId\":11,\"publishAt\":138,\"views\":144,\"metaTitle\":18,\"metaDescription\":18,\"metaKeywords\":18,\"advantage\":18,\"defect\":18,\"timeline\":18,\"userScore\":22,\"aiScore\":22,\"tags\":145,\"sortId\":24,\"top\":25,\"likes\":25,\"recommend\":25,\"shelves\":11,\"authorName\":18,\"authorEmail\":18,\"authorAvatar\":18,\"authorRoleId\":18,\"commentCount\":29},16808,\"战神1+2合集|汉化移植版|\",\"《战神1》（凡人的救赎与弑神）： ...\",\"2026-11-18 13:05:27\",\"战神1-2合集-汉化移植版\",[141],{\"url\":142,\"name\":82},\"https://img.odbgo.com/i/2026/11/18/6afd09f3edefa.jpg\",[17],115,[],{\"id\":147,\"articleId\":147,\"title\":148,\"summary\":149,\"status\":11,\"createAt\":150,\"updateAt\":150,\"del\":11,\"authorId\":18,\"slug\":151,\"cover\":152,\"categoryId\":155,\"topicId\":18,\"languageId\":11,\"publishAt\":150,\"views\":156,\"metaTitle\":18,\"metaDescription\":18,\"metaKeywords\":18,\"advantage\":18,\"defect\":18,\"timeline\":18,\"userScore\":22,\"aiScore\":22,\"tags\":157,\"sortId\":24,\"top\":25,\"likes\":25,\"recommend\":25,\"shelves\":11,\"authorName\":18,\"authorEmail\":18,\"authorAvatar\":18,\"authorRoleId\":18,\"commentCount\":29},16807,\"最终幻想13-2|官方中文|移植版|\",\"...\",\"2026-11-18 12:05:19\",\"最终幻想13-2-官方中文-移植版\",[153],{\"url\":154,\"name\":82},\"https://shared.cdn.queniuqe.com/store_item_assets/steam/apps/292140/capsule_616x353.jpg?t=1775177243\",[17],61,[],{\"id\":159,\"articleId\":159,\"title\":160,\"summary\":149,\"status\":11,\"createAt\":161,\"updateAt\":161,\"del\":11,\"authorId\":18,\"slug\":162,\"cover\":163,\"categoryId\":166,\"topicId\":18,\"languageId\":11,\"publishAt\":161,\"views\":167,\"metaTitle\":18,\"metaDescription\":18,\"metaKeywords\":18,\"advantage\":18,\"defect\":18,\"timeline\":18,\"userScore\":22,\"aiScore\":22,\"tags\":168,\"sortId\":24,\"top\":25,\"likes\":25,\"recommend\":25,\"shelves\":11,\"authorName\":18,\"authorEmail\":18,\"authorAvatar\":18,\"authorRoleId\":18,\"commentCount\":29},16806,\"仙剑奇侠传5|官方中文|移植版|\",\"2026-11-18 11:05:39\",\"仙剑奇侠传5-官方中文-移植版\",[164],{\"url\":165,\"name\":82},\"https://shared.cdn.queniuqe.com/store_item_assets/steam/apps/1569930/capsule_616x353.jpg?t=1627367102\",[17],90,[],{\"id\":170,\"articleId\":170,\"title\":171,\"summary\":172,\"status\":11,\"createAt\":173,\"updateAt\":173,\"del\":11,\"authorId\":18,\"slug\":174,\"cover\":175,\"categoryId\":178,\"topicId\":18,\"languageId\":11,\"publishAt\":173,\"views\":179,\"metaTitle\":18,\"metaDescription\":18,\"metaKeywords\":18,\"advantage\":18,\"defect\":18,\"timeline\":18,\"userScore\":22,\"aiScore\":22,\"tags\":180,\"sortId\":24,\"top\":25,\"likes\":25,\"recommend\":25,\"shelves\":11,\"authorName\":18,\"authorEmail\":18,\"authorAvatar\":18,\"authorRoleId\":18,\"commentCount\":29},16805,\"宝可梦GS Vitro|移植版|\",\"《宝可梦GS Vitro》（Pokémon GS Vitro）是由海外同人开发团队（Perseida Project / 核心成员包括 ClaraDragon、Horo、Angeleiro ...\",\"2026-11-18 11:05:35\",\"宝可梦gs-vitro-移植版\",[176],{\"url\":177,\"name\":82},\"https://img.odbgo.com/i/2026/11/18/6afd0d58a4b73.jpg\",[17],75,[],{\"id\":182,\"articleId\":182,\"title\":183,\"summary\":184,\"status\":11,\"createAt\":185,\"updateAt\":185,\"del\":11,\"authorId\":18,\"slug\":186,\"cover\":187,\"categoryId\":190,\"topicId\":18,\"languageId\":11,\"publishAt\":185,\"views\":191,\"metaTitle\":18,\"metaDescription\":18,\"metaKeywords\":18,\"advantage\":18,\"defect\":18,\"timeline\":18,\"userScore\":22,\"aiScore\":22,\"tags\":192,\"sortId\":24,\"top\":25,\"likes\":25,\"recommend\":25,\"shelves\":11,\"authorName\":18,\"authorEmail\":18,\"authorAvatar\":18,\"authorRoleId\":18,\"commentCount\":29},16804,\"刀魂2|移植版|\",\"游戏的故事背景围绕着两把拥有神秘力量的传奇兵刃展开：一把是滋生邪恶与毁灭的魔剑“Soul Edge（魂之利刃）”， ...\",\"2026-11-18 11:05:31\",\"刀魂2-移植版\",[188],{\"url\":189,\"name\":82},\"https://img.odbgo.com/i/2026/11/18/6afd0ba77c35b.jpg\",[17],66,[],16758,{\"counts\":195,\"pageSize\":196,\"page\":11,\"list\":197},1008,6,[198,203,206,209,212,215],{\"id\":199,\"typeId\":53,\"articleId\":74,\"topicId\":25,\"registerId\":25,\"adminId\":25,\"createAt\":77,\"articleTitle\":75,\"articleSlug\":78,\"articlestTopicId\":18,\"topicTitle\":18,\"topicSlug\":18,\"registerUsername\":18,\"registerAccount\":18,\"adminUsername\":18,\"adminAccount\":18,\"actorName\":200,\"title\":75,\"targetType\":201,\"targetUrl\":202},\"1034\",\"访客\",\"article\",\"/16813.html\",{\"id\":204,\"typeId\":53,\"articleId\":87,\"topicId\":25,\"registerId\":25,\"adminId\":25,\"createAt\":90,\"articleTitle\":88,\"articleSlug\":91,\"articlestTopicId\":18,\"topicTitle\":18,\"topicSlug\":18,\"registerUsername\":18,\"registerAccount\":18,\"adminUsername\":18,\"adminAccount\":18,\"actorName\":200,\"title\":88,\"targetType\":201,\"targetUrl\":205},\"1033\",\"/16812.html\",{\"id\":207,\"typeId\":53,\"articleId\":99,\"topicId\":25,\"registerId\":25,\"adminId\":25,\"createAt\":102,\"articleTitle\":100,\"articleSlug\":103,\"articlestTopicId\":18,\"topicTitle\":18,\"topicSlug\":18,\"registerUsername\":18,\"registerAccount\":18,\"adminUsername\":18,\"adminAccount\":18,\"actorName\":200,\"title\":100,\"targetType\":201,\"targetUrl\":208},\"1032\",\"/16811.html\",{\"id\":210,\"typeId\":53,\"articleId\":111,\"topicId\":25,\"registerId\":25,\"adminId\":25,\"createAt\":114,\"articleTitle\":112,\"articleSlug\":115,\"articlestTopicId\":18,\"topicTitle\":18,\"topicSlug\":18,\"registerUsername\":18,\"registerAccount\":18,\"adminUsername\":18,\"adminAccount\":18,\"actorName\":200,\"title\":112,\"targetType\":201,\"targetUrl\":211},\"1031\",\"/16810.html\",{\"id\":213,\"typeId\":53,\"articleId\":123,\"topicId\":25,\"registerId\":25,\"adminId\":25,\"createAt\":126,\"articleTitle\":124,\"articleSlug\":127,\"articlestTopicId\":18,\"topicTitle\":18,\"topicSlug\":18,\"registerUsername\":18,\"registerAccount\":18,\"adminUsername\":18,\"adminAccount\":18,\"actorName\":200,\"title\":124,\"targetType\":201,\"targetUrl\":214},\"1030\",\"/16809.html\",{\"id\":216,\"typeId\":53,\"articleId\":135,\"topicId\":25,\"registerId\":25,\"adminId\":25,\"createAt\":138,\"articleTitle\":136,\"articleSlug\":139,\"articlestTopicId\":18,\"topicTitle\":18,\"topicSlug\":18,\"registerUsername\":18,\"registerAccount\":18,\"adminUsername\":18,\"adminAccount\":18,\"actorName\":200,\"title\":136,\"targetType\":201,\"targetUrl\":217},\"1029\",\"/16808.html\",{\"articles\":219},[220,226,232,238,244],{\"id\":221,\"articleId\":32,\"title\":33,\"summary\":34,\"status\":11,\"createAt\":35,\"updateAt\":36,\"del\":11,\"authorId\":11,\"slug\":37,\"cover\":222,\"categoryId\":223,\"topicId\":18,\"languageId\":11,\"publishAt\":35,\"views\":40,\"metaTitle\":33,\"metaDescription\":34,\"metaKeywords\":20,\"advantage\":18,\"defect\":18,\"timeline\":224,\"userScore\":22,\"aiScore\":22,\"tags\":225,\"sortId\":24,\"top\":11,\"likes\":25,\"recommend\":25,\"shelves\":11,\"authorName\":26,\"authorEmail\":27,\"authorAvatar\":28,\"authorRoleId\":11,\"commentCount\":29},\"1192\",[],[11],[],[],{\"id\":227,\"articleId\":8,\"title\":9,\"summary\":10,\"status\":11,\"createAt\":12,\"updateAt\":13,\"del\":11,\"authorId\":11,\"slug\":14,\"cover\":228,\"categoryId\":229,\"topicId\":18,\"languageId\":11,\"publishAt\":12,\"views\":19,\"metaTitle\":9,\"metaDescription\":10,\"metaKeywords\":20,\"advantage\":18,\"defect\":18,\"timeline\":230,\"userScore\":22,\"aiScore\":22,\"tags\":231,\"sortId\":24,\"top\":11,\"likes\":25,\"recommend\":25,\"shelves\":11,\"authorName\":26,\"authorEmail\":27,\"authorAvatar\":28,\"authorRoleId\":11,\"commentCount\":29},\"323\",[],[17],[],[],{\"id\":233,\"articleId\":59,\"title\":60,\"summary\":61,\"status\":11,\"createAt\":62,\"updateAt\":63,\"del\":11,\"authorId\":11,\"slug\":64,\"cover\":234,\"categoryId\":235,\"topicId\":18,\"languageId\":11,\"publishAt\":62,\"views\":68,\"metaTitle\":60,\"metaDescription\":61,\"metaKeywords\":20,\"advantage\":18,\"defect\":18,\"timeline\":236,\"userScore\":22,\"aiScore\":22,\"tags\":237,\"sortId\":24,\"top\":11,\"likes\":25,\"recommend\":25,\"shelves\":11,\"authorName\":26,\"authorEmail\":27,\"authorAvatar\":28,\"authorRoleId\":11,\"commentCount\":29},\"2831\",[],[67],[],[],{\"id\":239,\"articleId\":45,\"title\":46,\"summary\":47,\"status\":11,\"createAt\":48,\"updateAt\":49,\"del\":11,\"authorId\":11,\"slug\":50,\"cover\":240,\"categoryId\":241,\"topicId\":18,\"languageId\":11,\"publishAt\":48,\"views\":54,\"metaTitle\":46,\"metaDescription\":47,\"metaKeywords\":20,\"advantage\":18,\"defect\":18,\"timeline\":242,\"userScore\":22,\"aiScore\":22,\"tags\":243,\"sortId\":24,\"top\":11,\"likes\":25,\"recommend\":25,\"shelves\":11,\"authorName\":26,\"authorEmail\":27,\"authorAvatar\":28,\"authorRoleId\":11,\"commentCount\":29},\"1359\",[],[53],[],[],{\"id\":245,\"articleId\":246,\"title\":247,\"summary\":248,\"status\":11,\"createAt\":249,\"updateAt\":250,\"del\":11,\"authorId\":11,\"slug\":251,\"cover\":252,\"categoryId\":253,\"topicId\":18,\"languageId\":11,\"publishAt\":249,\"views\":254,\"metaTitle\":247,\"metaDescription\":248,\"metaKeywords\":255,\"advantage\":18,\"defect\":18,\"timeline\":18,\"userScore\":22,\"aiScore\":22,\"tags\":256,\"sortId\":24,\"top\":25,\"likes\":25,\"recommend\":25,\"shelves\":11,\"authorName\":26,\"authorEmail\":27,\"authorAvatar\":28,\"authorRoleId\":11,\"commentCount\":29},\"23407\",10258,\"【汉化更新V2】【更新步兵补丁】【小妖怪分享网独家汉化】☆援助怀孕学园☆ Declining Birth 精翻汉化版 解压即撸【3.24G】\",\"解压密码：xyg688.com 步兵补丁（NO码）补丁：百度盘 夸克盘 P盘 krakenfiles盘 看了下资产，都是NO码的，只是被万恶...\",\"2023-08-04 00:21:06\",\"2023-12-29 15:11:19\",\"【汉化更新v2】【更新步兵补丁】【小妖怪分享网独\",[],[67],41050,\"PC游戏\",[255],{\"articles\":258},[259,265,271,277,283],{\"id\":260,\"articleId\":74,\"title\":75,\"summary\":76,\"status\":11,\"createAt\":77,\"updateAt\":77,\"del\":11,\"authorId\":18,\"slug\":78,\"cover\":261,\"categoryId\":263,\"topicId\":18,\"languageId\":11,\"publishAt\":77,\"views\":84,\"metaTitle\":18,\"metaDescription\":18,\"metaKeywords\":18,\"advantage\":18,\"defect\":18,\"timeline\":18,\"userScore\":22,\"aiScore\":22,\"tags\":264,\"sortId\":24,\"top\":25,\"likes\":25,\"recommend\":25,\"shelves\":11,\"authorName\":18,\"authorEmail\":18,\"authorAvatar\":18,\"authorRoleId\":18,\"commentCount\":29},\"16813\",[262],{\"url\":81,\"name\":82},[17],[],{\"id\":266,\"articleId\":87,\"title\":88,\"summary\":89,\"status\":11,\"createAt\":90,\"updateAt\":90,\"del\":11,\"authorId\":18,\"slug\":91,\"cover\":267,\"categoryId\":269,\"topicId\":18,\"languageId\":11,\"publishAt\":90,\"views\":96,\"metaTitle\":18,\"metaDescription\":18,\"metaKeywords\":18,\"advantage\":18,\"defect\":18,\"timeline\":18,\"userScore\":22,\"aiScore\":22,\"tags\":270,\"sortId\":24,\"top\":25,\"likes\":25,\"recommend\":25,\"shelves\":11,\"authorName\":18,\"authorEmail\":18,\"authorAvatar\":18,\"authorRoleId\":18,\"commentCount\":29},\"16812\",[268],{\"url\":94,\"name\":82},[17],[],{\"id\":272,\"articleId\":99,\"title\":100,\"summary\":101,\"status\":11,\"createAt\":102,\"updateAt\":102,\"del\":11,\"authorId\":18,\"slug\":103,\"cover\":273,\"categoryId\":275,\"topicId\":18,\"languageId\":11,\"publishAt\":102,\"views\":108,\"metaTitle\":18,\"metaDescription\":18,\"metaKeywords\":18,\"advantage\":18,\"defect\":18,\"timeline\":18,\"userScore\":22,\"aiScore\":22,\"tags\":276,\"sortId\":24,\"top\":25,\"likes\":25,\"recommend\":25,\"shelves\":11,\"authorName\":18,\"authorEmail\":18,\"authorAvatar\":18,\"authorRoleId\":18,\"commentCount\":29},\"16811\",[274],{\"url\":106,\"name\":82},[17],[],{\"id\":278,\"articleId\":111,\"title\":112,\"summary\":113,\"status\":11,\"createAt\":114,\"updateAt\":114,\"del\":11,\"authorId\":18,\"slug\":115,\"cover\":279,\"categoryId\":281,\"topicId\":18,\"languageId\":11,\"publishAt\":114,\"views\":120,\"metaTitle\":18,\"metaDescription\":18,\"metaKeywords\":18,\"advantage\":18,\"defect\":18,\"timeline\":18,\"userScore\":22,\"aiScore\":22,\"tags\":282,\"sortId\":24,\"top\":25,\"likes\":25,\"recommend\":25,\"shelves\":11,\"authorName\":18,\"authorEmail\":18,\"authorAvatar\":18,\"authorRoleId\":18,\"commentCount\":29},\"16810\",[280],{\"url\":118,\"name\":82},[17],[],{\"id\":284,\"articleId\":123,\"title\":124,\"summary\":125,\"status\":11,\"createAt\":126,\"updateAt\":126,\"del\":11,\"authorId\":18,\"slug\":127,\"cover\":285,\"categoryId\":287,\"topicId\":18,\"languageId\":11,\"publishAt\":126,\"views\":132,\"metaTitle\":18,\"metaDescription\":18,\"metaKeywords\":18,\"advantage\":18,\"defect\":18,\"timeline\":18,\"userScore\":22,\"aiScore\":22,\"tags\":288,\"sortId\":24,\"top\":25,\"likes\":25,\"recommend\":25,\"shelves\":11,\"authorName\":18,\"authorEmail\":18,\"authorAvatar\":18,\"authorRoleId\":18,\"commentCount\":29},\"16809\",[286],{\"url\":130,\"name\":82},[17],[],[\"Reactive\",290],{\"$si18n:cached-locale-configs\":291,\"$si18n:resolved-locale\":20,\"$ssiteData\":297,\"$slanguage\":306,\"$slangData\":307,\"$slocaleCode\":20,\"$sisLoggedIn\":1057,\"$sshowLoginModal\":1057,\"$stoken\":20,\"$suserInfo\":1058,\"$skeyword\":20,\"$ssearchHistory\":1059,\"$stimestamp\":1060,\"$stoasts\":1061,\"$sheaderHight\":-1,\"$smenu\":1062,\"$scrumb\":1063},{\"zh-CN\":292,\"zh-TW\":295},{\"fallbacks\":293,\"cacheable\":294},[],true,{\"fallbacks\":296,\"cacheable\":294},[],{\"id\":11,\"name\":26,\"link\":298,\"createAt\":299,\"updateAt\":300,\"status\":11,\"del\":11,\"sortId\":24,\"logo\":18,\"darkLogo\":18,\"favicon\":18,\"languageId\":301,\"icp\":18,\"gwa\":18,\"ansCode\":305,\"contact\":18},\"https://www.ifun.cool\",\"2026-04-22 10:01:44\",\"2026-07-18T16:53:01.000Z\",[302],{\"id\":11,\"del\":11,\"code\":303,\"name\":304,\"sortId\":24,\"status\":11},\"zh\",\"简体中文\",\"var _hmt = _hmt || [];\\n(function() {\\n  var hm = document.createElement(\\\"script\\\");\\n  hm.src = \\\"https://hm.baidu.com/hm.js?06cb6216d884239d856f6b5a3f101963\\\";\\n  var s = document.getElementsByTagName(\\\"script\\\")[0]; \\n  s.parentNode.insertBefore(hm, s);\\n})();\",\"zh-CN\",[308,311,314,318,322,326,330,334,338,342,346,350,354,358,362,366,370,374,377,381,385,389,393,397,400,404,408,412,416,420,424,427,431,435,439,443,447,451,454,458,462,466,470,474,478,482,486,490,494,498,502,506,509,513,517,521,525,529,532,536,540,544,548,552,556,560,564,568,572,576,580,584,588,592,596,600,604,608,612,616,620,624,628,632,636,640,644,648,652,656,660,664,668,672,676,680,684,688,692,696,700,704,708,712,716,720,724,728,732,736,740,744,748,751,755,759,763,767,771,775,779,783,787,791,795,799,803,807,811,815,819,823,827,831,835,839,843,847,850,854,858,862,866,870,874,878,882,886,890,894,898,902,906,910,914,918,922,926,930,934,938,942,945,949,953,957,961,965,969,973,977,981,985,989,993,997,1001,1005,1009,1013,1017,1021,1025,1029,1033,1037,1041,1045,1049,1053],{\"id\":11,\"languageId\":11,\"lang\":309,\"langExplain\":310,\"classify\":11,\"del\":11},\"Web Title\",\"你的私人游戏仓库\",{\"id\":67,\"languageId\":11,\"lang\":312,\"langExplain\":313,\"classify\":11,\"del\":11},\"Web Keywords\",\"发现好物,分享资源,精品推荐,好物分享,实用工具,效率软件,设计素材,学习资源,免费资源,优质网站,生活好物,宝藏网站,干货分享\",{\"id\":315,\"languageId\":11,\"lang\":316,\"langExplain\":317,\"classify\":11,\"del\":11},5,\"Web Description\",\"探索好玩，分享纯粹快乐。精选高品质单机大作、多人联机与怀旧经典，提供免安装资源、汉化补丁与联机教程。帮你过滤垃圾游戏，提升娱乐效率，发现更多值得收藏的精品世界。\",{\"id\":319,\"languageId\":11,\"lang\":320,\"langExplain\":321,\"classify\":11,\"del\":11},7,\"Load More\",\"加载更多\",{\"id\":323,\"languageId\":11,\"lang\":324,\"langExplain\":325,\"classify\":11,\"del\":11},9,\"Discussion\",\"讨论\",{\"id\":327,\"languageId\":11,\"lang\":328,\"langExplain\":329,\"classify\":11,\"del\":11},11,\"More Discussions\",\"更多讨论\",{\"id\":331,\"languageId\":11,\"lang\":332,\"langExplain\":333,\"classify\":11,\"del\":11},13,\"Latest news\",\"最新动态\",{\"id\":335,\"languageId\":11,\"lang\":336,\"langExplain\":337,\"classify\":11,\"del\":11},15,\"View more\",\"查看更多\",{\"id\":339,\"languageId\":11,\"lang\":340,\"langExplain\":341,\"classify\":11,\"del\":11},17,\"Noteworthy\",\"值得关注\",{\"id\":343,\"languageId\":11,\"lang\":344,\"langExplain\":345,\"classify\":11,\"del\":11},19,\"Curated AI Projects\",\"优质AI项目严选\",{\"id\":347,\"languageId\":11,\"lang\":348,\"langExplain\":349,\"classify\":11,\"del\":11},21,\"Chosen\",\"精选\",{\"id\":351,\"languageId\":11,\"lang\":352,\"langExplain\":353,\"classify\":11,\"del\":11},23,\"Hottest\",\"热门\",{\"id\":355,\"languageId\":11,\"lang\":356,\"langExplain\":357,\"classify\":11,\"del\":11},25,\"Random\",\"随便看看\",{\"id\":359,\"languageId\":11,\"lang\":360,\"langExplain\":361,\"classify\":11,\"del\":11},27,\"Contact Mail\",\"侵权删帖/违法举报/投稿等联系邮箱\",{\"id\":363,\"languageId\":11,\"lang\":364,\"langExplain\":365,\"classify\":11,\"del\":11},29,\"Replace\",\"(#替换成@)\",{\"id\":367,\"languageId\":11,\"lang\":368,\"langExplain\":369,\"classify\":11,\"del\":11},31,\"All comments\",\"全部评论\",{\"id\":371,\"languageId\":11,\"lang\":372,\"langExplain\":373,\"classify\":11,\"del\":11},33,\"Post comment\",\"发布评论\",{\"id\":84,\"languageId\":11,\"lang\":375,\"langExplain\":376,\"classify\":11,\"del\":11},\"Please log in to post a comment\",\"请登录后发表评论\",{\"id\":378,\"languageId\":11,\"lang\":379,\"langExplain\":380,\"classify\":11,\"del\":11},37,\"Log in\",\"去登录\",{\"id\":382,\"languageId\":11,\"lang\":383,\"langExplain\":384,\"classify\":11,\"del\":11},39,\"Reply\",\"回复\",{\"id\":386,\"languageId\":11,\"lang\":387,\"langExplain\":388,\"classify\":11,\"del\":11},41,\"Like\",\"点赞\",{\"id\":390,\"languageId\":11,\"lang\":391,\"langExplain\":392,\"classify\":11,\"del\":11},43,\"Post reply\",\"发布回复\",{\"id\":394,\"languageId\":11,\"lang\":395,\"langExplain\":396,\"classify\":11,\"del\":11},45,\"Writing respectful, rational, and friendly comments helps us communicate better\",\"写下尊重、理性、友好的评论，有助于彼此更好地交流~\",{\"id\":132,\"languageId\":11,\"lang\":398,\"langExplain\":399,\"classify\":11,\"del\":11},\"There are no comments yet, be the first to leave one\",\"暂时还没有评论，快来评论一条吧\",{\"id\":401,\"languageId\":11,\"lang\":402,\"langExplain\":403,\"classify\":11,\"del\":11},49,\"Account settings\",\"账号设置\",{\"id\":405,\"languageId\":11,\"lang\":406,\"langExplain\":407,\"classify\":11,\"del\":11},51,\"Log out\",\"退出登录\",{\"id\":409,\"languageId\":11,\"lang\":410,\"langExplain\":411,\"classify\":11,\"del\":11},53,\"Page does not exist\",\"页面不存在\",{\"id\":413,\"languageId\":11,\"lang\":414,\"langExplain\":415,\"classify\":11,\"del\":11},55,\"Sorry, the page you requested does not exist or has been deleted\",\"抱歉，您要查看的页面不存在或已被删除\",{\"id\":417,\"languageId\":11,\"lang\":418,\"langExplain\":419,\"classify\":11,\"del\":11},57,\"Return to homepage\",\"返回首页\",{\"id\":421,\"languageId\":11,\"lang\":422,\"langExplain\":423,\"classify\":11,\"del\":11},59,\"Go Back\",\"返回\",{\"id\":156,\"languageId\":11,\"lang\":425,\"langExplain\":426,\"classify\":11,\"del\":11},\"Log in to AIGeek\",\"登录AIGeek\",{\"id\":428,\"languageId\":11,\"lang\":429,\"langExplain\":430,\"classify\":11,\"del\":11},63,\"Login\",\"登录\",{\"id\":432,\"languageId\":11,\"lang\":433,\"langExplain\":434,\"classify\":11,\"del\":11},65,\"Register\",\"注册\",{\"id\":436,\"languageId\":11,\"lang\":437,\"langExplain\":438,\"classify\":17,\"del\":11},67,\"Incorrect email or password\",\"邮箱或密码错误\",{\"id\":440,\"languageId\":11,\"lang\":441,\"langExplain\":442,\"classify\":17,\"del\":11},69,\"Unactivated users cannot log in\",\"未激活用户，无法登录\",{\"id\":444,\"languageId\":11,\"lang\":445,\"langExplain\":446,\"classify\":17,\"del\":11},71,\"Email not verified, please try again\",\"邮箱未验证通过，请重试\",{\"id\":448,\"languageId\":11,\"lang\":449,\"langExplain\":450,\"classify\":11,\"del\":11},73,\"You have been safely logged out\",\"您已安全登出\",{\"id\":179,\"languageId\":11,\"lang\":452,\"langExplain\":453,\"classify\":11,\"del\":11},\"My collection\",\"我的收藏\",{\"id\":455,\"languageId\":11,\"lang\":456,\"langExplain\":457,\"classify\":11,\"del\":11},77,\"Verification code sent\",\"已发送验证码\",{\"id\":459,\"languageId\":11,\"lang\":460,\"langExplain\":461,\"classify\":11,\"del\":11},79,\"Failed to send verification code\",\"验证码发送失败\",{\"id\":463,\"languageId\":11,\"lang\":464,\"langExplain\":465,\"classify\":17,\"del\":11},81,\"Verification code sent successfully\",\"验证码已成功发送\",{\"id\":467,\"languageId\":11,\"lang\":468,\"langExplain\":469,\"classify\":11,\"del\":11},83,\"Required\",\"必需的\",{\"id\":471,\"languageId\":11,\"lang\":472,\"langExplain\":473,\"classify\":11,\"del\":11},85,\"Please enter a valid email address\",\"请输入正确的邮箱格式\",{\"id\":475,\"languageId\":11,\"lang\":476,\"langExplain\":477,\"classify\":11,\"del\":11},87,\"This email is already taken\",\"此邮箱已被占用\",{\"id\":479,\"languageId\":11,\"lang\":480,\"langExplain\":481,\"classify\":11,\"del\":11},89,\"Please enter a valid username\",\"请输入有效的用户名\",{\"id\":483,\"languageId\":11,\"lang\":484,\"langExplain\":485,\"classify\":11,\"del\":11},91,\"Password must be at least 6 characters\",\"密码长度至少 6 个字符\",{\"id\":487,\"languageId\":11,\"lang\":488,\"langExplain\":489,\"classify\":11,\"del\":11},93,\"Password must contain both letters and numbers\",\"密码必须包含字母和数字\",{\"id\":491,\"languageId\":11,\"lang\":492,\"langExplain\":493,\"classify\":11,\"del\":11},95,\"Registration successful\",\"注册成功\",{\"id\":495,\"languageId\":11,\"lang\":496,\"langExplain\":497,\"classify\":11,\"del\":11},97,\"The verification code is valid for 30 minutes\",\"验证码有效期是30分钟\",{\"id\":499,\"languageId\":11,\"lang\":500,\"langExplain\":501,\"classify\":17,\"del\":11},99,\"Email Title\",\"验证码邮件 \\u003CCoolGame - iFun.cool>\",{\"id\":503,\"languageId\":11,\"lang\":504,\"langExplain\":505,\"classify\":17,\"del\":11},101,\"Your verification code is\",\"您本次的验证码是\",{\"id\":507,\"languageId\":11,\"lang\":508,\"langExplain\":497,\"classify\":17,\"del\":11},103,\"Verification Code Validity\",{\"id\":510,\"languageId\":11,\"lang\":511,\"langExplain\":512,\"classify\":11,\"del\":11},105,\"Registration failed\",\"注册失败\",{\"id\":514,\"languageId\":11,\"lang\":515,\"langExplain\":516,\"classify\":11,\"del\":11},107,\"Success\",\"成功\",{\"id\":518,\"languageId\":11,\"lang\":519,\"langExplain\":520,\"classify\":11,\"del\":11},109,\"Error\",\"错误\",{\"id\":522,\"languageId\":11,\"lang\":523,\"langExplain\":524,\"classify\":11,\"del\":11},111,\"Login successful\",\"登录成功\",{\"id\":526,\"languageId\":11,\"lang\":527,\"langExplain\":528,\"classify\":11,\"del\":11},113,\"Login failed\",\"登录失败\",{\"id\":144,\"languageId\":11,\"lang\":530,\"langExplain\":531,\"classify\":11,\"del\":11},\"Email\",\"邮箱\",{\"id\":533,\"languageId\":11,\"lang\":534,\"langExplain\":535,\"classify\":11,\"del\":11},117,\"Password\",\"密码\",{\"id\":537,\"languageId\":11,\"lang\":538,\"langExplain\":539,\"classify\":11,\"del\":11},119,\"Please enter your email address\",\"请输入邮箱\",{\"id\":541,\"languageId\":11,\"lang\":542,\"langExplain\":543,\"classify\":11,\"del\":11},121,\"Please enter your password\",\"请输入密码\",{\"id\":545,\"languageId\":11,\"lang\":546,\"langExplain\":547,\"classify\":11,\"del\":11},123,\"Username\",\"用户名\",{\"id\":549,\"languageId\":11,\"lang\":550,\"langExplain\":551,\"classify\":11,\"del\":11},125,\"Please enter your username\",\"请输入用户名\",{\"id\":553,\"languageId\":11,\"lang\":554,\"langExplain\":555,\"classify\":11,\"del\":11},127,\"Verification Code\",\"验证码\",{\"id\":557,\"languageId\":11,\"lang\":558,\"langExplain\":559,\"classify\":11,\"del\":11},129,\"Please enter the verification code\",\"请输入验证码\",{\"id\":561,\"languageId\":11,\"lang\":562,\"langExplain\":563,\"classify\":11,\"del\":11},131,\"Send verification code\",\"发送验证码\",{\"id\":565,\"languageId\":11,\"lang\":566,\"langExplain\":567,\"classify\":11,\"del\":11},133,\"Forget the password?\",\"忘记密码？\",{\"id\":569,\"languageId\":11,\"lang\":570,\"langExplain\":571,\"classify\":11,\"del\":11},135,\"New Password\",\"新密码\",{\"id\":573,\"languageId\":11,\"lang\":574,\"langExplain\":575,\"classify\":11,\"del\":11},137,\"Please set a new password\",\"请设置新密码\",{\"id\":577,\"languageId\":11,\"lang\":578,\"langExplain\":579,\"classify\":11,\"del\":11},139,\"Cancel\",\"取消\",{\"id\":581,\"languageId\":11,\"lang\":582,\"langExplain\":583,\"classify\":11,\"del\":11},141,\"Confirm Reset\",\"确认重置\",{\"id\":585,\"languageId\":11,\"lang\":586,\"langExplain\":587,\"classify\":11,\"del\":11},143,\"Forgot Password\",\"忘记密码\",{\"id\":589,\"languageId\":11,\"lang\":590,\"langExplain\":591,\"classify\":11,\"del\":11},145,\"Password reset successful, please log in\",\"密码重置成功，请登录\",{\"id\":593,\"languageId\":11,\"lang\":594,\"langExplain\":595,\"classify\":11,\"del\":11},147,\"Reset failed, please try again later\",\"重置失败，请稍后重试\",{\"id\":597,\"languageId\":11,\"lang\":598,\"langExplain\":599,\"classify\":11,\"del\":11},149,\"Password reset failed\",\"密码重置失败\",{\"id\":601,\"languageId\":11,\"lang\":602,\"langExplain\":603,\"classify\":17,\"del\":11},151,\"Email not exist\",\"邮箱地址不存在\",{\"id\":605,\"languageId\":11,\"lang\":606,\"langExplain\":607,\"classify\":11,\"del\":11},153,\"Failed to submit comment\",\"评论提交失败\",{\"id\":609,\"languageId\":11,\"lang\":610,\"langExplain\":611,\"classify\":17,\"del\":11},155,\"Missing token\",\"缺少令牌\",{\"id\":613,\"languageId\":11,\"lang\":614,\"langExplain\":615,\"classify\":17,\"del\":11},157,\"The token has expired. Please log in again\",\"令牌已过期，请重新登陆\",{\"id\":617,\"languageId\":11,\"lang\":618,\"langExplain\":619,\"classify\":11,\"del\":11},159,\"Pending review\",\"待审核\",{\"id\":621,\"languageId\":11,\"lang\":622,\"langExplain\":623,\"classify\":11,\"del\":11},161,\"Reply...\",\"回复...\",{\"id\":625,\"languageId\":11,\"lang\":626,\"langExplain\":627,\"classify\":11,\"del\":11},163,\"Like successful\",\"点赞成功\",{\"id\":629,\"languageId\":11,\"lang\":630,\"langExplain\":631,\"classify\":11,\"del\":11},165,\"Link has been copied\",\"链接已复制\",{\"id\":633,\"languageId\":11,\"lang\":634,\"langExplain\":635,\"classify\":11,\"del\":11},167,\"Update password\",\"更新密码\",{\"id\":637,\"languageId\":11,\"lang\":638,\"langExplain\":639,\"classify\":11,\"del\":11},169,\"Save\",\"保存\",{\"id\":641,\"languageId\":11,\"lang\":642,\"langExplain\":643,\"classify\":11,\"del\":11},171,\"Confirm Password\",\"确认密码\",{\"id\":645,\"languageId\":11,\"lang\":646,\"langExplain\":647,\"classify\":11,\"del\":11},173,\"Please enter your password again\",\"请再次输入密码\",{\"id\":649,\"languageId\":11,\"lang\":650,\"langExplain\":651,\"classify\":11,\"del\":11},175,\"Personal information\",\"个人资料\",{\"id\":653,\"languageId\":11,\"lang\":654,\"langExplain\":655,\"classify\":11,\"del\":11},177,\"Username must be 2-15 characters\",\"用户名长度必须为 2-15 个字符\",{\"id\":657,\"languageId\":11,\"lang\":658,\"langExplain\":659,\"classify\":11,\"del\":11},179,\"Passwords do not match\",\"密码不匹配\",{\"id\":661,\"languageId\":11,\"lang\":662,\"langExplain\":663,\"classify\":11,\"del\":11},181,\"Saved successfully\",\"保存成功\",{\"id\":665,\"languageId\":11,\"lang\":666,\"langExplain\":667,\"classify\":11,\"del\":11},183,\"Save failed\",\"保存失败\",{\"id\":669,\"languageId\":11,\"lang\":670,\"langExplain\":671,\"classify\":11,\"del\":11},185,\"Please enter keywords...\",\"请输入关键词...\",{\"id\":673,\"languageId\":11,\"lang\":674,\"langExplain\":675,\"classify\":11,\"del\":11},187,\"Search History\",\"搜索历史\",{\"id\":677,\"languageId\":11,\"lang\":678,\"langExplain\":679,\"classify\":11,\"del\":11},189,\"Clear history\",\"清除历史\",{\"id\":681,\"languageId\":11,\"lang\":682,\"langExplain\":683,\"classify\":11,\"del\":11},191,\"Latest\",\"最新\",{\"id\":685,\"languageId\":11,\"lang\":686,\"langExplain\":687,\"classify\":11,\"del\":11},193,\"Article\",\"篇文章\",{\"id\":689,\"languageId\":11,\"lang\":690,\"langExplain\":691,\"classify\":11,\"del\":11},195,\"Wonderful article\",\"篇精彩文章\",{\"id\":693,\"languageId\":11,\"lang\":694,\"langExplain\":695,\"classify\":11,\"del\":11},197,\"No articles found\",\"未找到文章\",{\"id\":697,\"languageId\":11,\"lang\":698,\"langExplain\":699,\"classify\":11,\"del\":11},199,\"This space is empty. Shall we try a different set of keywords?\",\"这里空空如也，要不要换一组关键词试试？\",{\"id\":701,\"languageId\":11,\"lang\":702,\"langExplain\":703,\"classify\":11,\"del\":11},201,\"Change batch\",\"再换一批\",{\"id\":705,\"languageId\":11,\"lang\":706,\"langExplain\":707,\"classify\":11,\"del\":11},203,\"This place is empty. Should we get another batch?\",\"这里空空如也，要不要再换一批？\",{\"id\":709,\"languageId\":11,\"lang\":710,\"langExplain\":711,\"classify\":11,\"del\":11},205,\"loading...\",\"加载中...\",{\"id\":713,\"languageId\":11,\"lang\":714,\"langExplain\":715,\"classify\":11,\"del\":11},207,\"all\",\"全部\",{\"id\":717,\"languageId\":11,\"lang\":718,\"langExplain\":719,\"classify\":11,\"del\":11},209,\"Filter by article results only\",\"仅筛选文章结果\",{\"id\":721,\"languageId\":11,\"lang\":722,\"langExplain\":723,\"classify\":11,\"del\":11},211,\"Any time\",\"任何时间\",{\"id\":725,\"languageId\":11,\"lang\":726,\"langExplain\":727,\"classify\":11,\"del\":11},213,\"Navigation Bar\",\"导航栏\",{\"id\":729,\"languageId\":11,\"lang\":730,\"langExplain\":731,\"classify\":11,\"del\":11},215,\"This space is empty. Go and bookmark some great articles\",\"这里空空如也，快去收藏精彩文章吧！\",{\"id\":733,\"languageId\":11,\"lang\":734,\"langExplain\":735,\"classify\":11,\"del\":11},217,\"Please log in to your account first\",\"请先登录账户\",{\"id\":737,\"languageId\":11,\"lang\":738,\"langExplain\":739,\"classify\":11,\"del\":11},219,\"Article successfully saved\",\"文章收藏成功\",{\"id\":741,\"languageId\":11,\"lang\":742,\"langExplain\":743,\"classify\":11,\"del\":11},221,\"Unfavorite this article\",\"已取消收藏\",{\"id\":745,\"languageId\":11,\"lang\":746,\"langExplain\":747,\"classify\":11,\"del\":11},223,\"Article collection failed\",\"文章收藏失败\",{\"id\":749,\"languageId\":11,\"lang\":750,\"langExplain\":715,\"classify\":11,\"del\":11},225,\"All\",{\"id\":752,\"languageId\":11,\"lang\":753,\"langExplain\":754,\"classify\":11,\"del\":11},227,\"Unknown time\",\"未知时间\",{\"id\":756,\"languageId\":11,\"lang\":757,\"langExplain\":758,\"classify\":11,\"del\":11},229,\"Future time\",\"未来时间\",{\"id\":760,\"languageId\":11,\"lang\":761,\"langExplain\":762,\"classify\":11,\"del\":11},231,\"Just now\",\"刚刚\",{\"id\":764,\"languageId\":11,\"lang\":765,\"langExplain\":766,\"classify\":11,\"del\":11},233,\"Seconds ago\",\"秒前\",{\"id\":768,\"languageId\":11,\"lang\":769,\"langExplain\":770,\"classify\":11,\"del\":11},235,\"Minutes ago\",\"分钟前\",{\"id\":772,\"languageId\":11,\"lang\":773,\"langExplain\":774,\"classify\":11,\"del\":11},237,\"Hours ago\",\"小时前\",{\"id\":776,\"languageId\":11,\"lang\":777,\"langExplain\":778,\"classify\":11,\"del\":11},239,\"Days ago\",\"天前\",{\"id\":780,\"languageId\":11,\"lang\":781,\"langExplain\":782,\"classify\":11,\"del\":11},241,\"Weeks ago\",\"周前\",{\"id\":784,\"languageId\":11,\"lang\":785,\"langExplain\":786,\"classify\":11,\"del\":11},243,\"Months ago\",\"月前\",{\"id\":788,\"languageId\":11,\"lang\":789,\"langExplain\":790,\"classify\":11,\"del\":11},245,\"Years ago\",\"年前\",{\"id\":792,\"languageId\":11,\"lang\":793,\"langExplain\":794,\"classify\":11,\"del\":11},247,\"Commented\",\"评论了\",{\"id\":796,\"languageId\":11,\"lang\":797,\"langExplain\":798,\"classify\":11,\"del\":11},249,\"Liked\",\"点赞了\",{\"id\":800,\"languageId\":11,\"lang\":801,\"langExplain\":802,\"classify\":11,\"del\":11},251,\"Rated\",\"评分了\",{\"id\":804,\"languageId\":11,\"lang\":805,\"langExplain\":806,\"classify\":11,\"del\":11},253,\"Published\",\"发布了\",{\"id\":808,\"languageId\":11,\"lang\":809,\"langExplain\":810,\"classify\":11,\"del\":11},255,\"Saved\",\"收藏了\",{\"id\":812,\"languageId\":11,\"lang\":813,\"langExplain\":814,\"classify\":11,\"del\":11},257,\"Recent Updates\",\"最近动态\",{\"id\":816,\"languageId\":11,\"lang\":817,\"langExplain\":818,\"classify\":11,\"del\":11},259,\"Discover new things happening now\",\"发现正在发生的新鲜事\",{\"id\":820,\"languageId\":11,\"lang\":821,\"langExplain\":822,\"classify\":11,\"del\":11},261,\"No updates yet\",\"暂无动态\",{\"id\":824,\"languageId\":11,\"lang\":825,\"langExplain\":826,\"classify\":11,\"del\":11},263,\"Still brewing something new\",\"还在酝酿新鲜事\",{\"id\":828,\"languageId\":11,\"lang\":829,\"langExplain\":830,\"classify\":11,\"del\":11},265,\"Join the discussion\",\"加入讨论\",{\"id\":832,\"languageId\":11,\"lang\":833,\"langExplain\":834,\"classify\":11,\"del\":11},267,\"Join the discussion and share your thoughts with others\",\"分享硬核体验、速通技巧与二创心得，让每一份热爱都不被埋没。\",{\"id\":836,\"languageId\":11,\"lang\":837,\"langExplain\":838,\"classify\":11,\"del\":11},269,\"Contribute\",\"投稿\",{\"id\":840,\"languageId\":11,\"lang\":841,\"langExplain\":842,\"classify\":11,\"del\":11},271,\"No articles available\",\"暂无文章\",{\"id\":844,\"languageId\":11,\"lang\":845,\"langExplain\":846,\"classify\":11,\"del\":11},273,\"Let's look at it again within a different time frame\",\"换个时间范围再看看\",{\"id\":848,\"languageId\":11,\"lang\":849,\"langExplain\":846,\"classify\":11,\"del\":11},275,\"Let look at it again within a different time frame\",{\"id\":851,\"languageId\":11,\"lang\":852,\"langExplain\":853,\"classify\":11,\"del\":11},277,\"Latest articles\",\"最新文章\",{\"id\":855,\"languageId\":11,\"lang\":856,\"langExplain\":857,\"classify\":11,\"del\":11},279,\"Featured Articles\",\"精品文章\",{\"id\":859,\"languageId\":11,\"lang\":860,\"langExplain\":861,\"classify\":11,\"del\":11},281,\"Beyond the hot topics, there is more depth and attitude\",\"热点之外，更有深度与态度\",{\"id\":863,\"languageId\":11,\"lang\":864,\"langExplain\":865,\"classify\":11,\"del\":11},283,\"Hot Topics\",\"热门话题\",{\"id\":867,\"languageId\":11,\"lang\":868,\"langExplain\":869,\"classify\":11,\"del\":11},285,\"Discover great content, start here\",\"发现好内容，从这里开始\",{\"id\":871,\"languageId\":11,\"lang\":872,\"langExplain\":873,\"classify\":11,\"del\":11},287,\"No topics yet\",\"暂无话题\",{\"id\":875,\"languageId\":11,\"lang\":876,\"langExplain\":877,\"classify\":11,\"del\":11},289,\"There are no hashtags available for display yet\",\"还没有可展示的话题标签\",{\"id\":879,\"languageId\":11,\"lang\":880,\"langExplain\":881,\"classify\":11,\"del\":11},291,\"Subscription and Communication\",\"订阅与交流\",{\"id\":883,\"languageId\":11,\"lang\":884,\"langExplain\":885,\"classify\":11,\"del\":11},293,\"TG Subscription Channel\",\"TG订阅频道\",{\"id\":887,\"languageId\":11,\"lang\":888,\"langExplain\":889,\"classify\":11,\"del\":11},295,\"TG Exchange Group\",\"TG交流群组\",{\"id\":891,\"languageId\":11,\"lang\":892,\"langExplain\":893,\"classify\":11,\"del\":11},297,\"Geek Intelligence Bureau - Geek\",\"极客情报局-Geeker\",{\"id\":895,\"languageId\":11,\"lang\":896,\"langExplain\":897,\"classify\":11,\"del\":11},299,\"Geek Mystery Organization - Geek Group\",\"极客神秘组织-Geeker Group\",{\"id\":899,\"languageId\":11,\"lang\":900,\"langExplain\":901,\"classify\":11,\"del\":11},301,\"today\",\"今日\",{\"id\":903,\"languageId\":11,\"lang\":904,\"langExplain\":905,\"classify\":11,\"del\":11},303,\"This week\",\"本周\",{\"id\":907,\"languageId\":11,\"lang\":908,\"langExplain\":909,\"classify\":11,\"del\":11},305,\"This month\",\"本月\",{\"id\":911,\"languageId\":11,\"lang\":912,\"langExplain\":913,\"classify\":11,\"del\":11},307,\"This year\",\"今年\",{\"id\":915,\"languageId\":11,\"lang\":916,\"langExplain\":917,\"classify\":11,\"del\":11},309,\"Year\",\"年第\",{\"id\":919,\"languageId\":11,\"lang\":920,\"langExplain\":921,\"classify\":11,\"del\":11},311,\"week\",\"周\",{\"id\":923,\"languageId\":11,\"lang\":924,\"langExplain\":925,\"classify\":11,\"del\":11},313,\"No.\",\"第\",{\"id\":927,\"languageId\":11,\"lang\":928,\"langExplain\":929,\"classify\":11,\"del\":11},315,\"year\",\"年\",{\"id\":931,\"languageId\":11,\"lang\":932,\"langExplain\":933,\"classify\":11,\"del\":11},317,\"Interesting topics\",\"精彩话题文章\",{\"id\":935,\"languageId\":11,\"lang\":936,\"langExplain\":937,\"classify\":11,\"del\":11},319,\"Depth, quality, emotional value\",\"深度、质量、情绪价值\",{\"id\":939,\"languageId\":11,\"lang\":940,\"langExplain\":941,\"classify\":11,\"del\":11},321,\"score\",\"评分\",{\"id\":7,\"languageId\":11,\"lang\":943,\"langExplain\":944,\"classify\":11,\"del\":11},\"catalog\",\"目录\",{\"id\":946,\"languageId\":11,\"lang\":947,\"langExplain\":948,\"classify\":11,\"del\":11},325,\"Recently released\",\"最近发布\",{\"id\":950,\"languageId\":11,\"lang\":951,\"langExplain\":952,\"classify\":11,\"del\":11},327,\"Pioneering AI scoring mechanism\",\"首创 · AI 评分机制\",{\"id\":954,\"languageId\":11,\"lang\":955,\"langExplain\":956,\"classify\":11,\"del\":11},329,\"trend\",\"趋势\",{\"id\":958,\"languageId\":11,\"lang\":959,\"langExplain\":960,\"classify\":11,\"del\":11},331,\"Most Liked\",\"最赞\",{\"id\":962,\"languageId\":11,\"lang\":963,\"langExplain\":964,\"classify\":11,\"del\":11},333,\"Carefully Selected Topics · Cutting-Edge\",\"话题盐选 · 前沿\",{\"id\":966,\"languageId\":11,\"lang\":967,\"langExplain\":968,\"classify\":11,\"del\":11},335,\"Aggregate high-quality content by topic to quickly find areas worth continuing to follow.\",\"按话题聚合优质内容，快速找到值得持续关注的方向。\",{\"id\":970,\"languageId\":11,\"lang\":971,\"langExplain\":972,\"classify\":11,\"del\":11},337,\"Search topics\",\"搜索话题\",{\"id\":974,\"languageId\":11,\"lang\":975,\"langExplain\":976,\"classify\":11,\"del\":11},339,\"All topics\",\"全部话题\",{\"id\":978,\"languageId\":11,\"lang\":979,\"langExplain\":980,\"classify\":11,\"del\":11},341,\"Discover content direction like browsing tags\",\"像浏览标签一样发现内容方向\",{\"id\":982,\"languageId\":11,\"lang\":983,\"langExplain\":984,\"classify\":11,\"del\":11},343,\"Try changing the keywords\",\"换个关键词再试试\",{\"id\":986,\"languageId\":11,\"lang\":987,\"langExplain\":988,\"classify\":11,\"del\":11},345,\"Log in to Geeker\",\"登录 Geeker\",{\"id\":990,\"languageId\":11,\"lang\":991,\"langExplain\":992,\"classify\":11,\"del\":11},347,\"Related posts\",\"篇相关帖子\",{\"id\":994,\"languageId\":11,\"lang\":995,\"langExplain\":996,\"classify\":11,\"del\":11},349,\"Depth, quality, premium salt selection\",\"深度、质量、精品盐选\",{\"id\":998,\"languageId\":11,\"lang\":999,\"langExplain\":1000,\"classify\":11,\"del\":11},351,\"Search results\",\"搜索结果\",{\"id\":1002,\"languageId\":11,\"lang\":1003,\"langExplain\":1004,\"classify\":11,\"del\":11},353,\"turn up\",\"找到\",{\"id\":1006,\"languageId\":11,\"lang\":1007,\"langExplain\":1008,\"classify\":11,\"del\":11},355,\"Your favorite topics and articles\",\"您收藏的话题和文章\",{\"id\":1010,\"languageId\":11,\"lang\":1011,\"langExplain\":1012,\"classify\":11,\"del\":11},357,\"AI Score\",\"AI评分\",{\"id\":1014,\"languageId\":11,\"lang\":1015,\"langExplain\":1016,\"classify\":11,\"del\":11},359,\"Timeline\",\"时间线\",{\"id\":1018,\"languageId\":11,\"lang\":1019,\"langExplain\":1020,\"classify\":11,\"del\":11},361,\"Advantages\",\"优点\",{\"id\":1022,\"languageId\":11,\"lang\":1023,\"langExplain\":1024,\"classify\":11,\"del\":11},363,\"Disadvantages\",\"缺点\",{\"id\":1026,\"languageId\":11,\"lang\":1027,\"langExplain\":1028,\"classify\":11,\"del\":11},365,\"Post Information\",\"帖子信息\",{\"id\":1030,\"languageId\":11,\"lang\":1031,\"langExplain\":1032,\"classify\":11,\"del\":11},367,\"topic\",\"话题\",{\"id\":1034,\"languageId\":11,\"lang\":1035,\"langExplain\":1036,\"classify\":11,\"del\":11},369,\"Pinned\",\"置顶\",{\"id\":1038,\"languageId\":11,\"lang\":1039,\"langExplain\":1040,\"classify\":11,\"del\":11},371,\"Premium Games\",\"精品游戏\",{\"id\":1042,\"languageId\":11,\"lang\":1043,\"langExplain\":1044,\"classify\":11,\"del\":11},373,\"Related results\",\"相关结果\",{\"id\":1046,\"languageId\":11,\"lang\":1047,\"langExplain\":1048,\"classify\":11,\"del\":11},375,\"Hot Trends\",\"热门趋势\",{\"id\":1050,\"languageId\":11,\"lang\":1051,\"langExplain\":1052,\"classify\":11,\"del\":11},377,\"Latest Release\",\"最新发布\",{\"id\":1054,\"languageId\":11,\"lang\":1055,\"langExplain\":1056,\"classify\":11,\"del\":11},379,\"Log in to CoolGame\",\"登录CoolGame\",false,{\"id\":18,\"username\":20,\"avatar\":20,\"email\":20,\"roleId\":18,\"roleNickname\":20},[],1795262312755,[],[],[],[\"Set\"],[\"ShallowReactive\",1066],{\"getFeaturedArticlesData\":-1,\"getRecentArticlesData\":-1,\"communityDynamicData\":-1,\"asideHotArticles\":-1,\"asideLatestArticles\":-1},\"/\"]window.__NUXT__={};window.__NUXT__.config={public:{qrcode:{reader:{autoImport:false,formats:[\"qr_code\"],global:false},global:false,options:{ecc:\"L\",maskPattern:-1,boostEcc:\"\",minVersion:1,maxVersion:40,border:1,variant:{inner:\"circle\",marker:\"rounded\",pixel:\"rounded\"},radius:1,blackColor:\"var(--ui-text-highlighted, #000000)\",whiteColor:\"var(--ui-bg, #FFFFFF)\"}},mapbox:{accessToken:\"[REDACTED]\",persistent:true},i18n:{baseUrl:\"\",defaultLocale:\"zh-CN\",rootRedirect:\"\",redirectStatusCode:302,skipSettingLocaleOnNavigate:false,locales:[{code:\"zh-CN\",name:\"简体中文\",language:\"\"},{code:\"zh-TW\",name:\"繁體中文\",language:\"\"}],detectBrowserLanguage:false,experimental:{localeDetector:\"\",typedPages:true,typedOptionsAndMessages:false,alternateLinkCanonicalQueries:true,devCache:false,cacheLifetime:\"\",stripMessagesPayload:false,preload:false,strictSeo:false,nitroContextDetection:true,httpCacheDuration:10,compactRoutes:false},domainLocales:{\"zh-CN\":{domain:\"\"},\"zh-TW\":{domain:\"\"}}}},app:{baseURL:\"/\",buildId:\"2f581a2c-7c2f-40ed-b35d-960898085ca4\",buildAssetsDir:\"/_nuxt/\",cdnURL:\"\"}}"
+      ],
+      "elapsedMs": 3752
+    },
+    {
+      "id": "bb3ec0ecd7e3a2e0",
+      "name": "242小说",
+      "host": "www.242xs.info",
+      "status": 200,
+      "url": "https://www.242xs.info/",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "最新视频",
+      "forms": [],
+      "inputs": [],
+      "searchAnchors": [],
+      "scripts": [
+        "//sdk.51.la/js-sdk-pro.min.js",
+        "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092"
+      ],
+      "searchText": [],
+      "elapsedMs": 788
+    },
+    {
+      "id": "11d57716b129d7cf",
+      "name": "爱下电子书(ixdzs8)",
+      "host": "ixdzs8.com",
+      "status": 403,
+      "url": "https://ixdzs8.com/",
+      "contentType": "text/html",
+      "title": "403 Forbidden",
+      "forms": [],
+      "inputs": [],
+      "searchAnchors": [],
+      "scripts": [],
+      "searchText": [],
+      "elapsedMs": 1078
+    },
+    {
+      "id": "f36aa97850e63ae9",
+      "name": "笔趣阁(xinbiquge)",
+      "host": "wap2.xinbiquge.org",
+      "status": 200,
+      "url": "https://wap2.xinbiquge.org/",
+      "contentType": "text/html; charset=utf-8",
+      "title": "新笔趣阁手机版-好看的手机小说",
+      "forms": [],
+      "inputs": [],
+      "searchAnchors": [],
+      "scripts": [
+        "/template/m/js/jquery.min.1.8.3.js",
+        "/template/m/js/common.js",
+        "/template/m/js/read.js"
+      ],
+      "searchText": [
+        "search();",
+        "search();"
+      ],
+      "elapsedMs": 1016
+    },
+    {
+      "id": "fbc6405589c27ad4",
+      "name": "笔趣阁227",
+      "host": "m.bqg227.com",
+      "status": 200,
+      "url": "https://m.bqg227.com/",
+      "contentType": "text/html; charset=utf-8",
+      "title": "",
+      "forms": [],
+      "inputs": [],
+      "searchAnchors": [],
+      "scripts": [],
+      "searchText": [],
+      "elapsedMs": 1198
+    },
+    {
+      "id": "e6bad697c18c5879",
+      "name": "春雨书屋",
+      "host": "www.chunyushuwu.com",
+      "status": 200,
+      "url": "https://www.chunyushuwu.com/",
+      "contentType": "text/html; charset=utf-8",
+      "title": "",
+      "forms": [
+        {
+          "action": "",
+          "method": "GET",
+          "id": "contactForm",
+          "inputs": [
+            {
+              "type": "text",
+              "name": "name",
+              "placeholder": ""
+            },
+            {
+              "type": "email",
+              "name": "email",
+              "placeholder": ""
+            },
+            {
+              "type": "text",
+              "name": "website",
+              "placeholder": ""
+            }
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "placeholder": "",
+          "onclick": "",
+          "id": "name",
+          "className": ""
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "placeholder": "",
+          "onclick": "",
+          "id": "email",
+          "className": ""
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "website",
+          "placeholder": "",
+          "onclick": "",
+          "id": "website",
+          "className": ""
+        },
+        {
+          "tag": "button",
+          "type": "submit",
+          "name": "",
+          "placeholder": "",
+          "onclick": "",
+          "id": "",
+          "className": ""
+        }
+      ],
+      "searchAnchors": [],
+      "scripts": [],
+      "searchText": [],
+      "elapsedMs": 1057
+    },
+    {
+      "id": "a73b846385a9e884",
+      "name": "抖音小说",
+      "host": "www.douyinxs.com",
+      "status": 200,
+      "url": "https://www.douyinxs.com/",
+      "contentType": "text/html; charset=utf-8",
+      "title": "抖音小说-笔趣阁_无弹窗书友最值得收藏的网络小说阅读网",
+      "forms": [],
+      "inputs": [],
+      "searchAnchors": [],
+      "scripts": [
+        "/static/bqg/jquery.min.js",
+        "/static/bqg/jquery.cookie.min.js",
+        "/static/bqg/toplink.js?v=20230627",
+        "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092"
+      ],
+      "searchText": [],
+      "elapsedMs": 457
+    },
+    {
+      "id": "a0033c85b8f69b8d",
+      "name": "恩施轻语（优+）",
+      "host": "www.esjzone.one",
+      "status": 200,
+      "url": "https://www.esjzone.one/",
+      "contentType": "text/html; charset=utf-8",
+      "title": "論壇 - ESJ Zone",
+      "forms": [],
+      "inputs": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "site_search",
+          "placeholder": "輸入關鍵字...",
+          "onclick": "",
+          "id": "",
+          "className": ""
+        }
+      ],
+      "searchAnchors": [],
+      "scripts": [
+        "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8867758861617561",
+        "/assets/js/vendor.min.js",
+        "/assets/js/modernizr.min.js",
+        "https://www.googletagmanager.com/gtag/js?id=G-6N355XR0Y6",
+        "/assets/js/JinJing.js",
+        "/assets/js/scripts.min.js",
+        "/assets/js/customizer.min.js?v=311",
+        "https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.1/sweetalert2.all.min.js",
+        "/assets/js/jquery.ajaxform.js",
+        "/assets/js/modifyDetail.js?v=204",
+        "/assets/js/froala_editor.min.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/3.1.0/js/plugins/char_counter.min.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/3.1.0/js/plugins/link.min.js",
+        "/assets/js/plugins/emoticons.min.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/3.1.0/js/plugins/colors.min.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/3.1.0/js/plugins/font_size.min.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/3.1.0/js/plugins/font_family.min.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/3.1.0/js/plugins/image.min.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/3.1.0/js/plugins/video.min.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/3.1.0/js/plugins/align.min.js",
+        "/assets/js/jquery.mloading.js?>",
+        "/assets/js/chinese_convert.js",
+        "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092"
+      ],
+      "searchText": [],
+      "elapsedMs": 1984
+    },
+    {
+      "id": "80cd038ab8aefef2",
+      "name": "飞卢小说",
+      "host": "b.faloo.com",
+      "status": 200,
+      "url": "https://b.faloo.com/",
+      "contentType": "text/html; charset=gb2312",
+      "title": "С˵,С˵��-��¬С˵��|ͬ��С˵���ÿ������С˵����",
+      "forms": [],
+      "inputs": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "BookName",
+          "placeholder": "�����ִģ�����ķ���治�Ǻ�ħ��",
+          "onclick": "",
+          "id": "BookName",
+          "className": ""
+        },
+        {
+          "tag": "input",
+          "type": "button",
+          "name": "",
+          "placeholder": "",
+          "onclick": "SearchBook()",
+          "id": "",
+          "className": ""
+        }
+      ],
+      "searchAnchors": [],
+      "scripts": [
+        "//b.faloo.com/js/jquery-2.2.3.min.js",
+        "//b.faloo.com/js/utility.js",
+        "//b.faloo.com/js/webpage/navlogin.js",
+        "//b.faloo.com/js/webPage/Dialog.js",
+        "//b.faloo.com/js/webPage/index/carousel.js",
+        "//b.faloo.com/js/webPage/index/index.js",
+        "//b.faloo.com/js/webPage/index/jquery.lazyload.js",
+        "//b.faloo.com/js/webPage/Common.js"
+      ],
+      "searchText": [
+        "$(\".Search .SearchCenter .SearchCenterDiv1 .question\").on(\"click\",function(){showSearchRule();});"
+      ],
+      "elapsedMs": 2839
+    },
+    {
+      "id": "c1ef602a008084cf",
+      "name": "飞卢小说",
+      "host": "wap.faloo.com",
+      "status": 200,
+      "url": "https://wap.faloo.com/",
+      "contentType": "text/html; charset=gb2312",
+      "title": "С˵,С˵��-��¬С˵��|ͬ��С˵���ÿ������С˵����",
+      "forms": [],
+      "inputs": [
+        {
+          "tag": "input",
+          "type": "button",
+          "name": "",
+          "placeholder": "",
+          "onclick": "",
+          "id": "",
+          "className": "btn_entercode"
+        }
+      ],
+      "searchAnchors": [
+        {
+          "text": "",
+          "href": "//wap.faloo.com/SearchIndex.html"
+        },
+        {
+          "text": "",
+          "href": "//u.faloo.com/regist/login.aspx?backUrl=%2f%2fwap.faloo.com%2findex.aspx%3f20261121193534"
+        },
+        {
+          "text": "а���ֶ�",
+          "href": "//wap.faloo.com/search_0_1.html?t=2&k=а���ֶ���"
+        },
+        {
+          "text": "����Ľ�",
+          "href": "//wap.faloo.com/search_0_1.html?t=2&k=����Ľ����"
+        },
+        {
+          "text": "ֻд����",
+          "href": "//wap.faloo.com/search_0_1.html?t=2&k=ֻд�����Ƭ"
+        },
+        {
+          "text": "���Ṽ��",
+          "href": "//wap.faloo.com/search_0_1.html?t=2&k=���Ṽ����"
+        },
+        {
+          "text": "а���ֶ�",
+          "href": "//wap.faloo.com/search_0_1.html?t=2&k=а���ֶ���"
+        },
+        {
+          "text": "������",
+          "href": "//wap.faloo.com/search_0_1.html?t=2&k=������"
+        },
+        {
+          "text": "ŶŶ���",
+          "href": "//wap.faloo.com/search_0_1.html?t=2&k=ŶŶ����"
+        },
+        {
+          "text": "������ֻ",
+          "href": "//wap.faloo.com/search_0_1.html?t=2&k=������ֻ��"
+        },
+        {
+          "text": "¥������",
+          "href": "//wap.faloo.com/search_0_1.html?t=2&k=¥������"
+        },
+        {
+          "text": "�ҳ�����",
+          "href": "//wap.faloo.com/search_0_1.html?t=2&k=�ҳ�������"
+        },
+        {
+          "text": "���벻��",
+          "href": "//wap.faloo.com/search_0_1.html?t=2&k=���벻����"
+        },
+        {
+          "text": "��������",
+          "href": "//wap.faloo.com/search_0_1.html?t=2&k=������������"
+        },
+        {
+          "text": "���Ա���",
+          "href": "//wap.faloo.com/search_0_1.html?t=2&k=���Ա�����"
+        },
+        {
+          "text": "�������",
+          "href": "//wap.faloo.com/search_0_1.html?t=2&k=�������"
+        },
+        {
+          "text": "�����Ұ",
+          "href": "//wap.faloo.com/search_0_1.html?t=2&k=�����Ұ��Ϲ��"
+        },
+        {
+          "text": "д��ôô",
+          "href": "//wap.faloo.com/search_0_1.html?t=2&k=д��ôô��"
+        },
+        {
+          "text": "��������",
+          "href": "//wap.faloo.com/search_0_1.html?t=2&k=��������"
+        },
+        {
+          "text": "��������",
+          "href": "//wap.faloo.com/search_0_1.html?t=2&k=��������"
+        },
+        {
+          "text": "Ӧ�����",
+          "href": "//wap.faloo.com/search_0_1.html?t=2&k=Ӧ�����"
+        },
+        {
+          "text": "���ź���",
+          "href": "//wap.faloo.com/search_0_1.html?t=2&k=���ź���"
+        },
+        {
+          "text": "��������",
+          "href": "//wap.faloo.com/search_0_1.html?t=2&k=��������"
+        },
+        {
+          "text": "а���ֶ�",
+          "href": "//wap.faloo.com/search_0_1.html?t=2&k=а���ֶ���"
+        },
+        {
+          "text": "����С��",
+          "href": "//wap.faloo.com/search_0_1.html?t=2&k=����С��"
+        },
+        {
+          "text": "����˾",
+          "href": "//wap.faloo.com/search_0_1.html?t=2&k=����˾"
+        },
+        {
+          "text": "�������",
+          "href": "//wap.faloo.com/search_0_1.html?t=2&k=������빽"
+        }
+      ],
+      "scripts": [
+        "//wap.faloo.com/js/jquery-2.2.3.min.js",
+        "//wap.faloo.com/js/newWap/flexible.js",
+        "//wap.faloo.com/js/JCommon.js?20240828",
+        "//wap.faloo.com/js/newWap/commonHtml.js",
+        "//wap.faloo.com/js/openApp2021.js",
+        "//wap.faloo.com/js/swiper-3.4.2.jquery.min.js",
+        "//wap.faloo.com/js/newWap/WapDialog.js?20240827",
+        "//wap.faloo.com/js/newWap/index2021.js?20240828"
+      ],
+      "searchText": [],
+      "elapsedMs": 1098
+    },
+    {
+      "id": "6a1747db0552391d",
+      "name": "疯读小说（优++）",
+      "host": "fiction.fengduxiaoshuo.com",
+      "status": 200,
+      "url": "https://fiction.fengduxiaoshuo.com/",
+      "contentType": "text/html",
+      "title": "Welcome to nginx!",
+      "forms": [],
+      "inputs": [],
+      "searchAnchors": [],
+      "scripts": [],
+      "searchText": [],
+      "elapsedMs": 2518
+    },
+    {
+      "id": "7481fcd2a32a16d9",
+      "name": "花生小说（优）",
+      "host": "api.wan123x.com",
+      "error": "TypeError: Cannot destructure property 'firstElementChild' of 'documentElement' as it is null.",
+      "elapsedMs": 1484
+    },
+    {
+      "id": "7a2f96a80518a76b",
+      "name": "金庸小说（优）",
+      "host": "www.jinyongwang.net",
+      "status": 200,
+      "url": "https://www.jinyongwang.net/",
+      "contentType": "text/html; charset=utf-8",
+      "title": "彩乐汇为什么老师带手机APP官方版-免费下载安装-下载吧",
+      "forms": [
+        {
+          "action": "/search",
+          "method": "GET",
+          "id": "",
+          "inputs": [
+            {
+              "type": "",
+              "name": "key",
+              "placeholder": "搜索安卓应用和游戏"
+            },
+            {
+              "type": "submit",
+              "name": "",
+              "placeholder": ""
+            },
+            {
+              "type": "hidden",
+              "name": "source",
+              "placeholder": ""
+            }
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "tag": "input",
+          "type": "hidden",
+          "name": "",
+          "placeholder": "",
+          "onclick": "",
+          "id": "__wdjPageType",
+          "className": ""
+        },
+        {
+          "tag": "input",
+          "type": "hidden",
+          "name": "",
+          "placeholder": "",
+          "onclick": "",
+          "id": "__appOffline",
+          "className": ""
+        },
+        {
+          "tag": "input",
+          "type": "hidden",
+          "name": "",
+          "placeholder": "",
+          "onclick": "",
+          "id": "__appRN",
+          "className": ""
+        },
+        {
+          "tag": "input",
+          "type": "",
+          "name": "key",
+          "placeholder": "搜索安卓应用和游戏",
+          "onclick": "",
+          "id": "j-search-input",
+          "className": "key-ipt"
+        },
+        {
+          "tag": "input",
+          "type": "submit",
+          "name": "",
+          "placeholder": "",
+          "onclick": "",
+          "id": "j-search-btn",
+          "className": "submit"
+        },
+        {
+          "tag": "input",
+          "type": "hidden",
+          "name": "source",
+          "placeholder": "",
+          "onclick": "",
+          "id": "",
+          "className": ""
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "",
+          "placeholder": "请输入手机号码",
+          "onclick": "",
+          "id": "login_phone",
+          "className": "inner-input"
+        },
+        {
+          "tag": "input",
+          "type": "number",
+          "name": "",
+          "placeholder": "请输入手机验证码",
+          "onclick": "",
+          "id": "login_code",
+          "className": "inner-input"
+        }
+      ],
+      "searchAnchors": [],
+      "scripts": [
+        "https://www.jinyongwang.net/template/games/m.wandoujia.com/static/js/index.umd.js",
+        "https://www.jinyongwang.net/template/games/m.wandoujia.com/static/js/realnameauth.js",
+        "https://www.jinyongwang.net/template/games/m.wandoujia.com/static/js/nc.js",
+        "https://www.jinyongwang.net/template/games/m.wandoujia.com/static/js/bl.js",
+        "https://www.jinyongwang.net/template/games/m.wandoujia.com/static/js/common.d5ce7d2a.js",
+        "https://www.jinyongwang.net/template/games/m.wandoujia.com/static/js/tracker.d5ce7d2a.js",
+        "https://www.jinyongwang.net/template/games/m.wandoujia.com/static/js/pcmodule.d5ce7d2a.js",
+        "https://www.jinyongwang.net/template/games/m.wandoujia.com/static/js/appsdetail.d5ce7d2a.js",
+        "https://www.jinyongwang.net/template/games/m.wandoujia.com/static/js/adblock.d5ce7d2a.js",
+        "https://www.jinyongwang.net/template/games/m.wandoujia.com/static/js/header.d5ce7d2a.js",
+        "https://www.jinyongwang.net/template/games/m.wandoujia.com/static/js/replyitem.d5ce7d2a.js",
+        "https://www.jinyongwang.net/template/games/m.wandoujia.com/static/js/footerbar.d5ce7d2a.js",
+        "https://www.jinyongwang.net/template/games/m.wandoujia.com/static/js/footer.d5ce7d2a.js",
+        "https://www.jinyongwang.net/template/games/m.wandoujia.com/static/js/broadcast.js",
+        "https://www.jinyongwang.net/template/games/m.wandoujia.com/static/js/2f809e3b0c4d49b98b88b7284ff196c5.js",
+        "https://www.jinyongwang.net/template/games/m.wandoujia.com/static/js/pullup.js",
+        "https://www.jinyongwang.net/template/games/m.wandoujia.com/static/js/appsdetail.d5ce7d2a.js"
+      ],
+      "searchText": [],
+      "elapsedMs": 1389
+    },
+    {
+      "id": "56bf2d82e317335b",
+      "name": "精华书阁",
+      "host": "m.jhsssd.com",
+      "status": 200,
+      "url": "https://m.jhsssd.com/",
+      "contentType": "text/html; charset=utf-8",
+      "title": "精华书阁手机版",
+      "forms": [],
+      "inputs": [],
+      "searchAnchors": [],
+      "scripts": [
+        "/js/jquery.min.js",
+        "/js/jhssd.js"
+      ],
+      "searchText": [
+        "search();",
+        "search();"
+      ],
+      "elapsedMs": 727
+    },
+    {
+      "id": "f7309c3bde0323b1",
+      "name": "露露书",
+      "host": "m.lulushu123.net",
+      "status": 200,
+      "url": "https://m.lulushu123.net/",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "完结小说站_完整版全本畅读_露露书",
+      "forms": [],
+      "inputs": [],
+      "searchAnchors": [
+        {
+          "text": "",
+          "href": "/home/search"
+        },
+        {
+          "text": "快速搜索",
+          "href": "/home/search"
+        }
+      ],
+      "scripts": [
+        "/Public/um.js?v9",
+        "/Public/pinkm/js/zepto.min.js?v9",
+        "/Public/pinkm/js/base.js?v9",
+        "/Public/pinkm/js/swipeslide.min.js?v9",
+        "/Public/trans.js?v9",
+        "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092"
+      ],
+      "searchText": [
+        "快速搜索"
+      ],
+      "elapsedMs": 245
+    },
+    {
+      "id": "b66cc218562d002f",
+      "name": "球球览器",
+      "host": "so.html5.qq.com",
+      "error": "TypeError: Cannot destructure property 'firstElementChild' of 'documentElement' as it is null.",
+      "elapsedMs": 1065
+    },
+    {
+      "id": "557c73c1476bc710",
+      "name": "四三中文",
+      "host": "www.zw43.com",
+      "status": 200,
+      "url": "https://www.zw43.com/",
+      "contentType": "text/html",
+      "title": "",
+      "forms": [],
+      "inputs": [],
+      "searchAnchors": [],
+      "scripts": [],
+      "searchText": [],
+      "elapsedMs": 101
+    },
+    {
+      "id": "c54d0c9b461b99b6",
+      "name": "完结小说",
+      "host": "m.mddtxt.net",
+      "status": 200,
+      "url": "https://m.mddtxt.net/",
+      "contentType": "text/html; charset=utf-8",
+      "title": "人人影视 - 2026最新热播电影电视剧综艺在线观看高清资源站",
+      "forms": [],
+      "inputs": [
+        {
+          "tag": "button",
+          "type": "",
+          "name": "",
+          "placeholder": "",
+          "onclick": "closeModal()",
+          "id": "",
+          "className": "btn btn-gray"
+        },
+        {
+          "tag": "button",
+          "type": "",
+          "name": "",
+          "placeholder": "",
+          "onclick": "toast('前往观看功能开发中')",
+          "id": "",
+          "className": "btn btn-main"
+        }
+      ],
+      "searchAnchors": [],
+      "scripts": [],
+      "searchText": [],
+      "elapsedMs": 147
+    },
+    {
+      "id": "83470ddacb3032bb",
+      "name": "微风小说",
+      "host": "m.wfxs.tw",
+      "status": 200,
+      "url": "https://m.wfxs.tw/",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "微風小說網-免費繁體小說線上看",
+      "forms": [],
+      "inputs": [],
+      "searchAnchors": [],
+      "scripts": [
+        "/style/jquery-1.11.1.min.js",
+        "/style/public_3_1_1.js",
+        "/style/slick.min.js",
+        "/style/index_1.js"
+      ],
+      "searchText": [],
+      "elapsedMs": 221
+    },
+    {
+      "id": "77647b9d57aad4c6",
+      "name": "我是盐神（优+）",
+      "host": "onehu.xyz",
+      "status": 200,
+      "url": "https://onehu.xyz/",
+      "contentType": "text/html; charset=utf-8",
+      "title": "我不是盐神",
+      "forms": [],
+      "inputs": [
+        {
+          "tag": "button",
+          "type": "button",
+          "name": "",
+          "placeholder": "",
+          "onclick": "",
+          "id": "navbar-toggler-btn",
+          "className": "navbar-toggler"
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": "",
+          "placeholder": "",
+          "onclick": "",
+          "id": "local-search-close",
+          "className": "close"
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "",
+          "placeholder": "",
+          "onclick": "",
+          "id": "local-search-input",
+          "className": "form-control validate"
+        }
+      ],
+      "searchAnchors": [],
+      "scripts": [
+        "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5385433913913034",
+        "/js/utils.js",
+        "/js/color-schema.js",
+        "https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js",
+        "https://lib.baomitu.com/jquery/3.6.0/jquery.min.js",
+        "https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js",
+        "/js/events.js",
+        "/js/plugins.js",
+        "https://lib.baomitu.com/typed.js/2.0.12/typed.min.js",
+        "/js/img-lazyload.js",
+        "/js/local-search.js",
+        "/js/boot.js"
+      ],
+      "searchText": [
+        "搜索"
+      ],
+      "elapsedMs": 88
+    },
+    {
+      "id": "7a1f39a58b7aa884",
+      "name": "无影小说网",
+      "host": "www.seying.cc",
+      "status": 200,
+      "url": "https://www.seying.cc/",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "无法找到该页",
+      "forms": [],
+      "inputs": [],
+      "searchAnchors": [],
+      "scripts": [
+        "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092"
+      ],
+      "searchText": [
+        "无法找到该页 您正在搜索的页面可能已经删除、更名或暂时不可用。",
+        "转到 Microsoft 产品支持服务并搜索包括“HTTP”和“404”的标题。",
+        "打开“IIS 帮助”（可在 IIS 管理器 (inetmgr) 中访问），然后搜索标题为“网站设置”、“常规管理任务”和“关于自定义错误消息”的主题。"
+      ],
+      "elapsedMs": 228
+    },
+    {
+      "id": "b31eb9e4b7836038",
+      "name": "新ak小说网",
+      "host": "xakxsw.com",
+      "status": 200,
+      "url": "https://xakxsw.com/",
+      "contentType": "text/html",
+      "title": "welcome!!!",
+      "forms": [],
+      "inputs": [],
+      "searchAnchors": [],
+      "scripts": [
+        "//sdk.51.la/js-sdk-pro.min.js",
+        "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092"
+      ],
+      "searchText": [],
+      "elapsedMs": 148
+    },
+    {
+      "id": "0fe14150780117de",
+      "name": "阅友小说（优+）",
+      "host": "sma.yueyouxs.com",
+      "status": 200,
+      "url": "https://sma.yueyouxs.com/",
+      "contentType": "text/html; charset=utf-8",
+      "title": "",
+      "forms": [],
+      "inputs": [],
+      "searchAnchors": [],
+      "scripts": [
+        "https://cdn.p.yueyouxs.com/static/prod/yygowap/common/js/zepto.min.js",
+        "https://cdn.p.yueyouxs.com/static/prod/yygowap/common/js/time.js",
+        "https://cdn.p.yueyouxs.com/static/prod/yygowap/common/js/autoLazy.js",
+        "https://cdn.p.yueyouxs.com/static/prod/yygowap/common/js/toTop.js",
+        "https://cdn.p.yueyouxs.com/static/prod/yygowap/common/js/slider.js",
+        "https://cdn.p.yueyouxs.com/static/prod/yygowap/common/js/rem.js",
+        "https://cdn.p.yueyouxs.com/static/prod/yygowap/common/js/yueYou.js?ts=20260123"
+      ],
+      "searchText": [],
+      "elapsedMs": 3311
+    }
+  ]
+}
