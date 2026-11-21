@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "biquluo-la",
+  "name": "壁落小说",
+  "kind": "public-web",
+  "version": "1.0.0",
+  "baseUrl": "https://www.biquluo.la/",
+  "domains": [
+    "www.biquluo.la"
+  ],
+  "script": "scripts/biquluo-la.js",
+  "enabled": true,
+  "testOnly": true,
+  "testOnlyReason": "旧版 Legado 四阶段联网测试曾通过；当前先开放给 AppleNovelApp 原生宿主联调，尚未完成 App 侧复测。",
+  "description": "普通小说测试源。支持 GET 搜索、书籍详情、章节目录与正文；正文经过推广文本清洗。当前为 App 宿主联调状态。",
+  "licenseApproved": true,
+  "licenseType": "open-license",
+  "licenseEvidence": "解析规则基于 luanmuc/legado-book-sources 仓库中的 MIT License 来源规则适配；此许可仅覆盖规则代码的再分发，不代表目标网站对其收录小说内容作出授权。",
+  "licenseEvidenceUrl": "https://github.com/luanmuc/legado-book-sources/blob/main/LICENSE",
+  "hostValidated": false,
+  "appConfig": {
+    "searchUrl": "https://www.biquluo.la/search.html?name={keyword}",
+    "bookUrl": "https://www.biquluo.la/{bookUrl}",
+    "chapterListUrl": "https://www.biquluo.la/{bookUrl}",
+    "chapterUrl": "https://www.biquluo.la/{chapterUrl}",
+    "htmlRules": {
+      "search": {
+        "itemSelector": ".novelslist2 li",
+        "titleSelector": ".s2 a",
+        "urlSelector": ".s2 a",
+        "authorSelector": ".s4"
+      },
+      "detail": {
+        "titleSelector": "#info h1",
+        "descriptionSelector": "#intro"
+      },
+      "chapters": {
+        "itemSelector": "#list dd",
+        "titleSelector": "a",
+        "urlSelector": "a"
+      },
+      "content": {
+        "contentSelector": "#content",
+        "titleSelector": "h1"
+      }
+    }
+  }
+}
