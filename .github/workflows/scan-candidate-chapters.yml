@@ -16,7 +16,7 @@ permissions:
 
 concurrency:
   group: candidate-chapter-scan
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   scan:
@@ -51,15 +51,27 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Check scan revision
+        id: freshness
+        run: |
+          git fetch origin main
+          if [ "$(git rev-parse origin/main)" = "$GITHUB_SHA" ]; then
+            echo "current=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "current=false" >> "$GITHUB_OUTPUT"
+          fi
       - name: Download all scan batches
+        if: steps.freshness.outputs.current == 'true'
         uses: actions/download-artifact@v4
         with:
           pattern: candidate-novel-chapter-scan-*
           path: artifacts/scans
           merge-multiple: false
       - name: Build per-source accessibility, license and technical assessment
+        if: steps.freshness.outputs.current == 'true'
         run: node scripts/aggregate-candidate-assessment.js artifacts/scans
       - name: Commit assessment report
+        if: steps.freshness.outputs.current == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -68,7 +80,10 @@ jobs:
             echo "Assessment report unchanged."
             exit 0
           fi
-          git commit -m "chore: update AOAOSTAR candidate assessment"
           git fetch origin main
-          git rebase origin/main
+          if [ "$(git rev-parse origin/main)" != "$GITHUB_SHA" ]; then
+            echo "Main moved during aggregation; skipping stale assessment commit."
+            exit 0
+          fi
+          git commit -m "chore: update AOAOSTAR candidate assessment"
           git push origin HEAD:main
