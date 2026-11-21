@@ -3,7 +3,7 @@
   "id": "jiuyi-91zww",
   "name": "九一中文",
   "kind": "public-web",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "baseUrl": "https://www.91zww.com/",
   "domains": [
     "www.91zww.com"
