@@ -1,0 +1,29 @@
+name: Inspect 52shuku GET source candidate
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/inspect-52shuku.js"
+      - ".github/workflows/inspect-52shuku.yml"
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install HTML parser
+        run: npm install --no-save --no-package-lock linkedom
+      - name: Inspect 52shuku search and chapter stages
+        run: node scripts/inspect-52shuku.js
+      - name: Upload sanitized inspection
+        uses: actions/upload-artifact@v4
+        with:
+          name: 52shuku-inspection
+          path: reports/52shuku-inspection.json
+          retention-days: 30
