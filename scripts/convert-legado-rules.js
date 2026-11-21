@@ -79,10 +79,20 @@ function parseJsonPath(expression) {
   const steps=[];
   let i=0;
   if(raw[i]==="$") i++;
-  if(i<raw.length&&raw[i]==="."&&raw[i+1]===".") return null;
   while(i<raw.length){
+    if(raw[i]==="."&&raw[i+1]==="."){
+      i+=2;
+      if(raw[i]==="*"){steps.push({kind:"recursiveWildcard"});i++;continue;}
+      const match=raw.slice(i).match(/^([A-Za-z_$][\w$-]*)/);
+      if(!match) return null;
+      steps.push({kind:"recursiveProperty",name:match[1]});
+      i+=match[1].length;
+      continue;
+    }
     if(raw[i]==="."){
       i++;
+      if(raw[i]==="[") continue;
+      if(raw[i]==="*"){steps.push({kind:"wildcard"});i++;continue;}
       const match=raw.slice(i).match(/^([A-Za-z_$][\w$-]*)/);
       if(!match) return null;
       steps.push({kind:"property",name:match[1]});
@@ -189,7 +199,8 @@ function parseLegacyChain(expression) {
     return xpath?{status:"candidate",selector:xpath}:{status:"manual",reason:"unsupported-xpath"};
   }
   const jsonExpression=raw.match(/^@json:(.*)$/i);
-  if(jsonExpression||/^\$[.[]/.test(raw)){
+  const implicitJson=/^\$[.[]/.test(raw)||/^[A-Za-z_$][\w$-]*\[\*/.test(raw);
+  if(jsonExpression||implicitJson){
     const jsonPath=parseJsonPath(jsonExpression?jsonExpression[1]:raw);
     return jsonPath?{status:"candidate",selector:{engine:"json",path:jsonPath}}:{status:"manual",reason:"unsupported-jsonpath"};
   }
