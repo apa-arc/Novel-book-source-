@@ -6,6 +6,7 @@ on:
     paths:
       - "development/candidate-subscription.json"
       - "scripts/live-test-app-candidates.ts"
+      - "scripts/app-runtime-classification.ts"
       - ".github/workflows/test-app-candidates.yml"
   workflow_dispatch:
 
