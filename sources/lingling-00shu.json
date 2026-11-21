@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "lingling-00shu",
+  "name": "零零小说",
+  "kind": "public-web",
+  "version": "1.0.0",
+  "baseUrl": "https://www.00shu.la/",
+  "domains": [
+    "www.00shu.la"
+  ],
+  "script": "scripts/lingling-00shu.js",
+  "enabled": true,
+  "testOnly": true,
+  "testOnlyReason": "从公开 AOAOSTAR 规则转换为本仓库 GET/CSS 配置；已移除上游封面 JS 依赖并映射四阶段选择器，尚未完成当前站点实时与宿主实测。",
+  "description": "普通小说网页源；GET 搜索，详情、目录与正文采用 CSS 规则，待实测。",
+  "licenseApproved": true,
+  "licenseType": "self-owned",
+  "licenseEvidence": "本仓库原创声明式适配配置与解析器，不包含小说正文。",
+  "licenseEvidenceUrl": "https://github.com/apa-arc/Novel-book-source-/blob/main/sources/lingling-00shu.json",
+  "hostValidated": false,
+  "appConfig": {
+    "searchUrl": "https://www.00shu.la/modules/article/search.php?q={keyword}",
+    "bookUrl": "https://www.00shu.la/",
+    "chapterListUrl": "https://www.00shu.la/{bookUrl}",
+    "chapterUrl": "https://www.00shu.la/{chapterUrl}",
+    "htmlRules": {
+      "search": {
+        "itemSelector": ".grid tr",
+        "titleSelector": "td:nth-child(1) a",
+        "urlSelector": "td:nth-child(1) a",
+        "authorSelector": "td:nth-child(3)"
+      },
+      "detail": {
+        "titleSelector": "#info h1",
+        "descriptionSelector": "#intro"
+      },
+      "chapters": {
+        "itemSelector": "#list dd",
+        "titleSelector": "a",
+        "urlSelector": "a"
+      },
+      "content": {
+        "contentSelector": "#content",
+        "titleSelector": "h1"
+      }
+    }
+  }
+}
