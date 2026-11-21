@@ -3,7 +3,7 @@
   "id": "bqg-info",
   "name": "笔趣阁info",
   "kind": "public-web",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "baseUrl": "https://www.bqg.info/",
   "domains": [
     "www.bqg.info"
@@ -25,7 +25,8 @@
       "search": {
         "itemSelector": "div.book-coverlist",
         "titleSelector": "h4 a",
-        "urlSelector": "h4 a"
+        "urlSelector": "h4 a",
+        "coverSelector": "img"
       },
       "detail": {
         "titleSelector": "h1",
