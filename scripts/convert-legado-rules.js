@@ -76,6 +76,11 @@ function splitTopLevel(raw, operator) {
   }
   return parts.length?parts.concat(raw.slice(start).trim()):null;
 }
+function parseJsonFilter(token) {
+  const match=String(token||"").match(/^\?\(@\.([\w$-]+)\s*(?:(==|!=|=)\s*(['"])(.*?)\3)?\)$/);
+  if(!match) return null;
+  return {kind:"filter",key:match[1],operator:match[2]||"exists",value:match[4]};
+}
 function parseJsonPath(expression) {
   const raw=String(expression||"").trim();
   if(!raw||raw.length>1024) return null;
@@ -86,6 +91,15 @@ function parseJsonPath(expression) {
     if(raw[i]==="."&&raw[i+1]==="."){
       i+=2;
       if(raw[i]==="*"){steps.push({kind:"recursiveWildcard"});i++;continue;}
+      if(raw[i]==="["){
+        const end=raw.indexOf("]",i+1);
+        if(end<0) return null;
+        const filter=parseJsonFilter(raw.slice(i+1,end));
+        if(!filter) return null;
+        steps.push({...filter,kind:"recursiveFilter"});
+        i=end+1;
+        continue;
+      }
       const match=raw.slice(i).match(/^([A-Za-z_$][\w$-]*)/);
       if(!match) return null;
       steps.push({kind:"recursiveProperty",name:match[1]});
@@ -96,6 +110,8 @@ function parseJsonPath(expression) {
       i++;
       if(raw[i]==="[") continue;
       if(raw[i]==="*"){steps.push({kind:"wildcard"});i++;continue;}
+      const index=raw.slice(i).match(/^(-?\d+)/);
+      if(index){steps.push({kind:"index",index:Number(index[1])});i+=index[1].length;continue;}
       const match=raw.slice(i).match(/^([A-Za-z_$][\w$-]*)/);
       if(!match) return null;
       steps.push({kind:"property",name:match[1]});
@@ -106,7 +122,13 @@ function parseJsonPath(expression) {
       const end=raw.indexOf("]",i+1);
       if(end<0) return null;
       const token=raw.slice(i+1,end).trim();
+      const filter=parseJsonFilter(token);
+      const slice=token.match(/^(-?\d*)\s*:\s*(-?\d*)\s*(?::\s*(-?\d+)\s*)?$/);
+      const union=token.match(/^-?\d+(?:\s*,\s*-?\d+)+$/);
       if(token==="*") steps.push({kind:"wildcard"});
+      else if(filter) steps.push(filter);
+      else if(slice&&token.includes(":")) steps.push({kind:"slice",start:slice[1]===""?null:Number(slice[1]),end:slice[2]===""?null:Number(slice[2]),step:slice[3]?Number(slice[3]):1});
+      else if(union) steps.push({kind:"union",indices:token.split(",").map(x=>Number(x.trim()))});
       else if(/^-?\d+$/.test(token)) steps.push({kind:"index",index:Number(token)});
       else if(/^(['"])[\s\S]*\1$/.test(token)) steps.push({kind:"property",name:token.slice(1,-1)});
       else return null;
@@ -297,9 +319,27 @@ function parseLegacyChain(expression) {
     return xpath?{status:"candidate",selector:xpath}:{status:"manual",reason:"unsupported-xpath"};
   }
   const jsonExpression=raw.match(/^@json:(.*)$/i);
-  const implicitJson=/^\$[.[]/.test(raw)||/^[A-Za-z_$][\w$-]*\[\*/.test(raw);
+  const implicitJson=/^\$[.[]/.test(raw)||/^[A-Za-z_$][\w$-]*\[(?:\*|\d|:)/.test(raw);
   if(jsonExpression||implicitJson){
-    const jsonPath=parseJsonPath(jsonExpression?jsonExpression[1]:raw);
+    let expression=jsonExpression?jsonExpression[1].trim():raw;
+    const braceParts=expression.match(/\{([^{}]+)\}/g);
+    if(braceParts&&braceParts.length>1){
+      const parts=[];
+      let cursor=0;
+      for(const token of braceParts){
+        const index=expression.indexOf(token,cursor);
+        if(index>cursor) parts.push({engine:"literal",value:expression.slice(cursor,index)});
+        const parsed=parseLegacyChain(token.slice(1,-1));
+        if(parsed.status!=="candidate") return {status:"manual",reason:"unsupported-json-template"};
+        parts.push(parsed.selector);
+        cursor=index+token.length;
+      }
+      if(cursor<expression.length) parts.push({engine:"literal",value:expression.slice(cursor)});
+      return {status:"candidate",selector:{engine:"composite",operator:"concat",parts}};
+    }
+    const wrapped=expression.match(/^\{\s*([\s\S]+?)\s*\}$/);
+    if(wrapped) expression=wrapped[1];
+    const jsonPath=parseJsonPath(expression);
     return jsonPath?{status:"candidate",selector:{engine:"json",path:jsonPath}}:{status:"manual",reason:"unsupported-jsonpath"};
   }
   if (/^(text|html|href|src|owntext|textnodes|textNodes|all)$/i.test(raw)) {
