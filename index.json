@@ -65,6 +65,14 @@
       "file": "sources/sanyi-31xs.json",
       "enabled": true,
       "testOnly": true
+    },
+    {
+      "id": "lingling-00shu",
+      "name": "零零小说",
+      "kind": "public-web",
+      "file": "sources/lingling-00shu.json",
+      "enabled": true,
+      "testOnly": true
     }
   ]
 }
