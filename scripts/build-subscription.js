@@ -71,7 +71,7 @@ function main() {
   const unified = buildSubscription(ordinaryIndex, root, undefined, {
     subscriptionId: "apa-arc-novel-book-source",
     name: "小说源",
-    description: "普通与成人小说统一订阅；来源发现问题后持续修复或下架"
+    description: "普通小说统一订阅；来源发现问题后持续修复或下架"
   });
   fs.writeFileSync(path.join(root, "subscription.json"), JSON.stringify(unified, null, 2) + "\n");
   console.log("小说源统一清单：", unified.sourceCount, "个书源（含明确标记的联调源）");
