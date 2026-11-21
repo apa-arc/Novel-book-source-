@@ -153,8 +153,8 @@ async function fetchHtml(rawUrl, host, requestHeaders = {}, extraHosts = []) {
   }
   throw new Error("too-many-redirects");
 }
-function simpleSearchUrl(source, keyword, page) {
-  const raw = String(source.searchUrl || "").trim();
+function simpleSearchUrl(source, keyword, page, rawOverride) {
+  const raw = String(rawOverride === undefined ? source.searchUrl || "" : rawOverride).trim();
   if (!raw || raw.includes(",") || SCRIPT_OR_AUTH.test(raw) || /webView|cookie|header/i.test(raw)) {
     throw new Error("unsupported-search-url");
   }
@@ -169,6 +169,13 @@ function simpleSearchUrl(source, keyword, page) {
   const privateHost = host === "localhost" || host.endsWith(".local") || ["127.","10.","192.168.","172.16.","172.17.","172.18.","172.19.","172.20.","172.21.","172.22.","172.23.","172.24.","172.25.","172.26.","172.27.","172.28.","172.29.","172.30.","172.31."].some(prefix => host.startsWith(prefix));
   if (u.protocol !== "https:" || u.username || u.password || !host || privateHost) throw new Error("unsafe-search-url");
   return u.href;
+}
+function simpleSearchUrls(source, keyword, page) {
+  const raw = String(source.searchUrl || "").trim();
+  if (!raw) throw new Error("unsupported-search-url");
+  const parts = raw.includes(",") ? raw.split(/,(?=https?:\/\/)/i).map(x => x.trim()).filter(Boolean) : [raw];
+  if (raw.includes(",") && parts.length < 2) throw new Error("unsupported-search-url");
+  return [...new Set(parts.map(part => simpleSearchUrl(source, keyword, page, part)))];
 }
 function extract(node, rules, baseUrl, host, extraHosts = [], context = { variables: {} }) {
   const out = {};
@@ -228,27 +235,36 @@ async function testSource(source, testId) {
     let resultCount = 0;
     let keywordUsed = "";
     const terms = [...new Set([KEYWORD, source.ruleSearch.checkKeyWord, "凡人修仙传", "完美世界"].filter(x => typeof x === "string" && x.trim()))];
+    let lastSearchError = null;
     for (const term of terms) {
-      const searchUrl = simpleSearchUrl(source, term, 1);
-      const searchHost = new URL(searchUrl).hostname.toLowerCase();
-      extraHosts = [...new Set([searchHost])];
-      const searchPage = await fetchHtml(searchUrl, host, headers, extraHosts);
-      const listContext = { variables: {} };
-      const searchItems = allNodes(searchPage.document, source.ruleSearch.bookList, listContext);
-      const books = [];
-      for (const item of searchItems.slice(0, 80)) {
-        const context = { variables: { ...listContext.variables } };
-        const fields = extract(item, source.ruleSearch, searchPage.url, host, extraHosts, context);
-        if (fields.name && fields.bookUrl) books.push({ fields, context });
+      let searchUrls;
+      try { searchUrls = simpleSearchUrls(source, term, 1); }
+      catch (error) { lastSearchError = error; break; }
+      for (const searchUrl of searchUrls) {
+        try {
+          const searchHost = new URL(searchUrl).hostname.toLowerCase();
+          extraHosts = [...new Set([searchHost])];
+          const searchPage = await fetchHtml(searchUrl, host, headers, extraHosts);
+          const listContext = { variables: {} };
+          const searchItems = allNodes(searchPage.document, source.ruleSearch.bookList, listContext);
+          const books = [];
+          for (const item of searchItems.slice(0, 80)) {
+            const context = { variables: { ...listContext.variables } };
+            const fields = extract(item, source.ruleSearch, searchPage.url, host, headers, extraHosts, context);
+            if (fields.name && fields.bookUrl) books.push({ fields, context });
+          }
+          if (books.length) {
+            chosen = books[0].fields;
+            chosenContext = books[0].context;
+            resultCount = books.length;
+            keywordUsed = term;
+            break;
+          }
+        } catch (error) { lastSearchError = error; }
       }
-      if (books.length) {
-        chosen = books[0].fields;
-        chosenContext = books[0].context;
-        resultCount = books.length;
-        keywordUsed = term;
-        break;
-      }
+      if (chosen) break;
     }
+    if (!chosen && lastSearchError && !/search-returned-no-books/.test(lastSearchError.message || "")) throw lastSearchError;
     if (!chosen) throw new Error("search-returned-no-books");
     stage("search", { resultCount, selectedTitle: chosen.name, keywordUsed });
 
