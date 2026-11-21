@@ -1,83 +1,137 @@
 {
   "schemaVersion": 1,
-  "workflow": "Live functional tests for novel sources",
-  "runId": 44798858016,
-  "runUrl": "https://github.com/apa-arc/Novel-book-source-/actions/runs/44798858016",
-  "commit": "fe6589ba91a03ba5f13448ef86b1e5ad642ae122",
-  "result": "completed",
-  "method": "For every official subscription entry and every unique upstream candidate, execute real search -> book detail -> chapter list -> chapter content. No login, cookies, CAPTCHA bypass, or arbitrary rule JavaScript.",
-  "shards": 32,
-  "counts": {
-    "officialSubscription": {
-      "ordinary": 2966,
-      "adult": 76,
-      "total": 3042
-    },
-    "upstreamCandidates": {
-      "aoaostar": 3906,
-      "secondary": 1735,
-      "total": 5641
-    },
-    "totalTested": 8683,
-    "passed": 1,
-    "failed": 8682,
-    "subscriptionChanges": 0
+  "generatedAt": "2026-11-21T03:12:04.134Z",
+  "testedRecords": 8687,
+  "statusCounts": {
+    "unsupported": 5677,
+    "unverified": 1409,
+    "failed": 774,
+    "blocked": 556,
+    "excluded": 255,
+    "passed": 16
   },
-  "passedSources": [
-    {
-      "name": "全本小说",
-      "host": "www.bond-y.com",
-      "provider": "subscription-ordinary",
-      "keyword": "斗破苍穹",
-      "searchResults": 49,
-      "chapterCount": 50,
-      "contentLength": 1785,
-      "quality": {
-        "suspect": 0,
-        "review": 0,
-        "duplicates": 0
-      }
-    }
-  ],
-  "failureStages": {
-    "preflight": 8533,
-    "search": 149
-  },
-  "topFailureReasons": {
-    "unsupported-or-incomplete-rule-groups": 3757,
-    "login-required": 2676,
-    "upstream-source-disabled": 1253,
-    "non-novel-source": 255,
-    "credential-or-unsupported-header": 210,
-    "unsupported-source-type": 129,
-    "Invalid URL": 128,
-    "unparseable-request-headers": 125,
-    "unsupported-search-url": 48,
-    "unsafe-search-url": 41,
-    "fetch failed": 30,
-    "search-returned-no-books": 12
-  },
-  "providerResults": {
+  "providerCounts": {
     "subscription-ordinary": {
-      "tested": 2966,
-      "passed": 1,
-      "failed": 2965
+      "unsupported": 1865,
+      "unverified": 569,
+      "failed": 306,
+      "blocked": 222,
+      "excluded": 2,
+      "passed": 6
     },
     "subscription-adult": {
-      "tested": 76,
-      "passed": 0,
-      "failed": 76
+      "unsupported": 60,
+      "blocked": 4,
+      "unverified": 7,
+      "failed": 5
     },
     "AOAOSTAR-candidate": {
-      "tested": 3906,
-      "passed": 0,
-      "failed": 3906
+      "unsupported": 2566,
+      "blocked": 223,
+      "failed": 315,
+      "unverified": 572,
+      "excluded": 228,
+      "passed": 2
     },
     "luanmuc-candidate": {
-      "tested": 1735,
-      "passed": 0,
-      "failed": 1735
+      "unsupported": 1186,
+      "blocked": 107,
+      "failed": 148,
+      "unverified": 261,
+      "passed": 8,
+      "excluded": 25
     }
   },
-  "note": "A source is counted as passed only when search, book detail, chapter list, and chapter content all pass. Test completion does not imply redistribution permission. No subscription files were modified by this test run."
+  "passedRecords": 16,
+  "passedUniqueCount": 9,
+  "ordinaryPassedUnique": 6,
+  "adultPassedUnique": 3,
+  "passedUniqueSources": [
+    {
+      "name": "🐦夜书吧po18mx",
+      "host": "www.po18mx.com",
+      "category": "adult",
+      "contentLength": 2640,
+      "providers": [
+        "luanmuc-candidate"
+      ]
+    },
+    {
+      "name": "肉文NP#2",
+      "host": "www.rouwennp.org",
+      "category": "adult",
+      "contentLength": 2563,
+      "providers": [
+        "luanmuc-candidate"
+      ]
+    },
+    {
+      "name": "🎉 疯读小说",
+      "host": "fiction.fengduxiaoshuo.com",
+      "category": "ordinary",
+      "contentLength": 2309,
+      "providers": [
+        "AOAOSTAR-candidate",
+        "subscription-ordinary"
+      ]
+    },
+    {
+      "name": "笔趣阁140",
+      "host": "www.biquluo.la",
+      "category": "ordinary",
+      "contentLength": 1196,
+      "providers": [
+        "luanmuc-candidate",
+        "subscription-ordinary"
+      ]
+    },
+    {
+      "name": "书斋阁书",
+      "host": "www.shuzhaige.com",
+      "category": "ordinary",
+      "contentLength": 2831,
+      "providers": [
+        "subscription-ordinary",
+        "luanmuc-candidate"
+      ]
+    },
+    {
+      "name": "得奇小说1",
+      "host": "www.deqitxt.com",
+      "category": "ordinary",
+      "contentLength": 615,
+      "providers": [
+        "subscription-ordinary",
+        "luanmuc-candidate"
+      ]
+    },
+    {
+      "name": "新御宅屋",
+      "host": "mm.xyuzhaiwu.xyz",
+      "category": "ordinary",
+      "contentLength": 2109,
+      "providers": [
+        "subscription-ordinary",
+        "luanmuc-candidate"
+      ]
+    },
+    {
+      "name": "免费小说1",
+      "host": "api.wnreader.com",
+      "category": "ordinary",
+      "contentLength": 150,
+      "providers": [
+        "luanmuc-candidate"
+      ]
+    },
+    {
+      "name": "肉书屋②",
+      "host": "m.roushuwu2.com",
+      "category": "adult",
+      "contentLength": 2640,
+      "providers": [
+        "luanmuc-candidate"
+      ]
+    }
+  ]
 }
