@@ -7,7 +7,7 @@ import type { NovelSource } from "../app/src/source.ts";
 const raw = fs.readFileSync("config/health-check-subscription.json", "utf8");
 const parsed = parseSourceSubscription(raw);
 const manifest = JSON.parse(raw);
-const keywords = ["斗罗大陆", "斗破苍穹"];
+const keywords = ["斗罗", "斗破"];
 const modes = [
   {
     name: "node-default",
