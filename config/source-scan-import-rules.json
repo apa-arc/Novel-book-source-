@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-21",
+  "testKeywords": [
+    "斗罗大陆",
+    "斗破苍穹"
+  ],
+  "sourceSearchPolicy": {
+    "requestFailed": [
+      "connection-error",
+      "http-403",
+      "cross-domain-redirect",
+      "timeout",
+      "http-4xx-5xx"
+    ],
+    "requestSucceededZeroResults": "zero-result-retest",
+    "requestSucceededWithResults": "search-qualified",
+    "minimumPositiveKeywordCount": 1,
+    "bothKeywordsMustHaveSuccessfulRequests": true,
+    "zeroResultsOnOneKeywordAllowedOnlyWhenOtherKeywordHasResults": true
+  },
+  "formalImportGate": {
+    "requireLicenseEvidence": true,
+    "requireSearchBothKeywords": true,
+    "requireSearchAtLeastOnePositiveResult": true,
+    "requireDetail": true,
+    "requireChapters": true,
+    "requireFirstAndLastChapterContent": true,
+    "requireTextQualityPass": true,
+    "requireAppRuntimePass": true,
+    "requireHttpsAndAllowedDomains": true,
+    "rejectAdultOrEroticSources": true,
+    "rejectLoginPaywallCaptchaOrDrmBypass": true,
+    "homepageReachableOrJsonSchemaValidIsNotEnough": true
+  },
+  "baseline": {
+    "date": "2026-11-21",
+    "keyword": "斗罗大陆",
+    "searchFailedCount": 17,
+    "searchSucceededCount": 10,
+    "searchSucceededPositiveResultsCount": 7,
+    "searchSucceededZeroResultsCount": 3,
+    "fullyNoReportedStageErrorCount": 5,
+    "directoryHttp404Count": 2,
+    "searchSucceededZeroResultSources": [
+      "jiuyi-91zww",
+      "xqianqian-m",
+      "iyueba-net"
+    ],
+    "searchPositiveButDirectory404Sources": [
+      "xinbiquge-info",
+      "d8zw-com"
+    ],
+    "fullyNoReportedStageErrorSources": [
+      "biquluo-la",
+      "biquge-17177",
+      "bqg-info",
+      "douhua-wenxue",
+      "52shuku-net"
+    ],
+    "searchFailedSources": [
+      "kuaishu5-com",
+      "dingdian-23uswx",
+      "wuxian-wenxuesk",
+      "tianyu-tycqzw",
+      "deqi-deqixs",
+      "sanyi-31xs",
+      "lingling-00shu",
+      "wujixsw-info",
+      "yushufang-ysfwxc",
+      "biqubao-com",
+      "zwda-com",
+      "yb3-cc",
+      "biquwu-cc",
+      "liewen-cc",
+      "bqg5-cc",
+      "woquge-com",
+      "kuxiaoshuo-com"
+    ]
+  },
+  "importDisposition": {
+    "keepForRegression": [
+      "biquluo-la",
+      "biquge-17177",
+      "bqg-info",
+      "douhua-wenxue",
+      "52shuku-net"
+    ],
+    "repairBeforeImport": [
+      "xinbiquge-info",
+      "d8zw-com"
+    ],
+    "retestSearch": [
+      "jiuyi-91zww",
+      "xqianqian-m",
+      "iyueba-net"
+    ],
+    "repairOrReplace": [
+      "kuaishu5-com",
+      "dingdian-23uswx",
+      "wuxian-wenxuesk",
+      "tianyu-tycqzw",
+      "deqi-deqixs",
+      "sanyi-31xs",
+      "lingling-00shu",
+      "wujixsw-info",
+      "yushufang-ysfwxc",
+      "biqubao-com",
+      "zwda-com",
+      "yb3-cc",
+      "biquwu-cc",
+      "liewen-cc",
+      "bqg5-cc",
+      "woquge-com",
+      "kuxiaoshuo-com"
+    ]
+  }
+}
