@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T11:43:01.399Z",
+  "generatedAt": "2026-11-21T11:46:44.493Z",
   "provider": "multi-repository metadata-only discovery",
   "notice": "仅保留书源名称、HTTPS站点地址和分组元数据；不复制规则、请求头、Cookie、凭据或小说正文。静态规则候选不是 App 可用源；必须独立适配并通过搜索、详情、目录、正文测试。成人/绅士/付费/非小说/脚本/登录态来源已排除。",
   "upstreams": [
@@ -26,25 +26,25 @@
   "stats": {
     "scaryburial-main-1944": {
       "records": 1895,
-      "adult": 87,
-      "nonNovel": 295,
-      "paywall": 106,
-      "nonHttps": 502,
-      "loginOrCookie": 588,
-      "script": 167,
-      "duplicate": 31,
-      "accepted": 119
+      "adult": 164,
+      "nonNovel": 297,
+      "paywall": 103,
+      "nonHttps": 478,
+      "loginOrCookie": 554,
+      "script": 157,
+      "duplicate": 30,
+      "accepted": 112
     },
     "huanqingsha-main": {
       "records": 1594,
-      "adult": 75,
-      "nonNovel": 121,
-      "paywall": 62,
-      "nonHttps": 548,
-      "loginOrCookie": 423,
-      "script": 132,
-      "duplicate": 64,
-      "accepted": 138
+      "adult": 125,
+      "nonNovel": 138,
+      "paywall": 64,
+      "nonHttps": 527,
+      "loginOrCookie": 400,
+      "script": 120,
+      "duplicate": 63,
+      "accepted": 128
     },
     "jiwangyihao-source-j": {
       "records": 2,
@@ -59,17 +59,17 @@
     },
     "liufuyou-yck-metadata": {
       "records": 120,
-      "adult": 5,
+      "adult": 6,
       "nonNovel": 0,
       "paywall": 0,
       "nonHttps": 0,
       "loginOrCookie": 0,
       "script": 0,
       "duplicate": 27,
-      "accepted": 88
+      "accepted": 87
     }
   },
-  "sourceCount": 345,
+  "sourceCount": 327,
   "sources": [
     {
       "id": "c8e02d71c02eb1fa",
@@ -79,19 +79,6 @@
       "group": "校验可用",
       "upstream": "huanqingsha/legado-book-sources",
       "upstreamFile": "https://raw.githubusercontent.com/huanqingsha/legado-book-sources/main/legado-book-sources.json",
-      "upstreamLicense": "not-declared",
-      "ruleClass": "static-no-script-no-login",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
-      "id": "7c02f23b2846bd00",
-      "name": "❤️你的地址1",
-      "baseUrl": "https://www.nidedizhi1.com/",
-      "host": "www.nidedizhi1.com",
-      "group": "轩1",
-      "upstream": "scaryburial/legado-book-sources",
-      "upstreamFile": "https://raw.githubusercontent.com/scaryburial/legado-book-sources/master/main/Main-BookSources-1944.json",
       "upstreamLicense": "not-declared",
       "ruleClass": "static-no-script-no-login",
       "redistributionStatus": "not-assessed",
@@ -267,19 +254,6 @@
       "runtimeStatus": "not-converted"
     },
     {
-      "id": "a28695e42271b478",
-      "name": "🎉新御书屋",
-      "baseUrl": "https://m.xyushuwu.me/",
-      "host": "m.xyushuwu.me",
-      "group": "校验可用",
-      "upstream": "huanqingsha/legado-book-sources",
-      "upstreamFile": "https://raw.githubusercontent.com/huanqingsha/legado-book-sources/main/legado-book-sources.json",
-      "upstreamLicense": "not-declared",
-      "ruleClass": "static-no-script-no-login",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
       "id": "8b1676b6b18a7037",
       "name": "🎻全本同人小说",
       "baseUrl": "https://www.qbtr.cc/",
@@ -345,10 +319,10 @@
       "runtimeStatus": "not-converted"
     },
     {
-      "id": "2157e7d4c4f68972",
-      "name": "💗 十八言情",
-      "baseUrl": "https://www.po18yq.com/",
-      "host": "www.po18yq.com",
+      "id": "56f4de65f6a7e638",
+      "name": "👔 柚子小说",
+      "baseUrl": "https://m.888zjd.com/",
+      "host": "m.888zjd.com",
       "group": "校验可用",
       "upstream": "huanqingsha/legado-book-sources",
       "upstreamFile": "https://raw.githubusercontent.com/huanqingsha/legado-book-sources/main/legado-book-sources.json",
@@ -544,19 +518,6 @@
       "name": "📖 嗒嗒中文",
       "baseUrl": "https://www.dadazw8.com/",
       "host": "www.dadazw8.com",
-      "group": "📖 小说",
-      "upstream": "Daiaji LegadoSource",
-      "upstreamFile": "imports/third-party/liufuyou/candidate-catalog.json",
-      "upstreamLicense": "not-assessed",
-      "ruleClass": "metadata-only-not-converted",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
-      "id": "eff66b43a23e20c7",
-      "name": "📖 耽美网网",
-      "baseUrl": "https://m.dmxso.com/",
-      "host": "m.dmxso.com",
       "group": "📖 小说",
       "upstream": "Daiaji LegadoSource",
       "upstreamFile": "imports/third-party/liufuyou/candidate-catalog.json",
@@ -1021,6 +982,19 @@
       "runtimeStatus": "not-converted"
     },
     {
+      "id": "9e7ebd3769801321",
+      "name": "🚬肉肉屋",
+      "baseUrl": "https://m.rourouwu10.com/",
+      "host": "m.rourouwu10.com",
+      "group": "未分类",
+      "upstream": "scaryburial/legado-book-sources",
+      "upstreamFile": "https://raw.githubusercontent.com/scaryburial/legado-book-sources/master/main/Main-BookSources-1944.json",
+      "upstreamLicense": "not-declared",
+      "ruleClass": "static-no-script-no-login",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
       "id": "9128213dedb0b4e5",
       "name": "016小说手机免费阅读",
       "baseUrl": "https://m.016wx.com/",
@@ -1041,19 +1015,6 @@
       "group": "0905校验",
       "upstream": "huanqingsha/legado-book-sources",
       "upstreamFile": "https://raw.githubusercontent.com/huanqingsha/legado-book-sources/main/legado-book-sources.json",
-      "upstreamLicense": "not-declared",
-      "ruleClass": "static-no-script-no-login",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
-      "id": "b1be19434409d977",
-      "name": "2",
-      "baseUrl": "https://yibaobang.com/",
-      "host": "yibaobang.com",
-      "group": "综合",
-      "upstream": "scaryburial/legado-book-sources",
-      "upstreamFile": "https://raw.githubusercontent.com/scaryburial/legado-book-sources/master/main/Main-BookSources-1944.json",
       "upstreamLicense": "not-declared",
       "ruleClass": "static-no-script-no-login",
       "redistributionStatus": "not-assessed",
@@ -1285,19 +1246,6 @@
       "name": "安夜读库",
       "baseUrl": "https://m.yeduku.com/",
       "host": "m.yeduku.com",
-      "group": "小说 书源",
-      "upstream": "scaryburial/legado-book-sources",
-      "upstreamFile": "https://raw.githubusercontent.com/scaryburial/legado-book-sources/master/main/Main-BookSources-1944.json",
-      "upstreamLicense": "not-declared",
-      "ruleClass": "static-no-script-no-login",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
-      "id": "ceb1c60194e37882",
-      "name": "八一中文",
-      "baseUrl": "https://www.81zw.co/",
-      "host": "www.81zw.co",
       "group": "小说 书源",
       "upstream": "scaryburial/legado-book-sources",
       "upstreamFile": "https://raw.githubusercontent.com/scaryburial/legado-book-sources/master/main/Main-BookSources-1944.json",
@@ -1905,19 +1853,6 @@
       "runtimeStatus": "not-converted"
     },
     {
-      "id": "5bb896a5b7c0630c",
-      "name": "测试",
-      "baseUrl": "https://nhentai.net/",
-      "host": "nhentai.net",
-      "group": "校验可用",
-      "upstream": "huanqingsha/legado-book-sources",
-      "upstreamFile": "https://raw.githubusercontent.com/huanqingsha/legado-book-sources/main/legado-book-sources.json",
-      "upstreamLicense": "not-declared",
-      "ruleClass": "static-no-script-no-login",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
       "id": "e6bad697c18c5879",
       "name": "春雨书屋",
       "baseUrl": "https://www.chunyushuwu.com/",
@@ -1990,19 +1925,6 @@
       "group": "官方-7-17",
       "upstream": "scaryburial/legado-book-sources",
       "upstreamFile": "https://raw.githubusercontent.com/scaryburial/legado-book-sources/master/main/Main-BookSources-1944.json",
-      "upstreamLicense": "not-declared",
-      "ruleClass": "static-no-script-no-login",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
-      "id": "d42907f421e443f0",
-      "name": "耽美小说",
-      "baseUrl": "https://www.blxsw.cc/",
-      "host": "www.blxsw.cc",
-      "group": "自制,小说 书源,2026 年 2 月校验成功",
-      "upstream": "huanqingsha/legado-book-sources",
-      "upstreamFile": "https://raw.githubusercontent.com/huanqingsha/legado-book-sources/main/legado-book-sources.json",
       "upstreamLicense": "not-declared",
       "ruleClass": "static-no-script-no-login",
       "redistributionStatus": "not-assessed",
@@ -2412,19 +2334,6 @@
       "runtimeStatus": "not-converted"
     },
     {
-      "id": "01da668125f9c0f9",
-      "name": "华丽家族BL文学",
-      "baseUrl": "https://www.hljzc.cc/",
-      "host": "www.hljzc.cc",
-      "group": "校验可用",
-      "upstream": "huanqingsha/legado-book-sources",
-      "upstreamFile": "https://raw.githubusercontent.com/huanqingsha/legado-book-sources/main/legado-book-sources.json",
-      "upstreamLicense": "not-declared",
-      "ruleClass": "static-no-script-no-login",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
       "id": "d998abbc3c9cead0",
       "name": "华龙文学🎃",
       "baseUrl": "https://m.hltxt.com/",
@@ -2789,19 +2698,6 @@
       "runtimeStatus": "not-converted"
     },
     {
-      "id": "c96d4c05b6f8022e",
-      "name": "零点看书",
-      "baseUrl": "https://www.rhmm18.com/",
-      "host": "www.rhmm18.com",
-      "group": "🎃常规",
-      "upstream": "scaryburial/legado-book-sources",
-      "upstreamFile": "https://raw.githubusercontent.com/scaryburial/legado-book-sources/master/main/Main-BookSources-1944.json",
-      "upstreamLicense": "not-declared",
-      "ruleClass": "static-no-script-no-login",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
       "id": "4e0595b722c28b24",
       "name": "零点小说",
       "baseUrl": "https://www.lingdxsw.com/",
@@ -3015,19 +2911,6 @@
       "baseUrl": "https://www.qq717.com/",
       "host": "www.qq717.com",
       "group": "0905校验",
-      "upstream": "huanqingsha/legado-book-sources",
-      "upstreamFile": "https://raw.githubusercontent.com/huanqingsha/legado-book-sources/main/legado-book-sources.json",
-      "upstreamLicense": "not-declared",
-      "ruleClass": "static-no-script-no-login",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
-      "id": "0c8f3e9dafe09a65",
-      "name": "奇书中文",
-      "baseUrl": "https://www.qishuzw.com/",
-      "host": "www.qishuzw.com",
-      "group": "校验可用",
       "upstream": "huanqingsha/legado-book-sources",
       "upstreamFile": "https://raw.githubusercontent.com/huanqingsha/legado-book-sources/main/legado-book-sources.json",
       "upstreamLicense": "not-declared",
@@ -3277,19 +3160,6 @@
       "group": "未分类",
       "upstream": "scaryburial/legado-book-sources",
       "upstreamFile": "https://raw.githubusercontent.com/scaryburial/legado-book-sources/master/main/Main-BookSources-1944.json",
-      "upstreamLicense": "not-declared",
-      "ruleClass": "static-no-script-no-login",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
-      "id": "2d2b23cfb98e8202",
-      "name": "十八书屋",
-      "baseUrl": "https://www.shibashuwu.net/",
-      "host": "www.shibashuwu.net",
-      "group": "首选",
-      "upstream": "huanqingsha/legado-book-sources",
-      "upstreamFile": "https://raw.githubusercontent.com/huanqingsha/legado-book-sources/main/legado-book-sources.json",
       "upstreamLicense": "not-declared",
       "ruleClass": "static-no-script-no-login",
       "redistributionStatus": "not-assessed",
@@ -3803,19 +3673,6 @@
       "runtimeStatus": "not-converted"
     },
     {
-      "id": "5f3a379b967119c2",
-      "name": "污漫天堂",
-      "baseUrl": "https://wumtt.com/",
-      "host": "wumtt.com",
-      "group": "全部来自论坛",
-      "upstream": "scaryburial/legado-book-sources",
-      "upstreamFile": "https://raw.githubusercontent.com/scaryburial/legado-book-sources/master/main/Main-BookSources-1944.json",
-      "upstreamLicense": "not-declared",
-      "ruleClass": "static-no-script-no-login",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
       "id": "40adec8e4755dfd4",
       "name": "无错小说①",
       "baseUrl": "https://www.wucuoxs.com/",
@@ -3979,19 +3836,6 @@
       "group": "小说 书源",
       "upstream": "scaryburial/legado-book-sources",
       "upstreamFile": "https://raw.githubusercontent.com/scaryburial/legado-book-sources/master/main/Main-BookSources-1944.json",
-      "upstreamLicense": "not-declared",
-      "ruleClass": "static-no-script-no-login",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
-      "id": "d9c3353a3e2cebf7",
-      "name": "新御宅",
-      "baseUrl": "https://m.xyuzhaiwu10.com/",
-      "host": "m.xyuzhaiwu10.com",
-      "group": "未分类",
-      "upstream": "huanqingsha/legado-book-sources",
-      "upstreamFile": "https://raw.githubusercontent.com/huanqingsha/legado-book-sources/main/legado-book-sources.json",
       "upstreamLicense": "not-declared",
       "ruleClass": "static-no-script-no-login",
       "redistributionStatus": "not-assessed",
@@ -4193,19 +4037,6 @@
       "runtimeStatus": "not-converted"
     },
     {
-      "id": "56f4de65f6a7e638",
-      "name": "柚子小说（优）",
-      "baseUrl": "https://m.888zjd.com/",
-      "host": "m.888zjd.com",
-      "group": "小说 书源",
-      "upstream": "scaryburial/legado-book-sources",
-      "upstreamFile": "https://raw.githubusercontent.com/scaryburial/legado-book-sources/master/main/Main-BookSources-1944.json",
-      "upstreamLicense": "not-declared",
-      "ruleClass": "static-no-script-no-login",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
       "id": "dcc266e7034b11c6",
       "name": "雨电子书",
       "baseUrl": "https://m.iwurexs.com/",
@@ -4245,45 +4076,6 @@
       "runtimeStatus": "not-converted"
     },
     {
-      "id": "07e6fd495a82a0b1",
-      "name": "御书屋",
-      "baseUrl": "https://m.po18xs.com/",
-      "host": "m.po18xs.com",
-      "group": "校验可用",
-      "upstream": "huanqingsha/legado-book-sources",
-      "upstreamFile": "https://raw.githubusercontent.com/huanqingsha/legado-book-sources/main/legado-book-sources.json",
-      "upstreamLicense": "not-declared",
-      "ruleClass": "static-no-script-no-login",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
-      "id": "7ba86448aab2d7e2",
-      "name": "御书屋",
-      "baseUrl": "https://m.eyushuwu.com/",
-      "host": "m.eyushuwu.com",
-      "group": "校验可用",
-      "upstream": "huanqingsha/legado-book-sources",
-      "upstreamFile": "https://raw.githubusercontent.com/huanqingsha/legado-book-sources/main/legado-book-sources.json",
-      "upstreamLicense": "not-declared",
-      "ruleClass": "static-no-script-no-login",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
-      "id": "c8972568e23c102f",
-      "name": "御宅文屋",
-      "baseUrl": "https://www.yuzhaiwen.com/",
-      "host": "www.yuzhaiwen.com",
-      "group": "未分类",
-      "upstream": "scaryburial/legado-book-sources",
-      "upstreamFile": "https://raw.githubusercontent.com/scaryburial/legado-book-sources/master/main/Main-BookSources-1944.json",
-      "upstreamLicense": "not-declared",
-      "ruleClass": "static-no-script-no-login",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
       "id": "cf926544162d4069",
       "name": "元网小说（发现）",
       "baseUrl": "https://metanetnovel.com/",
@@ -4315,19 +4107,6 @@
       "baseUrl": "https://m.yundu9.com/",
       "host": "m.yundu9.com",
       "group": "📃论坛",
-      "upstream": "scaryburial/legado-book-sources",
-      "upstreamFile": "https://raw.githubusercontent.com/scaryburial/legado-book-sources/master/main/Main-BookSources-1944.json",
-      "upstreamLicense": "not-declared",
-      "ruleClass": "static-no-script-no-login",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
-      "id": "224861d455e1fb5f",
-      "name": "渣女小说",
-      "baseUrl": "https://zhanvxs.net/",
-      "host": "zhanvxs.net",
-      "group": "女频",
       "upstream": "scaryburial/legado-book-sources",
       "upstreamFile": "https://raw.githubusercontent.com/scaryburial/legado-book-sources/master/main/Main-BookSources-1944.json",
       "upstreamLicense": "not-declared",
@@ -4496,19 +4275,6 @@
       "name": "AA阅读(需科学上网)",
       "baseUrl": "https://aaread.space/",
       "host": "aaread.space",
-      "group": "校验可用",
-      "upstream": "huanqingsha/legado-book-sources",
-      "upstreamFile": "https://raw.githubusercontent.com/huanqingsha/legado-book-sources/main/legado-book-sources.json",
-      "upstreamLicense": "not-declared",
-      "ruleClass": "static-no-script-no-login",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
-      "id": "976f438ff9f8d09f",
-      "name": "alpha",
-      "baseUrl": "https://www.alphapolis.co.jp/",
-      "host": "www.alphapolis.co.jp",
       "group": "校验可用",
       "upstream": "huanqingsha/legado-book-sources",
       "upstreamFile": "https://raw.githubusercontent.com/huanqingsha/legado-book-sources/main/legado-book-sources.json",
