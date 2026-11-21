@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 "use strict";
 
-// Executes bounded Legado selector IR: CSS chains, JSONPath filters/slices, limited XPath axes, regex cleanup and @put/@get state.
+// Executes bounded Legado selector IR: CSS chains, JSONPath filters/slices, limited XPath axes, regex cleanup, @put/@get state and normalized output modifiers.
 // No fetching, eval, arbitrary script execution, cookies, or filesystem access is provided.
 const MAX_STEPS=32;
 const MAX_RESULTS=5000;
