@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "wucuoxs-test",
+  "name": "无错小说（测试源）",
+  "kind": "public-web",
+  "version": "0.1.0",
+  "baseUrl": "https://www.wucuoxs.com/",
+  "domains": [
+    "www.wucuoxs.com"
+  ],
+  "script": "scripts/wucuoxs-test.js",
+  "enabled": false,
+  "description": "临时真机联调源：基于 AOAOSTAR/Legado 公开规则转换。尚未完成目标 App 四阶段实测与站点许可核验；仅用于导入/联调，不计入正式订阅。",
+  "licenseNote": "测试阶段；上游规则可追溯到 AOAOSTAR/Legado 的公开源集合，但站点内容授权尚未核实。不得作为正式发布源。",
+  "appConfig": {
+    "searchUrl": "https://www.wucuoxs.com/api/search?q={keyword}",
+    "bookUrl": "https://www.wucuoxs.com/",
+    "chapterListUrl": "https://www.wucuoxs.com/",
+    "chapterUrl": "https://www.wucuoxs.com/",
+    "htmlRules": {
+      "search": {
+        "itemSelector": "",
+        "titleSelector": "",
+        "urlSelector": ""
+      },
+      "detail": {
+        "titleSelector": "meta[property=\"og:novel:book_name\"]",
+        "descriptionSelector": "meta[property=\"og:description\"]"
+      },
+      "chapters": {
+        "itemSelector": "#at td a",
+        "titleSelector": "",
+        "urlSelector": ""
+      },
+      "content": {
+        "contentSelector": "#htmlContent"
+      }
+    }
+  }
+}
