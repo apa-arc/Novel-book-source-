@@ -96,7 +96,8 @@ async function fetchYckCollection() {
   // followed by 400 more novels. Keep only the two novel ranges.
   return rows.filter((_, index) => index < 101 || index >= 201).map((row, index) => ({ ...row, category: "novel", index }));
 }
-\nasync function main() {
+
+async function main() {
   const stats = { upstreamRecords: 0, nonText: 0, nonNovel: 0, adult: 0, paywall: 0, cookieOrSecret: 0, nonGetOrScript: 0, nonHttps: 0, duplicateHost: 0, accepted: 0 };
   const byHost = new Map();
   for (const item of UPSTREAM) {
@@ -147,7 +148,8 @@ async function fetchYckCollection() {
   } catch (error) {
     console.warn("YCK metadata discovery skipped:", String(error));
   }
-\n  const sources = [...byHost.values()].sort((a, b) => a.name.localeCompare(b.name, "zh-Hans"));
+
+  const sources = [...byHost.values()].sort((a, b) => a.name.localeCompare(b.name, "zh-Hans"));
   stats.accepted = sources.length;
   const output = {
     schemaVersion: 1,
