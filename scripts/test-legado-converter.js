@@ -71,9 +71,16 @@ try{
  const chainedBareTags=parseLegacyChain("div@a@text");
  assert.equal(chainedBareTags.status,"candidate");
  assert.deepEqual(chainedBareTags.selector.steps.map(x=>x.name),["div","a"]);
- const jsonPath=parseLegacyChain("@json:$.items");
- assert.equal(jsonPath.status,"manual");
- assert.equal(jsonPath.reason,"unsupported-jsonpath");
+ const jsonPath=parseLegacyChain("@json:$.items[*].name");
+ assert.equal(jsonPath.status,"candidate");
+ assert.deepEqual(jsonPath.selector.path,[
+   {kind:"property",name:"items"},{kind:"wildcard"},{kind:"property",name:"name"}
+ ]);
+ const indexedJson=parseLegacyChain("@json:books[0].author");
+ assert.equal(indexedJson.status,"candidate");
+ assert.deepEqual(indexedJson.selector.path,[
+   {kind:"property",name:"books"},{kind:"index",index:0},{kind:"property",name:"author"}
+ ]);
  const implicitIndex=parseLegacyChain("head@.1@text");
  assert.equal(implicitIndex.status,"candidate");
  assert.deepEqual(implicitIndex.selector.steps[1],{kind:"children",name:null,index:1});
