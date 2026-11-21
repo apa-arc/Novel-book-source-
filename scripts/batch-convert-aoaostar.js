@@ -1,13 +1,12 @@
 #!/usr/bin/env node
 "use strict";
-// Build a sanitized compatibility report for queued candidates.
+// Build a sanitized compatibility report for every source in the AOAOSTAR full snapshot.
 // Fetches public upstream JSON in memory; never stores raw source definitions or credentials.
 const fs=require("node:fs");
 const path=require("node:path");
 const {convertSource}=require("./convert-legado-rules");
 const root=path.resolve(__dirname,"..");
 const catalog=JSON.parse(fs.readFileSync(path.join(root,"imports/aoaostar/catalog.json"),"utf8"));
-const queue=JSON.parse(fs.readFileSync(path.join(root,"imports/aoaostar/candidate-review.json"),"utf8"));
 const MAX_BYTES=50*1024*1024;
 async function fetchCollection(item){
   const u=new URL(item.url);
@@ -35,7 +34,7 @@ function sanitizeRuleShape(value){
 async function main(){
  const byCollection=new Map();
  const failures=[];
- for(const item of catalog.collections){
+ for(const item of catalog.collections.filter(x=>x.id==="b778fe6b")){
   try{byCollection.set(item.id,await fetchCollection(item));console.log("Fetched "+item.id);}
   catch(e){failures.push({collectionId:item.id,error:e.message});}
  }
@@ -44,11 +43,17 @@ async function main(){
  const diagnosticShapes=new Map();
  const diagnosticReasons=new Set(["unsupported-jsonpath","unsupported-xpath","unsupported-regex-transform","unsupported-regex-mode","unsupported-selector-step","unsupported-fallback-part","unsupported-concat-part","unsupported-compound-expression","invalid-selector-index"]);
  const rawGroupKeys={search:"ruleSearch",bookInfo:"ruleBookInfo",toc:"ruleToc",content:"ruleContent",explore:"ruleExplore"};
- for(const candidate of queue.sources){
-  const arr=byCollection.get(candidate.collectionId);
-  if(!arr||!arr[candidate.index-1]){rows.push({id:candidate.id,collectionId:candidate.collectionId,index:candidate.index,name:candidate.name,status:"unavailable",reason:"upstream-collection-fetch-failed-or-index-missing"});continue;}
-  const source=arr[candidate.index-1];
-  const converted=convertSource(source,candidate.index-1);
+ const fullSources=byCollection.get("b778fe6b")||[];
+ if(!fullSources.length) throw new Error("AOAOSTAR full collection unavailable");
+ for(let index=0;index<fullSources.length;index++){
+  const source=fullSources[index];
+  const candidate={id:"aoaostar-full-"+(index+1),collectionId:"b778fe6b",index:index+1,name:String(source.bookSourceName||source.name||("未命名源 "+(index+1))).slice(0,100)};
+  let converted;
+  try{converted=convertSource(source,index);}
+  catch(error){
+   rows.push({id:candidate.id,collectionId:candidate.collectionId,index:candidate.index,name:candidate.name,status:"manual",reason:"conversion-exception:"+String(error.message||error).slice(0,120)});
+   continue;
+  }
   for(const [groupName,group] of Object.entries(converted.groups)){
     const rawGroup=source[rawGroupKeys[groupName]]||{};
     for(const [field,parsed] of Object.entries(group.fields||{})){
