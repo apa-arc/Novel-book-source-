@@ -142,6 +142,12 @@ try{
  const dottedJson=parseLegacyChain("data.searchList.searchList");
  assert.equal(dottedJson.status,"candidate");
  assert.equal(dottedJson.selector.engine,"json");
+ const adjacentIndex=parseLegacyChain("$.tracks.list[-1]title");
+ assert.equal(adjacentIndex.status,"candidate");
+ assert.equal(adjacentIndex.selector.path.at(-1).name,"title");
+ const adjacentBare=parseLegacyChain("tag[*]tab");
+ assert.equal(adjacentBare.status,"candidate");
+ assert.equal(adjacentBare.selector.engine,"json");
  const dottedHtml=parseLegacyChain("div.content.title");
  assert.equal(dottedHtml.status,"candidate");
  assert.equal(dottedHtml.selector.engine,"legado-chain");
