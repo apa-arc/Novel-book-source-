@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-21T12:43:55.603Z",
+  "note": "仅检查首页搜索表单和公开脚本中的搜索路由，不登录、不提交表单、不抓取正文。",
+  "results": [
+    {
+      "name": "格格党",
+      "base": "https://www.rdqsdy.cc/",
+      "home": {
+        "status": 200,
+        "title": "格格党_书友最值得收藏的网络小说阅读网",
+        "body": "格格党 www.rdqsdy.cc search(); 首页 书库 完本 足迹 首页 玄幻 武侠 都市 历史 科幻 游戏 其他 大神小说 都市 / 连载夜无疆 那一天太阳落下再也没有升起…… 辰东330万字4个月前都市 / 连载捞尸人 人知鬼恐怖，鬼晓人心毒。这是一本传统灵异小说。 纯洁滴小龙352万字2025-08-29武侠 / 连载没钱修什么仙？ 老者：“你想报仇？”少年：“我被强者反复侮辱，被师尊视为垃圾，我怎么可能不想报仇？”老者摸了摸少年的脑袋，叹道：“好孩子，我来传功给你吧。”少年惊道：“前辈！这怎么行？”老者伸出手：“把你手机给我。.. 熊狼狗239万字2025-08-29都市 / 连载异度旅社 在日常之下，在理性尽头，在你所熟悉的世界之外——是你从未想象过的风景。当于生第一次打开那扇门的时候，他所熟悉的世界便轰然倒塌。而那直抵世界根源的“真相”，扑面而来。 远瞳98万字2025-03-01其他 / 连载御兽从零分开始 睁开眼，乔桑发现自己穿成了初中生。紧接着来了一场模拟考。985毕业她怕了吗？她怕了……这考的都什么啊！臭臭鳅的最终进化形态叫什么？人类已移民的星球都有哪些？…………欢迎来到御兽世界。 御兽从零分开始 给我加葱1319万字2025-01-28都市 / 连载退下，让朕来 沈棠在发配路上醒来，发现这个世界很不科学。天降神石，百国相争。文凝文心，出口成真。武聚武胆，劈山断海。她以为的小白脸，一句“横枪跃马”，下一秒甲胄附身，长枪在手，一人成军，千军万马能杀个七进七出！她眼里的痨病鬼，口念“星罗棋布”，苍天如圆盖，陆地似棋局，排兵布阵，信手拈来！这TM都不能算不科学了！分明是科学的棺材板... 退下，让朕来 油爆香菇653万字2024-12-12 热门小说 庶兄太子姑娘 当龙傲天变成金手指[快穿]林清晨 魔尊整日沉迷师徒扮演洛泽潼 江澜十三州奎尼树 请吻我黑白集 相贴的掌纹要文荒了 R27短篇合集星状雪兔子 指挥官：可以揍我，但先贴贴肖小肖 六零年代的悠闲日常豆齐齐 [家教R27]未完成的约定星状雪兔子 归槿半池墨浅 不良御姐fly文 玄幻魔法 我在诡谲世界经营道观 / 廿四龙井 诡谲出现世间。邪祟妖魔遍地，魑魅魍魉丛生。无论是谁，只要跌入诡谲世界。都只能在其中苦苦挣扎，寻求生机。可当池乐踏入诡谲世界。【获得来自村民的虔诚叩拜，香火+1】【是否消耗香火，敕令仙神？】「长溪村土地，悉听尊便。」「雷部三十六将，愿听指使。」「你有三分修持，我有七分感应……」当诡谲世界融入现实，世间陷入绝望之际。一座道观自迷雾内显现。什么邪祟妖魔，诡谲魍魉。就决定是你了！当世人呼喊你名字的那一刻 边陲领主：我 / 山桃瓜子 冰与火：从绝 / 四月廿九z 开局押镖，获 / 刀剑神龙 御兽：我有独 / 礼木渔 武圣，从替嫁 / 兰亭枕戈 神话生物攻略 / 谁能比我逆"
+      },
+      "forms": [],
+      "scripts": [
+        "https://www.rdqsdy.cc/static/shipsay/jquery.min.js",
+        "https://www.rdqsdy.cc/static/shipsay/jquery.cookie.min.js",
+        "https://www.rdqsdy.cc/static/shipsay/jquery.lazyload.min.js",
+        "https://www.rdqsdy.cc/static/shipsay/common.js"
+      ],
+      "inline": [
+        "search();"
+      ],
+      "scriptContents": [
+        {
+          "url": "https://www.rdqsdy.cc/static/shipsay/jquery.min.js",
+          "status": 200,
+          "hits": [
+            {
+              "term": "location.href",
+              "snippet": "ML=\"<form></form><form></form>\",2===Vt.childNodes.length),k.parseHTML=function(e,t,n){return\"string\"!=typeof e?[]:(\"boolean\"==typeof t&&(n=t,t=!1),t||(y.createHTMLDocument?((r=(t=E.implementation.createHTMLDocument(\"\")).createElement(\"base\")).href=E.location.href,t.head.appendChild(r)):t=E),o=!n&&[],(i=D.exec(e))?[t.createElement(i[1])]:(i=we([e],t,o),o&&o.length&&k(o).remove(),k.merge([],i.childNodes)));var r,i,o},k.fn.load=function(e,t,n){var r,i,o,a=this,s=e.indexOf(\" \");return-1<s&&(r=mt(e.slice(s)),e=e.slice(0,s)),m(t)?(n=t,t=void 0):t&&\"object\"==typeof t&&(i=\"POST\"),0<a.length&&k.ajax({url:e,type:i||\"GET\",dataType:\"html\",data:t}).done(function(e){o=arguments,a.html(r?k(\"<div>\").append(k.parseHTML(e)).find(r):e)}).always(n&&function(e,t){a.each(function(){n.apply(this,o||[e.responseText,t,e])})}),this},k.each([\"ajaxStart\",\"ajaxStop\",\"ajaxComplete\",\"ajaxError\",\"ajaxSuccess\",\"ajaxSend"
+            }
+          ]
+        },
+        {
+          "url": "https://www.rdqsdy.cc/static/shipsay/common.js",
+          "status": 200,
+          "hits": [
+            {
+              "term": "function search",
+              "snippet": "$('#catalog').is(':hidden') ) $('#catalog,#info').toggle();\n}\n\nfunction a_info(){            \n\t$('#a_catalog').parent().removeClass(\"act\");\n\t$('#a_info').parent().addClass(\"act\");\n\tif( $('#info').is(':hidden') ) $('#catalog,#info').toggle();\n}\n//搜索框\nfunction search(){const placestr = '猫腻';document.write('<form name=\"t_frmsearch\" method=\"post\" action=\"/search/\"  target=\"_blank\" onsubmit=\"return chkval()\"><input autocomplete=\"off\" id=\"searchkey\" type=\"text\" name=\"searchkey\" class=\"search_input\" placeholder=\"'+placestr+'\"><input type=\"hidden\" name=\"searchtype\" value=\"all\"><button type=\"submit\" name=\"Submit\" id=\"search_btn\" title=\"搜索\" ><i class=\"fa fa-search fa-lg\"></i></button></form>');}\nfunction chkval(){\n\tlet skey = '';\n\tif($('#searchkey').val() == ''){\n\t  skey = $('#searchkey').attr('placeholder');\n\t  // $('#searchkey').val(skey);\n\t}else{\n\t  skey = $('#searchkey').val(); \n\t  if(skey.len"
+            },
+            {
+              "term": "searchkey",
+              "snippet": "'#info').is(':hidden') ) $('#catalog,#info').toggle();\n}\n//搜索框\nfunction search(){const placestr = '猫腻';document.write('<form name=\"t_frmsearch\" method=\"post\" action=\"/search/\"  target=\"_blank\" onsubmit=\"return chkval()\"><input autocomplete=\"off\" id=\"searchkey\" type=\"text\" name=\"searchkey\" class=\"search_input\" placeholder=\"'+placestr+'\"><input type=\"hidden\" name=\"searchtype\" value=\"all\"><button type=\"submit\" name=\"Submit\" id=\"search_btn\" title=\"搜索\" ><i class=\"fa fa-search fa-lg\"></i></button></form>');}\nfunction chkval(){\n\tlet skey = '';\n\tif($('#searchkey').val() == ''){\n\t  skey = $('#searchkey').attr('placeholder');\n\t  // $('#searchkey').val(skey);\n\t}else{\n\t  skey = $('#searchkey').val(); \n\t  if(skey.length < 2){\n\t\talert('不能少于二个字');\n\t\treturn false;\n\t  }\n  }\n\t  skey = tran_search(skey); \n\t  $('#searchkey').val(skey);\n\t\treturn true;\n  }\n// 书库页移动端筛选菜单控制 逆水行舟2019-7-3\nfunction store_menu(){\n\t"
+            },
+            {
+              "term": "location.href",
+              "snippet": "读体验。',\n\t\t'阅读页快捷键：上一章（←）、下一章（→）、回目录（回车）'\n\t]\n\tlet index = Math.floor(Math.random()*arr.length); \n\tdocument.write('Tip：'+arr[index]);\n}\n\nfunction logout(){\n\tif (window.confirm(\"\\n确定退出登录吗？\")) {\n\t\t\tsetCookies(\"jieqiUserInfo\",\"1\",-1); //删除cookie\n\t\t\twindow.location.href = \"/logout.php?jumpurl=\"+window.location.href;\n\t}\n}\n\n//不注册登录 发送消息 2019-8-19\nfunction newmessage() {\n\tif(readCookies('report_msg_time')){\n\t\tlet time = 60 - Math.floor(((new Date()).getTime() - readCookies('report_msg_time'))/1000);\n\t\talert(\"\\n对不起\\n\\n一分钟只可操作一次，还剩: \"+ time +\"秒\");\n\t\treturn;\n\t}else{\n\t\tsetCookies('report_msg_time', (new Date()).getTime() , 1); \t//cookie名,cookie值,过期时间(分钟)\n\t\twindow.location.href = \"/newmessage/\";\n\t}\n}\n\nlet bookmax = 20;\nfunction LastRead(){this.bookList=\"bookList\"} LastRead.prototype={ set:function(bid,uri,bookname,chaptername,author,img_url){ if(!(bid&&uri&&bookname&&chaptername&&author&&img_url))retur"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "鲲弩小说",
+      "base": "https://www.kunnu8.com/",
+      "home": {
+        "status": 200,
+        "title": "鲲弩小说 - 凡人修仙传、斗破苍穹、武动乾坤、绝世唐门小说在线阅读",
+        "body": "鲲弩小说 首页 世界名著 影视原著 悬疑推理 畅销文学 言情穿越 编辑精选 小提示： 微信扫一扫，不用关注也能看小说！（2016.2） 如何更好地使用我们的网站？（2015.6） function AutoScroll(obj){$(obj).find(\"ul:first\").animate({marginTop:\"-1.5em\"},500,function(){$(this).css({marginTop:\"0em\"}).find(\"li:first\").appendTo(this)})}$(document).ready(function(){setInterval('AutoScroll(\"#noteScroll\")',5000)}); TouchSlide({slideCell:\"#slideBox\",titCell:\".hd ul\",mainCell:\".bd ul\",effect:\"leftLoop\",autoPage:true,autoPlay:true}); 编辑推荐 鬼吹灯 悬疑探险/天下霸唱 盗墓笔记 悬疑探险/南派三叔 凡人修仙传 奇幻修真/忘语 斗罗大陆2绝世唐门 异界大陆/唐家三少 全职高手 电竞青春/蝴蝶蓝 诛仙 古典仙侠/萧鼎 热门： 坏小孩（隐秘的角落）紫金陈 人渣反派自救系统墨香铜臭 半生缘张爱玲 天官赐福墨香铜臭 山河表里Priest 我们正年轻刘静 魔道祖师墨香铜臭 少年的你，如此美丽玖月晞 亲爱的，热爱的墨宝非宝 镇魂Priest 全职高手蝴蝶蓝 2026 © 所有内容版权归版权方或原作者所有 / All contents are copyrighted by their respective owners or authors. $(document).ready(function(){$('#simple-menu').sidr({name:'sidr-right',side:'right',source:'#sform, #sidr'});$(\".menu li\").hover(function(){$(this).addClass(\"hover\");$(this).children(\"ul li\").attr('class','')},function(){$(this).removeClass(\"hover\");$(this).children(\"ul li\").attr('class','')});$(\".menu li.no_sub\").hover(function(){$(this).addClass(\"hover1\")},function(){$(this).removeClass(\"hover1\")})}); function b(){h=$(window).height();t=$(documen"
+      },
+      "forms": [],
+      "scripts": [
+        "https://www.kunnu8.com/theme/jquery1.42.min.js",
+        "https://www.kunnu8.com/theme/TouchSlide.1.1.js",
+        "https://www.kunnu8.com/theme/jquery.sidr.min.js",
+        "https://www.googletagmanager.com/gtag/js?id=G-KPWSJRK3SD",
+        "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092"
+      ],
+      "inline": [],
+      "scriptContents": [
+        {
+          "url": "https://www.kunnu8.com/theme/jquery1.42.min.js",
+          "status": 200,
+          "hits": [
+            {
+              "term": "location.href",
+              "snippet": "rm></form>\",2===a.childNodes.length}(),r.parseHTML=function(a,b,c){if(\"string\"!=typeof a)return[];\"boolean\"==typeof b&&(c=b,b=!1);var e,f,g;return b||(o.createHTMLDocument?(b=d.implementation.createHTMLDocument(\"\"),e=b.createElement(\"base\"),e.href=d.location.href,b.head.appendChild(e)):b=d),f=C.exec(a),g=!c&&[],f?[b.createElement(f[1])]:(f=qa([a],b,g),g&&g.length&&r(g).remove(),r.merge([],f.childNodes))},r.fn.load=function(a,b,c){var d,e,f,g=this,h=a.indexOf(\" \");return h>-1&&(d=pb(a.slice(h)),a=a.slice(0,h)),r.isFunction(b)?(c=b,b=void 0):b&&\"object\"==typeof b&&(e=\"POST\"),g.length>0&&r.ajax({url:a,type:e||\"GET\",dataType:\"html\",data:b}).done(function(a){f=arguments,g.html(d?r(\"<div>\").append(r.parseHTML(a)).find(d):a)}).always(c&&function(a,b){g.each(function(){c.apply(this,f||[a.responseText,b,a])})}),this},r.each([\"ajaxStart\",\"ajaxStop\",\"ajaxComplete\",\"ajaxError\",\"ajaxSuccess\",\"ajaxSen"
+            }
+          ]
+        },
+        {
+          "url": "https://www.googletagmanager.com/gtag/js?id=G-KPWSJRK3SD",
+          "status": 200,
+          "hits": [
+            {
+              "term": "location.href",
+              "snippet": "b);return String(c).indexOf(String(d))>-1}function Cd(a,b){var c=String(this.evaluate(a)),d=String(this.evaluate(b));return c.substring(0,d.length)===d}\nfunction Dd(a,b){var c=this.evaluate(a),d=this.evaluate(b);switch(c){case \"pageLocation\":var e=A.location.href;d instanceof gb&&d.get(\"stripProtocol\")&&(e=e.replace(/^https?:\\/\\//,\"\"));return e}};function Ed(a){return typeof a===\"number\"&&a>=0&&isFinite(a)&&a%1===0||typeof a===\"string\"&&a[0]!==\"-\"&&a===\"\"+parseInt(a)};var Fd=function(a){a=a===void 0?[]:a;this.la=new Qa;this.values=[];this.Ma=!1;for(var b in a)a.hasOwnProperty(b)&&(Ed(b)?this.values[Number(b)]=a[Number(b)]:this.la.set(b,a[b]))};l=Fd.prototype;l.toString=function(a){if(a&&a.indexOf(this)>=0)return\"\";for(var b=[],c=0;c<this.values.length;c++){var d=this.values[c];d===null||d===void 0?b.push(\"\"):d instanceof Fd?(a=a||[],a.push(this),b.push(d.toString(a)),a.pop()):b.push(Stri"
+            }
+          ]
+        },
+        {
+          "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+          "status": 200,
+          "hits": [
+            {
+              "term": "location.href",
+              "snippet": "o=null!==(n=e.when)&&void 0!==n?n:Math.ceil(i.now());!e.referrer&&b[b.length-1]&&(e.referrer=b[b.length-1].url),b.push({id:T,url:t,ts:o,referrer:\"\"!==e.referrer?e.referrer:void 0,navigationType:e.navigationType}),b.length>3&&b.shift()};if(E(document.location.href,{when:0,referrer:document.referrer,navigationType:r.Navigate}),window.__cfBeacon&&\"single\"===window.__cfBeacon.load)return;if(f){const t=function(t,e){let n={};if(t&&\"function\"==typeof URLSearchParams){const e=t.replace(/^[^\\?]+\\??/,\"\");if(\"\"!==e){const t=new URLSearchParams(e),i=t.get(\"token\");null!==i&&(n.token=i);const o=t.get(\"spa\");null!==o&&(n.spa=o)}}if(e)try{n=Object.assign(Object.assign({},n),JSON.parse(e))}catch(t){}return\"multi\"!==n.load&&(n.load=\"single\"),n}(f.getAttribute(\"src\"),f.getAttribute(d));window.__cfBeacon=Object.assign(Object.assign({},t),window.__cfBeacon)}if(!i||!window.__cfBeacon||!window.__cfBeacon.tok"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "得奇小说网",
+      "base": "https://www.deqitxt.com/",
+      "home": {
+        "status": 200,
+        "title": "得奇小说网-最新热门小说免费阅读网",
+        "body": "首页 分类 排行 完结 看过 搜 索 阅读排行全部 青山 武道长生，不死的我终将无敌 百岁修仙：从觉醒天灵根开始 聚宝仙盆 我在精神病院学斩神 网游之死亡武侠 最新更新全部 置顶夜无疆连载中玄幻小说6471阅读作者：辰东更新时间最新章节11-16第874章 身世之秘11-14第873章 改命涉因果11-13第872章 见朕为何不跑 神魔游戏：法爷才是永恒真理！连载中游戏小说0阅读作者：巧七更新时间最新章节1分钟前第2971章 燃尽！1分钟前第2970章 史官就位，我嗅到了传世的味道1分钟前第2969章 再次交锋 我老婆是东晋第一女魔头连载中历史小说3260阅读作者：俊俏少年更新时间最新章节5分钟前第一千零五十五章 终得圆满11-19第一千零五十四章 帝王心术11-19第一千零五十三章 平天之策 这个师姐不讲道理连载中古代言情841阅读作者：金铃动更新时间最新章节18分钟前第440章 剑心和心剑只辩昨天第439章 汇聚11-19第438章 进击的弟子们 无量道君连载中仙侠小说296阅读作者：执笔初心更新时间最新章节27分钟前第1371章 化身归族，金玄消息(超大杯)昨天第1370章 归族，异域吃货(六千超大杯)昨天第1369章 这岛能飞？日月星帆(超大杯) 公考逆袭：从面试开始一路攀登连载中都市小说6602阅读作者：元明小阳更新时间最新章节44分钟前第1656章 关心小姨夫44分钟前第1655章 不要再记了44分钟前第1654章 有进无退 蜀山之三眼神君连载中仙侠小说17阅读作者：红炉煮鱼更新时间最新章节47分钟前第120章 血染碧筠庵，极乐出手（求订阅）11-19第119章 绿袍老祖，碧落斩长空（求订阅）11-14第118章 群仙齐至，剑光盈室（求订阅） 官场从秘书开始连载中都市小说3663阅读作者：老冰棍更新时间最新章节56分钟前第2976章 高额处罚56分钟前第2975章 夜间检查昨天第2974章 再次突检 真实历史模拟游戏连载中历史小说6阅读作者：斩刀人更新时间最新章节1小时前第458章 大网！（加更）昨天第457章 新旧交织，大戏开幕11-19第456章 种一千颗树，一万棵树（求月票） 领主：我在苦痛世界，养成少女连载中玄幻言情118阅读作者：嘎嘎乱写更新时间最新章节1小时前第 2057章 棉花和辣椒1小时前第 2056章 神之躯成长1小时前第 2055章 消灭埃涅努特 娘娘她只想吃瓜连载中古代言情489阅读作者：尤妮丝更新时间最新章节1小时前第542章 被遗忘的老六（下）1小时前第541章 被遗忘的老六（上）昨天第540章 唯盼～夜梦巫山 完结小说全部 我在精神病院学斩神 我不是戏神 择日走红 苟在初圣魔门当人材 十日终焉 高武：从武道生到宇宙天尊 推荐小说 剑烛大荒 星河之主 武道！ 廓晋 让仙门再次伟大 玄鉴仙族 © 2026 得奇小说网 更新"
+      },
+      "forms": [
+        {
+          "action": null,
+          "method": "get",
+          "outer": "<form class=\"clear\" id=\"form1\" name=\"form1\" method=\"get\" onsubmit=\"return check()\">\r\n<p class=\"fi\"><input type=\"text\" class=\"fiput\" name=\"key\" id=\"key\" placeholder=\"请输入书名或作者名...\"></p>\r\n<input id=\"submit\" type=\"submit\" style=\"display:none;\">\r\n<a href=\"javascript:doit()\" class=\"gbut\">搜 索</a>\r\n</form>"
+        }
+      ],
+      "scripts": [
+        "https://www.deqitxt.com/js/jquery.min.js",
+        "https://www.deqitxt.com/js/jquery.common.js"
+      ],
+      "inline": [],
+      "scriptContents": []
+    },
+    {
+      "name": "闪舞小说",
+      "base": "https://www.35xss.net/",
+      "home": {
+        "status": 200,
+        "title": "闪舞小说网_最好的无广告小说阅读网_新闪舞小说网(35xss.net)",
+        "body": "首页 书库 热门榜 推荐榜 收藏榜 连载榜 完结榜 login(); 闪舞小说网35xss.net search('/search.html'); TOP榜写作榜手机小说 最近更新新书入库全部小说 小说首页 玄幻 武侠 都市 历史 游戏 科幻 恐怖 其他 古代 现代 幻想 游戏 浪漫 言情 科幻 其他 破金我被骗到缅北的那些年 你以为缅北是遍地黄金，能躺着挣钱的天堂？不，这里是水深火热的人间炼狱！电棍殴打、拔牙断指，只是家常便饭的小儿科…… 你以为这里只是人间炼狱？不，这里还是知识的海洋！金融货币、美容瑜伽，你都要从零开始学习！因为在这里，你不再是你，你是一个面容姣好，从事金融工作的优质白领女性！而这，只是你千百个身份的其 天天不休狂狮少帅 94年的夏天，米尔沃尔青年军在少帅奥德里奇率领下势要改写百年无冠的历史。 那一抹狂狮的深蓝，立志席卷欧洲...... 夜十三特种兵在都市 杨洛曾经是一名让所有国家军人闻名丧胆的兵王,他是地下世界大名鼎鼎的杀手法官,他是世界医学界里天才医生,他掌握着神秘组织高买.他性格嚣张狂妄,为达目的不折手段.在这繁华的都市,杨洛上演了一场激情四射的热血人生. 流年非水中场统治者 这是一个天使和魔鬼赋予一身的人，从少年到现在。无论在哪里，他都意味着天才和胜利，也意味着狂放不羁和惹事生非。---------------摘自2019年《法国足球》绝对巨星PS:已有完本著作《最强边锋》370万字，人品保证，放心收藏！ 经典推荐 [都市]重生香江之1978蜜汁鸡翅膀 [历史]穷鬼的上下两千年非玩家角色 [幻想]AA互撩笔记我选择猫车 [游戏]我有无限掠夺加速系统猪肉乱炖 [都市]透视小神医黑咖啡 [武侠]烂柯棋缘真费事 [恐怖]我的治愈系游戏我会修空调 [玄幻]全球游戏化：神级内测玩家相思洗红豆 [其他]种菜骷髅的异域开荒情终流水 总点击 武动乾坤 修炼一途，乃窃阴阳，夺造化，转涅盘，握生死，掌轮回。 武之极，破苍穹，动乾坤！ …… 东方英雄传奇大剧《武动乾坤》8月7日登陆优酷视频和东方卫视周播剧场。由张黎执导，杨洋、张天爱、吴尊、王丽坤领衔主演。 白杨往事/长宇宙 穿书修仙后女配她开挂了/缘.梦. 大主宰/天蚕土豆 我在斩妖司除魔三十年/贰更 重生之将门毒后/千山茶客 大王饶命/会说话的肘子 我就是不按套路出牌/百分之七 第一序列/会说话的肘子 痛仰/黄三_ 我的细胞监狱/穿黄衣的阿肥 吞噬星空/我吃西红柿 诛仙/萧鼎 总推荐 洪荒：我是东王公 啊！我穿越洪荒了，太好了！ 啊！不好！我竟然穿越成了洪荒著名倒霉蛋之一的东王公！ 我不要死啊…… 修仙就是这样子的/凤嘲凰 重生香江之1978/蜜汁鸡翅膀 我是一条龙/柳岸花又明 透视邪医混花都/徐幻 重生在电影的世界/盏茶煮酒 黄金渔场/全金属弹壳 这个领主大人非常科学/小白白的 透视小神医/黑咖啡"
+      },
+      "forms": [],
+      "scripts": [
+        "https://www.35xss.net/tpl/pc/js/common.js?v=0.66changecdn",
+        "https://www.35xss.net/WordPress/Plugins/App.js?id=804&sign=1795265035000"
+      ],
+      "inline": [
+        "search('/search.html');"
+      ],
+      "scriptContents": [
+        {
+          "url": "https://www.35xss.net/tpl/pc/js/common.js?v=0.66changecdn",
+          "status": 200,
+          "hits": [
+            {
+              "term": "function search",
+              "snippet": " -1){\n    jumpurl=location.href;\n  }\ndocument.writeln(\"<li id=\\\"bookcase\\\"><a href=\\\"/history.html\\\" target=\\\"_top\\\">阅读记录</a></li><li id=\\\"loginbarx\\\"><a href=\\\"/login.html?jumpurl=\"+jumpurl.replace('&','%26')+\"\\\" target=\\\"_top\\\">登录</a></li>\");\n}\n}\n\nfunction search(url) {\n\tdocument.writeln('<form style=\"margin:0;padding:0;\"  action=\"'+url+'\" method=\"post\">');\n\tdocument.writeln('<input type=\"hidden\" name=\"searchtype\" value=\"all\">');\n\tdocument.writeln(\"<input class=\\\"search\\\" id=\\\"bdcsMain\\\" name=\\\"369koolearn\\\" type=\\\"text\\\"  maxlength=\\\"30\\\" value=\\\"可搜书名和作者，请您少字也别输错字。\\\" title=\\\"请正确输入\\\" onfocus=\\\"this.style.color = '#000000';this.focus();if(this.value=='可搜书名和作者，请您少字也别输错字。'){this.value='';}\\\" ondblclick=\\\"javascript:this.value=''\\\" />\");\n\tdocument.writeln('<input type=\"submit\" class=\"searchBtn\" value=\"搜索\" title=\"搜索\"  /></form>');\n}\n\nfunction textselect() {\n\tdocument.writeln('<ul class=\"too"
+            },
+            {
+              "term": "location.href",
+              "snippet": "\", \"mobile\", \"blackberry\", \"webos\", \"incognito\", \"webmate\", \"bada\", \"nokia\", \"lg\", \"ucweb\", \"skyfire\");\nvar browser = navigator.userAgent.toLowerCase();\nfor (var i=0; i<mobileAgent.length; i++){\n\tif (browser.indexOf(mobileAgent[i])!=-1){\n\t\tif(window.location.href.indexOf('//www.') > 0) {\n\t\t\twindow.location.href = window.location.href.replace('//www.', '//m.');\n\t\t}\n\t\tbreak;\n\t}\n}\nvar user;\nif (document.cookie.length > 0) {\n\tvar offset = document.cookie.indexOf(\"_user=\");\n\tif (offset > -1) {\n\t\toffset += 6;\n\t\tvar end = document.cookie.indexOf(\";\", offset);\n\t\tif (end == -1) end = document.cookie.length;\n\t\tuser = JSON.parse(unescape(document.cookie.substring(offset, end)));\n\t}\n}\n\n//登陆调用\nfunction login(){\nif(user){\n    document.writeln('<li id=\\\"loginbarx\\\"><a href=\\\"/user.html\\\" target=\\\"_top\\\">'+user.name+'</a></li><li id=\\\"bookcase\\\"><a href=\\\"/mark.html\\\" target=\\\"_top\\\">我的书架</a></li>');\n}e"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
