@@ -9,14 +9,6 @@
       "file": "sources/biquluo-la.json",
       "enabled": true,
       "testOnly": true
-    },
-    {
-      "id": "diyibanzhu-111",
-      "name": "第一版主111",
-      "kind": "public-web",
-      "file": "sources/diyibanzhu-111.json",
-      "enabled": true,
-      "testOnly": true
     }
   ]
 }
