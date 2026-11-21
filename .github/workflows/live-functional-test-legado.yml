@@ -9,6 +9,7 @@ on:
       - "scripts/app-runtime-classification.ts"
       - "scripts/test-app-runtime-classification.ts"
       - "scripts/diagnose-app-runtime-network.ts"
+      - "config/source-scan-import-rules.json"
       - ".github/workflows/live-functional-test-legado.yml"
 
 permissions:
