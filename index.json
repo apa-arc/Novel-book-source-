@@ -97,6 +97,14 @@
       "file": "sources/xinbiquge-info.json",
       "enabled": true,
       "testOnly": true
+    },
+    {
+      "id": "biquge-17177",
+      "name": "笔趣阁小说网（17177）",
+      "kind": "public-web",
+      "file": "sources/biquge-17177.json",
+      "enabled": true,
+      "testOnly": true
     }
   ]
 }
