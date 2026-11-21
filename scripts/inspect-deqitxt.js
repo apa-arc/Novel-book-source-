@@ -19,7 +19,7 @@ async function main(){
   const url=new URL("/",BASE);url.searchParams.set("key",keyword);
   const response=await get(url.href),doc=parseHTML(response.html).document;
   const links=[...doc.querySelectorAll("a[href]")].map(a=>({text:norm(a.textContent),href:a.getAttribute("href")||""})).filter(a=>a.text&&/^\/\d+\/?$/.test(a.href)).slice(0,30);
-  searches.push({keyword,status:response.status,url:response.url,contentType:response.contentType,title:norm(doc.querySelector("title")?.textContent),bodyLength:norm(doc.body?.textContent).length,bodyStart:norm(doc.body?.textContent).slice(0,1200),bodyEnd:norm(doc.body?.textContent).slice(-1200),bookLinks:links});
+  searches.push({keyword,status:response.status,url:response.url,contentType:response.contentType,title:norm(doc.querySelector("title")?.textContent),bodyLength:bodyText.length,bodyStart:bodyText.slice(0,1400),bodyEnd:bodyText.slice(-1000),bookLinks:links});
  }
  const book=await get(BOOK),bd=parseHTML(book.html).document;
  const chapterLinks=[...bd.querySelectorAll("a[href]")].map(a=>({text:norm(a.textContent),href:a.getAttribute("href")||""})).filter(a=>a.href&&(/\.html/i.test(a.href)||/chapter|read/i.test(a.href))).slice(0,60);
