@@ -1,0 +1,40 @@
+name: Test candidate sources with AppleNovelApp runtime
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "development/candidate-subscription.json"
+      - "scripts/live-test-app-candidates.ts"
+      - ".github/workflows/test-app-candidates.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: apa-arc/AppleNovelApp
+          ref: main
+          path: app
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install TypeScript runner
+        run: npm install --no-save --no-package-lock tsx
+      - name: Test candidate sources using the native app runtime
+        run: npx tsx scripts/live-test-app-candidates.ts
+      - name: Upload candidate test report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-candidate-live-test-report
+          path: reports/app-candidate-live-test.json
+          if-no-files-found: error
+          retention-days: 30
