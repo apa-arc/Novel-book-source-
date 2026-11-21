@@ -1,21 +1,21 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T05:59:03.441Z",
+  "generatedAt": "2026-11-21T06:05:05.258Z",
   "testedRecords": 8683,
   "statusCounts": {
     "unsupported": 5677,
-    "unverified": 1419,
-    "failed": 774,
-    "blocked": 547,
+    "unverified": 1425,
+    "failed": 765,
+    "blocked": 550,
     "excluded": 255,
     "passed": 11
   },
   "providerCounts": {
     "subscription-ordinary": {
       "unsupported": 1865,
-      "unverified": 574,
-      "failed": 308,
-      "blocked": 215,
+      "unverified": 575,
+      "failed": 305,
+      "blocked": 217,
       "excluded": 2,
       "passed": 2
     },
@@ -27,17 +27,17 @@
     },
     "AOAOSTAR-candidate": {
       "unsupported": 2566,
-      "failed": 317,
-      "unverified": 571,
-      "blocked": 222,
+      "failed": 309,
+      "unverified": 578,
+      "blocked": 223,
       "excluded": 228,
       "passed": 2
     },
     "luanmuc-candidate": {
       "unsupported": 1186,
-      "unverified": 267,
+      "unverified": 265,
       "blocked": 106,
-      "failed": 144,
+      "failed": 146,
       "excluded": 25,
       "passed": 7
     }
@@ -106,7 +106,7 @@
       "name": "🐦夜书吧po18mx",
       "host": "www.po18mx.com",
       "category": "adult",
-      "contentLength": 2540,
+      "contentLength": 2640,
       "providers": [
         "luanmuc-candidate"
       ]
