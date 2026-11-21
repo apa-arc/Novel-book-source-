@@ -28,7 +28,7 @@ const SCRIPT_OR_AUTH = /@js:|<js>|\bjavascript\b|\bfunction\b|\breturn\b|\$\{/i;
 function asArray(value) { return Array.isArray(value) ? value : value ? [value] : []; }
 function adultSource(s) { return /🔞|成人|色情|情色|R18|18\+/i.test([s.bookSourceName,s.bookSourceGroup,s.bookSourceComment,s.bookSourceUrl].join(" ")); }
 function hash(s) { return crypto.createHash("sha256").update(s).digest("hex").slice(0, 16); }
-function parseDoc(html) { return parseHTML(String(html)).document; }
+function parseDoc(html, isJson = false) { return isJson ? JSON.parse(String(html)) : parseHTML(String(html)).document; }
 function safeHeaders(source) {
   if (!source.header) return {};
   let value = source.header;
@@ -131,12 +131,14 @@ async function fetchHtml(rawUrl, host, requestHeaders = {}) {
     }
     if (!response.ok) throw new Error("http-" + response.status);
     const type = response.headers.get("content-type") || "";
-    if (type && !/html|xml|text/i.test(type)) throw new Error("unexpected-content-type");
+    if (type && !/html|xml|text|json/i.test(type)) throw new Error("unexpected-content-type");
     const body = await response.text();
     if (body.length > MAX_BODY) throw new Error("response-too-large");
     if (/验证码|captcha|访问验证|安全验证|人机验证|cloudflare|just a moment|access denied/i.test(body.slice(0, 60000))) {
       throw new Error("challenge-or-access-denied");
     }
+    const isJson = /json/i.test(type) || /^[\s]*[\[{]/.test(body);
+    if (isJson) return { url, document: parseDoc(body, true) };
     if (!/<(?:!doctype\s+html|html|body|div|table)\b/i.test(body)) throw new Error("not-html");
     return { url, document: parseDoc(body) };
   }
