@@ -6,6 +6,9 @@ on:
     paths:
       - "index.json"
       - "sources/**"
+      - "quality-reports/**"
+      - "runtime/source-quality-gate.js"
+      - "scripts/build-subscription.js"
       - ".github/workflows/build-subscription.yml"
   workflow_dispatch:
 
