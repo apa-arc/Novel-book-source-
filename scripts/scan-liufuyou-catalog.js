@@ -7,7 +7,8 @@ const crypto = require("node:crypto");
 const ROOT = path.resolve(__dirname, "..");
 const UPSTREAM = [
   { name: "YCK 书单 1067", url: "https://raw.githubusercontent.com/liufuyou/read/main/sources/yck-novel.json" },
-  { name: "Yiove 星辰整理", url: "https://raw.githubusercontent.com/liufuyou/read/main/sources/yiove-novel.json" }
+  { name: "Yiove 星辰整理", url: "https://raw.githubusercontent.com/liufuyou/read/main/sources/yiove-novel.json" },
+  { name: "Daiaji LegadoSource", url: "https://raw.githubusercontent.com/daiaji/LegadoSource/main/%E4%B9%A6%E6%BA%90.json" }
 ];
 const ADULT = /🔞|成人|色情|情色|R18|18\+|18禁|PO18|肉文|淫秽|色情小说/i;
 const NON_NOVEL = /漫画|動漫|动漫|有声|听书|古籍|国学|诗词|詞典|词典|百科|维基|公版|杂志|影视|短剧|网盘|音乐|播客/i;
@@ -15,8 +16,9 @@ const SECRET = /cookie|authorization|access[_-]?token|password|secret|login/i;
 
 async function fetchJson(item) {
   const url = new URL(item.url);
+  const repo = url.pathname.split("/").slice(1, 3).join("/");
   if (url.protocol !== "https:" || url.hostname !== "raw.githubusercontent.com" ||
-      url.pathname.split("/").slice(1, 3).join("/") !== "liufuyou/read") {
+      !new Set(["liufuyou/read", "daiaji/LegadoSource"]).has(repo)) {
     throw new Error("upstream-url-rejected");
   }
   const response = await fetch(url, { signal: AbortSignal.timeout(60000), headers: { "user-agent": "NovelSourceMetadataScanner/1.0" } });
@@ -80,7 +82,7 @@ async function main() {
     generatedAt: new Date().toISOString(),
     provider: "liufuyou/read metadata-only discovery",
     upstream: UPSTREAM.map(x => x.url),
-    licenseNote: "Only candidate names, HTTPS base URLs and group labels are retained. Upstream README says source-rule copyrights belong to their original organizers; no rules or source code are copied. Redistribution status remains unassessed.",
+    licenseNote: "Only candidate names, HTTPS base URLs and group labels are retained. No upstream rules or source code are copied. The Liufuyou collection notes that source-rule rights belong to original organizers; Daiaji repository is AGPL-3.0. Source-level redistribution and site-use permissions remain unassessed.",
     filterStats: stats,
     sourceCount: sources.length,
     sources
