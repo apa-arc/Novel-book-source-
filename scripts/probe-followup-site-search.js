@@ -19,7 +19,7 @@ async function inspect(site){
   out.home={status:h.status,title:norm(d.querySelector("title")?.textContent),body:norm(d.body?.textContent,1200)};
   out.forms=[...d.querySelectorAll("form")].map(f=>({action:f.getAttribute("action")||"",method:(f.getAttribute("method")||"GET").toUpperCase(),inputs:[...f.querySelectorAll("input")].map(i=>({id:i.id,name:i.name,type:i.type,placeholder:i.placeholder}))}));
   out.inputs=[...d.querySelectorAll("input")].map(i=>({id:i.id,name:i.name,type:i.type,placeholder:i.placeholder,onfocus:i.getAttribute("onfocus"),onclick:i.getAttribute("onclick")}));
-  out.inlineScripts=[...d.querySelectorAll("script:not([src])")].map(s=>s.textContent||"").filter(s=>/function\\s+(doit|search)|doit\\s*=|search\\s*=|search\\(/i.test(s)).map(s=>s.slice(0,2200)).slice(0,12);
+  out.inlineScripts=[...d.querySelectorAll("script:not([src])")].map(s=>s.textContent||"").filter(s=>/function\s+(doit|search)|doit\s*=|search\s*=|search\(/i.test(s)).map(s=>s.slice(0,2200)).slice(0,12);
   out.checks=[];
   for(const q of site.queries)for(const p of site.paths){
    const url=new URL(p.replace("{q}",encodeURIComponent(q)),site.base).href;
