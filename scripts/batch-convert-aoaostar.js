@@ -41,6 +41,8 @@ async function main(){
  }
  const rows=[];
  const attributeShapes=new Map();
+ const diagnosticShapes=new Map();
+ const diagnosticReasons=new Set(["unsupported-jsonpath","unsupported-xpath","unsupported-regex-transform","unsupported-regex-mode","unsupported-selector-step","unsupported-fallback-part","unsupported-concat-part","unsupported-compound-expression","invalid-selector-index"]);
  const rawGroupKeys={search:"ruleSearch",bookInfo:"ruleBookInfo",toc:"ruleToc",content:"ruleContent",explore:"ruleExplore"};
  for(const candidate of queue.sources){
   const arr=byCollection.get(candidate.collectionId);
@@ -50,9 +52,14 @@ async function main(){
   for(const [groupName,group] of Object.entries(converted.groups)){
     const rawGroup=source[rawGroupKeys[groupName]]||{};
     for(const [field,parsed] of Object.entries(group.fields||{})){
-      if(parsed.reason==="unsupported-attribute-filter"&&typeof rawGroup[field]==="string"){
+      if(typeof rawGroup[field]==="string"&&parsed.reason){
         const shape=sanitizeRuleShape(rawGroup[field]);
-        attributeShapes.set(shape,(attributeShapes.get(shape)||0)+1);
+        if(parsed.reason==="unsupported-attribute-filter") attributeShapes.set(shape,(attributeShapes.get(shape)||0)+1);
+        if(diagnosticReasons.has(parsed.reason)){
+          if(!diagnosticShapes.has(parsed.reason)) diagnosticShapes.set(parsed.reason,new Map());
+          const shapes=diagnosticShapes.get(parsed.reason);
+          shapes.set(shape,(shapes.get(shape)||0)+1);
+        }
       }
     }
   }
@@ -65,7 +72,7 @@ async function main(){
  const counts={candidate:0,partial:0,manual:0,unavailable:0};
  for(const row of rows) counts[row.status]=(counts[row.status]||0)+1;
  const generatedAt=new Date().toISOString();
- const report={schemaVersion:2,generatedAt,provider:"AOAOSTAR / Legado",sourceCount:rows.length,counts,fetchFailures:failures,diagnostics:{unsupportedAttributeFilterTotal:[...attributeShapes.values()].reduce((a,b)=>a+b,0),unsupportedAttributeShapes:[...attributeShapes.entries()].sort((a,b)=>b[1]-a[1]).slice(0,100).map(([shape,count])=>({shape,count}))},note:"Sanitized selector compatibility report only. Attribute selector diagnostics are redacted shapes; not runnable adapters, not a license determination, and not a live availability test. Raw source definitions, headers, cookies, tokens and credentials are not stored.",sources:rows};
+ const report={schemaVersion:2,generatedAt,provider:"AOAOSTAR / Legado",sourceCount:rows.length,counts,fetchFailures:failures,diagnostics:{unsupportedAttributeFilterTotal:[...attributeShapes.values()].reduce((a,b)=>a+b,0),unsupportedAttributeShapes:[...attributeShapes.entries()].sort((a,b)=>b[1]-a[1]).slice(0,100).map(([shape,count])=>({shape,count})),unsupportedRuleShapes:[...diagnosticShapes.entries()].map(([reason,shapes])=>({reason,total:[...shapes.values()].reduce((a,b)=>a+b,0),shapes:[...shapes.entries()].sort((a,b)=>b[1]-a[1]).slice(0,50).map(([shape,count])=>({shape,count}))}))},note:"Sanitized selector compatibility report only. Attribute selector diagnostics are redacted shapes; not runnable adapters, not a license determination, and not a live availability test. Raw source definitions, headers, cookies, tokens and credentials are not stored.",sources:rows};
  const out=path.join(root,"reports","aoaostar-conversion-review.json");
  fs.mkdirSync(path.dirname(out),{recursive:true});
  fs.writeFileSync(out,JSON.stringify(report,null,2)+"\n","utf8");
