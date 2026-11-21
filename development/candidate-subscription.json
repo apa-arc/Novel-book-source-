@@ -7,7 +7,7 @@
   "sources": [
     {
       "id": "52shuku-net",
-      "name": "52书库（男频）",
+      "name": "52书库（男频武侠）",
       "version": "1.0.0",
       "baseUrl": "https://www.52shuku.net/",
       "domains": [
@@ -20,9 +20,9 @@
         "chapterUrl": "https://www.52shuku.net/{chapterUrl}",
         "htmlRules": {
           "search": {
-            "itemSelector": "article.excerpt",
-            "titleSelector": "h2",
-            "urlSelector": "h2 a"
+            "itemSelector": "article.excerpt a[href^=\"/wuxia/\"]",
+            "titleSelector": ":self",
+            "urlSelector": ":self"
           },
           "detail": {
             "titleSelector": "h1.article-title"
