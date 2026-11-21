@@ -25,6 +25,7 @@ function normalizeUrl(value) {
   } catch { return ""; }
 }
 function validateCandidate(source) {
+  if (!fs.existsSync(path.join(ROOT, "imports/third-party/luanmuc/LICENSE"))) return false;
   if (!source || typeof source !== "object" || Array.isArray(source)) return false;
   if (source.enabled !== true || source.bookSourceType !== 0) return false;
   if (ADULT_HINT.test([source.bookSourceName, source.bookSourceGroup, source.bookSourceComment].join(" "))) return false;
