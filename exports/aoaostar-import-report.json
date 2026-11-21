@@ -32,7 +32,6 @@
     "thirdPartyVerifiedRejected": 3
   },
   "outputs": {
-    "ordinary": "exports/legado-ordinary.json",
-    "adult": "exports/legado-adult.json"
+    "ordinary": "exports/legado-ordinary.json"
   }
 }
