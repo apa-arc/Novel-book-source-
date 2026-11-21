@@ -9,6 +9,14 @@
       "file": "sources/biquluo-la.json",
       "enabled": true,
       "testOnly": true
+    },
+    {
+      "id": "kuaishu5-com",
+      "name": "快书网",
+      "kind": "public-web",
+      "file": "sources/kuaishu5-com.json",
+      "enabled": true,
+      "testOnly": true
     }
   ]
 }
