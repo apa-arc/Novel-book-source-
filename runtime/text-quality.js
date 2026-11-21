@@ -30,13 +30,13 @@ function scanTextQuality(value) {
 // Remove only high-confidence promotional blocks. Avoid deleting ordinary story prose
 // merely because it contains words such as "更新" or "点击".
 const PROMO_BLOCK_PATTERNS = [
-  /一日暴富[，,、\\s]*神通者最新最快更新[，,、\\s]*(?:点击直达|點擊直達)/giu,
-  /神通者最新最快更新[，,、\\s]*(?:点击直达|點擊直達)/giu,
+  /一日暴富[，,、\s]*神通者最新最快更新[，,、\s]*(?:点击直达|點擊直達)/giu,
+  /神通者最新最快更新[，,、\s]*(?:点击直达|點擊直達)/giu,
   /本章未完.{0,80}(?:点击下方|點擊下方).{0,100}(?:免费看|免費看)(?:神通者)?(?:完整章节内容|完整章節內容)?/giu,
   /本章被墙.{0,100}(?:点击下方|點擊下方).{0,80}(?:观看完整版|觀看完整版)/giu,
-  /(?:京东|京東)\\s*(?:搜索|搜一搜)[：:\\s]*福利大(?:红包|紅包)\\d{0,20}[，,，\\s]*(?:领取|領取)[^。\\n]{0,40}?(?:双11|雙11|双十一|雙十一)(?:红包|紅包)。?/giu,
+  /(?:京东|京東)\s*(?:搜索|搜一搜)[：:\s]*福利大(?:红包|紅包)\d{0,20}[，,，\s]*(?:领取|領取)[^。\n]{0,40}?(?:双11|雙11|双十一|雙十一)(?:红包|紅包)。?/giu,
   /(?:双11|雙11|双十一|雙十一).{0,80}(?:红包|紅包|福利|优惠|優惠)/giu,
-  /(?:搜索|搜尋)\\s*[：:].{0,100}(?:红包|紅包|福利|優惠|优惠)/giu,
+  /(?:搜索|搜尋)\s*[：:].{0,100}(?:红包|紅包|福利|優惠|优惠)/giu,
   /(?:最新最快更新|最新更新).{0,80}(?:点击直达|點擊直達|点击进入|點擊進入)/giu
 ];
 
@@ -47,13 +47,13 @@ function cleanPromotionalContent(value) {
     pattern.lastIndex = 0;
     content = content.replace(pattern, () => {
       removedBlocks++;
-      return "\\n";
+      return "\n";
     });
   }
   content = content
-    .replace(/[ \\t]+\\n/gu, "\\n")
-    .replace(/\\n[ \\t]+/gu, "\\n")
-    .replace(/\\n{3,}/gu, "\\n\\n")
+    .replace(/[ \t]+\n/gu, "\n")
+    .replace(/\n[ \t]+/gu, "\n")
+    .replace(/\n{3,}/gu, "\n\n")
     .trim();
   return { content, removedBlocks };
 }
