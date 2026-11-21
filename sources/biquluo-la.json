@@ -10,8 +10,6 @@
   ],
   "script": "scripts/biquluo-la.js",
   "enabled": true,
-  "testOnly": true,
-  "testOnlyReason": "旧版 Legado 四阶段联网测试曾通过；当前先开放给 AppleNovelApp 原生宿主联调，尚未完成 App 侧复测。",
   "description": "普通小说测试源。支持 GET 搜索、书籍详情、章节目录与正文；正文经过推广文本清洗。当前为 App 宿主联调状态。",
   "licenseApproved": true,
   "licenseType": "open-license",
@@ -44,5 +42,7 @@
         "titleSelector": "h1"
       }
     }
-  }
+  },
+  "userConfirmedExistingSource": true,
+  "userConfirmedWorkingAt": "2026-11-21"
 }
