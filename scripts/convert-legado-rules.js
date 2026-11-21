@@ -167,10 +167,16 @@ function parseLegacyChain(expression) {
   if(raw.includes("###")) return {status:"manual",reason:"unsupported-regex-mode"};
   const regexParts=splitTopLevel(raw,"##");
   if(regexParts){
-    if(regexParts.length<2||regexParts.length>3||!regexParts[0]||!regexParts[1]||regexParts[1].length>256) return {status:"manual",reason:"unsupported-regex-transform"};
-    const base=parseLegacyChain(regexParts[0]);
+    if(regexParts.length<2||(regexParts.length>3&&(regexParts.length-1)%2!==0)) return {status:"manual",reason:"unsupported-regex-transform"};
+    const base=regexParts[0]?parseLegacyChain(regexParts[0]):{status:"candidate",selector:{engine:"self",output:"text"}};
     if(base.status!=="candidate") return base;
-    return {status:"candidate",selector:{engine:"replace",input:base.selector,pattern:regexParts[1],replacement:regexParts[2]||""}};
+    let selector=base.selector;
+    for(let i=1;i<regexParts.length;i+=2){
+      const pattern=regexParts[i],replacement=regexParts[i+1]||"";
+      if(!pattern||pattern.length>256) return {status:"manual",reason:"unsupported-regex-transform"};
+      selector={engine:"replace",input:selector,pattern,replacement};
+    }
+    return {status:"candidate",selector};
   }
   const fallbackParts=splitTopLevel(raw,"||");
   if(fallbackParts){
@@ -185,6 +191,8 @@ function parseLegacyChain(expression) {
     return {status:"candidate",selector:{engine:"composite",operator:"concat",parts:parts.map(x=>x.selector)}};
   }
   if(raw.startsWith("@text:")) return {status:"candidate",selector:{engine:"literal",value:raw.slice(6)}};
+  const legacyText=raw.match(/^text\.([^@]+?)(?:@text)?$/i);
+  if(legacyText) return {status:"candidate",selector:{engine:"literal",value:legacyText[1]}};
   if(raw.startsWith("@@")) raw=raw.slice(2);
   const expressionShape=scanExpressionOperators(raw);
   if(expressionShape.operators.length || expressionShape.regexDelimiterCount>0) return {status:"manual",reason:"unsupported-compound-expression"};
