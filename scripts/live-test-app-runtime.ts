@@ -23,6 +23,7 @@ type TermResult = {
   stages: Stage[];
   error?: string;
   attempts?: number;
+  catalogAttempts?: number;
   matchingResultCount?: number;
   relevanceStatus?: "matched" | "zero-results" | "no-title-match";
 };
@@ -137,6 +138,7 @@ async function testTerm(source: NovelSource, keyword: string): Promise<TermResul
   const catalogMaxAttempts = 3;
   for (let attempt = 1; attempt <= catalogMaxAttempts; attempt++) {
     try {
+      out.catalogAttempts = attempt;
       chapters = await fetchNovelChapterList(source, summary, client);
       if (!chapters.length) throw new Error("App 目录解析结果为空");
       out.stages.push({
@@ -147,6 +149,7 @@ async function testTerm(source: NovelSource, keyword: string): Promise<TermResul
       break;
     } catch (error) {
       catalogError = errorText(error);
+      out.catalogAttempts = attempt;
       const transient = /HTTP\s*5\d\d\b|HTTP\s*429\b|timed?\s*out|timeout|超时|ECONNRESET|ECONNREFUSED|ENOTFOUND|EAI_AGAIN|fetch failed|网络请求失败/i.test(catalogError);
       if (!transient || attempt === catalogMaxAttempts) break;
       await new Promise((resolve) => setTimeout(resolve, attempt === 1 ? 4000 : 8000));
@@ -156,7 +159,7 @@ async function testTerm(source: NovelSource, keyword: string): Promise<TermResul
     out.error = catalogError;
     out.status = "search-only";
     out.readingStatus = "catalog-failed";
-    out.stages.push({ stage: "目录", status: "failed", detail: "目录最多重试 " + catalogMaxAttempts + " 次后仍失败：" + catalogError });
+    out.stages.push({ stage: "目录", status: "failed", detail: "目录请求尝试 " + (out.catalogAttempts || 0) + " 次后仍失败：" + catalogError });
     out.stages.push({ stage: "详情", status: "skipped", detail: "App 阅读流程先加载目录；目录失败后不会继续详情请求" });
     out.stages.push({ stage: "正文", status: "skipped", detail: "目录不可用，无法取得章节链接" });
     return out;
