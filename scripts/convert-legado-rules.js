@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 "use strict";
-// Selector IR remains non-executable; supports CSS attributes, bounded JSONPath/XPath, safe templates, &&/|| composition and ## cleanup. Runtime parity is validated separately.
+// Selector IR remains non-executable; supports CSS attributes, bounded JSONPath/XPath, safe templates, @put/@get state, %% interleaving, ### first-only replacement, and &&/|| composition.
 // Unsupported diagnostics expose bounded syntax tokens, never full rule expressions.
 // Bare HTML tag names are retained as tag selector steps; absent output defaults to text.
 // Index and exclusion selectors are represented as structured IR; runtime parity remains unverified.
