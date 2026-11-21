@@ -118,7 +118,7 @@ function executeSelector(root,selector){
   }
   if(selector.engine==="replace"){
     if(typeof selector.pattern!=="string"||selector.pattern.length>256||typeof selector.replacement!=="string") throw new Error("invalid-regex-transform");
-    if(/\\([^)]*[+*][^)]*\\)[+*{]|\\([^)]*\\+[^)]*\\)\\+/u.test(selector.pattern)) throw new Error("unsafe-regex-transform");
+    if(/\([^)]*[+*][^)]*\)[+*{]|\([^)]*\+[^)]*\)\+/u.test(selector.pattern)) throw new Error("unsafe-regex-transform");
     const input=executeSelector(root,selector.input);
     const value=Array.isArray(input)?input.join(""):String(input==null?"":input);
     if(value.length>200000) throw new Error("regex-input-limit");
