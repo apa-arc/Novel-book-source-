@@ -189,7 +189,7 @@ function parseLegacyChain(expression) {
         if(tagAttr) query=tagAttr[1]+tagAttr[2];
         else if(classAttr) query="."+classAttr[1]+classAttr[2];
         else if(idAttr) query="#"+idAttr[1]+idAttr[2];
-        else if(/^(?:[a-zA-Z][\w-]*|[.#][\w-]+)(?:[.#][\w-]+)*(?:\[[^\]]+\])+$/.test(originalSegment)) query=originalSegment;
+        else if(/^(?:[a-zA-Z][\w-]*|[.#][\w-]+)?(?:[.#][\w-]+)*(?:\[[^\]]+\])+$/.test(originalSegment)) query=originalSegment;
         if(!query) return {status:"manual",reason:"unsupported-attribute-filter"};
         steps.push({kind:"css",query});
         continue;
