@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T18:27:30.259Z",
+  "generatedAt": "2026-11-21T18:44:37.619Z",
   "testStandard": "AppleNovelApp search semantics + separately reported reading stages; each search retries up to 3 times; transient Node network errors are environment-inconclusive; title relevance is separate from request success; reading tests only use title-matching results; sources run sequentially with 1.2s cooldown",
   "keywords": [
     "斗罗",
@@ -21,7 +21,7 @@
     "searchZeroResults": 2,
     "searchHasResultsButNoTitleMatch": 1,
     "readingSkippedForNoTitleMatch": 1,
-    "searchRetriesUsed": 5,
+    "searchRetriesUsed": 4,
     "chapterContentPassed": 12
   },
   "results": [
@@ -61,7 +61,8 @@
           "resultCount": 100,
           "matchingResultCount": 100,
           "relevanceStatus": "matched",
-          "selectedTitle": "斗罗之双子斗罗"
+          "selectedTitle": "斗罗之双子斗罗",
+          "catalogAttempts": 1
         },
         "斗破": {
           "keyword": "斗破",
@@ -94,7 +95,8 @@
           "resultCount": 100,
           "matchingResultCount": 98,
           "relevanceStatus": "matched",
-          "selectedTitle": "斗破皇城"
+          "selectedTitle": "斗破皇城",
+          "catalogAttempts": 1
         }
       }
     },
@@ -183,29 +185,30 @@
             {
               "stage": "搜索",
               "status": "passed",
-              "detail": "App 搜索请求及解析成功；返回 20 条结果；标题匹配关键词 20 条；尝试 2 次"
+              "detail": "App 搜索请求及解析成功；返回 20 条结果；标题匹配关键词 20 条；尝试 1 次"
             },
             {
               "stage": "目录",
               "status": "passed",
-              "detail": "获取 100 章；首章「第1章 诞生」；尝试 1 次"
+              "detail": "获取 100 章；首章「楔子（求推荐收藏投资）」；尝试 1 次"
             },
             {
               "stage": "详情（可选）",
               "status": "passed",
-              "detail": "详情页读取成功：斗罗之吞天帝"
+              "detail": "详情页读取成功：斗罗：封号琴魔，这个杀手有点冷"
             },
             {
               "stage": "正文",
               "status": "passed",
-              "detail": "首章正文读取成功（855 字符）"
+              "detail": "首章正文读取成功（394 字符）"
             }
           ],
-          "attempts": 2,
+          "attempts": 1,
           "resultCount": 20,
           "matchingResultCount": 20,
           "relevanceStatus": "matched",
-          "selectedTitle": "[玄幻]斗罗之吞天帝"
+          "selectedTitle": "[言情]斗罗：封号琴魔，这个杀手有点冷",
+          "catalogAttempts": 1
         },
         "斗破": {
           "keyword": "斗破",
@@ -221,24 +224,25 @@
             {
               "stage": "目录",
               "status": "passed",
-              "detail": "获取 100 章；首章「第一章拍卖万倍返还系统！」；尝试 1 次"
+              "detail": "获取 100 章；首章「第一章 重生斗破」；尝试 1 次"
             },
             {
               "stage": "详情（可选）",
               "status": "passed",
-              "detail": "详情页读取成功：斗破：拍卖万倍返还，我无敌了"
+              "detail": "详情页读取成功：从斗破开始攻略少女"
             },
             {
               "stage": "正文",
               "status": "passed",
-              "detail": "首章正文读取成功（996 字符）"
+              "detail": "首章正文读取成功（825 字符）"
             }
           ],
           "attempts": 1,
           "resultCount": 20,
           "matchingResultCount": 17,
           "relevanceStatus": "matched",
-          "selectedTitle": "[网游]斗破：拍卖万倍返还，我无敌了"
+          "selectedTitle": "[网游]从斗破开始攻略少女",
+          "catalogAttempts": 1
         }
       }
     },
@@ -261,7 +265,7 @@
             {
               "stage": "目录",
               "status": "failed",
-              "detail": "目录最多重试 3 次后仍失败：书源服务器返回 HTTP 404。"
+              "detail": "目录请求尝试 1 次后仍失败：书源服务器返回 HTTP 404。"
             },
             {
               "stage": "详情",
@@ -279,6 +283,7 @@
           "matchingResultCount": 20,
           "relevanceStatus": "matched",
           "selectedTitle": "[网游]斗罗：来自一人之下的唐门弟子",
+          "catalogAttempts": 1,
           "error": "书源服务器返回 HTTP 404。"
         },
         "斗破": {
@@ -290,29 +295,30 @@
             {
               "stage": "搜索",
               "status": "passed",
-              "detail": "App 搜索请求及解析成功；返回 20 条结果；标题匹配关键词 17 条；尝试 1 次"
+              "detail": "App 搜索请求及解析成功；返回 20 条结果；标题匹配关键词 20 条；尝试 1 次"
             },
             {
               "stage": "目录",
               "status": "passed",
-              "detail": "获取 66 章；首章「第一章 萧家新成员—萧薰儿」；尝试 1 次"
+              "detail": "获取 100 章；首章「第1章 三段斗之气？不存在的！ （新书求收藏，推荐！）」；尝试 1 次"
             },
             {
               "stage": "详情（可选）",
               "status": "passed",
-              "detail": "详情页读取成功：[网游]斗破苍穹之扶弟狂魔"
+              "detail": "详情页读取成功：[网游]斗破苍穹之忍者系统"
             },
             {
               "stage": "正文",
               "status": "passed",
-              "detail": "首章正文读取成功（1230 字符）"
+              "detail": "首章正文读取成功（805 字符）"
             }
           ],
           "attempts": 1,
           "resultCount": 20,
-          "matchingResultCount": 17,
+          "matchingResultCount": 20,
           "relevanceStatus": "matched",
-          "selectedTitle": "[网游]斗破苍穹之扶弟狂魔"
+          "selectedTitle": "[网游]斗破苍穹之忍者系统",
+          "catalogAttempts": 1
         }
       }
     },
@@ -335,24 +341,25 @@
             {
               "stage": "目录",
               "status": "passed",
-              "detail": "获取 100 章；首章「第一章：吾乃审判之神，审判恶人玉小刚！」；尝试 1 次"
+              "detail": "获取 100 章；首章「第1章 霍挂竟是我自己」；尝试 1 次"
             },
             {
               "stage": "详情（可选）",
               "status": "passed",
-              "detail": "详情页读取成功：我为审判神，审判斗罗十大恶人"
+              "detail": "详情页读取成功：人在斗罗写日记，霍挂竟是我自己"
             },
             {
               "stage": "正文",
               "status": "passed",
-              "detail": "首章正文读取成功（956 字符）"
+              "detail": "首章正文读取成功（1053 字符）"
             }
           ],
           "attempts": 1,
           "resultCount": 20,
           "matchingResultCount": 20,
           "relevanceStatus": "matched",
-          "selectedTitle": "[网游]我为审判神，审判斗罗十大恶人"
+          "selectedTitle": "[网游]人在斗罗写日记，霍挂竟是我自己",
+          "catalogAttempts": 1
         },
         "斗破": {
           "keyword": "斗破",
@@ -368,24 +375,25 @@
             {
               "stage": "目录",
               "status": "passed",
-              "detail": "获取 11 章；首章「第一章：系统的正确打开方式」；尝试 1 次"
+              "detail": "获取 100 章；首章「第一章 陨落的天才」；尝试 1 次"
             },
             {
               "stage": "详情（可选）",
               "status": "passed",
-              "detail": "详情页读取成功：斗破之这个系统喜欢被动"
+              "detail": "详情页读取成功：斗破之我比主角强三境"
             },
             {
               "stage": "正文",
               "status": "passed",
-              "detail": "首章正文读取成功（1270 字符）"
+              "detail": "首章正文读取成功（1053 字符）"
             }
           ],
           "attempts": 1,
           "resultCount": 20,
           "matchingResultCount": 17,
           "relevanceStatus": "matched",
-          "selectedTitle": "[网游]斗破之这个系统喜欢被动"
+          "selectedTitle": "[武侠]斗破之我比主角强三境",
+          "catalogAttempts": 1
         }
       }
     },
@@ -425,7 +433,8 @@
           "resultCount": 100,
           "matchingResultCount": 100,
           "relevanceStatus": "matched",
-          "selectedTitle": "斗罗：武魂鸡腿和酒，玄子魔王护"
+          "selectedTitle": "斗罗：武魂鸡腿和酒，玄子魔王护",
+          "catalogAttempts": 1
         },
         "斗破": {
           "keyword": "斗破",
@@ -451,14 +460,15 @@
             {
               "stage": "正文",
               "status": "passed",
-              "detail": "首章正文读取成功（1223 字符）"
+              "detail": "首章正文读取成功（1226 字符）"
             }
           ],
           "attempts": 1,
           "resultCount": 97,
           "matchingResultCount": 96,
           "relevanceStatus": "matched",
-          "selectedTitle": "斗破：无限模拟，从古族客卿开始"
+          "selectedTitle": "斗破：无限模拟，从古族客卿开始",
+          "catalogAttempts": 1
         }
       }
     },
@@ -565,7 +575,8 @@
           "resultCount": 10,
           "matchingResultCount": 2,
           "relevanceStatus": "matched",
-          "selectedTitle": "唐门还是唐家堡？【剑三+斗罗】"
+          "selectedTitle": "唐门还是唐家堡？【剑三+斗罗】",
+          "catalogAttempts": 1
         },
         "斗破": {
           "keyword": "斗破",
@@ -704,7 +715,8 @@
           "resultCount": 4,
           "matchingResultCount": 2,
           "relevanceStatus": "matched",
-          "selectedTitle": "3. 斗罗大陆4终极斗罗_唐家三少【完结】"
+          "selectedTitle": "3. 斗罗大陆4终极斗罗_唐家三少【完结】",
+          "catalogAttempts": 1
         },
         "斗破": {
           "keyword": "斗破",
@@ -737,7 +749,8 @@
           "resultCount": 10,
           "matchingResultCount": 2,
           "relevanceStatus": "matched",
-          "selectedTitle": "2. 斗破苍穹前传之药老传奇_天蚕土豆【完结】"
+          "selectedTitle": "2. 斗破苍穹前传之药老传奇_天蚕土豆【完结】",
+          "catalogAttempts": 1
         }
       }
     }
