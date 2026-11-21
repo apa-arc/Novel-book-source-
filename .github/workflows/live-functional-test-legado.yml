@@ -1,4 +1,5 @@
 name: Live functional tests for novel sources
+# Re-run the full 8,683-source matrix after bounded rule-context support.
 
 on:
   workflow_dispatch:
