@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T09:19:08.638Z",
+  "generatedAt": "2026-11-21T10:17:19.663Z",
   "source": "luanmuc/legado-book-sources (MIT License)",
   "ordinary": {
-    "passedAndExported": 4,
-    "structurallyValid": 4,
+    "passedAndExported": 0,
+    "structurallyValid": 0,
     "addedToNativeSubscription": 0,
     "pending": "Legado rules must first be converted into this repository's native appConfig and pass the native adapter live tests."
   },
