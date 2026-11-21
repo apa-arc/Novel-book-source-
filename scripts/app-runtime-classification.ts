@@ -6,7 +6,7 @@ export type AppSearchErrorClass = "failed" | "inconclusive";
  * rate limits, so they must be reported as environment-inconclusive.
  */
 export function classifyAppSearchError(message: string): AppSearchErrorClass {
-  if (/HTTP\s*(?:403|429)\b|redirect|重定向|network request failed|fetch failed|timed?\s*out|timeout|超时|ENOTFOUND|ECONNRESET|ECONNREFUSED|EAI_AGAIN/i.test(message)) {
+  if (/HTTP\s*(?:403|429)\b|redirect|重定向|网络请求失败|network request failed|fetch failed|timed?\s*out|timeout|超时|ENOTFOUND|ECONNRESET|ECONNREFUSED|EAI_AGAIN/i.test(message)) {
     return "inconclusive";
   }
   return "failed";
