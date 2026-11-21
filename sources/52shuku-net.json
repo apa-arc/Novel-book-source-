@@ -37,7 +37,7 @@
         "titleSelector": "h1.article-title"
       },
       "chapters": {
-        "itemSelector": "article.article-content ul.list.clearfix li.mulu",
+        "itemSelector": "ul.list.clearfix li.mulu",
         "titleSelector": "a",
         "urlSelector": "a"
       },
