@@ -1,5 +1,14 @@
 {
   "schemaVersion": 1,
   "updatedAt": "2026-11-21",
-  "sources": []
+  "sources": [
+    {
+      "id": "biquluo-la",
+      "name": "壁落小说",
+      "kind": "public-web",
+      "file": "sources/biquluo-la.json",
+      "enabled": true,
+      "testOnly": true
+    }
+  ]
 }
