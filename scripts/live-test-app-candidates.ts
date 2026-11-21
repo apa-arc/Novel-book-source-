@@ -6,7 +6,7 @@ import { fetchNovelDetail, fetchNovelChapterList, fetchNovelChapterContent } fro
 import type { NovelSource } from "../app/src/source.ts";
 
 const defaultKeywords = ["斗罗大陆", "斗破苍穹"];
-const keywordsBySource: Record<string, string[]> = { "52shuku-net": ["斗罗大陆", "斗破苍穹"], "bsxiaoshuo-com": ["念念不忘遥相望", "傲娇甜妻：萌宝请助攻"] };
+const keywordsBySource: Record<string, string[]> = { "52shuku-net": ["斗破苍穹"], "bsxiaoshuo-com": ["念念不忘遥相望", "傲娇甜妻：萌宝请助攻"] };
 const raw = fs.readFileSync("development/candidate-subscription.json", "utf8");
 const parsed = parseSourceSubscription(raw);
 
