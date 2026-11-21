@@ -109,5 +109,30 @@ const http = { async get(url) { requests.push(url); return { url, document: root
   assert.equal(pageRequests.length, 2);
   assert.ok(pageRequests[1].endsWith("_2.html"));
 
+  const jsonBookA = { title: "JSON小说甲", bookUrl: "https://example.test/book/2" };
+  const jsonBookB = { title: "JSON小说乙", bookUrl: "https://example.test/book/3" };
+  const jsonDocument = { data: { bookMap: { a: jsonBookA, b: jsonBookB }, featured: { title: "单条 JSON 小说", bookUrl: "https://example.test/book/4" } } };
+  const jsonPath = (...path) => ({ engine: "json", path: path.map(name => ({ kind: "property", name })) });
+  const jsonConfig = {
+    baseUrl: "https://example.test",
+    domains: ["example.test"],
+    search: {
+      url: () => "https://example.test/api/search",
+      list: jsonPath("data", "bookMap"),
+      fields: { title: jsonPath("title"), bookUrl: jsonPath("bookUrl") }
+    }
+  };
+  const jsonHttp = { async get(url) { return { url, document: jsonDocument }; } };
+  const jsonAdapter = createAdapter(jsonConfig);
+  assert.deepEqual(await jsonAdapter.search({ keyword: "JSON", http: jsonHttp }), [
+    { title: "JSON小说甲", bookUrl: "https://example.test/book/2" },
+    { title: "JSON小说乙", bookUrl: "https://example.test/book/3" }
+  ]);
+  jsonConfig.search.list = jsonPath("data", "featured");
+  const singleJsonAdapter = createAdapter(jsonConfig);
+  assert.deepEqual(await singleJsonAdapter.search({ keyword: "JSON", http: jsonHttp }), [
+    { title: "单条 JSON 小说", bookUrl: "https://example.test/book/4" }
+  ]);
+
   console.log("Source adapter runtime fixture tests passed.");
 })().catch(error => { console.error(error); process.exitCode = 1; });
