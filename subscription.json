@@ -4,14 +4,14 @@
   "name": "小说源",
   "description": "普通与成人小说统一订阅；来源发现问题后持续修复或下架。",
   "repository": "https://github.com/apa-arc/Novel-book-source-",
-  "updatedAt": "2026-11-21T12:00:00.000Z",
+  "updatedAt": "2026-11-21T12:30:00.000Z",
   "sourceCount": 2,
   "sources": [
     {
       "id": "biquluo-la",
       "name": "壁落小说",
       "kind": "public-web",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "description": "普通小说测试源。支持 GET 搜索、书籍详情、章节目录与正文；正文经过推广文本清洗。当前为 App 宿主联调状态。",
       "baseUrl": "https://www.biquluo.la/",
       "domains": [
@@ -54,7 +54,7 @@
       "id": "diyibanzhu-111",
       "name": "第一版主111",
       "kind": "public-web",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "description": "成人与综合小说站点；先并入统一小说源，后续根据 App 实测修正规则。",
       "baseUrl": "https://m.111bz.cc/",
       "domains": [
