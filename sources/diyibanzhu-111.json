@@ -20,9 +20,9 @@
   "hostValidated": false,
   "appConfig": {
     "searchUrl": "https://www.111bz.cc/modules/article/search.php?searchkey={keyword}&searchtype=articlename&page={page}",
-    "bookUrl": "https://www.111bz.cc/{bookUrl}",
-    "chapterListUrl": "https://www.111bz.cc/{bookUrl}",
-    "chapterUrl": "https://www.111bz.cc/{chapterUrl}",
+    "bookUrl": "https://www.111bz.cc{bookUrl}",
+    "chapterListUrl": "https://www.111bz.cc{bookUrl}",
+    "chapterUrl": "https://www.111bz.cc{chapterUrl}",
     "htmlRules": {
       "search": {
         "itemSelector": "tbody#nr tr",
