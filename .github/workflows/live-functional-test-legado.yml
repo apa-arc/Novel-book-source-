@@ -48,4 +48,5 @@ jobs:
           path: |
             reports/live-functional-test-${{ matrix.shard }}-of-32.json
             reports/live-functional-test-passed-sources-${{ matrix.shard }}-of-32.json
+            reports/live-functional-test-passed-adult-sources-${{ matrix.shard }}-of-32.json
           retention-days: 90
