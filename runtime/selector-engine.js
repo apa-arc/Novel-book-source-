@@ -102,6 +102,30 @@ function readOutput(node,output){
 }
 function executeSelector(root,selector){
   if(!root||!selector||typeof selector!=="object") throw new Error("invalid-selector-input");
+  if(selector.engine==="literal") return String(selector.value==null?"":selector.value);
+  if(selector.engine==="composite"){
+    if(!Array.isArray(selector.parts)||!selector.parts.length||selector.parts.length>32) throw new Error("invalid-composite-selector");
+    const values=selector.parts.map(part=>executeSelector(root,part));
+    if(selector.operator==="concat") return values.map(value=>Array.isArray(value)?value.join(""):String(value==null?"":value)).join("");
+    if(selector.operator==="fallback"){
+      for(const value of values){
+        const text=Array.isArray(value)?value.filter(x=>x!=null&&String(x).trim()).join(""):String(value==null?"":value);
+        if(text.trim()) return value;
+      }
+      return "";
+    }
+    throw new Error("unsupported-composite-operator");
+  }
+  if(selector.engine==="replace"){
+    if(typeof selector.pattern!=="string"||selector.pattern.length>256||typeof selector.replacement!=="string") throw new Error("invalid-regex-transform");
+    if(/\\([^)]*[+*][^)]*\\)[+*{]|\\([^)]*\\+[^)]*\\)\\+/u.test(selector.pattern)) throw new Error("unsafe-regex-transform");
+    const input=executeSelector(root,selector.input);
+    const value=Array.isArray(input)?input.join(""):String(input==null?"":input);
+    if(value.length>200000) throw new Error("regex-input-limit");
+    let regex;
+    try{regex=new RegExp(selector.pattern,"gu");}catch{throw new Error("invalid-regex-transform");}
+    return value.replace(regex,selector.replacement);
+  }
   if(selector.engine==="self") return readOutput(root, selector.output || "text");
   if(selector.engine==="css"){
     if(typeof selector.query!=="string"||!selector.query.trim()||selector.query.length>MAX_SELECTOR_LENGTH) throw new Error("invalid-css-query");
