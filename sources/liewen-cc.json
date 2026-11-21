@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "id": "liewen-cc",
+  "name": "猎文网",
+  "kind": "public-web",
+  "version": "1.0.0",
+  "baseUrl": "https://www.liewen.cc/",
+  "domains": [
+    "www.liewen.cc"
+  ],
+  "script": "scripts/liewen-cc.js",
+  "enabled": true,
+  "testOnly": true,
+  "testOnlyReason": "从公开书源集合的 GET/HTTPS 规则转换为本仓库 CSS 四阶段配置；未采用上游脚本规则。当前站点实时访问及目标宿主四阶段尚未完成实测。",
+  "description": "普通小说网页源；已转换为 GET 搜索、详情、目录和正文 CSS 规则，待目标宿主实测。",
+  "licenseApproved": true,
+  "licenseType": "self-owned",
+  "licenseEvidence": "本仓库原创声明式适配配置与解析器，不包含小说正文。",
+  "licenseEvidenceUrl": "https://github.com/apa-arc/Novel-book-source-/blob/main/sources/liewen-cc.json",
+  "hostValidated": false,
+  "appConfig": {
+    "searchUrl": "https://www.liewen.cc//search.php?keyword={keyword}&page={page}",
+    "bookUrl": "https://www.liewen.cc/{bookUrl}",
+    "chapterListUrl": "https://www.liewen.cc/{bookUrl}",
+    "chapterUrl": "https://www.liewen.cc/{chapterUrl}",
+    "htmlRules": {
+      "search": {
+        "itemSelector": ".result-item",
+        "titleSelector": ".result-item-title a",
+        "urlSelector": ".result-item-title a"
+      },
+      "detail": {
+        "titleSelector": "#info h1",
+        "descriptionSelector": "#intro p"
+      },
+      "chapters": {
+        "itemSelector": "#list dd",
+        "titleSelector": "a",
+        "urlSelector": "a"
+      },
+      "content": {
+        "contentSelector": "#content",
+        "titleSelector": "h1"
+      }
+    }
+  }
+}
