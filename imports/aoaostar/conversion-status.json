@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T01:48:25.881Z",
+  "generatedAt": "2026-11-21T01:48:59.432Z",
   "provider": "AOAOSTAR / Legado",
   "sourceCount": 3907,
   "counts": {
-    "candidate": 90,
-    "partial": 3194,
+    "candidate": 385,
+    "partial": 2899,
     "manual": 623,
     "unavailable": 0
   },
@@ -875,7 +875,7 @@
       "index": 20,
       "name": "就爱文学",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -11049,7 +11049,7 @@
       "index": 258,
       "name": "笔趣阁⑥⑧",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -11341,7 +11341,7 @@
       "index": 265,
       "name": "笔趣阁㉝",
       "baseUrl": "https://www.bbiquge.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -11381,7 +11381,7 @@
       "index": 266,
       "name": "🎉 笔趣阁 bbiquge",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -11624,7 +11624,7 @@
       "index": 272,
       "name": "话本小说💯",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -11665,7 +11665,7 @@
       "index": 273,
       "name": "56书库①",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -11825,7 +11825,7 @@
       "index": 277,
       "name": "乐文小说②",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -11903,7 +11903,7 @@
       "index": 279,
       "name": "南瓜夜读",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -11943,7 +11943,7 @@
       "index": 280,
       "name": "玫瑰言情网",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -12065,7 +12065,7 @@
       "index": 283,
       "name": "560小说网",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -12813,7 +12813,7 @@
       "index": 301,
       "name": "👍玄幻阁",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -13792,7 +13792,7 @@
       "index": 325,
       "name": "平凡文学",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -14583,7 +14583,7 @@
       "index": 344,
       "name": "笔趣阁-www.biqooge.com",
       "baseUrl": "https://www.biqooge.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -14623,7 +14623,7 @@
       "index": 345,
       "name": "☘️小说书库☘️",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -15799,7 +15799,7 @@
       "index": 373,
       "name": "爱寻书",
       "baseUrl": "https://ixunshu.net",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "login-config-present",
         "request-header-or-cookie-config-present"
@@ -16320,7 +16320,7 @@
       "index": 385,
       "name": "哎呦文学网  AUWXW.COM（天天）",
       "baseUrl": "https://www.auwxw.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -17413,7 +17413,7 @@
       "index": 410,
       "name": "无CP交流窝",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -17675,7 +17675,7 @@
       "index": 416,
       "name": "📚读书网",
       "baseUrl": "https://www.dushu.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -18016,7 +18016,7 @@
       "index": 424,
       "name": "🎉笔趣阁A18",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -18583,7 +18583,7 @@
       "index": 437,
       "name": "E小说",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -18708,7 +18708,7 @@
       "index": 440,
       "name": "🚬 第一版主⑤",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -18873,7 +18873,7 @@
       "index": 444,
       "name": "🚬 御宅屋③",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -19250,7 +19250,7 @@
       "index": 453,
       "name": "🎈轻之文库#温暖满怀",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -20034,7 +20034,7 @@
       "index": 471,
       "name": "🍁笔趣阁手机版",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -20365,7 +20365,7 @@
       "index": 479,
       "name": "格格党",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -20448,7 +20448,7 @@
       "index": 481,
       "name": "泡泡中文",
       "baseUrl": "https://www.paopaoxs.cn",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -20570,7 +20570,7 @@
       "index": 484,
       "name": "太子爷小说网",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -20907,7 +20907,7 @@
       "index": 492,
       "name": "🚬 新御书屋",
       "baseUrl": "https://m.yy228.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -20947,7 +20947,7 @@
       "index": 493,
       "name": "123笔趣阁",
       "baseUrl": "https://www.123bqg.cc",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -21254,7 +21254,7 @@
       "index": 500,
       "name": "小说",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -21295,7 +21295,7 @@
       "index": 501,
       "name": "阅书小说",
       "baseUrl": "https://m.yueshu.la",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -21378,7 +21378,7 @@
       "index": 503,
       "name": "二五零书院",
       "baseUrl": "https://m.x5200.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -21990,7 +21990,7 @@
       "index": 517,
       "name": "🔞 逆鳞",
       "baseUrl": "https://fu44.pw",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -22030,7 +22030,7 @@
       "index": 518,
       "name": "速读谷",
       "baseUrl": "https://www.sudugu.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -23300,7 +23300,7 @@
       "index": 547,
       "name": "💠 笔趣阁网",
       "baseUrl": "https://m.bqg.fun",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -24194,7 +24194,7 @@
       "index": 569,
       "name": "得奇小说",
       "baseUrl": "https://www.deqixs.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -24995,7 +24995,7 @@
       "index": 588,
       "name": "🔖英文小说",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -25760,7 +25760,7 @@
       "index": 606,
       "name": "SF轻小说",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -26413,7 +26413,7 @@
       "index": 621,
       "name": "🍺 txt小说j",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -26838,7 +26838,7 @@
       "index": 631,
       "name": "🍺 笔趣阁loubiqu",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -27138,7 +27138,7 @@
       "index": 638,
       "name": "🎉 文桑小说",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -27359,7 +27359,7 @@
       "index": 643,
       "name": "💦书海阁③",
       "baseUrl": "https://m.shuhaige.net",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -27560,7 +27560,7 @@
       "index": 648,
       "name": "👔 乡土小说",
       "baseUrl": "https://www.xiangtxsw.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -27977,7 +27977,7 @@
       "index": 658,
       "name": "同人小说",
       "baseUrl": "https://trxs.cc",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -28223,7 +28223,7 @@
       "index": 664,
       "name": "笔趣阁⑦",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -29135,7 +29135,7 @@
       "index": 686,
       "name": "🎉笔趣阁⑧③",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -29338,7 +29338,7 @@
       "index": 691,
       "name": "📖 笔趣阁⑤",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -30136,7 +30136,7 @@
       "index": 710,
       "name": "7766小说网18",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -30423,7 +30423,7 @@
       "index": 717,
       "name": "手打吧",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -30748,7 +30748,7 @@
       "index": 725,
       "name": "九五小说",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -30916,7 +30916,7 @@
       "index": 729,
       "name": "📚 广安中文",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -32051,7 +32051,7 @@
       "index": 756,
       "name": "笔趣阁",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -32793,7 +32793,7 @@
       "index": 774,
       "name": "🚬 新御宅屋",
       "baseUrl": "https://mm.xyuzhaiwu.xyz",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -33033,7 +33033,7 @@
       "index": 780,
       "name": "搜读",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -34208,7 +34208,7 @@
       "index": 809,
       "name": "🔖玄幻阁",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -34249,7 +34249,7 @@
       "index": 810,
       "name": "🚬 木小说",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -35456,7 +35456,7 @@
       "index": 839,
       "name": "🎻同人小说",
       "baseUrl": "https://www.trxs123.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -35942,7 +35942,7 @@
       "index": 851,
       "name": "📖 SF轻小说",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -37569,7 +37569,7 @@
       "index": 890,
       "name": "挥笔书屋◾️",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -38319,7 +38319,7 @@
       "index": 908,
       "name": "新ak小说网",
       "baseUrl": "https://xakxsw.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -40224,7 +40224,7 @@
       "index": 952,
       "name": "📚 盗墓笔记全集",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -40728,7 +40728,7 @@
       "index": 964,
       "name": "A 99阅读",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -43216,7 +43216,7 @@
       "index": 1023,
       "name": "📖 ACGZC",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -44175,7 +44175,7 @@
       "index": 1045,
       "name": "第一版主⑦",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -44386,7 +44386,7 @@
       "index": 1050,
       "name": "盗墓笔记",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -44932,7 +44932,7 @@
       "index": 1063,
       "name": "🎨 汉化吧-发现",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -45016,7 +45016,7 @@
       "index": 1065,
       "name": "御书房文学",
       "baseUrl": "https://m.ysfwxc.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -46814,7 +46814,7 @@
       "index": 1107,
       "name": "📖 轻之文库",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -46855,7 +46855,7 @@
       "index": 1108,
       "name": "🎉凌晨看书",
       "baseUrl": "https://m.lingchenkanshu.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -47139,7 +47139,7 @@
       "index": 1115,
       "name": "🔖追书·女生",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -47301,7 +47301,7 @@
       "index": 1119,
       "name": "156中文网",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -47341,7 +47341,7 @@
       "index": 1120,
       "name": "123言情网",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -47381,7 +47381,7 @@
       "index": 1121,
       "name": "毕曲萨阅读",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -47422,7 +47422,7 @@
       "index": 1122,
       "name": "🎉 八一中文",
       "baseUrl": "https://www.zwduxs.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -47593,7 +47593,7 @@
       "index": 1126,
       "name": "谷歌小说网",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -47771,7 +47771,7 @@
       "index": 1130,
       "name": "临高启明同人",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -47812,7 +47812,7 @@
       "index": 1131,
       "name": "🍺 UU小说网",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -47928,7 +47928,7 @@
       "index": 1134,
       "name": "👍 衍墨轩③",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -47968,7 +47968,7 @@
       "index": 1135,
       "name": "👍 书馆中文网(仅联通)",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -48346,7 +48346,7 @@
       "index": 1144,
       "name": "💗 言情小说",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -50110,7 +50110,7 @@
       "index": 1187,
       "name": "盐神阁0",
       "baseUrl": "https://www.ysg0.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -50192,7 +50192,7 @@
       "index": 1189,
       "name": "换源小说网",
       "baseUrl": "https://www.huanyuan.app",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -50359,7 +50359,7 @@
       "index": 1193,
       "name": "🌐 安趣阁网",
       "baseUrl": "https://m.actxt.net",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -50711,7 +50711,7 @@
       "index": 1201,
       "name": "乐安小说",
       "baseUrl": "https://m.leanclo.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -50751,7 +50751,7 @@
       "index": 1202,
       "name": "晋江②",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -50872,7 +50872,7 @@
       "index": 1205,
       "name": "🔖天堂向左 深圳往右",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -50953,7 +50953,7 @@
       "index": 1207,
       "name": "🔖盗墓笔记",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -52087,7 +52087,7 @@
       "index": 1234,
       "name": "爱下书",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -52255,7 +52255,7 @@
       "index": 1238,
       "name": "👔 御书屋网",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -52296,7 +52296,7 @@
       "index": 1239,
       "name": "鱼鱼中文网",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "disabled-upstream"
@@ -52379,7 +52379,7 @@
       "index": 1241,
       "name": "🚬 御书屋",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -52419,7 +52419,7 @@
       "index": 1242,
       "name": "👔 御书屋网",
       "baseUrl": "https://m.yushuwu.uk",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -52573,7 +52573,7 @@
       "index": 1246,
       "name": "读书网",
       "baseUrl": "https://www.dushu.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -52613,7 +52613,7 @@
       "index": 1247,
       "name": "📚 追书神器",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -53491,7 +53491,7 @@
       "index": 1268,
       "name": "🎉 17K 小说",
       "baseUrl": "https://search.17k.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -54016,7 +54016,7 @@
       "index": 1280,
       "name": "求小说网",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -55047,7 +55047,7 @@
       "index": 1304,
       "name": "生活琐碎阅读之家",
       "baseUrl": "https://www.ibusread.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -56902,7 +56902,7 @@
       "index": 1347,
       "name": "🔖维基阅读",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -57730,7 +57730,7 @@
       "index": 1366,
       "name": "🔴新欲望社[分页]",
       "baseUrl": "https://yuwangshe.in",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -58165,7 +58165,7 @@
       "index": 1376,
       "name": "书农文学",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -58873,7 +58873,7 @@
       "index": 1392,
       "name": "读书网（国学r3）",
       "baseUrl": "https://www.dushu.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -59290,7 +59290,7 @@
       "index": 1402,
       "name": "🎉 天籁小说",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -60156,7 +60156,7 @@
       "index": 1422,
       "name": "💠 土豪小说",
       "baseUrl": "https://www.yeziwx.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -60320,7 +60320,7 @@
       "index": 1426,
       "name": "📦 手机看书",
       "baseUrl": "https://www.sjks88.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -60538,7 +60538,7 @@
       "index": 1431,
       "name": "💗 言情小说",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -60796,7 +60796,7 @@
       "index": 1437,
       "name": "🎉 UU小说吧",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -60963,7 +60963,7 @@
       "index": 1441,
       "name": "铁血读书",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -61004,7 +61004,7 @@
       "index": 1442,
       "name": "👍 求小说网",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -61303,7 +61303,7 @@
       "index": 1449,
       "name": "🎉云中书库",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -61517,7 +61517,7 @@
       "index": 1454,
       "name": "言情小说库",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -61775,7 +61775,7 @@
       "index": 1460,
       "name": "笔尖小说[m]",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -62410,7 +62410,7 @@
       "index": 1475,
       "name": "E小说[xs]",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -63914,7 +63914,7 @@
       "index": 1510,
       "name": "泡泡小说",
       "baseUrl": "https://www.paopaoxs.cn",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -65094,7 +65094,7 @@
       "index": 1538,
       "name": "掌阅小说💯",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -65177,7 +65177,7 @@
       "index": 1540,
       "name": "🔖八零电子书",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -65707,7 +65707,7 @@
       "index": 1552,
       "name": "🎉 读书小说",
       "baseUrl": "https://www.dushu.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -65747,7 +65747,7 @@
       "index": 1553,
       "name": "🔖读书网",
       "baseUrl": "https://www.dushu.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -66065,7 +66065,7 @@
       "index": 1560,
       "name": "🔞 靠谱小说 🪜",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -66105,7 +66105,7 @@
       "index": 1561,
       "name": "🚬 靠谱小说",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -66145,7 +66145,7 @@
       "index": 1562,
       "name": "🔖八块小说网",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -66185,7 +66185,7 @@
       "index": 1563,
       "name": "🔖三八小说网",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -66611,7 +66611,7 @@
       "index": 1573,
       "name": "🪐绿竹小说",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -66654,7 +66654,7 @@
       "index": 1574,
       "name": "🔖临高启明同人",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -67024,7 +67024,7 @@
       "index": 1583,
       "name": "🔖靠谱小说",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -67064,7 +67064,7 @@
       "index": 1584,
       "name": "🔖86读书",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -67148,7 +67148,7 @@
       "index": 1586,
       "name": "💯 连尚读书",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -67233,7 +67233,7 @@
       "index": 1588,
       "name": "🌐 英文小说",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -67743,7 +67743,7 @@
       "index": 1600,
       "name": "言情小说",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -68121,7 +68121,7 @@
       "index": 1609,
       "name": "⛵ 键盘小说",
       "baseUrl": "https://www.jianpan.la",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -68500,7 +68500,7 @@
       "index": 1618,
       "name": "🎉 梧桐中文",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -68702,7 +68702,7 @@
       "index": 1623,
       "name": "📚维基阅读",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -69000,7 +69000,7 @@
       "index": 1630,
       "name": "刺猬猫备用™💯",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -69091,7 +69091,7 @@
       "index": 1632,
       "name": "🍊 17K小说网",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -69560,7 +69560,7 @@
       "index": 1643,
       "name": "📚 盗墓笔记",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -71395,7 +71395,7 @@
       "index": 1685,
       "name": "笔趣阁8.net",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -72025,7 +72025,7 @@
       "index": 1699,
       "name": "小说177",
       "baseUrl": "https://www.xs177.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -72572,7 +72572,7 @@
       "index": 1712,
       "name": "📚读书网·社科#嘚嘚21.0201",
       "baseUrl": "https://www.dushu.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -72695,7 +72695,7 @@
       "index": 1715,
       "name": "✾♛+101言情 #关耳",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -72790,7 +72790,7 @@
       "index": 1717,
       "name": "🍺 123文学",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -73023,7 +73023,7 @@
       "index": 1722,
       "name": "精彩东方文学",
       "baseUrl": "https://www.jcdf99.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -73145,7 +73145,7 @@
       "index": 1725,
       "name": "芙蓉小说-δ",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -73352,7 +73352,7 @@
       "index": 1730,
       "name": "🍅    衍 墨 轩",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -73711,7 +73711,7 @@
       "index": 1739,
       "name": "木小说",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -74067,7 +74067,7 @@
       "index": 1747,
       "name": "⚠️乡土小说 #一程",
       "baseUrl": "https://www.xiangtxsw.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -74194,7 +74194,7 @@
       "index": 1750,
       "name": "🔖三一小说",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -74322,7 +74322,7 @@
       "index": 1753,
       "name": "🔖UU小说网②",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -74405,7 +74405,7 @@
       "index": 1755,
       "name": "🎉 言情小说",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -75660,7 +75660,7 @@
       "index": 1784,
       "name": "UU小说3",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -77576,7 +77576,7 @@
       "index": 1827,
       "name": "笔趣阁⑥⑧",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -78587,7 +78587,7 @@
       "index": 1850,
       "name": "铁血读书",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -78627,7 +78627,7 @@
       "index": 1851,
       "name": "追书神器",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "login-config-present"
@@ -78913,7 +78913,7 @@
       "index": 1858,
       "name": "56书库①",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -79700,7 +79700,7 @@
       "index": 1876,
       "name": "560小说网",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -79740,7 +79740,7 @@
       "index": 1877,
       "name": "📚读书网",
       "baseUrl": "https://www.dushu.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -80504,7 +80504,7 @@
       "index": 1895,
       "name": "盗墓笔记",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -81110,7 +81110,7 @@
       "index": 1910,
       "name": "🎉凌晨看书#嘚嘚21.0201",
       "baseUrl": "https://m.lingchenkanshu.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -82055,7 +82055,7 @@
       "index": 1932,
       "name": "🎉笔趣阁A18",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -82876,7 +82876,7 @@
       "index": 1951,
       "name": "平凡文学",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -84159,7 +84159,7 @@
       "index": 1981,
       "name": "小说书库",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -86639,7 +86639,7 @@
       "index": 2040,
       "name": "🔖追书·女生",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -86841,7 +86841,7 @@
       "index": 2045,
       "name": "bak㊣飞卢小说 #破冰",
       "baseUrl": "https://b.faloo.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "login-config-present"
       ],
@@ -87260,7 +87260,7 @@
       "index": 2055,
       "name": "爱寻书",
       "baseUrl": "https://ixunshu.net",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "login-config-present",
         "request-header-or-cookie-config-present"
@@ -88536,7 +88536,7 @@
       "index": 2085,
       "name": "哎呦文学网  AUWXW.COM（天天）",
       "baseUrl": "https://www.auwxw.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -91170,7 +91170,7 @@
       "index": 2145,
       "name": "顶点中文[ddsk]",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -92702,7 +92702,7 @@
       "index": 2181,
       "name": "读书网",
       "baseUrl": "https://www.dushu.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -93331,7 +93331,7 @@
       "index": 2196,
       "name": "🪐绿竹小说",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -96638,7 +96638,7 @@
       "index": 2274,
       "name": "小说",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -96721,7 +96721,7 @@
       "index": 2276,
       "name": "阅书小说",
       "baseUrl": "https://m.yueshu.la",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -96807,7 +96807,7 @@
       "index": 2278,
       "name": "📚 盗墓笔记全集",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -96847,7 +96847,7 @@
       "index": 2279,
       "name": "二五零书院",
       "baseUrl": "https://m.x5200.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -97885,7 +97885,7 @@
       "index": 2302,
       "name": "速读谷",
       "baseUrl": "https://www.sudugu.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -99100,7 +99100,7 @@
       "index": 2330,
       "name": "轻之文库⑦",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -101295,7 +101295,7 @@
       "index": 2380,
       "name": "谷歌小说网",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -102175,7 +102175,7 @@
       "index": 2401,
       "name": "土豪小说",
       "baseUrl": "https://www.yeziwx.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -103859,7 +103859,7 @@
       "index": 2441,
       "name": "🎉 文桑小说",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -103986,7 +103986,7 @@
       "index": 2444,
       "name": "笔趣阁手机版",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -104026,7 +104026,7 @@
       "index": 2445,
       "name": "笔趣阁",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -104110,7 +104110,7 @@
       "index": 2447,
       "name": "斗破苍穹小说网",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -104233,7 +104233,7 @@
       "index": 2450,
       "name": "格格党",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -104579,7 +104579,7 @@
       "index": 2458,
       "name": "永久小说网",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -104667,7 +104667,7 @@
       "index": 2460,
       "name": "126小说网",
       "baseUrl": "https://www.tatays.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -105350,7 +105350,7 @@
       "index": 2477,
       "name": "笔趣阁 la",
       "baseUrl": "https://www.xbiquge.la",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -105472,7 +105472,7 @@
       "index": 2480,
       "name": "天籁小说",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -105598,7 +105598,7 @@
       "index": 2483,
       "name": "笔趣阁⑨⑧",
       "baseUrl": "https://www.biquge123.cc",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "login-config-present"
       ],
@@ -106133,7 +106133,7 @@
       "index": 2496,
       "name": "广安中文①",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -107261,7 +107261,7 @@
       "index": 2523,
       "name": "101言情",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -107466,7 +107466,7 @@
       "index": 2528,
       "name": "搜读中文",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -111821,7 +111821,7 @@
       "index": 2634,
       "name": "笔趣阁⑤",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -112400,7 +112400,7 @@
       "index": 2648,
       "name": "炫书网",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -112521,7 +112521,7 @@
       "index": 2651,
       "name": "7766小说网18",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -112854,7 +112854,7 @@
       "index": 2659,
       "name": "快眼看书",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -113064,7 +113064,7 @@
       "index": 2664,
       "name": "📚 广安中文",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -113979,7 +113979,7 @@
       "index": 2686,
       "name": "读了小说",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -116601,7 +116601,7 @@
       "index": 2749,
       "name": "新ak小说网",
       "baseUrl": "https://xakxsw.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -116977,7 +116977,7 @@
       "index": 2758,
       "name": "顶点中文❶",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -121289,7 +121289,7 @@
       "index": 2862,
       "name": "蜜蜂小说网",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -121453,7 +121453,7 @@
       "index": 2866,
       "name": "斗破苍穹小说网",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -121867,7 +121867,7 @@
       "index": 2876,
       "name": "优特小说网④",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -122499,7 +122499,7 @@
       "index": 2891,
       "name": "156中文网①",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "login-config-present",
@@ -123402,7 +123402,7 @@
       "index": 2913,
       "name": "🏖️云兔小说",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -124427,7 +124427,7 @@
       "index": 2938,
       "name": "💰 追书神器",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "login-config-present"
@@ -125496,7 +125496,7 @@
       "index": 2964,
       "name": "思路客①",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -125702,7 +125702,7 @@
       "index": 2969,
       "name": "必读居",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -126877,7 +126877,7 @@
       "index": 2998,
       "name": "🍺 UU小说网",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -127039,7 +127039,7 @@
       "index": 3002,
       "name": "笔趣阁⑨④",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -127496,7 +127496,7 @@
       "index": 3013,
       "name": "👍 书馆中文网(仅联通)",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -128020,7 +128020,7 @@
       "index": 3026,
       "name": "五六小说",
       "baseUrl": "https://www.wuliushu.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -128141,7 +128141,7 @@
       "index": 3029,
       "name": "🎉凌晨看书",
       "baseUrl": "https://m.lingchenkanshu.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -128890,7 +128890,7 @@
       "index": 3047,
       "name": "SF轻小说",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -129311,7 +129311,7 @@
       "index": 3057,
       "name": "E小说",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -129397,7 +129397,7 @@
       "index": 3059,
       "name": "🚬 第一版主⑤",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -129656,7 +129656,7 @@
       "index": 3065,
       "name": "123言情网",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -129738,7 +129738,7 @@
       "index": 3067,
       "name": "📖 轻之文库",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -129779,7 +129779,7 @@
       "index": 3068,
       "name": "盐神阁0",
       "baseUrl": "https://www.ysg0.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -130453,7 +130453,7 @@
       "index": 3084,
       "name": "搜读",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -130873,7 +130873,7 @@
       "index": 3094,
       "name": "泡泡中文",
       "baseUrl": "https://www.paopaoxs.cn",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -131215,7 +131215,7 @@
       "index": 3102,
       "name": "太子爷小说网",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -131255,7 +131255,7 @@
       "index": 3103,
       "name": "文徒小说",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -131340,7 +131340,7 @@
       "index": 3105,
       "name": "🚬 御书屋",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -132157,7 +132157,7 @@
       "index": 3124,
       "name": "🌐 安趣阁网",
       "baseUrl": "https://m.actxt.net",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -132596,7 +132596,7 @@
       "index": 3134,
       "name": "乐安小说",
       "baseUrl": "https://m.leanclo.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -132890,7 +132890,7 @@
       "index": 3141,
       "name": "得奇小说",
       "baseUrl": "https://www.deqixs.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -133493,7 +133493,7 @@
       "index": 3155,
       "name": "笔趣阁A18",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -133533,7 +133533,7 @@
       "index": 3156,
       "name": "挥笔书屋◾️",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -133614,7 +133614,7 @@
       "index": 3158,
       "name": "🔞 逆鳞",
       "baseUrl": "https://fu44.pw",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -133786,7 +133786,7 @@
       "index": 3162,
       "name": "👍 求小说网",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -134205,7 +134205,7 @@
       "index": 3172,
       "name": "笔趣阁⑦",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -134414,7 +134414,7 @@
       "index": 3177,
       "name": "UU小说③",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -134504,7 +134504,7 @@
       "index": 3179,
       "name": "求小说网",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -134679,7 +134679,7 @@
       "index": 3183,
       "name": "🔞 懒人小说 🪜",
       "baseUrl": "https://m.lrxs.org",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -135106,7 +135106,7 @@
       "index": 3193,
       "name": "🔖读书网",
       "baseUrl": "https://www.dushu.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -135186,7 +135186,7 @@
       "index": 3195,
       "name": "读书网",
       "baseUrl": "https://www.dushu.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -135226,7 +135226,7 @@
       "index": 3196,
       "name": "📖 SF轻小说",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -135399,7 +135399,7 @@
       "index": 3200,
       "name": "晋江②",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -135614,7 +135614,7 @@
       "index": 3205,
       "name": "🎉 言情小说",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -136001,7 +136001,7 @@
       "index": 3214,
       "name": "UU小说3",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -137341,7 +137341,7 @@
       "index": 3246,
       "name": "鲤鱼乡",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "login-config-present"
@@ -137475,7 +137475,7 @@
       "index": 3249,
       "name": "八零电子书①",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -138219,7 +138219,7 @@
       "index": 3266,
       "name": "笔趣阁loubiqu",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -138260,7 +138260,7 @@
       "index": 3267,
       "name": "🍺 笔趣阁㊵",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -138673,7 +138673,7 @@
       "index": 3277,
       "name": "笔趣阁",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -139096,7 +139096,7 @@
       "index": 3287,
       "name": "书海阁③",
       "baseUrl": "https://m.shuhaige.net",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -139176,7 +139176,7 @@
       "index": 3289,
       "name": "🔴新欲望社[分页]",
       "baseUrl": "https://yuwangshe.in",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -139216,7 +139216,7 @@
       "index": 3290,
       "name": "橘子小说①",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -139642,7 +139642,7 @@
       "index": 3300,
       "name": "顶点中文",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -139977,7 +139977,7 @@
       "index": 3308,
       "name": "🎉 天籁小说",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -140613,7 +140613,7 @@
       "index": 3323,
       "name": "谷歌小说网",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -141004,7 +141004,7 @@
       "index": 3332,
       "name": "吾爱文学网②",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -142977,7 +142977,7 @@
       "index": 3377,
       "name": "💠 土豪小说",
       "baseUrl": "https://www.yeziwx.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -143314,7 +143314,7 @@
       "index": 3385,
       "name": "📦 手机看书",
       "baseUrl": "https://www.sjks88.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -144229,7 +144229,7 @@
       "index": 3406,
       "name": "笔尖小说[m]",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -144569,7 +144569,7 @@
       "index": 3414,
       "name": "🎉 读书小说",
       "baseUrl": "https://www.dushu.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -144741,7 +144741,7 @@
       "index": 3418,
       "name": "笔趣阁网",
       "baseUrl": "https://m.bqg.fun",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -145031,7 +145031,7 @@
       "index": 3425,
       "name": "汉化吧",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -145161,7 +145161,7 @@
       "index": 3428,
       "name": "E小说②[xs]",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -145287,7 +145287,7 @@
       "index": 3431,
       "name": "轻之文库",
       "baseUrl": "https://www.linovel.net",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "login-config-present",
         "request-header-or-cookie-config-present"
@@ -145978,7 +145978,7 @@
       "index": 3447,
       "name": "🔖英文小说",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -147088,7 +147088,7 @@
       "index": 3472,
       "name": "泡泡小说",
       "baseUrl": "https://www.paopaoxs.cn",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -147128,7 +147128,7 @@
       "index": 3473,
       "name": "🔖猫九小说",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "login-config-present"
@@ -147342,7 +147342,7 @@
       "index": 3478,
       "name": "👔 乡土小说",
       "baseUrl": "https://www.xiangtxsw.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -148251,7 +148251,7 @@
       "index": 3499,
       "name": "爱下书",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -148759,7 +148759,7 @@
       "index": 3511,
       "name": "🔖盗墓笔记",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -148842,7 +148842,7 @@
       "index": 3513,
       "name": "🔖天堂向左 深圳往右",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -149048,7 +149048,7 @@
       "index": 3518,
       "name": "📚 灰机wiki",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "login-config-present"
@@ -149130,7 +149130,7 @@
       "index": 3520,
       "name": "📚 追书神器",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -149912,7 +149912,7 @@
       "index": 3538,
       "name": "🔖维基阅读",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -149952,7 +149952,7 @@
       "index": 3539,
       "name": "📖 ACGZC",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -149993,7 +149993,7 @@
       "index": 3540,
       "name": "第一版主⑦",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -151595,7 +151595,7 @@
       "index": 3577,
       "name": "🔖八零电子书",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -152827,7 +152827,7 @@
       "index": 3605,
       "name": "读书网（国学r3）",
       "baseUrl": "https://www.dushu.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -153090,7 +153090,7 @@
       "index": 3611,
       "name": "言情小说",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -154002,7 +154002,7 @@
       "index": 3631,
       "name": "📚读书网·社科#嘚嘚21.0201",
       "baseUrl": "https://www.dushu.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -154393,7 +154393,7 @@
       "index": 3640,
       "name": "✾♛+101言情 #关耳",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -154616,7 +154616,7 @@
       "index": 3645,
       "name": "🔞 靠谱小说 🪜",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -155706,7 +155706,7 @@
       "index": 3669,
       "name": "📖 笔趣阁网",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -155747,7 +155747,7 @@
       "index": 3670,
       "name": "笔趣阁8",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -156144,7 +156144,7 @@
       "index": 3679,
       "name": "毕曲萨阅读",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -156185,7 +156185,7 @@
       "index": 3680,
       "name": "💳飞卢小说",
       "baseUrl": "https://b.faloo.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "login-config-present"
       ],
@@ -156874,7 +156874,7 @@
       "index": 3696,
       "name": "小说177",
       "baseUrl": "https://www.xs177.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -157140,7 +157140,7 @@
       "index": 3702,
       "name": "🔖临高启明同人",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -157180,7 +157180,7 @@
       "index": 3703,
       "name": "临高启明",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -157529,7 +157529,7 @@
       "index": 3711,
       "name": "精彩东方文学",
       "baseUrl": "https://www.jcdf99.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -158810,7 +158810,7 @@
       "index": 3741,
       "name": "💯 连尚读书",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -159270,7 +159270,7 @@
       "index": 3752,
       "name": "🌐 英文小说",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -159311,7 +159311,7 @@
       "index": 3753,
       "name": "🛠️ 花香居备用[缺页]",
       "baseUrl": "https://m.huaxiangju.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -160035,7 +160035,7 @@
       "index": 3769,
       "name": "⚠️乡土小说 #一程",
       "baseUrl": "https://www.xiangtxsw.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -160751,7 +160751,7 @@
       "index": 3786,
       "name": "🔖三一小说",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -161048,7 +161048,7 @@
       "index": 3793,
       "name": "🔖UU小说网②",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -161526,7 +161526,7 @@
       "index": 3804,
       "name": "去读书",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -163633,7 +163633,7 @@
       "index": 3853,
       "name": "🎉 梧桐中文",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -163840,7 +163840,7 @@
       "index": 3858,
       "name": "📚维基阅读",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -164243,7 +164243,7 @@
       "index": 3867,
       "name": "刺猬猫备用™💯",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -164379,7 +164379,7 @@
       "index": 3870,
       "name": "17K小说⑤",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -165803,7 +165803,7 @@
       "index": 3903,
       "name": "📚 盗墓笔记",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
@@ -165940,7 +165940,7 @@
       "index": 3906,
       "name": "🌐 Hameln ",
       "baseUrl": "https://syosetu.org",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "login-config-present"
       ],
