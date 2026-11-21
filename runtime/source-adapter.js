@@ -1,6 +1,7 @@
 "use strict";
 
 const { executeSelector } = require("./selector-engine");
+const { cleanPromotionalContent } = require("./text-quality");
 
 function assertConfig(config) {
   if (!config || typeof config !== "object") throw new Error("invalid-source-config");
@@ -122,7 +123,8 @@ function createAdapter(config) {
           if (parts.length === 0) throw new Error("chapter-content-empty");
           break;
         }
-        parts.push(body.trim());
+        const cleaned = cleanPromotionalContent(body);
+        if (cleaned.content) parts.push(cleaned.content);
         const next = first(document, config.content?.nextPage, context);
         if (typeof next !== "string" || !next.trim()) break;
         const nextUrl = resolveAllowed(next, currentUrl, safe.domains);
