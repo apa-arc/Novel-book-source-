@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T02:30:16.911Z",
+  "generatedAt": "2026-11-21T02:36:35.116Z",
   "provider": "AOAOSTAR / Legado",
   "sourceCount": 3907,
   "counts": {
@@ -17782,7 +17782,6 @@
           "status": "partial",
           "fieldCount": 3,
           "manualReasons": {
-            "unsupported-attribute-filter": 1,
             "script-or-template": 1
           }
         },
@@ -22353,11 +22352,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-attribute-filter": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -22622,11 +22619,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-attribute-filter": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -22670,11 +22665,9 @@
           }
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-attribute-filter": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -22794,11 +22787,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-attribute-filter": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -40999,7 +40990,6 @@
           "status": "partial",
           "fieldCount": 8,
           "manualReasons": {
-            "unsupported-attribute-filter": 1,
             "script-or-template": 1
           }
         },
@@ -55341,7 +55331,6 @@
           "status": "partial",
           "fieldCount": 3,
           "manualReasons": {
-            "unsupported-attribute-filter": 1,
             "script-or-template": 1
           }
         },
@@ -60780,7 +60769,6 @@
           "status": "partial",
           "fieldCount": 3,
           "manualReasons": {
-            "unsupported-attribute-filter": 1,
             "script-or-template": 1
           }
         },
@@ -61497,7 +61485,6 @@
           "status": "partial",
           "fieldCount": 3,
           "manualReasons": {
-            "unsupported-attribute-filter": 1,
             "script-or-template": 1
           }
         },
@@ -67375,7 +67362,6 @@
           "status": "partial",
           "fieldCount": 8,
           "manualReasons": {
-            "unsupported-attribute-filter": 1,
             "script-or-template": 1
           }
         },
@@ -68128,11 +68114,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-attribute-filter": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -69753,11 +69737,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-attribute-filter": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -69848,11 +69830,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-attribute-filter": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -70149,11 +70129,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-attribute-filter": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -72116,7 +72094,6 @@
           "status": "partial",
           "fieldCount": 3,
           "manualReasons": {
-            "unsupported-attribute-filter": 1,
             "script-or-template": 1
           }
         },
@@ -76047,7 +76024,6 @@
           "status": "partial",
           "fieldCount": 8,
           "manualReasons": {
-            "unsupported-attribute-filter": 1,
             "script-or-template": 1
           }
         },
@@ -80154,11 +80130,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-attribute-filter": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -80547,7 +80521,6 @@
           "status": "partial",
           "fieldCount": 3,
           "manualReasons": {
-            "unsupported-attribute-filter": 1,
             "script-or-template": 1
           }
         },
@@ -85726,11 +85699,9 @@
           }
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-attribute-filter": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -95491,11 +95462,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-attribute-filter": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -132291,7 +132260,6 @@
           "status": "partial",
           "fieldCount": 3,
           "manualReasons": {
-            "unsupported-attribute-filter": 1,
             "script-or-template": 1
           }
         },
@@ -141676,7 +141644,6 @@
           "status": "partial",
           "fieldCount": 3,
           "manualReasons": {
-            "unsupported-attribute-filter": 1,
             "script-or-template": 1
           }
         },
@@ -149885,7 +149852,6 @@
           "status": "partial",
           "fieldCount": 3,
           "manualReasons": {
-            "unsupported-attribute-filter": 1,
             "script-or-template": 1
           }
         },
@@ -152299,11 +152265,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-attribute-filter": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -152345,11 +152309,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-attribute-filter": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -152440,11 +152402,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-attribute-filter": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -152809,11 +152769,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-attribute-filter": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -155916,7 +155874,6 @@
           "status": "partial",
           "fieldCount": 3,
           "manualReasons": {
-            "unsupported-attribute-filter": 1,
             "script-or-template": 1
           }
         },
@@ -160559,7 +160516,6 @@
           "status": "partial",
           "fieldCount": 8,
           "manualReasons": {
-            "unsupported-attribute-filter": 1,
             "script-or-template": 1
           }
         },
