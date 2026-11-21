@@ -117,7 +117,7 @@ function absolute(raw, base, host, extraHosts = []) {
   }
   return u.href;
 }
-async function fetchHtml(rawUrl, host, requestHeaders = {}, extraHosts = []) {
+async function fetchHtml(rawUrl, host, requestHeaders = {}, extraHosts = [], requestOptions = {}) {
   let url = absolute(rawUrl, "https://" + host + "/", host, extraHosts);
   for (let redirects = 0; redirects <= 4; redirects++) {
     const controller = new AbortController();
@@ -126,7 +126,9 @@ async function fetchHtml(rawUrl, host, requestHeaders = {}, extraHosts = []) {
     try {
       response = await fetch(url, {
         redirect: "manual", signal: controller.signal,
-        headers: { "user-agent": "NovelSourceFunctionalTest/1.0 (+metadata-only; no auth)", "accept": "text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.8", ...requestHeaders }
+        method: requestOptions.method || "GET",
+        ...(requestOptions.body !== undefined ? { body: requestOptions.body } : {}),
+        headers: { "user-agent": "NovelSourceFunctionalTest/1.0 (+metadata-only; no auth)", "accept": "text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.8", ...requestHeaders, ...(requestOptions.headers || {}) }
       });
     } finally { clearTimeout(timer); }
     if ([301,302,303,307,308].includes(response.status)) {
@@ -170,12 +172,28 @@ function simpleSearchUrl(source, keyword, page, rawOverride) {
   if (u.protocol !== "https:" || u.username || u.password || !host || privateHost) throw new Error("unsafe-search-url");
   return u.href;
 }
-function simpleSearchUrls(source, keyword, page) {
+function simpleSearchRequests(source, keyword, page) {
   const raw = String(source.searchUrl || "").trim();
   if (!raw) throw new Error("unsupported-search-url");
+  const requestConfig = raw.match(/^([^,]+),\s*(\{[\s\S]*\})$/);
+  if (requestConfig) {
+    let config;
+    try { config = JSON.parse(requestConfig[2]); } catch { throw new Error("unsupported-search-url-config"); }
+    const method = String(config.method || "GET").toUpperCase();
+    const charset = String(config.charset || "utf-8").toLowerCase();
+    if (!["GET","POST"].includes(method) || !["utf-8","utf8"].includes(charset) || config.webView || config.cookie || config.header) {
+      throw new Error("unsupported-search-request-config");
+    }
+    const url = simpleSearchUrl(source, keyword, page, requestConfig[1].trim());
+    const body = typeof config.body === "string" ? config.body
+      .replace(/\{\{\s*key\s*\}\}/gi, encodeURIComponent(keyword))
+      .replace(/\{\{\s*page\s*\}\}/gi, String(page)) : undefined;
+    if (method === "POST" && typeof body !== "string") throw new Error("unsupported-search-request-body");
+    return [{ url, method, body, headers: method === "POST" ? { "content-type": "application/x-www-form-urlencoded; charset=UTF-8" } : {} }];
+  }
   const parts = raw.includes(",") ? raw.split(/,(?=https?:\/\/)/i).map(x => x.trim()).filter(Boolean) : [raw];
   if (raw.includes(",") && parts.length < 2) throw new Error("unsupported-search-url");
-  return [...new Set(parts.map(part => simpleSearchUrl(source, keyword, page, part)))];
+  return [...new Set(parts.map(part => simpleSearchUrl(source, keyword, page, part)))].map(url => ({ url, method: "GET" }));
 }
 function extract(node, rules, baseUrl, host, extraHosts = [], context = { variables: {} }) {
   const out = {};
@@ -237,14 +255,14 @@ async function testSource(source, testId) {
     const terms = [...new Set([KEYWORD, source.ruleSearch.checkKeyWord, "凡人修仙传", "完美世界"].filter(x => typeof x === "string" && x.trim()))];
     let lastSearchError = null;
     for (const term of terms) {
-      let searchUrls;
-      try { searchUrls = simpleSearchUrls(source, term, 1); }
+      let searchRequests;
+      try { searchRequests = simpleSearchRequests(source, term, 1); }
       catch (error) { lastSearchError = error; break; }
-      for (const searchUrl of searchUrls) {
+      for (const searchRequest of searchRequests) {
         try {
-          const searchHost = new URL(searchUrl).hostname.toLowerCase();
+          const searchHost = new URL(searchRequest.url).hostname.toLowerCase();
           extraHosts = [...new Set([searchHost])];
-          const searchPage = await fetchHtml(searchUrl, host, headers, extraHosts);
+          const searchPage = await fetchHtml(searchRequest.url, host, headers, extraHosts, searchRequest);
           const listContext = { variables: {} };
           const searchItems = allNodes(searchPage.document, source.ruleSearch.bookList, listContext);
           const books = [];
