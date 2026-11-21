@@ -4,8 +4,8 @@
   "name": "小说源",
   "description": "普通小说统一订阅；来源发现问题后持续修复或下架。",
   "repository": "https://github.com/apa-arc/Novel-book-source-",
-  "updatedAt": "2026-11-21T15:24:00.000Z",
-  "sourceCount": 2,
+  "updatedAt": "2026-11-21T20:00:00.000Z",
+  "sourceCount": 6,
   "sources": [
     {
       "id": "biquluo-la",
@@ -91,6 +91,178 @@
       },
       "testOnly": true,
       "testOnlyReason": "已从公开上游规则转换为本仓库原创 GET/CSS 适配；站点搜索曾有间歇性失灵，尚未完成当前宿主四阶段实测。"
+    },
+    {
+      "id": "dingdian-23uswx",
+      "name": "顶点小说",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "普通小说网页源；已转换为 GET + CSS 四阶段配置，待实测。",
+      "baseUrl": "https://www.23uswx.net/",
+      "domains": [
+        "www.23uswx.net"
+      ],
+      "categories": [],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/dingdian-23uswx.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/dingdian-23uswx.js",
+      "appConfig": {
+        "searchUrl": "https://www.23uswx.net/modules/article/search.php?q={keyword}",
+        "bookUrl": "https://www.23uswx.net/",
+        "chapterListUrl": "https://www.23uswx.net/{bookUrl}",
+        "chapterUrl": "https://www.23uswx.net/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": ".grid tr",
+            "titleSelector": "td:nth-child(1) a",
+            "urlSelector": "td:nth-child(1) a",
+            "authorSelector": "td:nth-child(3)"
+          },
+          "detail": {
+            "titleSelector": "#info h1",
+            "descriptionSelector": "#intro"
+          },
+          "chapters": {
+            "itemSelector": "#list dd",
+            "titleSelector": "a",
+            "urlSelector": "a"
+          },
+          "content": {
+            "contentSelector": "#content",
+            "titleSelector": "h1"
+          }
+        }
+      },
+      "testOnly": true,
+      "testOnlyReason": "从公开上游 GET 搜索规则转换；已补齐本项目四阶段 CSS 配置，尚未完成当前站点实时与宿主实测。"
+    },
+    {
+      "id": "jiuyi-91zww",
+      "name": "九一中文",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "普通小说网页源；已转换为 GET + CSS 四阶段配置，待实测。",
+      "baseUrl": "https://www.91zww.com/",
+      "domains": [
+        "www.91zww.com"
+      ],
+      "categories": [],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/jiuyi-91zww.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/jiuyi-91zww.js",
+      "appConfig": {
+        "searchUrl": "https://www.91zww.com/search/?searchkey={keyword}",
+        "bookUrl": "https://www.91zww.com/",
+        "chapterListUrl": "https://www.91zww.com/{bookUrl}",
+        "chapterUrl": "https://www.91zww.com/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": ".txt-list li",
+            "titleSelector": ".s2 a",
+            "urlSelector": ".s2 a",
+            "authorSelector": ".s4"
+          },
+          "detail": {
+            "titleSelector": "h1",
+            "descriptionSelector": "#intro"
+          },
+          "chapters": {
+            "itemSelector": ".section-list li",
+            "titleSelector": "a",
+            "urlSelector": "a"
+          },
+          "content": {
+            "contentSelector": "#content",
+            "titleSelector": "h1"
+          }
+        }
+      },
+      "testOnly": true,
+      "testOnlyReason": "从公开上游 GET 搜索规则转换；目录和正文 CSS 规则已补齐，尚未完成当前站点实时与宿主实测。"
+    },
+    {
+      "id": "wuxian-wenxuesk",
+      "name": "无限小说",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "普通小说网页源；已转换为 GET + CSS 四阶段配置，待实测。",
+      "baseUrl": "https://www.wenxuesk.net/",
+      "domains": [
+        "www.wenxuesk.net"
+      ],
+      "categories": [],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/wuxian-wenxuesk.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/wuxian-wenxuesk.js",
+      "appConfig": {
+        "searchUrl": "https://www.wenxuesk.net/search/result.html?searchkey={keyword}",
+        "bookUrl": "https://www.wenxuesk.net/",
+        "chapterListUrl": "https://www.wenxuesk.net/{bookUrl}",
+        "chapterUrl": "https://www.wenxuesk.net/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": ".search-list li",
+            "titleSelector": ".s2 a",
+            "urlSelector": ".s2 a",
+            "authorSelector": ".s4"
+          },
+          "detail": {
+            "titleSelector": "h1",
+            "descriptionSelector": "#intro"
+          },
+          "chapters": {
+            "itemSelector": "#list dd",
+            "titleSelector": "a",
+            "urlSelector": "a"
+          },
+          "content": {
+            "contentSelector": "#content",
+            "titleSelector": "h1"
+          }
+        }
+      },
+      "testOnly": true,
+      "testOnlyReason": "从公开上游 GET 搜索规则转换；目录的原始 XPath 已改写为 CSS 规则，尚未完成当前站点实时与宿主实测。"
+    },
+    {
+      "id": "tianyu-tycqzw",
+      "name": "天域小说网",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "普通小说网页源；已转换为 GET + CSS 四阶段配置，待实测。",
+      "baseUrl": "https://www.tycqzw.la/",
+      "domains": [
+        "www.tycqzw.la"
+      ],
+      "categories": [],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/tianyu-tycqzw.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/tianyu-tycqzw.js",
+      "appConfig": {
+        "searchUrl": "https://www.tycqzw.la/search.php?searchkey={keyword}",
+        "bookUrl": "https://www.tycqzw.la/",
+        "chapterListUrl": "https://www.tycqzw.la/{bookUrl}",
+        "chapterUrl": "https://www.tycqzw.la/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": ".grid tr",
+            "titleSelector": "td.even a",
+            "urlSelector": "td.even a",
+            "authorSelector": "td.odd"
+          },
+          "detail": {
+            "titleSelector": "#info h1",
+            "descriptionSelector": "#intro"
+          },
+          "chapters": {
+            "itemSelector": "#list dd",
+            "titleSelector": "a",
+            "urlSelector": "a"
+          },
+          "content": {
+            "contentSelector": "#content",
+            "titleSelector": "h1"
+          }
+        }
+      },
+      "testOnly": true,
+      "testOnlyReason": "从公开上游 GET 搜索规则转换；已将详情、目录、正文映射为 CSS 规则，尚未完成当前站点实时与宿主实测。"
     }
   ]
 }
