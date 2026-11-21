@@ -6,7 +6,7 @@ const path = require("node:path");
 const ROOT = path.resolve(__dirname, "..");
 const ARTIFACTS = path.join(ROOT, "artifacts");
 const SUBSCRIPTION = path.join(ROOT, "subscription.json");
-const ADULT_HINT = /成人|情色|色情|R18|18\+/i;
+const ADULT_HINT = /🔞|成人|情色|色情|R18|18\+/i;
 
 function walk(dir) {
   if (!fs.existsSync(dir)) return [];
@@ -24,11 +24,12 @@ function normalizeUrl(value) {
     return u.href.toLowerCase();
   } catch { return ""; }
 }
-function validateCandidate(source) {
+function validateCandidate(source, expectedAdult = false) {
   if (!fs.existsSync(path.join(ROOT, "imports/third-party/luanmuc/LICENSE"))) return false;
   if (!source || typeof source !== "object" || Array.isArray(source)) return false;
   if (source.enabled !== true || source.bookSourceType !== 0) return false;
-  if (ADULT_HINT.test([source.bookSourceName, source.bookSourceGroup, source.bookSourceComment].join(" "))) return false;
+  const isAdult = ADULT_HINT.test([source.bookSourceName, source.bookSourceGroup, source.bookSourceComment].join(" "));
+  if (isAdult !== expectedAdult) return false;
   if (typeof source.bookSourceName !== "string" || !source.bookSourceName.trim()) return false;
   if (typeof source.bookSourceComment !== "string" ||
       !source.bookSourceComment.includes("luanmuc/legado-book-sources") ||
@@ -72,33 +73,34 @@ function validateCandidate(source) {
   if (/[?&](?:token|auth|password|secret|cookie)=/i.test(source.searchUrl)) return false;
   return true;
 }
-function main() {
+function collectCandidates(expectedAdult) {
+  const filePattern = expectedAdult
+    ? /live-functional-test-passed-adult-sources-\d+-of-\d+\.json$/
+    : /live-functional-test-passed-sources-\d+-of-\d+\.json$/;
   const candidates = [];
-  for (const file of walk(ARTIFACTS).filter(file => /live-functional-test-passed-sources-\d+-of-\d+\.json$/.test(file))) {
+  for (const file of walk(ARTIFACTS).filter(file => filePattern.test(file))) {
     const parsed = JSON.parse(fs.readFileSync(file, "utf8"));
-    const match = path.basename(file).match(/passed-sources-(\d+)-of-(\d+)\.json$/);
+    const match = path.basename(file).match(/passed(?:-adult)?-sources-(\d+)-of-(\d+)\.json$/);
     if (!Array.isArray(parsed) || !match) continue;
-    const reportPath = path.join(path.dirname(file), `live-functional-test-${match[1]}-of-${match[2]}.json`);
+    const reportPath = path.join(path.dirname(file), "live-functional-test-" + match[1] + "-of-" + match[2] + ".json");
     if (!fs.existsSync(reportPath)) continue;
     const report = JSON.parse(fs.readFileSync(reportPath, "utf8"));
     for (const source of parsed) {
       const host = (() => { try { return new URL(source.bookSourceUrl).hostname.toLowerCase(); } catch { return ""; } })();
       const result = (report.results || []).find(item =>
-        item.provider === "luanmuc-candidate" && item.status === "passed" &&
-        item.name === source.bookSourceName && item.host === host
+        item.provider === "luanmuc-candidate" &&
+        item.category === (expectedAdult ? "adult" : "ordinary") &&
+        item.status === "passed" && item.name === source.bookSourceName && item.host === host
       );
       const contentStage = result && (result.stages || []).find(stage => stage.name === "content");
-      // A 150-character stub is not enough evidence for a usable novel chapter.
       if (contentStage && Number(contentStage.length) >= 300) candidates.push(source);
     }
   }
-  const valid = candidates.filter(validateCandidate);
-  if (!valid.length) {
-    console.log(JSON.stringify({ candidates: candidates.length, valid: 0, added: 0, note: "No new MIT-attributed ordinary sources passed all four live stages." }));
-    return;
-  }
-  const current = JSON.parse(fs.readFileSync(SUBSCRIPTION, "utf8"));
-  if (!Array.isArray(current)) throw new Error("ordinary subscription is not a JSON array");
+  return candidates;
+}
+function mergeIntoSubscription(filePath, valid, expectedAdult) {
+  const current = JSON.parse(fs.readFileSync(filePath, "utf8"));
+  if (!Array.isArray(current)) throw new Error(path.basename(filePath) + " is not a JSON array");
   let nextOrder = current.reduce((max, source) => Math.max(max, Number(source.customOrder) || 0), 0) + 1;
   const added = [];
   const updated = [];
@@ -109,7 +111,7 @@ function main() {
     const existingIndex = current.findIndex(existing =>
       normalizeUrl(existing.bookSourceUrl) === keyUrl &&
       String(existing.bookSourceName || "").trim().toLowerCase() === keyName &&
-      !ADULT_HINT.test([existing.bookSourceName, existing.bookSourceGroup, existing.bookSourceComment].join(" "))
+      ADULT_HINT.test([existing.bookSourceName, existing.bookSourceGroup, existing.bookSourceComment].join(" ")) === expectedAdult
     );
     if (existingIndex >= 0) {
       source.customOrder = Number(current[existingIndex].customOrder) || nextOrder++;
@@ -122,18 +124,36 @@ function main() {
     }
   }
   if (added.length || updated.length) {
-    fs.writeFileSync(SUBSCRIPTION, JSON.stringify(current, null, 2) + "\n", "utf8");
+    fs.writeFileSync(filePath, JSON.stringify(current, null, 2) + "\n", "utf8");
   }
-  const summary = {
-    schemaVersion: 1,
-    generatedAt: new Date().toISOString(),
-    source: "luanmuc/legado-book-sources (MIT License)",
-    candidates: candidates.length,
-    valid: valid.length,
+  return {
     added: added.length,
     updated: updated.length,
     addedSources: added.map(source => ({ name: source.bookSourceName, url: source.bookSourceUrl })),
     updatedSources: updated.map(source => ({ name: source.bookSourceName, url: source.bookSourceUrl }))
+  };
+}
+function main() {
+  const ordinaryCandidates = collectCandidates(false);
+  const adultCandidates = collectCandidates(true);
+  const ordinaryValid = ordinaryCandidates.filter(source => validateCandidate(source, false));
+  const adultValid = adultCandidates.filter(source => validateCandidate(source, true));
+  const ordinary = mergeIntoSubscription(SUBSCRIPTION, ordinaryValid, false);
+  const adult = mergeIntoSubscription(path.join(ROOT, "adult-subscription.json"), adultValid, true);
+  const summary = {
+    schemaVersion: 1,
+    generatedAt: new Date().toISOString(),
+    source: "luanmuc/legado-book-sources (MIT License)",
+    ordinary: {
+      candidates: ordinaryCandidates.length,
+      valid: ordinaryValid.length,
+      ...ordinary
+    },
+    adult: {
+      candidates: adultCandidates.length,
+      valid: adultValid.length,
+      ...adult
+    }
   };
   fs.mkdirSync(path.join(ROOT, "reports"), { recursive: true });
   fs.writeFileSync(path.join(ROOT, "reports", "verified-source-merge-summary.json"), JSON.stringify(summary, null, 2) + "\n");
