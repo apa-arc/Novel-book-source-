@@ -12,7 +12,7 @@ on:
       - ".github/workflows/scan-candidate-chapters.yml"
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: candidate-chapter-scan
@@ -41,3 +41,34 @@ jobs:
           path: artifacts/candidate-chapter-scan.json
           if-no-files-found: error
           retention-days: 30
+
+
+  aggregate:
+    needs: scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Download all scan batches
+        uses: actions/download-artifact@v4
+        with:
+          pattern: candidate-novel-chapter-scan-*
+          path: artifacts/scans
+          merge-multiple: false
+      - name: Build per-source accessibility, license and technical assessment
+        run: node scripts/aggregate-candidate-assessment.js artifacts/scans
+      - name: Commit assessment report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add imports/aoaostar/candidate-assessment.json reports/aoaostar-candidate-assessment-summary.md
+          if git diff --cached --quiet; then
+            echo "Assessment report unchanged."
+            exit 0
+          fi
+          git commit -m "chore: update AOAOSTAR candidate assessment"
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
