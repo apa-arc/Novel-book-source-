@@ -323,6 +323,39 @@ async function testSource(source, testId) {
   }
   return result;
 }
+function safePassedSource(source) {
+  const allowedTop = ["bookSourceName","bookSourceUrl","searchUrl"];
+  const out = {};
+  for (const key of allowedTop) {
+    const value = source[key];
+    if (typeof value !== "string" || !value.trim() || value.length > 2048) throw new Error("passed-source-missing-" + key);
+    out[key] = value;
+  }
+  out.bookSourceType = 0;
+  out.bookSourceGroup = "实测可用";
+  out.enabled = true;
+  out.enabledExplore = false;
+  out.bookSourceComment = "规则来源：luanmuc/legado-book-sources（MIT License）；已完成公开搜索、详情、目录及正文实测。此条目不含 Cookie、登录态或认证凭据。";
+  const groups = {
+    ruleSearch: ["bookList","name","bookUrl"],
+    ruleBookInfo: ["name","author","intro","tocUrl","kind","lastChapter","wordCount"],
+    ruleToc: ["chapterList","chapterName","chapterUrl"],
+    ruleContent: ["content"]
+  };
+  for (const [group, fields] of Object.entries(groups)) {
+    out[group] = {};
+    for (const field of fields) {
+      const value = source[group] && source[group][field];
+      if (typeof value !== "string" || !value.trim() || value.length > 4096) continue;
+      try { selector(value); out[group][field] = value; } catch { /* omit unsupported optional selector */ }
+    }
+  }
+  for (const field of ["bookList","name","bookUrl"]) if (!out.ruleSearch[field]) throw new Error("passed-source-search-rule-incomplete");
+  for (const field of ["chapterList","chapterName","chapterUrl"]) if (!out.ruleToc[field]) throw new Error("passed-source-toc-rule-incomplete");
+  if (!out.ruleContent.content) throw new Error("passed-source-content-rule-incomplete");
+  return out;
+}
+
 async function main() {
   if (!fs.existsSync(AOAOSTAR)) throw new Error("missing-AOAOSTAR-snapshot");
   const aoaostar = asArray(JSON.parse(fs.readFileSync(AOAOSTAR, "utf8")));
@@ -364,6 +397,19 @@ async function main() {
     }
   }
   await Promise.all(Array.from({ length: CONCURRENCY }, worker));
+  const passedSourceCandidates = [];
+  for (let index = 0; index < results.length; index++) {
+    const result = results[index];
+    const candidate = selected[index];
+    if (result.status !== "passed" || candidate.provider !== "luanmuc-candidate" || result.category !== "ordinary") continue;
+    try {
+      passedSourceCandidates.push(safePassedSource(candidate.source));
+    } catch (error) {
+      console.warn("passed source export skipped", result.name, String(error.message || error));
+    }
+  }
+  const passedSourcesPath = path.join(ROOT, "reports", `live-functional-test-passed-sources-${SHARD_INDEX}-of-${SHARD_COUNT}.json`);
+  fs.writeFileSync(passedSourcesPath, JSON.stringify(passedSourceCandidates, null, 2) + "\n");
   const countStatus = status => results.filter(item => item.status === status).length;
   const report = {
     schemaVersion: 2,
@@ -387,6 +433,7 @@ async function main() {
       blocked: countStatus("blocked"),
       unverified: countStatus("unverified"),
       excluded: countStatus("excluded"),
+      passedSourceCandidatesExported: passedSourceCandidates.length,
       subscriptionChanges: 0
     },
     note: "Statuses are separated: failed means a functional stage failed; unsupported means the bounded adapter cannot run the rule; blocked means login/access controls or upstream disabled; unverified means transient network/timeout. This report is diagnostic only and does not approve redistribution or alter subscriptions.",
