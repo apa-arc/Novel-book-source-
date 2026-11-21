@@ -93,6 +93,17 @@ try{
  assert.deepEqual(indexedJson.selector.path,[
    {kind:"property",name:"books"},{kind:"index",index:0},{kind:"property",name:"author"}
  ]);
+ const recursiveJson=parseLegacyChain("$..search[*]");
+ assert.equal(recursiveJson.status,"candidate");
+ assert.deepEqual(recursiveJson.selector.path,[
+   {kind:"recursiveProperty",name:"search"},{kind:"wildcard"}
+ ]);
+ const dotWildcard=parseLegacyChain("$.data.*");
+ assert.deepEqual(dotWildcard.selector.path,[{kind:"property",name:"data"},{kind:"wildcard"}]);
+ const rootWildcard=parseLegacyChain("$.[*]");
+ assert.deepEqual(rootWildcard.selector.path,[{kind:"wildcard"}]);
+ const bareWildcard=parseLegacyChain("data[*].directory[*]");
+ assert.equal(bareWildcard.status,"candidate");
  const implicitIndex=parseLegacyChain("head@.1@text");
  assert.equal(implicitIndex.status,"candidate");
  assert.deepEqual(implicitIndex.selector.steps[1],{kind:"children",name:null,index:1});
