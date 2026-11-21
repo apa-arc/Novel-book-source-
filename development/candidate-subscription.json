@@ -14,7 +14,7 @@
         "www.52shuku.net"
       ],
       "appConfig": {
-        "searchUrl": "https://www.52shuku.net/so/search.php?q={keyword}&m=no&f=_all&syn=no&c=15%2C16%2C18%2C19%2C20%2C23",
+        "searchUrl": "https://www.52shuku.net/so/search.php?q={keyword}&m=no&f=_all&syn=no",
         "bookUrl": "https://www.52shuku.net/{bookUrl}",
         "chapterListUrl": "https://www.52shuku.net/{bookUrl}",
         "chapterUrl": "https://www.52shuku.net/{chapterUrl}",
