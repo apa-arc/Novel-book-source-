@@ -61,6 +61,13 @@ assert.deepEqual(executeSelector(jsonRoot,{engine:"json",path:[
 assert.deepEqual(executeSelector(jsonRoot,{engine:"json",path:[
   {kind:"property",name:"data"},{kind:"property",name:"books"}
 ]}),[{title:"斗破苍穹",author:"天蚕土豆"},{title:"凡人修仙传",author:"忘语"}]);
+const nestedJson={data:{search:[{title:"A"},{title:"B"}],other:{search:[{title:"C"}]}}};
+assert.deepEqual(executeSelector(nestedJson,{engine:"json",path:[
+  {kind:"recursiveProperty",name:"search"},{kind:"wildcard"},{kind:"property",name:"title"}
+]}),["A","B","C"]);
+assert.deepEqual(executeSelector(nestedJson,{engine:"json",path:[
+  {kind:"property",name:"data"},{kind:"wildcard"}
+]}),[nestedJson.data.search,nestedJson.data.other]);
 assert.deepEqual(executeSelector(root,chain([{kind:"class",name:"list",index:null},{kind:"tag",name:"a",index:0}],"all")).length,1);
 assert.throws(()=>executeSelector(root,chain([{kind:"script",name:"x"}])),/unsupported-selector-step/);
 assert.throws(()=>executeSelector(root,{engine:"legado-chain",steps:Array(33).fill({kind:"children"})}),/invalid-selector-steps/);
