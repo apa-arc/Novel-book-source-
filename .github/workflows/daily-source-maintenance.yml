@@ -16,6 +16,8 @@ on:
       - "subscription.json"
       - "config/health-check-subscription.json"
       - "config/subscription-source-registry.json"
+      - "config/source-scan-import-rules.json"
+      - "sources/*.json"
 
 permissions:
   contents: write
