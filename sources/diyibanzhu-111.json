@@ -3,7 +3,7 @@
   "id": "diyibanzhu-111",
   "name": "第一版主111",
   "kind": "public-web",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "成人与综合小说站点；先并入统一小说源，后续根据 App 实测修正规则。",
   "baseUrl": "https://m.111bz.cc/",
   "domains": [
