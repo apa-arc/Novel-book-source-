@@ -38,9 +38,8 @@ function safeHeaders(source) {
   const out = {};
   for (const [key, val] of Object.entries(value)) {
     const lower = key.toLowerCase();
-    if (!allowed.has(lower) || typeof val !== "string" || /cookie|authorization|token|password|secret/i.test(key + " " + val)) {
-      throw new Error("credential-or-unsupported-header");
-    }
+    if (/cookie|authorization|token|password|secret/i.test(key + " " + String(val))) continue;
+    if (!allowed.has(lower) || typeof val !== "string") continue;
     out[key] = val;
   }
   return out;
@@ -137,6 +136,9 @@ async function fetchHtml(rawUrl, host, requestHeaders = {}) {
     if (/验证码|captcha|访问验证|安全验证|人机验证|cloudflare|just a moment|access denied/i.test(body.slice(0, 60000))) {
       throw new Error("challenge-or-access-denied");
     }
+    if (/请先登录|请登录后(?:阅读|查看|继续)|登录后才能(?:阅读|查看)|需要登录才能|会员登录后/i.test(body.slice(0, 60000))) {
+      throw new Error("login-required");
+    }
     const isJson = /json/i.test(type) || /^[\s]*[\[{]/.test(body);
     if (isJson) return { url, document: parseDoc(body, true) };
     if (!/<(?:!doctype\s+html|html|body|div|table)\b/i.test(body)) throw new Error("not-html");
@@ -201,8 +203,7 @@ async function testSource(source, testId) {
     
     if (NON_NOVEL.test([source.bookSourceName,source.bookSourceGroup,source.bookSourceComment].join(" "))) throw new Error("non-novel-source");
     if (source.bookSourceType && Number(source.bookSourceType) !== 0) throw new Error("unsupported-source-type");
-    if (source.enabled === false) throw new Error("upstream-source-disabled");
-    if (source.loginUrl || source.loginUi || source.loginCheckJs || source.enabledCookieJar) throw new Error("login-required");
+    // Test public access without running login UI, cookie jars, or authentication headers.
     const headers = safeHeaders(source);
     if (!isStaticRuleGroup(source)) throw new Error("unsupported-or-incomplete-rule-groups");
     currentStage = "search";
