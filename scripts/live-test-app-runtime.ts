@@ -1,9 +1,9 @@
 import fs from "node:fs";
-import { parseSourceSubscription } from "../src/source-subscription.ts";
-import { createSourceHttpClient } from "../src/source-runtime.ts";
-import { searchNovelSource } from "../src/source-search.ts";
-import { fetchNovelDetail, fetchNovelChapterList, fetchNovelChapterContent } from "../src/source-catalog.ts";
-import type { NovelSource } from "../src/source.ts";
+import { parseSourceSubscription } from "../app/src/source-subscription.ts";
+import { createSourceHttpClient } from "../app/src/source-runtime.ts";
+import { searchNovelSource } from "../app/src/source-search.ts";
+import { fetchNovelDetail, fetchNovelChapterList, fetchNovelChapterContent } from "../app/src/source-catalog.ts";
+import type { NovelSource } from "../app/src/source.ts";
 
 const keywords = ["斗罗大陆", "斗破苍穹"];
 const raw = fs.readFileSync("subscription.json", "utf8");
