@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T02:09:11.355Z",
+  "generatedAt": "2026-11-21T02:20:49.279Z",
   "provider": "AOAOSTAR / Legado",
   "sourceCount": 3907,
   "counts": {
-    "candidate": 629,
-    "partial": 2655,
+    "candidate": 633,
+    "partial": 2651,
     "manual": 623,
     "unavailable": 0
   },
@@ -28,8 +28,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "script-or-template": 2,
-            "unsupported-xpath": 1
+            "script-or-template": 2
           }
         },
         "bookInfo": {
@@ -273,11 +272,9 @@
           "manualReasons": {}
         },
         "content": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "explore": {
           "status": "candidate",
@@ -467,11 +464,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 4,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -606,11 +601,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -702,11 +695,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -2212,11 +2203,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -4482,11 +4471,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 4,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -4562,11 +4549,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -5067,11 +5052,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 4,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -5189,11 +5172,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 4,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -5309,11 +5290,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 4,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -5394,11 +5373,9 @@
           "manualReasons": {}
         },
         "content": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "explore": {
           "status": "candidate",
@@ -5628,17 +5605,14 @@
           }
         },
         "bookInfo": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "toc": {
           "status": "partial",
           "fieldCount": 6,
           "manualReasons": {
-            "unsupported-xpath": 1,
             "script-or-template": 2
           }
         },
@@ -7374,11 +7348,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 4,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -8129,18 +8101,14 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 6,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "content": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 5,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "explore": {
           "status": "partial",
@@ -10062,7 +10030,6 @@
           "status": "partial",
           "fieldCount": 3,
           "manualReasons": {
-            "unsupported-xpath": 1,
             "script-or-template": 1
           }
         },
@@ -12453,7 +12420,7 @@
       "index": 298,
       "name": "飞速小说网",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -12465,11 +12432,9 @@
           "manualReasons": {}
         },
         "bookInfo": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 4,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "toc": {
           "status": "candidate",
@@ -13116,11 +13081,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 4,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -14082,8 +14045,7 @@
           "status": "partial",
           "fieldCount": 5,
           "manualReasons": {
-            "empty-selector-chain": 1,
-            "unsupported-xpath": 1
+            "empty-selector-chain": 1
           }
         },
         "content": {
@@ -18904,11 +18866,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -20202,11 +20162,9 @@
           "manualReasons": {}
         },
         "bookInfo": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 5,
-          "manualReasons": {
-            "unsupported-xpath": 4
-          }
+          "manualReasons": {}
         },
         "toc": {
           "status": "partial",
@@ -21368,18 +21326,14 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 6,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "content": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 5,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "explore": {
           "status": "partial",
@@ -22637,11 +22591,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -25767,8 +25719,7 @@
           "status": "partial",
           "fieldCount": 6,
           "manualReasons": {
-            "empty-selector-chain": 1,
-            "unsupported-xpath": 1
+            "empty-selector-chain": 1
           }
         },
         "content": {
@@ -38706,11 +38657,9 @@
       "warningCodes": [],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "partial",
@@ -42995,7 +42944,7 @@
           "fieldCount": 7,
           "manualReasons": {
             "script-or-template": 3,
-            "unsupported-xpath": 2
+            "unsupported-xpath": 1
           }
         },
         "toc": {
@@ -46174,11 +46123,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "partial",
@@ -47648,11 +47595,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -51706,11 +51651,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -51788,11 +51731,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 4,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -53538,11 +53479,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "partial",
@@ -54516,7 +54455,7 @@
       "index": 1319,
       "name": "书趣阁",
       "baseUrl": "https://www.ishuquge.la",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [],
       "groups": {
         "search": {
@@ -54530,11 +54469,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -56866,11 +56803,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -58574,11 +58509,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "partial",
@@ -68302,11 +68235,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -68426,11 +68357,9 @@
           }
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -68551,11 +68480,9 @@
           }
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -68593,11 +68520,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -68799,11 +68724,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -73457,11 +73380,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "partial",
@@ -74525,7 +74446,6 @@
           "status": "partial",
           "fieldCount": 3,
           "manualReasons": {
-            "unsupported-xpath": 1,
             "script-or-template": 1
           }
         },
@@ -74680,11 +74600,9 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "partial",
@@ -75211,17 +75129,14 @@
           }
         },
         "bookInfo": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "toc": {
           "status": "partial",
           "fieldCount": 6,
           "manualReasons": {
-            "unsupported-xpath": 1,
             "script-or-template": 2
           }
         },
@@ -75300,17 +75215,14 @@
           }
         },
         "bookInfo": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "toc": {
           "status": "partial",
           "fieldCount": 6,
           "manualReasons": {
-            "unsupported-xpath": 1,
             "script-or-template": 2
           }
         },
@@ -78904,7 +78816,7 @@
       "index": 1900,
       "name": "飞速小说网",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
@@ -78916,11 +78828,9 @@
           "manualReasons": {}
         },
         "bookInfo": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 4,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "toc": {
           "status": "candidate",
@@ -80126,11 +80036,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -81651,11 +81559,9 @@
       "warningCodes": [],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "partial",
@@ -81859,11 +81765,9 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "partial",
@@ -81906,11 +81810,9 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "partial",
@@ -82039,11 +81941,9 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "partial",
@@ -82083,11 +81983,9 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "partial",
@@ -82169,11 +82067,9 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "partial",
@@ -83129,7 +83025,6 @@
           "status": "partial",
           "fieldCount": 6,
           "manualReasons": {
-            "unsupported-xpath": 1,
             "script-or-template": 2
           }
         },
@@ -85832,7 +85727,6 @@
           "status": "partial",
           "fieldCount": 6,
           "manualReasons": {
-            "unsupported-xpath": 1,
             "script-or-template": 2
           }
         },
@@ -95149,11 +95043,9 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "partial",
@@ -95237,11 +95129,9 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "partial",
@@ -95363,11 +95253,9 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "partial",
@@ -95449,11 +95337,9 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "partial",
@@ -95503,18 +95389,14 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 6,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "content": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 5,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "explore": {
           "status": "partial",
@@ -95539,11 +95421,9 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "candidate",
@@ -96704,11 +96584,9 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "partial",
@@ -96965,11 +96843,9 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "partial",
@@ -97939,17 +97815,14 @@
           }
         },
         "bookInfo": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "toc": {
           "status": "partial",
           "fieldCount": 6,
           "manualReasons": {
-            "unsupported-xpath": 1,
             "script-or-template": 2
           }
         },
@@ -98761,11 +98634,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -98831,11 +98702,9 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "partial",
@@ -98875,11 +98744,9 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "partial",
@@ -99831,7 +99698,7 @@
       "index": 2399,
       "name": "燃文小说",
       "baseUrl": "https://www.wzxywj.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [],
       "groups": {
         "search": {
@@ -99845,11 +99712,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -102704,11 +102569,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 4,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -119275,11 +119138,9 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "partial",
@@ -128672,11 +128533,9 @@
           "manualReasons": {}
         },
         "bookInfo": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 5,
-          "manualReasons": {
-            "unsupported-xpath": 4
-          }
+          "manualReasons": {}
         },
         "toc": {
           "status": "partial",
@@ -134439,11 +134298,9 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "partial",
@@ -137190,11 +137047,9 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "partial",
@@ -143716,7 +143571,6 @@
           "status": "partial",
           "fieldCount": 6,
           "manualReasons": {
-            "unsupported-xpath": 1,
             "script-or-template": 2
           }
         },
@@ -145602,11 +145456,9 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "partial",
@@ -146269,11 +146121,9 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "partial",
@@ -146353,11 +146203,9 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "partial",
@@ -148058,11 +147906,9 @@
       "warningCodes": [],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 6,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "partial",
@@ -148085,8 +147931,7 @@
           "status": "partial",
           "fieldCount": 6,
           "manualReasons": {
-            "script-or-template": 1,
-            "unsupported-xpath": 1
+            "script-or-template": 1
           }
         }
       },
@@ -150476,17 +150321,14 @@
           }
         },
         "bookInfo": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 7,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "toc": {
           "status": "partial",
           "fieldCount": 3,
           "manualReasons": {
-            "unsupported-xpath": 1,
             "script-or-template": 2
           }
         },
@@ -153418,11 +153260,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -153668,11 +153508,9 @@
           }
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -154177,11 +154015,9 @@
           }
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -154219,11 +154055,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -154799,11 +154633,9 @@
       "warningCodes": [],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 6,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "partial",
@@ -154826,8 +154658,7 @@
           "status": "partial",
           "fieldCount": 6,
           "manualReasons": {
-            "script-or-template": 1,
-            "unsupported-xpath": 1
+            "script-or-template": 1
           }
         }
       },
@@ -156047,11 +155878,9 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "partial",
@@ -159412,11 +159241,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-xpath": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
