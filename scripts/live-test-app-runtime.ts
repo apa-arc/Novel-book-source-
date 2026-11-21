@@ -59,10 +59,19 @@ async function testTerm(source: NovelSource, keyword: string): Promise<TermResul
       lastError = errorText(error);
       out.attempts = attempt;
       const classification = classifyAppSearchError(lastError);
-      if (attempt < maxAttempts) {
-        // Repeat failures before classifying a source; transient network and parser errors
-        // must not become a one-shot false negative.
-        await new Promise((resolve) => setTimeout(resolve, 2500));
+      const isForbiddenOrRedirect = /HTTP\\s*403\\b|redirect|重定向/i.test(lastError);
+      const retryLimit = isForbiddenOrRedirect ? 2 : maxAttempts;
+      if (attempt < retryLimit) {
+        // Avoid hammering deterministic access blocks; give rate limits and transient
+        // transport failures a longer recovery window before the next attempt.
+        const delayMs = /HTTP\\s*429\\b/i.test(lastError)
+          ? 8000 * attempt
+          : /HTTP\\s*5\\d\\d\\b|timed?\\s*out|timeout|超时|ECONNRESET|ECONNREFUSED|ENOTFOUND|EAI_AGAIN|fetch failed|网络请求失败/i.test(lastError)
+            ? 4000 * attempt
+            : isForbiddenOrRedirect
+              ? 5000
+              : 2500 * attempt;
+        await new Promise((resolve) => setTimeout(resolve, delayMs));
         continue;
       }
       out.error = lastError;
