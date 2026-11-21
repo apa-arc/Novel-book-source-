@@ -42,10 +42,10 @@ function text(node, selector, attr) {
   if (!node) return "";
   const el = selector === ":self" ? node : node.querySelector(selector);
   if (!el) return "";
-  return attr ? String(el.getAttribute(attr) || "").trim() : String(el.textContent || "").replace(/\\s+/g, " ").trim();
+  return attr ? String(el.getAttribute(attr) || "").trim() : String(el.textContent || "").replace(/\s+/g, " ").trim();
 }
 function template(raw, values) {
-  return String(raw || "").replace(/\\{(keyword|page|bookUrl|chapterUrl)\\}/g, (_, k) => values[k] || "");
+  return String(raw || "").replace(/\{(keyword|page|bookUrl|chapterUrl)\}/g, (_, k) => values[k] || "");
 }
 function stage(result, name, status, extra={}) { result.stages.push({ stage:name, status, ...extra }); }
 async function testSource(source) {
@@ -78,7 +78,7 @@ async function testSource(source) {
       const detailTitle = text(dd, rules.detail.titleSelector, rules.detail.titleAttribute) || book.title;
       if (!detailTitle) throw new Error("详情页未提取到书名");
       stage(tr,"详情","passed",{http:200,title:detailTitle});
-      const bookPath = new URL(book.href).pathname.replace(/^\\//,"");
+      const bookPath = new URL(book.href).pathname.replace(/^\//,"");
       let tocUrl = template(cfg.chapterListUrl || cfg.bookUrl || "", { bookUrl:bookPath, keyword:encodeURIComponent(keyword), page:"1" });
       if (!tocUrl || tocUrl === cfg.bookUrl) tocUrl = book.href;
       tocUrl = resolveSafe(tocUrl, detailPage.url, domains);
@@ -98,7 +98,7 @@ async function testSource(source) {
       const chapterPage = await get(chapter.url, domains);
       const cd = doc(chapterPage.body);
       const contentNode = cd.querySelector(rules.content.contentSelector);
-      const content = String(contentNode?.textContent || "").replace(/\\s+/g," ").trim();
+      const content = String(contentNode?.textContent || "").replace(/\s+/g," ").trim();
       if (content.length < 100) throw new Error("正文为空或过短（" + content.length + "字）");
       stage(tr,"正文","passed",{http:200,length:content.length,chapter:chapter.title});
       tr.status = "passed";
