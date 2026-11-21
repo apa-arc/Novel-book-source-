@@ -32,7 +32,13 @@ async function testTerm(source: NovelSource, keyword: string): Promise<TermResul
     out.stages.push({ stage: "目录", status: "passed", detail: chapters.length + " 章；首章「" + chapters[0].title + "」" });
     const content = await fetchNovelChapterContent(source, chapters[0], client);
     if (!content.content || content.content.trim().length < 100) throw new Error("正文为空或少于 100 字");
-    out.stages.push({ stage: "正文", status: "passed", detail: content.content.trim().length + " 字" });
+    out.stages.push({ stage: "首章正文", status: "passed", detail: content.content.trim().length + " 字" });
+    const lastChapter = chapters[chapters.length - 1];
+    if (lastChapter && lastChapter.url !== chapters[0].url) {
+      const lastContent = await fetchNovelChapterContent(source, lastChapter, client);
+      if (!lastContent.content || lastContent.content.trim().length < 100) throw new Error("末章正文不可读或疑似付费章节");
+      out.stages.push({ stage: "末章正文", status: "passed", detail: lastContent.content.trim().length + " 字" });
+    }
     out.status = "passed";
   } catch (error) {
     out.error = errorText(error);
