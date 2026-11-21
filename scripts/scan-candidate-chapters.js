@@ -2,7 +2,7 @@
 const { scanArticles } = require("../runtime/text-quality");
 const CHAPTER_URL = /(?:chapter|chapters|read|book|novel|content|\/(?:\d{1,}|[a-z0-9_-]+\/\d+)(?:[/.?]|$)|第[零〇一二三四五六七八九十百千万\d]+[章节回])/i;
 const CHAPTER_TEXT = /(?:第[零〇一二三四五六七八九十百千万\d]+章|正文|阅读|继续阅读|chapter)/i;
-const ADULT = /(?:色情|成人|情色|淫|18\+|adult)/i;
+const ADULT = /(?:色情|成人|情色|淫|18\+|18禁|r[-_ ]?18|🔞|adult)/i;
 function hostAliases(host) {
   const h = host.toLowerCase(), root = /^(www|m|mobile)\./i.test(h) ? h.replace(/^[^.]+\./, "") : h;
   return new Set([h, root, "www."+root, "m."+root]);
