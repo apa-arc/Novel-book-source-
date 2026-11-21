@@ -70,7 +70,8 @@ async function main(){
    st.accepted++;
   }
  }
-\n const sources=[...byHost.values()].sort((a,b)=>a.name.localeCompare(b.name,"zh-Hans"));
+
+ const sources=[...byHost.values()].sort((a,b)=>a.name.localeCompare(b.name,"zh-Hans"));
  const out={schemaVersion:1,generatedAt:new Date().toISOString(),provider:"multi-repository metadata-only discovery",notice:"仅保留书源名称、HTTPS站点地址和分组元数据；不复制规则、请求头、Cookie、凭据或小说正文。静态规则候选不是 App 可用源；必须独立适配并通过搜索、详情、目录、正文测试。成人/绅士/付费/非小说/脚本/登录态来源已排除。",upstreams:INPUTS,stats,sourceCount:sources.length,sources};
  const dest=path.join(ROOT,"imports/third-party/multi-repo-candidate-catalog.json");fs.mkdirSync(path.dirname(dest),{recursive:true});fs.writeFileSync(dest,JSON.stringify(out,null,2)+"\n");
  console.log("TOTAL",sources.length,"REPORT",dest);
