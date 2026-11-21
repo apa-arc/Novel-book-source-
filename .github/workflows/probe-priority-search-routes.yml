@@ -1,12 +1,12 @@
 name: Probe priority ordinary novel search routes
 on:
-  schedule:
-    - cron: "30 2 * * *"
   workflow_dispatch:
   push:
     branches: [main]
     paths:
       - "development/priority-scan-queue.json"
+      - "index.json"
+      - "sources/**"
       - "scripts/probe-priority-search-routes.js"
       - ".github/workflows/probe-priority-search-routes.yml"
 permissions:
