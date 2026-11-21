@@ -29,7 +29,7 @@ const root = node("main", {}, "", [
   ]),
   node("div", { class: "chapter" }, "", [node("a", { href: "/chapter/1" }, "第一章")]),
   node("div", { class: "chapter" }, "", [node("a", { href: "/chapter/2" }, "第二章")]),
-  node("div", { class: "body" }, "这是正文内容\\n\\n京東搜索：福利大紅包962，領取至高26888元雙11紅包。")
+  node("div", { class: "body" }, "这是正文内容\\n\\n本章未完，点击下方红色链接，免费看神通者完整章节内容\\n神通者最新最快更新，点击直达\\n京東搜索：福利大紅包962，領取至高26888元雙11紅包。")
 ]);
 const selector = (kind, name, output = "text") => chain([{ kind, name, index: null }], output);
 const config = {
