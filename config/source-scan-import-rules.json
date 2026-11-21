@@ -1,23 +1,42 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-21",
+  "updatedAt": "2026-11-22",
   "testKeywords": [
-    "斗罗大陆",
-    "斗破苍穹"
+    "斗罗",
+    "斗破"
   ],
   "sourceSearchPolicy": {
-    "requestFailed": [
-      "connection-error",
-      "http-403",
-      "cross-domain-redirect",
-      "timeout",
-      "http-4xx-5xx"
-    ],
-    "requestSucceededZeroResults": "zero-result-retest",
-    "requestSucceededWithResults": "search-qualified",
-    "minimumPositiveKeywordCount": 1,
+    "requestSucceeded": "search-passed-even-if-zero-results",
+    "requestSucceededZeroResults": "search-passed-zero-results-recorded-separately",
+    "requestSucceededWithResults": "search-passed-with-results",
+    "requestFailedClassification": {
+      "environmentDependent": [
+        "connection-error",
+        "http-403",
+        "http-429",
+        "cross-domain-redirect",
+        "timeout",
+        "dns-error",
+        "connection-reset",
+        "http-5xx"
+      ],
+      "environmentDependentDisposition": "inconclusive-retest",
+      "confirmedFailure": [
+        "invalid-json",
+        "unparseable-response",
+        "missing-required-search-array"
+      ],
+      "confirmedFailureDisposition": "failed-only-after-repeat-confirmation",
+      "maxRetries": 3,
+      "retryDelaySeconds": 5
+    },
     "bothKeywordsMustHaveSuccessfulRequests": true,
-    "zeroResultsOnOneKeywordAllowedOnlyWhenOtherKeywordHasResults": true
+    "minimumPositiveKeywordCount": 1,
+    "zeroResultsOnOneKeywordAllowedWhenOtherKeywordHasResults": true,
+    "zeroResultsNeverOverridesSuccessfulRequest": true,
+    "searchAndReadingStatusesAreIndependent": true,
+    "directoryDetailOrContentFailureMustNotChangeSearchStatus": true,
+    "nodeEnvironmentFailureMustNotBeUsedToDeleteOrDisableSource": true
   },
   "formalImportGate": {
     "requireLicenseEvidence": true,
@@ -31,7 +50,8 @@
     "requireHttpsAndAllowedDomains": true,
     "rejectAdultOrEroticSources": true,
     "rejectLoginPaywallCaptchaOrDrmBypass": true,
-    "homepageReachableOrJsonSchemaValidIsNotEnough": true
+    "homepageReachableOrJsonSchemaValidIsNotEnough": true,
+    "existingUserConfirmedSourcesDoNotNeedToRequalifyForRetention": true
   },
   "baseline": {
     "date": "2026-11-21",
@@ -79,51 +99,45 @@
     ]
   },
   "importDisposition": {
-    "keepForRegression": [
+    "currentConfirmedSubscription": [
       "biquluo-la",
+      "jiuyi-91zww",
+      "xinbiquge-info",
       "biquge-17177",
+      "d8zw-com",
       "bqg-info",
+      "xqianqian-m",
       "douhua-wenxue",
+      "iyueba-net",
       "52shuku-net"
     ],
-    "repairBeforeImport": [
-      "xinbiquge-info",
-      "d8zw-com"
-    ],
-    "retestSearch": [
-      "jiuyi-91zww",
-      "xqianqian-m",
-      "iyueba-net"
-    ],
-    "deletedAfterFailedSearch": [
-      "kuaishu5-com",
-      "dingdian-23uswx",
-      "wuxian-wenxuesk",
-      "tianyu-tycqzw",
-      "deqi-deqixs",
-      "sanyi-31xs",
-      "lingling-00shu",
-      "wujixsw-info",
-      "yushufang-ysfwxc",
-      "biqubao-com",
-      "zwda-com",
-      "yb3-cc",
-      "biquwu-cc",
-      "liewen-cc",
-      "bqg5-cc",
-      "woquge-com",
-      "kuxiaoshuo-com"
-    ]
+    "protectedFromAutomaticRemoval": true,
+    "requiresManualReviewBeforeFormalChange": true,
+    "autoDelete": [],
+    "autoDisable": [],
+    "candidateImportRequiresFullNativeRuntimePass": true
   },
   "existingSubscriptionRecovery": {
     "enabled": true,
-    "baselineDate": "2026-11-21",
+    "baselineDate": "2026-11-22",
     "registryPath": "config/subscription-source-registry.json",
-    "backupPolicy": "每个已订阅源的 sources/<id>.json 与 scripts/<id>.js 作为规则备份；正式订阅剔除时不删除这两份文件。",
+    "protectedSourceIds": [
+      "biquluo-la",
+      "jiuyi-91zww",
+      "xinbiquge-info",
+      "biquge-17177",
+      "d8zw-com",
+      "bqg-info",
+      "xqianqian-m",
+      "douhua-wenxue",
+      "iyueba-net",
+      "52shuku-net"
+    ],
+    "backupPolicy": "每个已订阅源的 sources/<id>.json 与 scripts/<id>.js 作为规则备份；任何诊断不得自动删除。",
     "healthCheck": {
       "keywords": [
-        "斗罗大陆",
-        "斗破苍穹"
+        "斗罗",
+        "斗破"
       ],
       "stages": [
         "search",
@@ -133,9 +147,11 @@
       ],
       "contentMinimumChars": 100,
       "consecutiveFailureThreshold": 3,
-      "transientFailurePolicy": "单次失败只记告警并复测；连续3次完整四阶段失败才隔离出正式订阅；不删除规则备份。",
-      "recoveryPolicy": "隔离后持续重测；修复后必须两关键词搜索命中且详情、目录、正文全部通过，才重新启用。"
+      "transientFailurePolicy": "403、429、重定向、超时、DNS、连接错误、5xx 单次只记环境不确定并复测；不得改变搜索成功状态或自动下架。",
+      "recoveryPolicy": "搜索与阅读阶段分别记录；搜索通过不因详情、目录或正文失败而变为搜索失败；阅读修复后重新测试阅读链路。",
+      "zeroResultPolicy": "搜索请求正常完成且解析成功即搜索通过；0结果单独记录，不作为请求失败。"
     },
-    "importPolicy": "只导入规则审查、许可核验及 AppleNovelApp 原生运行时四阶段测试全部通过的书源；不通过直接放弃，不设候选池。"
-  }
+    "importPolicy": "新源必须通过许可审查、App兼容校验、两个关键词搜索请求、至少一个关键词返回结果，以及详情、目录、首末章正文和文本质量测试；环境不确定的源继续复测，不进入失败删除流程；不设置候选池。"
+  },
+  "historicalBaselineNote": "原 baseline 使用「斗罗大陆」「斗破苍穹」，与当前正确关键词「斗罗」「斗破」不同；只保留为历史记录，不参与当前自动判定、删除或导入。"
 }
