@@ -92,6 +92,14 @@ try{
  const unsupportedAttribute=parseLegacyChain("a[href]@text");
  assert.equal(unsupportedAttribute.status,"manual");
  assert.equal(unsupportedAttribute.reason,"unsupported-attribute-filter");
+ const tagAttribute=parseLegacyChain("tag.a[href]@href");
+ assert.equal(tagAttribute.status,"candidate");
+ assert.deepEqual(tagAttribute.selector.steps,[{kind:"css",query:"a[href]"}]);
+ const exactAttribute=parseLegacyChain('tag.a[href="/book/1"]@href');
+ assert.equal(exactAttribute.status,"candidate");
+ assert.deepEqual(exactAttribute.selector.steps,[{kind:"css",query:'a[href="/book/1"]'}]);
+ const classAttribute=parseLegacyChain("class.chapter[data-id]@text");
+ assert.deepEqual(classAttribute.selector.steps,[{kind:"css",query:".chapter[data-id]"}]);
  const andExpression=parseLegacyChain("class.title&&class.name@text");
  assert.equal(andExpression.status,"manual");
  assert.equal(andExpression.reason,"compound-or-transform-expression");
