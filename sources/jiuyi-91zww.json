@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "jiuyi-91zww",
+  "name": "九一中文",
+  "kind": "public-web",
+  "version": "1.0.0",
+  "baseUrl": "https://www.91zww.com/",
+  "domains": [
+    "www.91zww.com"
+  ],
+  "script": "scripts/jiuyi-91zww.js",
+  "enabled": true,
+  "testOnly": true,
+  "testOnlyReason": "从公开上游 GET 搜索规则转换；目录和正文 CSS 规则已补齐，尚未完成当前站点实时与宿主实测。",
+  "description": "普通小说网页源；已转换为 GET + CSS 四阶段配置，待实测。",
+  "licenseApproved": true,
+  "licenseType": "self-owned",
+  "licenseEvidence": "本仓库自行编写的声明式适配配置与解析器，不包含小说正文。",
+  "licenseEvidenceUrl": "https://github.com/apa-arc/Novel-book-source-/blob/main/sources/jiuyi-91zww.json",
+  "hostValidated": false,
+  "appConfig": {
+    "searchUrl": "https://www.91zww.com/search/?searchkey={keyword}",
+    "bookUrl": "https://www.91zww.com/",
+    "chapterListUrl": "https://www.91zww.com/{bookUrl}",
+    "chapterUrl": "https://www.91zww.com/{chapterUrl}",
+    "htmlRules": {
+      "search": {
+        "itemSelector": ".txt-list li",
+        "titleSelector": ".s2 a",
+        "urlSelector": ".s2 a",
+        "authorSelector": ".s4"
+      },
+      "detail": {
+        "titleSelector": "h1",
+        "descriptionSelector": "#intro"
+      },
+      "chapters": {
+        "itemSelector": ".section-list li",
+        "titleSelector": "a",
+        "urlSelector": "a"
+      },
+      "content": {
+        "contentSelector": "#content",
+        "titleSelector": "h1"
+      }
+    }
+  }
+}
