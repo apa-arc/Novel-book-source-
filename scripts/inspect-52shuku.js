@@ -23,10 +23,15 @@ function summary(n){return {tag:n.tagName?.toLowerCase()||"",id:n.id||"",classNa
     const book=await get(bookUrl),bd=parseHTML(book.html).document;
     const chapterLinks=[...bd.querySelectorAll("a[href]")].map(a=>({text:norm(a.textContent,100),href:a.getAttribute("href")||""})).filter(a=>a.text&&/chapter|read|\.html/i.test(a.href)).slice(0,80);
     result.book={status:book.status,url:book.url,contentType:book.contentType,title:norm(bd.querySelector("title")?.textContent),headings:[...bd.querySelectorAll("h1,h2,h3")].map(summary),chapterLinks};
-    const first=chapterLinks[0];
-    if(first){const chapterUrl=new URL(first.href,book.url).href;const chapter=await get(chapterUrl),cd=parseHTML(chapter.html).document;const bodies=[...cd.querySelectorAll("div,article,section,main,p")].map(summary).filter(x=>x.textLength>200).sort((a,b)=>b.textLength-a.textLength).slice(0,12);result.firstChapter={status:chapter.status,url:chapter.url,contentType:chapter.contentType,title:norm(cd.querySelector("title")?.textContent),headings:[...cd.querySelectorAll("h1,h2,h3")].map(summary),bodies};}
-   }catch(error){result.bookError=String(error).slice(0,180);}
-  }
+    const first=chapterLinks.find(a=>a.text==="第1页")||chapterLinks.find(a=>a.text==="开始阅读");
+    const last=[...chapterLinks].reverse().find(a=>/^第\d+页$/.test(a.text));
+    for(const [kind,link] of [["first",first],["last",last]]){
+     if(!link)continue;
+     const chapterUrl=new URL(link.href,book.url).href;
+     const chapter=await get(chapterUrl),cd=parseHTML(chapter.html).document;
+     const bodies=[...cd.querySelectorAll("div,article,section,main,p")].map(summary).filter(x=>x.textLength>200).sort((a,b)=>b.textLength-a.textLength).slice(0,12);
+     result[kind+"Chapter"]={status:chapter.status,url:chapter.url,contentType:chapter.contentType,title:norm(cd.querySelector("title")?.textContent),headings:[...cd.querySelectorAll("h1,h2,h3")].map(summary),bodies};
+    }
   results.push(result);
  }
  const report={schemaVersion:1,generatedAt:new Date().toISOString(),note:"只检查 GET 搜索、详情和首章页面结构，不登录、不保存正文。",results};
