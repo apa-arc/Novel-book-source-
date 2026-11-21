@@ -73,6 +73,13 @@ assert.deepEqual(executeSelector(jsonRoot,{engine:"composite",operator:"zip",par
   {engine:"json",path:[{kind:"property",name:"data"},{kind:"property",name:"books"},{kind:"wildcard"},{kind:"property",name:"title"}]},
   {engine:"json",path:[{kind:"property",name:"data"},{kind:"property",name:"books"},{kind:"wildcard"},{kind:"property",name:"author"}]}
 ]}),["斗破苍穹","天蚕土豆","凡人修仙传","忘语"]);
+const variableContext={variables:{}};
+const putSelector={engine:"put",input:{engine:"json",path:[{kind:"property",name:"data"},{kind:"property",name:"books"},{kind:"index",index:0},{kind:"property",name:"title"}]},assignments:[
+  {key:"bookId",value:{engine:"literal",value:"book-001"}}
+]};
+assert.equal(executeSelector(jsonRoot,putSelector,variableContext),"斗破苍穹");
+assert.equal(executeSelector(jsonRoot,{engine:"get",key:"bookId"},variableContext),"book-001");
+assert.equal(executeSelector(jsonRoot,{engine:"variable",name:"data"},variableContext),jsonRoot.data);
 assert.deepEqual(executeSelector(root,chain([{kind:"class",name:"list",index:null},{kind:"tag",name:"a",index:0}],"all")).length,1);
 assert.throws(()=>executeSelector(root,chain([{kind:"script",name:"x"}])),/unsupported-selector-step/);
 assert.throws(()=>executeSelector(root,{engine:"legado-chain",steps:Array(33).fill({kind:"children"})}),/invalid-selector-steps/);
