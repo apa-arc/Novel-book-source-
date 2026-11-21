@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "id": "52shuku-net",
+  "name": "52书库（男频武侠）",
+  "kind": "public-web",
+  "version": "1.0.0",
+  "baseUrl": "https://www.52shuku.net/",
+  "domains": [
+    "www.52shuku.net"
+  ],
+  "script": "scripts/52shuku-net.js",
+  "enabled": true,
+  "description": "GET 搜索、详情与分页正文已通过 AppleNovelApp 原生运行时双关键词测试。搜索仅匹配武侠分类结果；目录按站点分页页面呈现。",
+  "licenseApproved": true,
+  "licenseType": "self-owned",
+  "licenseEvidence": "本仓库的 52shuku-net 元数据、CSS 选择器配置和适配脚本由项目维护者独立编写；未复制上游书源规则或小说正文。此声明仅涉及适配代码，不代表目标网站对其收录小说内容作出授权。",
+  "licenseEvidenceUrl": "https://github.com/apa-arc/Novel-book-source-/blob/main/sources/52shuku-net.json",
+  "hostValidated": true,
+  "qualityReport": "quality-reports/52shuku-net.json",
+  "functionalTestReport": "quality-reports/52shuku-net-functional.json",
+  "categories": [
+    "男频",
+    "武侠玄幻"
+  ],
+  "appConfig": {
+    "searchUrl": "https://www.52shuku.net/so/search.php?q={keyword}&m=no&f=_all&syn=no",
+    "bookUrl": "https://www.52shuku.net/{bookUrl}",
+    "chapterListUrl": "https://www.52shuku.net/{bookUrl}",
+    "chapterUrl": "https://www.52shuku.net/{chapterUrl}",
+    "htmlRules": {
+      "search": {
+        "itemSelector": "article.excerpt a[href*=\"/wuxia/\"]",
+        "titleSelector": ":self",
+        "urlSelector": ":self"
+      },
+      "detail": {
+        "titleSelector": "h1.article-title"
+      },
+      "chapters": {
+        "itemSelector": "article.article-content ul.list.clearfix li.mulu",
+        "titleSelector": "a",
+        "urlSelector": "a"
+      },
+      "content": {
+        "contentSelector": "article.article-content",
+        "titleSelector": "h1.article-title"
+      }
+    }
+  }
+}
