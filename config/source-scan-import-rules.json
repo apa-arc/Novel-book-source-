@@ -114,5 +114,28 @@
       "woquge-com",
       "kuxiaoshuo-com"
     ]
+  },
+  "existingSubscriptionRecovery": {
+    "enabled": true,
+    "baselineDate": "2026-11-21",
+    "registryPath": "config/subscription-source-registry.json",
+    "backupPolicy": "每个已订阅源的 sources/<id>.json 与 scripts/<id>.js 作为规则备份；正式订阅剔除时不删除这两份文件。",
+    "healthCheck": {
+      "keywords": [
+        "斗罗大陆",
+        "斗破苍穹"
+      ],
+      "stages": [
+        "search",
+        "detail",
+        "chapters",
+        "content"
+      ],
+      "contentMinimumChars": 100,
+      "consecutiveFailureThreshold": 3,
+      "transientFailurePolicy": "单次失败只记告警并复测；连续3次完整四阶段失败才隔离出正式订阅；不删除规则备份。",
+      "recoveryPolicy": "隔离后持续重测；修复后必须两关键词搜索命中且详情、目录、正文全部通过，才重新启用。"
+    },
+    "importPolicy": "只导入规则审查、许可核验及 AppleNovelApp 原生运行时四阶段测试全部通过的书源；不通过直接放弃，不设候选池。"
   }
 }
