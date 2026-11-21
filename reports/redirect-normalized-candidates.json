@@ -1,0 +1,242 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-21T12:03:49.101Z",
+  "note": "仅把首页探测时发生跳转的候选站点规范到其最终 HTTPS 主机名；尚未通过搜索、详情、目录、正文测试，不进入正式订阅。",
+  "counts": {
+    "redirectedCandidates": 25,
+    "normalizedUniqueHosts": 14
+  },
+  "results": [
+    {
+      "host": "ixdzs8.com",
+      "baseUrl": "https://ixdzs8.com/",
+      "names": [
+        "爱下电子书"
+      ],
+      "sourceIds": [
+        "fd78a9897eca08e3"
+      ],
+      "originalHosts": [
+        "m.aixdzs.com"
+      ],
+      "groups": [
+        "校验可用"
+      ]
+    },
+    {
+      "host": "m.8tsw.com",
+      "baseUrl": "https://m.8tsw.com/",
+      "names": [
+        "笔趣阁"
+      ],
+      "sourceIds": [
+        "8b25d943b85b6889"
+      ],
+      "originalHosts": [
+        "m.biquge.tv"
+      ],
+      "groups": [
+        "未分类"
+      ]
+    },
+    {
+      "host": "m.hafukewx.cc",
+      "baseUrl": "https://m.hafukewx.cc/",
+      "names": [
+        "📖 顶点小说"
+      ],
+      "sourceIds": [
+        "006b874f12e5f855"
+      ],
+      "originalHosts": [
+        "m.hafuke5.com"
+      ],
+      "groups": [
+        "📖 小说"
+      ]
+    },
+    {
+      "host": "m.i25zw.com",
+      "baseUrl": "https://m.i25zw.com/",
+      "names": [
+        "白中文网（发现）"
+      ],
+      "sourceIds": [
+        "9dde695b57b38ec1"
+      ],
+      "originalHosts": [
+        "m.25zhongwen.com"
+      ],
+      "groups": [
+        "小说 书源"
+      ]
+    },
+    {
+      "host": "m.jhsssd.com",
+      "baseUrl": "https://m.jhsssd.com/",
+      "names": [
+        "精华书阁"
+      ],
+      "sourceIds": [
+        "d33f6f26db79cfd6",
+        "8c3c761cbe812852"
+      ],
+      "originalHosts": [
+        "wap.jhssd.com",
+        "m.jhssd.com"
+      ],
+      "groups": [
+        "综合",
+        "小说 书源"
+      ]
+    },
+    {
+      "host": "m.yedukuxs.net",
+      "baseUrl": "https://m.yedukuxs.net/",
+      "names": [
+        "安夜读库"
+      ],
+      "sourceIds": [
+        "c00bcc7fa8cc81c4"
+      ],
+      "originalHosts": [
+        "m.yeduku.com"
+      ],
+      "groups": [
+        "小说 书源"
+      ]
+    },
+    {
+      "host": "m2.sywxs.cc",
+      "baseUrl": "https://m2.sywxs.cc/",
+      "names": [
+        "📖 书阅屋网"
+      ],
+      "sourceIds": [
+        "7bc03a4e9603b942"
+      ],
+      "originalHosts": [
+        "m.sywtxt.com"
+      ],
+      "groups": [
+        "📖 小说"
+      ]
+    },
+    {
+      "host": "www.35xss.net",
+      "baseUrl": "https://www.35xss.net/",
+      "names": [
+        "🎉 闪舞小说"
+      ],
+      "sourceIds": [
+        "611e9c69b14653e3"
+      ],
+      "originalHosts": [
+        "www.35xss.com"
+      ],
+      "groups": [
+        "校验可用"
+      ]
+    },
+    {
+      "host": "www.52shuku.net",
+      "baseUrl": "https://www.52shuku.net/",
+      "names": [
+        "52书库②"
+      ],
+      "sourceIds": [
+        "eb13313756f00c79"
+      ],
+      "originalHosts": [
+        "www.po5.net"
+      ],
+      "groups": [
+        "女频"
+      ]
+    },
+    {
+      "host": "www.iidcr.com",
+      "baseUrl": "https://www.iidcr.com/",
+      "names": [
+        "稻草书屋"
+      ],
+      "sourceIds": [
+        "ed8e44f89e270f6d"
+      ],
+      "originalHosts": [
+        "www.dcrbk.com"
+      ],
+      "groups": [
+        "0206,星辰整理5.0,小说 书源"
+      ]
+    },
+    {
+      "host": "www.ixs7.com",
+      "baseUrl": "https://www.ixs7.com/",
+      "names": [
+        "小说旗2"
+      ],
+      "sourceIds": [
+        "d53ca43d6e4438af"
+      ],
+      "originalHosts": [
+        "www.xs7.com"
+      ],
+      "groups": [
+        "校验可用"
+      ]
+    },
+    {
+      "host": "www.jhsssd.com",
+      "baseUrl": "https://www.jhsssd.com/",
+      "names": [
+        "精华书阁"
+      ],
+      "sourceIds": [
+        "cd62b42432b2e7d8"
+      ],
+      "originalHosts": [
+        "www.jhssd.com"
+      ],
+      "groups": [
+        "小说源"
+      ]
+    },
+    {
+      "host": "www.kunnu8.com",
+      "baseUrl": "https://www.kunnu8.com/",
+      "names": [
+        "落霞小说",
+        "梦阮读书"
+      ],
+      "sourceIds": [
+        "293070e3f5ffa019",
+        "08e39830095cbf0c"
+      ],
+      "originalHosts": [
+        "www.luoxia.com",
+        "www.mengruan.com"
+      ],
+      "groups": [
+        "小说 书源",
+        "名著出版"
+      ]
+    },
+    {
+      "host": "www.rdqsdy.cc",
+      "baseUrl": "https://www.rdqsdy.cc/",
+      "names": [
+        "格格党"
+      ],
+      "sourceIds": [
+        "14e8e69fffb1ff7f"
+      ],
+      "originalHosts": [
+        "www.rdqsdy.net"
+      ],
+      "groups": [
+        "校验可用"
+      ]
+    }
+  ]
+}
