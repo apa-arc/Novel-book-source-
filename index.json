@@ -201,6 +201,14 @@
       "file": "sources/douhua-wenxue.json",
       "enabled": true,
       "testOnly": true
+    },
+    {
+      "id": "iyueba-net",
+      "name": "爱阅吧网",
+      "kind": "public-web",
+      "file": "sources/iyueba-net.json",
+      "enabled": true,
+      "testOnly": true
     }
   ]
 }
