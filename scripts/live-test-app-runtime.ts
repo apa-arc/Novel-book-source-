@@ -15,7 +15,9 @@ const parsed = parseSourceSubscription(raw);
 type Stage = { stage: string; status: "passed" | "failed" | "inconclusive" | "skipped"; detail?: string };
 type TermResult = {
   keyword: string;
-  status: "readable" | "search-only" | "catalog-only" | "failed";
+  status: "readable" | "search-only" | "catalog-only" | "search-inconclusive" | "failed";
+  searchStatus: "passed" | "failed" | "inconclusive";
+  readingStatus: "readable" | "catalog-failed" | "content-failed" | "not-tested";
   resultCount?: number;
   selectedTitle?: string;
   stages: Stage[];
@@ -28,28 +30,39 @@ function errorText(error: unknown): string {
 }
 
 /**
- * This scanner deliberately calls the same AppleNovelApp runtime functions as
- * the app. Search success means searchNovelSource resolved, exactly as the
- * app's search log does; it does NOT require an exact title/keyword match.
- * Reading follows the app's order: chapter list first, optional detail second,
- * then chapter content. Detail failure alone never blocks reading.
+ * The app counts a search as successful when searchNovelSource resolves,
+ * including an empty result array. Reading failures are recorded separately.
+ * Node-only network blocks are inconclusive, not proof that an iPhone source is broken.
  */
 async function testTerm(source: NovelSource, keyword: string): Promise<TermResult> {
-  const out: TermResult = { keyword, status: "failed", searchStatus: "failed", readingStatus: "not-tested", stages: [] };
+  const out: TermResult = {
+    keyword,
+    status: "failed",
+    searchStatus: "failed",
+    readingStatus: "not-tested",
+    stages: [],
+  };
   const client = createSourceHttpClient(source);
 
   let page;
   try {
     page = await searchNovelSource(source, keyword, client);
+    out.searchStatus = "passed";
     out.resultCount = page.items.length;
     out.stages.push({
       stage: "搜索",
       status: "passed",
-      detail: "App 搜索请求及解析成功；返回 " + page.items.length + " 条结果"
+      detail: "App 搜索请求及解析成功；返回 " + page.items.length + " 条结果",
     });
   } catch (error) {
     out.error = errorText(error);
-    out.stages.push({ stage: "搜索", status: "failed", detail: out.error });
+    out.searchStatus = classifyAppSearchError(out.error);
+    out.status = out.searchStatus === "inconclusive" ? "search-inconclusive" : "failed";
+    out.stages.push({
+      stage: "搜索",
+      status: out.searchStatus === "inconclusive" ? "inconclusive" : "failed",
+      detail: out.error,
+    });
     out.stages.push({ stage: "目录", status: "skipped", detail: "搜索请求未成功或响应无法解析" });
     out.stages.push({ stage: "详情", status: "skipped", detail: "没有可用搜索结果" });
     out.stages.push({ stage: "正文", status: "skipped", detail: "没有可用搜索结果" });
@@ -58,15 +71,17 @@ async function testTerm(source: NovelSource, keyword: string): Promise<TermResul
 
   if (page.items.length === 0) {
     out.status = "search-only";
-    out.stages.push({ stage: "目录", status: "skipped", detail: "搜索成功，但本次关键词没有返回书目" });
+    out.readingStatus = "not-tested";
+    out.stages.push({
+      stage: "目录",
+      status: "skipped",
+      detail: "搜索请求及解析成功，但本次关键词返回 0 条；按 App 搜索日志仍计为成功",
+    });
     out.stages.push({ stage: "详情", status: "skipped", detail: "没有搜索结果可供打开" });
     out.stages.push({ stage: "正文", status: "skipped", detail: "没有搜索结果可供打开" });
     return out;
   }
 
-  // The app does not require the returned title to contain the search keyword.
-  // It displays parsed results and opens a selected result. Use the first item
-  // returned by the same parser, rather than imposing an extra matching rule.
   const summary = page.items[0];
   out.selectedTitle = summary.title;
 
@@ -77,31 +92,31 @@ async function testTerm(source: NovelSource, keyword: string): Promise<TermResul
     out.stages.push({
       stage: "目录",
       status: "passed",
-      detail: "获取 " + chapters.length + " 章；首章「" + chapters[0].title + "」"
+      detail: "获取 " + chapters.length + " 章；首章「" + chapters[0].title + "」",
     });
   } catch (error) {
     const message = errorText(error);
     out.error = message;
     out.status = "search-only";
+    out.readingStatus = "catalog-failed";
     out.stages.push({ stage: "目录", status: "failed", detail: message });
     out.stages.push({ stage: "详情", status: "skipped", detail: "App 阅读流程先加载目录；目录失败后不会继续详情请求" });
     out.stages.push({ stage: "正文", status: "skipped", detail: "目录不可用，无法取得章节链接" });
     return out;
   }
 
-  // App treats book detail as optional: a valid catalogue is enough to read.
   try {
     const detail = await fetchNovelDetail(source, summary, client);
     out.stages.push({
       stage: "详情（可选）",
       status: detail.title ? "passed" : "failed",
-      detail: detail.title ? "详情页读取成功：" + detail.title : "详情页没有识别到书名"
+      detail: detail.title ? "详情页读取成功：" + detail.title : "详情页没有识别到书名",
     });
   } catch (error) {
     out.stages.push({
       stage: "详情（可选）",
       status: "failed",
-      detail: "详情请求失败，但按 App 逻辑不阻断阅读：" + errorText(error)
+      detail: "详情请求失败，但按 App 逻辑不阻断阅读：" + errorText(error),
     });
   }
 
@@ -111,14 +126,16 @@ async function testTerm(source: NovelSource, keyword: string): Promise<TermResul
     out.stages.push({
       stage: "正文",
       status: "passed",
-      detail: "首章正文读取成功（" + content.content.trim().length + " 字符）"
+      detail: "首章正文读取成功（" + content.content.trim().length + " 字符）",
     });
-    out.status = "readable";\n    out.readingStatus = "readable";
+    out.status = "readable";
+    out.readingStatus = "readable";
   } catch (error) {
     const message = errorText(error);
     out.error = message;
     out.stages.push({ stage: "正文", status: "failed", detail: message });
-    out.status = "catalog-only";\n    out.readingStatus = "content-failed";
+    out.status = "catalog-only";
+    out.readingStatus = "content-failed";
   }
 
   return out;
@@ -148,25 +165,33 @@ async function mapLimit<T, R>(items: T[], limit: number, fn: (item: T) => Promis
       result.terms["订阅校验"] = {
         keyword: "订阅校验",
         status: "failed",
+        searchStatus: "failed",
+        readingStatus: "not-tested",
         stages: [{
           stage: "App 导入校验",
           status: "failed",
-          detail: parsed.unsupported.find(item => item.id === entry.id)?.reason || "App 不兼容"
-        }]
+          detail: parsed.unsupported.find(item => item.id === entry.id)?.reason || "App 不兼容",
+        }],
       };
       return result;
     }
 
     const source = { ...compatible, id: entry.id, enabled: true, importedAt: Date.now() } as unknown as NovelSource;
     for (const keyword of keywords) result.terms[keyword] = await testTerm(source, keyword);
-    const states = Object.values(result.terms).map(item => item.status);
+
+    const terms = Object.values(result.terms);
+    const states = terms.map(item => item.status);
     result.status = states.every(state => state === "readable")
       ? "readable-both"
       : states.some(state => state === "readable")
         ? "readable-one"
-        : states.some(state => state === "search-only" || state === "catalog-only")
-          ? "search-or-catalog-only"
-          : "failed";
+        : terms.every(item => item.searchStatus === "inconclusive")
+          ? "environment-inconclusive"
+          : terms.some(item => item.searchStatus === "passed")
+            ? "search-or-catalog-only"
+            : terms.some(item => item.searchStatus === "inconclusive")
+              ? "partly-inconclusive"
+              : "failed";
     return result;
   });
 
@@ -178,26 +203,27 @@ async function mapLimit<T, R>(items: T[], limit: number, fn: (item: T) => Promis
     readableBoth: sourceResults.filter(result => result.status === "readable-both").length,
     readableOne: sourceResults.filter(result => result.status === "readable-one").length,
     searchOrCatalogOnly: sourceResults.filter(result => result.status === "search-or-catalog-only").length,
+    environmentInconclusive: sourceResults.filter(result => result.status === "environment-inconclusive" || result.status === "partly-inconclusive").length,
     failed: sourceResults.filter(result => result.status === "failed").length,
-    searchRequestsPassed: allTerms.filter(term => term.stages.some(stage => stage.stage === "搜索" && stage.status === "passed")).length,
-    chapterContentPassed: allTerms.filter(term => term.status === "readable").length
+    searchPassed: allTerms.filter(term => term.searchStatus === "passed").length,
+    searchFailed: allTerms.filter(term => term.searchStatus === "failed").length,
+    searchInconclusive: allTerms.filter(term => term.searchStatus === "inconclusive").length,
+    searchRequestsPassed: allTerms.filter(term => term.searchStatus === "passed").length,
+    chapterContentPassed: allTerms.filter(term => term.readingStatus === "readable").length,
   };
 
   fs.mkdirSync("reports", { recursive: true });
-  fs.writeFileSync(
-    "reports/app-runtime-live-test.json",
-    JSON.stringify({
-      generatedAt: new Date().toISOString(),
-      testStandard: "AppleNovelApp runtime: searchNovelSource -> fetchNovelChapterList -> optional fetchNovelDetail -> fetchNovelChapterContent",
-      keywords,
-      counts,
-      results: sourceResults
-    }, null, 2)
-  );
+  fs.writeFileSync("reports/app-runtime-live-test.json", JSON.stringify({
+    generatedAt: new Date().toISOString(),
+    testStandard: "AppleNovelApp search semantics + separately reported reading stages; Node network errors are environment-inconclusive",
+    keywords,
+    counts,
+    results: sourceResults,
+  }, null, 2));
 
   for (const result of sourceResults) {
     const summary = Object.entries(result.terms)
-      .map(([keyword, term]) => keyword + ":" + term.status + (term.error ? " (" + term.error + ")" : ""))
+      .map(([keyword, term]) => keyword + ":search=" + term.searchStatus + ",read=" + term.readingStatus + (term.error ? " (" + term.error + ")" : ""))
       .join(" | ");
     console.log(result.name + " [" + result.status + "] " + summary);
   }
