@@ -110,10 +110,10 @@ try{
  const alternateExpression=parseLegacyChain("class.a%%class.b");
  assert.equal(alternateExpression.status,"manual");
  assert.equal(alternateExpression.reason,"unsupported-compound-expression");
- const regexExpression=parseLegacyChain("class.title##\\\\s+");
+ const regexExpression=parseLegacyChain("class.title##\\s+");
  assert.equal(regexExpression.status,"candidate");
  assert.equal(regexExpression.selector.engine,"replace");
- assert.equal(regexExpression.selector.pattern,"\\\\s+");
+ assert.equal(regexExpression.selector.pattern,"\\s+");
  const onlyOneRegex=parseLegacyChain("class.title##x##y###");
  assert.equal(onlyOneRegex.status,"manual");
  assert.equal(onlyOneRegex.reason,"unsupported-regex-mode");
