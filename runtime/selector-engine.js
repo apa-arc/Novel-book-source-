@@ -88,7 +88,7 @@ function readOutput(node,output){
   if(output==="textnodes") return textNodes(node);
   if(output==="owntext") return textNodes(node).join("");
   if(output==="html") return String(node.innerHTML||"");
-  if(output==="href"||output==="src"||output==="content"){
+  if(output==="href"||output==="src"||output==="content"||output==="class"){
     if(typeof node.getAttribute!=="function") return null;
     return node.getAttribute(output);
   }
