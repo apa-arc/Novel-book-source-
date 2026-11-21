@@ -80,16 +80,16 @@ function selector(rule, outputOverride) {
   if (parsed.status !== "candidate" || !parsed.selector) throw new Error("unsupported-selector");
   return outputOverride ? { ...parsed.selector, output: outputOverride } : parsed.selector;
 }
-function first(root, rule) {
-  const result = executeSelector(root, selector(rule));
+function first(root, rule, context) {
+  const result = executeSelector(root, selector(rule), context);
   return Array.isArray(result) ? result.filter(x => x != null && String(x).trim() !== "").map(String).join("\n") : result;
 }
-function values(root, rule) {
-  const result = executeSelector(root, selector(rule));
+function values(root, rule, context) {
+  const result = executeSelector(root, selector(rule), context);
   return (Array.isArray(result) ? result : [result]).flat(Infinity).filter(x => x != null && String(x).trim() !== "");
 }
-function allNodes(root, rule) {
-  const selected = executeSelector(root, selector(rule, "all"));
+function allNodes(root, rule, context) {
+  const selected = executeSelector(root, selector(rule, "all"), context);
   if (Array.isArray(selected)) return selected.slice(0, MAX_RESULTS);
   if (!selected || typeof selected !== "object") return [];
   const recordKeys = ["name","title","bookName","book_name","novelName","chapterName","chapter_name","bookUrl","chapterUrl"];
@@ -168,12 +168,12 @@ function simpleSearchUrl(source, keyword, page) {
   if (u.protocol !== "https:" || u.username || u.password || !host || privateHost) throw new Error("unsafe-search-url");
   return u.href;
 }
-function extract(node, rules, baseUrl, host, extraHosts = []) {
+function extract(node, rules, baseUrl, host, extraHosts = [], context = { variables: {} }) {
   const out = {};
   const nonSelector = new Set(["bookList","chapterList","checkKeyWord","init","replaceRegex","webJs","sourceRegex","imageStyle"]);
   for (const [key, rule] of Object.entries(rules || {})) {
     if (nonSelector.has(key) || !rule || typeof rule !== "string") continue;
-    const value = first(node, rule);
+    const value = first(node, rule, context);
     if (value == null || value === "") continue;
     if (["bookUrl","tocUrl","chapterUrl"].includes(key)) out[key] = absolute(value, baseUrl, host, extraHosts);
     else out[key] = String(value).replace(/\s+/g, " ").trim();
@@ -213,22 +213,27 @@ async function testSource(source, testId) {
     if (!isStaticRuleGroup(source)) throw new Error("unsupported-or-incomplete-rule-groups");
     currentStage = "search";
     let chosen = null;
+    let chosenContext = { variables: {} };
+    let extraHosts = [];
     let resultCount = 0;
     let keywordUsed = "";
     const terms = [...new Set([KEYWORD, source.ruleSearch.checkKeyWord, "凡人修仙传", "完美世界"].filter(x => typeof x === "string" && x.trim()))];
     for (const term of terms) {
       const searchUrl = simpleSearchUrl(source, term, 1);
       const searchHost = new URL(searchUrl).hostname.toLowerCase();
-      const extraHosts = [...new Set([searchHost])];
+      extraHosts = [...new Set([searchHost])];
       const searchPage = await fetchHtml(searchUrl, host, headers, extraHosts);
-      const searchItems = allNodes(searchPage.document, source.ruleSearch.bookList);
+      const listContext = { variables: {} };
+      const searchItems = allNodes(searchPage.document, source.ruleSearch.bookList, listContext);
       const books = [];
       for (const item of searchItems.slice(0, 80)) {
-        const fields = extract(item, source.ruleSearch, searchPage.url, host, extraHosts);
-        if (fields.name && fields.bookUrl) books.push(fields);
+        const context = { variables: { ...listContext.variables } };
+        const fields = extract(item, source.ruleSearch, searchPage.url, host, extraHosts, context);
+        if (fields.name && fields.bookUrl) books.push({ fields, context });
       }
       if (books.length) {
-        chosen = books[0];
+        chosen = books[0].fields;
+        chosenContext = books[0].context;
         resultCount = books.length;
         keywordUsed = term;
         break;
@@ -238,20 +243,22 @@ async function testSource(source, testId) {
     stage("search", { resultCount, selectedTitle: chosen.name, keywordUsed });
 
     const detailPage = await fetchHtml(chosen.bookUrl, host, headers, extraHosts);
-    const detail = extract(detailPage.document, source.ruleBookInfo, detailPage.url, host, extraHosts);
+    const detailContext = { variables: { ...chosenContext.variables } };
+    const detail = extract(detailPage.document, source.ruleBookInfo, detailPage.url, host, extraHosts, detailContext);
     const title = detail.name || chosen.name;
     if (!title) throw new Error("book-detail-title-empty");
     stage("bookDetail", { title });
     const tocUrl = detail.tocUrl || chosen.bookUrl;
     currentStage = "chapters";
     const tocPage = await fetchHtml(tocUrl, host, headers, extraHosts);
-    const chapterNodes = allNodes(tocPage.document, source.ruleToc.chapterList);
+    const tocContext = { variables: { ...detailContext.variables } };
+    const chapterNodes = allNodes(tocPage.document, source.ruleToc.chapterList, tocContext);
     const chapters = [];
     for (const node of chapterNodes.slice(0, 200)) {
-      const name = first(node, source.ruleToc.chapterName);
-      const url = first(node, source.ruleToc.chapterUrl);
-      if (!name || !url) continue;
-      chapters.push({ title: String(name).trim(), url: absolute(url, tocPage.url, host, extraHosts) });
+      const context = { variables: { ...tocContext.variables } };
+      const fields = extract(node, source.ruleToc, tocPage.url, host, extraHosts, context);
+      if (!fields.chapterName || !fields.chapterUrl) continue;
+      chapters.push({ title: String(fields.chapterName).trim(), url: fields.chapterUrl, context });
     }
     const unique = [...new Map(chapters.map(x => [x.url, x])).values()];
     if (unique.length < 2) throw new Error("chapter-list-empty-or-duplicate");
@@ -262,7 +269,8 @@ async function testSource(source, testId) {
     for (const chapter of unique.slice(0, 5)) {
       try {
         const page = await fetchHtml(chapter.url, host, headers, extraHosts);
-        const raw = values(page.document, source.ruleContent.content).join("\n");
+        const contentContext = { variables: { ...chapter.context.variables } };
+        const raw = values(page.document, source.ruleContent.content, contentContext).join("\n");
         const content = htmlToText(raw);
         const quality = scanArticles([{ title: chapter.title, content }]);
         if (content.length < 100 || quality.summary.suspect > 0 || quality.summary.review > 0) {
