@@ -83,5 +83,5 @@ assert.equal(assessment.sources[2].technicalStatus, "not-adapted");
 assert.equal(assessment.sources[3].accessibilityStatus, "excluded-non-novel-category");
 assert.equal(assessment.sources[3].technicalStatus, "excluded-non-novel-category");
 assert.throws(() => buildCandidateAssessment(review, []), /没有找到/);
-assert.throws(() => buildCandidateAssessment(review, [{ ...reports[0], totalUniqueCandidates: 2 }]), /totalUniqueCandidates/);
+assert.throws(() => buildCandidateAssessment(review, [{ ...reports[0], totalUniqueCandidates: 3 }]), /totalUniqueCandidates/);
 console.log("Candidate assessment tests passed.");

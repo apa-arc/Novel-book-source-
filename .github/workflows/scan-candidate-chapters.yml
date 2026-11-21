@@ -12,6 +12,7 @@ on:
       - "imports/aoaostar/license-review.json"
       - "scripts/aggregate-candidate-assessment.js"
       - "scripts/test-candidate-assessment.js"
+      - "scripts/test-candidate-chapter-scan.js"
       - ".github/workflows/scan-candidate-chapters.yml"
 
 permissions:
