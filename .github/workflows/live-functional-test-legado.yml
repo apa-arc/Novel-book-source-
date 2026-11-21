@@ -10,6 +10,9 @@ on:
       - "scripts/test-app-runtime-classification.ts"
       - "scripts/diagnose-app-runtime-network.ts"
       - "config/source-scan-import-rules.json"
+      - "config/health-check-subscription.json"
+      - "subscription.json"
+      - "sources/*.json"
       - ".github/workflows/live-functional-test-legado.yml"
 
 permissions:
