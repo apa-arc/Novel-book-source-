@@ -1,25 +1,27 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T11:21:16.718Z",
-  "provider": "liufuyou/read metadata-only discovery",
+  "generatedAt": "2026-11-21T11:24:16.607Z",
+  "provider": "Liufuyou + Daiaji + YCK metadata-only discovery",
   "upstream": [
     "https://raw.githubusercontent.com/liufuyou/read/main/sources/yck-novel.json",
     "https://raw.githubusercontent.com/liufuyou/read/main/sources/yiove-novel.json",
-    "https://raw.githubusercontent.com/daiaji/LegadoSource/main/%E4%B9%A6%E6%BA%90.json"
+    "https://raw.githubusercontent.com/daiaji/LegadoSource/main/%E4%B9%A6%E6%BA%90.json",
+    "https://www.yckceo.com/yuedu/shuyuans/content/id/1340.html"
   ],
-  "licenseNote": "Only candidate names, HTTPS base URLs and group labels are retained. No upstream rules or source code are copied. The Liufuyou collection notes that source-rule rights belong to original organizers; Daiaji repository is AGPL-3.0. Source-level redistribution and site-use permissions remain unassessed.",
+  "licenseNote": "Only candidate names, HTTPS base URLs and group labels are retained. No upstream rules or source code are copied. Liufuyou source-rule rights belong to original organizers; Daiaji repository is AGPL-3.0; YCK is a user-submitted public collection. Source-level redistribution and site-use permissions remain unassessed.",
   "filterStats": {
     "upstreamRecords": 2355,
     "nonText": 49,
     "nonNovel": 45,
     "adult": 13,
-    "cookieOrSecret": 954,
-    "nonGetOrScript": 1063,
-    "nonHttps": 44,
-    "duplicateHost": 49,
-    "accepted": 138
+    "paywall": 173,
+    "cookieOrSecret": 895,
+    "nonGetOrScript": 980,
+    "nonHttps": 40,
+    "duplicateHost": 40,
+    "accepted": 120
   },
-  "sourceCount": 138,
+  "sourceCount": 120,
   "sources": [
     {
       "id": "9dba3c3c3757e39c",
@@ -52,15 +54,6 @@
       "id": "a2a65aacede2dcd1",
       "name": "👔 海棠书屋",
       "baseUrl": "https://haitang123.net/",
-      "group": "👔 绅士",
-      "upstream": "Daiaji LegadoSource",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
-      "id": "1bfb91bdaf1462ef",
-      "name": "👔 海棠文学",
-      "baseUrl": "https://www.htlvbooks.com/",
       "group": "👔 绅士",
       "upstream": "Daiaji LegadoSource",
       "redistributionStatus": "not-assessed",
@@ -589,87 +582,6 @@
       "runtimeStatus": "not-converted"
     },
     {
-      "id": "7bb7f73baafd1b20",
-      "name": "📚 17K小说",
-      "baseUrl": "https://www.17k.com/",
-      "group": "📚 正版",
-      "upstream": "Daiaji LegadoSource",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
-      "id": "dad66c59ff1e8801",
-      "name": "📚 爱发电网",
-      "baseUrl": "https://afdian.net/",
-      "group": "📚 正版",
-      "upstream": "Daiaji LegadoSource",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
-      "id": "b4af041c735c65b9",
-      "name": "📚 参考书刊",
-      "baseUrl": "https://www.fx361.com/",
-      "group": "📚 正版",
-      "upstream": "Daiaji LegadoSource",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
-      "id": "3e3271efd46e176d",
-      "name": "📚 得间小说",
-      "baseUrl": "https://qq.idejian.com/",
-      "group": "📚 正版",
-      "upstream": "Daiaji LegadoSource",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
-      "id": "29499f017b50e0b4",
-      "name": "📚 黑岩网站",
-      "baseUrl": "https://www.heiyan.com/",
-      "group": "📚 正版",
-      "upstream": "Daiaji LegadoSource",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
-      "id": "4b070df68a2909c7",
-      "name": "📚 夸克搜书",
-      "baseUrl": "https://quark.sm.cn/",
-      "group": "📚 正版",
-      "upstream": "Daiaji LegadoSource",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
-      "id": "cc7513f350ffcdd0",
-      "name": "📚 鲲弩小说",
-      "baseUrl": "https://www.kunnu.com/",
-      "group": "📚 正版",
-      "upstream": "Daiaji LegadoSource",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
-      "id": "8c9637bd3552fecd",
-      "name": "📚 熊猫看书",
-      "baseUrl": "https://anduril.xmkanshu.com/",
-      "group": "📚 正版",
-      "upstream": "Daiaji LegadoSource",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
-      "id": "50d6c42f8e207f44",
-      "name": "📚 崽崽的小站",
-      "baseUrl": "https://www.zaizairead.com/",
-      "group": "📚 正版",
-      "upstream": "Daiaji LegadoSource",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
       "id": "d0b5f832474aca0f",
       "name": "📥 知乎趣集",
       "baseUrl": "https://ifun.cool/",
@@ -693,15 +605,6 @@
       "baseUrl": "https://www.aixiawx.com/",
       "group": "小说源",
       "upstream": "Yiove 星辰整理",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
-      "id": "7762f4064ccf4310",
-      "name": "百度小说",
-      "baseUrl": "https://dushu.baidu.com/",
-      "group": "正版小说 书源",
-      "upstream": "YCK 书单 1067",
       "redistributionStatus": "not-assessed",
       "runtimeStatus": "not-converted"
     },
@@ -774,33 +677,6 @@
       "baseUrl": "https://www.xbiquge.la/",
       "group": "小说源",
       "upstream": "Yiove 星辰整理",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
-      "id": "9ec5024366ffdd66",
-      "name": "笔尚小说",
-      "baseUrl": "https://www.bsxiaoshuo.com/",
-      "group": "正版小说 书源",
-      "upstream": "YCK 书单 1067",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
-      "id": "56c86c7b5039216f",
-      "name": "次元姬子（优）",
-      "baseUrl": "https://www.ciyuanji.com/",
-      "group": "正版小说 书源",
-      "upstream": "YCK 书单 1067",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
-      "id": "9a5d3d499c30f28c",
-      "name": "刺猬猫吧",
-      "baseUrl": "https://www.ciweimao.com/",
-      "group": "正版小说 书源",
-      "upstream": "YCK 书单 1067",
       "redistributionStatus": "not-assessed",
       "runtimeStatus": "not-converted"
     },
@@ -881,15 +757,6 @@
       "name": "金庸小说（优+）",
       "baseUrl": "https://www.jinyongwang.net/",
       "group": "小说 书源",
-      "upstream": "YCK 书单 1067",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
-      "id": "d3b91bdab4199ce1",
-      "name": "晋江文学",
-      "baseUrl": "https://m.jjwxc.net/",
-      "group": "正版小说 书源",
       "upstream": "YCK 书单 1067",
       "redistributionStatus": "not-assessed",
       "runtimeStatus": "not-converted"
@@ -994,15 +861,6 @@
       "runtimeStatus": "not-converted"
     },
     {
-      "id": "8e9d5881a00bdd7e",
-      "name": "企鹅阅读",
-      "baseUrl": "https://ubook.reader.qq.com/",
-      "group": "正版小说 书源",
-      "upstream": "YCK 书单 1067",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
       "id": "682803641ae63b2b",
       "name": "铅笔轻说（优+）",
       "baseUrl": "https://www.qxsw.cc/",
@@ -1026,15 +884,6 @@
       "baseUrl": "https://so.html5.qq.com/",
       "group": "小说源",
       "upstream": "Yiove 星辰整理",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
-      "id": "566cfbf07003754d",
-      "name": "若初文学",
-      "baseUrl": "https://search.ruochu.com/",
-      "group": "正版小说 书源",
-      "upstream": "YCK 书单 1067",
       "redistributionStatus": "not-assessed",
       "runtimeStatus": "not-converted"
     },
@@ -1084,15 +933,6 @@
       "runtimeStatus": "not-converted"
     },
     {
-      "id": "0b04d9cc6eb45b1d",
-      "name": "网易小说",
-      "baseUrl": "https://m.yuedu.163.com/",
-      "group": "正版小说 书源",
-      "upstream": "YCK 书单 1067",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
       "id": "6f5c9489dcc147d5",
       "name": "文档小说",
       "baseUrl": "https://www.xiaxs.la/",
@@ -1138,11 +978,11 @@
       "runtimeStatus": "not-converted"
     },
     {
-      "id": "1fe519f5c5dce3aa",
-      "name": "梧桐中文",
+      "id": "3b098ae981023211",
+      "name": "梧桐中文网[网页]",
       "baseUrl": "https://www.wtzw.com/",
-      "group": "正版小说 书源",
-      "upstream": "YCK 书单 1067",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
       "redistributionStatus": "not-assessed",
       "runtimeStatus": "not-converted"
     },
@@ -1246,20 +1086,20 @@
       "runtimeStatus": "not-converted"
     },
     {
-      "id": "4b8adb8a1f27d08b",
-      "name": "㊣飞卢小说 #破冰1101",
-      "baseUrl": "https://b.faloo.com/",
+      "id": "18cce4927fb8c409",
+      "name": "㊣ 笔尚小说 #一程",
+      "baseUrl": "https://www.bsxiaoshuo.com/",
       "group": "小说源",
       "upstream": "Yiove 星辰整理",
       "redistributionStatus": "not-assessed",
       "runtimeStatus": "not-converted"
     },
     {
-      "id": "9dcb27395b8a8042",
-      "name": "纵横中文",
-      "baseUrl": "https://www.zongheng.com/",
-      "group": "正版小说 书源",
-      "upstream": "YCK 书单 1067",
+      "id": "4b8adb8a1f27d08b",
+      "name": "㊣飞卢小说 #破冰1101",
+      "baseUrl": "https://b.faloo.com/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
       "redistributionStatus": "not-assessed",
       "runtimeStatus": "not-converted"
     }
