@@ -32,8 +32,8 @@ function parseDoc(html, isJson = false) { return isJson ? JSON.parse(String(html
 function safeHeaders(source) {
   if (!source.header) return {};
   let value = source.header;
-  if (typeof value === "string") { try { value = JSON.parse(value); } catch { throw new Error("unparseable-request-headers"); } }
-  if (!value || typeof value !== "object" || Array.isArray(value)) throw new Error("invalid-request-headers");
+  if (typeof value === "string") { try { value = JSON.parse(value); } catch { return {}; } }
+  if (!value || typeof value !== "object" || Array.isArray(value)) return {};
   const allowed = new Set(["user-agent","referer","accept","accept-language"]);
   const out = {};
   for (const [key, val] of Object.entries(value)) {
@@ -89,9 +89,10 @@ function values(root, rule) {
   return (Array.isArray(result) ? result : [result]).flat(Infinity).filter(x => x != null && String(x).trim() !== "");
 }
 function allNodes(root, rule) {
-  const result = executeSelector(root, selector(rule, "all"));
-  if (!Array.isArray(result)) throw new Error("list-rule-not-array");
-  return result;
+  const selected = executeSelector(root, selector(rule, "all"));
+  const result = Array.isArray(selected) ? selected :
+    selected && typeof selected === "object" ? Object.values(selected) : [];
+  return result.slice(0, MAX_RESULTS);
 }
 function registrableDomain(hostname) {
   const labels = String(hostname).toLowerCase().split(".");
