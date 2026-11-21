@@ -250,7 +250,7 @@ async function testSource(source, testId) {
           const books = [];
           for (const item of searchItems.slice(0, 80)) {
             const context = { variables: { ...listContext.variables } };
-            const fields = extract(item, source.ruleSearch, searchPage.url, host, headers, extraHosts, context);
+            const fields = extract(item, source.ruleSearch, searchPage.url, host, extraHosts, context);
             if (fields.name && fields.bookUrl) books.push({ fields, context });
           }
           if (books.length) {
