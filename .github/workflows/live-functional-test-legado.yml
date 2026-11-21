@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - "scripts/live-test-app-runtime.ts"
+      - "scripts/diagnose-app-runtime-network.ts"
       - ".github/workflows/live-functional-test-legado.yml"
 
 permissions:
@@ -33,10 +34,14 @@ jobs:
         run: npm install --no-save --no-package-lock tsx
       - name: Run live tests with AppleNovelApp runtime
         run: npx tsx scripts/live-test-app-runtime.ts
+      - name: Diagnose search network and user-agent differences
+        run: npx tsx scripts/diagnose-app-runtime-network.ts
       - name: Upload per-source report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: app-runtime-live-test-report
-          path: reports/app-runtime-live-test.json
+          path: |
+            reports/app-runtime-live-test.json
+            reports/app-runtime-network-diagnostics.json
           retention-days: 90
