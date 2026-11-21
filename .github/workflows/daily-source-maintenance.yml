@@ -1,0 +1,57 @@
+name: Daily novel source health scan and app runtime test
+
+on:
+  schedule:
+    - cron: "0 2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-novel-source-maintenance
+  cancel-in-progress: false
+
+jobs:
+  scan-and-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/checkout@v4
+        with:
+          repository: apa-arc/AppleNovelApp
+          ref: main
+          path: app
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Scan public source host connectivity
+        run: node scripts/live-host-probe.js
+      - name: Test current subscription with AppleNovelApp native runtime
+        run: |
+          npm install --no-save --no-package-lock tsx
+          npx tsx scripts/live-test-app-runtime.ts
+      - name: Publish scan and runtime test reports
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+users.noreply.github.com"
+          git add reports/live-host-probe.json reports/app-runtime-live-test.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update scheduled novel source health reports"
+            git pull --rebase origin main
+            git push
+          fi
+      - name: Upload health and runtime reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-novel-source-maintenance
+          path: |
+            reports/live-host-probe.json
+            reports/app-runtime-live-test.json
+          if-no-files-found: warn
+          retention-days: 90
