@@ -65,6 +65,22 @@ const nestedJson={data:{search:[{title:"A"},{title:"B"}],other:{search:[{title:"
 assert.deepEqual(executeSelector(nestedJson,{engine:"json",path:[
   {kind:"recursiveProperty",name:"search"},{kind:"wildcard"},{kind:"property",name:"title"}
 ]}),["A","B","C"]);
+const sliced=executeSelector({items:["a","b","c","d"]},{engine:"json",path:[
+  {kind:"property",name:"items"},{kind:"slice",start:1,end:3,step:1}
+]});
+assert.deepEqual(sliced,["b","c"]);
+const unioned=executeSelector({items:["a","b","c"]},{engine:"json",path:[
+  {kind:"property",name:"items"},{kind:"union",indices:[0,2]}
+]});
+assert.deepEqual(unioned,["a","c"]);
+const filtered=executeSelector({items:[{id:1,active:true},{id:2,active:false}]},{engine:"json",path:[
+  {kind:"property",name:"items"},{kind:"filter",key:"active",operator:"=",value:"true"}
+]});
+assert.deepEqual(filtered,[{id:1,active:true}]);
+const recursiveFiltered=executeSelector({data:{a:{hasContent:true},b:{hasContent:false}}},{engine:"json",path:[
+  {kind:"recursiveFilter",key:"hasContent",operator:"exists"}
+]});
+assert.deepEqual(recursiveFiltered,[{hasContent:true},{hasContent:false}]);
 assert.deepEqual(executeSelector(nestedJson,{engine:"json",path:[
   {kind:"property",name:"data"},{kind:"wildcard"}
 ]}),[nestedJson.data.search,nestedJson.data.other]);
