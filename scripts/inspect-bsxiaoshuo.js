@@ -50,6 +50,8 @@ function nodeSummary(node) {
   const chapter = await get(CHAPTER);
   const chapterDoc = parseHTML(chapter.html).document;
   const searchForms = forms.filter(f => /search|找书|keyword|key|book/i.test(JSON.stringify(f)));
+  const chapterAnchors = [...bookDoc.querySelectorAll('a[href]')].filter(a => (a.getAttribute("href") || "").includes("/html/"));
+  const chapterParents = chapterAnchors.slice(0,5).map(a => { const chain=[]; let n=a; for(let i=0;n&&i<6;i++,n=n.parentElement) chain.push({tag:n.tagName?.toLowerCase()||"",id:n.id||"",className:String(n.className?.baseVal||n.className||"").slice(0,100),childCount:n.children?.length||0}); return chain; });
   const bookLinks = [...bookDoc.querySelectorAll('a[href]')].map(a => ({
     text: (a.textContent || "").trim().replace(/\s+/g, " ").slice(0, 100),
     href: a.getAttribute("href") || ""
@@ -61,7 +63,7 @@ function nodeSummary(node) {
     generatedAt: new Date().toISOString(),
     homepage: { status: home.status, finalUrl: home.url, title: homeDoc.querySelector("title")?.textContent || "", forms, searchForms, bodyText: (searchDoc.body?.textContent || "").trim().replace(/\s+/g, " ").slice(0, 1800) },
     searchPage: { status: search.status, finalUrl: search.url, title: searchDoc.querySelector("title")?.textContent || "", headings: [...searchDoc.querySelectorAll("h1,h2,h3")].map(nodeSummary), bodyText: (searchDoc.body?.textContent || "").trim().replace(/\s+/g, " ").slice(0, 2500), resultLinks: searchLinks, resultParents: searchResultParents },
-    bookPage: { status: book.status, finalUrl: book.url, title: bookDoc.querySelector("title")?.textContent || "", headings: [...bookDoc.querySelectorAll("h1,h2,h3")].map(nodeSummary), chapterLinks: bookLinks.slice(0,30) },
+    bookPage: { status: book.status, finalUrl: book.url, title: bookDoc.querySelector("title")?.textContent || "", headings: [...bookDoc.querySelectorAll("h1,h2,h3")].map(nodeSummary), chapterLinks: bookLinks.slice(0,30), chapterParents },
     chapterPage: { status: chapter.status, finalUrl: chapter.url, title: chapterDoc.querySelector("title")?.textContent || "", headings: [...chapterDoc.querySelectorAll("h1,h2,h3")].map(nodeSummary), contentCandidates }
   };
   const out = path.join(ROOT, "reports", "bsxiaoshuo-inspection.json");
