@@ -1,0 +1,44 @@
+name: Merge functionally verified sources into ordinary subscription
+
+on:
+  workflow_run:
+    workflows: ["Live functional tests for novel sources"]
+    types: [completed]
+    branches: [main]
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  merge:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Download reports from the completed full test run
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          run-id: ${{ github.event.workflow_run.id }}
+          pattern: live-functional-test-report-*
+          path: artifacts
+      - name: Merge only MIT-attributed ordinary sources that passed all four live stages
+        run: node scripts/merge-passed-sources.js
+      - name: Commit newly verified sources
+        run: |
+          if git diff --quiet -- subscription.json reports/verified-source-merge-summary.json; then
+            echo "No new functionally verified sources to add."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add subscription.json reports/verified-source-merge-summary.json
+          git commit -m "chore: add functionally verified ordinary sources"
+          git push
