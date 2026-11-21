@@ -29,6 +29,8 @@ jobs:
           run-id: ${{ github.event.workflow_run.id }}
           pattern: live-functional-test-report-*
           path: artifacts
+      - name: Check merge script syntax
+        run: node --check scripts/merge-passed-sources.js
       - name: Merge only MIT-attributed ordinary sources that passed all four live stages
         run: node scripts/merge-passed-sources.js
       - name: Commit newly verified sources
