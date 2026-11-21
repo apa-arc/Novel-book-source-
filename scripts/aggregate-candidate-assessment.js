@@ -4,9 +4,16 @@ const path = require("node:path");
 const { hostAliases } = require("./scan-candidate-chapters");
 
 const ADULT = /(?:色情|成人|情色|淫|18\+|18禁|r[-_ ]?18|🔞|adult)/i;
+const NON_NOVEL = /(?:漫画|动漫|音乐|有声|听书|视频)/i;
 
 function isAdult(source) {
   return ADULT.test(String(source.group || "") + " " + String(source.name || ""));
+}
+function isNonNovel(source) {
+  return !isAdult(source) && NON_NOVEL.test(String(source.group || "") + " " + String(source.name || ""));
+}
+function isOutOfScope(source) {
+  return isAdult(source) || isNonNovel(source);
 }
 function getHost(source) {
   try {
@@ -45,16 +52,18 @@ function buildCandidateAssessment(candidateReview, reports, generatedAt) {
       continue;
     }
     const key = hostKey(host);
-    if (!groups.has(key)) groups.set(key, { host, records: [], adultCount: 0, ordinaryCount: 0 });
+    if (!groups.has(key)) groups.set(key, { host, records: [], adultCount: 0, nonNovelCount: 0, eligibleCount: 0 });
     const group = groups.get(key);
     group.records.push(source);
     if (isAdult(source)) group.adultCount++;
-    else group.ordinaryCount++;
+    else if (isNonNovel(source)) group.nonNovelCount++;
+    else group.eligibleCount++;
   }
 
-  const eligibleGroups = new Map([...groups].filter(([, group]) => group.ordinaryCount > 0));
-  const adultOnlyGroups = [...groups.values()].filter(group => group.ordinaryCount === 0);
-  const mixedGroups = [...groups.values()].filter(group => group.adultCount > 0 && group.ordinaryCount > 0);
+  const eligibleGroups = new Map([...groups].filter(([, group]) => group.eligibleCount > 0));
+  const adultOnlyGroups = [...groups.values()].filter(group => group.eligibleCount === 0 && group.adultCount === group.records.length);
+  const nonNovelOnlyGroups = [...groups.values()].filter(group => group.eligibleCount === 0 && group.adultCount === 0 && group.nonNovelCount > 0);
+  const mixedGroups = [...groups.values()].filter(group => group.eligibleCount > 0 && (group.adultCount > 0 || group.nonNovelCount > 0));
 
   const expectedHosts = eligibleGroups.size;
   const scanResults = new Map();
@@ -88,13 +97,17 @@ function buildCandidateAssessment(candidateReview, reports, generatedAt) {
     const host = getHost(source);
     const key = host ? hostKey(host) : null;
     const adult = isAdult(source);
-    const scan = !adult && key ? scanResults.get(key) : null;
+    const nonNovel = isNonNovel(source);
+    const excluded = isOutOfScope(source);
+    const scan = !excluded && key ? scanResults.get(key) : null;
     const accessibilityStatus = adult
       ? "excluded-adult-policy"
-      : !key
-        ? "invalid-or-missing-url"
-        : scan.status;
-    const sampleStatus = adult ? "not-run-adult-excluded" : scan ? scan.status : "not-run-invalid-url";
+      : nonNovel
+        ? "excluded-non-novel-category"
+        : !key
+          ? "invalid-or-missing-url"
+          : scan.status;
+    const sampleStatus = adult ? "not-run-adult-excluded" : nonNovel ? "not-run-non-novel-category" : scan ? scan.status : "not-run-invalid-url";
     return {
       id: source.id,
       collectionId: source.collectionId,
@@ -106,12 +119,13 @@ function buildCandidateAssessment(candidateReview, reports, generatedAt) {
       host: host,
       hostRecordCount: key && groups.has(key) ? groups.get(key).records.length : 1,
       adultCategory: adult,
+      nonNovelCategory: nonNovel,
       accessibilityStatus: accessibilityStatus,
-      accessibilityReasons: adult ? ["adult-category-excluded-from-automated-fetch"] : scan ? (scan.reasons || []) : ["candidate-has-no-parseable-base-url"],
+      accessibilityReasons: adult ? ["adult-category-excluded-from-automated-fetch"] : nonNovel ? ["non-novel-category-excluded-from-automated-fetch"] : scan ? (scan.reasons || []) : ["candidate-has-no-parseable-base-url"],
       accessibilityCheckedAt: scan ? generated : null,
       chapterSampleStatus: sampleStatus,
       chapterSampleQuality: scan ? scan.quality : null,
-      technicalStatus: adult ? "excluded-adult-policy" : "not-adapted",
+      technicalStatus: adult ? "excluded-adult-policy" : nonNovel ? "excluded-non-novel-category" : "not-adapted",
       appFunctionalTests: {
         search: "not-run",
         bookDetail: "not-run",
@@ -146,8 +160,10 @@ function buildCandidateAssessment(candidateReview, reports, generatedAt) {
     duplicateSourceRecords: sources.length - invalidUrlRecords - groups.size,
     invalidUrlRecords: invalidUrlRecords,
     adultExcludedSourceRecords: assessments.filter(x => x.adultCategory).length,
+    nonNovelExcludedSourceRecords: assessments.filter(x => x.nonNovelCategory).length,
     adultOnlyDomains: adultOnlyGroups.length,
-    mixedAdultAndNonAdultDomains: mixedGroups.length,
+    nonNovelOnlyDomains: nonNovelOnlyGroups.length,
+    mixedOutOfScopeAndNovelDomains: mixedGroups.length,
     eligibleUniqueDomains: expectedHosts,
     scannedUniqueDomains: scanResults.size,
     readyForSubscription: 0
@@ -186,8 +202,10 @@ function renderSummary(assessment) {
     "- 规范化域名：" + t.uniqueDomains,
     "- 同域重复记录：" + t.duplicateSourceRecords,
     "- 成人类别排除记录：" + t.adultExcludedSourceRecords + "（仅排除自动抓取，不代表许可判断）",
+    "- 非小说类别排除记录：" + t.nonNovelExcludedSourceRecords,
     "- 成人专属域名：" + t.adultOnlyDomains,
-    "- 成人/普通混合域名：" + t.mixedAdultAndNonAdultDomains,
+    "- 非小说专属域名：" + t.nonNovelOnlyDomains,
+    "- 成人/非小说与普通混合域名：" + t.mixedOutOfScopeAndNovelDomains,
     "- 非成人待审域名：" + t.eligibleUniqueDomains,
     "- 已完成公开页面/章节样本扫描：" + t.scannedUniqueDomains,
     "- 已具备明确许可且完成 App 四接口验收、可进入订阅：" + t.readyForSubscription,
