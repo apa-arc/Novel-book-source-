@@ -1,0 +1,29 @@
+name: Test 52shuku male-category search filters
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/test-52shuku-category-filters.js"
+      - ".github/workflows/test-52shuku-category-filters.yml"
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install HTML parser
+        run: npm install --no-save --no-package-lock linkedom
+      - name: Compare search category filters
+        run: node scripts/test-52shuku-category-filters.js
+      - name: Upload filter comparison
+        uses: actions/upload-artifact@v4
+        with:
+          name: 52shuku-category-filter-test
+          path: reports/52shuku-category-filter-test.json
+          retention-days: 30
