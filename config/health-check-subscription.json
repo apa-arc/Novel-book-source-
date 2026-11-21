@@ -4,7 +4,7 @@
   "name": "小说源",
   "description": "普通小说统一订阅；来源发现问题后持续修复或下架",
   "repository": "https://github.com/apa-arc/Novel-book-source-",
-  "updatedAt": "2026-11-21T14:59:04.269Z",
+  "updatedAt": "2026-11-21T16:45:44.965Z",
   "sourceCount": 10,
   "sources": [
     {
@@ -97,8 +97,8 @@
       "id": "xinbiquge-info",
       "name": "新笔趣阁小说网",
       "kind": "public-web",
-      "version": "1.0.0",
-      "description": "普通小说网页源；GET 搜索，目录分页，正文使用 article.font_max；章节可能分页，需后续补齐翻页处理。",
+      "version": "1.0.1",
+      "description": "普通小说网页源；GET 搜索，目录分页，正文使用 article.font_max；章节可能分页，需后续补齐翻页处理。 目录请求改为详情页，修复 index_1.html 404，等待复测。",
       "baseUrl": "https://www.xbiquge.info/",
       "domains": [
         "www.xbiquge.info"
@@ -109,7 +109,7 @@
       "appConfig": {
         "searchUrl": "https://www.xbiquge.info/search.php?q={keyword}",
         "bookUrl": "https://www.xbiquge.info/{bookUrl}",
-        "chapterListUrl": "https://www.xbiquge.info/{bookUrl}index_1.html",
+        "chapterListUrl": "https://www.xbiquge.info/{bookUrl}",
         "chapterUrl": "https://www.xbiquge.info/{chapterUrl}",
         "htmlRules": {
           "search": {
@@ -185,8 +185,8 @@
       "id": "d8zw-com",
       "name": "第八中文网",
       "kind": "public-web",
-      "version": "1.0.0",
-      "description": "普通小说网页源；GET 搜索，目录使用 CSS 选择器，正文使用 article.font_max。上游规则注明偶发 502，需控制请求频率。",
+      "version": "1.0.1",
+      "description": "普通小说网页源；GET 搜索，目录使用 CSS 选择器，正文使用 article.font_max。上游规则注明偶发 502，需控制请求频率。 目录请求改为详情页，修复 index_1.html 404，等待复测。",
       "baseUrl": "https://www.d8zw.com/",
       "domains": [
         "www.d8zw.com"
@@ -197,7 +197,7 @@
       "appConfig": {
         "searchUrl": "https://www.d8zw.com/search.php?q={keyword}",
         "bookUrl": "https://www.d8zw.com/{bookUrl}",
-        "chapterListUrl": "https://www.d8zw.com/{bookUrl}index_1.html",
+        "chapterListUrl": "https://www.d8zw.com/{bookUrl}",
         "chapterUrl": "https://www.d8zw.com/{chapterUrl}",
         "htmlRules": {
           "search": {
