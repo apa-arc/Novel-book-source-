@@ -151,9 +151,9 @@ try{
  const dottedHtml=parseLegacyChain("div.content.title");
  assert.equal(dottedHtml.status,"candidate");
  assert.equal(dottedHtml.selector.engine,"legado-chain");
- const bareTag=parseLegacyChain("tag");
- assert.equal(bareTag.status,"candidate");
- assert.equal(bareTag.selector.engine,"json");
+ const bareTagJson=parseLegacyChain("tag");
+ assert.equal(bareTagJson.status,"candidate");
+ assert.equal(bareTagJson.selector.engine,"json");
  const classOutput=parseLegacyChain("span@tag.i@class");
  assert.equal(classOutput.status,"candidate");
  assert.equal(classOutput.selector.output,"class");
