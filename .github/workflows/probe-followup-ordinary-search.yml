@@ -1,0 +1,33 @@
+name: Probe remaining ordinary novel search routes
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/probe-followup-ordinary-search.js"
+      - ".github/workflows/probe-followup-ordinary-search.yml"
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install HTML parser
+        run: npm install --no-save --no-package-lock linkedom
+      - name: Probe remaining ordinary search routes
+        run: node scripts/probe-followup-ordinary-search.js
+      - name: Commit sanitized probe report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/followup-ordinary-search-probe.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Probe remaining ordinary novel search routes"
+            git pull --rebase origin main
+            git push
+          fi
