@@ -60,7 +60,7 @@ function nodeSummary(node) {
   const report = {
     generatedAt: new Date().toISOString(),
     homepage: { status: home.status, finalUrl: home.url, title: homeDoc.querySelector("title")?.textContent || "", forms, searchForms, bodyText: (searchDoc.body?.textContent || "").trim().replace(/\s+/g, " ").slice(0, 1800) },
-    searchPage: { status: search.status, finalUrl: search.url, title: searchDoc.querySelector("title")?.textContent || "", headings: [...searchDoc.querySelectorAll("h1,h2,h3")].map(nodeSummary), bodyText: (searchDoc.body?.textContent || "").trim().replace(/\s+/g, " ").slice(0, 2500), resultLinks: searchLinks },
+    searchPage: { status: search.status, finalUrl: search.url, title: searchDoc.querySelector("title")?.textContent || "", headings: [...searchDoc.querySelectorAll("h1,h2,h3")].map(nodeSummary), bodyText: (searchDoc.body?.textContent || "").trim().replace(/\s+/g, " ").slice(0, 2500), resultLinks: searchLinks, resultParents: searchResultParents },
     bookPage: { status: book.status, finalUrl: book.url, title: bookDoc.querySelector("title")?.textContent || "", headings: [...bookDoc.querySelectorAll("h1,h2,h3")].map(nodeSummary), chapterLinks: bookLinks.slice(0,30) },
     chapterPage: { status: chapter.status, finalUrl: chapter.url, title: chapterDoc.querySelector("title")?.textContent || "", headings: [...chapterDoc.querySelectorAll("h1,h2,h3")].map(nodeSummary), contentCandidates }
   };
