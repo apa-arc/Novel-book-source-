@@ -9,7 +9,12 @@ const compatibility=JSON.parse(fs.readFileSync(path.join(ROOT,"reports/candidate
 const noForm=new Set(compatibility.results.filter(x=>x.classification==="needs-manual-search-discovery").map(x=>x.id));
 const sources=(catalog.sources||[]).filter(x=>noForm.has(x.id));
 const headers={"user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/131.0.0.0 Safari/537.36","accept":"text/html,application/xhtml+xml"};
-async function sanitize(value){if(typeof value==="string")return value.replace(/pk\\.[A-Za-z0-9._-]{20,}/g,"[REDACTED]").replace(/([?&](?:access_token|token|api_key)=)[^&\\s]+/gi,"$1[REDACTED]");if(Array.isArray(value))return value.map(sanitize);if(value&&typeof value==="object")return Object.fromEntries(Object.entries(value).map(([k,v])=>[k,sanitize(v)]));return value;}\nasync function inspect(source){
+function sanitize(value){
+ if(typeof value==="string")return value.replace(/pk\.[A-Za-z0-9._-]{20,}/g,"[REDACTED]").replace(/([?&](?:access_token|token|api_key)=)[^&\s]+/gi,"$1[REDACTED]");
+ if(Array.isArray(value))return value.map(sanitize);
+ if(value&&typeof value==="object")return Object.fromEntries(Object.entries(value).map(([k,v])=>[k,sanitize(v)]));
+ return value;
+}
  const started=Date.now();
  try{
   const response=await fetch(source.baseUrl,{headers,signal:AbortSignal.timeout(12000),redirect:"error"});
