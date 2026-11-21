@@ -1,0 +1,41 @@
+name: Probe priority ordinary novel search routes
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "development/priority-scan-queue.json"
+      - "scripts/probe-priority-search-routes.js"
+      - ".github/workflows/probe-priority-search-routes.yml"
+permissions:
+  contents: write
+concurrency:
+  group: priority-search-route-probe
+  cancel-in-progress: true
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Probe two keywords against priority GET routes
+        run: node scripts/probe-priority-search-routes.js
+      - name: Commit metadata-only probe report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/priority-search-route-probe.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Probe priority ordinary novel search routes"
+            git pull --rebase origin main
+            git push
+          fi
+      - name: Upload route probe report
+        uses: actions/upload-artifact@v4
+        with:
+          name: priority-search-route-probe
+          path: reports/priority-search-route-probe.json
+          retention-days: 60
