@@ -33,7 +33,8 @@ async function main(){
    const name=String(s.bookSourceName||"").trim();const group=String(s.bookSourceGroup||"");
    const comment=String(s.bookSourceComment||"");
    const label=[name,group,comment,String(s.bookSourceUrl||"")].join(" ");
-   if(ADULT.test(label)){st.adult++;continue;}\n   if(!/[\\u4e00-\\u9fff]/.test(name)||/你的地址|未命名|^\\d+$/.test(name)){st.nonNovel++;continue;}
+   if(ADULT.test(label)){st.adult++;continue;}
+   if(!/[\u4e00-\u9fff]/.test(name)||/你的地址|未命名|^\d+$/.test(name)){st.nonNovel++;continue;}
    if(NON_NOVEL.test(label)){st.nonNovel++;continue;}
    if(PAYWALL.test(label)){st.paywall++;continue;}
    const baseUrl=getBase(s.bookSourceUrl);const host=hostOf(baseUrl||"");
