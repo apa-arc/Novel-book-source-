@@ -11,7 +11,11 @@
         "/storySearch/search?keyword={keyword}",
         "/storySearch/search?searchkey={keyword}",
         "/storySearch/search?key={keyword}",
-        "/storySearch/search?searchKey={keyword}"
+        "/storySearch/search?searchKey={keyword}",
+        "/storySearch/search?wd={keyword}",
+        "/storySearch/search?word={keyword}",
+        "/storySearch/search?q={keyword}",
+        "/storySearch/search?bookName={keyword}"
       ],
       "discovery": "首页搜索入口指向 /storySearch/search；需确认真实 GET 参数与结果结构。"
     },
