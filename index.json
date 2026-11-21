@@ -15,7 +15,7 @@
       "name": "快书网",
       "kind": "public-web",
       "file": "sources/kuaishu5-com.json",
-      "enabled": true,
+      "enabled": false,
       "testOnly": true
     },
     {
@@ -23,7 +23,7 @@
       "name": "顶点小说",
       "kind": "public-web",
       "file": "sources/dingdian-23uswx.json",
-      "enabled": true,
+      "enabled": false,
       "testOnly": true
     },
     {
@@ -39,7 +39,7 @@
       "name": "无限小说",
       "kind": "public-web",
       "file": "sources/wuxian-wenxuesk.json",
-      "enabled": true,
+      "enabled": false,
       "testOnly": true
     },
     {
@@ -47,7 +47,7 @@
       "name": "天域小说网",
       "kind": "public-web",
       "file": "sources/tianyu-tycqzw.json",
-      "enabled": true,
+      "enabled": false,
       "testOnly": true
     },
     {
@@ -55,7 +55,7 @@
       "name": "得奇小说网",
       "kind": "public-web",
       "file": "sources/deqi-deqixs.json",
-      "enabled": true,
+      "enabled": false,
       "testOnly": true
     },
     {
@@ -63,7 +63,7 @@
       "name": "三一小说",
       "kind": "public-web",
       "file": "sources/sanyi-31xs.json",
-      "enabled": true,
+      "enabled": false,
       "testOnly": true
     },
     {
@@ -71,7 +71,7 @@
       "name": "零零小说",
       "kind": "public-web",
       "file": "sources/lingling-00shu.json",
-      "enabled": true,
+      "enabled": false,
       "testOnly": true
     },
     {
@@ -79,7 +79,7 @@
       "name": "无极小说",
       "kind": "public-web",
       "file": "sources/wujixsw-info.json",
-      "enabled": true,
+      "enabled": false,
       "testOnly": true
     },
     {
@@ -87,7 +87,7 @@
       "name": "御书房",
       "kind": "public-web",
       "file": "sources/yushufang-ysfwxc.json",
-      "enabled": true,
+      "enabled": false,
       "testOnly": true
     },
     {
@@ -127,7 +127,7 @@
       "name": "笔趣宝",
       "kind": "public-web",
       "file": "sources/biqubao-com.json",
-      "enabled": true,
+      "enabled": false,
       "testOnly": true
     },
     {
@@ -135,7 +135,7 @@
       "name": "E小说",
       "kind": "public-web",
       "file": "sources/zwda-com.json",
-      "enabled": true,
+      "enabled": false,
       "testOnly": true
     },
     {
@@ -143,7 +143,7 @@
       "name": "ABC小说",
       "kind": "public-web",
       "file": "sources/yb3-cc.json",
-      "enabled": true,
+      "enabled": false,
       "testOnly": true
     },
     {
@@ -151,7 +151,7 @@
       "name": "笔趣阁移动版",
       "kind": "public-web",
       "file": "sources/biquwu-cc.json",
-      "enabled": true,
+      "enabled": false,
       "testOnly": true
     },
     {
@@ -159,7 +159,7 @@
       "name": "猎文网",
       "kind": "public-web",
       "file": "sources/liewen-cc.json",
-      "enabled": true,
+      "enabled": false,
       "testOnly": true
     },
     {
@@ -167,7 +167,7 @@
       "name": "笔趣阁②",
       "kind": "public-web",
       "file": "sources/bqg5-cc.json",
-      "enabled": true,
+      "enabled": false,
       "testOnly": true
     },
     {
@@ -175,7 +175,7 @@
       "name": "笔趣阁④",
       "kind": "public-web",
       "file": "sources/woquge-com.json",
-      "enabled": true,
+      "enabled": false,
       "testOnly": true
     },
     {
@@ -183,7 +183,7 @@
       "name": "酷小说",
       "kind": "public-web",
       "file": "sources/kuxiaoshuo-com.json",
-      "enabled": true,
+      "enabled": false,
       "testOnly": true
     },
     {
