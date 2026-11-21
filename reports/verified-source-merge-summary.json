@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T03:12:04.516Z",
+  "generatedAt": "2026-11-21T03:16:12.025Z",
   "source": "luanmuc/legado-book-sources (MIT License)",
   "ordinary": {
     "candidates": 4,
@@ -28,11 +28,24 @@
     ]
   },
   "adult": {
-    "candidates": 0,
-    "valid": 0,
-    "added": 0,
+    "candidates": 3,
+    "valid": 3,
+    "added": 3,
     "updated": 0,
-    "addedSources": [],
+    "addedSources": [
+      {
+        "name": "🐦夜书吧po18mx",
+        "url": "https://www.po18mx.com"
+      },
+      {
+        "name": "肉文NP#2",
+        "url": "https://www.rouwennp.org"
+      },
+      {
+        "name": "肉书屋②",
+        "url": "https://m.roushuwu2.com"
+      }
+    ],
     "updatedSources": []
   }
 }

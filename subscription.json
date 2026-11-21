@@ -147938,6 +147938,7 @@
     "enabled": true,
     "enabledExplore": false,
     "bookSourceComment": "规则来源：luanmuc/legado-book-sources（MIT License）；已完成公开搜索、详情、目录及正文实测。此条目不含 Cookie、登录态或认证凭据。",
+    "header": "{\"User-Agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36\"}",
     "ruleSearch": {
       "bookList": "@css:table.table tbody tr",
       "name": "@css:td:nth-of-type(1) a@text",
@@ -147970,6 +147971,7 @@
     "enabled": true,
     "enabledExplore": false,
     "bookSourceComment": "规则来源：luanmuc/legado-book-sources（MIT License）；已完成公开搜索、详情、目录及正文实测。此条目不含 Cookie、登录态或认证凭据。",
+    "header": "{\"User-Agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36\"}",
     "ruleSearch": {
       "bookList": "@css:div.container div.item",
       "name": "tag.h3@tag.a@text",
@@ -148001,6 +148003,7 @@
     "enabled": true,
     "enabledExplore": false,
     "bookSourceComment": "规则来源：luanmuc/legado-book-sources（MIT License）；已完成公开搜索、详情、目录及正文实测。此条目不含 Cookie、登录态或认证凭据。",
+    "header": "{\"User-Agent\":\"Mozilla/5.0 (Linux; Android 10; SK) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36\"}",
     "ruleSearch": {
       "bookList": "class.common-bookele[0:4]",
       "name": "tag.a.0@text",

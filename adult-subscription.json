@@ -3729,5 +3729,97 @@
     },
     "searchUrl": "/search/{{key}}/{{page}}",
     "weight": 0
+  },
+  {
+    "bookSourceName": "🐦夜书吧po18mx",
+    "bookSourceUrl": "https://www.po18mx.com",
+    "searchUrl": "https://www.po18mx.com/modules/article/search.php,{\n  \"body\": \"searchkey={{key}}&searchtype=articlename\",\n  \"method\": \"POST\"\n}",
+    "bookSourceType": 0,
+    "bookSourceGroup": "🔞实测可用",
+    "enabled": true,
+    "enabledExplore": false,
+    "bookSourceComment": "规则来源：luanmuc/legado-book-sources（MIT License）；已完成公开搜索、详情、目录及正文实测。此条目不含 Cookie、登录态或认证凭据。",
+    "ruleSearch": {
+      "bookList": "id.sitebox@dl",
+      "name": "h3@a@text",
+      "bookUrl": "a.0@href"
+    },
+    "ruleBookInfo": {
+      "name": "[property=\"og:novel:book_name\"]@content",
+      "author": "[property=\"og:novel:author\"]@content",
+      "intro": "[property=\"og:description\"]@content",
+      "kind": "[property=\"og:novel:category\"]@content&&\n[property=\"og:novel:status\"]@content&&\n[property=\"og:novel:update_time\"]@content"
+    },
+    "ruleToc": {
+      "chapterList": "id.chapterList@li@a",
+      "chapterName": "text",
+      "chapterUrl": "href"
+    },
+    "ruleContent": {
+      "content": "id.TextContent@textNodes"
+    },
+    "customOrder": 1603
+  },
+  {
+    "bookSourceName": "肉文NP#2",
+    "bookSourceUrl": "https://www.rouwennp.org",
+    "searchUrl": "https://www.rouwennp.org/search.html,{\n  \"body\": \"searchkey={{key}}\",\n  \"method\": \"POST\"\n}",
+    "bookSourceType": 0,
+    "bookSourceGroup": "🔞实测可用",
+    "enabled": true,
+    "enabledExplore": false,
+    "bookSourceComment": "规则来源：luanmuc/legado-book-sources（MIT License）；已完成公开搜索、详情、目录及正文实测。此条目不含 Cookie、登录态或认证凭据。",
+    "ruleSearch": {
+      "bookList": "class.ser-ret@li",
+      "name": "h3@text",
+      "bookUrl": "tag.a.0@href"
+    },
+    "ruleBookInfo": {
+      "name": "class.g_col_8 pr@h1@text",
+      "author": "class.g_col_8 pr@tag.strong.0@text",
+      "intro": "class.det-abt@html",
+      "kind": "class.mb15 ell _tags pt2@tag.span!0@text",
+      "lastChapter": "class.fs16 c_strong@a@text"
+    },
+    "ruleToc": {
+      "chapterList": "id.chapterList@li@a",
+      "chapterName": "text",
+      "chapterUrl": "href"
+    },
+    "ruleContent": {
+      "content": "id.TextContent@html"
+    },
+    "customOrder": 1604
+  },
+  {
+    "bookSourceName": "肉书屋②",
+    "bookSourceUrl": "https://m.roushuwu2.com",
+    "searchUrl": "/s.php,{\n  \"method\": \"POST\",\n  \"body\": \"type=articlename&s={{key}}\"\n}",
+    "bookSourceType": 0,
+    "bookSourceGroup": "🔞实测可用",
+    "enabled": true,
+    "enabledExplore": false,
+    "bookSourceComment": "规则来源：luanmuc/legado-book-sources（MIT License）；已完成公开搜索、详情、目录及正文实测。此条目不含 Cookie、登录态或认证凭据。",
+    "header": "{\"User-Agent\":\"Mozilla/5.0 (Linux; Android 10; SK) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36\"}",
+    "ruleSearch": {
+      "bookList": "class.common-bookele[0:4]",
+      "name": "tag.a.0@text",
+      "bookUrl": "tag.a.0@href"
+    },
+    "ruleBookInfo": {
+      "name": "//*[@id=\"nr_body\"]/nav/ul/li[2]/text()##\\_.*",
+      "author": "//*[@id=\"novelMain\"]/div[1]/table/tbody/tr/td[1]/div[1]/h2/text()",
+      "tocUrl": "//*[@style=\"color:red;\"]/@href",
+      "kind": "class.article_info_td@tag.a.0@text&&class.article_info_td@tag.time@text"
+    },
+    "ruleToc": {
+      "chapterList": "tag.div.0@tag.ul@tag.li!-1@a",
+      "chapterName": "text",
+      "chapterUrl": "href"
+    },
+    "ruleContent": {
+      "content": "id.nr1@html"
+    },
+    "customOrder": 1605
   }
 ]

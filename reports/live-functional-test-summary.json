@@ -1,21 +1,21 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T03:12:04.134Z",
+  "generatedAt": "2026-11-21T03:16:11.717Z",
   "testedRecords": 8687,
   "statusCounts": {
     "unsupported": 5677,
-    "unverified": 1409,
-    "failed": 774,
-    "blocked": 556,
+    "unverified": 1410,
+    "failed": 775,
+    "blocked": 554,
     "excluded": 255,
     "passed": 16
   },
   "providerCounts": {
     "subscription-ordinary": {
       "unsupported": 1865,
-      "unverified": 569,
-      "failed": 306,
-      "blocked": 222,
+      "unverified": 572,
+      "failed": 302,
+      "blocked": 223,
       "excluded": 2,
       "passed": 6
     },
@@ -27,17 +27,17 @@
     },
     "AOAOSTAR-candidate": {
       "unsupported": 2566,
-      "blocked": 223,
-      "failed": 315,
-      "unverified": 572,
+      "failed": 317,
+      "unverified": 571,
+      "blocked": 222,
       "excluded": 228,
       "passed": 2
     },
     "luanmuc-candidate": {
       "unsupported": 1186,
-      "blocked": 107,
-      "failed": 148,
-      "unverified": 261,
+      "blocked": 105,
+      "failed": 151,
+      "unverified": 260,
       "passed": 8,
       "excluded": 25
     }
@@ -51,7 +51,7 @@
       "name": "🐦夜书吧po18mx",
       "host": "www.po18mx.com",
       "category": "adult",
-      "contentLength": 2640,
+      "contentLength": 2538,
       "providers": [
         "luanmuc-candidate"
       ]
@@ -60,7 +60,7 @@
       "name": "肉文NP#2",
       "host": "www.rouwennp.org",
       "category": "adult",
-      "contentLength": 2563,
+      "contentLength": 1660,
       "providers": [
         "luanmuc-candidate"
       ]
