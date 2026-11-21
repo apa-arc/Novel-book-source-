@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "subscriptionId": "apa-arc-novel-book-source",
   "name": "小说源",
-  "description": "小说源两条一组真机测试订阅；本轮为第1组，测试完成后继续下一组。完整26条已备份。",
+  "description": "普通小说统一订阅；包含当前仓库已适配的26条普通书源。",
   "repository": "https://github.com/apa-arc/Novel-book-source-",
-  "updatedAt": "2026-11-21T10:32:29.159Z",
-  "sourceCount": 2,
+  "updatedAt": "2026-11-21T10:57:03.157Z",
+  "sourceCount": 26,
   "sources": [
     {
       "id": "biquluo-la",
@@ -91,6 +91,1027 @@
       },
       "testOnly": true,
       "testOnlyReason": "已从公开上游规则转换为本仓库原创 GET/CSS 适配；站点搜索曾有间歇性失灵，尚未完成当前宿主四阶段实测。"
+    },
+    {
+      "id": "dingdian-23uswx",
+      "name": "顶点小说",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "普通小说网页源；已转换为 GET + CSS 四阶段配置，待实测。",
+      "baseUrl": "https://www.23uswx.net/",
+      "domains": [
+        "www.23uswx.net"
+      ],
+      "categories": [],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/dingdian-23uswx.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/dingdian-23uswx.js",
+      "appConfig": {
+        "searchUrl": "https://www.23uswx.net/modules/article/search.php?q={keyword}",
+        "bookUrl": "https://www.23uswx.net/",
+        "chapterListUrl": "https://www.23uswx.net/{bookUrl}",
+        "chapterUrl": "https://www.23uswx.net/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": ".grid tr",
+            "titleSelector": "td:nth-child(1) a",
+            "urlSelector": "td:nth-child(1) a",
+            "authorSelector": "td:nth-child(3)"
+          },
+          "detail": {
+            "titleSelector": "#info h1",
+            "descriptionSelector": "#intro"
+          },
+          "chapters": {
+            "itemSelector": "#list dd",
+            "titleSelector": "a",
+            "urlSelector": "a"
+          },
+          "content": {
+            "contentSelector": "#content",
+            "titleSelector": "h1"
+          }
+        }
+      },
+      "testOnly": true,
+      "testOnlyReason": "从公开上游 GET 搜索规则转换；已补齐本项目四阶段 CSS 配置，尚未完成当前站点实时与宿主实测。"
+    },
+    {
+      "id": "jiuyi-91zww",
+      "name": "九一中文",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "普通小说网页源；已转换为 GET + CSS 四阶段配置，待实测。",
+      "baseUrl": "https://www.91zww.com/",
+      "domains": [
+        "www.91zww.com"
+      ],
+      "categories": [],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/jiuyi-91zww.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/jiuyi-91zww.js",
+      "appConfig": {
+        "searchUrl": "https://www.91zww.com/search/?searchkey={keyword}",
+        "bookUrl": "https://www.91zww.com/",
+        "chapterListUrl": "https://www.91zww.com/{bookUrl}",
+        "chapterUrl": "https://www.91zww.com/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": ".txt-list li",
+            "titleSelector": ".s2 a",
+            "urlSelector": ".s2 a",
+            "authorSelector": ".s4"
+          },
+          "detail": {
+            "titleSelector": "h1",
+            "descriptionSelector": "#intro"
+          },
+          "chapters": {
+            "itemSelector": ".section-list li",
+            "titleSelector": "a",
+            "urlSelector": "a"
+          },
+          "content": {
+            "contentSelector": "#content",
+            "titleSelector": "h1"
+          }
+        }
+      },
+      "testOnly": true,
+      "testOnlyReason": "从公开上游 GET 搜索规则转换；目录和正文 CSS 规则已补齐，尚未完成当前站点实时与宿主实测。"
+    },
+    {
+      "id": "wuxian-wenxuesk",
+      "name": "无限小说",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "普通小说网页源；已转换为 GET + CSS 四阶段配置，待实测。",
+      "baseUrl": "https://www.wenxuesk.net/",
+      "domains": [
+        "www.wenxuesk.net"
+      ],
+      "categories": [],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/wuxian-wenxuesk.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/wuxian-wenxuesk.js",
+      "appConfig": {
+        "searchUrl": "https://www.wenxuesk.net/search/result.html?searchkey={keyword}",
+        "bookUrl": "https://www.wenxuesk.net/",
+        "chapterListUrl": "https://www.wenxuesk.net/{bookUrl}",
+        "chapterUrl": "https://www.wenxuesk.net/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": ".search-list li",
+            "titleSelector": ".s2 a",
+            "urlSelector": ".s2 a",
+            "authorSelector": ".s4"
+          },
+          "detail": {
+            "titleSelector": "h1",
+            "descriptionSelector": "#intro"
+          },
+          "chapters": {
+            "itemSelector": "#list dd",
+            "titleSelector": "a",
+            "urlSelector": "a"
+          },
+          "content": {
+            "contentSelector": "#content",
+            "titleSelector": "h1"
+          }
+        }
+      },
+      "testOnly": true,
+      "testOnlyReason": "从公开上游 GET 搜索规则转换；目录的原始 XPath 已改写为 CSS 规则，尚未完成当前站点实时与宿主实测。"
+    },
+    {
+      "id": "tianyu-tycqzw",
+      "name": "天域小说网",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "普通小说网页源；已转换为 GET + CSS 四阶段配置，待实测。",
+      "baseUrl": "https://www.tycqzw.la/",
+      "domains": [
+        "www.tycqzw.la"
+      ],
+      "categories": [],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/tianyu-tycqzw.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/tianyu-tycqzw.js",
+      "appConfig": {
+        "searchUrl": "https://www.tycqzw.la/search.php?searchkey={keyword}",
+        "bookUrl": "https://www.tycqzw.la/",
+        "chapterListUrl": "https://www.tycqzw.la/{bookUrl}",
+        "chapterUrl": "https://www.tycqzw.la/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": ".grid tr",
+            "titleSelector": "td.even a",
+            "urlSelector": "td.even a",
+            "authorSelector": "td.odd"
+          },
+          "detail": {
+            "titleSelector": "#info h1",
+            "descriptionSelector": "#intro"
+          },
+          "chapters": {
+            "itemSelector": "#list dd",
+            "titleSelector": "a",
+            "urlSelector": "a"
+          },
+          "content": {
+            "contentSelector": "#content",
+            "titleSelector": "h1"
+          }
+        }
+      },
+      "testOnly": true,
+      "testOnlyReason": "从公开上游 GET 搜索规则转换；已将详情、目录、正文映射为 CSS 规则，尚未完成当前站点实时与宿主实测。"
+    },
+    {
+      "id": "deqi-deqixs",
+      "name": "得奇小说网",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "普通小说网页源；GET 搜索，详情、目录与正文采用 CSS 规则，待实测。",
+      "baseUrl": "https://www.deqixs.com/",
+      "domains": [
+        "www.deqixs.com"
+      ],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/deqi-deqixs.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/deqi-deqixs.js",
+      "appConfig": {
+        "searchUrl": "https://www.deqixs.com/tag/?key={keyword}",
+        "bookUrl": "https://www.deqixs.com/",
+        "chapterListUrl": "https://www.deqixs.com/{bookUrl}",
+        "chapterUrl": "https://www.deqixs.com/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": ".item",
+            "titleSelector": "h3 a",
+            "urlSelector": "h3 a",
+            "authorSelector": "p a"
+          },
+          "detail": {
+            "titleSelector": ".itemtxt h1 a",
+            "descriptionSelector": ".des p"
+          },
+          "chapters": {
+            "itemSelector": "#list a",
+            "titleSelector": ":self",
+            "urlSelector": ":self"
+          },
+          "content": {
+            "contentSelector": ".con",
+            "titleSelector": "h1"
+          }
+        }
+      },
+      "testOnly": true,
+      "testOnlyReason": "从公开 AOAOSTAR 规则转换为本仓库 GET/CSS 配置；搜索、详情、目录、正文选择器已映射，尚未完成当前站点实时与宿主四阶段实测。"
+    },
+    {
+      "id": "sanyi-31xs",
+      "name": "三一小说",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "普通小说网页源；GET 搜索，详情、目录与正文采用 CSS 规则，待实测。",
+      "baseUrl": "https://www.31xs.com/",
+      "domains": [
+        "www.31xs.com"
+      ],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/sanyi-31xs.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/sanyi-31xs.js",
+      "appConfig": {
+        "searchUrl": "https://www.31xs.com/search.php?keyword={keyword}",
+        "bookUrl": "https://www.31xs.com/",
+        "chapterListUrl": "https://www.31xs.com/{bookUrl}",
+        "chapterUrl": "https://www.31xs.com/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": "#bookcase_list tr",
+            "titleSelector": "td:nth-child(2) a",
+            "urlSelector": "td:nth-child(2) a",
+            "authorSelector": "td:nth-child(4)"
+          },
+          "detail": {
+            "titleSelector": "#info h1",
+            "descriptionSelector": "#intro"
+          },
+          "chapters": {
+            "itemSelector": "#list dl dd",
+            "titleSelector": "a",
+            "urlSelector": "a"
+          },
+          "content": {
+            "contentSelector": "#content",
+            "titleSelector": "h1"
+          }
+        }
+      },
+      "testOnly": true,
+      "testOnlyReason": "从公开 AOAOSTAR 规则转换为本仓库 GET/CSS 配置；搜索、详情、目录、正文选择器已映射，尚未完成当前站点实时与宿主四阶段实测。"
+    },
+    {
+      "id": "lingling-00shu",
+      "name": "零零小说",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "普通小说网页源；GET 搜索，详情、目录与正文采用 CSS 规则，待实测。",
+      "baseUrl": "https://www.00shu.la/",
+      "domains": [
+        "www.00shu.la"
+      ],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/lingling-00shu.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/lingling-00shu.js",
+      "appConfig": {
+        "searchUrl": "https://www.00shu.la/modules/article/search.php?q={keyword}",
+        "bookUrl": "https://www.00shu.la/",
+        "chapterListUrl": "https://www.00shu.la/{bookUrl}",
+        "chapterUrl": "https://www.00shu.la/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": ".grid tr",
+            "titleSelector": "td:nth-child(1) a",
+            "urlSelector": "td:nth-child(1) a",
+            "authorSelector": "td:nth-child(3)"
+          },
+          "detail": {
+            "titleSelector": "#info h1",
+            "descriptionSelector": "#intro"
+          },
+          "chapters": {
+            "itemSelector": "#list dd",
+            "titleSelector": "a",
+            "urlSelector": "a"
+          },
+          "content": {
+            "contentSelector": "#content",
+            "titleSelector": "h1"
+          }
+        }
+      },
+      "testOnly": true,
+      "testOnlyReason": "从公开 AOAOSTAR 规则转换为本仓库 GET/CSS 配置；已移除上游封面 JS 依赖并映射四阶段选择器，尚未完成当前站点实时与宿主实测。"
+    },
+    {
+      "id": "wujixsw-info",
+      "name": "无极小说",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "普通小说网页源；GET 搜索，详情、目录与正文采用 CSS 规则，待实测。",
+      "baseUrl": "https://wujixsw.info/",
+      "domains": [
+        "wujixsw.info"
+      ],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/wujixsw-info.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/wujixsw-info.js",
+      "appConfig": {
+        "searchUrl": "https://wujixsw.info/search.html?name={keyword}",
+        "bookUrl": "https://wujixsw.info/",
+        "chapterListUrl": "https://wujixsw.info/{bookUrl}",
+        "chapterUrl": "https://wujixsw.info/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": ".novelslist2 li",
+            "titleSelector": ".s2 a",
+            "urlSelector": ".s2 a",
+            "authorSelector": ".s4"
+          },
+          "detail": {
+            "titleSelector": "h1",
+            "descriptionSelector": "meta[property='og:description']",
+            "descriptionAttribute": "content"
+          },
+          "chapters": {
+            "itemSelector": "#list dd",
+            "titleSelector": "a",
+            "urlSelector": "a"
+          },
+          "content": {
+            "contentSelector": "#content",
+            "titleSelector": "h1"
+          }
+        }
+      },
+      "testOnly": true,
+      "testOnlyReason": "由公开上游小说源规则转换为本仓库 GET/CSS 配置；已映射搜索、详情、目录、正文，尚未完成当前站点实时与宿主四阶段实测。"
+    },
+    {
+      "id": "yushufang-ysfwxc",
+      "name": "御书房",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "普通小说网页源；GET 搜索，详情、目录与正文采用 CSS 规则，待实测。",
+      "baseUrl": "https://www.ysfwxc.com/",
+      "domains": [
+        "www.ysfwxc.com"
+      ],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/yushufang-ysfwxc.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/yushufang-ysfwxc.js",
+      "appConfig": {
+        "searchUrl": "https://www.ysfwxc.com/search/?searchkey={keyword}",
+        "bookUrl": "https://www.ysfwxc.com/",
+        "chapterListUrl": "https://www.ysfwxc.com/{bookUrl}",
+        "chapterUrl": "https://www.ysfwxc.com/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": ".book_data",
+            "titleSelector": "h1 a",
+            "urlSelector": "h1 a",
+            "authorSelector": ".author span"
+          },
+          "detail": {
+            "titleSelector": "h1",
+            "descriptionSelector": "meta[property='og:description']",
+            "descriptionAttribute": "content"
+          },
+          "chapters": {
+            "itemSelector": ".con dd",
+            "titleSelector": "a",
+            "urlSelector": "a"
+          },
+          "content": {
+            "contentSelector": ".content",
+            "titleSelector": "h1"
+          }
+        }
+      },
+      "testOnly": true,
+      "testOnlyReason": "由公开上游小说源规则转换为本仓库 GET/CSS 配置；已映射搜索、详情、目录、正文，尚未完成当前站点实时与宿主四阶段实测。"
+    },
+    {
+      "id": "xinbiquge-info",
+      "name": "新笔趣阁小说网",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "普通小说网页源；GET 搜索，目录分页，正文使用 article.font_max；章节可能分页，需后续补齐翻页处理。",
+      "baseUrl": "https://www.xbiquge.info/",
+      "domains": [
+        "www.xbiquge.info"
+      ],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/xinbiquge-info.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/xinbiquge-info.js",
+      "appConfig": {
+        "searchUrl": "https://www.xbiquge.info/search.php?q={keyword}",
+        "bookUrl": "https://www.xbiquge.info/{bookUrl}",
+        "chapterListUrl": "https://www.xbiquge.info/{bookPath}/index_1.html",
+        "chapterUrl": "https://www.xbiquge.info/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": ".box.hot dl",
+            "titleSelector": "dd h3 a",
+            "urlSelector": "dd h3 a",
+            "authorSelector": "dd.book_other span"
+          },
+          "detail": {
+            "titleSelector": "h1",
+            "descriptionSelector": "#intro"
+          },
+          "chapters": {
+            "itemSelector": ".book_list2 > ul > li",
+            "titleSelector": "a",
+            "urlSelector": "a"
+          },
+          "content": {
+            "contentSelector": "article.font_max",
+            "titleSelector": "h1"
+          }
+        }
+      },
+      "testOnly": true,
+      "testOnlyReason": "来源于公开书源规则库；站点搜索近期可检索到有效结果，已转换为 GET/CSS。详情、目录、正文尚未完成目标宿主四阶段实测。"
+    },
+    {
+      "id": "biquge-17177",
+      "name": "笔趣阁小说网（17177）",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "普通小说网页源；GET 搜索，详情页元信息、目录与正文使用 CSS 提取。",
+      "baseUrl": "https://www.17177.cc/",
+      "domains": [
+        "www.17177.cc"
+      ],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/biquge-17177.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/biquge-17177.js",
+      "appConfig": {
+        "searchUrl": "https://www.17177.cc/search.php?q={keyword}&p={page}",
+        "bookUrl": "https://www.17177.cc/{bookUrl}",
+        "chapterListUrl": "https://www.17177.cc/{bookUrl}",
+        "chapterUrl": "https://www.17177.cc/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": ".hot dl",
+            "titleSelector": "h3 a",
+            "urlSelector": "h3 a",
+            "authorSelector": ".book_other span",
+            "coverSelector": "dt img"
+          },
+          "detail": {
+            "titleSelector": "meta[property='og:novel:book_name']",
+            "authorSelector": "meta[property='og:novel:author']",
+            "descriptionSelector": "meta[property='og:description']",
+            "titleAttribute": "content",
+            "authorAttribute": "content",
+            "descriptionAttribute": "content"
+          },
+          "chapters": {
+            "itemSelector": ".book_list2 li",
+            "titleSelector": "a",
+            "urlSelector": "a"
+          },
+          "content": {
+            "contentSelector": ".single article",
+            "titleSelector": "h1"
+          }
+        }
+      },
+      "testOnly": true,
+      "testOnlyReason": "取自公开书源规则库，已转换为 GET/CSS。目标站当前实时访问及搜索、详情、目录、正文四阶段尚未完成实测。"
+    },
+    {
+      "id": "d8zw-com",
+      "name": "第八中文网",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "普通小说网页源；GET 搜索，目录使用 CSS 选择器，正文使用 article.font_max。上游规则注明偶发 502，需控制请求频率。",
+      "baseUrl": "https://www.d8zw.com/",
+      "domains": [
+        "www.d8zw.com"
+      ],
+      "categories": [],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/d8zw-com.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/d8zw-com.js",
+      "appConfig": {
+        "searchUrl": "https://www.d8zw.com/search.php?q={keyword}",
+        "bookUrl": "https://www.d8zw.com/{bookUrl}",
+        "chapterListUrl": "https://www.d8zw.com/{bookPath}/index_1.html",
+        "chapterUrl": "https://www.d8zw.com/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": ".box.hot dl",
+            "titleSelector": "dd h3 a",
+            "urlSelector": "dd h3 a",
+            "authorSelector": "dd.book_other span"
+          },
+          "detail": {
+            "titleSelector": "h1",
+            "descriptionSelector": "#intro"
+          },
+          "chapters": {
+            "itemSelector": ".book_list2 > ul > li",
+            "titleSelector": "a",
+            "urlSelector": "a"
+          },
+          "content": {
+            "contentSelector": "article.font_max",
+            "titleSelector": "h1"
+          }
+        }
+      },
+      "testOnly": true,
+      "testOnlyReason": "来源于公开书源规则库；已过滤上游 JavaScript 依赖并转换为 GET/CSS。站点实时及当前宿主四阶段尚未完成实测。"
+    },
+    {
+      "id": "bqg-info",
+      "name": "笔趣阁info",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "普通小说网页源；GET 搜索，书籍详情页内含章节目录，正文使用 #booktxt。",
+      "baseUrl": "https://www.bqg.info/",
+      "domains": [
+        "www.bqg.info"
+      ],
+      "categories": [],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/bqg-info.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/bqg-info.js",
+      "appConfig": {
+        "searchUrl": "https://www.bqg.info/search/?searchkey={keyword}",
+        "bookUrl": "https://www.bqg.info/{bookUrl}",
+        "chapterListUrl": "https://www.bqg.info/{bookUrl}",
+        "chapterUrl": "https://www.bqg.info/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": "div.book-coverlist",
+            "titleSelector": "h4 a",
+            "urlSelector": "h4 a"
+          },
+          "detail": {
+            "titleSelector": "h1",
+            "descriptionSelector": "#bookIntro"
+          },
+          "chapters": {
+            "itemSelector": "dl#newlist > dd",
+            "titleSelector": "a",
+            "urlSelector": "a"
+          },
+          "content": {
+            "contentSelector": "#booktxt",
+            "titleSelector": "h1.readTitle"
+          }
+        }
+      },
+      "testOnly": true,
+      "testOnlyReason": "来源于公开书源规则库；已移除上游章节翻页脚本依赖并转换为 GET/CSS。搜索结果结构和正文分页尚未完成实时与当前宿主实测。"
+    },
+    {
+      "id": "biqubao-com",
+      "name": "笔趣宝",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "普通小说网页源；已转换为 GET 搜索、详情、目录和正文 CSS 规则，待目标宿主实测。",
+      "baseUrl": "https://www.biqubao.com/",
+      "domains": [
+        "www.biqubao.com"
+      ],
+      "categories": [],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/biqubao-com.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/biqubao-com.js",
+      "appConfig": {
+        "searchUrl": "https://www.biqubao.com/search.php?keyword={keyword}&page=1",
+        "bookUrl": "https://www.biqubao.com/{bookUrl}",
+        "chapterListUrl": "https://www.biqubao.com/{bookUrl}",
+        "chapterUrl": "https://www.biqubao.com/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": ".result-item",
+            "titleSelector": ".result-item-title a",
+            "urlSelector": ".result-item-title a"
+          },
+          "detail": {
+            "titleSelector": "#info h1",
+            "descriptionSelector": "#intro p"
+          },
+          "chapters": {
+            "itemSelector": "#list dd",
+            "titleSelector": "a",
+            "urlSelector": "a"
+          },
+          "content": {
+            "contentSelector": "#content",
+            "titleSelector": "h1"
+          }
+        }
+      },
+      "testOnly": true,
+      "testOnlyReason": "从公开书源集合的 GET/HTTPS 规则转换为本仓库 CSS 四阶段配置；未采用上游脚本规则。当前站点实时访问及目标宿主四阶段尚未完成实测。"
+    },
+    {
+      "id": "zwda-com",
+      "name": "E小说",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "普通小说网页源；已转换为 GET 搜索、详情、目录和正文 CSS 规则，待目标宿主实测。",
+      "baseUrl": "https://www.zwda.com/",
+      "domains": [
+        "www.zwda.com"
+      ],
+      "categories": [],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/zwda-com.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/zwda-com.js",
+      "appConfig": {
+        "searchUrl": "https://www.zwda.com/search.php?keyword={keyword}&page={page}",
+        "bookUrl": "https://www.zwda.com/{bookUrl}",
+        "chapterListUrl": "https://www.zwda.com/{bookUrl}",
+        "chapterUrl": "https://www.zwda.com/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": ".result-item",
+            "titleSelector": ".result-item-title a",
+            "urlSelector": ".result-item-title a"
+          },
+          "detail": {
+            "titleSelector": "#info h1",
+            "descriptionSelector": "#intro p"
+          },
+          "chapters": {
+            "itemSelector": "#list dd",
+            "titleSelector": "a",
+            "urlSelector": "a"
+          },
+          "content": {
+            "contentSelector": "#content",
+            "titleSelector": "h1"
+          }
+        }
+      },
+      "testOnly": true,
+      "testOnlyReason": "从公开书源集合的 GET/HTTPS 规则转换为本仓库 CSS 四阶段配置；未采用上游脚本规则。当前站点实时访问及目标宿主四阶段尚未完成实测。"
+    },
+    {
+      "id": "yb3-cc",
+      "name": "ABC小说",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "普通小说网页源；已转换为 GET 搜索、详情、目录和正文 CSS 规则，待目标宿主实测。",
+      "baseUrl": "https://www.yb3.cc/",
+      "domains": [
+        "www.yb3.cc"
+      ],
+      "categories": [],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/yb3-cc.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/yb3-cc.js",
+      "appConfig": {
+        "searchUrl": "https://www.yb3.cc/search.php?keyword={keyword}&page={page}",
+        "bookUrl": "https://www.yb3.cc/{bookUrl}",
+        "chapterListUrl": "https://www.yb3.cc/{bookUrl}",
+        "chapterUrl": "https://www.yb3.cc/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": ".result-item",
+            "titleSelector": ".result-item-title a",
+            "urlSelector": ".result-item-title a"
+          },
+          "detail": {
+            "titleSelector": "#info h1",
+            "descriptionSelector": "#intro p"
+          },
+          "chapters": {
+            "itemSelector": "#list dd",
+            "titleSelector": "a",
+            "urlSelector": "a"
+          },
+          "content": {
+            "contentSelector": "#content",
+            "titleSelector": "h1"
+          }
+        }
+      },
+      "testOnly": true,
+      "testOnlyReason": "从公开书源集合的 GET/HTTPS 规则转换为本仓库 CSS 四阶段配置；未采用上游脚本规则。当前站点实时访问及目标宿主四阶段尚未完成实测。"
+    },
+    {
+      "id": "biquwu-cc",
+      "name": "笔趣阁移动版",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "普通小说网页源；已转换为 GET 搜索、详情、目录和正文 CSS 规则，待目标宿主实测。",
+      "baseUrl": "https://www.biquwu.cc/",
+      "domains": [
+        "www.biquwu.cc"
+      ],
+      "categories": [],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/biquwu-cc.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/biquwu-cc.js",
+      "appConfig": {
+        "searchUrl": "https://www.biquwu.cc/search.php?keyword={keyword}&page={page}",
+        "bookUrl": "https://www.biquwu.cc/{bookUrl}",
+        "chapterListUrl": "https://www.biquwu.cc/{bookUrl}",
+        "chapterUrl": "https://www.biquwu.cc/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": ".result-item",
+            "titleSelector": ".result-item-title a",
+            "urlSelector": ".result-item-title a"
+          },
+          "detail": {
+            "titleSelector": "#info h1",
+            "descriptionSelector": "#intro p"
+          },
+          "chapters": {
+            "itemSelector": "#list dd",
+            "titleSelector": "a",
+            "urlSelector": "a"
+          },
+          "content": {
+            "contentSelector": "#content",
+            "titleSelector": "h1"
+          }
+        }
+      },
+      "testOnly": true,
+      "testOnlyReason": "从公开书源集合的 GET/HTTPS 规则转换为本仓库 CSS 四阶段配置；未采用上游脚本规则。当前站点实时访问及目标宿主四阶段尚未完成实测。"
+    },
+    {
+      "id": "liewen-cc",
+      "name": "猎文网",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "普通小说网页源；已转换为 GET 搜索、详情、目录和正文 CSS 规则，待目标宿主实测。",
+      "baseUrl": "https://www.liewen.cc/",
+      "domains": [
+        "www.liewen.cc"
+      ],
+      "categories": [],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/liewen-cc.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/liewen-cc.js",
+      "appConfig": {
+        "searchUrl": "https://www.liewen.cc/search.php?keyword={keyword}&page={page}",
+        "bookUrl": "https://www.liewen.cc/{bookUrl}",
+        "chapterListUrl": "https://www.liewen.cc/{bookUrl}",
+        "chapterUrl": "https://www.liewen.cc/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": ".result-item",
+            "titleSelector": ".result-item-title a",
+            "urlSelector": ".result-item-title a"
+          },
+          "detail": {
+            "titleSelector": "#info h1",
+            "descriptionSelector": "#intro p"
+          },
+          "chapters": {
+            "itemSelector": "#list dd",
+            "titleSelector": "a",
+            "urlSelector": "a"
+          },
+          "content": {
+            "contentSelector": "#content",
+            "titleSelector": "h1"
+          }
+        }
+      },
+      "testOnly": true,
+      "testOnlyReason": "从公开书源集合的 GET/HTTPS 规则转换为本仓库 CSS 四阶段配置；未采用上游脚本规则。当前站点实时访问及目标宿主四阶段尚未完成实测。"
+    },
+    {
+      "id": "bqg5-cc",
+      "name": "笔趣阁②",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "普通小说网页源；已转换为 GET 搜索、详情、目录和正文 CSS 规则，待目标宿主实测。",
+      "baseUrl": "https://www.bqg5.cc/",
+      "domains": [
+        "www.bqg5.cc"
+      ],
+      "categories": [],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/bqg5-cc.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/bqg5-cc.js",
+      "appConfig": {
+        "searchUrl": "https://www.bqg5.cc//modules/article/search.php?searchkey={keyword}",
+        "bookUrl": "https://www.bqg5.cc/{bookUrl}",
+        "chapterListUrl": "https://www.bqg5.cc/{bookUrl}",
+        "chapterUrl": "https://www.bqg5.cc/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": ".grid tr",
+            "titleSelector": "td.odd a",
+            "urlSelector": "td.odd a"
+          },
+          "detail": {
+            "titleSelector": "#info h1",
+            "descriptionSelector": "#intro p"
+          },
+          "chapters": {
+            "itemSelector": "#list dd:nth-child(n+10)",
+            "titleSelector": "a",
+            "urlSelector": "a"
+          },
+          "content": {
+            "contentSelector": "#content",
+            "titleSelector": "h1"
+          }
+        }
+      },
+      "testOnly": true,
+      "testOnlyReason": "从公开书源集合的 GET/HTTPS 规则转换为本仓库 CSS 四阶段配置；未采用上游脚本规则。当前站点实时访问及目标宿主四阶段尚未完成实测。"
+    },
+    {
+      "id": "woquge-com",
+      "name": "笔趣阁④",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "普通小说网页源；已转换为 GET 搜索、详情、目录和正文 CSS 规则，待目标宿主实测。",
+      "baseUrl": "https://www.woquge.com/",
+      "domains": [
+        "www.woquge.com"
+      ],
+      "categories": [],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/woquge-com.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/woquge-com.js",
+      "appConfig": {
+        "searchUrl": "https://www.woquge.com//modules/article/search.php?searchkey={keyword}",
+        "bookUrl": "https://www.woquge.com/{bookUrl}",
+        "chapterListUrl": "https://www.woquge.com/{bookUrl}",
+        "chapterUrl": "https://www.woquge.com/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": ".grid tr",
+            "titleSelector": "td.odd a",
+            "urlSelector": "td.odd a"
+          },
+          "detail": {
+            "titleSelector": "#info h1",
+            "descriptionSelector": "#intro p"
+          },
+          "chapters": {
+            "itemSelector": "#list dd:nth-child(n+10)",
+            "titleSelector": "a",
+            "urlSelector": "a"
+          },
+          "content": {
+            "contentSelector": "#content",
+            "titleSelector": "h1"
+          }
+        }
+      },
+      "testOnly": true,
+      "testOnlyReason": "从公开书源集合的 GET/HTTPS 规则转换为本仓库 CSS 四阶段配置；未采用上游脚本规则。当前站点实时访问及目标宿主四阶段尚未完成实测。"
+    },
+    {
+      "id": "kuxiaoshuo-com",
+      "name": "酷小说",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "普通小说网页源；已转换为 GET 搜索、详情、目录和正文 CSS 规则，待目标宿主实测。",
+      "baseUrl": "https://www.kuxiaoshuo.com/",
+      "domains": [
+        "www.kuxiaoshuo.com"
+      ],
+      "categories": [],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/kuxiaoshuo-com.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/kuxiaoshuo-com.js",
+      "appConfig": {
+        "searchUrl": "https://www.kuxiaoshuo.com//modules/article/search.php?searchkey={keyword}",
+        "bookUrl": "https://www.kuxiaoshuo.com/{bookUrl}",
+        "chapterListUrl": "https://www.kuxiaoshuo.com/{bookUrl}",
+        "chapterUrl": "https://www.kuxiaoshuo.com/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": ".grid tr",
+            "titleSelector": "td.odd a",
+            "urlSelector": "td.odd a"
+          },
+          "detail": {
+            "titleSelector": "#info h1",
+            "descriptionSelector": "#intro p"
+          },
+          "chapters": {
+            "itemSelector": "#list dd:nth-child(n+10)",
+            "titleSelector": "a",
+            "urlSelector": "a"
+          },
+          "content": {
+            "contentSelector": "#content",
+            "titleSelector": "h1"
+          }
+        }
+      },
+      "testOnly": true,
+      "testOnlyReason": "从公开书源集合的 GET/HTTPS 规则转换为本仓库 CSS 四阶段配置；未采用上游脚本规则。当前站点实时访问及目标宿主四阶段尚未完成实测。"
+    },
+    {
+      "id": "xqianqian-m",
+      "name": "千千小说",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "普通小说网页源；GET 搜索，详情、目录和正文使用 CSS 规则。公开上游标记为有效，网站近期仍有更新；当前宿主四阶段复测待完成。",
+      "baseUrl": "https://m.xqianqian.com/",
+      "domains": [
+        "m.xqianqian.com"
+      ],
+      "categories": [],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/xqianqian-m.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/xqianqian-m.js",
+      "appConfig": {
+        "searchUrl": "https://m.xqianqian.com/s.php?q={keyword}",
+        "bookUrl": "https://m.xqianqian.com/{bookUrl}",
+        "chapterListUrl": "https://m.xqianqian.com/{bookUrl}",
+        "chapterUrl": "https://m.xqianqian.com/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": ".bookbox",
+            "titleSelector": ".bookname a",
+            "urlSelector": ".bookname a",
+            "authorSelector": ".author"
+          },
+          "detail": {
+            "titleSelector": ".name",
+            "descriptionSelector": ".book_about dd"
+          },
+          "chapters": {
+            "itemSelector": ".book_last dl dd",
+            "titleSelector": "a",
+            "urlSelector": "a"
+          },
+          "content": {
+            "contentSelector": "#chaptercontent",
+            "titleSelector": "h1"
+          }
+        }
+      },
+      "testOnly": true,
+      "testOnlyReason": "已转换公开上游 GET/CSS 规则；网页端仍有近期更新记录，尚未完成 AppleNovelApp 宿主四阶段复测。"
+    },
+    {
+      "id": "douhua-wenxue",
+      "name": "豆花文学",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "原创小说站网页源；GET 搜索，详情、目录和正文采用 CSS 规则。站点近期仍有更新内容；部分作品可能存在付费章节，当前宿主四阶段复测待完成。",
+      "baseUrl": "https://www.douhuawenxue.com/",
+      "domains": [
+        "www.douhuawenxue.com"
+      ],
+      "categories": [],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/douhua-wenxue.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/douhua-wenxue.js",
+      "appConfig": {
+        "searchUrl": "https://www.douhuawenxue.com/search?kd={keyword}",
+        "bookUrl": "https://www.douhuawenxue.com/{bookUrl}",
+        "chapterListUrl": "https://www.douhuawenxue.com/{bookUrl}",
+        "chapterUrl": "https://www.douhuawenxue.com/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": ".book-base",
+            "titleSelector": "h3 a",
+            "urlSelector": "h3 a",
+            "authorSelector": ".book_author",
+            "descriptionSelector": ".book_ct"
+          },
+          "detail": {
+            "titleSelector": "h1"
+          },
+          "chapters": {
+            "itemSelector": ".list-inline-3 .list_item",
+            "titleSelector": "a",
+            "urlSelector": "a"
+          },
+          "content": {
+            "contentSelector": "#J_chapterContent",
+            "titleSelector": "h1"
+          }
+        }
+      },
+      "testOnly": true,
+      "testOnlyReason": "已转换公开上游 GET/CSS 规则；站点近期可检索到更新作品，但部分章节可能付费，尚未完成 AppleNovelApp 宿主四阶段复测。"
+    },
+    {
+      "id": "iyueba-net",
+      "name": "爱阅吧网",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "普通小说网页源；GET 搜索，书籍详情、目录和正文采用 CSS 规则。站点近期仍有更新记录；当前宿主四阶段复测待完成。",
+      "baseUrl": "https://iyueba.net/",
+      "domains": [
+        "iyueba.net"
+      ],
+      "categories": [],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/iyueba-net.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/iyueba-net.js",
+      "appConfig": {
+        "searchUrl": "https://iyueba.net/z/?keyword={keyword}",
+        "bookUrl": "https://iyueba.net/{bookUrl}",
+        "chapterListUrl": "https://iyueba.net/{bookUrl}",
+        "chapterUrl": "https://iyueba.net/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": ".item",
+            "titleSelector": "a:nth-of-type(2)",
+            "urlSelector": "a:nth-of-type(2)"
+          },
+          "detail": {
+            "titleSelector": "h1"
+          },
+          "chapters": {
+            "itemSelector": "#content_1 dd",
+            "titleSelector": "a",
+            "urlSelector": "a"
+          },
+          "content": {
+            "contentSelector": "#booktxt",
+            "titleSelector": "h1"
+          }
+        }
+      },
+      "testOnly": true,
+      "testOnlyReason": "已转换公开上游 GET/CSS 规则；站点近期仍有更新作品，尚未完成 AppleNovelApp 宿主四阶段复测。"
     }
   ]
 }
