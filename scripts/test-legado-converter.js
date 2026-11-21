@@ -151,6 +151,17 @@ try{
  const dottedHtml=parseLegacyChain("div.content.title");
  assert.equal(dottedHtml.status,"candidate");
  assert.equal(dottedHtml.selector.engine,"legado-chain");
+ const bareTag=parseLegacyChain("tag");
+ assert.equal(bareTag.status,"candidate");
+ assert.equal(bareTag.selector.engine,"json");
+ const classOutput=parseLegacyChain("span@tag.i@class");
+ assert.equal(classOutput.status,"candidate");
+ assert.equal(classOutput.selector.output,"class");
+ const doubledAt=parseLegacyChain("class.update@@text");
+ assert.equal(doubledAt.status,"candidate");
+ const selfHref=parseLegacyChain("@href");
+ assert.equal(selfHref.status,"candidate");
+ assert.equal(selfHref.selector.engine,"self");
  const cssIndex=parseLegacyChain("a[1]@text");
  assert.equal(cssIndex.status,"candidate");
  assert.equal(cssIndex.selector.engine,"legado-chain");
