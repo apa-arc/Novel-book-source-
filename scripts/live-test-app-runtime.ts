@@ -4,6 +4,7 @@ import { createSourceHttpClient } from "../app/src/source-runtime.ts";
 import { searchNovelSource } from "../app/src/source-search.ts";
 import { fetchNovelDetail, fetchNovelChapterList, fetchNovelChapterContent } from "../app/src/source-catalog.ts";
 import type { NovelSource } from "../app/src/source.ts";
+import { classifyAppSearchError } from "./app-runtime-classification.ts";
 
 const keywords = ["斗罗大陆", "斗破苍穹"];
 const healthSubscriptionPath = fs.existsSync("config/health-check-subscription.json") ? "config/health-check-subscription.json" : "subscription.json";
@@ -11,7 +12,7 @@ const raw = fs.readFileSync(healthSubscriptionPath, "utf8");
 const subscription = JSON.parse(raw);
 const parsed = parseSourceSubscription(raw);
 
-type Stage = { stage: string; status: "passed" | "failed" | "skipped"; detail?: string };
+type Stage = { stage: string; status: "passed" | "failed" | "inconclusive" | "skipped"; detail?: string };
 type TermResult = {
   keyword: string;
   status: "readable" | "search-only" | "catalog-only" | "failed";
@@ -34,7 +35,7 @@ function errorText(error: unknown): string {
  * then chapter content. Detail failure alone never blocks reading.
  */
 async function testTerm(source: NovelSource, keyword: string): Promise<TermResult> {
-  const out: TermResult = { keyword, status: "failed", stages: [] };
+  const out: TermResult = { keyword, status: "failed", searchStatus: "failed", readingStatus: "not-tested", stages: [] };
   const client = createSourceHttpClient(source);
 
   let page;
@@ -112,12 +113,12 @@ async function testTerm(source: NovelSource, keyword: string): Promise<TermResul
       status: "passed",
       detail: "首章正文读取成功（" + content.content.trim().length + " 字符）"
     });
-    out.status = "readable";
+    out.status = "readable";\n    out.readingStatus = "readable";
   } catch (error) {
     const message = errorText(error);
     out.error = message;
     out.stages.push({ stage: "正文", status: "failed", detail: message });
-    out.status = "catalog-only";
+    out.status = "catalog-only";\n    out.readingStatus = "content-failed";
   }
 
   return out;
