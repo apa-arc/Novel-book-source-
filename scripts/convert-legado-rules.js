@@ -370,6 +370,7 @@ function parseLegacyChain(expression) {
     const xpath=parseSimpleXPath(raw);
     return xpath?{status:"candidate",selector:xpath}:{status:"manual",reason:"unsupported-xpath"};
   }
+  const reverseJsonPrefix=raw.startsWith("-$");
   const jsonExpression=raw.match(/^@json:(.*)$/i);
   const implicitIndexJson=/^[A-Za-z_$][\w$-]*\[(?:\*|\d|:)\][.]([A-Za-z_$][\w$-]*)/.test(raw);
   const implicitBracketJson=/^[A-Za-z_$][\w$-]*(?:\.[A-Za-z_$][\w$-]*)+\[(?:\*|-?\d+|:)\](?:(?:\.[A-Za-z_$][\w$-]*)|(?:\[(?:\*|-?\d+|:)\]))*$/.test(raw);
@@ -378,9 +379,9 @@ function parseLegacyChain(expression) {
   const implicitDottedJson=!!dottedJson&&!htmlTags.has(dottedJson[1].split(".")[0].toLowerCase());
   const adjacentJson=raw.match(/^([A-Za-z_$][\w$-]*)\[(?:\*|-?\d+)\]([A-Za-z_$][\w$-]*)$/);
   const implicitAdjacentJson=!!adjacentJson&&!htmlTags.has(adjacentJson[1].toLowerCase());
-  const implicitJson=/^\$[.[]/.test(raw)||implicitIndexJson||implicitDottedJson||implicitAdjacentJson||(implicitBracketJson&&!htmlTags.has(raw.split(/[.[]/)[0].toLowerCase()));
+  const implicitJson=/^\$[.[]/.test(raw)||reverseJsonPrefix||implicitIndexJson||implicitDottedJson||implicitAdjacentJson||(implicitBracketJson&&!htmlTags.has(raw.split(/[.[]/)[0].toLowerCase()));
   if(jsonExpression||implicitJson){
-    let expression=jsonExpression?jsonExpression[1].trim():raw;
+    let expression=jsonExpression?jsonExpression[1].trim():(reverseJsonPrefix?raw.slice(1):raw);
     const braceParts=expression.match(/\{([^{}]+)\}/g);
     if(braceParts&&braceParts.length>1){
       const parts=[];
@@ -399,7 +400,7 @@ function parseLegacyChain(expression) {
     const wrapped=expression.match(/^\{\s*([\s\S]+?)\s*\}$/);
     if(wrapped) expression=wrapped[1];
     const jsonPath=parseJsonPath(expression);
-    return jsonPath?{status:"candidate",selector:{engine:"json",path:jsonPath}}:{status:"manual",reason:"unsupported-jsonpath"};
+    return jsonPath?{status:"candidate",selector:{engine:"json",path:jsonPath,...(reverseJsonPrefix?{reverse:true}:{})}}:{status:"manual",reason:"unsupported-jsonpath"};
   }
   if (/^(text|html|href|src|owntext|textnodes|textNodes|all)$/i.test(raw)) {
     const output = raw.toLowerCase() === "textnodes" ? "textnodes" : raw.toLowerCase();
