@@ -109,9 +109,9 @@ const http = { async get(url) { requests.push(url); return { url, document: root
   assert.equal(pageRequests.length, 2);
   assert.ok(pageRequests[1].endsWith("_2.html"));
 
-  const jsonBookA = { title: "JSON小说甲", bookUrl: "https://example.test/book/2" };
-  const jsonBookB = { title: "JSON小说乙", bookUrl: "https://example.test/book/3" };
-  const jsonDocument = { data: { bookMap: { a: jsonBookA, b: jsonBookB }, featured: { title: "单条 JSON 小说", bookUrl: "https://example.test/book/4" } } };
+  const jsonBookA = { title: "JSON小说甲", bookUrl: "https://example.test/book/2", id: "A-001" };
+  const jsonBookB = { title: "JSON小说乙", bookUrl: "https://example.test/book/3", id: "B-002" };
+  const jsonDocument = { data: { bookMap: { a: jsonBookA, b: jsonBookB }, featured: { title: "单条 JSON 小说", bookUrl: "https://example.test/book/4" }, chapters: { one: { title: "第一章", url: "https://example.test/chapter/99", id: "chapter-001" } } } };
   const jsonPath = (...path) => ({ engine: "json", path: path.map(name => ({ kind: "property", name })) });
   const jsonConfig = {
     baseUrl: "https://example.test",
@@ -119,15 +119,35 @@ const http = { async get(url) { requests.push(url); return { url, document: root
     search: {
       url: () => "https://example.test/api/search",
       list: jsonPath("data", "bookMap"),
-      fields: { title: jsonPath("title"), bookUrl: jsonPath("bookUrl") }
-    }
+      fields: {
+        title: jsonPath("title"),
+        bookUrl: { engine: "put", input: jsonPath("bookUrl"), assignments: [{ key: "bookId", value: jsonPath("id") }] }
+      }
+    },
+    bookInfo: { fields: { title: jsonPath("data","featured","title"), savedId: { engine: "get", key: "bookId" } } },
+    toc: {
+      list: jsonPath("data","chapters"),
+      fields: {
+        title: jsonPath("title"),
+        chapterUrl: { engine: "put", input: jsonPath("url"), assignments: [{ key: "chapterId", value: jsonPath("id") }] }
+      }
+    },
+    content: { body: { engine: "get", key: "chapterId" } }
   };
   const jsonHttp = { async get(url) { return { url, document: jsonDocument }; } };
   const jsonAdapter = createAdapter(jsonConfig);
-  assert.deepEqual(await jsonAdapter.search({ keyword: "JSON", http: jsonHttp }), [
+  const jsonBooks = await jsonAdapter.search({ keyword: "JSON", http: jsonHttp });
+  assert.deepEqual(jsonBooks, [
     { title: "JSON小说甲", bookUrl: "https://example.test/book/2" },
     { title: "JSON小说乙", bookUrl: "https://example.test/book/3" }
   ]);
+  const jsonDetail = await jsonAdapter.getBookDetail({ bookUrl: jsonBooks[0].bookUrl, http: jsonHttp });
+  assert.equal(jsonDetail.savedId, "A-001");
+  const jsonChapters = await jsonAdapter.getChapters({ bookUrl: jsonBooks[0].bookUrl, http: jsonHttp });
+  assert.equal(jsonChapters.length, 1);
+  assert.equal(jsonChapters[0].chapterUrl, "https://example.test/chapter/99");
+  const jsonContent = await jsonAdapter.getContent({ chapterUrl: jsonChapters[0].chapterUrl, http: jsonHttp });
+  assert.equal(jsonContent.content, "chapter-001");
   jsonConfig.search.list = jsonPath("data", "featured");
   const singleJsonAdapter = createAdapter(jsonConfig);
   assert.deepEqual(await singleJsonAdapter.search({ keyword: "JSON", http: jsonHttp }), [
