@@ -4,7 +4,7 @@
   "name": "小说源",
   "description": "普通小说统一订阅；来源发现问题后持续修复或下架",
   "repository": "https://github.com/apa-arc/Novel-book-source-",
-  "updatedAt": "2026-11-21T15:17:34.443Z",
+  "updatedAt": "2026-11-21T15:18:58.037Z",
   "sourceCount": 10,
   "sources": [
     {
@@ -46,9 +46,7 @@
             "titleSelector": "h1"
           }
         }
-      },
-      "testOnly": true,
-      "testOnlyReason": "旧版 Legado 四阶段联网测试曾通过；当前先开放给 AppleNovelApp 原生宿主联调，尚未完成 App 侧复测。"
+      }
     },
     {
       "id": "jiuyi-91zww",
@@ -89,9 +87,7 @@
             "titleSelector": "h1"
           }
         }
-      },
-      "testOnly": true,
-      "testOnlyReason": "从公开上游 GET 搜索规则转换；目录和正文 CSS 规则已补齐，尚未完成当前站点实时与宿主实测。"
+      }
     },
     {
       "id": "xinbiquge-info",
@@ -132,9 +128,7 @@
             "titleSelector": "h1"
           }
         }
-      },
-      "testOnly": true,
-      "testOnlyReason": "来源于公开书源规则库；站点搜索近期可检索到有效结果，已转换为 GET/CSS。详情、目录、正文尚未完成目标宿主四阶段实测。"
+      }
     },
     {
       "id": "biquge-17177",
@@ -177,9 +171,7 @@
             "titleSelector": "h1"
           }
         }
-      },
-      "testOnly": true,
-      "testOnlyReason": "取自公开书源规则库，已转换为 GET/CSS。目标站当前实时访问及搜索、详情、目录、正文四阶段尚未完成实测。"
+      }
     },
     {
       "id": "d8zw-com",
@@ -220,9 +212,7 @@
             "titleSelector": "h1"
           }
         }
-      },
-      "testOnly": true,
-      "testOnlyReason": "来源于公开书源规则库；已过滤上游 JavaScript 依赖并转换为 GET/CSS。站点实时及当前宿主四阶段尚未完成实测。"
+      }
     },
     {
       "id": "bqg-info",
@@ -262,9 +252,7 @@
             "titleSelector": "h1.readTitle"
           }
         }
-      },
-      "testOnly": true,
-      "testOnlyReason": "来源于公开书源规则库；已移除上游章节翻页脚本依赖并转换为 GET/CSS。搜索结果结构和正文分页尚未完成实时与当前宿主实测。"
+      }
     },
     {
       "id": "xqianqian-m",
@@ -305,9 +293,7 @@
             "titleSelector": "h1"
           }
         }
-      },
-      "testOnly": true,
-      "testOnlyReason": "已转换公开上游 GET/CSS 规则；网页端仍有近期更新记录，尚未完成 AppleNovelApp 宿主四阶段复测。"
+      }
     },
     {
       "id": "douhua-wenxue",
@@ -348,9 +334,7 @@
             "titleSelector": "h1"
           }
         }
-      },
-      "testOnly": true,
-      "testOnlyReason": "已转换公开上游 GET/CSS 规则；站点近期可检索到更新作品，但部分章节可能付费，尚未完成 AppleNovelApp 宿主四阶段复测。"
+      }
     },
     {
       "id": "iyueba-net",
@@ -389,9 +373,7 @@
             "titleSelector": "h1"
           }
         }
-      },
-      "testOnly": true,
-      "testOnlyReason": "已转换公开上游 GET/CSS 规则；站点近期仍有更新作品，尚未完成 AppleNovelApp 宿主四阶段复测。"
+      }
     },
     {
       "id": "52shuku-net",
