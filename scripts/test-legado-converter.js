@@ -139,6 +139,12 @@ try{
  const implicitJson=parseLegacyChain("multiCategory[2].name");
  assert.equal(implicitJson.status,"candidate");
  assert.equal(implicitJson.selector.engine,"json");
+ const dottedJson=parseLegacyChain("data.searchList.searchList");
+ assert.equal(dottedJson.status,"candidate");
+ assert.equal(dottedJson.selector.engine,"json");
+ const dottedHtml=parseLegacyChain("div.content.title");
+ assert.equal(dottedHtml.status,"candidate");
+ assert.equal(dottedHtml.selector.engine,"legado-chain");
  const cssIndex=parseLegacyChain("a[1]@text");
  assert.equal(cssIndex.status,"candidate");
  assert.equal(cssIndex.selector.engine,"legado-chain");
