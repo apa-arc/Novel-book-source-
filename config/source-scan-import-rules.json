@@ -28,7 +28,9 @@
       ],
       "confirmedFailureDisposition": "failed-only-after-repeat-confirmation",
       "maxRetries": 3,
-      "retryDelaySeconds": 5
+      "retryDelaySeconds": 2.5,
+      "retryOnAllErrors": true,
+      "confirmedFailureRequiresSameFailureThreeConsecutiveAttempts": true
     },
     "bothKeywordsMustHaveSuccessfulRequests": true,
     "minimumPositiveKeywordCount": 1,
@@ -36,7 +38,14 @@
     "zeroResultsNeverOverridesSuccessfulRequest": true,
     "searchAndReadingStatusesAreIndependent": true,
     "directoryDetailOrContentFailureMustNotChangeSearchStatus": true,
-    "nodeEnvironmentFailureMustNotBeUsedToDeleteOrDisableSource": true
+    "nodeEnvironmentFailureMustNotBeUsedToDeleteOrDisableSource": true,
+    "searchResultRelevance": {
+      "requestSuccessAndResultCountAreSeparate": true,
+      "titleMatchCountRecordedSeparately": true,
+      "readingTestSelectsTitleMatchingKeywordWhenAvailable": true,
+      "noTitleMatchDoesNotDowngradeRequestSuccess": true,
+      "unrelatedFirstResultMustNotBeUsedWhenMatchingResultExists": true
+    }
   },
   "formalImportGate": {
     "requireLicenseEvidence": true,
@@ -51,7 +60,9 @@
     "rejectAdultOrEroticSources": true,
     "rejectLoginPaywallCaptchaOrDrmBypass": true,
     "homepageReachableOrJsonSchemaValidIsNotEnough": true,
-    "existingUserConfirmedSourcesDoNotNeedToRequalifyForRetention": true
+    "existingUserConfirmedSourcesDoNotNeedToRequalifyForRetention": true,
+    "requireAtLeastOneTitleMatchingKeyword": true,
+    "existingConfirmedSourcesAreNeverRemovedByImportGate": true
   },
   "baseline": {
     "date": "2026-11-21",
@@ -149,7 +160,15 @@
       "consecutiveFailureThreshold": 3,
       "transientFailurePolicy": "403、429、重定向、超时、DNS、连接错误、5xx 单次只记环境不确定并复测；不得改变搜索成功状态或自动下架。",
       "recoveryPolicy": "搜索与阅读阶段分别记录；搜索通过不因详情、目录或正文失败而变为搜索失败；阅读修复后重新测试阅读链路。",
-      "zeroResultPolicy": "搜索请求正常完成且解析成功即搜索通过；0结果单独记录，不作为请求失败。"
+      "zeroResultPolicy": "搜索请求正常完成且解析成功即搜索通过；0结果单独记录，不作为请求失败。",
+      "searchRetry": {
+        "maxAttempts": 3,
+        "delaySeconds": 2.5,
+        "retryAllThrownErrors": true,
+        "classifyOnlyAfterFinalAttempt": true,
+        "storeAttemptCount": true
+      },
+      "resultRelevance": "Record total parsed results and title-matching results separately; relevance failure never overwrites request success."
     },
     "importPolicy": "新源必须通过许可审查、App兼容校验、两个关键词搜索请求、至少一个关键词返回结果，以及详情、目录、首末章正文和文本质量测试；环境不确定的源继续复测，不进入失败删除流程；不设置候选池。"
   },
