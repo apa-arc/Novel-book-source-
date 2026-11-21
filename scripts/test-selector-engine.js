@@ -47,10 +47,10 @@ assert.equal(executeSelector(root,{engine:"composite",operator:"concat",parts:[
   {engine:"css",query:".list",output:"text"},
   {engine:"literal",value:" - 附加"}
 ]}),"第一章第二章第三章 - 附加");
-assert.equal(executeSelector(root,{engine:"composite",operator:"fallback",parts:[
+assert.deepEqual(executeSelector(root,{engine:"composite",operator:"fallback",parts:[
   {engine:"css",query:".missing",output:"text"},
   {engine:"css",query:".list",output:"text"}
-]}),"第一章第二章第三章");
+]}),["第一章第二章第三章"]);
 assert.equal(executeSelector(root,{engine:"replace",input:{engine:"css",query:".list",output:"text"},pattern:"第一",replacement:"第壹"}),"第壹章第二章第三章");
 assert.deepEqual(executeSelector(root,chain([{kind:"class",name:"list",index:null},{kind:"tag",name:"a",index:0}],"all")).length,1);
 assert.throws(()=>executeSelector(root,chain([{kind:"script",name:"x"}])),/unsupported-selector-step/);
