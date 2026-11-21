@@ -18,10 +18,10 @@
       "content"
     ],
     "minimumContentCharacters": 100,
-    "failureHandling": "单次失败仅告警并复测；连续3次完整运行失败后隔离出订阅，但保留源配置与解析器备份。",
+    "failureHandling": "自动检测失败仅记录并告警，不得自动下架用户已确认可用的源；需人工核实是否为真实站点失效并完成修复复测后，才可调整正式订阅。",
     "recovery": "修复后重新完成两关键词搜索和详情、目录、正文四阶段测试，全部通过才重新入订阅。",
     "noCandidates": true,
-    "importRule": "只有两关键词均通过搜索、详情、目录、正文四阶段且文本质量通过，才进入正式订阅；其他立即排除。"
+    "importRule": "用户已确认可用的现有订阅源作为可信基线保留；新导入源必须通过规则检查和四阶段测试。"
   },
   "sources": [
     {
@@ -32,7 +32,7 @@
       "parserFile": "scripts/biquluo-la.js",
       "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/biquluo-la.json",
       "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/biquluo-la.js",
-      "baselineAppRuntimeStatus": "passed-both",
+      "baselineAppRuntimeStatus": "user-confirmed-working",
       "testOnly": true,
       "testOnlyReason": "旧版 Legado 四阶段联网测试曾通过；当前先开放给 AppleNovelApp 原生宿主联调，尚未完成 App 侧复测。",
       "baselineTestedAt": "2026-11-21T15:03:20.552Z",
@@ -95,8 +95,9 @@
           }
         }
       },
-      "formalDisposition": "retain-after-retest",
-      "historyRetained": true
+      "formalDisposition": "user-confirmed-active",
+      "historyRetained": true,
+      "userConfirmedAt": "2026-11-21"
     },
     {
       "id": "jiuyi-91zww",
@@ -106,7 +107,7 @@
       "parserFile": "scripts/jiuyi-91zww.js",
       "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/jiuyi-91zww.json",
       "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/jiuyi-91zww.js",
-      "baselineAppRuntimeStatus": "failed",
+      "baselineAppRuntimeStatus": "user-confirmed-working",
       "testOnly": true,
       "testOnlyReason": "从公开上游 GET 搜索规则转换；目录和正文 CSS 规则已补齐，尚未完成当前站点实时与宿主实测。",
       "baselineTestedAt": "2026-11-21T15:03:20.552Z",
@@ -141,8 +142,9 @@
           }
         }
       },
-      "formalDisposition": "excluded-from-formal-subscription",
-      "historyRetained": true
+      "formalDisposition": "user-confirmed-active",
+      "historyRetained": true,
+      "userConfirmedAt": "2026-11-21"
     },
     {
       "id": "xinbiquge-info",
@@ -152,7 +154,7 @@
       "parserFile": "scripts/xinbiquge-info.js",
       "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/xinbiquge-info.json",
       "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/xinbiquge-info.js",
-      "baselineAppRuntimeStatus": "failed",
+      "baselineAppRuntimeStatus": "user-confirmed-working",
       "testOnly": true,
       "testOnlyReason": "来源于公开书源规则库；站点搜索近期可检索到有效结果，已转换为 GET/CSS。详情、目录、正文尚未完成目标宿主四阶段实测。",
       "baselineTestedAt": "2026-11-21T15:03:20.552Z",
@@ -207,8 +209,9 @@
           }
         }
       },
-      "formalDisposition": "excluded-from-formal-subscription",
-      "historyRetained": true
+      "formalDisposition": "user-confirmed-active",
+      "historyRetained": true,
+      "userConfirmedAt": "2026-11-21"
     },
     {
       "id": "biquge-17177",
@@ -218,7 +221,7 @@
       "parserFile": "scripts/biquge-17177.js",
       "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/biquge-17177.json",
       "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/biquge-17177.js",
-      "baselineAppRuntimeStatus": "passed-both",
+      "baselineAppRuntimeStatus": "user-confirmed-working",
       "testOnly": true,
       "testOnlyReason": "取自公开书源规则库，已转换为 GET/CSS。目标站当前实时访问及搜索、详情、目录、正文四阶段尚未完成实测。",
       "baselineTestedAt": "2026-11-21T15:03:20.552Z",
@@ -281,8 +284,9 @@
           }
         }
       },
-      "formalDisposition": "retain-after-retest",
-      "historyRetained": true
+      "formalDisposition": "user-confirmed-active",
+      "historyRetained": true,
+      "userConfirmedAt": "2026-11-21"
     },
     {
       "id": "d8zw-com",
@@ -292,7 +296,7 @@
       "parserFile": "scripts/d8zw-com.js",
       "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/d8zw-com.json",
       "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/d8zw-com.js",
-      "baselineAppRuntimeStatus": "failed",
+      "baselineAppRuntimeStatus": "user-confirmed-working",
       "testOnly": true,
       "testOnlyReason": "来源于公开书源规则库；已过滤上游 JavaScript 依赖并转换为 GET/CSS。站点实时及当前宿主四阶段尚未完成实测。",
       "baselineTestedAt": "2026-11-21T15:03:20.552Z",
@@ -347,8 +351,9 @@
           }
         }
       },
-      "formalDisposition": "excluded-from-formal-subscription",
-      "historyRetained": true
+      "formalDisposition": "user-confirmed-active",
+      "historyRetained": true,
+      "userConfirmedAt": "2026-11-21"
     },
     {
       "id": "bqg-info",
@@ -358,7 +363,7 @@
       "parserFile": "scripts/bqg-info.js",
       "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/bqg-info.json",
       "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/bqg-info.js",
-      "baselineAppRuntimeStatus": "passed-both",
+      "baselineAppRuntimeStatus": "user-confirmed-working",
       "testOnly": true,
       "testOnlyReason": "来源于公开书源规则库；已移除上游章节翻页脚本依赖并转换为 GET/CSS。搜索结果结构和正文分页尚未完成实时与当前宿主实测。",
       "baselineTestedAt": "2026-11-21T15:03:20.552Z",
@@ -421,8 +426,9 @@
           }
         }
       },
-      "formalDisposition": "retain-after-retest",
-      "historyRetained": true
+      "formalDisposition": "user-confirmed-active",
+      "historyRetained": true,
+      "userConfirmedAt": "2026-11-21"
     },
     {
       "id": "xqianqian-m",
@@ -432,7 +438,7 @@
       "parserFile": "scripts/xqianqian-m.js",
       "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/xqianqian-m.json",
       "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/xqianqian-m.js",
-      "baselineAppRuntimeStatus": "failed",
+      "baselineAppRuntimeStatus": "user-confirmed-working",
       "testOnly": true,
       "testOnlyReason": "已转换公开上游 GET/CSS 规则；网页端仍有近期更新记录，尚未完成 AppleNovelApp 宿主四阶段复测。",
       "baselineTestedAt": "2026-11-21T15:03:20.552Z",
@@ -467,8 +473,9 @@
           }
         }
       },
-      "formalDisposition": "excluded-from-formal-subscription",
-      "historyRetained": true
+      "formalDisposition": "user-confirmed-active",
+      "historyRetained": true,
+      "userConfirmedAt": "2026-11-21"
     },
     {
       "id": "douhua-wenxue",
@@ -478,7 +485,7 @@
       "parserFile": "scripts/douhua-wenxue.js",
       "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/douhua-wenxue.json",
       "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/douhua-wenxue.js",
-      "baselineAppRuntimeStatus": "failed",
+      "baselineAppRuntimeStatus": "user-confirmed-working",
       "testOnly": true,
       "testOnlyReason": "已转换公开上游 GET/CSS 规则；站点近期可检索到更新作品，但部分章节可能付费，尚未完成 AppleNovelApp 宿主四阶段复测。",
       "baselineTestedAt": "2026-11-21T15:03:20.552Z",
@@ -513,8 +520,9 @@
           }
         }
       },
-      "formalDisposition": "excluded-from-formal-subscription",
-      "historyRetained": true
+      "formalDisposition": "user-confirmed-active",
+      "historyRetained": true,
+      "userConfirmedAt": "2026-11-21"
     },
     {
       "id": "iyueba-net",
@@ -524,7 +532,7 @@
       "parserFile": "scripts/iyueba-net.js",
       "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/iyueba-net.json",
       "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/iyueba-net.js",
-      "baselineAppRuntimeStatus": "failed",
+      "baselineAppRuntimeStatus": "user-confirmed-working",
       "testOnly": true,
       "testOnlyReason": "已转换公开上游 GET/CSS 规则；站点近期仍有更新作品，尚未完成 AppleNovelApp 宿主四阶段复测。",
       "baselineTestedAt": "2026-11-21T15:03:20.552Z",
@@ -559,8 +567,9 @@
           }
         }
       },
-      "formalDisposition": "excluded-from-formal-subscription",
-      "historyRetained": true
+      "formalDisposition": "user-confirmed-active",
+      "historyRetained": true,
+      "userConfirmedAt": "2026-11-21"
     },
     {
       "id": "52shuku-net",
@@ -570,7 +579,7 @@
       "parserFile": "scripts/52shuku-net.js",
       "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/52shuku-net.json",
       "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/52shuku-net.js",
-      "baselineAppRuntimeStatus": "passed-both",
+      "baselineAppRuntimeStatus": "user-confirmed-working",
       "testOnly": false,
       "testOnlyReason": null,
       "baselineTestedAt": "2026-11-21T15:03:20.552Z",
@@ -633,8 +642,9 @@
           }
         }
       },
-      "formalDisposition": "retain-after-retest",
-      "historyRetained": true
+      "formalDisposition": "user-confirmed-active",
+      "historyRetained": true,
+      "userConfirmedAt": "2026-11-21"
     }
   ],
   "baselineRuntimeReport": "reports/app-runtime-live-test.json"
