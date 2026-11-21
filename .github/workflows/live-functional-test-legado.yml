@@ -6,6 +6,8 @@ on:
     branches: [main]
     paths:
       - "scripts/live-test-app-runtime.ts"
+      - "scripts/app-runtime-classification.ts"
+      - "scripts/test-app-runtime-classification.ts"
       - "scripts/diagnose-app-runtime-network.ts"
       - ".github/workflows/live-functional-test-legado.yml"
 
@@ -32,7 +34,7 @@ jobs:
           node-version: 22
       - name: Install TypeScript runner
         run: npm install --no-save --no-package-lock tsx
-      - name: Run live tests with AppleNovelApp runtime
+      - name: Verify conservative search failure classification\n        run: npx tsx scripts/test-app-runtime-classification.ts\n      - name: Run live tests with AppleNovelApp runtime
         run: npx tsx scripts/live-test-app-runtime.ts
       - name: Diagnose search network and user-agent differences
         run: npx tsx scripts/diagnose-app-runtime-network.ts
