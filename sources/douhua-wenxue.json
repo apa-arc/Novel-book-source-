@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "douhua-wenxue",
+  "name": "豆花文学",
+  "kind": "public-web",
+  "version": "1.0.0",
+  "baseUrl": "https://www.douhuawenxue.com/",
+  "domains": [
+    "www.douhuawenxue.com"
+  ],
+  "script": "scripts/douhua-wenxue.js",
+  "enabled": true,
+  "testOnly": true,
+  "testOnlyReason": "已转换公开上游 GET/CSS 规则；站点近期可检索到更新作品，但部分章节可能付费，尚未完成 AppleNovelApp 宿主四阶段复测。",
+  "description": "原创小说站网页源；GET 搜索，详情、目录和正文采用 CSS 规则。站点近期仍有更新内容；部分作品可能存在付费章节，当前宿主四阶段复测待完成。",
+  "licenseApproved": true,
+  "licenseType": "self-owned",
+  "licenseEvidence": "本仓库原创的声明式 GET/CSS 适配配置与解析器，不复制第三方脚本或小说正文。",
+  "licenseEvidenceUrl": "https://github.com/apa-arc/Novel-book-source-/blob/main/sources/douhua-wenxue.json",
+  "hostValidated": false,
+  "appConfig": {
+    "searchUrl": "https://www.douhuawenxue.com/search?kd={keyword}",
+    "bookUrl": "https://www.douhuawenxue.com/{bookUrl}",
+    "chapterListUrl": "https://www.douhuawenxue.com/{bookUrl}",
+    "chapterUrl": "https://www.douhuawenxue.com/{chapterUrl}",
+    "htmlRules": {
+      "search": {
+        "itemSelector": ".book-base",
+        "titleSelector": "h3 a",
+        "urlSelector": "h3 a",
+        "authorSelector": ".book_author",
+        "descriptionSelector": ".book_ct"
+      },
+      "detail": {
+        "titleSelector": "h1"
+      },
+      "chapters": {
+        "itemSelector": ".list-inline-3 .list_item",
+        "titleSelector": "a",
+        "urlSelector": "a"
+      },
+      "content": {
+        "contentSelector": "#J_chapterContent",
+        "titleSelector": "h1"
+      }
+    }
+  }
+}
