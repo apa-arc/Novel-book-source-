@@ -307,7 +307,7 @@ function parseLegacyChain(expression) {
     for(let i=1;i<regexParts.length;i+=2){
       const rawPattern=regexParts[i],replacement=regexParts[i+1]||"";
       const pattern=rawPattern.replace(/\\h/g,"[\\t\\x20]").replace(/\\v/g,"[\\r\\n\\x0B\\f]");
-      if(!pattern||pattern.length>1024||/(?:\\([^)]*[+*][^)]*\\))[+*{]/.test(pattern)) return {status:"manual",reason:"unsupported-regex-transform"};
+      if(!pattern||pattern.length>1024||/\([^)]*[+*][^)]*\)[+*{]/.test(pattern)) return {status:"manual",reason:"unsupported-regex-transform"};
       selector={engine:"replace",input:selector,pattern,replacement,replaceFirst};
     }
     return {status:"candidate",selector};
