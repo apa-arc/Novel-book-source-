@@ -19,6 +19,8 @@ function element(tag,attrs={},children=[]){
       if(/^[a-z][a-z0-9-]*$/i.test(query)) return all.filter(n=>n.tagName.toLowerCase()===query.toLowerCase());
       const attr=query.match(/^([a-z][a-z0-9-]*)\[([a-z-]+)="([^"]*)"\]$/i);
       if(attr) return all.filter(n=>n.tagName.toLowerCase()===attr[1].toLowerCase()&&n.getAttribute(attr[2])===attr[3]);
+      const attrOnly=query.match(/^\[([a-z-]+)="([^"]*)"\]$/i);
+      if(attrOnly) return all.filter(n=>n.getAttribute(attrOnly[1])===attrOnly[2]);
       throw new Error("unsupported test selector: "+query);
     }
   };
