@@ -4,9 +4,11 @@ import { createSourceHttpClient } from "../app/src/source-runtime.ts";
 import { searchNovelSource } from "../app/src/source-search.ts";
 import { fetchNovelDetail, fetchNovelChapterList, fetchNovelChapterContent } from "../app/src/source-catalog.ts";
 import type { NovelSource } from "../app/src/source.ts";
+import { scanTextQuality } from "../runtime/text-quality.js";
 
 const keywords = ["斗罗大陆", "斗破苍穹"];
-const raw = fs.readFileSync("subscription.json", "utf8");
+const healthSubscriptionPath = fs.existsSync("config/health-check-subscription.json") ? "config/health-check-subscription.json" : "subscription.json";
+const raw = fs.readFileSync(healthSubscriptionPath, "utf8");
 const parsed = parseSourceSubscription(raw);
 
 type Stage = { stage: string; status: "passed" | "failed"; detail?: string };
@@ -32,7 +34,9 @@ async function testTerm(source: NovelSource, keyword: string): Promise<TermResul
     out.stages.push({ stage: "目录", status: "passed", detail: chapters.length + " 章；首章「" + chapters[0].title + "」" });
     const content = await fetchNovelChapterContent(source, chapters[0], client);
     if (!content.content || content.content.trim().length < 100) throw new Error("正文为空或少于 100 字");
-    out.stages.push({ stage: "正文", status: "passed", detail: content.content.trim().length + " 字" });
+    const textQuality = scanTextQuality(content.content);
+    if (textQuality.status !== "normal") throw new Error("正文质量未通过：" + JSON.stringify(textQuality.flags));
+    out.stages.push({ stage: "正文", status: "passed", detail: content.content.trim().length + " 字；文本质量正常" });
     out.status = "passed";
   } catch (error) {
     out.error = errorText(error);
