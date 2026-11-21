@@ -184,7 +184,7 @@ function parseSimpleXPath(expression) {
     if(!segment) return null;
     let stepAxis=axis,tag="*",rest=segment;
     if(rest===".."){stepAxis="parent";rest="";}
-    else if(rest.startsWith("following-sibling::")){stepAxis="followingSibling";rest=rest.slice(18);}
+    else if(rest.startsWith("following-sibling::")){stepAxis="followingSibling";rest=rest.slice("following-sibling::".length);}
     else if(rest.startsWith("preceding-sibling::")){stepAxis="precedingSibling";rest=rest.slice(19);}
     else{
       const name=rest.match(/^([A-Za-z*][\w*-]*)/);
