@@ -4,8 +4,8 @@
   "name": "小说源",
   "description": "普通小说统一订阅；来源发现问题后持续修复或下架。",
   "repository": "https://github.com/apa-arc/Novel-book-source-",
-  "updatedAt": "2026-11-21T08:06:00.000Z",
-  "sourceCount": 23,
+  "updatedAt": "2026-11-21T12:00:00.000Z",
+  "sourceCount": 25,
   "sources": [
     {
       "id": "biquluo-la",
@@ -980,6 +980,92 @@
       },
       "testOnly": true,
       "testOnlyReason": "从公开书源集合的 GET/HTTPS 规则转换为本仓库 CSS 四阶段配置；未采用上游脚本规则。当前站点实时访问及目标宿主四阶段尚未完成实测。"
+    },
+    {
+      "id": "xqianqian-m",
+      "name": "千千小说",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "普通小说网页源；GET 搜索，详情、目录和正文使用 CSS 规则。公开上游标记为有效，网站近期仍有更新；当前宿主四阶段复测待完成。",
+      "baseUrl": "https://m.xqianqian.com/",
+      "domains": [
+        "m.xqianqian.com"
+      ],
+      "categories": [],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/xqianqian-m.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/xqianqian-m.js",
+      "appConfig": {
+        "searchUrl": "https://m.xqianqian.com/s.php?q={keyword}",
+        "bookUrl": "https://m.xqianqian.com/{bookUrl}",
+        "chapterListUrl": "https://m.xqianqian.com/{bookUrl}",
+        "chapterUrl": "https://m.xqianqian.com/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": ".bookbox",
+            "titleSelector": ".bookname a",
+            "urlSelector": ".bookname a",
+            "authorSelector": ".author"
+          },
+          "detail": {
+            "titleSelector": ".name",
+            "descriptionSelector": ".book_about dd"
+          },
+          "chapters": {
+            "itemSelector": ".book_last dl dd",
+            "titleSelector": "a",
+            "urlSelector": "a"
+          },
+          "content": {
+            "contentSelector": "#chaptercontent",
+            "titleSelector": "h1"
+          }
+        }
+      },
+      "testOnly": true,
+      "testOnlyReason": "已转换公开上游 GET/CSS 规则；网页端仍有近期更新记录，尚未完成 AppleNovelApp 宿主四阶段复测。"
+    },
+    {
+      "id": "douhua-wenxue",
+      "name": "豆花文学",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "原创小说站网页源；GET 搜索，详情、目录和正文采用 CSS 规则。站点近期仍有更新内容；部分作品可能存在付费章节，当前宿主四阶段复测待完成。",
+      "baseUrl": "https://www.douhuawenxue.com/",
+      "domains": [
+        "www.douhuawenxue.com"
+      ],
+      "categories": [],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/douhua-wenxue.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/douhua-wenxue.js",
+      "appConfig": {
+        "searchUrl": "https://www.douhuawenxue.com/search?kd={keyword}",
+        "bookUrl": "https://www.douhuawenxue.com/{bookUrl}",
+        "chapterListUrl": "https://www.douhuawenxue.com/{bookUrl}",
+        "chapterUrl": "https://www.douhuawenxue.com/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": ".book-base",
+            "titleSelector": "h3 a",
+            "urlSelector": "h3 a",
+            "authorSelector": ".book_author",
+            "descriptionSelector": ".book_ct"
+          },
+          "detail": {
+            "titleSelector": "h1"
+          },
+          "chapters": {
+            "itemSelector": ".list-inline-3 .list_item",
+            "titleSelector": "a",
+            "urlSelector": "a"
+          },
+          "content": {
+            "contentSelector": "#J_chapterContent",
+            "titleSelector": "h1"
+          }
+        }
+      },
+      "testOnly": true,
+      "testOnlyReason": "已转换公开上游 GET/CSS 规则；站点近期可检索到更新作品，但部分章节可能付费，尚未完成 AppleNovelApp 宿主四阶段复测。"
     }
   ]
 }
