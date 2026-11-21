@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "subscriptionId": "apa-arc-novel-book-source",
-  "name": "普通小说书源",
-  "description": "所有非成人书源统一订阅",
+  "name": "小说源",
+  "description": "统一小说订阅，普通与成人小说源合并管理；来源可先收录，发现问题后再修复或下架。",
   "repository": "https://github.com/apa-arc/Novel-book-source-",
   "updatedAt": "2026-11-21T06:26:27.598Z",
   "sourceCount": 1,
