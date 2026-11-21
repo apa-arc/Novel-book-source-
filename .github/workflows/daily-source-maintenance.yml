@@ -1,9 +1,10 @@
 name: Daily novel source health scan and app runtime test
 
 on:
-  schedule:
-    - cron: "0 2 * * *"
   workflow_dispatch:
+  workflow_run:
+    workflows: ["Build the single ordinary novel subscription"]
+    types: [completed]
   push:
     branches: [main]
     paths:
