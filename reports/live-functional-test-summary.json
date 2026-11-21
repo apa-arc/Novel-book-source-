@@ -1,29 +1,29 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T03:16:11.717Z",
-  "testedRecords": 8687,
+  "generatedAt": "2026-11-21T05:59:03.441Z",
+  "testedRecords": 8683,
   "statusCounts": {
     "unsupported": 5677,
-    "unverified": 1410,
-    "failed": 775,
-    "blocked": 554,
+    "unverified": 1419,
+    "failed": 774,
+    "blocked": 547,
     "excluded": 255,
-    "passed": 16
+    "passed": 11
   },
   "providerCounts": {
     "subscription-ordinary": {
       "unsupported": 1865,
-      "unverified": 572,
-      "failed": 302,
-      "blocked": 223,
+      "unverified": 574,
+      "failed": 308,
+      "blocked": 215,
       "excluded": 2,
-      "passed": 6
+      "passed": 2
     },
     "subscription-adult": {
       "unsupported": 60,
-      "blocked": 4,
       "unverified": 7,
-      "failed": 5
+      "failed": 5,
+      "blocked": 4
     },
     "AOAOSTAR-candidate": {
       "unsupported": 2566,
@@ -35,36 +35,18 @@
     },
     "luanmuc-candidate": {
       "unsupported": 1186,
-      "blocked": 105,
-      "failed": 151,
-      "unverified": 260,
-      "passed": 8,
-      "excluded": 25
+      "unverified": 267,
+      "blocked": 106,
+      "failed": 144,
+      "excluded": 25,
+      "passed": 7
     }
   },
-  "passedRecords": 16,
-  "passedUniqueCount": 9,
+  "passedRecords": 11,
+  "passedUniqueCount": 8,
   "ordinaryPassedUnique": 6,
-  "adultPassedUnique": 3,
+  "adultPassedUnique": 2,
   "passedUniqueSources": [
-    {
-      "name": "🐦夜书吧po18mx",
-      "host": "www.po18mx.com",
-      "category": "adult",
-      "contentLength": 2538,
-      "providers": [
-        "luanmuc-candidate"
-      ]
-    },
-    {
-      "name": "肉文NP#2",
-      "host": "www.rouwennp.org",
-      "category": "adult",
-      "contentLength": 1660,
-      "providers": [
-        "luanmuc-candidate"
-      ]
-    },
     {
       "name": "🎉 疯读小说",
       "host": "fiction.fengduxiaoshuo.com",
@@ -81,8 +63,7 @@
       "category": "ordinary",
       "contentLength": 1196,
       "providers": [
-        "luanmuc-candidate",
-        "subscription-ordinary"
+        "luanmuc-candidate"
       ]
     },
     {
@@ -91,7 +72,6 @@
       "category": "ordinary",
       "contentLength": 2831,
       "providers": [
-        "subscription-ordinary",
         "luanmuc-candidate"
       ]
     },
@@ -101,7 +81,6 @@
       "category": "ordinary",
       "contentLength": 615,
       "providers": [
-        "subscription-ordinary",
         "luanmuc-candidate"
       ]
     },
@@ -111,7 +90,6 @@
       "category": "ordinary",
       "contentLength": 2109,
       "providers": [
-        "subscription-ordinary",
         "luanmuc-candidate"
       ]
     },
@@ -120,6 +98,15 @@
       "host": "api.wnreader.com",
       "category": "ordinary",
       "contentLength": 150,
+      "providers": [
+        "luanmuc-candidate"
+      ]
+    },
+    {
+      "name": "🐦夜书吧po18mx",
+      "host": "www.po18mx.com",
+      "category": "adult",
+      "contentLength": 2540,
       "providers": [
         "luanmuc-candidate"
       ]

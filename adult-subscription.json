@@ -3729,5 +3729,66 @@
     },
     "searchUrl": "/search/{{key}}/{{page}}",
     "weight": 0
+  },
+  {
+    "bookSourceName": "🐦夜书吧po18mx",
+    "bookSourceUrl": "https://www.po18mx.com",
+    "searchUrl": "https://www.po18mx.com/modules/article/search.php,{\n  \"body\": \"searchkey={{key}}&searchtype=articlename\",\n  \"method\": \"POST\"\n}",
+    "bookSourceType": 0,
+    "bookSourceGroup": "🔞实测可用",
+    "enabled": true,
+    "enabledExplore": false,
+    "bookSourceComment": "规则来源：luanmuc/legado-book-sources（MIT License）；已完成公开搜索、详情、目录及正文实测。此条目不含 Cookie、登录态或认证凭据。",
+    "ruleSearch": {
+      "bookList": "id.sitebox@dl",
+      "name": "h3@a@text",
+      "bookUrl": "a.0@href"
+    },
+    "ruleBookInfo": {
+      "name": "[property=\"og:novel:book_name\"]@content",
+      "author": "[property=\"og:novel:author\"]@content",
+      "intro": "[property=\"og:description\"]@content",
+      "kind": "[property=\"og:novel:category\"]@content&&\n[property=\"og:novel:status\"]@content&&\n[property=\"og:novel:update_time\"]@content"
+    },
+    "ruleToc": {
+      "chapterList": "id.chapterList@li@a",
+      "chapterName": "text",
+      "chapterUrl": "href"
+    },
+    "ruleContent": {
+      "content": "id.TextContent@textNodes"
+    },
+    "customOrder": 1603
+  },
+  {
+    "bookSourceName": "肉书屋②",
+    "bookSourceUrl": "https://m.roushuwu2.com",
+    "searchUrl": "/s.php,{\n  \"method\": \"POST\",\n  \"body\": \"type=articlename&s={{key}}\"\n}",
+    "bookSourceType": 0,
+    "bookSourceGroup": "🔞实测可用",
+    "enabled": true,
+    "enabledExplore": false,
+    "bookSourceComment": "规则来源：luanmuc/legado-book-sources（MIT License）；已完成公开搜索、详情、目录及正文实测。此条目不含 Cookie、登录态或认证凭据。",
+    "header": "{\"User-Agent\":\"Mozilla/5.0 (Linux; Android 10; SK) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36\"}",
+    "ruleSearch": {
+      "bookList": "class.common-bookele[0:4]",
+      "name": "tag.a.0@text",
+      "bookUrl": "tag.a.0@href"
+    },
+    "ruleBookInfo": {
+      "name": "//*[@id=\"nr_body\"]/nav/ul/li[2]/text()##\\_.*",
+      "author": "//*[@id=\"novelMain\"]/div[1]/table/tbody/tr/td[1]/div[1]/h2/text()",
+      "tocUrl": "//*[@style=\"color:red;\"]/@href",
+      "kind": "class.article_info_td@tag.a.0@text&&class.article_info_td@tag.time@text"
+    },
+    "ruleToc": {
+      "chapterList": "tag.div.0@tag.ul@tag.li!-1@a",
+      "chapterName": "text",
+      "chapterUrl": "href"
+    },
+    "ruleContent": {
+      "content": "id.nr1@html"
+    },
+    "customOrder": 1604
   }
 ]

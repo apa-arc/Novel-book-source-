@@ -1,14 +1,13 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T03:16:12.025Z",
+  "generatedAt": "2026-11-21T05:59:03.845Z",
   "source": "luanmuc/legado-book-sources (MIT License)",
   "ordinary": {
     "candidates": 4,
     "valid": 4,
-    "added": 0,
-    "updated": 4,
-    "addedSources": [],
-    "updatedSources": [
+    "added": 4,
+    "updated": 0,
+    "addedSources": [
       {
         "name": "笔趣阁140",
         "url": "https://www.biquluo.la"
@@ -25,21 +24,18 @@
         "name": "新御宅屋",
         "url": "https://mm.xyuzhaiwu.xyz/"
       }
-    ]
+    ],
+    "updatedSources": []
   },
   "adult": {
-    "candidates": 3,
-    "valid": 3,
-    "added": 3,
+    "candidates": 2,
+    "valid": 2,
+    "added": 2,
     "updated": 0,
     "addedSources": [
       {
         "name": "🐦夜书吧po18mx",
         "url": "https://www.po18mx.com"
-      },
-      {
-        "name": "肉文NP#2",
-        "url": "https://www.rouwennp.org"
       },
       {
         "name": "肉书屋②",
