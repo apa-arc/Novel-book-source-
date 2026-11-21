@@ -16,9 +16,9 @@ function ancestors(node){const out=[];let n=node;for(let i=0;n&&i<5;i++,n=n.pare
   const search=await get(url.href),sd=parseHTML(search.html).document;
   const anchors=[...sd.querySelectorAll("a[href]")].map(a=>({text:norm(a.textContent,120),href:a.getAttribute("href")||""})).filter(a=>a.text&&a.href).slice(0,100);
   const candidates=[...sd.querySelectorAll("li,article,div")].map(summary).filter(x=>x.textLength>30).sort((a,b)=>b.textLength-a.textLength).slice(0,20);
-  const result={keyword,search:{status:search.status,url:search.url,contentType:search.contentType,title:norm(sd.querySelector("title")?.textContent),body:norm(sd.body?.textContent),anchors,candidates,searchResultAncestors}};
   const resultNode=[...sd.querySelectorAll("a[href]")].find(a=>a.textContent.includes(keyword)&&a.getAttribute("href")?.includes("/wuxia/"));
   const searchResultAncestors=resultNode?ancestors(resultNode):[];
+  const result={keyword,search:{status:search.status,url:search.url,contentType:search.contentType,title:norm(sd.querySelector("title")?.textContent),body:norm(sd.body?.textContent),anchors,candidates,searchResultAncestors}};
   const match=anchors.find(a=>a.text.includes(keyword+"_唐家三少")&&a.href.includes("/wuxia/")&&/\.html/i.test(a.href))||anchors.find(a=>a.text.includes(keyword)&&a.href.includes("/wuxia/")&&/\.html/i.test(a.href));
   if(match){
    const bookUrl=new URL(match.href,search.url).href;
