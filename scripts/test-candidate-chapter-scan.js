@@ -1,6 +1,6 @@
 "use strict";
 const assert=require("node:assert/strict");
-const {scanCandidates,textFromHtml,sitemapUrls,robotsSitemaps}=require("../scripts/scan-candidate-chapters");
+const {scanCandidates,textFromHtml,sitemapUrls,robotsSitemaps,parseRobots,robotsAllows}=require("../scripts/scan-candidate-chapters");
 assert.match(textFromHtml("<p>第一章&nbsp;你好</p><script>secret</script>"),/第一章.*你好/);
 assert.doesNotMatch(textFromHtml("<script>secret</script><p>正文</p>"),/secret/);
 assert.deepEqual(sitemapUrls('<loc>https://example.com/book/123/1.html</loc><loc>https://evil.test/read/1</loc>',"https://example.com","example.com"),["https://example.com/book/123/1.html"]);
@@ -28,6 +28,11 @@ const html="<html><head><title>测试小说 第1章 开始</title></head><body><
  };
  const mixed=await scanCandidates({candidates:[{id:"mixed",name:"测试小说",baseUrl:"https://mixed.example"}],fetchImpl:mixedFetch,limit:1});
  assert.equal(mixed.results[0].sampledChapters,1);assert.equal(mixed.results[0].status,"manual-review");assert.ok(mixed.results[0].reasons.includes("sample-page-content-too-large-for-single-chapter"));
+ const blockedCalls=[];
+ const robotsBlocked=await scanCandidates({candidates:[{id:"robots",name:"小说站",baseUrl:"https://robots.example"}],fetchImpl:async url=>{blockedCalls.push(url);if(url==="https://robots.example/robots.txt")return response(url,"User-agent: *\nDisallow: /");throw Error("should-not-fetch");},limit:1});
+ assert.equal(robotsBlocked.results[0].status,"robots-disallowed");assert.deepEqual(blockedCalls,["https://robots.example/robots.txt"]);
+ const policy=parseRobots("User-agent: *\nDisallow: /private\nAllow: /private/public\nSitemap: https://example.com/sitemap.xml","https://example.com","example.com");
+ assert.equal(robotsAllows(new URL("https://example.com/private/1"),policy),false);assert.equal(robotsAllows(new URL("https://example.com/private/public/1"),policy),true);assert.equal(policy.sitemaps.length,1);
  const offsetReport=await scanCandidates({candidates:[{id:"first",name:"第一站",baseUrl:"https://first.example"},{id:"second",name:"第二站",baseUrl:"https://second.example"}],fetchImpl:async()=>{throw Error("blocked");},limit:1,offset:1});
  assert.equal(offsetReport.candidateCount,1);assert.equal(offsetReport.offset,1);assert.equal(offsetReport.totalUniqueCandidates,2);assert.equal(offsetReport.results[0].id,"second");
  console.log("Candidate chapter scanner tests passed.");
