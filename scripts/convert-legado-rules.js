@@ -54,10 +54,10 @@ function scanExpressionOperators(raw) {
 }
 function splitTopLevel(raw, operator) {
   const parts=[];
-  let quote=null, bracketDepth=0, parenDepth=0;
+  let quote=null, bracketDepth=0, parenDepth=0, start=0;
   for(let i=0;i<raw.length;i++){
     const ch=raw[i];
-    if(ch==="\\\\"){i++;continue;}
+    if(ch==="\\"){i++;continue;}
     if(quote){if(ch===quote) quote=null;continue;}
     if(ch==="'"||ch=='"'){quote=ch;continue;}
     if(ch==="["){bracketDepth++;continue;}
@@ -66,16 +66,12 @@ function splitTopLevel(raw, operator) {
     if(ch==="("){parenDepth++;continue;}
     if(ch===")"&&parenDepth>0){parenDepth--;continue;}
     if(parenDepth===0&&raw.startsWith(operator,i)){
-      parts.push(raw.slice(parts.length?undefined:0,i).trim());
+      parts.push(raw.slice(start,i).trim());
       i+=operator.length-1;
-      // Continue from the end of this operand without losing prior boundaries.
-      const last=parts.length-1;
-      parts[last]=parts[last]||"";
-      raw=raw.slice(i+1);
-      i=-1;
+      start=i+1;
     }
   }
-  return parts.length?parts.concat(raw.trim()):null;
+  return parts.length?parts.concat(raw.slice(start).trim()):null;
 }
 function parseLegacyChain(expression) {
   let raw = String(expression).trim();
