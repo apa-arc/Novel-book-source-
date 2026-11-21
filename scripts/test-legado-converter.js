@@ -113,6 +113,12 @@ try{
  assert.deepEqual(compoundCssAttribute.selector.steps,[{kind:"css",query:"div.chapter[data-id]"}]);
  const leadingClassAttribute=parseLegacyChain(".chapter[data-id]@text");
  assert.deepEqual(leadingClassAttribute.selector.steps,[{kind:"css",query:".chapter[data-id]"}]);
+ const leadingAttr=parseLegacyChain('[property="og:title"]@content');
+ assert.deepEqual(leadingAttr.selector.steps,[{kind:"css",query:'[property="og:title"]'}]);
+ const suffixAttr=parseLegacyChain('[property$=".html"]@content');
+ assert.deepEqual(suffixAttr.selector.steps,[{kind:"css",query:'[property$=".html"]'}]);
+ const tokenAttr=parseLegacyChain('[class~="chapter"]@text');
+ assert.deepEqual(tokenAttr.selector.steps,[{kind:"css",query:'[class~="chapter"]'}]);
  const andExpression=parseLegacyChain("class.title&&class.name@text");
  assert.equal(andExpression.status,"candidate");
  assert.equal(andExpression.selector.engine,"composite");
