@@ -237,12 +237,14 @@ function parseLegacyChain(expression) {
         }
       }
     }
-    const trailingIndex=parts.length>1 ? parseIndex(parts[parts.length-1]) : null;
-    const hasIndex=trailingIndex!==null;
-    const name=hasIndex ? parts.slice(0,-1).join(".") : parts.join(".");
+    const trailingToken=parts.length>1 ? parts[parts.length-1] : null;
+    const trailingSelection=trailingToken!==null ? parseSelection(trailingToken) : null;
+    const hasTrailingSelection=!!trailingSelection;
+    const name=hasTrailingSelection ? parts.slice(0,-1).join(".") : parts.join(".");
     if (!name) return {status:"manual",reason:"invalid-selector-index"};
-    const index=hasIndex?trailingIndex:(selection&&selection.mode==="index"?selection.index:null);
-    steps.push({kind,name,index,...(selection&&selection.mode!=="index"?{selection}:{})});
+    const effectiveSelection=selection||trailingSelection;
+    const index=effectiveSelection&&effectiveSelection.mode==="index"?effectiveSelection.index:null;
+    steps.push({kind,name,index,...(effectiveSelection&&effectiveSelection.mode!=="index"?{selection:effectiveSelection}:{})});
   }
   if (!steps.length) return {status:"manual",reason:"empty-selector-chain"};
   return {status:"candidate",selector:{engine:"legado-chain",steps,output,reverse}};
