@@ -224,7 +224,7 @@ function parseTemplateExpression(raw) {
 function parseCompositePart(raw) {
   const value=String(raw||"").trim();
   if(!value) return null;
-  if(/^[A-Za-z_$][\\w$-]*$/.test(value)) return {status:"candidate",selector:{engine:"variable",name:value}};
+  if(/^[A-Za-z_$][\w$-]*$/.test(value)) return {status:"candidate",selector:{engine:"variable",name:value}};
   return parseLegacyChain(value);
 }
 function parseLegacyChain(expression) {
