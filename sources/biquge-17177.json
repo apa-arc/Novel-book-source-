@@ -10,8 +10,6 @@
   ],
   "script": "scripts/biquge-17177.js",
   "enabled": true,
-  "testOnly": true,
-  "testOnlyReason": "取自公开书源规则库，已转换为 GET/CSS。目标站当前实时访问及搜索、详情、目录、正文四阶段尚未完成实测。",
   "description": "普通小说网页源；GET 搜索，详情页元信息、目录与正文使用 CSS 提取。",
   "licenseApproved": true,
   "licenseType": "self-owned",
@@ -46,5 +44,7 @@
         "titleSelector": "h1"
       }
     }
-  }
+  },
+  "userConfirmedExistingSource": true,
+  "userConfirmedWorkingAt": "2026-11-21"
 }
