@@ -3,25 +3,21 @@ const fs = require("node:fs");
 const path = require("node:path");
 const root = path.resolve(__dirname, "..");
 const reportPath = path.join(root, "reports/app-runtime-live-test.json");
-const indexPath = path.join(root, "index.json");
 const registryPath = path.join(root, "config/subscription-source-registry.json");
 const historyPath = path.join(root, "config/source-health-history.json");
 const report = JSON.parse(fs.readFileSync(reportPath, "utf8"));
-const index = JSON.parse(fs.readFileSync(indexPath, "utf8"));
 const registry = JSON.parse(fs.readFileSync(registryPath, "utf8"));
 const history = fs.existsSync(historyPath)
   ? JSON.parse(fs.readFileSync(historyPath, "utf8"))
   : { schemaVersion: 1, sources: {} };
 const registryById = new Map(registry.sources.map(x => [x.id, x]));
-const indexById = new Map(index.sources.map(x => [x.id, x]));
 const reportById = new Map(report.results.map(x => [x.id, x]));
 const now = report.generatedAt || new Date().toISOString();
 const threshold = 3;
 const changes = [];
 for (const [id, result] of reportById) {
   const meta = registryById.get(id);
-  const entry = indexById.get(id);
-  if (!meta || !entry) continue;
+  if (!meta) continue;
   const previous = history.sources[id] || { consecutiveFailures: 0, checks: 0 };
   const passed = result.status === "passed-both";
   const next = {
@@ -60,7 +56,6 @@ for (const [id, result] of reportById) {
   }
   history.sources[id] = next;
 }
-index.updatedAt = now.slice(0, 10);
 history.updatedAt = now;
 history.policy = {
   testKeywords: report.keywords,
@@ -71,7 +66,6 @@ history.policy = {
   backupsRetained: true,
   reactivationRequiresAllFourStagesAndQualityLicenseEvidence: true
 };
-fs.writeFileSync(indexPath, JSON.stringify(index, null, 2) + "\n");
 fs.writeFileSync(historyPath, JSON.stringify(history, null, 2) + "\n");
 fs.writeFileSync(registryPath, JSON.stringify(registry, null, 2) + "\n");
 console.log(JSON.stringify({ checked: reportById.size, changes, historyPath: "config/source-health-history.json" }, null, 2));
