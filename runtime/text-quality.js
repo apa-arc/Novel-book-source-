@@ -30,35 +30,30 @@ function scanTextQuality(value) {
 // Remove only high-confidence promotional blocks. Avoid deleting ordinary story prose
 // merely because it contains words such as "更新" or "点击".
 const PROMO_BLOCK_PATTERNS = [
-  /(?:京东|京東)\\s*(?:搜索|搜一搜).{0,100}(?:红包|紅包|福利|优惠|優惠)/iu,
-  /(?:双11|雙11|双十一|雙十一).{0,80}(?:红包|紅包|福利|优惠|優惠)/iu,
-  /(?:搜索|搜尋)\\s*[：:].{0,100}(?:红包|紅包|福利|優惠|优惠)/iu,
-  /(?:最新最快更新|最新更新).{0,80}(?:点击直达|點擊直達|点击进入|點擊進入)/iu,
-  /本章未完.{0,80}(?:点击下方|點擊下方).{0,100}(?:免费看|免費看).{0,100}/iu,
-  /(?:点击直达|點擊直達).{0,80}(?:搜索|搜尋|红包|紅包|福利)/iu
+  /一日暴富[，,、\\s]*神通者最新最快更新[，,、\\s]*(?:点击直达|點擊直達)/giu,
+  /本章未完.{0,80}(?:点击下方|點擊下方).{0,100}(?:免费看|免費看).{0,100}/giu,
+  /(?:京东|京東)\\s*(?:搜索|搜一搜).{0,100}(?:红包|紅包|福利|优惠|優惠)/giu,
+  /(?:双11|雙11|双十一|雙十一).{0,80}(?:红包|紅包|福利|优惠|優惠)/giu,
+  /(?:搜索|搜尋)\\s*[：:].{0,100}(?:红包|紅包|福利|優惠|优惠)/giu,
+  /(?:最新最快更新|最新更新).{0,80}(?:点击直达|點擊直達|点击进入|點擊進入)/giu
 ];
 
 function cleanPromotionalContent(value) {
-  const original = String(value == null ? "" : value);
-  const blocks = original.split(/(\\n\\s*\\n|\\r?\\n)/u);
+  let content = String(value == null ? "" : value);
   let removedBlocks = 0;
-  const kept = [];
-  for (const block of blocks) {
-    if (!block || /^\\s*(?:\\r?\\n)+\\s*$/u.test(block)) {
-      kept.push(block);
-      continue;
-    }
-    const isPromo = PROMO_BLOCK_PATTERNS.some(pattern => pattern.test(block));
-    if (isPromo) {
+  for (const pattern of PROMO_BLOCK_PATTERNS) {
+    pattern.lastIndex = 0;
+    content = content.replace(pattern, () => {
       removedBlocks++;
-      continue;
-    }
-    kept.push(block);
+      return "\\n";
+    });
   }
-  return {
-    content: kept.join("").replace(/\\n{3,}/gu, "\\n\\n").trim(),
-    removedBlocks
-  };
+  content = content
+    .replace(/[ \\t]+\\n/gu, "\\n")
+    .replace(/\\n[ \\t]+/gu, "\\n")
+    .replace(/\\n{3,}/gu, "\\n\\n")
+    .trim();
+  return { content, removedBlocks };
 }
 
 function normalizeForDuplicateCheck(value) {
