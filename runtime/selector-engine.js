@@ -58,6 +58,11 @@ function applySelection(items,step){
 function matchStep(context,step){
   const kind=step.kind;
   if(kind==="children") return asArray(context.children);
+  if(kind==="css"){
+    if(typeof step.query!=="string"||!step.query.trim()||step.query.length>MAX_SELECTOR_LENGTH) throw new Error("invalid-css-step");
+    if(typeof context.querySelectorAll!=="function") throw new Error("dom-query-api-required");
+    return asArray(context.querySelectorAll(step.query));
+  }
   if(kind==="tag"||kind==="class"||kind==="id"){
     if(typeof step.name!=="string"||!step.name||step.name.length>256) throw new Error("invalid-selector-name");
     let query;
