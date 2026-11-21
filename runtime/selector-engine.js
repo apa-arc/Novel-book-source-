@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 "use strict";
 
-// Executes only the project's bounded selector IR against a caller-supplied DOM.
-// No fetching, eval, script execution, cookies, or filesystem access is provided.
+// Executes bounded Legado selector IR: CSS chains, JSONPath filters/slices, limited XPath axes, regex cleanup and @put/@get state.
+// No fetching, eval, arbitrary script execution, cookies, or filesystem access is provided.
 const MAX_STEPS=32;
 const MAX_RESULTS=5000;
 const MAX_SELECTOR_LENGTH=2048;
