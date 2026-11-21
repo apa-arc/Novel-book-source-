@@ -1,32 +1,22 @@
 name: Live functional tests for novel sources
-# Re-run the full 8,683-source matrix after bounded rule-context support.
 
 on:
   workflow_dispatch:
   push:
     branches: [main]
     paths:
-      - "scripts/live-functional-test-legado.js"
-      - "scripts/merge-passed-sources.js"
-      - "scripts/convert-legado-rules.js"
-      - "runtime/selector-engine.js"
-      - "runtime/text-quality.js"
-      - "imports/aoaostar/raw/aoaostar-full.json"
+      - "scripts/live-test-app-subscription.js"
       - ".github/workflows/live-functional-test-legado.yml"
 
 permissions:
   contents: read
 
 concurrency:
-  group: live-functional-test-legado
+  group: live-app-subscription-test
   cancel-in-progress: false
 
 jobs:
   test:
-    strategy:
-      fail-fast: false
-      matrix:
-        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
     runs-on: ubuntu-latest
     timeout-minutes: 35
     steps:
@@ -34,20 +24,14 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Install bounded HTML parser
+      - name: Install HTML parser
         run: npm install --no-save --no-package-lock linkedom
-      - name: Run real source functional tests (all subscriptions and candidates)
-        env:
-          TEST_SHARD_INDEX: ${{ matrix.shard }}
-          TEST_SHARD_COUNT: 32
-        run: node scripts/live-functional-test-legado.js
-      - name: Upload report artifact
+      - name: Run live tests for all 26 subscription sources
+        run: node scripts/live-test-app-subscription.js
+      - name: Upload per-source report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: live-functional-test-report-${{ matrix.shard }}
-          path: |
-            reports/live-functional-test-${{ matrix.shard }}-of-32.json
-            reports/live-functional-test-passed-sources-${{ matrix.shard }}-of-32.json
-            reports/live-functional-test-passed-adult-sources-${{ matrix.shard }}-of-32.json
+          name: app-subscription-live-test-report
+          path: reports/app-subscription-live-test.json
           retention-days: 90
