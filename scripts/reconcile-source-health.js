@@ -32,7 +32,7 @@ for (const [id, result] of reportById) {
     lastStatus: result.status,
     lastResult: result
   };
-  if (!passed && entry.enabled === true && next.consecutiveFailures >= threshold) {
+  if (false && !passed && entry.enabled === true && next.consecutiveFailures >= threshold) {
     entry.enabled = false;
     const sourcePath = path.join(root, meta.metadataFile);
     const source = JSON.parse(fs.readFileSync(sourcePath, "utf8"));
@@ -42,7 +42,7 @@ for (const [id, result] of reportById) {
     next.quarantinedAt = now;
     changes.push({ id, action: "removed-from-formal-subscription", failures: next.consecutiveFailures });
   }
-  if (passed && entry.enabled !== true) {
+  if (false && passed && entry.enabled !== true) {
     const sourcePath = path.join(root, meta.metadataFile);
     const source = JSON.parse(fs.readFileSync(sourcePath, "utf8"));
     const qualityExists = source.qualityReport && fs.existsSync(path.join(root, source.qualityReport));
@@ -66,6 +66,7 @@ history.policy = {
   testKeywords: report.keywords,
   requiredStages: ["搜索", "详情", "目录", "正文"],
   consecutiveFailureThreshold: threshold,
+  automaticQuarantineDisabledPendingValidatedAppTest: true,
   oneFailureDoesNotRemoveSource: true,
   backupsRetained: true,
   reactivationRequiresAllFourStagesAndQualityLicenseEvidence: true
