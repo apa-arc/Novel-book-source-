@@ -23,6 +23,15 @@ async function fetchCollection(item){
   if(!arr.length||arr.some(x=>!x||typeof x!=="object"||Array.isArray(x))) throw new Error("Invalid source collection");
   return arr;
 }
+function sanitizeRuleShape(value){
+ let text=String(value||"").slice(0,240);
+ text=text.replace(/https?:\/\/[^\s"'<>]+/gi,"<URL>");
+ text=text.replace(/([?&][^=\s]+)=([^&\s]+)/g,"$1=<value>");
+ text=text.replace(/(cookie|authorization|token|password|secret)(\s*[:=]\s*)[^&\s"'<>]+/gi,"$1$2<redacted>");
+ text=text.replace(/(\[[^\]=~^$*|]+\s*(?:[~|^$*]?=\s*))("[^"]*"|'[^']*'|[^\]]+)/g,'$1"<value>"');
+ text=text.replace(/(["'])[^\r\n"'<>]{1,100}\1/g,'" <quoted> "');
+ return text.replace(/\s+/g," ").trim();
+}
 async function main(){
  const byCollection=new Map();
  const failures=[];
@@ -31,10 +40,22 @@ async function main(){
   catch(e){failures.push({collectionId:item.id,error:e.message});}
  }
  const rows=[];
+ const attributeShapes=new Map();
+ const rawGroupKeys={search:"ruleSearch",bookInfo:"ruleBookInfo",toc:"ruleToc",content:"ruleContent",explore:"ruleExplore"};
  for(const candidate of queue.sources){
   const arr=byCollection.get(candidate.collectionId);
   if(!arr||!arr[candidate.index-1]){rows.push({id:candidate.id,collectionId:candidate.collectionId,index:candidate.index,name:candidate.name,status:"unavailable",reason:"upstream-collection-fetch-failed-or-index-missing"});continue;}
-  const converted=convertSource(arr[candidate.index-1],candidate.index-1);
+  const source=arr[candidate.index-1];
+  const converted=convertSource(source,candidate.index-1);
+  for(const [groupName,group] of Object.entries(converted.groups)){
+    const rawGroup=source[rawGroupKeys[groupName]]||{};
+    for(const [field,parsed] of Object.entries(group.fields||{})){
+      if(parsed.reason==="unsupported-attribute-filter"&&typeof rawGroup[field]==="string"){
+        const shape=sanitizeRuleShape(rawGroup[field]);
+        attributeShapes.set(shape,(attributeShapes.get(shape)||0)+1);
+      }
+    }
+  }
   const groups={};
   for(const [name,g] of Object.entries(converted.groups)){
     groups[name]={status:g.status,fields:Object.fromEntries(Object.entries(g.fields||{}).map(([field,v])=>[field,{status:v.status,reason:v.reason||null,selector:v.selector||null,outputKind:v.outputKind||null,selectorKind:v.selectorKind||null}]))};
@@ -44,7 +65,7 @@ async function main(){
  const counts={candidate:0,partial:0,manual:0,unavailable:0};
  for(const row of rows) counts[row.status]=(counts[row.status]||0)+1;
  const generatedAt=new Date().toISOString();
- const report={schemaVersion:1,generatedAt,provider:"AOAOSTAR / Legado",sourceCount:rows.length,counts,fetchFailures:failures,note:"Sanitized selector compatibility report only. Not runnable adapters, not a license determination, and not a live availability test. Raw source definitions, headers, cookies, tokens and credentials are not stored.",sources:rows};
+ const report={schemaVersion:2,generatedAt,provider:"AOAOSTAR / Legado",sourceCount:rows.length,counts,fetchFailures:failures,diagnostics:{unsupportedAttributeFilterTotal:[...attributeShapes.values()].reduce((a,b)=>a+b,0),unsupportedAttributeShapes:[...attributeShapes.entries()].sort((a,b)=>b[1]-a[1]).slice(0,100).map(([shape,count])=>({shape,count}))},note:"Sanitized selector compatibility report only. Attribute selector diagnostics are redacted shapes; not runnable adapters, not a license determination, and not a live availability test. Raw source definitions, headers, cookies, tokens and credentials are not stored.",sources:rows};
  const out=path.join(root,"reports","aoaostar-conversion-review.json");
  fs.mkdirSync(path.dirname(out),{recursive:true});
  fs.writeFileSync(out,JSON.stringify(report,null,2)+"\n","utf8");
