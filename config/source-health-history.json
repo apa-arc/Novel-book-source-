@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-21T18:12:04.748Z",
+  "updatedAt": "2026-11-21T18:27:30.259Z",
   "policy": {
     "testKeywords": [
       "斗罗",
@@ -20,9 +20,9 @@
   },
   "sources": {
     "biquluo-la": {
-      "checks": 8,
+      "checks": 9,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T18:12:04.748Z",
+      "lastCheckedAt": "2026-11-21T18:27:30.259Z",
       "lastStatus": "passed-both",
       "lastResult": {
         "id": "biquluo-la",
@@ -163,9 +163,9 @@
       }
     },
     "jiuyi-91zww": {
-      "checks": 8,
+      "checks": 9,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T18:12:04.748Z",
+      "lastCheckedAt": "2026-11-21T18:27:30.259Z",
       "lastStatus": "failed",
       "lastResult": {
         "id": "jiuyi-91zww",
@@ -276,9 +276,9 @@
       }
     },
     "xinbiquge-info": {
-      "checks": 8,
+      "checks": 9,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T18:12:04.748Z",
+      "lastCheckedAt": "2026-11-21T18:27:30.259Z",
       "lastStatus": "failed",
       "lastResult": {
         "id": "xinbiquge-info",
@@ -350,7 +350,7 @@
               {
                 "stage": "搜索",
                 "status": "passed",
-                "detail": "App 搜索请求及解析成功；返回 20 条结果；标题匹配关键词 20 条；尝试 1 次"
+                "detail": "App 搜索请求及解析成功；返回 20 条结果；标题匹配关键词 20 条；尝试 2 次"
               },
               {
                 "stage": "目录",
@@ -368,7 +368,7 @@
                 "detail": "首章正文读取成功（855 字符）"
               }
             ],
-            "attempts": 1,
+            "attempts": 2,
             "resultCount": 20,
             "matchingResultCount": 20,
             "relevanceStatus": "matched",
@@ -411,9 +411,9 @@
       }
     },
     "biquge-17177": {
-      "checks": 8,
+      "checks": 9,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T18:12:04.748Z",
+      "lastCheckedAt": "2026-11-21T18:27:30.259Z",
       "lastStatus": "passed-both",
       "lastResult": {
         "id": "biquge-17177",
@@ -555,9 +555,9 @@
       }
     },
     "d8zw-com": {
-      "checks": 8,
+      "checks": 9,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T18:12:04.748Z",
+      "lastCheckedAt": "2026-11-21T18:27:30.259Z",
       "lastStatus": "failed",
       "lastResult": {
         "id": "d8zw-com",
@@ -690,9 +690,9 @@
       }
     },
     "bqg-info": {
-      "checks": 8,
+      "checks": 9,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T18:12:04.748Z",
+      "lastCheckedAt": "2026-11-21T18:27:30.259Z",
       "lastStatus": "passed-both",
       "lastResult": {
         "id": "bqg-info",
@@ -787,7 +787,7 @@
               {
                 "stage": "正文",
                 "status": "passed",
-                "detail": "首章正文读取成功（1178 字符）"
+                "detail": "首章正文读取成功（1179 字符）"
               }
             ],
             "attempts": 1,
@@ -833,9 +833,9 @@
       }
     },
     "xqianqian-m": {
-      "checks": 8,
+      "checks": 9,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T18:12:04.748Z",
+      "lastCheckedAt": "2026-11-21T18:27:30.259Z",
       "lastStatus": "failed",
       "lastResult": {
         "id": "xqianqian-m",
@@ -872,11 +872,11 @@
       "userConfirmedWorking": true,
       "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。",
       "sourceAvailabilityStatus": "user-confirmed-baseline",
-      "lastProbeStatus": "partly-inconclusive",
+      "lastProbeStatus": "environment-inconclusive",
       "lastProbeResult": {
         "id": "xqianqian-m",
         "name": "千千小说",
-        "status": "partly-inconclusive",
+        "status": "environment-inconclusive",
         "terms": {
           "斗罗": {
             "keyword": "斗罗",
@@ -910,14 +910,14 @@
           },
           "斗破": {
             "keyword": "斗破",
-            "status": "failed",
-            "searchStatus": "failed",
+            "status": "search-inconclusive",
+            "searchStatus": "inconclusive",
             "readingStatus": "not-tested",
             "stages": [
               {
                 "stage": "搜索",
-                "status": "failed",
-                "detail": "连续 3 次请求仍未成功：书源服务器返回 HTTP 500。"
+                "status": "inconclusive",
+                "detail": "连续 3 次请求仍未成功：书源网络请求失败，请检查网络或站点状态。"
               },
               {
                 "stage": "目录",
@@ -936,15 +936,15 @@
               }
             ],
             "attempts": 3,
-            "error": "书源服务器返回 HTTP 500。"
+            "error": "书源网络请求失败，请检查网络或站点状态。"
           }
         }
       }
     },
     "douhua-wenxue": {
-      "checks": 8,
+      "checks": 9,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T18:12:04.748Z",
+      "lastCheckedAt": "2026-11-21T18:27:30.259Z",
       "lastStatus": "failed",
       "lastResult": {
         "id": "douhua-wenxue",
@@ -1056,9 +1056,9 @@
       }
     },
     "iyueba-net": {
-      "checks": 8,
+      "checks": 9,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T18:12:04.748Z",
+      "lastCheckedAt": "2026-11-21T18:27:30.259Z",
       "lastStatus": "failed",
       "lastResult": {
         "id": "iyueba-net",
@@ -1165,9 +1165,9 @@
       }
     },
     "52shuku-net": {
-      "checks": 8,
+      "checks": 9,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T18:12:04.748Z",
+      "lastCheckedAt": "2026-11-21T18:27:30.259Z",
       "lastStatus": "passed-both",
       "lastResult": {
         "id": "52shuku-net",
