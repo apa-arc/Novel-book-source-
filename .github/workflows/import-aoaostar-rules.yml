@@ -54,6 +54,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: aoaostar-rule-import-report
-          path: exports/aoaostar-import-report.json
+          path: |
+            exports/aoaostar-import-report.json
+            reports/aoaostar-conversion-review.json
           if-no-files-found: error
           retention-days: 90
