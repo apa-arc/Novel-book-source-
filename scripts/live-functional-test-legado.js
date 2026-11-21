@@ -52,11 +52,13 @@ function isStaticRuleGroup(source) {
     ruleToc: ["chapterList","chapterName","chapterUrl"],
     ruleContent: ["content"]
   };
-  const selectorFields = {
-    ruleSearch: ["bookList","name","author","bookUrl","coverUrl","intro","kind","lastChapter","wordCount"],
-    ruleBookInfo: ["name","author","intro","coverUrl","tocUrl","kind","lastChapter","wordCount"],
-    ruleToc: ["chapterList","chapterName","chapterUrl","isVolume","nextTocUrl","updateTime"],
-    ruleContent: ["content","nextContentUrl"]
+  // Only selectors required to complete the search -> detail -> TOC -> content path
+  // gate the source. Optional metadata selectors are attempted independently and may
+  // be skipped without discarding an otherwise usable source.
+  const requiredSelectorFields = {
+    ruleSearch: ["bookList","name","bookUrl"],
+    ruleToc: ["chapterList","chapterName","chapterUrl"],
+    ruleContent: ["content"]
   };
   for (const [group, fields] of Object.entries(required)) {
     const rules = source[group];
@@ -64,12 +66,11 @@ function isStaticRuleGroup(source) {
     for (const field of fields) if (typeof rules[field] !== "string" || !rules[field].trim()) return false;
   }
   if (source.ruleBookInfo.init || source.ruleContent.replaceRegex || source.ruleContent.webJs || source.ruleContent.sourceRegex) return false;
-  if (!["name","author","intro","coverUrl","tocUrl","kind","lastChapter","wordCount"].some(key => typeof source.ruleBookInfo[key] === "string" && source.ruleBookInfo[key].trim())) return false;
-  for (const [group, fields] of Object.entries(selectorFields)) {
+  for (const [group, fields] of Object.entries(requiredSelectorFields)) {
     const rules = source[group] || {};
     for (const field of fields) {
       const rule = rules[field];
-      if (!rule) continue;
+      if (typeof rule !== "string" || !rule.trim()) return false;
       try { selector(rule); } catch { return false; }
     }
   }
@@ -174,7 +175,15 @@ function extract(node, rules, baseUrl, host, extraHosts = [], context = { variab
   const nonSelector = new Set(["bookList","chapterList","checkKeyWord","init","replaceRegex","webJs","sourceRegex","imageStyle"]);
   for (const [key, rule] of Object.entries(rules || {})) {
     if (nonSelector.has(key) || !rule || typeof rule !== "string") continue;
-    const value = first(node, rule, context);
+    let value;
+    try { value = first(node, rule, context); }
+    catch (error) {
+      // Optional metadata rules must not block the core reading path. Required
+      // selectors are validated by isStaticRuleGroup before any network request.
+      if (!context.skippedOptionalRules) context.skippedOptionalRules = [];
+      context.skippedOptionalRules.push({ field: key, reason: String(error.message || error).slice(0, 100) });
+      continue;
+    }
     if (value == null || value === "") continue;
     if (["bookUrl","tocUrl","chapterUrl"].includes(key)) out[key] = absolute(value, baseUrl, host, extraHosts);
     else out[key] = String(value).replace(/\s+/g, " ").trim();
