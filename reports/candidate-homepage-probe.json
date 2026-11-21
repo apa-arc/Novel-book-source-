@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T11:44:46.419Z",
+  "generatedAt": "2026-11-21T11:49:38.972Z",
   "sourceCatalog": "imports/third-party/multi-repo-candidate-catalog.json",
   "note": "仅检测 HTTPS 站点首页 HTTP 状态和内容类型；不执行页面脚本，不读取/保存小说正文，不代表 App 搜索、详情、目录或正文已通过。",
   "counts": {
-    "total": 345,
-    "unreachable-or-timeout": 134,
-    "homepage-reachable": 100,
-    "blocked-or-rate-limited": 87,
-    "needs-review": 24
+    "total": 324,
+    "unreachable-or-timeout": 135,
+    "homepage-reachable": 86,
+    "blocked-or-rate-limited": 80,
+    "needs-review": 23
   },
   "results": [
     {
@@ -16,28 +16,16 @@
       "name": "✨八一中文2️⃣🎉📱",
       "host": "m.blxs.la",
       "status": null,
-      "elapsedMs": 10000,
+      "elapsedMs": 10001,
       "classification": "unreachable-or-timeout",
       "error": "TimeoutError: The operation was aborted due to timeout"
-    },
-    {
-      "id": "7c02f23b2846bd00",
-      "name": "❤️你的地址1",
-      "host": "www.nidedizhi1.com",
-      "status": 200,
-      "finalHost": "www.nidedizhi1.com",
-      "https": true,
-      "html": true,
-      "contentType": "text/html",
-      "elapsedMs": 365,
-      "classification": "homepage-reachable"
     },
     {
       "id": "be3ebb5f34a829c3",
       "name": "⭐256中文",
       "host": "www.256zw.cc",
       "status": null,
-      "elapsedMs": 683,
+      "elapsedMs": 261,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -50,7 +38,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 1027,
+      "elapsedMs": 798,
       "classification": "homepage-reachable"
     },
     {
@@ -62,7 +50,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 598,
+      "elapsedMs": 478,
       "classification": "homepage-reachable"
     },
     {
@@ -70,7 +58,7 @@
       "name": "🍁笔趣阁⑨⑧",
       "host": "www.biquge123.cc",
       "status": null,
-      "elapsedMs": 1225,
+      "elapsedMs": 885,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -83,7 +71,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 2170,
+      "elapsedMs": 1176,
       "classification": "homepage-reachable"
     },
     {
@@ -91,7 +79,7 @@
       "name": "🍺 八一",
       "host": "www.blxs.info",
       "status": null,
-      "elapsedMs": 1494,
+      "elapsedMs": 981,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -104,7 +92,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 1184,
+      "elapsedMs": 646,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -112,7 +100,7 @@
       "name": "🎃四零二零",
       "host": "www.iwurexs.com",
       "status": null,
-      "elapsedMs": 10001,
+      "elapsedMs": 10000,
       "classification": "unreachable-or-timeout",
       "error": "TimeoutError: The operation was aborted due to timeout"
     },
@@ -121,7 +109,7 @@
       "name": "🎉 笔趣阁ibiquge.net",
       "host": "www.ibiquge.xn--net-be2fl54ap4v",
       "status": null,
-      "elapsedMs": 1154,
+      "elapsedMs": 881,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -134,7 +122,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 3480,
+      "elapsedMs": 1490,
       "classification": "homepage-reachable"
     },
     {
@@ -146,7 +134,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1908,
+      "elapsedMs": 2129,
       "classification": "homepage-reachable"
     },
     {
@@ -158,7 +146,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html;charset=UTF-8",
-      "elapsedMs": 3177,
+      "elapsedMs": 2792,
       "classification": "homepage-reachable"
     },
     {
@@ -170,19 +158,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 853,
-      "classification": "homepage-reachable"
-    },
-    {
-      "id": "a28695e42271b478",
-      "name": "🎉新御书屋",
-      "host": "m.xyushuwu.me",
-      "status": 200,
-      "finalHost": "m.xyushuwu.me",
-      "https": true,
-      "html": true,
-      "contentType": "text/html",
-      "elapsedMs": 968,
+      "elapsedMs": 976,
       "classification": "homepage-reachable"
     },
     {
@@ -194,7 +170,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 465,
+      "elapsedMs": 837,
       "classification": "homepage-reachable"
     },
     {
@@ -202,7 +178,7 @@
       "name": "🎻同人小说",
       "host": "www.trxs123.com",
       "status": null,
-      "elapsedMs": 936,
+      "elapsedMs": 824,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -210,10 +186,13 @@
       "id": "bdcd6039e0ff66b2",
       "name": "🏹什么看书屋",
       "host": "www.smkan.top",
-      "status": null,
-      "elapsedMs": 1727,
-      "classification": "unreachable-or-timeout",
-      "error": "TypeError: fetch failed"
+      "status": 204,
+      "finalHost": "vinniebags.com",
+      "https": true,
+      "html": false,
+      "contentType": "application/json",
+      "elapsedMs": 2229,
+      "classification": "needs-review"
     },
     {
       "id": "58f55ec7a17acd3e",
@@ -224,7 +203,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 2142,
+      "elapsedMs": 1850,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -236,27 +215,27 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 810,
+      "elapsedMs": 1027,
       "classification": "blocked-or-rate-limited"
     },
     {
-      "id": "2157e7d4c4f68972",
-      "name": "💗 十八言情",
-      "host": "www.po18yq.com",
-      "status": 200,
-      "finalHost": "www.po18yq.com",
+      "id": "56f4de65f6a7e638",
+      "name": "👔 柚子小说",
+      "host": "m.888zjd.com",
+      "status": 403,
+      "finalHost": "m.888zjd.com",
       "https": true,
       "html": true,
-      "contentType": "text/html",
-      "elapsedMs": 894,
-      "classification": "homepage-reachable"
+      "contentType": "text/html; charset=utf-8",
+      "elapsedMs": 2237,
+      "classification": "blocked-or-rate-limited"
     },
     {
       "id": "3ec515692db204d6",
       "name": "📖 22中文网",
       "host": "www.6zw.net",
       "status": null,
-      "elapsedMs": 403,
+      "elapsedMs": 661,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -269,7 +248,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 1403,
+      "elapsedMs": 2005,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -281,7 +260,7 @@
       "https": false,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 941,
+      "elapsedMs": 2088,
       "classification": "needs-review"
     },
     {
@@ -289,16 +268,16 @@
       "name": "📖 百合小说",
       "host": "m.baihexs.com",
       "status": null,
-      "elapsedMs": 10001,
+      "elapsedMs": 819,
       "classification": "unreachable-or-timeout",
-      "error": "TimeoutError: The operation was aborted due to timeout"
+      "error": "TypeError: fetch failed"
     },
     {
       "id": "320c29fd51aedd91",
       "name": "📖 笔趣阁119",
       "host": "m.bqg119.com",
       "status": null,
-      "elapsedMs": 629,
+      "elapsedMs": 610,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -307,7 +286,7 @@
       "name": "📖 笔趣阁网",
       "host": "api.pigqq.com",
       "status": null,
-      "elapsedMs": 460,
+      "elapsedMs": 393,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -320,7 +299,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1665,
+      "elapsedMs": 1618,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -332,7 +311,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 700,
+      "elapsedMs": 750,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -340,7 +319,7 @@
       "name": "📖 笔趣阁网",
       "host": "www.bqg34.com",
       "status": null,
-      "elapsedMs": 10001,
+      "elapsedMs": 9999,
       "classification": "unreachable-or-timeout",
       "error": "TimeoutError: The operation was aborted due to timeout"
     },
@@ -349,28 +328,16 @@
       "name": "📖 笔趣阁网",
       "host": "m.shengxu5w.com",
       "status": null,
-      "elapsedMs": 475,
+      "elapsedMs": 602,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
-    },
-    {
-      "id": "89a9344db7606bbd",
-      "name": "📖 笔趣阁网",
-      "host": "m.bqg18.cc",
-      "status": 200,
-      "finalHost": "m.bqg18.cc",
-      "https": true,
-      "html": true,
-      "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 352,
-      "classification": "homepage-reachable"
     },
     {
       "id": "cc0bf39baf8a78ed",
       "name": "📖 笔趣阁网",
       "host": "m.bswtan.com",
       "status": null,
-      "elapsedMs": 10001,
+      "elapsedMs": 10000,
       "classification": "unreachable-or-timeout",
       "error": "TimeoutError: The operation was aborted due to timeout"
     },
@@ -379,7 +346,7 @@
       "name": "📖 笔趣阁源",
       "host": "scxs.pysmei.com",
       "status": null,
-      "elapsedMs": 363,
+      "elapsedMs": 533,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -392,7 +359,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 481,
+      "elapsedMs": 515,
       "classification": "needs-review"
     },
     {
@@ -400,40 +367,25 @@
       "name": "📖 嗒嗒中文",
       "host": "www.dadazw8.com",
       "status": null,
-      "elapsedMs": 10001,
+      "elapsedMs": 426,
       "classification": "unreachable-or-timeout",
-      "error": "TimeoutError: The operation was aborted due to timeout"
-    },
-    {
-      "id": "eff66b43a23e20c7",
-      "name": "📖 耽美网网",
-      "host": "m.dmxso.com",
-      "status": 200,
-      "finalHost": "m.dmxso.com",
-      "https": true,
-      "html": true,
-      "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 667,
-      "classification": "homepage-reachable"
+      "error": "TypeError: fetch failed"
     },
     {
       "id": "7230270f657f3b2e",
       "name": "📖 得间小说",
       "host": "wechat.idejian.com",
-      "status": 200,
-      "finalHost": "wechat.idejian.com",
-      "https": true,
-      "html": true,
-      "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2543,
-      "classification": "homepage-reachable"
+      "status": null,
+      "elapsedMs": 846,
+      "classification": "unreachable-or-timeout",
+      "error": "TypeError: fetch failed"
     },
     {
       "id": "a5eede7c6ae01c6e",
       "name": "📖 灯笔小说",
       "host": "wap.jzxtyun.net",
       "status": null,
-      "elapsedMs": 368,
+      "elapsedMs": 276,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -446,7 +398,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1468,
+      "elapsedMs": 777,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -458,7 +410,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2782,
+      "elapsedMs": 1660,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -466,7 +418,7 @@
       "name": "📖 顶点小说",
       "host": "wap.maxreader.net",
       "status": null,
-      "elapsedMs": 10001,
+      "elapsedMs": 9999,
       "classification": "unreachable-or-timeout",
       "error": "TimeoutError: The operation was aborted due to timeout"
     },
@@ -479,7 +431,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=gb2312",
-      "elapsedMs": 2258,
+      "elapsedMs": 1519,
       "classification": "homepage-reachable"
     },
     {
@@ -487,7 +439,7 @@
       "name": "📖 独步小说",
       "host": "www.dubu123.com",
       "status": null,
-      "elapsedMs": 1466,
+      "elapsedMs": 633,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -500,7 +452,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html;charset=utf-8",
-      "elapsedMs": 1390,
+      "elapsedMs": 1271,
       "classification": "homepage-reachable"
     },
     {
@@ -512,7 +464,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html;charset=UTF-8",
-      "elapsedMs": 2329,
+      "elapsedMs": 1453,
       "classification": "homepage-reachable"
     },
     {
@@ -520,7 +472,7 @@
       "name": "📖 看书啦网",
       "host": "wap.shuxinyi.net",
       "status": null,
-      "elapsedMs": 63,
+      "elapsedMs": 510,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -533,7 +485,7 @@
       "https": false,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 940,
+      "elapsedMs": 1725,
       "classification": "needs-review"
     },
     {
@@ -554,7 +506,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1928,
+      "elapsedMs": 2236,
       "classification": "homepage-reachable"
     },
     {
@@ -566,7 +518,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 1321,
+      "elapsedMs": 1313,
       "classification": "homepage-reachable"
     },
     {
@@ -578,7 +530,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 904,
+      "elapsedMs": 1083,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -590,7 +542,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1436,
+      "elapsedMs": 1618,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -602,7 +554,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3056,
+      "elapsedMs": 2269,
       "classification": "homepage-reachable"
     },
     {
@@ -610,7 +562,7 @@
       "name": "📖 三秋书屋",
       "host": "www.d4j.cn",
       "status": null,
-      "elapsedMs": 427,
+      "elapsedMs": 340,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -619,7 +571,7 @@
       "name": "📖 神八宝网",
       "host": "quapp.shenbabao.com",
       "status": null,
-      "elapsedMs": 393,
+      "elapsedMs": 551,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -628,7 +580,7 @@
       "name": "📖 书香之家",
       "host": "s.lhdqsb.cn",
       "status": null,
-      "elapsedMs": 33,
+      "elapsedMs": 299,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -641,7 +593,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=gb2312",
-      "elapsedMs": 752,
+      "elapsedMs": 795,
       "classification": "homepage-reachable"
     },
     {
@@ -649,7 +601,7 @@
       "name": "📖 思路客网",
       "host": "www.siluke520.com",
       "status": null,
-      "elapsedMs": 757,
+      "elapsedMs": 354,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -658,7 +610,7 @@
       "name": "📖 天籁小说",
       "host": "m.23sk.net",
       "status": null,
-      "elapsedMs": 363,
+      "elapsedMs": 81,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -667,7 +619,7 @@
       "name": "📖 晚星封藏",
       "host": "api.whhaxfjc.com",
       "status": null,
-      "elapsedMs": 321,
+      "elapsedMs": 364,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -676,7 +628,7 @@
       "name": "📖 五一看书",
       "host": "m.51nm.cc",
       "status": null,
-      "elapsedMs": 186,
+      "elapsedMs": 312,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -689,7 +641,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1492,
+      "elapsedMs": 1737,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -701,7 +653,7 @@
       "https": false,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 762,
+      "elapsedMs": 938,
       "classification": "needs-review"
     },
     {
@@ -709,7 +661,7 @@
       "name": "📖 言耽社网",
       "host": "yandanshe.com",
       "status": null,
-      "elapsedMs": 174,
+      "elapsedMs": 204,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -722,7 +674,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1435,
+      "elapsedMs": 1490,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -730,7 +682,7 @@
       "name": "📖 言情中文",
       "host": "www.yqzww.cc",
       "status": null,
-      "elapsedMs": 827,
+      "elapsedMs": 536,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -743,7 +695,7 @@
       "https": false,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 964,
+      "elapsedMs": 1344,
       "classification": "needs-review"
     },
     {
@@ -755,7 +707,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2618,
+      "elapsedMs": 1835,
       "classification": "homepage-reachable"
     },
     {
@@ -763,7 +715,7 @@
       "name": "📚天天读书",
       "host": "www.ttd3.cn",
       "status": null,
-      "elapsedMs": 106,
+      "elapsedMs": 313,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -776,7 +728,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html;charset=utf-8",
-      "elapsedMs": 2154,
+      "elapsedMs": 3901,
       "classification": "homepage-reachable"
     },
     {
@@ -789,6 +741,18 @@
       "error": "TimeoutError: The operation was aborted due to timeout"
     },
     {
+      "id": "9e7ebd3769801321",
+      "name": "🚬肉肉屋",
+      "host": "m.rourouwu10.com",
+      "status": 200,
+      "finalHost": "m.rourouwu10.com",
+      "https": true,
+      "html": true,
+      "contentType": "text/html",
+      "elapsedMs": 647,
+      "classification": "homepage-reachable"
+    },
+    {
       "id": "9128213dedb0b4e5",
       "name": "016小说手机免费阅读",
       "host": "m.016wx.com",
@@ -797,7 +761,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 92,
+      "elapsedMs": 277,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -809,27 +773,15 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 2005,
+      "elapsedMs": 962,
       "classification": "needs-review"
-    },
-    {
-      "id": "b1be19434409d977",
-      "name": "2",
-      "host": "yibaobang.com",
-      "status": 200,
-      "finalHost": "yibaobang.com",
-      "https": true,
-      "html": true,
-      "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 370,
-      "classification": "homepage-reachable"
     },
     {
       "id": "fb9d76328bdd24ba",
       "name": "23格格党",
       "host": "m.23ggd.com",
       "status": null,
-      "elapsedMs": 1204,
+      "elapsedMs": 944,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -842,7 +794,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 908,
+      "elapsedMs": 695,
       "classification": "homepage-reachable"
     },
     {
@@ -850,7 +802,7 @@
       "name": "4020电子书",
       "host": "www.iwurexs.info",
       "status": null,
-      "elapsedMs": 796,
+      "elapsedMs": 989,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -863,7 +815,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 289,
+      "elapsedMs": 453,
       "classification": "needs-review"
     },
     {
@@ -875,27 +827,27 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 250,
+      "elapsedMs": 576,
       "classification": "homepage-reachable"
     },
     {
       "id": "6ce0f43e5218a9fb",
       "name": "61看书",
       "host": "www.61ksw.com",
-      "status": 403,
+      "status": 200,
       "finalHost": "www.61ksw.com",
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 787,
-      "classification": "blocked-or-rate-limited"
+      "elapsedMs": 2711,
+      "classification": "homepage-reachable"
     },
     {
       "id": "b92168d62572647e",
       "name": "69好书",
       "host": "www.69haoshu.com",
       "status": null,
-      "elapsedMs": 215,
+      "elapsedMs": 362,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -908,7 +860,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 571,
+      "elapsedMs": 881,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -920,20 +872,17 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 124,
+      "elapsedMs": 382,
       "classification": "blocked-or-rate-limited"
     },
     {
       "id": "99503102fe71db03",
       "name": "88中文",
       "host": "www.babazw.com",
-      "status": 200,
-      "finalHost": "www.babazw.com",
-      "https": true,
-      "html": true,
-      "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 8401,
-      "classification": "homepage-reachable"
+      "status": null,
+      "elapsedMs": 287,
+      "classification": "unreachable-or-timeout",
+      "error": "TypeError: fetch failed"
     },
     {
       "id": "83488a64d5bfc81a",
@@ -944,7 +893,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 2284,
+      "elapsedMs": 2161,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -961,7 +910,7 @@
       "name": "爱去小说",
       "host": "m.aiquxs.com",
       "status": null,
-      "elapsedMs": 1155,
+      "elapsedMs": 1173,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -970,7 +919,7 @@
       "name": "爱去小说网①",
       "host": "www.aiquxs.com",
       "status": null,
-      "elapsedMs": 1476,
+      "elapsedMs": 1205,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -983,7 +932,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 4159,
+      "elapsedMs": 2754,
       "classification": "homepage-reachable"
     },
     {
@@ -995,7 +944,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 1660,
+      "elapsedMs": 1319,
       "classification": "homepage-reachable"
     },
     {
@@ -1007,7 +956,7 @@
       "https": false,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 3651,
+      "elapsedMs": 2826,
       "classification": "needs-review"
     },
     {
@@ -1019,27 +968,15 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3666,
+      "elapsedMs": 2776,
       "classification": "homepage-reachable"
-    },
-    {
-      "id": "ceb1c60194e37882",
-      "name": "八一中文",
-      "host": "www.81zw.co",
-      "status": 403,
-      "finalHost": "www.81zw.co",
-      "https": true,
-      "html": true,
-      "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3734,
-      "classification": "blocked-or-rate-limited"
     },
     {
       "id": "9c4f6f3bd0ef077e",
       "name": "八一中文🎃#4",
       "host": "m.zwduxs.com",
       "status": null,
-      "elapsedMs": 2541,
+      "elapsedMs": 442,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -1048,7 +985,7 @@
       "name": "八一中文网-幕惜",
       "host": "m.bayizww.com",
       "status": null,
-      "elapsedMs": 6296,
+      "elapsedMs": 5132,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -1070,7 +1007,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 4209,
+      "elapsedMs": 3457,
       "classification": "homepage-reachable"
     },
     {
@@ -1082,24 +1019,27 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 2431,
+      "elapsedMs": 2619,
       "classification": "needs-review"
     },
     {
       "id": "c48e91f98782fb70",
       "name": "百合爱会（优+）",
       "host": "www.yamibo.com",
-      "status": null,
-      "elapsedMs": 10001,
-      "classification": "unreachable-or-timeout",
-      "error": "TimeoutError: The operation was aborted due to timeout"
+      "status": 502,
+      "finalHost": "www.yamibo.com",
+      "https": true,
+      "html": true,
+      "contentType": "text/html; charset=UTF-8",
+      "elapsedMs": 2440,
+      "classification": "needs-review"
     },
     {
       "id": "074e99f62827fe78",
       "name": "宝来小说",
       "host": "m.baolaishiye.com",
       "status": null,
-      "elapsedMs": 10000,
+      "elapsedMs": 10002,
       "classification": "unreachable-or-timeout",
       "error": "TimeoutError: The operation was aborted due to timeout"
     },
@@ -1121,7 +1061,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 1679,
+      "elapsedMs": 1756,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -1133,7 +1073,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3299,
+      "elapsedMs": 3213,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -1145,7 +1085,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html;charset=UTF-8",
-      "elapsedMs": 1515,
+      "elapsedMs": 2104,
       "classification": "homepage-reachable"
     },
     {
@@ -1157,7 +1097,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=gbk",
-      "elapsedMs": 1845,
+      "elapsedMs": 3142,
       "classification": "homepage-reachable"
     },
     {
@@ -1165,7 +1105,7 @@
       "name": "笔趣阁",
       "host": "www.biqusk.com",
       "status": null,
-      "elapsedMs": 10000,
+      "elapsedMs": 10001,
       "classification": "unreachable-or-timeout",
       "error": "TimeoutError: The operation was aborted due to timeout"
     },
@@ -1183,7 +1123,7 @@
       "name": "笔趣阁",
       "host": "www.ibiquge.la",
       "status": null,
-      "elapsedMs": 10000,
+      "elapsedMs": 10001,
       "classification": "unreachable-or-timeout",
       "error": "TimeoutError: The operation was aborted due to timeout"
     },
@@ -1192,7 +1132,7 @@
       "name": "笔趣阁",
       "host": "www.xbiquge.la",
       "status": null,
-      "elapsedMs": 652,
+      "elapsedMs": 2122,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -1205,7 +1145,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 474,
+      "elapsedMs": 971,
       "classification": "homepage-reachable"
     },
     {
@@ -1217,7 +1157,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 2036,
+      "elapsedMs": 4665,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -1229,7 +1169,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 494,
+      "elapsedMs": 1609,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -1237,7 +1177,7 @@
       "name": "笔趣阁⑰",
       "host": "www.zgbnt.com",
       "status": null,
-      "elapsedMs": 592,
+      "elapsedMs": 1365,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -1250,7 +1190,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 596,
+      "elapsedMs": 1698,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -1258,7 +1198,7 @@
       "name": "笔趣阁19",
       "host": "www.biqusa.com",
       "status": null,
-      "elapsedMs": 10000,
+      "elapsedMs": 10002,
       "classification": "unreachable-or-timeout",
       "error": "TimeoutError: The operation was aborted due to timeout"
     },
@@ -1271,7 +1211,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 714,
+      "elapsedMs": 1701,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -1283,7 +1223,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 968,
+      "elapsedMs": 1911,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -1295,7 +1235,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1101,
+      "elapsedMs": 2208,
       "classification": "homepage-reachable"
     },
     {
@@ -1307,7 +1247,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 347,
+      "elapsedMs": 1806,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -1319,7 +1259,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 635,
+      "elapsedMs": 1460,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -1331,7 +1271,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 684,
+      "elapsedMs": 1474,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -1343,7 +1283,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1658,
+      "elapsedMs": 2207,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -1355,7 +1295,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 860,
+      "elapsedMs": 2296,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -1367,7 +1307,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 546,
+      "elapsedMs": 1506,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -1379,7 +1319,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 356,
+      "elapsedMs": 1369,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -1391,7 +1331,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1676,
+      "elapsedMs": 2493,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -1399,7 +1339,7 @@
       "name": "笔趣阁quge9",
       "host": "m.quge9.cc",
       "status": null,
-      "elapsedMs": 402,
+      "elapsedMs": 1150,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -1408,7 +1348,7 @@
       "name": "笔趣阁seyours",
       "host": "m.seyours.com",
       "status": null,
-      "elapsedMs": 202,
+      "elapsedMs": 985,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -1417,7 +1357,7 @@
       "name": "笔趣阁zkblg",
       "host": "www.zkblg.com",
       "status": null,
-      "elapsedMs": 512,
+      "elapsedMs": 1310,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -1425,13 +1365,13 @@
       "id": "946ca39a34931c23",
       "name": "笔下文学",
       "host": "www.bxwx.la",
-      "status": 401,
-      "finalHost": "ww547.bxwx.la",
-      "https": false,
+      "status": 200,
+      "finalHost": "www.bxwx.la",
+      "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 708,
-      "classification": "needs-review"
+      "elapsedMs": 936,
+      "classification": "homepage-reachable"
     },
     {
       "id": "4cab4d54b7f04d4e",
@@ -1442,7 +1382,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1422,
+      "elapsedMs": 1997,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -1454,7 +1394,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 218,
+      "elapsedMs": 582,
       "classification": "homepage-reachable"
     },
     {
@@ -1466,7 +1406,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 118,
+      "elapsedMs": 709,
       "classification": "needs-review"
     },
     {
@@ -1474,7 +1414,7 @@
       "name": "菠萝包轻小说",
       "host": "api.sfacg.xn--com-be2fo36bww7e",
       "status": null,
-      "elapsedMs": 31,
+      "elapsedMs": 519,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -1483,7 +1423,7 @@
       "name": "布奇小说",
       "host": "www.xs177.com",
       "status": null,
-      "elapsedMs": 10000,
+      "elapsedMs": 10001,
       "classification": "unreachable-or-timeout",
       "error": "TimeoutError: The operation was aborted due to timeout"
     },
@@ -1496,7 +1436,7 @@
       "https": true,
       "html": false,
       "contentType": "",
-      "elapsedMs": 237,
+      "elapsedMs": 530,
       "classification": "needs-review"
     },
     {
@@ -1504,7 +1444,7 @@
       "name": "参与书库",
       "host": "www.shukuw.xn--com-px1e605s",
       "status": null,
-      "elapsedMs": 46,
+      "elapsedMs": 443,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -1513,7 +1453,7 @@
       "name": "参与书库",
       "host": "www.52shukuw.com",
       "status": null,
-      "elapsedMs": 146,
+      "elapsedMs": 451,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -1527,18 +1467,6 @@
       "error": "TimeoutError: The operation was aborted due to timeout"
     },
     {
-      "id": "5bb896a5b7c0630c",
-      "name": "测试",
-      "host": "nhentai.net",
-      "status": 403,
-      "finalHost": "nhentai.net",
-      "https": true,
-      "html": true,
-      "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 35,
-      "classification": "blocked-or-rate-limited"
-    },
-    {
       "id": "e6bad697c18c5879",
       "name": "春雨书屋",
       "host": "www.chunyushuwu.com",
@@ -1547,7 +1475,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 860,
+      "elapsedMs": 1163,
       "classification": "homepage-reachable"
     },
     {
@@ -1555,7 +1483,7 @@
       "name": "纯肉网",
       "host": "mm28.cc",
       "status": null,
-      "elapsedMs": 1044,
+      "elapsedMs": 2356,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -1564,7 +1492,7 @@
       "name": "大米小说",
       "host": "www.damixs.info",
       "status": null,
-      "elapsedMs": 305,
+      "elapsedMs": 758,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -1577,7 +1505,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 1388,
+      "elapsedMs": 2791,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -1589,28 +1517,19 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 506,
+      "elapsedMs": 1147,
       "classification": "blocked-or-rate-limited"
     },
     {
       "id": "92b07d954e7973b4",
       "name": "大众文学-夜明空",
       "host": "www.gzhgxs.com",
-      "status": null,
-      "elapsedMs": 895,
-      "classification": "unreachable-or-timeout",
-      "error": "TypeError: fetch failed"
-    },
-    {
-      "id": "d42907f421e443f0",
-      "name": "耽美小说",
-      "host": "www.blxsw.cc",
       "status": 200,
-      "finalHost": "www.blxsw.cc",
+      "finalHost": "www.gzhgxs.com",
       "https": true,
       "html": true,
-      "contentType": "text/html",
-      "elapsedMs": 497,
+      "contentType": "text/html; charset=utf-8",
+      "elapsedMs": 1172,
       "classification": "homepage-reachable"
     },
     {
@@ -1622,7 +1541,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 1783,
+      "elapsedMs": 3257,
       "classification": "homepage-reachable"
     },
     {
@@ -1634,7 +1553,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 496,
+      "elapsedMs": 1016,
       "classification": "homepage-reachable"
     },
     {
@@ -1642,7 +1561,7 @@
       "name": "顶点",
       "host": "www.biquge345.com",
       "status": null,
-      "elapsedMs": 10000,
+      "elapsedMs": 10001,
       "classification": "unreachable-or-timeout",
       "error": "TimeoutError: The operation was aborted due to timeout"
     },
@@ -1655,7 +1574,7 @@
       "https": false,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 1558,
+      "elapsedMs": 5514,
       "classification": "needs-review"
     },
     {
@@ -1667,7 +1586,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 1502,
+      "elapsedMs": 2717,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -1679,7 +1598,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 834,
+      "elapsedMs": 1957,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -1691,7 +1610,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 805,
+      "elapsedMs": 2014,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -1703,7 +1622,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1053,
+      "elapsedMs": 1982,
       "classification": "homepage-reachable"
     },
     {
@@ -1715,7 +1634,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 571,
+      "elapsedMs": 1327,
       "classification": "homepage-reachable"
     },
     {
@@ -1727,7 +1646,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 515,
+      "elapsedMs": 968,
       "classification": "homepage-reachable"
     },
     {
@@ -1739,7 +1658,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 299,
+      "elapsedMs": 655,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -1747,7 +1666,7 @@
       "name": "读书",
       "host": "readbook.men",
       "status": null,
-      "elapsedMs": 169,
+      "elapsedMs": 963,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -1760,7 +1679,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 67,
+      "elapsedMs": 833,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -1772,7 +1691,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 267,
+      "elapsedMs": 1186,
       "classification": "homepage-reachable"
     },
     {
@@ -1784,7 +1703,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 113,
+      "elapsedMs": 755,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -1792,7 +1711,7 @@
       "name": "番茄小说②",
       "host": "www.88ttv.com",
       "status": null,
-      "elapsedMs": 480,
+      "elapsedMs": 1095,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -1801,7 +1720,7 @@
       "name": "番薯小说",
       "host": "ggs.manmeng168.com",
       "status": null,
-      "elapsedMs": 450,
+      "elapsedMs": 1345,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -1814,7 +1733,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 442,
+      "elapsedMs": 1242,
       "classification": "homepage-reachable"
     },
     {
@@ -1826,7 +1745,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=gb2312",
-      "elapsedMs": 792,
+      "elapsedMs": 3264,
       "classification": "homepage-reachable"
     },
     {
@@ -1838,7 +1757,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=gb2312",
-      "elapsedMs": 797,
+      "elapsedMs": 1614,
       "classification": "homepage-reachable"
     },
     {
@@ -1846,7 +1765,7 @@
       "name": "飞速中文",
       "host": "www.feibzw.com",
       "status": null,
-      "elapsedMs": 407,
+      "elapsedMs": 1130,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -1855,7 +1774,7 @@
       "name": "风雨小说（发现）",
       "host": "www.44pq.org",
       "status": null,
-      "elapsedMs": 10000,
+      "elapsedMs": 9999,
       "classification": "unreachable-or-timeout",
       "error": "TimeoutError: The operation was aborted due to timeout"
     },
@@ -1868,7 +1787,7 @@
       "https": true,
       "html": false,
       "contentType": "application/octet-stream",
-      "elapsedMs": 1385,
+      "elapsedMs": 2936,
       "classification": "needs-review"
     },
     {
@@ -1880,7 +1799,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 1855,
+      "elapsedMs": 2762,
       "classification": "homepage-reachable"
     },
     {
@@ -1888,7 +1807,7 @@
       "name": "阁笔趣网",
       "host": "www.gebiqu.com",
       "status": null,
-      "elapsedMs": 10001,
+      "elapsedMs": 9999,
       "classification": "unreachable-or-timeout",
       "error": "TimeoutError: The operation was aborted due to timeout"
     },
@@ -1901,7 +1820,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1074,
+      "elapsedMs": 1470,
       "classification": "homepage-reachable"
     },
     {
@@ -1909,7 +1828,7 @@
       "name": "格格党包（发现）",
       "host": "m.p7t.net",
       "status": null,
-      "elapsedMs": 715,
+      "elapsedMs": 870,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -1918,7 +1837,7 @@
       "name": "格格党网[自写]",
       "host": "www.52ggdxs.com",
       "status": null,
-      "elapsedMs": 781,
+      "elapsedMs": 618,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -1931,7 +1850,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 485,
+      "elapsedMs": 321,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -1943,7 +1862,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 419,
+      "elapsedMs": 269,
       "classification": "homepage-reachable"
     },
     {
@@ -1955,19 +1874,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 2031,
-      "classification": "homepage-reachable"
-    },
-    {
-      "id": "01da668125f9c0f9",
-      "name": "华丽家族BL文学",
-      "host": "www.hljzc.cc",
-      "status": 200,
-      "finalHost": "www.jubu.cc",
-      "https": true,
-      "html": true,
-      "contentType": "text/html",
-      "elapsedMs": 1125,
+      "elapsedMs": 652,
       "classification": "homepage-reachable"
     },
     {
@@ -1979,7 +1886,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 223,
+      "elapsedMs": 189,
       "classification": "homepage-reachable"
     },
     {
@@ -1991,7 +1898,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1013,
+      "elapsedMs": 596,
       "classification": "homepage-reachable"
     },
     {
@@ -2003,7 +1910,7 @@
       "https": false,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1431,
+      "elapsedMs": 1023,
       "classification": "needs-review"
     },
     {
@@ -2015,7 +1922,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 898,
+      "elapsedMs": 649,
       "classification": "homepage-reachable"
     },
     {
@@ -2027,7 +1934,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 796,
+      "elapsedMs": 598,
       "classification": "homepage-reachable"
     },
     {
@@ -2039,7 +1946,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 459,
+      "elapsedMs": 446,
       "classification": "homepage-reachable"
     },
     {
@@ -2051,7 +1958,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 347,
+      "elapsedMs": 190,
       "classification": "homepage-reachable"
     },
     {
@@ -2059,7 +1966,7 @@
       "name": "精华书阁",
       "host": "m.axs6.com",
       "status": null,
-      "elapsedMs": 361,
+      "elapsedMs": 163,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -2072,7 +1979,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 409,
+      "elapsedMs": 247,
       "classification": "homepage-reachable"
     },
     {
@@ -2084,7 +1991,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 474,
+      "elapsedMs": 719,
       "classification": "homepage-reachable"
     },
     {
@@ -2096,7 +2003,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 203,
+      "elapsedMs": 138,
       "classification": "homepage-reachable"
     },
     {
@@ -2108,7 +2015,7 @@
       "https": true,
       "html": false,
       "contentType": "application/json",
-      "elapsedMs": 980,
+      "elapsedMs": 840,
       "classification": "needs-review"
     },
     {
@@ -2120,7 +2027,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 278,
+      "elapsedMs": 531,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -2128,7 +2035,7 @@
       "name": "就爱文学",
       "host": "www.92wx.la",
       "status": null,
-      "elapsedMs": 10000,
+      "elapsedMs": 10001,
       "classification": "unreachable-or-timeout",
       "error": "TimeoutError: The operation was aborted due to timeout"
     },
@@ -2137,7 +2044,7 @@
       "name": "就爱言情",
       "host": "m.92yanqing.net",
       "status": null,
-      "elapsedMs": 150,
+      "elapsedMs": 162,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -2145,13 +2052,13 @@
       "id": "a1cf2af43a1cdd62",
       "name": "看书",
       "host": "uukanshu.cc",
-      "status": 403,
+      "status": 200,
       "finalHost": "uukanshu.cc",
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 198,
-      "classification": "blocked-or-rate-limited"
+      "elapsedMs": 209,
+      "classification": "homepage-reachable"
     },
     {
       "id": "8bd3b80f3e89363e",
@@ -2162,7 +2069,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 5269,
+      "elapsedMs": 1864,
       "classification": "homepage-reachable"
     },
     {
@@ -2170,7 +2077,7 @@
       "name": "快读中文",
       "host": "www.kdzw.net",
       "status": null,
-      "elapsedMs": 929,
+      "elapsedMs": 648,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -2183,7 +2090,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 1579,
+      "elapsedMs": 4038,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -2191,7 +2098,7 @@
       "name": "快眼看书[ib]",
       "host": "www.ibotaodz.org",
       "status": null,
-      "elapsedMs": 1274,
+      "elapsedMs": 689,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -2204,7 +2111,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 1758,
+      "elapsedMs": 1305,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -2216,7 +2123,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 543,
+      "elapsedMs": 273,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -2228,7 +2135,7 @@
       "https": false,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1192,
+      "elapsedMs": 1300,
       "classification": "needs-review"
     },
     {
@@ -2240,7 +2147,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 355,
+      "elapsedMs": 386,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -2248,7 +2155,7 @@
       "name": "乐文小说②",
       "host": "www.jwzhn.com",
       "status": null,
-      "elapsedMs": 422,
+      "elapsedMs": 295,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -2257,7 +2164,7 @@
       "name": "乐文中文",
       "host": "www.gdsgy.com",
       "status": null,
-      "elapsedMs": 859,
+      "elapsedMs": 1014,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -2266,7 +2173,7 @@
       "name": "乐阅读",
       "host": "www.27k.net",
       "status": null,
-      "elapsedMs": 719,
+      "elapsedMs": 1735,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -2279,24 +2186,15 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 421,
+      "elapsedMs": 739,
       "classification": "homepage-reachable"
-    },
-    {
-      "id": "c96d4c05b6f8022e",
-      "name": "零点看书",
-      "host": "www.rhmm18.com",
-      "status": null,
-      "elapsedMs": 1490,
-      "classification": "unreachable-or-timeout",
-      "error": "TypeError: fetch failed"
     },
     {
       "id": "4e0595b722c28b24",
       "name": "零点小说",
       "host": "www.lingdxsw.com",
       "status": null,
-      "elapsedMs": 391,
+      "elapsedMs": 579,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -2318,17 +2216,8 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 231,
+      "elapsedMs": 742,
       "classification": "homepage-reachable"
-    },
-    {
-      "id": "9e9ecabe1f9dae2a",
-      "name": "萝莉文学",
-      "host": "www.luoliwx.xn--net-s18d",
-      "status": null,
-      "elapsedMs": 172,
-      "classification": "unreachable-or-timeout",
-      "error": "TypeError: fetch failed"
     },
     {
       "id": "ed8059ea9fa609b1",
@@ -2339,7 +2228,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 194,
+      "elapsedMs": 675,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -2351,7 +2240,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 1152,
+      "elapsedMs": 1199,
       "classification": "homepage-reachable"
     },
     {
@@ -2363,7 +2252,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1834,
+      "elapsedMs": 1599,
       "classification": "homepage-reachable"
     },
     {
@@ -2371,7 +2260,7 @@
       "name": "梅语中文",
       "host": "m.kxiaoshuo.com",
       "status": null,
-      "elapsedMs": 1127,
+      "elapsedMs": 1168,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -2384,7 +2273,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 1506,
+      "elapsedMs": 1223,
       "classification": "homepage-reachable"
     },
     {
@@ -2396,7 +2285,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 1294,
+      "elapsedMs": 1144,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -2404,7 +2293,7 @@
       "name": "棉花糖小说",
       "host": "www.mhtxs.la",
       "status": null,
-      "elapsedMs": 10000,
+      "elapsedMs": 10001,
       "classification": "unreachable-or-timeout",
       "error": "TimeoutError: The operation was aborted due to timeout"
     },
@@ -2417,7 +2306,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 3302,
+      "elapsedMs": 4096,
       "classification": "homepage-reachable"
     },
     {
@@ -2425,7 +2314,7 @@
       "name": "飘然文学（优）",
       "host": "www.xbiquwx.la",
       "status": null,
-      "elapsedMs": 10001,
+      "elapsedMs": 10000,
       "classification": "unreachable-or-timeout",
       "error": "TimeoutError: The operation was aborted due to timeout"
     },
@@ -2438,7 +2327,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 832,
+      "elapsedMs": 918,
       "classification": "homepage-reachable"
     },
     {
@@ -2450,7 +2339,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 418,
+      "elapsedMs": 420,
       "classification": "needs-review"
     },
     {
@@ -2462,7 +2351,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 967,
+      "elapsedMs": 1216,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -2474,27 +2363,15 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 372,
+      "elapsedMs": 656,
       "classification": "blocked-or-rate-limited"
-    },
-    {
-      "id": "0c8f3e9dafe09a65",
-      "name": "奇书中文",
-      "host": "www.qishuzw.com",
-      "status": 200,
-      "finalHost": "www.qishuzw.com",
-      "https": true,
-      "html": true,
-      "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 727,
-      "classification": "homepage-reachable"
     },
     {
       "id": "c37cc22cf2a37407",
       "name": "起舞中文",
       "host": "www.75zhongwen.com",
       "status": null,
-      "elapsedMs": 10000,
+      "elapsedMs": 10001,
       "classification": "unreachable-or-timeout",
       "error": "TimeoutError: The operation was aborted due to timeout"
     },
@@ -2503,7 +2380,7 @@
       "name": "铅笔轻小说",
       "host": "www.qxsw.cc",
       "status": null,
-      "elapsedMs": 5876,
+      "elapsedMs": 1884,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -2516,7 +2393,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 933,
+      "elapsedMs": 1128,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -2528,7 +2405,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 798,
+      "elapsedMs": 916,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -2540,7 +2417,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 1335,
+      "elapsedMs": 7885,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -2552,7 +2429,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 969,
+      "elapsedMs": 1022,
       "classification": "homepage-reachable"
     },
     {
@@ -2564,7 +2441,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1323,
+      "elapsedMs": 1234,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -2572,7 +2449,7 @@
       "name": "趣读网",
       "host": "m.qqduw.com",
       "status": null,
-      "elapsedMs": 235,
+      "elapsedMs": 258,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -2585,7 +2462,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 159,
+      "elapsedMs": 201,
       "classification": "homepage-reachable"
     },
     {
@@ -2597,7 +2474,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 1121,
+      "elapsedMs": 717,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -2609,7 +2486,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 426,
+      "elapsedMs": 410,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -2617,7 +2494,7 @@
       "name": "全民小说",
       "host": "m.qmbook.cc",
       "status": null,
-      "elapsedMs": 433,
+      "elapsedMs": 497,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -2630,7 +2507,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 691,
+      "elapsedMs": 533,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -2642,7 +2519,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 515,
+      "elapsedMs": 366,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -2654,7 +2531,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 580,
+      "elapsedMs": 2258,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -2666,7 +2543,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2036,
+      "elapsedMs": 1385,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -2674,7 +2551,7 @@
       "name": "三三言情",
       "host": "m.x33yq.org",
       "status": null,
-      "elapsedMs": 784,
+      "elapsedMs": 2835,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -2687,7 +2564,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1075,
+      "elapsedMs": 543,
       "classification": "homepage-reachable"
     },
     {
@@ -2695,21 +2572,9 @@
       "name": "神话之后",
       "host": "www.shenhuazhihou.com",
       "status": null,
-      "elapsedMs": 789,
+      "elapsedMs": 514,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
-    },
-    {
-      "id": "2d2b23cfb98e8202",
-      "name": "十八书屋",
-      "host": "www.shibashuwu.net",
-      "status": 403,
-      "finalHost": "www.shibashuwu.net",
-      "https": true,
-      "html": true,
-      "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 533,
-      "classification": "blocked-or-rate-limited"
     },
     {
       "id": "fa63983f00626083",
@@ -2720,7 +2585,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 677,
+      "elapsedMs": 553,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -2728,7 +2593,7 @@
       "name": "手机小说",
       "host": "m.xiaxs.la",
       "status": null,
-      "elapsedMs": 10000,
+      "elapsedMs": 9999,
       "classification": "unreachable-or-timeout",
       "error": "TimeoutError: The operation was aborted due to timeout"
     },
@@ -2737,7 +2602,7 @@
       "name": "手心看书",
       "host": "www.sxkszsw.com",
       "status": null,
-      "elapsedMs": 334,
+      "elapsedMs": 444,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -2755,7 +2620,7 @@
       "name": "书仓网吧",
       "host": "www.shucang.cc",
       "status": null,
-      "elapsedMs": 10001,
+      "elapsedMs": 10000,
       "classification": "unreachable-or-timeout",
       "error": "TimeoutError: The operation was aborted due to timeout"
     },
@@ -2764,7 +2629,7 @@
       "name": "书阁",
       "host": "www.blshuge.com",
       "status": null,
-      "elapsedMs": 10000,
+      "elapsedMs": 10001,
       "classification": "unreachable-or-timeout",
       "error": "TimeoutError: The operation was aborted due to timeout"
     },
@@ -2773,7 +2638,7 @@
       "name": "书海阁",
       "host": "m.shuhaige.net",
       "status": null,
-      "elapsedMs": 460,
+      "elapsedMs": 223,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -2786,7 +2651,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 569,
+      "elapsedMs": 465,
       "classification": "homepage-reachable"
     },
     {
@@ -2794,7 +2659,7 @@
       "name": "书迷楼",
       "host": "www.shumilou.co",
       "status": null,
-      "elapsedMs": 273,
+      "elapsedMs": 267,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -2807,7 +2672,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 344,
+      "elapsedMs": 321,
       "classification": "needs-review"
     },
     {
@@ -2819,7 +2684,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 77,
+      "elapsedMs": 146,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -2831,7 +2696,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1004,
+      "elapsedMs": 750,
       "classification": "homepage-reachable"
     },
     {
@@ -2839,9 +2704,9 @@
       "name": "书趣阁子",
       "host": "wap.ishuquge.net",
       "status": null,
-      "elapsedMs": 9985,
+      "elapsedMs": 10001,
       "classification": "unreachable-or-timeout",
-      "error": "TypeError: fetch failed"
+      "error": "TimeoutError: The operation was aborted due to timeout"
     },
     {
       "id": "ed072d089e5f9b65",
@@ -2852,7 +2717,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 156,
+      "elapsedMs": 199,
       "classification": "homepage-reachable"
     },
     {
@@ -2864,7 +2729,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 466,
+      "elapsedMs": 394,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -2876,7 +2741,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 83,
+      "elapsedMs": 115,
       "classification": "homepage-reachable"
     },
     {
@@ -2888,17 +2753,20 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1807,
+      "elapsedMs": 1515,
       "classification": "blocked-or-rate-limited"
     },
     {
       "id": "ec4cd460870ce10c",
       "name": "搜小说",
       "host": "www.sou78.com",
-      "status": null,
-      "elapsedMs": 10000,
-      "classification": "unreachable-or-timeout",
-      "error": "TimeoutError: The operation was aborted due to timeout"
+      "status": 200,
+      "finalHost": "www.sou78.com",
+      "https": true,
+      "html": true,
+      "contentType": "text/html",
+      "elapsedMs": 147,
+      "classification": "homepage-reachable"
     },
     {
       "id": "c280d2daa63cf42b",
@@ -2909,7 +2777,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 258,
+      "elapsedMs": 345,
       "classification": "homepage-reachable"
     },
     {
@@ -2921,7 +2789,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 80,
+      "elapsedMs": 85,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -2929,7 +2797,7 @@
       "name": "天美小说",
       "host": "m.tianmeixs.com",
       "status": null,
-      "elapsedMs": 10001,
+      "elapsedMs": 10000,
       "classification": "unreachable-or-timeout",
       "error": "TimeoutError: The operation was aborted due to timeout"
     },
@@ -2937,20 +2805,20 @@
       "id": "d45bb8083465a22f",
       "name": "天天看小说",
       "host": "cn.ttkan.co",
-      "status": 502,
+      "status": 403,
       "finalHost": "cn.ttkan.co",
       "https": true,
-      "html": true,
-      "contentType": "text/html",
-      "elapsedMs": 154,
-      "classification": "needs-review"
+      "html": false,
+      "contentType": "application/json; charset=utf-8",
+      "elapsedMs": 131,
+      "classification": "blocked-or-rate-limited"
     },
     {
       "id": "52159fc5c01f9fcd",
       "name": "天域小说",
       "host": "www.tycqzw.com",
       "status": null,
-      "elapsedMs": 10000,
+      "elapsedMs": 10001,
       "classification": "unreachable-or-timeout",
       "error": "TimeoutError: The operation was aborted due to timeout"
     },
@@ -2959,7 +2827,7 @@
       "name": "天域小说",
       "host": "www.zmccx.com",
       "status": null,
-      "elapsedMs": 625,
+      "elapsedMs": 658,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -2972,7 +2840,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 653,
+      "elapsedMs": 533,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -2980,7 +2848,7 @@
       "name": "同人圈子（魔法）",
       "host": "tongrenquan.org",
       "status": null,
-      "elapsedMs": 43,
+      "elapsedMs": 14,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -2993,7 +2861,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 79,
+      "elapsedMs": 90,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -3001,7 +2869,7 @@
       "name": "统御文学",
       "host": "wufangdao.com",
       "status": null,
-      "elapsedMs": 12,
+      "elapsedMs": 40,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -3014,7 +2882,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1001,
+      "elapsedMs": 1007,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -3026,7 +2894,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 509,
+      "elapsedMs": 247,
       "classification": "homepage-reachable"
     },
     {
@@ -3038,7 +2906,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1393,
+      "elapsedMs": 1547,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -3046,9 +2914,9 @@
       "name": "晚班小说（魔法）",
       "host": "m.read52.com",
       "status": null,
-      "elapsedMs": 10000,
+      "elapsedMs": 447,
       "classification": "unreachable-or-timeout",
-      "error": "TimeoutError: The operation was aborted due to timeout"
+      "error": "TypeError: fetch failed"
     },
     {
       "id": "baa566680dc6f419",
@@ -3068,7 +2936,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 519,
+      "elapsedMs": 96,
       "classification": "homepage-reachable"
     },
     {
@@ -3085,7 +2953,7 @@
       "name": "文坊阁",
       "host": "wfg.la",
       "status": null,
-      "elapsedMs": 455,
+      "elapsedMs": 513,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -3094,7 +2962,7 @@
       "name": "文墨中文",
       "host": "www.maxreader.la",
       "status": null,
-      "elapsedMs": 10001,
+      "elapsedMs": 10000,
       "classification": "unreachable-or-timeout",
       "error": "TimeoutError: The operation was aborted due to timeout"
     },
@@ -3103,9 +2971,9 @@
       "name": "我的书城(网站禁搜索)",
       "host": "wodushu.com",
       "status": null,
-      "elapsedMs": 7754,
+      "elapsedMs": 10000,
       "classification": "unreachable-or-timeout",
-      "error": "TypeError: fetch failed"
+      "error": "TimeoutError: The operation was aborted due to timeout"
     },
     {
       "id": "77647b9d57aad4c6",
@@ -3116,19 +2984,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 175,
-      "classification": "homepage-reachable"
-    },
-    {
-      "id": "5f3a379b967119c2",
-      "name": "污漫天堂",
-      "host": "wumtt.com",
-      "status": 200,
-      "finalHost": "wumtt.com",
-      "https": true,
-      "html": true,
-      "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 527,
+      "elapsedMs": 59,
       "classification": "homepage-reachable"
     },
     {
@@ -3140,7 +2996,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 348,
+      "elapsedMs": 500,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -3152,7 +3008,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 696,
+      "elapsedMs": 335,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -3160,7 +3016,7 @@
       "name": "无限小说",
       "host": "wuxianxs.cc",
       "status": null,
-      "elapsedMs": 420,
+      "elapsedMs": 143,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -3173,7 +3029,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 448,
+      "elapsedMs": 216,
       "classification": "homepage-reachable"
     },
     {
@@ -3181,7 +3037,7 @@
       "name": "唔爱书包",
       "host": "www.ishubao.org",
       "status": null,
-      "elapsedMs": 495,
+      "elapsedMs": 473,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -3190,7 +3046,7 @@
       "name": "下片小说",
       "host": "book.xiepp.cc",
       "status": null,
-      "elapsedMs": 432,
+      "elapsedMs": 404,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -3203,7 +3059,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 146,
+      "elapsedMs": 88,
       "classification": "homepage-reachable"
     },
     {
@@ -3211,7 +3067,7 @@
       "name": "香书小说",
       "host": "www.ibiquges.com",
       "status": null,
-      "elapsedMs": 9999,
+      "elapsedMs": 10001,
       "classification": "unreachable-or-timeout",
       "error": "TimeoutError: The operation was aborted due to timeout"
     },
@@ -3224,7 +3080,7 @@
       "https": true,
       "html": false,
       "contentType": "text/plain",
-      "elapsedMs": 1092,
+      "elapsedMs": 914,
       "classification": "needs-review"
     },
     {
@@ -3236,7 +3092,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1006,
+      "elapsedMs": 615,
       "classification": "homepage-reachable"
     },
     {
@@ -3244,7 +3100,7 @@
       "name": "小说天堂",
       "host": "www.xstt5.com",
       "status": null,
-      "elapsedMs": 613,
+      "elapsedMs": 248,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -3253,7 +3109,7 @@
       "name": "新笔趣阁",
       "host": "www.biquge5200.cc",
       "status": null,
-      "elapsedMs": 10000,
+      "elapsedMs": 10001,
       "classification": "unreachable-or-timeout",
       "error": "TimeoutError: The operation was aborted due to timeout"
     },
@@ -3266,20 +3122,8 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 596,
+      "elapsedMs": 454,
       "classification": "blocked-or-rate-limited"
-    },
-    {
-      "id": "d9c3353a3e2cebf7",
-      "name": "新御宅",
-      "host": "m.xyuzhaiwu10.com",
-      "status": 200,
-      "finalHost": "m.xyuzhaiwu10.com",
-      "https": true,
-      "html": true,
-      "contentType": "text/html",
-      "elapsedMs": 794,
-      "classification": "homepage-reachable"
     },
     {
       "id": "b31eb9e4b7836038",
@@ -3290,7 +3134,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 477,
+      "elapsedMs": 394,
       "classification": "homepage-reachable"
     },
     {
@@ -3298,16 +3142,16 @@
       "name": "星星小说",
       "host": "m.xingxingxsw.com",
       "status": null,
-      "elapsedMs": 10001,
+      "elapsedMs": 9997,
       "classification": "unreachable-or-timeout",
-      "error": "TimeoutError: The operation was aborted due to timeout"
+      "error": "TypeError: fetch failed"
     },
     {
       "id": "fa515d67ad55dd17",
       "name": "星星小说",
       "host": "m.zbcxw.cn",
       "status": null,
-      "elapsedMs": 10001,
+      "elapsedMs": 10000,
       "classification": "unreachable-or-timeout",
       "error": "TimeoutError: The operation was aborted due to timeout"
     },
@@ -3316,7 +3160,7 @@
       "name": "熊猫文学（优+）",
       "host": "www.dxmwx.org",
       "status": null,
-      "elapsedMs": 10000,
+      "elapsedMs": 10001,
       "classification": "unreachable-or-timeout",
       "error": "TimeoutError: The operation was aborted due to timeout"
     },
@@ -3336,47 +3180,41 @@
       "status": null,
       "elapsedMs": 10000,
       "classification": "unreachable-or-timeout",
-      "error": "TypeError: fetch failed"
+      "error": "TimeoutError: The operation was aborted due to timeout"
     },
     {
       "id": "e8fec0264775aa15",
       "name": "言情小说",
       "host": "m.bgnovel.com",
-      "status": 200,
-      "finalHost": "m.bgnovel.com",
-      "https": true,
-      "html": true,
-      "contentType": "text/html",
-      "elapsedMs": 8403,
-      "classification": "homepage-reachable"
+      "status": null,
+      "elapsedMs": 10001,
+      "classification": "unreachable-or-timeout",
+      "error": "TimeoutError: The operation was aborted due to timeout"
     },
     {
       "id": "499ecc6dbede8266",
       "name": "言情小筑#2",
       "host": "yqxz.org",
       "status": null,
-      "elapsedMs": 7963,
+      "elapsedMs": 10001,
       "classification": "unreachable-or-timeout",
-      "error": "TypeError: fetch failed"
+      "error": "TimeoutError: The operation was aborted due to timeout"
     },
     {
       "id": "7c4805b2ee39bd15",
       "name": "夜寒书库",
       "host": "www.yehanshu.com",
-      "status": 403,
-      "finalHost": "www.yehanshu.com",
-      "https": true,
-      "html": true,
-      "contentType": "text/html",
-      "elapsedMs": 7479,
-      "classification": "blocked-or-rate-limited"
+      "status": null,
+      "elapsedMs": 10000,
+      "classification": "unreachable-or-timeout",
+      "error": "TimeoutError: The operation was aborted due to timeout"
     },
     {
       "id": "5d0067de49efe2b0",
       "name": "一般小说",
       "host": "www.2kxs.info",
       "status": null,
-      "elapsedMs": 10001,
+      "elapsedMs": 10000,
       "classification": "unreachable-or-timeout",
       "error": "TimeoutError: The operation was aborted due to timeout"
     },
@@ -3384,20 +3222,17 @@
       "id": "ae34d605ccc8588c",
       "name": "一七小说",
       "host": "www.1qxs.com",
-      "status": 502,
-      "finalHost": "www.1qxs.com",
-      "https": true,
-      "html": true,
-      "contentType": "text/html",
-      "elapsedMs": 7077,
-      "classification": "needs-review"
+      "status": null,
+      "elapsedMs": 10001,
+      "classification": "unreachable-or-timeout",
+      "error": "TimeoutError: The operation was aborted due to timeout"
     },
     {
       "id": "220504e4c5063386",
       "name": "亿软网吧",
       "host": "www.iyruan.com",
       "status": null,
-      "elapsedMs": 10000,
+      "elapsedMs": 10001,
       "classification": "unreachable-or-timeout",
       "error": "TimeoutError: The operation was aborted due to timeout"
     },
@@ -3406,7 +3241,7 @@
       "name": "亿软网吧",
       "host": "www.yruan.com",
       "status": null,
-      "elapsedMs": 10000,
+      "elapsedMs": 10001,
       "classification": "unreachable-or-timeout",
       "error": "TimeoutError: The operation was aborted due to timeout"
     },
@@ -3414,34 +3249,19 @@
       "id": "f85994a7700fa7b4",
       "name": "优品小说",
       "host": "www.youpinbook.com",
-      "status": 403,
-      "finalHost": "www.youpinbook.com",
-      "https": true,
-      "html": true,
-      "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 3632,
-      "classification": "blocked-or-rate-limited"
+      "status": null,
+      "elapsedMs": 10001,
+      "classification": "unreachable-or-timeout",
+      "error": "TimeoutError: The operation was aborted due to timeout"
     },
     {
       "id": "72c3809eb96b2577",
       "name": "有度轻说（优+）",
       "host": "www.yodu.org",
       "status": null,
-      "elapsedMs": 10000,
+      "elapsedMs": 9999,
       "classification": "unreachable-or-timeout",
       "error": "TimeoutError: The operation was aborted due to timeout"
-    },
-    {
-      "id": "56f4de65f6a7e638",
-      "name": "柚子小说（优）",
-      "host": "m.888zjd.com",
-      "status": 403,
-      "finalHost": "m.888zjd.com",
-      "https": true,
-      "html": true,
-      "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 4485,
-      "classification": "blocked-or-rate-limited"
     },
     {
       "id": "dcc266e7034b11c6",
@@ -3461,56 +3281,17 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 2969,
+      "elapsedMs": 8744,
       "classification": "blocked-or-rate-limited"
     },
     {
       "id": "86650edabf3900e5",
       "name": "御书房文学",
       "host": "m.ysfwxc.com",
-      "status": 200,
-      "finalHost": "m.qidian.com",
-      "https": true,
-      "html": true,
-      "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 4497,
-      "classification": "homepage-reachable"
-    },
-    {
-      "id": "07e6fd495a82a0b1",
-      "name": "御书屋",
-      "host": "m.po18xs.com",
-      "status": 200,
-      "finalHost": "m.po18xs.com",
-      "https": true,
-      "html": true,
-      "contentType": "text/html; charset=gbk",
-      "elapsedMs": 2937,
-      "classification": "homepage-reachable"
-    },
-    {
-      "id": "7ba86448aab2d7e2",
-      "name": "御书屋",
-      "host": "m.eyushuwu.com",
-      "status": 200,
-      "finalHost": "m.eyushuwu.com",
-      "https": true,
-      "html": true,
-      "contentType": "text/html",
-      "elapsedMs": 3093,
-      "classification": "homepage-reachable"
-    },
-    {
-      "id": "c8972568e23c102f",
-      "name": "御宅文屋",
-      "host": "www.yuzhaiwen.com",
-      "status": 200,
-      "finalHost": "www.yuzhaiwen.com",
-      "https": true,
-      "html": true,
-      "contentType": "text/html",
-      "elapsedMs": 2416,
-      "classification": "homepage-reachable"
+      "status": null,
+      "elapsedMs": 10001,
+      "classification": "unreachable-or-timeout",
+      "error": "TimeoutError: The operation was aborted due to timeout"
     },
     {
       "id": "cf926544162d4069",
@@ -3521,7 +3302,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1281,
+      "elapsedMs": 7183,
       "classification": "homepage-reachable"
     },
     {
@@ -3533,7 +3314,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 2720,
+      "elapsedMs": 6371,
       "classification": "homepage-reachable"
     },
     {
@@ -3541,21 +3322,9 @@
       "name": "云读小说",
       "host": "m.yundu9.com",
       "status": null,
-      "elapsedMs": 743,
+      "elapsedMs": 5313,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
-    },
-    {
-      "id": "224861d455e1fb5f",
-      "name": "渣女小说",
-      "host": "zhanvxs.net",
-      "status": 200,
-      "finalHost": "zhanvxs.net",
-      "https": true,
-      "html": true,
-      "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1026,
-      "classification": "homepage-reachable"
     },
     {
       "id": "c2630744a90229ce",
@@ -3566,7 +3335,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 1614,
+      "elapsedMs": 6204,
       "classification": "homepage-reachable"
     },
     {
@@ -3578,7 +3347,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 642,
+      "elapsedMs": 5192,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -3590,7 +3359,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 1801,
+      "elapsedMs": 3455,
       "classification": "homepage-reachable"
     },
     {
@@ -3602,7 +3371,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 2008,
+      "elapsedMs": 2454,
       "classification": "homepage-reachable"
     },
     {
@@ -3623,7 +3392,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 431,
+      "elapsedMs": 2325,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -3635,7 +3404,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 1612,
+      "elapsedMs": 5086,
       "classification": "homepage-reachable"
     },
     {
@@ -3647,7 +3416,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 100,
+      "elapsedMs": 2565,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -3659,7 +3428,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 660,
+      "elapsedMs": 2956,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -3680,7 +3449,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html",
-      "elapsedMs": 217,
+      "elapsedMs": 2300,
       "classification": "needs-review"
     },
     {
@@ -3688,7 +3457,7 @@
       "name": "追哟文学",
       "host": "www.zhuiyo.com",
       "status": null,
-      "elapsedMs": 9999,
+      "elapsedMs": 10000,
       "classification": "unreachable-or-timeout",
       "error": "TimeoutError: The operation was aborted due to timeout"
     },
@@ -3701,31 +3470,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 84,
-      "classification": "blocked-or-rate-limited"
-    },
-    {
-      "id": "976f438ff9f8d09f",
-      "name": "alpha",
-      "host": "www.alphapolis.co.jp",
-      "status": 200,
-      "finalHost": "www.alphapolis.co.jp",
-      "https": true,
-      "html": true,
-      "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 788,
-      "classification": "homepage-reachable"
-    },
-    {
-      "id": "b261e3fb1d24daa4",
-      "name": "BL文库tv",
-      "host": "m.blwenku.tv",
-      "status": 403,
-      "finalHost": "m.blwenku.tv",
-      "https": true,
-      "html": true,
-      "contentType": "text/html; charset=UTF-8",
-      "elapsedMs": 64,
+      "elapsedMs": 1973,
       "classification": "blocked-or-rate-limited"
     },
     {
@@ -3733,7 +3478,7 @@
       "name": "NTRseqing小说",
       "host": "www.aahhss.com",
       "status": null,
-      "elapsedMs": 96,
+      "elapsedMs": 1808,
       "classification": "unreachable-or-timeout",
       "error": "TypeError: fetch failed"
     },
@@ -3746,7 +3491,7 @@
       "https": true,
       "html": true,
       "contentType": "text/html; charset=utf-8",
-      "elapsedMs": 416,
+      "elapsedMs": 1965,
       "classification": "needs-review"
     }
   ]
