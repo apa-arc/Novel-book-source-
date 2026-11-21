@@ -20,7 +20,7 @@
         "chapterUrl": "https://www.52shuku.net/{chapterUrl}",
         "htmlRules": {
           "search": {
-            "itemSelector": "article.excerpt a[href^=\"/wuxia/\"]",
+            "itemSelector": "article.excerpt a[href*=\"/wuxia/\"]",
             "titleSelector": ":self",
             "urlSelector": ":self"
           },
