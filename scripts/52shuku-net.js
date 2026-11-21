@@ -21,7 +21,7 @@ module.exports = createAdapter({
     }
   },
   toc: {
-    list: css("article.article-content ul.list.clearfix li.mulu a", "all"),
+    list: css("ul.list.clearfix li.mulu a", "all"),
     fields: {
       title: self("text"),
       chapterUrl: self("href")
