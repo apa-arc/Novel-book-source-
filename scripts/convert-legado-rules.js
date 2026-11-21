@@ -73,6 +73,44 @@ function splitTopLevel(raw, operator) {
   }
   return parts.length?parts.concat(raw.slice(start).trim()):null;
 }
+function parseJsonPath(expression) {
+  const raw=String(expression||"").trim();
+  if(!raw||raw.length>1024) return null;
+  const steps=[];
+  let i=0;
+  if(raw[i]==="$") i++;
+  if(i<raw.length&&raw[i]==="."&&raw[i+1]===".") return null;
+  while(i<raw.length){
+    if(raw[i]==="."){
+      i++;
+      const match=raw.slice(i).match(/^([A-Za-z_$][\w$-]*)/);
+      if(!match) return null;
+      steps.push({kind:"property",name:match[1]});
+      i+=match[1].length;
+      continue;
+    }
+    if(raw[i]==="["){
+      const end=raw.indexOf("]",i+1);
+      if(end<0) return null;
+      const token=raw.slice(i+1,end).trim();
+      if(token==="*") steps.push({kind:"wildcard"});
+      else if(/^-?\d+$/.test(token)) steps.push({kind:"index",index:Number(token)});
+      else if(/^(['"])[\s\S]*\1$/.test(token)) steps.push({kind:"property",name:token.slice(1,-1)});
+      else return null;
+      i=end+1;
+      continue;
+    }
+    if(i===0){
+      const match=raw.slice(i).match(/^([A-Za-z_$][\w$-]*)/);
+      if(!match) return null;
+      steps.push({kind:"property",name:match[1]});
+      i+=match[1].length;
+      continue;
+    }
+    return null;
+  }
+  return steps.length?steps:null;
+}
 function parseLegacyChain(expression) {
   let raw = String(expression).trim();
   if (!raw) return {status:"empty"};
@@ -115,7 +153,11 @@ function parseLegacyChain(expression) {
     return {status:"candidate",selector:{engine:"css",query,output:out==="text"?"text":"attr:"+out}};
   }
   if (/^@xpath:/i.test(raw)) return {status:"manual",reason:"unsupported-xpath"};
-  if (/^@json:/i.test(raw) || /^\$[.[]/.test(raw)) return {status:"manual",reason:"unsupported-jsonpath"};
+  const jsonExpression=raw.match(/^@json:(.*)$/i);
+  if(jsonExpression||/^\$[.[]/.test(raw)){
+    const jsonPath=parseJsonPath(jsonExpression?jsonExpression[1]:raw);
+    return jsonPath?{status:"candidate",selector:{engine:"json",path:jsonPath}}:{status:"manual",reason:"unsupported-jsonpath"};
+  }
   if (/^(text|html|href|src|owntext|textnodes|textNodes|all)$/i.test(raw)) {
     const output = raw.toLowerCase() === "textnodes" ? "textnodes" : raw.toLowerCase();
     return {status:"candidate",selector:{engine:"self",output}};
