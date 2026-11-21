@@ -44,7 +44,7 @@ function robotsAllows(url,policy){
  const target=url.pathname+(url.search||"");const matched=[];
  for(const rule of policy?.rules||[]){
   const pattern=rule.path;const anchored=pattern.endsWith("$");const raw=anchored?pattern.slice(0,-1):pattern;
-  const escaped=raw.replace(/[-/\\^$+?.()|[\]{}]/g,"\\function robotsSitemaps(body,base,hosts){const out=[];for(const line of String(body).split(/\r?\n/)){const m=line.match(/^\s*Sitemap:\s*(\S+)/i);if(m){try{const u=new URL(m[1],base);if(allowed(u,hosts))out.push(u.href);}catch{}}}return out;}").replace(/\*/g,".*");
+  const escaped=raw.split("").map(ch=>ch==="*"?" .* ".trim():"\\^$+?.()|[]{}".includes(ch)?"\\"+ch:ch).join("");
   try{if(new RegExp("^"+escaped+(anchored?"$":"")).test(target))matched.push({rule,length:pattern.replace(/[*$]/g,"").length});}catch{}
  }
  if(!matched.length)return true;
@@ -63,7 +63,7 @@ async function fetchRobots(fetchImpl,base,hosts){
 function robotsSitemaps(body,base,hosts){return parseRobots(body,base,hosts).sitemaps;}
 async function get(fetchImpl,url,hosts,maxBytes,timeout=10000,robots=null){
  const u=new URL(url);if(!allowed(u,hosts))throw Error("url-outside-registered-domain");if(robots&&!robotsAllows(u,robots))throw Error("robots-disallowed");
- const r=await fetchImpl(u.href,{redirect:"follow",signal:AbortSignal.timeout(timeout),headers:{"User-Agent":"NovelSourceQualityScanner/1.1 (public-page sample; no-login)"}});
+ const r=await fetchImpl(u.href,{redirect:"follow",signal:AbortSignal.timeout(timeout),headers:{"User-Agent":SCANNER_UA}});
  const final=new URL(r.url||u.href);if(!allowed(final,hosts))throw Error("redirect-outside-registered-domain");if(robots&&!robotsAllows(final,robots))throw Error("redirect-target-disallowed-by-robots");
  if(!r.ok)throw Error("http-"+r.status);
  const type=r.headers?.get?.("content-type")||"";if(type&&!/(text\/html|text\/xml|application\/xml|application\/xhtml|text\/plain)/i.test(type))throw Error("unsupported-content-type");
