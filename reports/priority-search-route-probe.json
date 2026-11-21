@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T14:48:32.681Z",
+  "generatedAt": "2026-11-21T14:56:34.979Z",
   "keywords": [
     "斗罗大陆",
     "斗破苍穹"
@@ -9,7 +9,8 @@
   "note": "仅探测已发现的公开 GET 搜索路由；不执行站点 JavaScript、不登录、不绕过访问控制、不读取或保存小说正文。搜索入口响应不等于 App 兼容或可正式导入。",
   "counts": {
     "total": 24,
-    "http-success-no-keyword-hit": 16,
+    "request-error": 2,
+    "http-success-no-keyword-hit": 14,
     "redirect-target-no-keyword-hit": 8
   },
   "results": [
@@ -19,13 +20,9 @@
       "baseUrl": "https://mobile.hotread.com/",
       "keyword": "斗罗大陆",
       "path": "/storySearch/search?keyword={keyword}",
-      "status": 200,
-      "contentType": "text/html;charset=UTF-8",
-      "title": "小说排行榜_火星小说|好看的免费小说下载网",
-      "hasKeyword": false,
-      "links": [],
-      "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 1390
+      "classification": "request-error",
+      "error": "TimeoutError: The operation was aborted due to timeout",
+      "elapsedMs": 12002
     },
     {
       "id": "hotread-mobile",
@@ -39,7 +36,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 1386
+      "elapsedMs": 1683
     },
     {
       "id": "hotread-mobile",
@@ -53,7 +50,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 1615
+      "elapsedMs": 1906
     },
     {
       "id": "hotread-mobile",
@@ -67,7 +64,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 1572
+      "elapsedMs": 1926
     },
     {
       "id": "hotread-mobile",
@@ -81,7 +78,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 1803
+      "elapsedMs": 2167
     },
     {
       "id": "hotread-mobile",
@@ -95,7 +92,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 1781
+      "elapsedMs": 2097
     },
     {
       "id": "hotread-mobile",
@@ -103,13 +100,9 @@
       "baseUrl": "https://mobile.hotread.com/",
       "keyword": "斗罗大陆",
       "path": "/storySearch/search?q={keyword}",
-      "status": 200,
-      "contentType": "text/html;charset=UTF-8",
-      "title": "小说排行榜_火星小说|好看的免费小说下载网",
-      "hasKeyword": false,
-      "links": [],
-      "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 348
+      "classification": "request-error",
+      "error": "TimeoutError: The operation was aborted due to timeout",
+      "elapsedMs": 12000
     },
     {
       "id": "hotread-mobile",
@@ -123,7 +116,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 321
+      "elapsedMs": 377
     },
     {
       "id": "hotread-mobile",
@@ -137,7 +130,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 346
+      "elapsedMs": 355
     },
     {
       "id": "hotread-mobile",
@@ -151,7 +144,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 322
+      "elapsedMs": 380
     },
     {
       "id": "hotread-mobile",
@@ -165,7 +158,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 330
+      "elapsedMs": 499
     },
     {
       "id": "hotread-mobile",
@@ -179,7 +172,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 318
+      "elapsedMs": 11856
     },
     {
       "id": "hotread-mobile",
@@ -193,7 +186,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 312
+      "elapsedMs": 385
     },
     {
       "id": "hotread-mobile",
@@ -207,7 +200,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 340
+      "elapsedMs": 355
     },
     {
       "id": "hotread-mobile",
@@ -221,7 +214,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 408
+      "elapsedMs": 472
     },
     {
       "id": "hotread-mobile",
@@ -235,7 +228,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 391
+      "elapsedMs": 383
     },
     {
       "id": "luochu-mobile",
@@ -277,7 +270,7 @@
         }
       ],
       "classification": "redirect-target-no-keyword-hit",
-      "elapsedMs": 2385
+      "elapsedMs": 3470
     },
     {
       "id": "luochu-mobile",
@@ -319,7 +312,7 @@
         }
       ],
       "classification": "redirect-target-no-keyword-hit",
-      "elapsedMs": 2222
+      "elapsedMs": 6981
     },
     {
       "id": "luochu-mobile",
@@ -361,7 +354,7 @@
         }
       ],
       "classification": "redirect-target-no-keyword-hit",
-      "elapsedMs": 1912
+      "elapsedMs": 2735
     },
     {
       "id": "luochu-mobile",
@@ -403,7 +396,7 @@
         }
       ],
       "classification": "redirect-target-no-keyword-hit",
-      "elapsedMs": 2305
+      "elapsedMs": 1645
     },
     {
       "id": "luochu-mobile",
@@ -445,7 +438,7 @@
         }
       ],
       "classification": "redirect-target-no-keyword-hit",
-      "elapsedMs": 2155
+      "elapsedMs": 1859
     },
     {
       "id": "luochu-mobile",
@@ -487,7 +480,7 @@
         }
       ],
       "classification": "redirect-target-no-keyword-hit",
-      "elapsedMs": 2051
+      "elapsedMs": 1826
     },
     {
       "id": "luochu-mobile",
@@ -529,7 +522,7 @@
         }
       ],
       "classification": "redirect-target-no-keyword-hit",
-      "elapsedMs": 1408
+      "elapsedMs": 1894
     },
     {
       "id": "luochu-mobile",
@@ -571,7 +564,7 @@
         }
       ],
       "classification": "redirect-target-no-keyword-hit",
-      "elapsedMs": 1361
+      "elapsedMs": 1754
     }
   ]
 }
