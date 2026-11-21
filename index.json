@@ -105,6 +105,22 @@
       "file": "sources/biquge-17177.json",
       "enabled": true,
       "testOnly": true
+    },
+    {
+      "id": "d8zw-com",
+      "name": "第八中文网",
+      "kind": "public-web",
+      "file": "sources/d8zw-com.json",
+      "enabled": true,
+      "testOnly": true
+    },
+    {
+      "id": "bqg-info",
+      "name": "笔趣阁info",
+      "kind": "public-web",
+      "file": "sources/bqg-info.json",
+      "enabled": true,
+      "testOnly": true
     }
   ]
 }
