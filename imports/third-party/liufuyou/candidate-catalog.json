@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T11:20:29.519Z",
+  "generatedAt": "2026-11-21T11:21:16.718Z",
   "provider": "liufuyou/read metadata-only discovery",
   "upstream": [
     "https://raw.githubusercontent.com/liufuyou/read/main/sources/yck-novel.json",
@@ -11,29 +11,20 @@
   "filterStats": {
     "upstreamRecords": 2355,
     "nonText": 49,
-    "nonNovel": 37,
+    "nonNovel": 45,
     "adult": 13,
     "cookieOrSecret": 954,
-    "nonGetOrScript": 1069,
-    "nonHttps": 45,
+    "nonGetOrScript": 1063,
+    "nonHttps": 44,
     "duplicateHost": 49,
-    "accepted": 139
+    "accepted": 138
   },
-  "sourceCount": 139,
+  "sourceCount": 138,
   "sources": [
     {
       "id": "9dba3c3c3757e39c",
       "name": "🌐 博览群书",
       "baseUrl": "https://readnovelfull.com/",
-      "group": "💠 综合",
-      "upstream": "Daiaji LegadoSource",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
-      "id": "3e9024da6cf85449",
-      "name": "🌐 英语小说",
-      "baseUrl": "https://bestlightnovel.com/",
       "group": "💠 综合",
       "upstream": "Daiaji LegadoSource",
       "redistributionStatus": "not-assessed",
