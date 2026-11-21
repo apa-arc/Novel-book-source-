@@ -36,7 +36,7 @@ function validateCandidate(source) {
   try {
     base = new URL(source.bookSourceUrl);
     const rawSearch = String(source.searchUrl);
-    const requestConfig = rawSearch.match(/^([^,]+),\\s*(\\{[\\s\\S]*\\})$/);
+    const requestConfig = rawSearch.match(/^([^,]+),\s*(\{[\s\S]*\})$/);
     let searchSpec = rawSearch;
     if (requestConfig) {
       const config = JSON.parse(requestConfig[2]);
@@ -44,7 +44,7 @@ function validateCandidate(source) {
           config.webView || config.cookie || config.header) return false;
       searchSpec = requestConfig[1].trim();
     } else if (rawSearch.includes(",")) {
-      searchSpec = rawSearch.split(/,(?=https?:\\/\\/)/i)[0].trim();
+      searchSpec = rawSearch.split(/,(?=https?:\/\/)/i)[0].trim();
     }
     search = new URL(searchSpec, base);
   } catch { return false; }
