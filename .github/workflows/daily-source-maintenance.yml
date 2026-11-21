@@ -47,6 +47,7 @@ jobs:
         run: |
           npm install --no-save --no-package-lock tsx
           npx tsx scripts/live-test-app-runtime.ts
+          node scripts/reconcile-source-health.js
       - name: Publish scan and runtime test reports
         if: always()
         run: |
