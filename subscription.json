@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "subscriptionId": "apa-arc-novel-book-source",
   "name": "小说源",
-  "description": "统一小说订阅，普通与成人小说源合并管理；来源可先收录，发现问题后再修复或下架。",
+  "description": "普通与成人小说统一订阅；来源发现问题后持续修复或下架。",
   "repository": "https://github.com/apa-arc/Novel-book-source-",
-  "updatedAt": "2026-11-21T06:26:27.598Z",
-  "sourceCount": 1,
+  "updatedAt": "2026-11-21T06:34:22.693Z",
+  "sourceCount": 2,
   "sources": [
     {
       "id": "biquluo-la",
@@ -49,6 +49,52 @@
       },
       "testOnly": true,
       "testOnlyReason": "旧版 Legado 四阶段联网测试曾通过；当前先开放给 AppleNovelApp 原生宿主联调，尚未完成 App 侧复测。"
+    },
+    {
+      "id": "diyibanzhu-111",
+      "name": "第一版主111",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "成人与综合小说站点；先并入统一小说源，后续根据 App 实测修正规则。",
+      "baseUrl": "https://www.111bz.cc/",
+      "domains": [
+        "www.111bz.cc"
+      ],
+      "categories": [
+        "成人小说"
+      ],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/diyibanzhu-111.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/diyibanzhu-111.js",
+      "appConfig": {
+        "searchUrl": "https://www.111bz.cc/modules/article/search.php?searchkey={keyword}&searchtype=articlename&page={page}",
+        "bookUrl": "https://www.111bz.cc/{bookUrl}",
+        "chapterListUrl": "https://www.111bz.cc/{bookUrl}",
+        "chapterUrl": "https://www.111bz.cc/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": "tbody#nr tr",
+            "titleSelector": "td.odd a",
+            "urlSelector": "td.odd a",
+            "authorSelector": "td.even"
+          },
+          "detail": {
+            "titleSelector": "h1",
+            "authorSelector": "#info p",
+            "descriptionSelector": "#intro"
+          },
+          "chapters": {
+            "itemSelector": "dl dd",
+            "titleSelector": "a",
+            "urlSelector": "a"
+          },
+          "content": {
+            "contentSelector": "#content",
+            "titleSelector": "h1"
+          }
+        }
+      },
+      "testOnly": true,
+      "testOnlyReason": "已依据现有公开书源规则转换为 App 原生配置；搜索与章节接口尚待 App 真机联调，发现问题后继续修复。"
     }
   ]
 }
