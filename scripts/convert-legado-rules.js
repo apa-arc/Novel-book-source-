@@ -361,7 +361,11 @@ function parseLegacyChain(expression) {
     return xpath?{status:"candidate",selector:xpath}:{status:"manual",reason:"unsupported-xpath"};
   }
   const jsonExpression=raw.match(/^@json:(.*)$/i);
-  const implicitJson=/^\$[.[]/.test(raw)||/^[A-Za-z_$][\w$-]*\[(?:\*|\d|:)\][.]([A-Za-z_$][\w$-]*)/.test(raw);
+  const implicitIndexJson=/^[A-Za-z_$][\w$-]*\[(?:\*|\d|:)\][.]([A-Za-z_$][\w$-]*)/.test(raw);
+  const htmlTags=new Set(["a","abbr","address","article","aside","audio","b","blockquote","body","br","button","canvas","caption","code","col","dd","div","dl","dt","em","fieldset","figcaption","figure","footer","form","h1","h2","h3","h4","h5","h6","head","header","hr","i","iframe","img","input","label","li","link","main","meta","nav","ol","optgroup","option","p","pre","script","section","select","small","source","span","strong","style","sub","summary","sup","table","tbody","td","textarea","tfoot","th","thead","time","title","tr","track","u","ul","video"]);
+  const dottedJson=raw.match(/^([A-Za-z_$][\w$-]*(?:\.[A-Za-z_$][\w$-]*)+)$/);
+  const implicitDottedJson=!!dottedJson&&!htmlTags.has(dottedJson[1].split(".")[0].toLowerCase());
+  const implicitJson=/^\$[.[]/.test(raw)||implicitIndexJson||implicitDottedJson;
   if(jsonExpression||implicitJson){
     let expression=jsonExpression?jsonExpression[1].trim():raw;
     const braceParts=expression.match(/\{([^{}]+)\}/g);
