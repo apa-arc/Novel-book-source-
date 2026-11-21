@@ -65,8 +65,6 @@ assert.equal(assessment.totals.adultExcludedSourceRecords, 0);
 assert.equal(assessment.totals.adultOnlyDomains, 1);
 assert.equal(assessment.totals.nonNovelExcludedSourceRecords, 2);
 assert.equal(assessment.totals.nonNovelOnlyDomains, 2);
-assert.equal(assessment.totals.nonNovelExcludedSourceRecords, 1);
-assert.equal(assessment.totals.nonNovelOnlyDomains, 1);
 assert.equal(assessment.totals.readyForSubscription, 0);
 assert.equal(assessment.sources[0].chapterSampleStatus, "chapter-sample-clean");
 assert.equal(assessment.sources[1].chapterSampleStatus, "chapter-sample-clean");
