@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-21T15:03:20.552Z",
+  "updatedAt": "2026-11-21T15:45:01.243Z",
   "policy": {
     "testKeywords": [
       "斗罗大陆",
@@ -20,9 +20,9 @@
   },
   "sources": {
     "biquluo-la": {
-      "checks": 1,
+      "checks": 2,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T15:03:20.552Z",
+      "lastCheckedAt": "2026-11-21T15:45:01.243Z",
       "lastStatus": "passed-both",
       "lastResult": {
         "id": "biquluo-la",
@@ -86,12 +86,76 @@
       "baseline": true,
       "userConfirmedWorking": true,
       "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。",
-      "sourceAvailabilityStatus": "user-confirmed-baseline"
+      "sourceAvailabilityStatus": "user-confirmed-baseline",
+      "lastProbeStatus": "readable-both",
+      "lastProbeResult": {
+        "id": "biquluo-la",
+        "name": "壁落小说",
+        "status": "readable-both",
+        "terms": {
+          "斗罗大陆": {
+            "keyword": "斗罗大陆",
+            "status": "readable",
+            "stages": [
+              {
+                "stage": "搜索",
+                "status": "passed",
+                "detail": "App 搜索请求及解析成功；返回 100 条结果"
+              },
+              {
+                "stage": "目录",
+                "status": "passed",
+                "detail": "获取 723 章；首章「第二百三十六章 大结局，最后一个条件（全书完）」"
+              },
+              {
+                "stage": "详情（可选）",
+                "status": "passed",
+                "detail": "详情页读取成功：斗罗大陆"
+              },
+              {
+                "stage": "正文",
+                "status": "passed",
+                "detail": "首章正文读取成功（9117 字符）"
+              }
+            ],
+            "resultCount": 100,
+            "selectedTitle": "斗罗大陆"
+          },
+          "斗破苍穹": {
+            "keyword": "斗破苍穹",
+            "status": "readable",
+            "stages": [
+              {
+                "stage": "搜索",
+                "status": "passed",
+                "detail": "App 搜索请求及解析成功；返回 100 条结果"
+              },
+              {
+                "stage": "目录",
+                "status": "passed",
+                "detail": "获取 1926 章；首章「第一千五百九十三章 古帝洞府所在」"
+              },
+              {
+                "stage": "详情（可选）",
+                "status": "passed",
+                "detail": "详情页读取成功：斗破苍穹"
+              },
+              {
+                "stage": "正文",
+                "status": "passed",
+                "detail": "首章正文读取成功（1219 字符）"
+              }
+            ],
+            "resultCount": 100,
+            "selectedTitle": "斗破苍穹"
+          }
+        }
+      }
     },
     "jiuyi-91zww": {
-      "checks": 1,
+      "checks": 2,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T15:03:20.552Z",
+      "lastCheckedAt": "2026-11-21T15:45:01.243Z",
       "lastStatus": "failed",
       "lastResult": {
         "id": "jiuyi-91zww",
@@ -127,12 +191,74 @@
       "baseline": true,
       "userConfirmedWorking": true,
       "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。",
-      "sourceAvailabilityStatus": "user-confirmed-baseline"
+      "sourceAvailabilityStatus": "user-confirmed-baseline",
+      "lastProbeStatus": "search-or-catalog-only",
+      "lastProbeResult": {
+        "id": "jiuyi-91zww",
+        "name": "九一中文",
+        "status": "search-or-catalog-only",
+        "terms": {
+          "斗罗大陆": {
+            "keyword": "斗罗大陆",
+            "status": "search-only",
+            "stages": [
+              {
+                "stage": "搜索",
+                "status": "passed",
+                "detail": "App 搜索请求及解析成功；返回 0 条结果"
+              },
+              {
+                "stage": "目录",
+                "status": "skipped",
+                "detail": "搜索成功，但本次关键词没有返回书目"
+              },
+              {
+                "stage": "详情",
+                "status": "skipped",
+                "detail": "没有搜索结果可供打开"
+              },
+              {
+                "stage": "正文",
+                "status": "skipped",
+                "detail": "没有搜索结果可供打开"
+              }
+            ],
+            "resultCount": 0
+          },
+          "斗破苍穹": {
+            "keyword": "斗破苍穹",
+            "status": "search-only",
+            "stages": [
+              {
+                "stage": "搜索",
+                "status": "passed",
+                "detail": "App 搜索请求及解析成功；返回 0 条结果"
+              },
+              {
+                "stage": "目录",
+                "status": "skipped",
+                "detail": "搜索成功，但本次关键词没有返回书目"
+              },
+              {
+                "stage": "详情",
+                "status": "skipped",
+                "detail": "没有搜索结果可供打开"
+              },
+              {
+                "stage": "正文",
+                "status": "skipped",
+                "detail": "没有搜索结果可供打开"
+              }
+            ],
+            "resultCount": 0
+          }
+        }
+      }
     },
     "xinbiquge-info": {
-      "checks": 1,
+      "checks": 2,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T15:03:20.552Z",
+      "lastCheckedAt": "2026-11-21T15:45:01.243Z",
       "lastStatus": "failed",
       "lastResult": {
         "id": "xinbiquge-info",
@@ -188,12 +314,78 @@
       "baseline": true,
       "userConfirmedWorking": true,
       "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。",
-      "sourceAvailabilityStatus": "user-confirmed-baseline"
+      "sourceAvailabilityStatus": "user-confirmed-baseline",
+      "lastProbeStatus": "search-or-catalog-only",
+      "lastProbeResult": {
+        "id": "xinbiquge-info",
+        "name": "新笔趣阁小说网",
+        "status": "search-or-catalog-only",
+        "terms": {
+          "斗罗大陆": {
+            "keyword": "斗罗大陆",
+            "status": "search-only",
+            "stages": [
+              {
+                "stage": "搜索",
+                "status": "passed",
+                "detail": "App 搜索请求及解析成功；返回 20 条结果"
+              },
+              {
+                "stage": "目录",
+                "status": "failed",
+                "detail": "书源服务器返回 HTTP 404。"
+              },
+              {
+                "stage": "详情",
+                "status": "skipped",
+                "detail": "App 阅读流程先加载目录；目录失败后不会继续详情请求"
+              },
+              {
+                "stage": "正文",
+                "status": "skipped",
+                "detail": "目录不可用，无法取得章节链接"
+              }
+            ],
+            "resultCount": 20,
+            "selectedTitle": "[网游]斗罗大陆之永恒龙魂",
+            "error": "书源服务器返回 HTTP 404。"
+          },
+          "斗破苍穹": {
+            "keyword": "斗破苍穹",
+            "status": "search-only",
+            "stages": [
+              {
+                "stage": "搜索",
+                "status": "passed",
+                "detail": "App 搜索请求及解析成功；返回 17 条结果"
+              },
+              {
+                "stage": "目录",
+                "status": "failed",
+                "detail": "书源服务器返回 HTTP 404。"
+              },
+              {
+                "stage": "详情",
+                "status": "skipped",
+                "detail": "App 阅读流程先加载目录；目录失败后不会继续详情请求"
+              },
+              {
+                "stage": "正文",
+                "status": "skipped",
+                "detail": "目录不可用，无法取得章节链接"
+              }
+            ],
+            "resultCount": 17,
+            "selectedTitle": "[网游]斗破苍穹之扶弟狂魔",
+            "error": "书源服务器返回 HTTP 404。"
+          }
+        }
+      }
     },
     "biquge-17177": {
-      "checks": 1,
+      "checks": 2,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T15:03:20.552Z",
+      "lastCheckedAt": "2026-11-21T15:45:01.243Z",
       "lastStatus": "passed-both",
       "lastResult": {
         "id": "biquge-17177",
@@ -257,12 +449,77 @@
       "baseline": true,
       "userConfirmedWorking": true,
       "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。",
-      "sourceAvailabilityStatus": "user-confirmed-baseline"
+      "sourceAvailabilityStatus": "user-confirmed-baseline",
+      "lastProbeStatus": "readable-one",
+      "lastProbeResult": {
+        "id": "biquge-17177",
+        "name": "笔趣阁小说网（17177）",
+        "status": "readable-one",
+        "terms": {
+          "斗罗大陆": {
+            "keyword": "斗罗大陆",
+            "status": "readable",
+            "stages": [
+              {
+                "stage": "搜索",
+                "status": "passed",
+                "detail": "App 搜索请求及解析成功；返回 20 条结果"
+              },
+              {
+                "stage": "目录",
+                "status": "passed",
+                "detail": "获取 61 章；首章「引子。古月娜，唐胤」"
+              },
+              {
+                "stage": "详情（可选）",
+                "status": "passed",
+                "detail": "详情页读取成功：[网游]斗罗大陆之胤月传说"
+              },
+              {
+                "stage": "正文",
+                "status": "passed",
+                "detail": "首章正文读取成功（1272 字符）"
+              }
+            ],
+            "resultCount": 20,
+            "selectedTitle": "[网游]斗罗大陆之胤月传说"
+          },
+          "斗破苍穹": {
+            "keyword": "斗破苍穹",
+            "status": "search-only",
+            "stages": [
+              {
+                "stage": "搜索",
+                "status": "passed",
+                "detail": "App 搜索请求及解析成功；返回 17 条结果"
+              },
+              {
+                "stage": "目录",
+                "status": "failed",
+                "detail": "书源服务器返回 HTTP 404。"
+              },
+              {
+                "stage": "详情",
+                "status": "skipped",
+                "detail": "App 阅读流程先加载目录；目录失败后不会继续详情请求"
+              },
+              {
+                "stage": "正文",
+                "status": "skipped",
+                "detail": "目录不可用，无法取得章节链接"
+              }
+            ],
+            "resultCount": 17,
+            "selectedTitle": "[玄幻]斗破苍穹：与女王陛下的爱恨情仇",
+            "error": "书源服务器返回 HTTP 404。"
+          }
+        }
+      }
     },
     "d8zw-com": {
-      "checks": 1,
+      "checks": 2,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T15:03:20.552Z",
+      "lastCheckedAt": "2026-11-21T15:45:01.243Z",
       "lastStatus": "failed",
       "lastResult": {
         "id": "d8zw-com",
@@ -318,12 +575,78 @@
       "baseline": true,
       "userConfirmedWorking": true,
       "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。",
-      "sourceAvailabilityStatus": "user-confirmed-baseline"
+      "sourceAvailabilityStatus": "user-confirmed-baseline",
+      "lastProbeStatus": "search-or-catalog-only",
+      "lastProbeResult": {
+        "id": "d8zw-com",
+        "name": "第八中文网",
+        "status": "search-or-catalog-only",
+        "terms": {
+          "斗罗大陆": {
+            "keyword": "斗罗大陆",
+            "status": "search-only",
+            "stages": [
+              {
+                "stage": "搜索",
+                "status": "passed",
+                "detail": "App 搜索请求及解析成功；返回 20 条结果"
+              },
+              {
+                "stage": "目录",
+                "status": "failed",
+                "detail": "书源服务器返回 HTTP 404。"
+              },
+              {
+                "stage": "详情",
+                "status": "skipped",
+                "detail": "App 阅读流程先加载目录；目录失败后不会继续详情请求"
+              },
+              {
+                "stage": "正文",
+                "status": "skipped",
+                "detail": "目录不可用，无法取得章节链接"
+              }
+            ],
+            "resultCount": 20,
+            "selectedTitle": "[网游]斗罗大陆龙王传说里的JOJO",
+            "error": "书源服务器返回 HTTP 404。"
+          },
+          "斗破苍穹": {
+            "keyword": "斗破苍穹",
+            "status": "search-only",
+            "stages": [
+              {
+                "stage": "搜索",
+                "status": "passed",
+                "detail": "App 搜索请求及解析成功；返回 17 条结果"
+              },
+              {
+                "stage": "目录",
+                "status": "failed",
+                "detail": "书源服务器返回 HTTP 404。"
+              },
+              {
+                "stage": "详情",
+                "status": "skipped",
+                "detail": "App 阅读流程先加载目录；目录失败后不会继续详情请求"
+              },
+              {
+                "stage": "正文",
+                "status": "skipped",
+                "detail": "目录不可用，无法取得章节链接"
+              }
+            ],
+            "resultCount": 17,
+            "selectedTitle": "[玄幻]斗破苍穹之我的师父是云韵",
+            "error": "书源服务器返回 HTTP 404。"
+          }
+        }
+      }
     },
     "bqg-info": {
-      "checks": 1,
+      "checks": 2,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T15:03:20.552Z",
+      "lastCheckedAt": "2026-11-21T15:45:01.243Z",
       "lastStatus": "passed-both",
       "lastResult": {
         "id": "bqg-info",
@@ -387,12 +710,76 @@
       "baseline": true,
       "userConfirmedWorking": true,
       "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。",
-      "sourceAvailabilityStatus": "user-confirmed-baseline"
+      "sourceAvailabilityStatus": "user-confirmed-baseline",
+      "lastProbeStatus": "readable-both",
+      "lastProbeResult": {
+        "id": "bqg-info",
+        "name": "笔趣阁info",
+        "status": "readable-both",
+        "terms": {
+          "斗罗大陆": {
+            "keyword": "斗罗大陆",
+            "status": "readable",
+            "stages": [
+              {
+                "stage": "搜索",
+                "status": "passed",
+                "detail": "App 搜索请求及解析成功；返回 35 条结果"
+              },
+              {
+                "stage": "目录",
+                "status": "passed",
+                "detail": "获取 85 章；首章「第1章」"
+              },
+              {
+                "stage": "详情（可选）",
+                "status": "passed",
+                "detail": "详情页读取成功：斗罗大陆之玥舞"
+              },
+              {
+                "stage": "正文",
+                "status": "passed",
+                "detail": "首章正文读取成功（2180 字符）"
+              }
+            ],
+            "resultCount": 35,
+            "selectedTitle": "斗罗大陆之玥舞"
+          },
+          "斗破苍穹": {
+            "keyword": "斗破苍穹",
+            "status": "readable",
+            "stages": [
+              {
+                "stage": "搜索",
+                "status": "passed",
+                "detail": "App 搜索请求及解析成功；返回 12 条结果"
+              },
+              {
+                "stage": "目录",
+                "status": "passed",
+                "detail": "获取 209 章；首章「第一章 重聚」"
+              },
+              {
+                "stage": "详情（可选）",
+                "status": "passed",
+                "detail": "详情页读取成功：斗破苍穹外传之云韵篇"
+              },
+              {
+                "stage": "正文",
+                "status": "passed",
+                "detail": "首章正文读取成功（1172 字符）"
+              }
+            ],
+            "resultCount": 12,
+            "selectedTitle": "斗破苍穹外传之云韵篇"
+          }
+        }
+      }
     },
     "xqianqian-m": {
-      "checks": 1,
+      "checks": 2,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T15:03:20.552Z",
+      "lastCheckedAt": "2026-11-21T15:45:01.243Z",
       "lastStatus": "failed",
       "lastResult": {
         "id": "xqianqian-m",
@@ -428,12 +815,74 @@
       "baseline": true,
       "userConfirmedWorking": true,
       "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。",
-      "sourceAvailabilityStatus": "user-confirmed-baseline"
+      "sourceAvailabilityStatus": "user-confirmed-baseline",
+      "lastProbeStatus": "failed",
+      "lastProbeResult": {
+        "id": "xqianqian-m",
+        "name": "千千小说",
+        "status": "failed",
+        "terms": {
+          "斗罗大陆": {
+            "keyword": "斗罗大陆",
+            "status": "failed",
+            "stages": [
+              {
+                "stage": "搜索",
+                "status": "failed",
+                "detail": "书源网络请求失败，请检查网络或站点状态。"
+              },
+              {
+                "stage": "目录",
+                "status": "skipped",
+                "detail": "搜索请求未成功或响应无法解析"
+              },
+              {
+                "stage": "详情",
+                "status": "skipped",
+                "detail": "没有可用搜索结果"
+              },
+              {
+                "stage": "正文",
+                "status": "skipped",
+                "detail": "没有可用搜索结果"
+              }
+            ],
+            "error": "书源网络请求失败，请检查网络或站点状态。"
+          },
+          "斗破苍穹": {
+            "keyword": "斗破苍穹",
+            "status": "failed",
+            "stages": [
+              {
+                "stage": "搜索",
+                "status": "failed",
+                "detail": "书源网络请求失败，请检查网络或站点状态。"
+              },
+              {
+                "stage": "目录",
+                "status": "skipped",
+                "detail": "搜索请求未成功或响应无法解析"
+              },
+              {
+                "stage": "详情",
+                "status": "skipped",
+                "detail": "没有可用搜索结果"
+              },
+              {
+                "stage": "正文",
+                "status": "skipped",
+                "detail": "没有可用搜索结果"
+              }
+            ],
+            "error": "书源网络请求失败，请检查网络或站点状态。"
+          }
+        }
+      }
     },
     "douhua-wenxue": {
-      "checks": 1,
+      "checks": 2,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T15:03:20.552Z",
+      "lastCheckedAt": "2026-11-21T15:45:01.243Z",
       "lastStatus": "failed",
       "lastResult": {
         "id": "douhua-wenxue",
@@ -469,12 +918,76 @@
       "baseline": true,
       "userConfirmedWorking": true,
       "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。",
-      "sourceAvailabilityStatus": "user-confirmed-baseline"
+      "sourceAvailabilityStatus": "user-confirmed-baseline",
+      "lastProbeStatus": "readable-both",
+      "lastProbeResult": {
+        "id": "douhua-wenxue",
+        "name": "豆花文学",
+        "status": "readable-both",
+        "terms": {
+          "斗罗大陆": {
+            "keyword": "斗罗大陆",
+            "status": "readable",
+            "stages": [
+              {
+                "stage": "搜索",
+                "status": "passed",
+                "detail": "App 搜索请求及解析成功；返回 10 条结果"
+              },
+              {
+                "stage": "目录",
+                "status": "passed",
+                "detail": "获取 550 章；首章「穿越与重生」"
+              },
+              {
+                "stage": "详情（可选）",
+                "status": "passed",
+                "detail": "详情页读取成功：「系统」重生之我是马红俊\n已完结"
+              },
+              {
+                "stage": "正文",
+                "status": "passed",
+                "detail": "首章正文读取成功（647 字符）"
+              }
+            ],
+            "resultCount": 10,
+            "selectedTitle": "「系统」重生之我是马红俊"
+          },
+          "斗破苍穹": {
+            "keyword": "斗破苍穹",
+            "status": "readable",
+            "stages": [
+              {
+                "stage": "搜索",
+                "status": "passed",
+                "detail": "App 搜索请求及解析成功；返回 10 条结果"
+              },
+              {
+                "stage": "目录",
+                "status": "passed",
+                "detail": "获取 116 章；首章「一、凡尘篇1」"
+              },
+              {
+                "stage": "详情（可选）",
+                "status": "passed",
+                "detail": "详情页读取成功：苍穹之渊:浮生引\n已完结"
+              },
+              {
+                "stage": "正文",
+                "status": "passed",
+                "detail": "首章正文读取成功（776 字符）"
+              }
+            ],
+            "resultCount": 10,
+            "selectedTitle": "苍穹之渊:浮生引"
+          }
+        }
+      }
     },
     "iyueba-net": {
-      "checks": 1,
+      "checks": 2,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T15:03:20.552Z",
+      "lastCheckedAt": "2026-11-21T15:45:01.243Z",
       "lastStatus": "failed",
       "lastResult": {
         "id": "iyueba-net",
@@ -510,12 +1023,74 @@
       "baseline": true,
       "userConfirmedWorking": true,
       "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。",
-      "sourceAvailabilityStatus": "user-confirmed-baseline"
+      "sourceAvailabilityStatus": "user-confirmed-baseline",
+      "lastProbeStatus": "failed",
+      "lastProbeResult": {
+        "id": "iyueba-net",
+        "name": "爱阅吧网",
+        "status": "failed",
+        "terms": {
+          "斗罗大陆": {
+            "keyword": "斗罗大陆",
+            "status": "failed",
+            "stages": [
+              {
+                "stage": "搜索",
+                "status": "failed",
+                "detail": "书源服务器返回 HTTP 403。"
+              },
+              {
+                "stage": "目录",
+                "status": "skipped",
+                "detail": "搜索请求未成功或响应无法解析"
+              },
+              {
+                "stage": "详情",
+                "status": "skipped",
+                "detail": "没有可用搜索结果"
+              },
+              {
+                "stage": "正文",
+                "status": "skipped",
+                "detail": "没有可用搜索结果"
+              }
+            ],
+            "error": "书源服务器返回 HTTP 403。"
+          },
+          "斗破苍穹": {
+            "keyword": "斗破苍穹",
+            "status": "failed",
+            "stages": [
+              {
+                "stage": "搜索",
+                "status": "failed",
+                "detail": "书源服务器返回 HTTP 403。"
+              },
+              {
+                "stage": "目录",
+                "status": "skipped",
+                "detail": "搜索请求未成功或响应无法解析"
+              },
+              {
+                "stage": "详情",
+                "status": "skipped",
+                "detail": "没有可用搜索结果"
+              },
+              {
+                "stage": "正文",
+                "status": "skipped",
+                "detail": "没有可用搜索结果"
+              }
+            ],
+            "error": "书源服务器返回 HTTP 403。"
+          }
+        }
+      }
     },
     "52shuku-net": {
-      "checks": 1,
+      "checks": 2,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T15:03:20.552Z",
+      "lastCheckedAt": "2026-11-21T15:45:01.243Z",
       "lastStatus": "passed-both",
       "lastResult": {
         "id": "52shuku-net",
@@ -579,7 +1154,71 @@
       "baseline": true,
       "userConfirmedWorking": true,
       "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。",
-      "sourceAvailabilityStatus": "user-confirmed-baseline"
+      "sourceAvailabilityStatus": "user-confirmed-baseline",
+      "lastProbeStatus": "readable-both",
+      "lastProbeResult": {
+        "id": "52shuku-net",
+        "name": "52书库（男频武侠）",
+        "status": "readable-both",
+        "terms": {
+          "斗罗大陆": {
+            "keyword": "斗罗大陆",
+            "status": "readable",
+            "stages": [
+              {
+                "stage": "搜索",
+                "status": "passed",
+                "detail": "App 搜索请求及解析成功；返回 10 条结果"
+              },
+              {
+                "stage": "目录",
+                "status": "passed",
+                "detail": "获取 2348 章；首章「第1页」"
+              },
+              {
+                "stage": "详情（可选）",
+                "status": "passed",
+                "detail": "详情页读取成功：斗罗大陆4终极斗罗_唐家三少【完结】"
+              },
+              {
+                "stage": "正文",
+                "status": "passed",
+                "detail": "首章正文读取成功（2185 字符）"
+              }
+            ],
+            "resultCount": 10,
+            "selectedTitle": "4. 斗罗大陆4终极斗罗_唐家三少【完结】"
+          },
+          "斗破苍穹": {
+            "keyword": "斗破苍穹",
+            "status": "readable",
+            "stages": [
+              {
+                "stage": "搜索",
+                "status": "passed",
+                "detail": "App 搜索请求及解析成功；返回 6 条结果"
+              },
+              {
+                "stage": "目录",
+                "status": "passed",
+                "detail": "获取 126 章；首章「第1页」"
+              },
+              {
+                "stage": "详情（可选）",
+                "status": "passed",
+                "detail": "详情页读取成功：斗破苍穹前传之药老传奇_天蚕土豆【完结】"
+              },
+              {
+                "stage": "正文",
+                "status": "passed",
+                "detail": "首章正文读取成功（2624 字符）"
+              }
+            ],
+            "resultCount": 6,
+            "selectedTitle": "1. 斗破苍穹前传之药老传奇_天蚕土豆【完结】"
+          }
+        }
+      }
     }
   }
 }
