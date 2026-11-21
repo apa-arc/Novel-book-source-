@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T11:14:06.808Z",
+  "generatedAt": "2026-11-21T11:14:52.081Z",
   "provider": "liufuyou/read metadata-only discovery",
   "upstream": [
     "https://raw.githubusercontent.com/liufuyou/read/main/sources/yck-novel.json",
