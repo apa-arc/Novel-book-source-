@@ -170,6 +170,9 @@ try{
  const getExpression=parseLegacyChain("@get:bid");
  assert.equal(getExpression.status,"candidate");
  assert.equal(getExpression.selector.engine,"get");
+ const singlePut=parseLegacyChain("$.name@put:{id:id}");
+ assert.equal(singlePut.status,"candidate");
+ assert.equal(singlePut.selector.assignments.length,1);
  const invalidPut=parseLegacyChain("$.book_name@put:{bid:}");
  assert.equal(invalidPut.status,"manual");
  assert.equal(invalidPut.reason,"unsupported-put-assignment");
