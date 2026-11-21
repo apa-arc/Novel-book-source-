@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-11-21T15:03:20.552Z",
+  "generatedAt": "2026-11-21T15:16:34.748Z",
   "keywords": [
     "斗罗大陆",
     "斗破苍穹"
   ],
   "counts": {
-    "total": 27,
-    "appCompatible": 27,
+    "total": 10,
+    "appCompatible": 10,
     "appUnsupported": 0,
-    "passedBoth": 4,
-    "passedOne": 0,
-    "failed": 23
+    "passedBoth": 3,
+    "passedOne": 1,
+    "failed": 6
   },
   "results": [
     {
@@ -73,68 +73,6 @@
       }
     },
     {
-      "id": "kuaishu5-com",
-      "name": "快书网",
-      "status": "failed",
-      "terms": {
-        "斗罗大陆": {
-          "keyword": "斗罗大陆",
-          "status": "failed",
-          "stages": [
-            {
-              "stage": "搜索",
-              "status": "failed",
-              "detail": "书源网络请求失败，请检查网络或站点状态。"
-            }
-          ],
-          "error": "书源网络请求失败，请检查网络或站点状态。"
-        },
-        "斗破苍穹": {
-          "keyword": "斗破苍穹",
-          "status": "failed",
-          "stages": [
-            {
-              "stage": "搜索",
-              "status": "failed",
-              "detail": "书源网络请求失败，请检查网络或站点状态。"
-            }
-          ],
-          "error": "书源网络请求失败，请检查网络或站点状态。"
-        }
-      }
-    },
-    {
-      "id": "dingdian-23uswx",
-      "name": "顶点小说",
-      "status": "failed",
-      "terms": {
-        "斗罗大陆": {
-          "keyword": "斗罗大陆",
-          "status": "failed",
-          "stages": [
-            {
-              "stage": "搜索",
-              "status": "failed",
-              "detail": "书源网络请求失败，请检查网络或站点状态。"
-            }
-          ],
-          "error": "书源网络请求失败，请检查网络或站点状态。"
-        },
-        "斗破苍穹": {
-          "keyword": "斗破苍穹",
-          "status": "failed",
-          "stages": [
-            {
-              "stage": "搜索",
-              "status": "failed",
-              "detail": "书源网络请求失败，请检查网络或站点状态。"
-            }
-          ],
-          "error": "书源网络请求失败，请检查网络或站点状态。"
-        }
-      }
-    },
-    {
       "id": "jiuyi-91zww",
       "name": "九一中文",
       "status": "failed",
@@ -162,223 +100,6 @@
             }
           ],
           "error": "搜索响应有 0 条结果，但没有书名包含关键词「斗破苍穹」的书目"
-        }
-      }
-    },
-    {
-      "id": "wuxian-wenxuesk",
-      "name": "无限小说",
-      "status": "failed",
-      "terms": {
-        "斗罗大陆": {
-          "keyword": "斗罗大陆",
-          "status": "failed",
-          "stages": [
-            {
-              "stage": "搜索",
-              "status": "failed",
-              "detail": "书源网络请求失败，请检查网络或站点状态。"
-            }
-          ],
-          "error": "书源网络请求失败，请检查网络或站点状态。"
-        },
-        "斗破苍穹": {
-          "keyword": "斗破苍穹",
-          "status": "failed",
-          "stages": [
-            {
-              "stage": "搜索",
-              "status": "failed",
-              "detail": "书源网络请求失败，请检查网络或站点状态。"
-            }
-          ],
-          "error": "书源网络请求失败，请检查网络或站点状态。"
-        }
-      }
-    },
-    {
-      "id": "tianyu-tycqzw",
-      "name": "天域小说网",
-      "status": "failed",
-      "terms": {
-        "斗罗大陆": {
-          "keyword": "斗罗大陆",
-          "status": "failed",
-          "stages": [
-            {
-              "stage": "搜索",
-              "status": "failed",
-              "detail": "书源网络请求失败，请检查网络或站点状态。"
-            }
-          ],
-          "error": "书源网络请求失败，请检查网络或站点状态。"
-        },
-        "斗破苍穹": {
-          "keyword": "斗破苍穹",
-          "status": "failed",
-          "stages": [
-            {
-              "stage": "搜索",
-              "status": "failed",
-              "detail": "书源网络请求失败，请检查网络或站点状态。"
-            }
-          ],
-          "error": "书源网络请求失败，请检查网络或站点状态。"
-        }
-      }
-    },
-    {
-      "id": "deqi-deqixs",
-      "name": "得奇小说网",
-      "status": "failed",
-      "terms": {
-        "斗罗大陆": {
-          "keyword": "斗罗大陆",
-          "status": "failed",
-          "stages": [
-            {
-              "stage": "搜索",
-              "status": "failed",
-              "detail": "书源网络请求失败，请检查网络或站点状态。"
-            }
-          ],
-          "error": "书源网络请求失败，请检查网络或站点状态。"
-        },
-        "斗破苍穹": {
-          "keyword": "斗破苍穹",
-          "status": "failed",
-          "stages": [
-            {
-              "stage": "搜索",
-              "status": "failed",
-              "detail": "书源网络请求失败，请检查网络或站点状态。"
-            }
-          ],
-          "error": "书源网络请求失败，请检查网络或站点状态。"
-        }
-      }
-    },
-    {
-      "id": "sanyi-31xs",
-      "name": "三一小说",
-      "status": "failed",
-      "terms": {
-        "斗罗大陆": {
-          "keyword": "斗罗大陆",
-          "status": "failed",
-          "stages": [
-            {
-              "stage": "搜索",
-              "status": "failed",
-              "detail": "书源服务器返回 HTTP 403。"
-            }
-          ],
-          "error": "书源服务器返回 HTTP 403。"
-        },
-        "斗破苍穹": {
-          "keyword": "斗破苍穹",
-          "status": "failed",
-          "stages": [
-            {
-              "stage": "搜索",
-              "status": "failed",
-              "detail": "书源服务器返回 HTTP 403。"
-            }
-          ],
-          "error": "书源服务器返回 HTTP 403。"
-        }
-      }
-    },
-    {
-      "id": "lingling-00shu",
-      "name": "零零小说",
-      "status": "failed",
-      "terms": {
-        "斗罗大陆": {
-          "keyword": "斗罗大陆",
-          "status": "failed",
-          "stages": [
-            {
-              "stage": "搜索",
-              "status": "failed",
-              "detail": "书源网络请求失败，请检查网络或站点状态。"
-            }
-          ],
-          "error": "书源网络请求失败，请检查网络或站点状态。"
-        },
-        "斗破苍穹": {
-          "keyword": "斗破苍穹",
-          "status": "failed",
-          "stages": [
-            {
-              "stage": "搜索",
-              "status": "failed",
-              "detail": "书源网络请求失败，请检查网络或站点状态。"
-            }
-          ],
-          "error": "书源网络请求失败，请检查网络或站点状态。"
-        }
-      }
-    },
-    {
-      "id": "wujixsw-info",
-      "name": "无极小说",
-      "status": "failed",
-      "terms": {
-        "斗罗大陆": {
-          "keyword": "斗罗大陆",
-          "status": "failed",
-          "stages": [
-            {
-              "stage": "搜索",
-              "status": "failed",
-              "detail": "书源网络请求失败，请检查网络或站点状态。"
-            }
-          ],
-          "error": "书源网络请求失败，请检查网络或站点状态。"
-        },
-        "斗破苍穹": {
-          "keyword": "斗破苍穹",
-          "status": "failed",
-          "stages": [
-            {
-              "stage": "搜索",
-              "status": "failed",
-              "detail": "书源网络请求失败，请检查网络或站点状态。"
-            }
-          ],
-          "error": "书源网络请求失败，请检查网络或站点状态。"
-        }
-      }
-    },
-    {
-      "id": "yushufang-ysfwxc",
-      "name": "御书房",
-      "status": "failed",
-      "terms": {
-        "斗罗大陆": {
-          "keyword": "斗罗大陆",
-          "status": "failed",
-          "stages": [
-            {
-              "stage": "搜索",
-              "status": "failed",
-              "detail": "书源网络请求失败，请检查网络或站点状态。"
-            }
-          ],
-          "error": "书源网络请求失败，请检查网络或站点状态。"
-        },
-        "斗破苍穹": {
-          "keyword": "斗破苍穹",
-          "status": "failed",
-          "stages": [
-            {
-              "stage": "搜索",
-              "status": "failed",
-              "detail": "书源网络请求失败，请检查网络或站点状态。"
-            }
-          ],
-          "error": "书源网络请求失败，请检查网络或站点状态。"
         }
       }
     },
@@ -416,12 +137,12 @@
             {
               "stage": "搜索",
               "status": "passed",
-              "detail": "结果 17 条；命中「[网游]斗破苍穹之财动乾坤」"
+              "detail": "结果 17 条；命中「[网游]斗破苍穹之扶弟狂魔」"
             },
             {
               "stage": "详情",
               "status": "passed",
-              "detail": "斗破苍穹之财动乾坤"
+              "detail": "斗破苍穹之扶弟狂魔"
             },
             {
               "stage": "目录",
@@ -436,7 +157,7 @@
     {
       "id": "biquge-17177",
       "name": "笔趣阁小说网（17177）",
-      "status": "passed-both",
+      "status": "passed-one",
       "terms": {
         "斗罗大陆": {
           "keyword": "斗罗大陆",
@@ -466,29 +187,20 @@
         },
         "斗破苍穹": {
           "keyword": "斗破苍穹",
-          "status": "passed",
+          "status": "failed",
           "stages": [
             {
               "stage": "搜索",
               "status": "passed",
-              "detail": "结果 17 条；命中「[网游]斗破苍穹之扶弟狂魔」"
+              "detail": "结果 17 条；命中「[玄幻]斗破苍穹：与女王陛下的爱恨情仇」"
             },
             {
               "stage": "详情",
-              "status": "passed",
-              "detail": "[网游]斗破苍穹之扶弟狂魔"
-            },
-            {
-              "stage": "目录",
-              "status": "passed",
-              "detail": "66 章；首章「第一章 萧家新成员—萧薰儿」"
-            },
-            {
-              "stage": "正文",
-              "status": "passed",
-              "detail": "1230 字"
+              "status": "failed",
+              "detail": "书源服务器返回 HTTP 404。"
             }
-          ]
+          ],
+          "error": "书源服务器返回 HTTP 404。"
         }
       }
     },
@@ -526,12 +238,12 @@
             {
               "stage": "搜索",
               "status": "passed",
-              "detail": "结果 17 条；命中「[网游]从斗破苍穹签到开始」"
+              "detail": "结果 17 条；命中「[玄幻]斗破苍穹之我的师父是云韵」"
             },
             {
               "stage": "详情",
               "status": "passed",
-              "detail": "从斗破苍穹签到开始"
+              "detail": "斗破苍穹之我的师父是云韵"
             },
             {
               "stage": "目录",
@@ -570,7 +282,7 @@
             {
               "stage": "正文",
               "status": "passed",
-              "detail": "2182 字"
+              "detail": "2179 字"
             }
           ]
         },
@@ -596,257 +308,9 @@
             {
               "stage": "正文",
               "status": "passed",
-              "detail": "1171 字"
+              "detail": "1166 字"
             }
           ]
-        }
-      }
-    },
-    {
-      "id": "biqubao-com",
-      "name": "笔趣宝",
-      "status": "failed",
-      "terms": {
-        "斗罗大陆": {
-          "keyword": "斗罗大陆",
-          "status": "failed",
-          "stages": [
-            {
-              "stage": "搜索",
-              "status": "failed",
-              "detail": "书源网络请求失败，请检查网络或站点状态。"
-            }
-          ],
-          "error": "书源网络请求失败，请检查网络或站点状态。"
-        },
-        "斗破苍穹": {
-          "keyword": "斗破苍穹",
-          "status": "failed",
-          "stages": [
-            {
-              "stage": "搜索",
-              "status": "failed",
-              "detail": "书源网络请求失败，请检查网络或站点状态。"
-            }
-          ],
-          "error": "书源网络请求失败，请检查网络或站点状态。"
-        }
-      }
-    },
-    {
-      "id": "zwda-com",
-      "name": "E小说",
-      "status": "failed",
-      "terms": {
-        "斗罗大陆": {
-          "keyword": "斗罗大陆",
-          "status": "failed",
-          "stages": [
-            {
-              "stage": "搜索",
-              "status": "failed",
-              "detail": "书源服务器返回 HTTP 403。"
-            }
-          ],
-          "error": "书源服务器返回 HTTP 403。"
-        },
-        "斗破苍穹": {
-          "keyword": "斗破苍穹",
-          "status": "failed",
-          "stages": [
-            {
-              "stage": "搜索",
-              "status": "failed",
-              "detail": "书源服务器返回 HTTP 403。"
-            }
-          ],
-          "error": "书源服务器返回 HTTP 403。"
-        }
-      }
-    },
-    {
-      "id": "yb3-cc",
-      "name": "ABC小说",
-      "status": "failed",
-      "terms": {
-        "斗罗大陆": {
-          "keyword": "斗罗大陆",
-          "status": "failed",
-          "stages": [
-            {
-              "stage": "搜索",
-              "status": "failed",
-              "detail": "书源网络请求失败，请检查网络或站点状态。"
-            }
-          ],
-          "error": "书源网络请求失败，请检查网络或站点状态。"
-        },
-        "斗破苍穹": {
-          "keyword": "斗破苍穹",
-          "status": "failed",
-          "stages": [
-            {
-              "stage": "搜索",
-              "status": "failed",
-              "detail": "书源网络请求失败，请检查网络或站点状态。"
-            }
-          ],
-          "error": "书源网络请求失败，请检查网络或站点状态。"
-        }
-      }
-    },
-    {
-      "id": "biquwu-cc",
-      "name": "笔趣阁移动版",
-      "status": "failed",
-      "terms": {
-        "斗罗大陆": {
-          "keyword": "斗罗大陆",
-          "status": "failed",
-          "stages": [
-            {
-              "stage": "搜索",
-              "status": "failed",
-              "detail": "书源网络请求失败，请检查网络或站点状态。"
-            }
-          ],
-          "error": "书源网络请求失败，请检查网络或站点状态。"
-        },
-        "斗破苍穹": {
-          "keyword": "斗破苍穹",
-          "status": "failed",
-          "stages": [
-            {
-              "stage": "搜索",
-              "status": "failed",
-              "detail": "书源网络请求失败，请检查网络或站点状态。"
-            }
-          ],
-          "error": "书源网络请求失败，请检查网络或站点状态。"
-        }
-      }
-    },
-    {
-      "id": "liewen-cc",
-      "name": "猎文网",
-      "status": "failed",
-      "terms": {
-        "斗罗大陆": {
-          "keyword": "斗罗大陆",
-          "status": "failed",
-          "stages": [
-            {
-              "stage": "搜索",
-              "status": "failed",
-              "detail": "书源服务器返回 HTTP 403。"
-            }
-          ],
-          "error": "书源服务器返回 HTTP 403。"
-        },
-        "斗破苍穹": {
-          "keyword": "斗破苍穹",
-          "status": "failed",
-          "stages": [
-            {
-              "stage": "搜索",
-              "status": "failed",
-              "detail": "书源服务器返回 HTTP 403。"
-            }
-          ],
-          "error": "书源服务器返回 HTTP 403。"
-        }
-      }
-    },
-    {
-      "id": "bqg5-cc",
-      "name": "笔趣阁②",
-      "status": "failed",
-      "terms": {
-        "斗罗大陆": {
-          "keyword": "斗罗大陆",
-          "status": "failed",
-          "stages": [
-            {
-              "stage": "搜索",
-              "status": "failed",
-              "detail": "书源网络请求失败，请检查网络或站点状态。"
-            }
-          ],
-          "error": "书源网络请求失败，请检查网络或站点状态。"
-        },
-        "斗破苍穹": {
-          "keyword": "斗破苍穹",
-          "status": "failed",
-          "stages": [
-            {
-              "stage": "搜索",
-              "status": "failed",
-              "detail": "书源网络请求失败，请检查网络或站点状态。"
-            }
-          ],
-          "error": "书源网络请求失败，请检查网络或站点状态。"
-        }
-      }
-    },
-    {
-      "id": "woquge-com",
-      "name": "笔趣阁④",
-      "status": "failed",
-      "terms": {
-        "斗罗大陆": {
-          "keyword": "斗罗大陆",
-          "status": "failed",
-          "stages": [
-            {
-              "stage": "搜索",
-              "status": "failed",
-              "detail": "书源网络请求失败，请检查网络或站点状态。"
-            }
-          ],
-          "error": "书源网络请求失败，请检查网络或站点状态。"
-        },
-        "斗破苍穹": {
-          "keyword": "斗破苍穹",
-          "status": "failed",
-          "stages": [
-            {
-              "stage": "搜索",
-              "status": "failed",
-              "detail": "书源网络请求失败，请检查网络或站点状态。"
-            }
-          ],
-          "error": "书源网络请求失败，请检查网络或站点状态。"
-        }
-      }
-    },
-    {
-      "id": "kuxiaoshuo-com",
-      "name": "酷小说",
-      "status": "failed",
-      "terms": {
-        "斗罗大陆": {
-          "keyword": "斗罗大陆",
-          "status": "failed",
-          "stages": [
-            {
-              "stage": "搜索",
-              "status": "failed",
-              "detail": "书源网络请求失败，请检查网络或站点状态。"
-            }
-          ],
-          "error": "书源网络请求失败，请检查网络或站点状态。"
-        },
-        "斗破苍穹": {
-          "keyword": "斗破苍穹",
-          "status": "failed",
-          "stages": [
-            {
-              "stage": "搜索",
-              "status": "failed",
-              "detail": "书源网络请求失败，请检查网络或站点状态。"
-            }
-          ],
-          "error": "书源网络请求失败，请检查网络或站点状态。"
         }
       }
     },
