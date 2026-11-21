@@ -1,0 +1,41 @@
+name: Probe candidate novel site availability
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "imports/third-party/multi-repo-candidate-catalog.json"
+      - "scripts/probe-candidate-homepages.js"
+      - ".github/workflows/probe-candidate-homepages.yml"
+permissions:
+  contents: write
+concurrency:
+  group: candidate-homepage-probe
+  cancel-in-progress: true
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Probe candidate HTTPS homepages
+        run: node scripts/probe-candidate-homepages.js
+      - name: Commit metadata-only probe results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/candidate-homepage-probe.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Probe candidate novel site homepage availability"
+            git pull --rebase origin main
+            git push
+          fi
+      - name: Upload probe report
+        uses: actions/upload-artifact@v4
+        with:
+          name: candidate-homepage-probe
+          path: reports/candidate-homepage-probe.json
+          retention-days: 90
