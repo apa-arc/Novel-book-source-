@@ -25,6 +25,9 @@ function element(tag,attrs={},children=[]){
     }
   };
   node.childNodes=children.flatMap(child=>typeof child==="string"?[{nodeType:3,nodeValue:child}]:[child]);
+  for(const child of node.children) child.parentElement=node;
+  Object.defineProperty(node,"nextElementSibling",{get(){const list=this.parentElement?.children||[];return list[list.indexOf(this)+1]||null;}});
+  Object.defineProperty(node,"previousElementSibling",{get(){const list=this.parentElement?.children||[];return list[list.indexOf(this)-1]||null;}});
   return node;
 }
 const a=element("a",{class:"chapter",href:"/1"},["第一章"]);
@@ -40,6 +43,18 @@ assert.deepEqual(executeSelector(root,chain([{kind:"class",name:"list",index:nul
 assert.deepEqual(executeSelector(root,chain([{kind:"class",name:"list",index:null},{kind:"tag",name:"a",index:null,selection:{mode:"range",start:0,end:2,step:2}}])) ,["第一章","第三章"]);
 assert.deepEqual(executeSelector(root,chain([{kind:"class",name:"list",index:null},{kind:"tag",name:"a",index:null}],"href",true)),["/3","/2","/1"]);
 assert.deepEqual(executeSelector(root,{engine:"css",query:"a",output:"text"}),["第一章","第二章","第三章"]);
+assert.deepEqual(executeSelector(root,{engine:"xpath",steps:[
+  {axis:"descendant",tag:"li",filters:[{kind:"childExists",tag:"a"}]},
+  {axis:"child",tag:"a",filters:[{kind:"position",index:1}]}
+],output:"text"}),["第一章","第二章","第三章"]);
+assert.deepEqual(executeSelector(root,{engine:"xpath",steps:[
+  {axis:"descendant",tag:"a",filters:[{kind:"textEquals",value:"第二章"}]}
+],output:"attr:href"}),["/2"]);
+assert.deepEqual(executeSelector(root,{engine:"xpath",steps:[
+  {axis:"descendant",tag:"a",filters:[{kind:"textEquals",value:"第二章"}]},
+  {axis:"parent",tag:"li",filters:[]},
+  {axis:"followingSibling",tag:"li",filters:[{kind:"position",index:1}]}
+],output:"text"}),["第三章"]);
 assert.equal(executeSelector(a,{engine:"self",output:"text"}),"第一章");
 assert.equal(executeSelector(a,{engine:"self",output:"href"}),"/1");
 assert.deepEqual(executeSelector(root,chain([{kind:"class",name:"list",index:null},{kind:"tag",name:"a",index:null}],"href")),["/1","/2","/3"]);
