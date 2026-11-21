@@ -34,7 +34,7 @@ function safeHeaders(source) {
   let value = source.header;
   if (typeof value === "string") { try { value = JSON.parse(value); } catch { return {}; } }
   if (!value || typeof value !== "object" || Array.isArray(value)) return {};
-  const allowed = new Set(["user-agent","referer","accept","accept-language"]);
+  const allowed = new Set(["user-agent","referer","accept","accept-language","x-requested-with","origin"]);
   const out = {};
   for (const [key, val] of Object.entries(value)) {
     const lower = key.toLowerCase();
@@ -124,7 +124,7 @@ async function fetchHtml(rawUrl, host, requestHeaders = {}, extraHosts = []) {
     try {
       response = await fetch(url, {
         redirect: "manual", signal: controller.signal,
-        headers: { "user-agent": "NovelSourceFunctionalTest/1.0 (+metadata-only; no auth)", "accept": "text/html,application/xhtml+xml", ...requestHeaders }
+        headers: { "user-agent": "NovelSourceFunctionalTest/1.0 (+metadata-only; no auth)", "accept": "text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.8", ...requestHeaders }
       });
     } finally { clearTimeout(timer); }
     if ([301,302,303,307,308].includes(response.status)) {
