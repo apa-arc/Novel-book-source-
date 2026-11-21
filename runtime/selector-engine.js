@@ -163,11 +163,13 @@ function executeSelector(root,selector){
     if(typeof selector.pattern!=="string"||selector.pattern.length>256||typeof selector.replacement!=="string") throw new Error("invalid-regex-transform");
     if(/\([^)]*[+*][^)]*\)[+*{]|\([^)]*\+[^)]*\)\+/u.test(selector.pattern)) throw new Error("unsafe-regex-transform");
     const input=executeSelector(root,selector.input);
-    const values=Array.isArray(input)?input:[input];
+    const wasArray=Array.isArray(input);
+    const values=wasArray?input:[input];
     if(values.some(value=>String(value==null?"":value).length>200000)) throw new Error("regex-input-limit");
     let regex;
     try{regex=new RegExp(selector.pattern,selector.replaceFirst?"u":"gu");}catch{throw new Error("invalid-regex-transform");}
-    return values.map(value=>String(value==null?"":value).replace(regex,selector.replacement)).filter(value=>value!=="");
+    const transformed=values.map(value=>String(value==null?"":value).replace(regex,selector.replacement)).filter(value=>value!=="");
+    return wasArray?transformed:(transformed[0]??"");
   }
   if(selector.engine==="self") return readOutput(root, selector.output || "text");
   if(selector.engine==="css"){
