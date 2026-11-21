@@ -9,7 +9,7 @@ const fs = require("node:fs");
 const path = require("node:path");
 const RULE_GROUPS = { search:"ruleSearch", bookInfo:"ruleBookInfo", toc:"ruleToc", content:"ruleContent", explore:"ruleExplore" };
 const REQUIRED_GROUPS = ["search", "bookInfo", "toc", "content"];
-const CHAIN_OUTPUTS = new Set(["text", "html", "href", "src", "content", "owntext", "textnodes"]);
+const CHAIN_OUTPUTS = new Set(["text", "html", "href", "src", "content", "class", "owntext", "textnodes"]);
 const SCRIPT_RE = /@js:|<js>|\bjavascript\b|\bfunction\b|\breturn\b|\$\{/i;
 function parseIndex(token) { return /^-?\d+$/.test(token) ? Number(token) : null; }
 function parseSelection(token) {
@@ -159,10 +159,10 @@ function parseSimpleXPath(expression) {
   const attr=raw.match(/\/@\s*([\w:-]+)\s*$/);
   if(attr){output="attr:"+attr[1];raw=raw.slice(0,-attr[0].length);}
   else{
-    const outputMod=raw.match(/@(html|text|allText|href|src|content)\s*$/i);
+    const outputMod=raw.match(/@(html|text|allText|href|src|content|class)\s*$/i);
     if(outputMod){
       const mode=outputMod[1].toLowerCase();
-      output=mode==="alltext"?"text":mode==="href"||mode==="src"||mode==="content"?"attr:"+mode:mode;
+      output=mode==="alltext"?"text":mode==="href"||mode==="src"||mode==="content"||mode==="class"?"attr:"+mode:mode;
       raw=raw.slice(0,-outputMod[0].length);
     }else if(/\/+(?:text|allText)\(\)\s*$/.test(raw)){
       raw=raw.replace(/\/+(?:text|allText)\(\)\s*$/,"");
@@ -354,6 +354,10 @@ function parseLegacyChain(expression) {
   if(/^(['"])[\s\S]*\1$/.test(raw)) return {status:"candidate",selector:{engine:"literal",value:raw.slice(1,-1)}};
   if(raw.startsWith("@text:")) return {status:"candidate",selector:{engine:"literal",value:raw.slice(6)}};
   if(raw.startsWith("@@")) raw=raw.slice(2);
+  raw=raw.replace(/@@(?=(?:tag|text|textnodes|owntext|class|id|href|src|content|html))/gi,"@");
+  if(raw==="tag") return {status:"candidate",selector:{engine:"json",path:[{kind:"property",name:"tag"}]}};
+  const selfOutput=raw.match(/^@(text|textnodes|owntext|html|href|src|content|class|all)$/i);
+  if(selfOutput) return {status:"candidate",selector:{engine:"self",output:selfOutput[1].toLowerCase()}};
   const expressionShape=scanExpressionOperators(raw);
   if(expressionShape.operators.length || expressionShape.regexDelimiterCount>0) return {status:"manual",reason:"unsupported-compound-expression"};
   if (raw.startsWith("@css:")) {
