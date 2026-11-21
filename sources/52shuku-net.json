@@ -3,7 +3,7 @@
   "id": "52shuku-net",
   "name": "52书库（男频武侠）",
   "kind": "public-web",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "baseUrl": "https://www.52shuku.net/",
   "domains": [
     "www.52shuku.net"
@@ -31,7 +31,8 @@
       "search": {
         "itemSelector": "article.excerpt a[href*=\"/wuxia/\"]",
         "titleSelector": ":self",
-        "urlSelector": ":self"
+        "urlSelector": ":self",
+        "coverSelector": "img"
       },
       "detail": {
         "titleSelector": "h1.article-title"
