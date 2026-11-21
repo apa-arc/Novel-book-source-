@@ -17,6 +17,38 @@
       "file": "sources/kuaishu5-com.json",
       "enabled": true,
       "testOnly": true
+    },
+    {
+      "id": "dingdian-23uswx",
+      "name": "顶点小说",
+      "kind": "public-web",
+      "file": "sources/dingdian-23uswx.json",
+      "enabled": true,
+      "testOnly": true
+    },
+    {
+      "id": "jiuyi-91zww",
+      "name": "九一中文",
+      "kind": "public-web",
+      "file": "sources/jiuyi-91zww.json",
+      "enabled": true,
+      "testOnly": true
+    },
+    {
+      "id": "wuxian-wenxuesk",
+      "name": "无限小说",
+      "kind": "public-web",
+      "file": "sources/wuxian-wenxuesk.json",
+      "enabled": true,
+      "testOnly": true
+    },
+    {
+      "id": "tianyu-tycqzw",
+      "name": "天域小说网",
+      "kind": "public-web",
+      "file": "sources/tianyu-tycqzw.json",
+      "enabled": true,
+      "testOnly": true
     }
   ]
 }
