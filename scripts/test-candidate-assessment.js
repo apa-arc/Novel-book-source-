@@ -8,7 +8,8 @@ const review = {
     { id: "normal-www", name: "普通书源", group: "普通", baseUrl: "https://www.example.com/" },
     { id: "normal-mobile", name: "普通书源别名", group: "普通", baseUrl: "https://m.example.com/" },
     { id: "adult", name: "成人书源", group: "🔞", baseUrl: "https://adult.example/" },
-    { id: "manga", name: "漫画站", group: "漫画", baseUrl: "https://manga.example/" }
+    { id: "manga", name: "漫画站", group: "漫画", baseUrl: "https://manga.example/" },
+    { id: "adult-manga", name: "🔞漫画站", group: "漫画", baseUrl: "https://adultmanga.example/" }
   ]
 };
 const reports = [{
@@ -54,14 +55,16 @@ const licenseReview = {
   }]
 };
 const assessment = buildCandidateAssessment(review, reports, undefined, licenseReview);
-assert.equal(assessment.totals.sourceRecords, 4);
-assert.equal(assessment.totals.uniqueDomains, 3);
+assert.equal(assessment.totals.sourceRecords, 5);
+assert.equal(assessment.totals.uniqueDomains, 4);
 assert.equal(assessment.totals.duplicateSourceRecords, 1);
 assert.equal(assessment.totals.eligibleUniqueDomains, 2);
 assert.equal(assessment.totals.scannedUniqueDomains, 2);
-assert.equal(assessment.totals.adultCategorySourceRecords, 1);
+assert.equal(assessment.totals.adultCategorySourceRecords, 2);
 assert.equal(assessment.totals.adultExcludedSourceRecords, 0);
 assert.equal(assessment.totals.adultOnlyDomains, 1);
+assert.equal(assessment.totals.nonNovelExcludedSourceRecords, 2);
+assert.equal(assessment.totals.nonNovelOnlyDomains, 2);
 assert.equal(assessment.totals.nonNovelExcludedSourceRecords, 1);
 assert.equal(assessment.totals.nonNovelOnlyDomains, 1);
 assert.equal(assessment.totals.readyForSubscription, 0);
@@ -82,6 +85,10 @@ assert.equal(assessment.sources[2].chapterSampleStatus, "manual-review");
 assert.equal(assessment.sources[2].technicalStatus, "not-adapted");
 assert.equal(assessment.sources[3].accessibilityStatus, "excluded-non-novel-category");
 assert.equal(assessment.sources[3].technicalStatus, "excluded-non-novel-category");
+assert.equal(assessment.sources[4].adultCategory, true);
+assert.equal(assessment.sources[4].nonNovelCategory, true);
+assert.equal(assessment.sources[4].accessibilityStatus, "excluded-non-novel-category");
+assert.equal(assessment.sources[4].technicalStatus, "excluded-non-novel-category");
 assert.throws(() => buildCandidateAssessment(review, []), /没有找到/);
 assert.throws(() => buildCandidateAssessment(review, [{ ...reports[0], totalUniqueCandidates: 3 }]), /totalUniqueCandidates/);
 console.log("Candidate assessment tests passed.");

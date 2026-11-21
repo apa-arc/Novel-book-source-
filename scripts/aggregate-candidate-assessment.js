@@ -10,7 +10,7 @@ function isAdult(source) {
   return ADULT.test(String(source.group || "") + " " + String(source.name || ""));
 }
 function isNonNovel(source) {
-  return !isAdult(source) && NON_NOVEL.test(String(source.group || "") + " " + String(source.name || ""));
+  return NON_NOVEL.test(String(source.group || "") + " " + String(source.name || ""));
 }
 function isOutOfScope(source) {
   return isNonNovel(source);
@@ -58,15 +58,15 @@ function buildCandidateAssessment(candidateReview, reports, generatedAt, license
     if (!groups.has(key)) groups.set(key, { host, records: [], adultCount: 0, nonNovelCount: 0, eligibleCount: 0 });
     const group = groups.get(key);
     group.records.push(source);
-    if (isAdult(source)) {
-      group.adultCount++;
-      group.eligibleCount++;
-    } else if (isNonNovel(source)) group.nonNovelCount++;
-    else group.eligibleCount++;
+    const adult = isAdult(source);
+    const nonNovel = isNonNovel(source);
+    if (adult) group.adultCount++;
+    if (nonNovel) group.nonNovelCount++;
+    if (!nonNovel) group.eligibleCount++;
   }
 
   const eligibleGroups = new Map([...groups].filter(([, group]) => group.eligibleCount > 0));
-  const adultOnlyGroups = [...groups.values()].filter(group => group.adultCount === group.records.length);
+  const adultOnlyGroups = [...groups.values()].filter(group => group.adultCount === group.records.length && group.nonNovelCount === 0);
   const nonNovelOnlyGroups = [...groups.values()].filter(group => group.eligibleCount === 0 && group.nonNovelCount > 0);
   const mixedGroups = [...groups.values()].filter(group =>
     (group.adultCount > 0 && group.adultCount < group.records.length) ||
