@@ -8,7 +8,7 @@
       "kind": "public-web",
       "file": "sources/biquluo-la.json",
       "enabled": true,
-      "testOnly": true
+      "testOnly": false
     },
     {
       "id": "jiuyi-91zww",
@@ -16,7 +16,7 @@
       "kind": "public-web",
       "file": "sources/jiuyi-91zww.json",
       "enabled": true,
-      "testOnly": true
+      "testOnly": false
     },
     {
       "id": "xinbiquge-info",
@@ -24,7 +24,7 @@
       "kind": "public-web",
       "file": "sources/xinbiquge-info.json",
       "enabled": true,
-      "testOnly": true
+      "testOnly": false
     },
     {
       "id": "biquge-17177",
@@ -32,7 +32,7 @@
       "kind": "public-web",
       "file": "sources/biquge-17177.json",
       "enabled": true,
-      "testOnly": true
+      "testOnly": false
     },
     {
       "id": "d8zw-com",
@@ -40,7 +40,7 @@
       "kind": "public-web",
       "file": "sources/d8zw-com.json",
       "enabled": true,
-      "testOnly": true
+      "testOnly": false
     },
     {
       "id": "bqg-info",
@@ -48,7 +48,7 @@
       "kind": "public-web",
       "file": "sources/bqg-info.json",
       "enabled": true,
-      "testOnly": true
+      "testOnly": false
     },
     {
       "id": "xqianqian-m",
@@ -56,7 +56,7 @@
       "kind": "public-web",
       "file": "sources/xqianqian-m.json",
       "enabled": true,
-      "testOnly": true
+      "testOnly": false
     },
     {
       "id": "douhua-wenxue",
@@ -64,7 +64,7 @@
       "kind": "public-web",
       "file": "sources/douhua-wenxue.json",
       "enabled": true,
-      "testOnly": true
+      "testOnly": false
     },
     {
       "id": "iyueba-net",
@@ -72,7 +72,7 @@
       "kind": "public-web",
       "file": "sources/iyueba-net.json",
       "enabled": true,
-      "testOnly": true
+      "testOnly": false
     },
     {
       "id": "52shuku-net",
