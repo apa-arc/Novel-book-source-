@@ -118,6 +118,19 @@ function executeSelector(root,selector){
         }else if(step.kind==="wildcard"){
           if(Array.isArray(value)) next.push(...value);
           else if(value&&typeof value==="object") next.push(...Object.values(value));
+        }else if(step.kind==="recursiveProperty"||step.kind==="recursiveWildcard"){
+          const budget={visited:0};
+          const collect=(node,depth)=>{
+            if(node==null||typeof node!=="object"||depth>32||budget.visited>20000) return;
+            budget.visited++;
+            if(Array.isArray(node)){for(const child of node) collect(child,depth+1);return;}
+            for(const [key,child] of Object.entries(node)){
+              if(step.kind==="recursiveWildcard"||key===step.name) next.push(child);
+              collect(child,depth+1);
+              if(next.length>MAX_RESULTS) throw new Error("json-result-limit");
+            }
+          };
+          collect(value,0);
         }else throw new Error("unsupported-json-path-step");
       }
       current=next;
