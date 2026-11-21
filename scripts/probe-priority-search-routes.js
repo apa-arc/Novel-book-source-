@@ -25,8 +25,17 @@ async function probe(candidate,keyword,route){
   const res=await fetch(url,{headers,signal:AbortSignal.timeout(12000),redirect:"manual"});
   const location=res.headers.get("location");
   if(res.status>=300&&res.status<400){
-   let redirectHost=null;try{redirectHost=new URL(location,url).hostname;}catch{}
-   return {keyword,path:route,status:res.status,classification:redirectHost&&redirectHost!==url.hostname?"cross-domain-redirect":"redirect",redirectHost,elapsedMs:Date.now()-started};
+   let redirectHost=null,redirectPath=null;
+   try{const target=new URL(location,url);redirectHost=target.hostname;redirectPath=target.pathname+target.search;
+    if(redirectHost===url.hostname){
+     const followed=await fetch(target,{headers,signal:AbortSignal.timeout(12000),redirect:"manual"});
+     const type=followed.headers.get("content-type")||"";
+     const body=(await followed.text()).slice(0,1500000);
+     const hasKeyword=body.includes(keyword)||body.includes(encodeURIComponent(keyword));
+     return {keyword,path:route,status:res.status,redirectHost,redirectPath,followedStatus:followed.status,contentType:type,title:extractTitle(body),hasKeyword,links:extractLinks(body,target.href),classification:!followed.ok?"redirect-target-http-error":hasKeyword?"redirect-target-search-hit":"redirect-target-no-keyword-hit",elapsedMs:Date.now()-started};
+    }
+   }catch{}
+   return {keyword,path:route,status:res.status,redirectHost,redirectPath,classification:redirectHost&&redirectHost!==url.hostname?"cross-domain-redirect":"redirect",elapsedMs:Date.now()-started};
   }
   const type=res.headers.get("content-type")||"";
   const body=(await res.text()).slice(0,1500000);
