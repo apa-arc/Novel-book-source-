@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-21",
+  "status": "test-only-not-production",
+  "sources": [
+    {
+      "id": "wucuoxs-test",
+      "name": "无错小说（测试源）",
+      "kind": "public-web",
+      "file": "test-sources/wucuoxs.json",
+      "script": "scripts/wucuoxs-test.js",
+      "enabled": false
+    }
+  ]
+}
