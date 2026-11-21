@@ -99,18 +99,30 @@ function main() {
   }
   const current = JSON.parse(fs.readFileSync(SUBSCRIPTION, "utf8"));
   if (!Array.isArray(current)) throw new Error("ordinary subscription is not a JSON array");
-  const seen = new Set(current.map(source => normalizeUrl(source.bookSourceUrl) + "|" + String(source.bookSourceName || "").trim().toLowerCase()));
   let nextOrder = current.reduce((max, source) => Math.max(max, Number(source.customOrder) || 0), 0) + 1;
   const added = [];
+  const updated = [];
   for (const source of valid) {
-    const key = normalizeUrl(source.bookSourceUrl) + "|" + source.bookSourceName.trim().toLowerCase();
-    if (!key || seen.has(key)) continue;
-    seen.add(key);
-    source.customOrder = nextOrder++;
-    added.push(source);
+    const keyUrl = normalizeUrl(source.bookSourceUrl);
+    const keyName = source.bookSourceName.trim().toLowerCase();
+    if (!keyUrl || !keyName) continue;
+    const existingIndex = current.findIndex(existing =>
+      normalizeUrl(existing.bookSourceUrl) === keyUrl &&
+      String(existing.bookSourceName || "").trim().toLowerCase() === keyName &&
+      !ADULT_HINT.test([existing.bookSourceName, existing.bookSourceGroup, existing.bookSourceComment].join(" "))
+    );
+    if (existingIndex >= 0) {
+      source.customOrder = Number(current[existingIndex].customOrder) || nextOrder++;
+      current[existingIndex] = source;
+      updated.push(source);
+    } else {
+      source.customOrder = nextOrder++;
+      current.push(source);
+      added.push(source);
+    }
   }
-  if (added.length) {
-    fs.writeFileSync(SUBSCRIPTION, JSON.stringify(current.concat(added), null, 2) + "\n", "utf8");
+  if (added.length || updated.length) {
+    fs.writeFileSync(SUBSCRIPTION, JSON.stringify(current, null, 2) + "\n", "utf8");
   }
   const summary = {
     schemaVersion: 1,
@@ -119,7 +131,9 @@ function main() {
     candidates: candidates.length,
     valid: valid.length,
     added: added.length,
-    addedSources: added.map(source => ({ name: source.bookSourceName, url: source.bookSourceUrl }))
+    updated: updated.length,
+    addedSources: added.map(source => ({ name: source.bookSourceName, url: source.bookSourceUrl })),
+    updatedSources: updated.map(source => ({ name: source.bookSourceName, url: source.bookSourceUrl }))
   };
   fs.mkdirSync(path.join(ROOT, "reports"), { recursive: true });
   fs.writeFileSync(path.join(ROOT, "reports", "verified-source-merge-summary.json"), JSON.stringify(summary, null, 2) + "\n");
