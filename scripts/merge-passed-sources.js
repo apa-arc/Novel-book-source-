@@ -33,7 +33,21 @@ function validateCandidate(source) {
       !source.bookSourceComment.includes("luanmuc/legado-book-sources") ||
       !source.bookSourceComment.includes("MIT License")) return false;
   let base, search;
-  try { base = new URL(source.bookSourceUrl); search = new URL(source.searchUrl); } catch { return false; }
+  try {
+    base = new URL(source.bookSourceUrl);
+    const rawSearch = String(source.searchUrl);
+    const requestConfig = rawSearch.match(/^([^,]+),\\s*(\\{[\\s\\S]*\\})$/);
+    let searchSpec = rawSearch;
+    if (requestConfig) {
+      const config = JSON.parse(requestConfig[2]);
+      if (!["GET","POST"].includes(String(config.method || "GET").toUpperCase()) ||
+          config.webView || config.cookie || config.header) return false;
+      searchSpec = requestConfig[1].trim();
+    } else if (rawSearch.includes(",")) {
+      searchSpec = rawSearch.split(/,(?=https?:\\/\\/)/i)[0].trim();
+    }
+    search = new URL(searchSpec, base);
+  } catch { return false; }
   if (base.protocol !== "https:" || search.protocol !== "https:" || base.username || base.password || search.username || search.password) return false;
   const required = {
     ruleSearch: ["bookList", "name", "bookUrl"],
