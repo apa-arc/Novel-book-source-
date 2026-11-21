@@ -145,6 +145,10 @@ try{
  const nestedWildcard=parseLegacyChain("data.list[*].list[*]");
  assert.equal(nestedWildcard.status,"candidate");
  assert.equal(nestedWildcard.selector.engine,"json");
+ const reverseJson=parseLegacyChain("-$.data.[*]");
+ assert.equal(reverseJson.status,"candidate");
+ assert.equal(reverseJson.selector.engine,"json");
+ assert.equal(reverseJson.selector.reverse,true);
  const upperNestedWildcard=parseLegacyChain("DATA.BOOKCATA[*].CHAPTERS[*]");
  assert.equal(upperNestedWildcard.status,"candidate");
  assert.equal(upperNestedWildcard.selector.engine,"json");
