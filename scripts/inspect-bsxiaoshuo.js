@@ -42,7 +42,7 @@ function nodeSummary(node) {
   }));
   const search = await get(SEARCH);
   const searchDoc = parseHTML(search.html).document;
-  const searchLinks = [...searchDoc.querySelectorAll("a[href]")].map(a => ({ text: (a.textContent || "").trim().replace(/\s+/g, " ").slice(0, 100), href: a.getAttribute("href") || "" })).filter(a => /\/mulu\//i.test(a.href));
+  const searchLinks = [...searchDoc.querySelectorAll("a[href]")].map(a => ({ text: (a.textContent || "").trim().replace(/\s+/g, " ").slice(0, 100), href: a.getAttribute("href") || "" })).filter(a => a.text || a.href).slice(0, 60);
   const book = await get(BOOK);
   const bookDoc = parseHTML(book.html).document;
   const chapter = await get(CHAPTER);
@@ -57,7 +57,7 @@ function nodeSummary(node) {
     .sort((a,b) => b.textLength-a.textLength).slice(0,20);
   const report = {
     generatedAt: new Date().toISOString(),
-    homepage: { status: home.status, finalUrl: home.url, title: homeDoc.querySelector("title")?.textContent || "", forms, searchForms },
+    homepage: { status: home.status, finalUrl: home.url, title: homeDoc.querySelector("title")?.textContent || "", forms, searchForms, bodyText: (searchDoc.body?.textContent || "").trim().replace(/\s+/g, " ").slice(0, 1800) },
     searchPage: { status: search.status, finalUrl: search.url, title: searchDoc.querySelector("title")?.textContent || "", headings: [...searchDoc.querySelectorAll("h1,h2,h3")].map(nodeSummary), resultLinks: searchLinks.slice(0,30) },
     bookPage: { status: book.status, finalUrl: book.url, title: bookDoc.querySelector("title")?.textContent || "", headings: [...bookDoc.querySelectorAll("h1,h2,h3")].map(nodeSummary), chapterLinks: bookLinks.slice(0,30) },
     chapterPage: { status: chapter.status, finalUrl: chapter.url, title: chapterDoc.querySelector("title")?.textContent || "", headings: [...chapterDoc.querySelectorAll("h1,h2,h3")].map(nodeSummary), contentCandidates }
