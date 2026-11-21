@@ -190,6 +190,7 @@ async function testSource(source, testId) {
     if (!host || !["https:","http:"].includes(parsedSourceUrl.protocol)) throw new Error("invalid-source-url");
     result.host = host;
   } catch (error) {
+    result.status = "unsupported";
     result.failedStage = "preflight";
     result.error = String(error && error.message || error).slice(0, 180);
     return result;
@@ -271,6 +272,12 @@ async function testSource(source, testId) {
   } catch (error) {
     result.failedStage = currentStage;
     result.error = String(error && error.message || error).slice(0, 180);
+    const message = String(error && error.message || error || "");
+    if (/non-novel-source/.test(message)) result.status = "excluded";
+    else if (/login-required|upstream-source-disabled|challenge-or-access-denied|http-(401|403|429)/i.test(message)) result.status = "blocked";
+    else if (currentStage === "preflight" || /unsupported|invalid-request|unsafe-search-url|credential-or-unsupported-header|unexpected-content-type/i.test(message)) result.status = "unsupported";
+    else if (/fetch failed|aborted|timeout|http-5\\d\\d|too-many-redirects/i.test(message)) result.status = "unverified";
+    else result.status = "failed";
     if (error && error.cause) result.errorCause = String(error.cause.code || error.cause.message || error.cause).slice(0, 180);
   }
   return result;
@@ -316,9 +323,9 @@ async function main() {
     }
   }
   await Promise.all(Array.from({ length: CONCURRENCY }, worker));
-  const passed = results.filter(x => x.status === "passed");
+  const countStatus = status => results.filter(item => item.status === status).length;
   const report = {
-    schemaVersion: 1,
+    schemaVersion: 2,
     generatedAt: new Date().toISOString(),
     test: "Real search -> book detail -> chapter list -> chapter content; HTTPS same-host only; no scripts, login, cookies, CAPTCHA bypass, or content retention",
     keyword: KEYWORD,
@@ -333,11 +340,15 @@ async function main() {
       shardIndex: SHARD_INDEX,
       shardCount: SHARD_COUNT,
       tested: results.length,
-      passed: passed.length,
-      failed: results.length - passed.length,
+      passed: countStatus("passed"),
+      failed: countStatus("failed"),
+      unsupported: countStatus("unsupported"),
+      blocked: countStatus("blocked"),
+      unverified: countStatus("unverified"),
+      excluded: countStatus("excluded"),
       subscriptionChanges: 0
     },
-    note: "This report is diagnostic only. A passing live test does not itself approve rule redistribution or automatically alter subscriptions.",
+    note: "Statuses are separated: failed means a functional stage failed; unsupported means the bounded adapter cannot run the rule; blocked means login/access controls or upstream disabled; unverified means transient network/timeout. This report is diagnostic only and does not approve redistribution or alter subscriptions.",
     results
   };
   fs.mkdirSync(path.dirname(REPORT), { recursive: true });
