@@ -16,7 +16,7 @@ function summary(n){return {tag:n.tagName?.toLowerCase()||"",id:n.id||"",classNa
   const anchors=[...sd.querySelectorAll("a[href]")].map(a=>({text:norm(a.textContent,120),href:a.getAttribute("href")||""})).filter(a=>a.text&&a.href).slice(0,100);
   const candidates=[...sd.querySelectorAll("li,article,div")].map(summary).filter(x=>x.textLength>30).sort((a,b)=>b.textLength-a.textLength).slice(0,20);
   const result={keyword,search:{status:search.status,url:search.url,contentType:search.contentType,title:norm(sd.querySelector("title")?.textContent),body:norm(sd.body?.textContent),anchors,candidates}};
-  const match=anchors.find(a=>a.text.includes(keyword)||a.href.includes("/book/")||a.href.includes("/novel/")||/\/\d+\/?$/.test(a.href));
+  const match=anchors.find(a=>a.text.includes(keyword)&&/\.html/i.test(a.href));
   if(match){
    const bookUrl=new URL(match.href,search.url).href;
    try{
