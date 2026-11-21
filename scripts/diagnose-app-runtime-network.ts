@@ -1,10 +1,11 @@
 import fs from "node:fs";
 import { parseSourceSubscription } from "../app/src/source-subscription.ts";
-import { parseHtmlSearchResults } from "../app/src/html-source-parser.ts";
+import { createSourceHttpClient } from "../app/src/source-runtime.ts";
+import { searchNovelSource } from "../app/src/source-search.ts";
 
 const raw = fs.readFileSync("config/health-check-subscription.json", "utf8");
 const parsed = parseSourceSubscription(raw);
-const ids = new Set(["xqianqian-m", "iyueba-net"]);
+const ids = new Set(parsed.compatible.map((source) => source.remoteId));
 const keywords = ["斗罗大陆", "斗破苍穹"];
 const variants = [
   { name: "node-default", headers: { Accept: "text/html,application/json;q=0.9,*/*;q=0.5" } },
@@ -118,7 +119,7 @@ async function probe(source: any, keyword: string, variant: typeof variants[numb
   fs.writeFileSync("reports/app-runtime-network-diagnostics.json", JSON.stringify({
     generatedAt: new Date().toISOString(),
     environment: { runtime: process.version, platform: process.platform },
-    note: "Same search URLs as the App subscription; compares Node default, iPhone Safari UA, and desktop Chrome UA under manual/follow redirect policies. This is a GitHub-hosted runner diagnostic, not an iPhone measurement.",
+    note: "All 10 confirmed sources are tested through the exact AppleNovelApp search runtime and parser. Compares Node default with iPhone/desktop User-Agent plus follow-redirect variants. This remains a GitHub-hosted Node runner, not a physical iPhone measurement.",
     results,
   }, null, 2));
   for (const result of results) console.log(JSON.stringify(result));
