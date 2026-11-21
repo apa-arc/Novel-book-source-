@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T01:35:36.309Z",
+  "generatedAt": "2026-11-21T01:36:08.300Z",
   "provider": "AOAOSTAR / Legado",
   "sourceCount": 704,
   "counts": {
@@ -5159,11 +5159,9 @@
           }
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 4,
-          "manualReasons": {
-            "unsupported-attribute-filter": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "partial",
@@ -5321,11 +5319,9 @@
           }
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 4,
-          "manualReasons": {
-            "unsupported-attribute-filter": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -5612,11 +5608,9 @@
           }
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 4,
-          "manualReasons": {
-            "unsupported-attribute-filter": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "partial",
@@ -12234,11 +12228,9 @@
           }
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 4,
-          "manualReasons": {
-            "unsupported-attribute-filter": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "partial",
@@ -15556,11 +15548,9 @@
           }
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 4,
-          "manualReasons": {
-            "unsupported-attribute-filter": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "partial",
@@ -18630,11 +18620,9 @@
           }
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 4,
-          "manualReasons": {
-            "unsupported-attribute-filter": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -20304,11 +20292,9 @@
           }
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 4,
-          "manualReasons": {
-            "unsupported-attribute-filter": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -27399,11 +27385,9 @@
           }
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 7,
-          "manualReasons": {
-            "unsupported-attribute-filter": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -30465,7 +30449,6 @@
           "status": "partial",
           "fieldCount": 7,
           "manualReasons": {
-            "unsupported-attribute-filter": 1,
             "compound-or-transform-expression": 1
           }
         },
@@ -30473,7 +30456,6 @@
           "status": "partial",
           "fieldCount": 7,
           "manualReasons": {
-            "unsupported-attribute-filter": 2,
             "compound-or-transform-expression": 1
           }
         },
