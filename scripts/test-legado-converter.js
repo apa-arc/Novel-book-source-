@@ -150,8 +150,8 @@ try{
  assert.equal(orExpression.status,"candidate");
  assert.equal(orExpression.selector.operator,"fallback");
  const alternateExpression=parseLegacyChain("class.a%%class.b");
- assert.equal(alternateExpression.status,"manual");
- assert.equal(alternateExpression.reason,"unsupported-compound-expression");
+ assert.equal(alternateExpression.status,"candidate");
+ assert.equal(alternateExpression.selector.operator,"zip");
  const regexExpression=parseLegacyChain("class.title##\\s+");
  assert.equal(regexExpression.status,"candidate");
  assert.equal(regexExpression.selector.engine,"replace");
