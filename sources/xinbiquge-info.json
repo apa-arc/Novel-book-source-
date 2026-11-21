@@ -10,8 +10,6 @@
   ],
   "script": "scripts/xinbiquge-info.js",
   "enabled": true,
-  "testOnly": true,
-  "testOnlyReason": "来源于公开书源规则库；站点搜索近期可检索到有效结果，已转换为 GET/CSS。详情、目录、正文尚未完成目标宿主四阶段实测。",
   "description": "普通小说网页源；GET 搜索，目录分页，正文使用 article.font_max；章节可能分页，需后续补齐翻页处理。",
   "licenseApproved": true,
   "licenseType": "self-owned",
@@ -44,5 +42,7 @@
         "titleSelector": "h1"
       }
     }
-  }
+  },
+  "userConfirmedExistingSource": true,
+  "userConfirmedWorkingAt": "2026-11-21"
 }
