@@ -1,0 +1,1075 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-21T12:31:22.028Z",
+  "note": "仅测试公开 HTTPS 首页及 GET 搜索路由；没有登录、提交 POST、下载小说正文或纳入成人/漫画来源。",
+  "results": [
+    {
+      "name": "顶点小说（镜像）",
+      "base": "https://m.hafukewx.cc/",
+      "home": {
+        "status": 200,
+        "url": "https://m.hafukewx.cc/",
+        "contentType": "text/html; charset=gb2312",
+        "title": "�޵���������ֵ���ղص�����С˵�Ķ���_����С˵��",
+        "body": "��ѩ�к����С����Ӿ� �������꡷���Ӿ� ����С˵�� ��ҳ��������������ʷ�ƻ���ϷŮ���������а� search(); һ������������������������������ҳƴ�����ħ��Ϊ���������Ż����磬�������ƾ����֮�����������裬Ц����񷣡�����������������죬���»�...... ��������������Ⱥ���Ҿ���ϵͳ�����ڴ�Խ�󣬻��ܹ���ˮȺ��������������˵�������ٺò����ġ����Ǿ������ݸо��Լ��Ľ���ָ���˵�ʱ�򣬶��ߵ�������...... �����ճ����������ձ�ֻ֮�Ǵ��������������ձ������ֱ��к�ȴ�����ֻ�Ǵ��У���������һ���������Ȼ���ȥ�ĻĴ����վ����ǿ�����Σ����������ֶ񼣣�����...... ��ɫ������ħ��Ԣ����һ����ħ����Ԣѡ�г�Ϊס���󣬾ͱ���ǿ�����ʮ���������������бض�������������Ĺ�������һ���޷���������ע...... ǿ���Ƽ� [����]�ռ�����24������ɨ����Ƽ����� [����]���������춼������� [����]��Ī���������Ī [Ů��]������ҹ�� [Ů��]����ǧ��ӭ������ [����]���䱩��֮�ٻ�Ⱥ�������� [����]�ռ����޵�25������Ķ��Ƽ����� [����]���������޺� ���� [����]����а���������� [����]������������ [����]��ֱ�����ѳ軵������Ϊ�� [����]����֮��������� [����]�޵����������� [����]����֮����Ǳˮ������ ���� [����]�������� [����]�ֲ�������ǰ�׻� [����]���շ���լ�� [����]����֮������ [����]�˼��н�ƽ��δ֪�� [����]�����������ȼ�����ص�����ӭ�ܶ��� ���� [����]����Ů��Ҷ������ȻҶ���� [����]αװѧ��ľ�ϻ� [����]��ϯ��ҽ���Ӿ��� [����]�����ػ���ױ�� [����]ĸ��·��¼ [����]���м�Ʒ��ҽҶ������ѩ���Ц ��ʷ [��ʷ]���������˺���������ƫ���� [��ʷ]����ǧɽ��� [��ʷ]�������ɼ�,��������۷���ʮ���� [��ʷ]��޺������ӱ����û��������ˮһư [��ʷ]�������� [��ʷ]�����߾�һС���ϰ������� �ƻ� [�ƻ�]�ӻ�е���˿�ʼ���� [�ƻ�]���ǽ���ʧ��Ҷ [�ƻ�]���־��ѳ��񼶾綾�츳���㶹ޢ [�ƻ�]˵����������Ϸ��̩̹����ʲô�������սʿ [�ƻ�]��Ԩ������������ [�ƻ�]����ħ�ޣ����������ʱ������ߵĸ��� ���� [����]��*******����*******�� [����]�������� [����]����������� [����]�Զ������ɻ��ܷ� [����]��ĩ�ķ�ʦ���Ĳ� [����]ӣ���������ۺ�һһ search(); ��ҳ �ҵ���� �Ķ���¼ tj();"
+      },
+      "forms": [],
+      "searchInputs": [],
+      "searchAnchors": [],
+      "searchChecks": [
+        {
+          "route": "common-route",
+          "url": "https://m.hafukewx.cc/search?q=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 404,
+          "contentType": "text/html; charset=gb2312",
+          "title": "Error 404 - �Ҳ�����ҳ��!",
+          "containsKeyword": false,
+          "body": "Error 404 - �Ҳ�����ҳ��!",
+          "links": []
+        },
+        {
+          "route": "common-route",
+          "url": "https://m.hafukewx.cc/search?key=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 404,
+          "contentType": "text/html; charset=gb2312",
+          "title": "Error 404 - �Ҳ�����ҳ��!",
+          "containsKeyword": false,
+          "body": "Error 404 - �Ҳ�����ҳ��!",
+          "links": []
+        },
+        {
+          "route": "common-route",
+          "url": "https://m.hafukewx.cc/search?keyword=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 404,
+          "contentType": "text/html; charset=gb2312",
+          "title": "Error 404 - �Ҳ�����ҳ��!",
+          "containsKeyword": false,
+          "body": "Error 404 - �Ҳ�����ҳ��!",
+          "links": []
+        },
+        {
+          "route": "common-route",
+          "url": "https://m.hafukewx.cc/search/?q=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 404,
+          "contentType": "text/html; charset=gb2312",
+          "title": "Error 404 - �Ҳ�����ҳ��!",
+          "containsKeyword": false,
+          "body": "Error 404 - �Ҳ�����ҳ��!",
+          "links": []
+        },
+        {
+          "route": "common-route",
+          "url": "https://m.hafukewx.cc/search/?searchkey=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 404,
+          "contentType": "text/html; charset=gb2312",
+          "title": "Error 404 - �Ҳ�����ҳ��!",
+          "containsKeyword": false,
+          "body": "Error 404 - �Ҳ�����ҳ��!",
+          "links": []
+        },
+        {
+          "route": "common-route",
+          "url": "https://m.hafukewx.cc/search.html?keyword=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 404,
+          "contentType": "text/html; charset=gb2312",
+          "title": "Error 404 - �Ҳ�����ҳ��!",
+          "containsKeyword": false,
+          "body": "Error 404 - �Ҳ�����ҳ��!",
+          "links": []
+        },
+        {
+          "route": "common-route",
+          "url": "https://m.hafukewx.cc/so/search.php?q=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 404,
+          "contentType": "text/html; charset=gb2312",
+          "title": "Error 404 - �Ҳ�����ҳ��!",
+          "containsKeyword": false,
+          "body": "Error 404 - �Ҳ�����ҳ��!",
+          "links": []
+        },
+        {
+          "route": "common-route",
+          "url": "https://m.hafukewx.cc/search?name=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 404,
+          "contentType": "text/html; charset=gb2312",
+          "title": "Error 404 - �Ҳ�����ҳ��!",
+          "containsKeyword": false,
+          "body": "Error 404 - �Ҳ�����ҳ��!",
+          "links": []
+        }
+      ]
+    },
+    {
+      "name": "精华书阁",
+      "base": "https://m.jhsssd.com/",
+      "home": {
+        "status": 200,
+        "url": "https://m.jhsssd.com/",
+        "contentType": "text/html; charset=utf-8",
+        "title": "精华书阁手机版",
+        "body": "精华书阁 首页 分类 排行 完本 书架 search(); 今日推荐小说 我的属性修行人生 择日飞升 夜的命名术 热门小说推荐 光阴之外 作者：耳根 简介：天地是万物众生的客舍，光阴是古往今来的过客。死生的差异，就好像梦与醒的不同，纷纭... 13495k+人在看 深空彼岸 作者：辰东 简介：浩瀚的宇宙中，一片星系的生灭，也不过是刹那的斑驳流光。仰望星空，总有种结... 24209k+人在看 灵境行者 作者：卖报小郎君 简介：亘古通今，传闻世有灵境。关于灵境的说法，历朝历代的名人雅士众说纷纭，诗中... 17627k+人在看 赤心巡天 作者：情何以甚 简介：山河千里写伏尸，乾坤百年描恶虎。天地至公如无情，我有赤心一颗，以巡天。—... 25103k+人在看 万古神帝 作者：飞天鱼 简介：起点VIP2024-6-25完结1446.04万字204.34万总推荐2... 18186k+人在看 神秘复苏 作者：佛前献花 简介：“我叫杨间，当你看到这句话的时候我已经死了......”一张诡异的羊皮卷... 18554k+人在看 万界邪尊 作者：子莫谦 简介：少年莫阳，太古神族血脉被封印，身体被他人做局，沦为了宗门弃子。万念俱灰之... 810k+人在看 寒门仕子 作者：风臣 简介：宋天明意外穿越到一个民不聊生，战乱不休，人命比纸轻，每日要为填饱肚子而奔波的大乾... 1548k+人在看 唐人的餐桌 作者：孑与2 简介：起点VIP2024-07-07完结417.49万字325.08万总推荐文... 5419k+人在看 伏鹰 作者：春风榴火 简介：百日誓师大会上，全校女生痴迷地望着作为优秀学生发言的迟鹰。他衬衣洁白，气... 265k+人在看 最近更新小说 1. 逆命相师 - 不修边幅11-21 简介：世间有天命族，生来便被斩去五十年寿元... 2. 神魂丹帝 - 浊酒一湖11-21 简介：少年十年坚持，却惨遭未婚妻夺取武魂而亡！穿越觉醒神秘武魂的秦朗，发誓绝不... 3. 道界天下 - 夜行月11-21 简介：神秘村落中走出的神秘少年，道心没有，道灵不具，道体不通，却一心求道，拜入... 4. 沧澜仙图 - 洛水忆浮生11-21 简介：天地不仁，以万物为刍狗。惊天棋局，谁在执子？庙堂与江湖、热血与阴谋、爱情... 5. 宦海官途 - 风流小二11-21 简介：做官要有两颗心，一颗是责任心，一颗是良心。且看秦峰一个最偏远乡镇的基层公... 6. 综影视之我为女配平遗憾 - 繁华灯下的寂寥11-21 简介：羽嘉，鸿蒙四大创世神兽之一，地位极高，为百鸟之王，是世界上所有鸟类的祖先... 7. 我只想毁灭宗门，咋逆天成神了 - 明月夜色11-21 简介：重生天下第一宗，本该是完美开局。可楚星河发现，自己的修行之路有点与众不同... 8. 混沌天帝诀 - 随风漫步11-21 简介：太古异兽利爪捏碎诸天星辰，域外邪族发出惑乱众生的嘶鸣，黑暗深渊中的妖魔睁... 9. 末世墙头草：开局结拜八阶尸王 - 星月晴川11-21 简介：【无系统+偏搞笑+抱大腿+黑吃黑+不圣母】李星月身患绝症，宿醉后竟来到了... 10. 天崩开局，从死囚营砍到并肩王 - 大和尚o11-21 简介：【重生+无敌+杀伐果断+极道】李道重生到大乾王朝成为一名三等伯爵。一场宫... search(); 首页 电脑版 书架 求书催更 var _hmt = _hmt || []; (function() { var hm = document.createElement(\"script\"); hm.src = \"https://hm.baidu.com/hm.js?0c7d2b639ad4fe9409c68f59b883549e\"; var s = document.getElementsByTagName(\"script\")[0]; s.parentNode.insertBefore(hm, s); })(); bdtj();"
+      },
+      "forms": [],
+      "searchInputs": [],
+      "searchAnchors": [],
+      "searchChecks": [
+        {
+          "route": "common-route",
+          "url": "https://m.jhsssd.com/search?q=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 200,
+          "contentType": "text/html",
+          "title": "页面不存在",
+          "containsKeyword": false,
+          "body": "很抱歉，您要访问的页面不存在 请您检查网址是否正确，3秒后回到网站首页 你可以尝试重新搜索您需要浏览的内容，或者 返回上一页 tt=3; window.setInterval(\"timego()\",1000); function timego(){ tt--; document.getElementById(\"tt\").innerHTML = tt; if(tt==0) window.location.href='/'; }",
+          "links": []
+        },
+        {
+          "route": "common-route",
+          "url": "https://m.jhsssd.com/search?key=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 200,
+          "contentType": "text/html",
+          "title": "页面不存在",
+          "containsKeyword": false,
+          "body": "很抱歉，您要访问的页面不存在 请您检查网址是否正确，3秒后回到网站首页 你可以尝试重新搜索您需要浏览的内容，或者 返回上一页 tt=3; window.setInterval(\"timego()\",1000); function timego(){ tt--; document.getElementById(\"tt\").innerHTML = tt; if(tt==0) window.location.href='/'; }",
+          "links": []
+        },
+        {
+          "route": "common-route",
+          "url": "https://m.jhsssd.com/search?keyword=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 200,
+          "contentType": "text/html",
+          "title": "页面不存在",
+          "containsKeyword": false,
+          "body": "很抱歉，您要访问的页面不存在 请您检查网址是否正确，3秒后回到网站首页 你可以尝试重新搜索您需要浏览的内容，或者 返回上一页 tt=3; window.setInterval(\"timego()\",1000); function timego(){ tt--; document.getElementById(\"tt\").innerHTML = tt; if(tt==0) window.location.href='/'; }",
+          "links": []
+        },
+        {
+          "route": "common-route",
+          "url": "https://m.jhsssd.com/search/?q=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 200,
+          "contentType": "text/html",
+          "title": "页面不存在",
+          "containsKeyword": false,
+          "body": "很抱歉，您要访问的页面不存在 请您检查网址是否正确，3秒后回到网站首页 你可以尝试重新搜索您需要浏览的内容，或者 返回上一页 tt=3; window.setInterval(\"timego()\",1000); function timego(){ tt--; document.getElementById(\"tt\").innerHTML = tt; if(tt==0) window.location.href='/'; }",
+          "links": []
+        },
+        {
+          "route": "common-route",
+          "url": "https://m.jhsssd.com/search/?searchkey=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 200,
+          "contentType": "text/html",
+          "title": "页面不存在",
+          "containsKeyword": false,
+          "body": "很抱歉，您要访问的页面不存在 请您检查网址是否正确，3秒后回到网站首页 你可以尝试重新搜索您需要浏览的内容，或者 返回上一页 tt=3; window.setInterval(\"timego()\",1000); function timego(){ tt--; document.getElementById(\"tt\").innerHTML = tt; if(tt==0) window.location.href='/'; }",
+          "links": []
+        },
+        {
+          "route": "common-route",
+          "url": "https://m.jhsssd.com/search.html?keyword=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "title": "相关小说,热门小说搜索-精华书阁",
+          "containsKeyword": false,
+          "body": "小说搜索 首页 分类 排行 完本 足迹 请输入小说名称或者作者名字查找阅读小说！ search(); 首页 电脑版 书架 求书催更 var _hmt = _hmt || []; (function() { var hm = document.createElement(\"script\"); hm.src = \"https://hm.baidu.com/hm.js?0c7d2b639ad4fe9409c68f59b883549e\"; var s = document.getElementsByTagName(\"script\")[0]; s.parentNode.insertBefore(hm, s); })(); bdtj();",
+          "links": [
+            {
+              "text": "分类",
+              "href": "/list.html"
+            },
+            {
+              "text": "排行",
+              "href": "/Ranking.html"
+            },
+            {
+              "text": "完本",
+              "href": "/wanben.html"
+            },
+            {
+              "text": "足迹",
+              "href": "/bookcase.html"
+            },
+            {
+              "text": "书架",
+              "href": "/bookcase.html"
+            },
+            {
+              "text": "求书催更",
+              "href": "/qiushu.html"
+            }
+          ]
+        },
+        {
+          "route": "common-route",
+          "url": "https://m.jhsssd.com/so/search.php?q=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 200,
+          "contentType": "text/html",
+          "title": "页面不存在",
+          "containsKeyword": false,
+          "body": "很抱歉，您要访问的页面不存在 请您检查网址是否正确，3秒后回到网站首页 你可以尝试重新搜索您需要浏览的内容，或者 返回上一页 tt=3; window.setInterval(\"timego()\",1000); function timego(){ tt--; document.getElementById(\"tt\").innerHTML = tt; if(tt==0) window.location.href='/'; }",
+          "links": []
+        },
+        {
+          "route": "common-route",
+          "url": "https://m.jhsssd.com/search?name=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 200,
+          "contentType": "text/html",
+          "title": "页面不存在",
+          "containsKeyword": false,
+          "body": "很抱歉，您要访问的页面不存在 请您检查网址是否正确，3秒后回到网站首页 你可以尝试重新搜索您需要浏览的内容，或者 返回上一页 tt=3; window.setInterval(\"timego()\",1000); function timego(){ tt--; document.getElementById(\"tt\").innerHTML = tt; if(tt==0) window.location.href='/'; }",
+          "links": []
+        }
+      ]
+    },
+    {
+      "name": "书阅屋网",
+      "base": "https://m2.sywxs.cc/",
+      "home": {
+        "status": 200,
+        "url": "https://m2.sywxs.cc/",
+        "contentType": "text/html; charset=gb2312",
+        "title": "�������ֻ���_һ��ʵ����ɫ�������޵���������ѧС˵�Ķ���",
+        "body": "�������꡷���Ӿ� ��ѩ�к����С����Ӿ� ������ ��ҳ��������������Խ�����ƻ��������а�ȫ�� search(); �ҳ���������Ԫͼ�����ҽ��ϴ�������ʮ���꣬�Ƕ�������������Ժ���ĵ�����ʦ�֡�...... Ҷ������ѩ���� ���ҷ��������Ů��Ҷ���������еõ�̫����������ʯ�Ĵ��У��Դ˿�ʼ�˲�һ������������ҽ�����������ɱ�У�������...... һ����ϲ������ֽ������� �������ֽ��������С˵������š���������ɽ�С���һ����ϲ���Ĵ�������Ʒ����ڵ�����������Ϊ���ṩ������ֽ�...... ���ֱ�֮�޵�ս���ط���С�� ��������顿��׸���꣬�������û��֪�����ܾ����۵ķ�����ǻ���������ӣ���ǿ������������ԩ��ѩ�����߹���...... ǿ���Ƽ� [����]����Ҷ��Ҷ������ѩ [����]����Ծǧ�� [����]ȫְ��ʦ֮Ī����ͩ�� [����]ľҶ֮��ͨ�޵�����С�� [����]��ң��·�ĳ��� [����]����һ������ͩ�� [����]���������ǲ��������κ����� [����]У԰��Ʒ���������� [����]˧���Ϲ�������һ�׹ ���� [����]������������ [����]�������������� [����]ʥ������ [����]̫������Ҷ��Ҷ���������� [����]��Ԩ�������� [����]����������С�� ���� [����]���������ݸ� [����]��ǿװ�ƴ���ϵͳ̫�ϲ��� [����]������ֹ��������ĺ��˪ [����]����һ�������������������� [����]�������� [����]����֮������ ���� [����]���м�Ʒҽ��Ҷ������ѩ�������Ц [����]Ҷ������ѩ���Ц [����]�ۺ�����Ҷ������ȻҶ���� [����]���м�Ʒ��ҽҶ������ѩ�������Ц [����]����������Ī������Ϻ [����]���м�Ʒ��ҽҶ������ѩ���Ц ��Խ [��Խ]������ױ [��Խ]һƷ��������ɽ [��Խ]����2�̺����� [��Խ]�����۾�֪�� [��Խ]�ҵĹ����п������ [��Խ]���ƽ��������S ���� [����]ȫְ���������� [����]NBA:���ֺ����������켼������ [����]�������ǵ������������� [����]���򣺹��㿪��������Զ��ؽ��������� [����]ĥ�����󿳲˹�[�羺]�ַ��� [����]���ִ�峤�������� �ƻ� [�ƻ�]��ͥ��ʦBgͬ���ĺϼ���˱� [�ƻ�]ӣ���������ۺ�һһ [�ƻ�]���ڷ�������ɨ�����л���Ұ [�ƻ�]������Ͳ������ [�ƻ�]����Ҽ����ʦ [�ƻ�]��ӭ��������ֱ����ɣ�� search(); ��ҳ �ҵ���� �Ķ���¼ tj();"
+      },
+      "forms": [],
+      "searchInputs": [],
+      "searchAnchors": [],
+      "searchChecks": [
+        {
+          "route": "common-route",
+          "url": "https://m2.sywxs.cc/search?q=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 404,
+          "contentType": "text/html; charset=gb2312",
+          "title": "Error 404 - �Ҳ�����ҳ��!",
+          "containsKeyword": false,
+          "body": "Error 404 - �Ҳ�����ҳ��!",
+          "links": []
+        },
+        {
+          "route": "common-route",
+          "url": "https://m2.sywxs.cc/search?key=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 404,
+          "contentType": "text/html; charset=gb2312",
+          "title": "Error 404 - �Ҳ�����ҳ��!",
+          "containsKeyword": false,
+          "body": "Error 404 - �Ҳ�����ҳ��!",
+          "links": []
+        },
+        {
+          "route": "common-route",
+          "url": "https://m2.sywxs.cc/search?keyword=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 404,
+          "contentType": "text/html; charset=gb2312",
+          "title": "Error 404 - �Ҳ�����ҳ��!",
+          "containsKeyword": false,
+          "body": "Error 404 - �Ҳ�����ҳ��!",
+          "links": []
+        },
+        {
+          "route": "common-route",
+          "url": "https://m2.sywxs.cc/search/?q=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 404,
+          "contentType": "text/html; charset=gb2312",
+          "title": "Error 404 - �Ҳ�����ҳ��!",
+          "containsKeyword": false,
+          "body": "Error 404 - �Ҳ�����ҳ��!",
+          "links": []
+        },
+        {
+          "route": "common-route",
+          "url": "https://m2.sywxs.cc/search/?searchkey=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 404,
+          "contentType": "text/html; charset=gb2312",
+          "title": "Error 404 - �Ҳ�����ҳ��!",
+          "containsKeyword": false,
+          "body": "Error 404 - �Ҳ�����ҳ��!",
+          "links": []
+        },
+        {
+          "route": "common-route",
+          "url": "https://m2.sywxs.cc/search.html?keyword=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 404,
+          "contentType": "text/html; charset=gb2312",
+          "title": "Error 404 - �Ҳ�����ҳ��!",
+          "containsKeyword": false,
+          "body": "Error 404 - �Ҳ�����ҳ��!",
+          "links": []
+        },
+        {
+          "route": "common-route",
+          "url": "https://m2.sywxs.cc/so/search.php?q=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 404,
+          "contentType": "text/html; charset=gb2312",
+          "title": "Error 404 - �Ҳ�����ҳ��!",
+          "containsKeyword": false,
+          "body": "Error 404 - �Ҳ�����ҳ��!",
+          "links": []
+        },
+        {
+          "route": "common-route",
+          "url": "https://m2.sywxs.cc/search?name=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 404,
+          "contentType": "text/html; charset=gb2312",
+          "title": "Error 404 - �Ҳ�����ҳ��!",
+          "containsKeyword": false,
+          "body": "Error 404 - �Ҳ�����ҳ��!",
+          "links": []
+        }
+      ]
+    },
+    {
+      "name": "落霞小说/梦阮读书",
+      "base": "https://www.kunnu8.com/",
+      "home": {
+        "status": 200,
+        "url": "https://www.kunnu8.com/",
+        "contentType": "text/html; charset=UTF-8",
+        "title": "鲲弩小说 - 凡人修仙传、斗破苍穹、武动乾坤、绝世唐门小说在线阅读",
+        "body": "鲲弩小说 首页 世界名著 影视原著 悬疑推理 畅销文学 言情穿越 编辑精选 小提示： 微信扫一扫，不用关注也能看小说！（2016.2） 如何更好地使用我们的网站？（2015.6） function AutoScroll(obj){$(obj).find(\"ul:first\").animate({marginTop:\"-1.5em\"},500,function(){$(this).css({marginTop:\"0em\"}).find(\"li:first\").appendTo(this)})}$(document).ready(function(){setInterval('AutoScroll(\"#noteScroll\")',5000)}); TouchSlide({slideCell:\"#slideBox\",titCell:\".hd ul\",mainCell:\".bd ul\",effect:\"leftLoop\",autoPage:true,autoPlay:true}); 编辑推荐 鬼吹灯 悬疑探险/天下霸唱 盗墓笔记 悬疑探险/南派三叔 凡人修仙传 奇幻修真/忘语 斗罗大陆2绝世唐门 异界大陆/唐家三少 全职高手 电竞青春/蝴蝶蓝 诛仙 古典仙侠/萧鼎 热门： 坏小孩（隐秘的角落）紫金陈 人渣反派自救系统墨香铜臭 半生缘张爱玲 天官赐福墨香铜臭 山河表里Priest 我们正年轻刘静 魔道祖师墨香铜臭 少年的你，如此美丽玖月晞 亲爱的，热爱的墨宝非宝 镇魂Priest 全职高手蝴蝶蓝 2026 © 所有内容版权归版权方或原作者所有 / All contents are copyrighted by their respective owners or authors. $(document).ready(function(){$('#simple-menu').sidr({name:'sidr-right',side:'right',source:'#sform, #sidr'});$(\".menu li\").hover(function(){$(this).addClass(\"hover\");$(this).children(\"ul li\").attr('class','')},function(){$(this).removeClass(\"hover\");$(this).children(\"ul li\").attr('class','')});$(\".menu li.no_sub\").hover(function(){$(this).addClass(\"hover1\")},function(){$(this).removeClass(\"hover1\")})}); function b(){h=$(window).height();t=$(document).scrollTop();if(t>h){$('#gotop2').show()}else{$('#gotop2').hide()}}$(document).ready(function(e){b();$('#gotop2').click(function(){$('html,body').animate({scrollTop:'0px'},200)});$('#scrolltobt').click(function(){$('html,body').animate({scrollTop:$(\"#lxfoot\").offset().top},200)});$('#code').hover(function(){$(this).attr('id','code_hover');$('#code_img').show()},function(){$(this).attr('id','code');$('#code_img').hide()})});$(window).scroll(function(e){b()}); window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-KPWSJR"
+      },
+      "forms": [],
+      "searchInputs": [],
+      "searchAnchors": [],
+      "searchChecks": [
+        {
+          "route": "common-route",
+          "url": "https://www.kunnu8.com/search?q=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 404,
+          "contentType": "text/html; charset=UTF-8",
+          "title": "未找到页面 – 鲲弩小说",
+          "containsKeyword": false,
+          "body": "鲲弩小说 首页 世界名著 影视原著 悬疑推理 畅销文学 言情穿越 编辑精选 当前位置: 首页 > Error 404 - Not Found 落霞与孤鹜齐飞，秋水共长天一色… © 所有内容版权归版权方或原作者所有 / All contents are copyrighted by their respective owners or authors. $(document).ready(function(){$('#simple-menu').sidr({name:'sidr-right',side:'right',source:'#sform, #sidr'});$(\".menu li\").hover(function(){$(this).addClass(\"hover\");$(this).children(\"ul li\").attr('class','')},function(){$(this).removeClass(\"hover\");$(this).children(\"ul li\").attr('class','')});$(\".menu li.no_sub\").hover(function(){$(this).addClass(\"hover1\")},function(){$(this).removeClass(\"hover1\")})});$(document).ready(function(){$(\".bc-div span:nth-last-child(2)\").css(\"display\",\"none\");});$(document).ready(function(){if(window.location.href.indexOf(\"www.kunnu8.com\")>-1){$(\"#anti-trans\").css(\"display\",\"none\")}}); function b(){h=$(window).height();t=$(document).scrollTop();if(t>h){$('#gotop2').show()}else{$('#gotop2').hide()}}$(document).ready(function(e){b();$('#gotop2').click(function(){$('html,body').animate({scrollTop:'0px'},200)});$('#scrolltobt').click(function(){$('html,body').animate({scrollTop:$(\"#lxfoot\").offset().top},200)});$('#code').hover(function(){$(this).attr('id','code_hover');$('#code_img').show()},function(){$(this).attr('id','code');$('#code_img').hide()})});$(window).scroll(function(e){b()});",
+          "links": []
+        },
+        {
+          "route": "common-route",
+          "url": "https://www.kunnu8.com/search?key=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 404,
+          "contentType": "text/html; charset=UTF-8",
+          "title": "未找到页面 – 鲲弩小说",
+          "containsKeyword": false,
+          "body": "鲲弩小说 首页 世界名著 影视原著 悬疑推理 畅销文学 言情穿越 编辑精选 当前位置: 首页 > Error 404 - Not Found 落霞与孤鹜齐飞，秋水共长天一色… © 所有内容版权归版权方或原作者所有 / All contents are copyrighted by their respective owners or authors. $(document).ready(function(){$('#simple-menu').sidr({name:'sidr-right',side:'right',source:'#sform, #sidr'});$(\".menu li\").hover(function(){$(this).addClass(\"hover\");$(this).children(\"ul li\").attr('class','')},function(){$(this).removeClass(\"hover\");$(this).children(\"ul li\").attr('class','')});$(\".menu li.no_sub\").hover(function(){$(this).addClass(\"hover1\")},function(){$(this).removeClass(\"hover1\")})});$(document).ready(function(){$(\".bc-div span:nth-last-child(2)\").css(\"display\",\"none\");});$(document).ready(function(){if(window.location.href.indexOf(\"www.kunnu8.com\")>-1){$(\"#anti-trans\").css(\"display\",\"none\")}}); function b(){h=$(window).height();t=$(document).scrollTop();if(t>h){$('#gotop2').show()}else{$('#gotop2').hide()}}$(document).ready(function(e){b();$('#gotop2').click(function(){$('html,body').animate({scrollTop:'0px'},200)});$('#scrolltobt').click(function(){$('html,body').animate({scrollTop:$(\"#lxfoot\").offset().top},200)});$('#code').hover(function(){$(this).attr('id','code_hover');$('#code_img').show()},function(){$(this).attr('id','code');$('#code_img').hide()})});$(window).scroll(function(e){b()});",
+          "links": []
+        },
+        {
+          "route": "common-route",
+          "url": "https://www.kunnu8.com/search?keyword=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 404,
+          "contentType": "text/html; charset=UTF-8",
+          "title": "未找到页面 – 鲲弩小说",
+          "containsKeyword": false,
+          "body": "鲲弩小说 首页 世界名著 影视原著 悬疑推理 畅销文学 言情穿越 编辑精选 当前位置: 首页 > Error 404 - Not Found 落霞与孤鹜齐飞，秋水共长天一色… © 所有内容版权归版权方或原作者所有 / All contents are copyrighted by their respective owners or authors. $(document).ready(function(){$('#simple-menu').sidr({name:'sidr-right',side:'right',source:'#sform, #sidr'});$(\".menu li\").hover(function(){$(this).addClass(\"hover\");$(this).children(\"ul li\").attr('class','')},function(){$(this).removeClass(\"hover\");$(this).children(\"ul li\").attr('class','')});$(\".menu li.no_sub\").hover(function(){$(this).addClass(\"hover1\")},function(){$(this).removeClass(\"hover1\")})});$(document).ready(function(){$(\".bc-div span:nth-last-child(2)\").css(\"display\",\"none\");});$(document).ready(function(){if(window.location.href.indexOf(\"www.kunnu8.com\")>-1){$(\"#anti-trans\").css(\"display\",\"none\")}}); function b(){h=$(window).height();t=$(document).scrollTop();if(t>h){$('#gotop2').show()}else{$('#gotop2').hide()}}$(document).ready(function(e){b();$('#gotop2').click(function(){$('html,body').animate({scrollTop:'0px'},200)});$('#scrolltobt').click(function(){$('html,body').animate({scrollTop:$(\"#lxfoot\").offset().top},200)});$('#code').hover(function(){$(this).attr('id','code_hover');$('#code_img').show()},function(){$(this).attr('id','code');$('#code_img').hide()})});$(window).scroll(function(e){b()});",
+          "links": []
+        },
+        {
+          "route": "common-route",
+          "url": "https://www.kunnu8.com/search/?q=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 404,
+          "contentType": "text/html; charset=UTF-8",
+          "title": "未找到页面 – 鲲弩小说",
+          "containsKeyword": false,
+          "body": "鲲弩小说 首页 世界名著 影视原著 悬疑推理 畅销文学 言情穿越 编辑精选 当前位置: 首页 > Error 404 - Not Found 落霞与孤鹜齐飞，秋水共长天一色… © 所有内容版权归版权方或原作者所有 / All contents are copyrighted by their respective owners or authors. $(document).ready(function(){$('#simple-menu').sidr({name:'sidr-right',side:'right',source:'#sform, #sidr'});$(\".menu li\").hover(function(){$(this).addClass(\"hover\");$(this).children(\"ul li\").attr('class','')},function(){$(this).removeClass(\"hover\");$(this).children(\"ul li\").attr('class','')});$(\".menu li.no_sub\").hover(function(){$(this).addClass(\"hover1\")},function(){$(this).removeClass(\"hover1\")})});$(document).ready(function(){$(\".bc-div span:nth-last-child(2)\").css(\"display\",\"none\");});$(document).ready(function(){if(window.location.href.indexOf(\"www.kunnu8.com\")>-1){$(\"#anti-trans\").css(\"display\",\"none\")}}); function b(){h=$(window).height();t=$(document).scrollTop();if(t>h){$('#gotop2').show()}else{$('#gotop2').hide()}}$(document).ready(function(e){b();$('#gotop2').click(function(){$('html,body').animate({scrollTop:'0px'},200)});$('#scrolltobt').click(function(){$('html,body').animate({scrollTop:$(\"#lxfoot\").offset().top},200)});$('#code').hover(function(){$(this).attr('id','code_hover');$('#code_img').show()},function(){$(this).attr('id','code');$('#code_img').hide()})});$(window).scroll(function(e){b()});",
+          "links": []
+        },
+        {
+          "route": "common-route",
+          "url": "https://www.kunnu8.com/search/?searchkey=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 404,
+          "contentType": "text/html; charset=UTF-8",
+          "title": "未找到页面 – 鲲弩小说",
+          "containsKeyword": false,
+          "body": "鲲弩小说 首页 世界名著 影视原著 悬疑推理 畅销文学 言情穿越 编辑精选 当前位置: 首页 > Error 404 - Not Found 落霞与孤鹜齐飞，秋水共长天一色… © 所有内容版权归版权方或原作者所有 / All contents are copyrighted by their respective owners or authors. $(document).ready(function(){$('#simple-menu').sidr({name:'sidr-right',side:'right',source:'#sform, #sidr'});$(\".menu li\").hover(function(){$(this).addClass(\"hover\");$(this).children(\"ul li\").attr('class','')},function(){$(this).removeClass(\"hover\");$(this).children(\"ul li\").attr('class','')});$(\".menu li.no_sub\").hover(function(){$(this).addClass(\"hover1\")},function(){$(this).removeClass(\"hover1\")})});$(document).ready(function(){$(\".bc-div span:nth-last-child(2)\").css(\"display\",\"none\");});$(document).ready(function(){if(window.location.href.indexOf(\"www.kunnu8.com\")>-1){$(\"#anti-trans\").css(\"display\",\"none\")}}); function b(){h=$(window).height();t=$(document).scrollTop();if(t>h){$('#gotop2').show()}else{$('#gotop2').hide()}}$(document).ready(function(e){b();$('#gotop2').click(function(){$('html,body').animate({scrollTop:'0px'},200)});$('#scrolltobt').click(function(){$('html,body').animate({scrollTop:$(\"#lxfoot\").offset().top},200)});$('#code').hover(function(){$(this).attr('id','code_hover');$('#code_img').show()},function(){$(this).attr('id','code');$('#code_img').hide()})});$(window).scroll(function(e){b()});",
+          "links": []
+        },
+        {
+          "route": "common-route",
+          "url": "https://www.kunnu8.com/search.html?keyword=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 404,
+          "contentType": "text/html; charset=UTF-8",
+          "title": "未找到页面 – 鲲弩小说",
+          "containsKeyword": false,
+          "body": "鲲弩小说 首页 世界名著 影视原著 悬疑推理 畅销文学 言情穿越 编辑精选 当前位置: 首页 > Error 404 - Not Found 落霞与孤鹜齐飞，秋水共长天一色… © 所有内容版权归版权方或原作者所有 / All contents are copyrighted by their respective owners or authors. $(document).ready(function(){$('#simple-menu').sidr({name:'sidr-right',side:'right',source:'#sform, #sidr'});$(\".menu li\").hover(function(){$(this).addClass(\"hover\");$(this).children(\"ul li\").attr('class','')},function(){$(this).removeClass(\"hover\");$(this).children(\"ul li\").attr('class','')});$(\".menu li.no_sub\").hover(function(){$(this).addClass(\"hover1\")},function(){$(this).removeClass(\"hover1\")})});$(document).ready(function(){$(\".bc-div span:nth-last-child(2)\").css(\"display\",\"none\");});$(document).ready(function(){if(window.location.href.indexOf(\"www.kunnu8.com\")>-1){$(\"#anti-trans\").css(\"display\",\"none\")}}); function b(){h=$(window).height();t=$(document).scrollTop();if(t>h){$('#gotop2').show()}else{$('#gotop2').hide()}}$(document).ready(function(e){b();$('#gotop2').click(function(){$('html,body').animate({scrollTop:'0px'},200)});$('#scrolltobt').click(function(){$('html,body').animate({scrollTop:$(\"#lxfoot\").offset().top},200)});$('#code').hover(function(){$(this).attr('id','code_hover');$('#code_img').show()},function(){$(this).attr('id','code');$('#code_img').hide()})});$(window).scroll(function(e){b()});",
+          "links": []
+        },
+        {
+          "route": "common-route",
+          "url": "https://www.kunnu8.com/so/search.php?q=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 404,
+          "contentType": "text/html; charset=UTF-8",
+          "title": "未找到页面 – 鲲弩小说",
+          "containsKeyword": false,
+          "body": "鲲弩小说 首页 世界名著 影视原著 悬疑推理 畅销文学 言情穿越 编辑精选 当前位置: 首页 > Error 404 - Not Found 落霞与孤鹜齐飞，秋水共长天一色… © 所有内容版权归版权方或原作者所有 / All contents are copyrighted by their respective owners or authors. $(document).ready(function(){$('#simple-menu').sidr({name:'sidr-right',side:'right',source:'#sform, #sidr'});$(\".menu li\").hover(function(){$(this).addClass(\"hover\");$(this).children(\"ul li\").attr('class','')},function(){$(this).removeClass(\"hover\");$(this).children(\"ul li\").attr('class','')});$(\".menu li.no_sub\").hover(function(){$(this).addClass(\"hover1\")},function(){$(this).removeClass(\"hover1\")})});$(document).ready(function(){$(\".bc-div span:nth-last-child(2)\").css(\"display\",\"none\");});$(document).ready(function(){if(window.location.href.indexOf(\"www.kunnu8.com\")>-1){$(\"#anti-trans\").css(\"display\",\"none\")}}); function b(){h=$(window).height();t=$(document).scrollTop();if(t>h){$('#gotop2').show()}else{$('#gotop2').hide()}}$(document).ready(function(e){b();$('#gotop2').click(function(){$('html,body').animate({scrollTop:'0px'},200)});$('#scrolltobt').click(function(){$('html,body').animate({scrollTop:$(\"#lxfoot\").offset().top},200)});$('#code').hover(function(){$(this).attr('id','code_hover');$('#code_img').show()},function(){$(this).attr('id','code');$('#code_img').hide()})});$(window).scroll(function(e){b()});",
+          "links": []
+        },
+        {
+          "route": "common-route",
+          "url": "https://www.kunnu8.com/indb/3855.htm",
+          "status": 200,
+          "contentType": "text/html; charset=UTF-8",
+          "title": "斗罗大陆II绝世唐门 - 互联网小说资料库（INDb）- 鲲弩小说",
+          "containsKeyword": true,
+          "body": "鲲弩小说 首页 世界名著 影视原著 悬疑推理 畅销文学 言情穿越 编辑精选 当前位置： 鲲弩小说 > 小说资料库>玄幻 > 斗罗大陆II绝世唐门 作者：唐家三少 类型：异界大陆 首发时间：2012年11月13日 完结时间：正在更新 在线阅读：斗罗大陆II绝世唐门 官方网站：斗罗大陆II绝世唐门 这里没有魔法，没有斗气，没有武术，却有武魂。唐门创立万年之后的斗罗大陆上，唐门式微。一代天骄横空出世，新一代史莱克七怪能否重振唐门，谱写一曲绝世唐门之歌？ 百万年魂兽，手握日月摘星辰的死灵圣法神，导致唐门衰落的全新魂导器体系。一切的神奇都将一一展现。 唐门暗器能否重振雄风，唐门能否重现辉煌，一切尽在绝世唐门！ 上一本：完美世界 换一本：大主宰 共 2 条评论 中二斗罗说道： 2020-05-01 22:20 你们是怎么来的，手握日月摘星辰的法师……我怎么记得在三少的神印王座里面有一个死灵法师…… 匿名说道： 2024-02-24 16:48 6批u储蓄罐吃吃吃西瓜此次歌词唱歌唱歌 评论被关闭了！ © 所有内容版权归版权方或原作者所有 / All contents are copyrighted by their respective owners or authors. $(document).ready(function(){$('#simple-menu').sidr({name:'sidr-right',side:'right',source:'#sform, #sidr'});$(\".menu li\").hover(function(){$(this).addClass(\"hover\");$(this).children(\"ul li\").attr('class','')},function(){$(this).removeClass(\"hover\");$(this).children(\"ul li\").attr('class','')});$(\".menu li.no_sub\").hover(function(){$(this).addClass(\"hover1\")},function(){$(this).removeClass(\"hover1\")})});$(document).ready(function(){$(\".bc-div span:nth-last-child(2)\").css(\"display\",\"none\");});$(document).ready(function(){if(window.location.href.indexOf(\"www.kunnu8.com\")>-1){$(\"#anti-trans\").css(\"display\",\"none\")}}); function b(){h=$(window).height();t=$(document).scrollTop();if(t>h){$('#gotop2').show()}else{$('#gotop2').hide()}}$(document).ready(function(e){b();$('#gotop2').click(function(){$('html,body').animate({scrollTop:'0px'},200)});$('#scrolltobt').click(function(){$('html,body').animate({scrollTop:$(\"#lxfoot\").offset().top},200)});$('#code').hover(function(){$(this).attr('id','code_hover');$('#code_img').show()},function(){$(this).attr('id','code');$('#code_img').hide()})});$(window).scroll(function(e){b()}); window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-",
+          "links": [
+            {
+              "text": "完美世界",
+              "href": "https://www.kunnu8.com/indb/3830.htm"
+            },
+            {
+              "text": "大主宰",
+              "href": "https://www.kunnu8.com/indb/3858.htm"
+            },
+            {
+              "text": "2020-05-01 22:20",
+              "href": "https://www.kunnu8.com/indb/3855.htm/#comment-680269"
+            },
+            {
+              "text": "2024-02-24 16:48",
+              "href": "https://www.kunnu8.com/indb/3855.htm/#comment-893792"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "格格党",
+      "base": "https://www.rdqsdy.cc/",
+      "home": {
+        "status": 200,
+        "url": "https://www.rdqsdy.cc/",
+        "contentType": "text/html; charset=utf-8",
+        "title": "格格党_书友最值得收藏的网络小说阅读网",
+        "body": "格格党 www.rdqsdy.cc search(); 首页 书库 完本 足迹 首页 玄幻 武侠 都市 历史 科幻 游戏 其他 大神小说 都市 / 连载夜无疆 那一天太阳落下再也没有升起…… 辰东330万字4个月前都市 / 连载捞尸人 人知鬼恐怖，鬼晓人心毒。这是一本传统灵异小说。 纯洁滴小龙352万字2025-08-29武侠 / 连载没钱修什么仙？ 老者：“你想报仇？”少年：“我被强者反复侮辱，被师尊视为垃圾，我怎么可能不想报仇？”老者摸了摸少年的脑袋，叹道：“好孩子，我来传功给你吧。”少年惊道：“前辈！这怎么行？”老者伸出手：“把你手机给我。.. 熊狼狗239万字2025-08-29都市 / 连载异度旅社 在日常之下，在理性尽头，在你所熟悉的世界之外——是你从未想象过的风景。当于生第一次打开那扇门的时候，他所熟悉的世界便轰然倒塌。而那直抵世界根源的“真相”，扑面而来。 远瞳98万字2025-03-01其他 / 连载御兽从零分开始 睁开眼，乔桑发现自己穿成了初中生。紧接着来了一场模拟考。985毕业她怕了吗？她怕了……这考的都什么啊！臭臭鳅的最终进化形态叫什么？人类已移民的星球都有哪些？…………欢迎来到御兽世界。 御兽从零分开始 给我加葱1319万字2025-01-28都市 / 连载退下，让朕来 沈棠在发配路上醒来，发现这个世界很不科学。天降神石，百国相争。文凝文心，出口成真。武聚武胆，劈山断海。她以为的小白脸，一句“横枪跃马”，下一秒甲胄附身，长枪在手，一人成军，千军万马能杀个七进七出！她眼里的痨病鬼，口念“星罗棋布”，苍天如圆盖，陆地似棋局，排兵布阵，信手拈来！这TM都不能算不科学了！分明是科学的棺材板... 退下，让朕来 油爆香菇653万字2024-12-12 热门小说 庶兄太子姑娘 当龙傲天变成金手指[快穿]林清晨 魔尊整日沉迷师徒扮演洛泽潼 江澜十三州奎尼树 请吻我黑白集 相贴的掌纹要文荒了 R27短篇合集星状雪兔子 指挥官：可以揍我，但先贴贴肖小肖 六零年代的悠闲日常豆齐齐 [家教R27]未完成的约定星状雪兔子 归槿半池墨浅 不良御姐fly文 玄幻魔法 我在诡谲世界经营道观 / 廿四龙井 诡谲出现世间。邪祟妖魔遍地，魑魅魍魉丛生。无论是谁，只要跌入诡谲世界。都只能在其中苦苦挣扎，寻求生机。可当池乐踏入诡谲世界。【获得来自村民的虔诚叩拜，香火+1】【是否消耗香火，敕令仙神？】「长溪村土地，悉听尊便。」「雷部三十六将，愿听指使。」「你有三分修持，我有七分感应……」当诡谲世界融入现实，世间陷入绝望之际。一座道观自迷雾内显现。什么邪祟妖魔，诡谲魍魉。就决定是你了！当世人呼喊你名字的那一刻 边陲领主：我 / 山桃瓜子 冰与火：从绝 / 四月廿九z 开局押镖，获 / 刀剑神龙 御兽：我有独 / 礼木渔 武圣，从替嫁 / 兰亭枕戈 神话生物攻略 / 谁能比我逆天 苟在仙武乱世 / 诸葛连环炮 巫师：从埋尸 / 冰激凌战车 肉身成圣从八 / 爱咬人的鲨鱼 我以民俗镇物 / 升鸣 鼠人会梦到精 / 得德地的 我靠百吨王武 / 2026撞大运 武侠修真 修仙，我有一块职业面板 / 孤灯残雪 「自打我修炼开始，每天都听到你们说这个天才那个数值的，怎么我修炼这么久了，一个都没见过？」林云看着自己的职业面板，奇怪道。…………一觉醒来，林云成了落云坊一个孤儿散修，身无分文还欠了一笔巨款，幸好有随身而来的职业面板帮助。从提升修行速度的【道童】，到身化万千大道的【道尊】。从提升画符成功率的【制符学徒】，到一笔一划分割天地的【神符师】。从提高施法威力的【术法学徒】，到手握道之变化的【万法道君】。 本王才是蛇妖 / 登仙长安 临圣 / 卖报小郎君 仙子，你管这 / 泸溪洲 众妙之主 / 乎乎大睡 禁仙！ / 造化斋主 绑定天才后， / 囫囵吞的枣 先秦神话：从 / 阿九在思考 大道死去之后 / 南瞻台 凡人：宋玉仙 / 陌路小书生 修仙：我以灵 / 两只羊羊羊 我以雷法证长 / 中天紫薇大帝 炼体长生，从 / 春风十里州 都市言情 千手扉间今天也在改变忍界 / 我不想做人啦 穿越成千手扉间。右手发展科技，左手研发忍术。将两种力量紧密的结合在一起，就足以在这个忍界爆发出最璀璨的光芒。当大筒木母星派遣族人降临地球，妄图收割一切查克拉，成为自己的食粮。身穿查克拉动"
+      },
+      "forms": [],
+      "searchInputs": [],
+      "searchAnchors": [],
+      "searchChecks": [
+        {
+          "route": "common-route",
+          "url": "https://www.rdqsdy.cc/search?q=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "title": "",
+          "containsKeyword": false,
+          "body": "",
+          "links": []
+        },
+        {
+          "route": "common-route",
+          "url": "https://www.rdqsdy.cc/search?key=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "title": "",
+          "containsKeyword": false,
+          "body": "",
+          "links": []
+        },
+        {
+          "route": "common-route",
+          "url": "https://www.rdqsdy.cc/search?keyword=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "title": "",
+          "containsKeyword": false,
+          "body": "",
+          "links": []
+        },
+        {
+          "route": "common-route",
+          "url": "https://www.rdqsdy.cc/search/?q=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "title": "",
+          "containsKeyword": false,
+          "body": "",
+          "links": []
+        },
+        {
+          "route": "common-route",
+          "url": "https://www.rdqsdy.cc/search/?searchkey=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "title": "",
+          "containsKeyword": false,
+          "body": "",
+          "links": []
+        },
+        {
+          "route": "common-route",
+          "url": "https://www.rdqsdy.cc/search.html?keyword=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 404,
+          "contentType": "text/html",
+          "title": "404 Not Found",
+          "containsKeyword": false,
+          "body": "404 Not Found nginx",
+          "links": []
+        },
+        {
+          "route": "common-route",
+          "url": "https://www.rdqsdy.cc/so/search.php?q=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 404,
+          "contentType": "text/html",
+          "title": "404 Not Found",
+          "containsKeyword": false,
+          "body": "404 Not Found nginx",
+          "links": []
+        },
+        {
+          "route": "common-route",
+          "url": "https://www.rdqsdy.cc/search?name=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "title": "",
+          "containsKeyword": false,
+          "body": "",
+          "links": []
+        }
+      ]
+    },
+    {
+      "name": "闪舞小说",
+      "base": "https://www.35xss.net/",
+      "home": {
+        "status": 200,
+        "url": "https://www.35xss.net/",
+        "contentType": "text/html; charset=utf-8",
+        "title": "闪舞小说网_最好的无广告小说阅读网_新闪舞小说网(35xss.net)",
+        "body": "首页 书库 热门榜 推荐榜 收藏榜 连载榜 完结榜 login(); 闪舞小说网35xss.net search('/search.html'); TOP榜写作榜手机小说 最近更新新书入库全部小说 小说首页 玄幻 武侠 都市 历史 游戏 科幻 恐怖 其他 古代 现代 幻想 游戏 浪漫 言情 科幻 其他 破金我被骗到缅北的那些年 你以为缅北是遍地黄金，能躺着挣钱的天堂？不，这里是水深火热的人间炼狱！电棍殴打、拔牙断指，只是家常便饭的小儿科…… 你以为这里只是人间炼狱？不，这里还是知识的海洋！金融货币、美容瑜伽，你都要从零开始学习！因为在这里，你不再是你，你是一个面容姣好，从事金融工作的优质白领女性！而这，只是你千百个身份的其 天天不休狂狮少帅 94年的夏天，米尔沃尔青年军在少帅奥德里奇率领下势要改写百年无冠的历史。 那一抹狂狮的深蓝，立志席卷欧洲...... 夜十三特种兵在都市 杨洛曾经是一名让所有国家军人闻名丧胆的兵王,他是地下世界大名鼎鼎的杀手法官,他是世界医学界里天才医生,他掌握着神秘组织高买.他性格嚣张狂妄,为达目的不折手段.在这繁华的都市,杨洛上演了一场激情四射的热血人生. 流年非水中场统治者 这是一个天使和魔鬼赋予一身的人，从少年到现在。无论在哪里，他都意味着天才和胜利，也意味着狂放不羁和惹事生非。---------------摘自2019年《法国足球》绝对巨星PS:已有完本著作《最强边锋》370万字，人品保证，放心收藏！ 经典推荐 [都市]重生香江之1978蜜汁鸡翅膀 [历史]穷鬼的上下两千年非玩家角色 [幻想]AA互撩笔记我选择猫车 [游戏]我有无限掠夺加速系统猪肉乱炖 [都市]透视小神医黑咖啡 [武侠]烂柯棋缘真费事 [恐怖]我的治愈系游戏我会修空调 [玄幻]全球游戏化：神级内测玩家相思洗红豆 [其他]种菜骷髅的异域开荒情终流水 总点击 圣墟 在破败中崛起，在寂灭中复苏。 沧海成尘，雷电枯竭，那一缕幽雾又一次临近大地，世间的枷锁被打开了，一个全新的世界就此揭开神秘的一角…… 吕布的人生模拟器/会说话的胡子 妙手生香/董无渊 武动乾坤/天蚕土豆 完美世界/辰东 我的细胞监狱/穿黄衣的阿肥 娱乐之全能老爸/翻身的咸鱼 痛仰/黄三_ 白杨往事/长宇宙 当满级大佬翻车以后/纳兰闲 诛仙/萧鼎 玄界之门/忘语 穿书修仙后女配她开挂了/缘.梦. 总推荐 玄清卫 靖旧朝，邪祟鬼怪横行，设玄清卫监察天下，锄奸斩恶、诛邪扶道。 沈浩穿越到这里，用了四年才从玄清卫里一名普通士卒爬到小旗的位置，但凭他的背景想再进一步几乎没有可能。 有一天，他忽然发现自己身体里有条龙，一条以生魂仙魄为食的万龙之祖！每当斩杀了敌人，这条龙就会跳出来诱导他吞噬掉对方的魂魄或者妖丹邪核，连 开局一元秒杀满级拔刀术/林中小木屋 我是一条龙/柳岸花又明 无敌储物戒/明日复明日 全球游戏化：神级内测玩家/相思洗红豆 烂柯棋缘/真费事 勇士教父/劳歌行舟 修仙就是这样子的/凤嘲凰 龙族：从战锤归来的路明非/白色圣堂 完美世界/辰东 陛下因何造反/任国成 母星瞒着我们偷偷化形了/秦不让 我的治愈系游戏/我会修空调 总收藏 大时代从1983开始 1983年，这一年中秋的月饼很贵，不但要排队，还要票。 中秋这天，重生的白昊醒来。 人生最大的乐趣在于，你垄断我自产，你禁运我外销。 白昊的小车间，本着不申请专利、不发表论文、不接受交流参观的三不原则，隐藏在芸芸人海中。 超品渔夫/季小爵爷 宅在随身空间/明渐 我的医术能加经验值/江边鱼翁 机动风暴/骷髅精灵 凡人修仙之仙界篇/忘语 重生之实业巨头/水下野鱼 夜的命名术/会说话的肘子 重生：话说1984/蚊香升起 完美世界/辰东 武动乾坤/天蚕土豆 催妆/西子情 我只想安静地打游戏/十二翼黑暗炽天使 玄幻奇幻 盘龙 大小的血睛鬃毛狮，力大无穷的紫睛金毛猿，毁天灭地的九头蛇皇，携带着毁灭雷电的恐怖雷龙……这里无奇不有，这是一个广博的魔幻世界。强者可以站在黑色巨龙的头顶遨游天际，恐怖的魔法可以焚烧江河，可以毁灭城池，可以夷平山岳…… 这本书，讲述了一个拥有‘盘龙戒指’的少年的梦幻旅程。 紫阳/风御九秋 道诡异仙/狐尾的笔 魔龙翻天/腐尸鳄 无敌从献祭祖师爷开始/夏君吉 我在少林签到万年/森萝万象 雪鹰领主/我吃西红柿 大隋天帝传/九尾精灵"
+      },
+      "forms": [],
+      "searchInputs": [],
+      "searchAnchors": [],
+      "searchChecks": [
+        {
+          "route": "common-route",
+          "url": "https://www.35xss.net/search?q=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 404,
+          "contentType": "text/html; charset=utf-8",
+          "title": "出错啦！您访问的页面已丢失，但希望永远都在。",
+          "containsKeyword": false,
+          "body": "首页 书库 热门榜 推荐榜 收藏榜 连载榜 完结榜 login(); 闪舞小说网35xss.net search('/search.html'); TOP榜写作榜手机小说 最近更新新书入库全部小说 小说首页 玄幻 武侠 都市 历史 游戏 科幻 恐怖 其他 古代 现代 幻想 游戏 浪漫 言情 科幻 其他 亲！你所请求的页面已转移,↓请重新搜索↓... 或推荐阅读以下小说！！ 总点击 遮天 冰冷与黑暗并存的宇宙深处，九具庞大的龙尸拉着一口青铜古棺，亘古长存。 这是太空探测器在枯寂的宇宙中捕捉到的一幅极其震撼的画面。 九龙拉棺，究竟是回到了上古，还是来到了星空的彼岸？ 一个浩大的仙侠世界，光怪陆离，神秘无尽。热血似火山沸腾，激情若瀚海汹涌，欲望如深渊无止境…… 登天路，踏歌行，弹指遮天。 特种兵在都市/夜十三 死人经/冰临神下 重生之锦绣嫡女/醉疯魔 巨龙王座/焰闪 天才萌宝：给娘亲找个相公/莫非雨 硅谷大帝/百刹 绝密勘探/夜的第七章 修真归来在都市/陌路行 琥珀之剑/绯炎 回到晚清的特种狙击手/东一方 末世无限吞噬/风雨神话 庶子无敌/上汤豆苗 我忽悠着圣光/我忽悠着圣光 田园大唐/田园如梦 我的1979/争斤论两花花帽 凡人修仙传/忘语 福至农家/绝色清粥 帝国苍穹/天空之承 我是何塞/郭怒 星际争霸：泰伦帝国/楠木笔芯 总推荐 完美世界 一粒尘可填海，一根草斩尽日月星辰，弹指间天翻地覆。 群雄并起，万族林立，诸圣争霸，乱天动地。问苍茫大地，谁主沉浮？！ 一个少年从大荒中走出，一切从这里开始…… 玄清卫/剑如蛟 洪荒：我是东王公/蒙山夜校 四爷的心尖宠妃/雪中回眸 我的葡萄牙帝国/向淮子 重生之巨变/永远的大洋芋 都市剑说/华表 娇娘医经/希行 斗破苍穹/天蚕土豆 捡漏/金元宝本尊 逆天透视眼/红烧茄子煲 末世之开局创造僵尸/飞奔的兔子 我只想安静地打游戏/十二翼黑暗炽天使 让你代管艺人，怎么全成巨星了/一剪清风 无敌储物戒/明日复明日 种菜骷髅的异域开荒/情终流水 莽荒纪/我吃西红柿 海岛渔场/胖胖的肉粽子 缺氧时代/织朱 透视邪医混花都/徐幻 黄金渔场/全金属弹壳 总收藏 宅在随身空间 天明有个神秘空间别人在空间里种地、养狗、养鱼他在里面睡觉、网聊、闲逛，偶尔写写小说别人满世界卖有机食品，赚了几十亿、上百亿他说，有了小空间，房、车都不用买了，还赚那么多钱干嘛？你们难道不知道，赚钱是个很累的过程么？总之，本书讲的是一个胸无大志的宅男，获得神秘小空间后的故事…… 四合院：逍遥人生/鹦鹉学说话 重生：话说1984/蚊香升起 外科教父/海与夏 起航1992/千年静守 大奉打更人/卖报小郎君 机动风暴/骷髅精灵 完美世界/辰东 嫡谋/面北眉南 谍海王者/淡淡的平常者 武动乾坤/天蚕土豆 超品渔夫/季小爵爷 勇士教父/劳歌行舟 天道图书馆/横扫天涯 吞噬星空/我吃西红柿 夜的命名术/会说话的肘子 种菜骷髅的异域开荒/情终流水 规则系学霸/不吃小南瓜 圣墟/辰东 重生之向老实人宣战/法学院新生 当医生开了外挂/手握寸关尺 最新更新 长生修仙，从画符开始 【凡人流、熟练度、稳健、三观正常】 林长安穿越仙侠世界，成为一名仙门落选的散修。 苦修二十载，心灰意冷准备返回凡俗享受人间富贵时，觉醒了熟练度面板。 只要用心勤学苦练，努力必有所成。 一证永证！ 从现在开始，他便是画符宗师。 …… “修仙界，灵根虽差，但亦有修仙百艺，这个悟字不知造就了多少传奇修士， 我真没想当武林盟主/封七月 继承道观，开局武媚娘来上香/馋嘴小猫咪 斗罗之帝剑斗罗/薪火传道 大明第一国舅/黑胖的老鼠 穿越庆余年：剧情被我玩坏了/冥界的风 凡人：从游戏商城开始/墨子空空 从影视世界学习技能/三轮大叔 四合院：农场主的幸福生活/砂糖橘呀 野性时代：我在八零当乘警/森外 1987我的年代/三月麻竹 九龙夺嫡，我真不想当太子/三山风 骂我朝廷鹰犬？我乃大秦武圣！/我不是小号 华娱：从香江2008开始/我是宅男 港流皇帝/任猪飞 我在西游卖藏宝图/民俗不俗 宇智波：我真不是大孝子/魂在刀亦在 魔王大人深不可测/晨星LL 重生：我老婆是天后/叔叔请放开我 黑科技创业：我真是造手机的啊！/宅系阿川 喧嚣未及之处/沉默的爱 最新入库 华娱：从花千骨开始躺赢 【2014年，流量狂潮席卷华娱】 【",
+          "links": [
+            {
+              "text": "连载榜",
+              "href": "/sort.html"
+            },
+            {
+              "text": "遮天",
+              "href": "/2029/"
+            },
+            {
+              "text": "特种兵在都市",
+              "href": "/79327/"
+            },
+            {
+              "text": "死人经",
+              "href": "/8610/"
+            },
+            {
+              "text": "重生之锦绣嫡女",
+              "href": "/15043/"
+            },
+            {
+              "text": "巨龙王座",
+              "href": "/98251/"
+            },
+            {
+              "text": "天才萌宝：给娘亲找个相公",
+              "href": "/81923/"
+            },
+            {
+              "text": "硅谷大帝",
+              "href": "/104419/"
+            },
+            {
+              "text": "绝密勘探",
+              "href": "/106163/"
+            },
+            {
+              "text": "修真归来在都市",
+              "href": "/11974/"
+            },
+            {
+              "text": "琥珀之剑",
+              "href": "/77724/"
+            },
+            {
+              "text": "回到晚清的特种狙击手",
+              "href": "/89404/"
+            },
+            {
+              "text": "末世无限吞噬",
+              "href": "/88437/"
+            },
+            {
+              "text": "庶子无敌",
+              "href": "/19050/"
+            },
+            {
+              "text": "我忽悠着圣光",
+              "href": "/105909/"
+            },
+            {
+              "text": "田园大唐",
+              "href": "/79370/"
+            },
+            {
+              "text": "我的1979",
+              "href": "/10645/"
+            },
+            {
+              "text": "凡人修仙传",
+              "href": "/1880/"
+            }
+          ]
+        },
+        {
+          "route": "common-route",
+          "url": "https://www.35xss.net/search?key=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 404,
+          "contentType": "text/html; charset=utf-8",
+          "title": "出错啦！您访问的页面已丢失，但希望永远都在。",
+          "containsKeyword": false,
+          "body": "首页 书库 热门榜 推荐榜 收藏榜 连载榜 完结榜 login(); 闪舞小说网35xss.net search('/search.html'); TOP榜写作榜手机小说 最近更新新书入库全部小说 小说首页 玄幻 武侠 都市 历史 游戏 科幻 恐怖 其他 古代 现代 幻想 游戏 浪漫 言情 科幻 其他 亲！你所请求的页面已转移,↓请重新搜索↓... 或推荐阅读以下小说！！ 总点击 遮天 冰冷与黑暗并存的宇宙深处，九具庞大的龙尸拉着一口青铜古棺，亘古长存。 这是太空探测器在枯寂的宇宙中捕捉到的一幅极其震撼的画面。 九龙拉棺，究竟是回到了上古，还是来到了星空的彼岸？ 一个浩大的仙侠世界，光怪陆离，神秘无尽。热血似火山沸腾，激情若瀚海汹涌，欲望如深渊无止境…… 登天路，踏歌行，弹指遮天。 硅谷大帝/百刹 末世无限吞噬/风雨神话 田园大唐/田园如梦 巨龙王座/焰闪 穿成黑化男主的白月光/来瓶旺仔牛奶 金枝/面北眉南 琥珀之剑/绯炎 修真归来在都市/陌路行 血战旗/水鬼游魂 武破九霄/花颜 九魂之印/青山失魂 狂狮少帅/天天不休 宿主她甜入心扉/难赴星河 星际争霸：泰伦帝国/楠木笔芯 帝国苍穹/天空之承 放开那个女巫/二目 我欲封天/耳根 黑铁之堡/醉虎 修仙/秣陵别雪 绝密勘探/夜的第七章 总推荐 完美世界 一粒尘可填海，一根草斩尽日月星辰，弹指间天翻地覆。 群雄并起，万族林立，诸圣争霸，乱天动地。问苍茫大地，谁主沉浮？！ 一个少年从大荒中走出，一切从这里开始…… 脑海里飘来一座废品收购站/鬼谷仙师 我有无限掠夺加速系统/猪肉乱炖 玄清卫/剑如蛟 这个领主大人非常科学/小白白的 透视邪医混花都/徐幻 我的葡萄牙帝国/向淮子 逆天透视眼/红烧茄子煲 全球游戏化：神级内测玩家/相思洗红豆 末世之开局创造僵尸/飞奔的兔子 种菜骷髅的异域开荒/情终流水 随身带着未来空间/子云非云 都市剑说/华表 无敌储物戒/明日复明日 这个穿越有点早/青铜老五 重生香江之1978/蜜汁鸡翅膀 AA互撩笔记/我选择猫车 透视小神医/黑咖啡 四爷的心尖宠妃/雪中回眸 陛下因何造反/任国成 这个外挂过于中二/鱼狱圄 总收藏 我的医术能加经验值 实习医生周灿正对着一块猪皮练习缝合。 【恭喜你完成十万次缝合，触发经验值系统。】 【缝合经验值+0.1。当前经验值9.9/10。缝合能力实习优秀水平。】 一位外科圣手，正在悄悄崛起。 规则系学霸/不吃小南瓜 完美世界/辰东 机动风暴/骷髅精灵 让你当兵戒网瘾，你成军官了/特种兵歌 凡人修仙传/忘语 我只想安静地打游戏/十二翼黑暗炽天使 四合院：逍遥人生/鹦鹉学说话 嫡谋/面北眉南 遮天/辰东 这个医生不缺钱/田间野鼠 外科教父/海与夏 我的治愈系游戏/我会修空调 穷鬼的上下两千年/非玩家角色 我在聊天群模拟长生路/嫩菱如梦 这个医生很稳健/公子骑猪 催妆/西子情 这主播真狗，挣够200就下播/吉牛 我真的只是想赚钱啊/低调有钱人 超品渔夫/季小爵爷 美食供应商/会做菜的猫 最新更新 长生修仙，从画符开始 【凡人流、熟练度、稳健、三观正常】 林长安穿越仙侠世界，成为一名仙门落选的散修。 苦修二十载，心灰意冷准备返回凡俗享受人间富贵时，觉醒了熟练度面板。 只要用心勤学苦练，努力必有所成。 一证永证！ 从现在开始，他便是画符宗师。 …… “修仙界，灵根虽差，但亦有修仙百艺，这个悟字不知造就了多少传奇修士， 我真没想当武林盟主/封七月 继承道观，开局武媚娘来上香/馋嘴小猫咪 斗罗之帝剑斗罗/薪火传道 大明第一国舅/黑胖的老鼠 穿越庆余年：剧情被我玩坏了/冥界的风 凡人：从游戏商城开始/墨子空空 从影视世界学习技能/三轮大叔 四合院：农场主的幸福生活/砂糖橘呀 野性时代：我在八零当乘警/森外 1987我的年代/三月麻竹 九龙夺嫡，我真不想当太子/三山风 骂我朝廷鹰犬？我乃大秦武圣！/我不是小号 华娱：从香江2008开始/我是宅男 港流皇帝/任猪飞 我在西游卖藏宝图/民俗不俗 宇智波：我真不是大孝子/魂在刀亦在 魔王大人深不可测/晨星LL 重生：我老婆是天后/叔叔请放开我 黑科技创业：我真是造手机的啊！/宅系阿川 喧嚣未及之处/沉默的爱 最新入库 华娱：从花千骨开始躺赢 【2014年，流量狂潮席卷华娱】 【上市公司收入不及流量艺人一年收入】 崔",
+          "links": [
+            {
+              "text": "连载榜",
+              "href": "/sort.html"
+            },
+            {
+              "text": "遮天",
+              "href": "/2029/"
+            },
+            {
+              "text": "硅谷大帝",
+              "href": "/104419/"
+            },
+            {
+              "text": "末世无限吞噬",
+              "href": "/88437/"
+            },
+            {
+              "text": "田园大唐",
+              "href": "/79370/"
+            },
+            {
+              "text": "巨龙王座",
+              "href": "/98251/"
+            },
+            {
+              "text": "穿成黑化男主的白月光",
+              "href": "/15526/"
+            },
+            {
+              "text": "金枝",
+              "href": "/8353/"
+            },
+            {
+              "text": "琥珀之剑",
+              "href": "/77724/"
+            },
+            {
+              "text": "修真归来在都市",
+              "href": "/11974/"
+            },
+            {
+              "text": "血战旗",
+              "href": "/97801/"
+            },
+            {
+              "text": "武破九霄",
+              "href": "/71836/"
+            },
+            {
+              "text": "九魂之印",
+              "href": "/103906/"
+            },
+            {
+              "text": "狂狮少帅",
+              "href": "/72405/"
+            },
+            {
+              "text": "宿主她甜入心扉",
+              "href": "/6295/"
+            },
+            {
+              "text": "星际争霸：泰伦帝国",
+              "href": "/8670/"
+            },
+            {
+              "text": "帝国苍穹",
+              "href": "/84820/"
+            },
+            {
+              "text": "放开那个女巫",
+              "href": "/1100/"
+            }
+          ]
+        },
+        {
+          "route": "common-route",
+          "url": "https://www.35xss.net/search?keyword=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 404,
+          "contentType": "text/html; charset=utf-8",
+          "title": "出错啦！您访问的页面已丢失，但希望永远都在。",
+          "containsKeyword": false,
+          "body": "首页 书库 热门榜 推荐榜 收藏榜 连载榜 完结榜 login(); 闪舞小说网35xss.net search('/search.html'); TOP榜写作榜手机小说 最近更新新书入库全部小说 小说首页 玄幻 武侠 都市 历史 游戏 科幻 恐怖 其他 古代 现代 幻想 游戏 浪漫 言情 科幻 其他 亲！你所请求的页面已转移,↓请重新搜索↓... 或推荐阅读以下小说！！ 总点击 遮天 冰冷与黑暗并存的宇宙深处，九具庞大的龙尸拉着一口青铜古棺，亘古长存。 这是太空探测器在枯寂的宇宙中捕捉到的一幅极其震撼的画面。 九龙拉棺，究竟是回到了上古，还是来到了星空的彼岸？ 一个浩大的仙侠世界，光怪陆离，神秘无尽。热血似火山沸腾，激情若瀚海汹涌，欲望如深渊无止境…… 登天路，踏歌行，弹指遮天。 琥珀之剑/绯炎 回到三国打天下/天翔 我的1979/争斤论两花花帽 我忽悠着圣光/我忽悠着圣光 绝密勘探/夜的第七章 田园大唐/田园如梦 狂狮少帅/天天不休 天才萌宝：给娘亲找个相公/莫非雨 火中金莲/老衲不能吃素 天才小毒妃/芥沫 神兵天下/白袍藏刀 放开那个女巫/二目 纨绔弃少/紫墨星辰 福至农家/绝色清粥 黑铁之堡/醉虎 庶子无敌/上汤豆苗 穿成黑化男主的白月光/来瓶旺仔牛奶 星际争霸：泰伦帝国/楠木笔芯 凡人修仙传/忘语 宿主她甜入心扉/难赴星河 总推荐 完美世界 一粒尘可填海，一根草斩尽日月星辰，弹指间天翻地覆。 群雄并起，万族林立，诸圣争霸，乱天动地。问苍茫大地，谁主沉浮？！ 一个少年从大荒中走出，一切从这里开始…… 烂柯棋缘/真费事 莽荒纪/我吃西红柿 陛下因何造反/任国成 凡人修仙传/忘语 重塑千禧年代/渔雪 逆天透视眼/红烧茄子煲 遮天/辰东 影视世界学才艺/寸夕日 玄清卫/剑如蛟 全球游戏化：神级内测玩家/相思洗红豆 母星瞒着我们偷偷化形了/秦不让 透视小神医/黑咖啡 缺氧时代/织朱 脑海里飘来一座废品收购站/鬼谷仙师 海岛渔场/胖胖的肉粽子 我只想安静地打游戏/十二翼黑暗炽天使 黄金渔场/全金属弹壳 都市剑说/华表 重生之巨变/永远的大洋芋 透视邪医混花都/徐幻 总收藏 从作曲人到文娱巨星 王轩穿越了。 上一世，影视歌曲综艺...遍地开花，巅峰未至便火爆半边天，可一场车祸却把他的舞台生涯葬送，他也因此被称为娱乐圈最让人遗憾的鬼才。 这一世定要弥补心中的遗憾。先定个小目标吧，拿下顶级作曲人的成就再说。 穷鬼的上下两千年/非玩家角色 我有无限掠夺加速系统/猪肉乱炖 我在聊天群模拟长生路/嫩菱如梦 吞噬星空/我吃西红柿 外科教父/海与夏 星辰变/我吃西红柿 夜的命名术/会说话的肘子 种菜骷髅的异域开荒/情终流水 重生之向老实人宣战/法学院新生 重生之实业巨头/水下野鱼 从大学讲师到首席院士/不吃小南瓜 遮天/辰东 我真的只是想赚钱啊/低调有钱人 规则系学霸/不吃小南瓜 大奉打更人/卖报小郎君 我的治愈系游戏/我会修空调 谍海王者/淡淡的平常者 勇士教父/劳歌行舟 凡人修仙之仙界篇/忘语 我能和古董对话/一棵云杉 最新更新 长生修仙，从画符开始 【凡人流、熟练度、稳健、三观正常】 林长安穿越仙侠世界，成为一名仙门落选的散修。 苦修二十载，心灰意冷准备返回凡俗享受人间富贵时，觉醒了熟练度面板。 只要用心勤学苦练，努力必有所成。 一证永证！ 从现在开始，他便是画符宗师。 …… “修仙界，灵根虽差，但亦有修仙百艺，这个悟字不知造就了多少传奇修士， 我真没想当武林盟主/封七月 继承道观，开局武媚娘来上香/馋嘴小猫咪 斗罗之帝剑斗罗/薪火传道 大明第一国舅/黑胖的老鼠 穿越庆余年：剧情被我玩坏了/冥界的风 凡人：从游戏商城开始/墨子空空 从影视世界学习技能/三轮大叔 四合院：农场主的幸福生活/砂糖橘呀 野性时代：我在八零当乘警/森外 1987我的年代/三月麻竹 九龙夺嫡，我真不想当太子/三山风 骂我朝廷鹰犬？我乃大秦武圣！/我不是小号 华娱：从香江2008开始/我是宅男 港流皇帝/任猪飞 我在西游卖藏宝图/民俗不俗 宇智波：我真不是大孝子/魂在刀亦在 魔王大人深不可测/晨星LL 重生：我老婆是天后/叔叔请放开我 黑科技创业：我真是造手机的啊！/宅系阿川 喧嚣未及之处/沉默的爱 最新入库 华娱：从花千骨开始躺赢 【2014年，流量狂潮席卷华娱】 【上市公",
+          "links": [
+            {
+              "text": "连载榜",
+              "href": "/sort.html"
+            },
+            {
+              "text": "遮天",
+              "href": "/2029/"
+            },
+            {
+              "text": "琥珀之剑",
+              "href": "/77724/"
+            },
+            {
+              "text": "回到三国打天下",
+              "href": "/109379/"
+            },
+            {
+              "text": "我的1979",
+              "href": "/10645/"
+            },
+            {
+              "text": "我忽悠着圣光",
+              "href": "/105909/"
+            },
+            {
+              "text": "绝密勘探",
+              "href": "/106163/"
+            },
+            {
+              "text": "田园大唐",
+              "href": "/79370/"
+            },
+            {
+              "text": "狂狮少帅",
+              "href": "/72405/"
+            },
+            {
+              "text": "天才萌宝：给娘亲找个相公",
+              "href": "/81923/"
+            },
+            {
+              "text": "火中金莲",
+              "href": "/93626/"
+            },
+            {
+              "text": "天才小毒妃",
+              "href": "/105474/"
+            },
+            {
+              "text": "神兵天下",
+              "href": "/73745/"
+            },
+            {
+              "text": "放开那个女巫",
+              "href": "/1100/"
+            },
+            {
+              "text": "纨绔弃少",
+              "href": "/67716/"
+            },
+            {
+              "text": "福至农家",
+              "href": "/83017/"
+            },
+            {
+              "text": "黑铁之堡",
+              "href": "/12558/"
+            },
+            {
+              "text": "庶子无敌",
+              "href": "/19050/"
+            }
+          ]
+        },
+        {
+          "route": "common-route",
+          "url": "https://www.35xss.net/search/?q=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 404,
+          "contentType": "text/html; charset=utf-8",
+          "title": "出错啦！您访问的页面已丢失，但希望永远都在。",
+          "containsKeyword": false,
+          "body": "首页 书库 热门榜 推荐榜 收藏榜 连载榜 完结榜 login(); 闪舞小说网35xss.net search('/search.html'); TOP榜写作榜手机小说 最近更新新书入库全部小说 小说首页 玄幻 武侠 都市 历史 游戏 科幻 恐怖 其他 古代 现代 幻想 游戏 浪漫 言情 科幻 其他 亲！你所请求的页面已转移,↓请重新搜索↓... 或推荐阅读以下小说！！ 总点击 遮天 冰冷与黑暗并存的宇宙深处，九具庞大的龙尸拉着一口青铜古棺，亘古长存。 这是太空探测器在枯寂的宇宙中捕捉到的一幅极其震撼的画面。 九龙拉棺，究竟是回到了上古，还是来到了星空的彼岸？ 一个浩大的仙侠世界，光怪陆离，神秘无尽。热血似火山沸腾，激情若瀚海汹涌，欲望如深渊无止境…… 登天路，踏歌行，弹指遮天。 冰火武神/海角七号 星际争霸：泰伦帝国/楠木笔芯 回到三国打天下/天翔 肝疼的游戏异界之旅/几笔数春秋 血战旗/水鬼游魂 金枝/面北眉南 黑铁之堡/醉虎 莽荒纪/我吃西红柿 我欲封天/耳根 神兵天下/白袍藏刀 中场统治者/流年非水 琥珀之剑/绯炎 狂狮少帅/天天不休 盛世医妃/凤轻 我被骗到缅北的那些年/破金 穿成黑化男主的白月光/来瓶旺仔牛奶 庶子无敌/上汤豆苗 星海领主/暗狱领主 纨绔弃少/紫墨星辰 田园大唐/田园如梦 总推荐 完美世界 一粒尘可填海，一根草斩尽日月星辰，弹指间天翻地覆。 群雄并起，万族林立，诸圣争霸，乱天动地。问苍茫大地，谁主沉浮？！ 一个少年从大荒中走出，一切从这里开始…… 我只想安静地打游戏/十二翼黑暗炽天使 恶魔法则/跳舞 大时代从1983开始/晨风天堂 透视小神医/黑咖啡 玄清卫/剑如蛟 让你代管艺人，怎么全成巨星了/一剪清风 洪荒：我是东王公/蒙山夜校 我的治愈系游戏/我会修空调 我的葡萄牙帝国/向淮子 都市剑说/华表 超品渔夫/季小爵爷 随身带着未来空间/子云非云 全民诸天：我能一键满级/躺尸三万年 末世之开局创造僵尸/飞奔的兔子 遮天/辰东 脑海里飘来一座废品收购站/鬼谷仙师 烂柯棋缘/真费事 重生香江之1978/蜜汁鸡翅膀 凡人修仙传/忘语 陛下因何造反/任国成 总收藏 起航1992 从来没想过重生这回事会落到自己身上的张起航，万万没想到自己重生回来的第一件事，竟然是被逼着帮单位背黑锅…… 背锅就背锅吧，虽然别人对这口锅避之唯恐不及，但在张起航看来也算是借着这个机会弥补当年曾经的遗憾了，可让张起航疑惑的是，为什么做着做着，公司居然成了国内最大的发动机供应商？ 对此，张起航很挠头、 勇士教父/劳歌行舟 凡人修仙传/忘语 种菜骷髅的异域开荒/情终流水 我的治愈系游戏/我会修空调 穷鬼的上下两千年/非玩家角色 斗破苍穹/天蚕土豆 重生：话说1984/蚊香升起 深空彼岸/辰东 凡人修仙之仙界篇/忘语 我在聊天群模拟长生路/嫩菱如梦 重生之向老实人宣战/法学院新生 从作曲人到文娱巨星/观云海 从大学讲师到首席院士/不吃小南瓜 让你当兵戒网瘾，你成军官了/特种兵歌 规则系学霸/不吃小南瓜 四合院：逍遥人生/鹦鹉学说话 遮天/辰东 大时代从1983开始/晨风天堂 星辰变/我吃西红柿 重生之将门毒后/千山茶客 最新更新 长生修仙，从画符开始 【凡人流、熟练度、稳健、三观正常】 林长安穿越仙侠世界，成为一名仙门落选的散修。 苦修二十载，心灰意冷准备返回凡俗享受人间富贵时，觉醒了熟练度面板。 只要用心勤学苦练，努力必有所成。 一证永证！ 从现在开始，他便是画符宗师。 …… “修仙界，灵根虽差，但亦有修仙百艺，这个悟字不知造就了多少传奇修士， 我真没想当武林盟主/封七月 继承道观，开局武媚娘来上香/馋嘴小猫咪 斗罗之帝剑斗罗/薪火传道 大明第一国舅/黑胖的老鼠 穿越庆余年：剧情被我玩坏了/冥界的风 凡人：从游戏商城开始/墨子空空 从影视世界学习技能/三轮大叔 四合院：农场主的幸福生活/砂糖橘呀 野性时代：我在八零当乘警/森外 1987我的年代/三月麻竹 九龙夺嫡，我真不想当太子/三山风 骂我朝廷鹰犬？我乃大秦武圣！/我不是小号 华娱：从香江2008开始/我是宅男 港流皇帝/任猪飞 我在西游卖藏宝图/民俗不俗 宇智波：我真不是大孝子/魂在刀亦在 魔王大人深不可测/晨星LL 重生：我老婆是天后/叔叔请放开我 黑科技创业：我真是造手机的啊！/宅系",
+          "links": [
+            {
+              "text": "连载榜",
+              "href": "/sort.html"
+            },
+            {
+              "text": "遮天",
+              "href": "/2029/"
+            },
+            {
+              "text": "冰火武神",
+              "href": "/85136/"
+            },
+            {
+              "text": "星际争霸：泰伦帝国",
+              "href": "/8670/"
+            },
+            {
+              "text": "回到三国打天下",
+              "href": "/109379/"
+            },
+            {
+              "text": "肝疼的游戏异界之旅",
+              "href": "/8962/"
+            },
+            {
+              "text": "血战旗",
+              "href": "/97801/"
+            },
+            {
+              "text": "金枝",
+              "href": "/8353/"
+            },
+            {
+              "text": "黑铁之堡",
+              "href": "/12558/"
+            },
+            {
+              "text": "莽荒纪",
+              "href": "/398/"
+            },
+            {
+              "text": "我欲封天",
+              "href": "/6771/"
+            },
+            {
+              "text": "神兵天下",
+              "href": "/73745/"
+            },
+            {
+              "text": "中场统治者",
+              "href": "/109364/"
+            },
+            {
+              "text": "琥珀之剑",
+              "href": "/77724/"
+            },
+            {
+              "text": "狂狮少帅",
+              "href": "/72405/"
+            },
+            {
+              "text": "盛世医妃",
+              "href": "/13252/"
+            },
+            {
+              "text": "我被骗到缅北的那些年",
+              "href": "/142869/"
+            },
+            {
+              "text": "穿成黑化男主的白月光",
+              "href": "/15526/"
+            }
+          ]
+        },
+        {
+          "route": "common-route",
+          "url": "https://www.35xss.net/search/?searchkey=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 404,
+          "contentType": "text/html; charset=utf-8",
+          "title": "出错啦！您访问的页面已丢失，但希望永远都在。",
+          "containsKeyword": true,
+          "body": "首页 书库 热门榜 推荐榜 收藏榜 连载榜 完结榜 login(); 闪舞小说网35xss.net search('/search.html'); TOP榜写作榜手机小说 最近更新新书入库全部小说 小说首页 玄幻 武侠 都市 历史 游戏 科幻 恐怖 其他 古代 现代 幻想 游戏 浪漫 言情 科幻 其他 亲！你所请求的页面已转移,↓请重新搜索↓... 或推荐阅读以下小说！！ 总点击 遮天 冰冷与黑暗并存的宇宙深处，九具庞大的龙尸拉着一口青铜古棺，亘古长存。 这是太空探测器在枯寂的宇宙中捕捉到的一幅极其震撼的画面。 九龙拉棺，究竟是回到了上古，还是来到了星空的彼岸？ 一个浩大的仙侠世界，光怪陆离，神秘无尽。热血似火山沸腾，激情若瀚海汹涌，欲望如深渊无止境…… 登天路，踏歌行，弹指遮天。 田园大唐/田园如梦 修真归来在都市/陌路行 天才小毒妃/芥沫 重生之锦绣嫡女/醉疯魔 天才萌宝：给娘亲找个相公/莫非雨 星际争霸：泰伦帝国/楠木笔芯 星海领主/暗狱领主 回到三国打天下/天翔 武破九霄/花颜 修仙/秣陵别雪 特种兵在都市/夜十三 绝密勘探/夜的第七章 血战旗/水鬼游魂 我的1979/争斤论两花花帽 幻世之刺客传说/暗舞天日 中场统治者/流年非水 帝国苍穹/天空之承 神兵天下/白袍藏刀 火中金莲/老衲不能吃素 回到晚清的特种狙击手/东一方 总推荐 完美世界 一粒尘可填海，一根草斩尽日月星辰，弹指间天翻地覆。 群雄并起，万族林立，诸圣争霸，乱天动地。问苍茫大地，谁主沉浮？！ 一个少年从大荒中走出，一切从这里开始…… 超品渔夫/季小爵爷 我的葡萄牙帝国/向淮子 娇娘医经/希行 完美世界/辰东 穷鬼的上下两千年/非玩家角色 全职艺术家/我最白 末世之开局创造僵尸/飞奔的兔子 重生在电影的世界/盏茶煮酒 重塑千禧年代/渔雪 我修炼武学能暴击/新丰 这个领主大人非常科学/小白白的 黄金渔场/全金属弹壳 重生之巨变/永远的大洋芋 剥削好莱坞1980/莫斯科钳工果沙 海岛渔场/胖胖的肉粽子 透视邪医混花都/徐幻 斗罗大陆IV终极斗罗/唐家三少 开局一元秒杀满级拔刀术/林中小木屋 斗破苍穹/天蚕土豆 遮天/辰东 总收藏 我真的只是想赚钱啊 李羽在工作 叮，任务：办公室摸鱼，奖励500元/小时 李羽在约会 叮，任务：约会摸鱼，奖励颜值+1 李羽在打篮球 叮，任务：抢篮板摸鱼，奖励长度+1 唉，好纠结啊，长度+1，该加在哪里呢？ （书友V群：，有粉丝值的书友欢迎进群胡扯八道） 大奉打更人/卖报小郎君 种菜骷髅的异域开荒/情终流水 完美世界/辰东 凤回巢/寻找失落的爱情 我能和古董对话/一棵云杉 凡人修仙之仙界篇/忘语 凡人修仙传/忘语 吞噬星空/我吃西红柿 这个医生很稳健/公子骑猪 深空彼岸/辰东 起航1992/千年静守 超品渔夫/季小爵爷 我在聊天群模拟长生路/嫩菱如梦 圣墟/辰东 武动乾坤/天蚕土豆 勇士教父/劳歌行舟 脑海里飘来一座废品收购站/鬼谷仙师 大时代从1983开始/晨风天堂 机动风暴/骷髅精灵 嫡谋/面北眉南 最新更新 长生修仙，从画符开始 【凡人流、熟练度、稳健、三观正常】 林长安穿越仙侠世界，成为一名仙门落选的散修。 苦修二十载，心灰意冷准备返回凡俗享受人间富贵时，觉醒了熟练度面板。 只要用心勤学苦练，努力必有所成。 一证永证！ 从现在开始，他便是画符宗师。 …… “修仙界，灵根虽差，但亦有修仙百艺，这个悟字不知造就了多少传奇修士， 我真没想当武林盟主/封七月 继承道观，开局武媚娘来上香/馋嘴小猫咪 斗罗之帝剑斗罗/薪火传道 大明第一国舅/黑胖的老鼠 穿越庆余年：剧情被我玩坏了/冥界的风 凡人：从游戏商城开始/墨子空空 从影视世界学习技能/三轮大叔 四合院：农场主的幸福生活/砂糖橘呀 野性时代：我在八零当乘警/森外 1987我的年代/三月麻竹 九龙夺嫡，我真不想当太子/三山风 骂我朝廷鹰犬？我乃大秦武圣！/我不是小号 华娱：从香江2008开始/我是宅男 港流皇帝/任猪飞 我在西游卖藏宝图/民俗不俗 宇智波：我真不是大孝子/魂在刀亦在 魔王大人深不可测/晨星LL 重生：我老婆是天后/叔叔请放开我 黑科技创业：我真是造手机的啊！/宅系阿川 喧嚣未及之处/沉默的爱 最新入库 华娱：从花千骨开始躺赢 【2014年，流量狂潮席卷华娱】 【上市公司收入不",
+          "links": [
+            {
+              "text": "连载榜",
+              "href": "/sort.html"
+            },
+            {
+              "text": "遮天",
+              "href": "/2029/"
+            },
+            {
+              "text": "田园大唐",
+              "href": "/79370/"
+            },
+            {
+              "text": "修真归来在都市",
+              "href": "/11974/"
+            },
+            {
+              "text": "天才小毒妃",
+              "href": "/105474/"
+            },
+            {
+              "text": "重生之锦绣嫡女",
+              "href": "/15043/"
+            },
+            {
+              "text": "天才萌宝：给娘亲找个相公",
+              "href": "/81923/"
+            },
+            {
+              "text": "星际争霸：泰伦帝国",
+              "href": "/8670/"
+            },
+            {
+              "text": "星海领主",
+              "href": "/95791/"
+            },
+            {
+              "text": "回到三国打天下",
+              "href": "/109379/"
+            },
+            {
+              "text": "武破九霄",
+              "href": "/71836/"
+            },
+            {
+              "text": "修仙",
+              "href": "/89136/"
+            },
+            {
+              "text": "特种兵在都市",
+              "href": "/79327/"
+            },
+            {
+              "text": "绝密勘探",
+              "href": "/106163/"
+            },
+            {
+              "text": "血战旗",
+              "href": "/97801/"
+            },
+            {
+              "text": "我的1979",
+              "href": "/10645/"
+            },
+            {
+              "text": "幻世之刺客传说",
+              "href": "/10483/"
+            },
+            {
+              "text": "中场统治者",
+              "href": "/109364/"
+            }
+          ]
+        },
+        {
+          "route": "common-route",
+          "url": "https://www.35xss.net/search.html?keyword=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 200,
+          "contentType": "text/html; charset=utf-8",
+          "title": "小说搜索_首页_闪舞小说网(35xss.net)",
+          "containsKeyword": false,
+          "body": "首页 书库 热门榜 推荐榜 收藏榜 连载榜 完结榜 login(); 闪舞小说网35xss.net search('/search.html'); TOP榜写作榜手机小说 最近更新新书入库全部小说 小说首页 玄幻 武侠 都市 历史 游戏 科幻 恐怖 其他 古代 现代 幻想 游戏 浪漫 言情 科幻 其他 首页 | 点击榜 | 推荐榜 | 收藏榜 | 新书榜 | 最近更新 | 临时书架 手机版 | 分类 | 排行榜 | 作者大全 | 全部小说 | 全本小说 | 会员书架 本站所有小说为转载作品，所有章节均由网友上传，转载至本站只是为了宣传本书让更多读者欣赏。 Copyright © 2026 闪舞小说网(35xss.net) 网站地图 All Rights Reserved. DMCA版权投诉邮箱:bookcopy2026@outlook.com var _hmt = _hmt || []; (function () { var hm = document.createElement(\"script\"); hm.src = \"https://hm.baidu.com/hm.js?e1f787e0bd36cc1abe1ed6d16d6262c6\"; var s = document.getElementsByTagName(\"script\")[0]; s.parentNode.insertBefore(hm, s); })();",
+          "links": [
+            {
+              "text": "连载榜",
+              "href": "/sort.html"
+            },
+            {
+              "text": "临时书架",
+              "href": "/history.html"
+            },
+            {
+              "text": "分类",
+              "href": "/sort.html"
+            },
+            {
+              "text": "会员书架",
+              "href": "/mark.html"
+            }
+          ]
+        },
+        {
+          "route": "common-route",
+          "url": "https://www.35xss.net/so/search.php?q=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "error": "TypeError: Cannot destructure property 'firstElementChild' of 'documentElement' as it is null."
+        },
+        {
+          "route": "common-route",
+          "url": "https://www.35xss.net/search?name=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+          "status": 404,
+          "contentType": "text/html; charset=utf-8",
+          "title": "出错啦！您访问的页面已丢失，但希望永远都在。",
+          "containsKeyword": false,
+          "body": "首页 书库 热门榜 推荐榜 收藏榜 连载榜 完结榜 login(); 闪舞小说网35xss.net search('/search.html'); TOP榜写作榜手机小说 最近更新新书入库全部小说 小说首页 玄幻 武侠 都市 历史 游戏 科幻 恐怖 其他 古代 现代 幻想 游戏 浪漫 言情 科幻 其他 亲！你所请求的页面已转移,↓请重新搜索↓... 或推荐阅读以下小说！！ 总点击 遮天 冰冷与黑暗并存的宇宙深处，九具庞大的龙尸拉着一口青铜古棺，亘古长存。 这是太空探测器在枯寂的宇宙中捕捉到的一幅极其震撼的画面。 九龙拉棺，究竟是回到了上古，还是来到了星空的彼岸？ 一个浩大的仙侠世界，光怪陆离，神秘无尽。热血似火山沸腾，激情若瀚海汹涌，欲望如深渊无止境…… 登天路，踏歌行，弹指遮天。 凡人修仙传/忘语 帝国苍穹/天空之承 纨绔弃少/紫墨星辰 血战旗/水鬼游魂 死人经/冰临神下 好莱坞制作/白色十三号 修真归来在都市/陌路行 黑铁之堡/醉虎 修仙/秣陵别雪 重生之契约幻想世界/葬峰绝 我的1979/争斤论两花花帽 回到晚清的特种狙击手/东一方 天才萌宝：给娘亲找个相公/莫非雨 硅谷大帝/百刹 庶子无敌/上汤豆苗 神兵天下/白袍藏刀 我深爱的慕先生/古萧 福至农家/绝色清粥 邪医紫后/绝世启航 田园大唐/田园如梦 总推荐 完美世界 一粒尘可填海，一根草斩尽日月星辰，弹指间天翻地覆。 群雄并起，万族林立，诸圣争霸，乱天动地。问苍茫大地，谁主沉浮？！ 一个少年从大荒中走出，一切从这里开始…… 我有无限掠夺加速系统/猪肉乱炖 让你代管艺人，怎么全成巨星了/一剪清风 这个外挂过于中二/鱼狱圄 逆天透视眼/红烧茄子煲 无敌储物戒/明日复明日 重塑千禧年代/渔雪 缺氧时代/织朱 烂柯棋缘/真费事 剥削好莱坞1980/莫斯科钳工果沙 莽荒纪/我吃西红柿 母星瞒着我们偷偷化形了/秦不让 四爷的心尖宠妃/雪中回眸 海岛渔场/胖胖的肉粽子 重生之巨变/永远的大洋芋 重生在电影的世界/盏茶煮酒 玄清卫/剑如蛟 影视世界学才艺/寸夕日 大时代从1983开始/晨风天堂 AA互撩笔记/我选择猫车 娇娘医经/希行 总收藏 从作曲人到文娱巨星 王轩穿越了。 上一世，影视歌曲综艺...遍地开花，巅峰未至便火爆半边天，可一场车祸却把他的舞台生涯葬送，他也因此被称为娱乐圈最让人遗憾的鬼才。 这一世定要弥补心中的遗憾。先定个小目标吧，拿下顶级作曲人的成就再说。 凡人修仙传/忘语 四合院：逍遥人生/鹦鹉学说话 机动风暴/骷髅精灵 超品渔夫/季小爵爷 重生之将门毒后/千山茶客 我在镇武司摸鱼那些年/尺关 让你当兵戒网瘾，你成军官了/特种兵歌 穷鬼的上下两千年/非玩家角色 大时代从1983开始/晨风天堂 种菜骷髅的异域开荒/情终流水 当医生开了外挂/手握寸关尺 遮天/辰东 宅在随身空间/明渐 重生：话说1984/蚊香升起 武动乾坤/天蚕土豆 深空彼岸/辰东 规则系学霸/不吃小南瓜 勇士教父/劳歌行舟 星辰变/我吃西红柿 完美世界/辰东 最新更新 长生修仙，从画符开始 【凡人流、熟练度、稳健、三观正常】 林长安穿越仙侠世界，成为一名仙门落选的散修。 苦修二十载，心灰意冷准备返回凡俗享受人间富贵时，觉醒了熟练度面板。 只要用心勤学苦练，努力必有所成。 一证永证！ 从现在开始，他便是画符宗师。 …… “修仙界，灵根虽差，但亦有修仙百艺，这个悟字不知造就了多少传奇修士， 我真没想当武林盟主/封七月 继承道观，开局武媚娘来上香/馋嘴小猫咪 斗罗之帝剑斗罗/薪火传道 大明第一国舅/黑胖的老鼠 穿越庆余年：剧情被我玩坏了/冥界的风 凡人：从游戏商城开始/墨子空空 从影视世界学习技能/三轮大叔 四合院：农场主的幸福生活/砂糖橘呀 野性时代：我在八零当乘警/森外 1987我的年代/三月麻竹 九龙夺嫡，我真不想当太子/三山风 骂我朝廷鹰犬？我乃大秦武圣！/我不是小号 华娱：从香江2008开始/我是宅男 港流皇帝/任猪飞 我在西游卖藏宝图/民俗不俗 宇智波：我真不是大孝子/魂在刀亦在 魔王大人深不可测/晨星LL 重生：我老婆是天后/叔叔请放开我 黑科技创业：我真是造手机的啊！/宅系阿川 喧嚣未及之处/沉默的爱 最新入库 华娱：从花千骨开始躺赢 【2014年，流量狂潮席卷华娱】 【上市公司收入不及流量艺人一年",
+          "links": [
+            {
+              "text": "连载榜",
+              "href": "/sort.html"
+            },
+            {
+              "text": "遮天",
+              "href": "/2029/"
+            },
+            {
+              "text": "凡人修仙传",
+              "href": "/1880/"
+            },
+            {
+              "text": "帝国苍穹",
+              "href": "/84820/"
+            },
+            {
+              "text": "纨绔弃少",
+              "href": "/67716/"
+            },
+            {
+              "text": "血战旗",
+              "href": "/97801/"
+            },
+            {
+              "text": "死人经",
+              "href": "/8610/"
+            },
+            {
+              "text": "好莱坞制作",
+              "href": "/95069/"
+            },
+            {
+              "text": "修真归来在都市",
+              "href": "/11974/"
+            },
+            {
+              "text": "黑铁之堡",
+              "href": "/12558/"
+            },
+            {
+              "text": "修仙",
+              "href": "/89136/"
+            },
+            {
+              "text": "重生之契约幻想世界",
+              "href": "/102632/"
+            },
+            {
+              "text": "我的1979",
+              "href": "/10645/"
+            },
+            {
+              "text": "回到晚清的特种狙击手",
+              "href": "/89404/"
+            },
+            {
+              "text": "天才萌宝：给娘亲找个相公",
+              "href": "/81923/"
+            },
+            {
+              "text": "硅谷大帝",
+              "href": "/104419/"
+            },
+            {
+              "text": "庶子无敌",
+              "href": "/19050/"
+            },
+            {
+              "text": "神兵天下",
+              "href": "/73745/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
