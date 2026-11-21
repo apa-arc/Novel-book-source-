@@ -268,8 +268,8 @@ function parseTemplateExpression(raw) {
     if(start>cursor) parts.push({engine:"literal",value:raw.slice(cursor,start)});
     const inner=raw.slice(start+2,end).trim();
     if(!inner) return {status:"manual",reason:"empty-template-expression"};
-    const parsed=parseLegacyChain(inner);
-    if(parsed.status!=="candidate") return {status:"manual",reason:"unsupported-template-expression"};
+    const parsed=parseCompositePart(inner);
+    if(!parsed||parsed.status!=="candidate") return {status:"manual",reason:"unsupported-template-expression"};
     parts.push(parsed.selector);
     found=true;
     cursor=end+2;
