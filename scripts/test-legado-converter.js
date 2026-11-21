@@ -173,6 +173,16 @@ try{
  assert.equal(chainedRegex.status,"candidate");
  assert.equal(chainedRegex.selector.engine,"replace");
  assert.equal(chainedRegex.selector.input.engine,"replace");
+ const template=parseLegacyChain("{{$.ltype&&$.stype}} 连载{{$.status}}完本");
+ assert.equal(template.status,"candidate");
+ assert.equal(template.selector.engine,"composite");
+ assert.equal(template.selector.parts.length,4);
+ const quotedTemplate=parseLegacyChain('{{" "}}');
+ assert.equal(quotedTemplate.status,"candidate");
+ assert.equal(quotedTemplate.selector.value," ");
+ const templatedRegex=parseLegacyChain("{{$.title}}##旧##新");
+ assert.equal(templatedRegex.status,"candidate");
+ assert.equal(templatedRegex.selector.engine,"replace");
  const quotedOperator=parseLegacyChain('a[href="x&&y"]@text');
  assert.equal(quotedOperator.status,"candidate");
  assert.deepEqual(quotedOperator.selector.steps,[{kind:"css",query:'a[href="x&&y"]'}]);
