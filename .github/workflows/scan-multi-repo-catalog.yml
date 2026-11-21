@@ -1,0 +1,40 @@
+name: Discover additional ordinary novel sites
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/scan-multi-repo-catalog.js"
+      - ".github/workflows/scan-multi-repo-catalog.yml"
+permissions:
+  contents: write
+concurrency:
+  group: multi-repo-source-discovery
+  cancel-in-progress: true
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Scan independent source collections without copying rules
+        run: node scripts/scan-multi-repo-catalog.js
+      - name: Commit metadata-only candidate catalogue
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add imports/third-party/multi-repo-candidate-catalog.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Discover additional ordinary novel site candidates"
+            git pull --rebase origin main
+            git push
+          fi
+      - name: Upload candidate catalogue
+        uses: actions/upload-artifact@v4
+        with:
+          name: multi-repo-candidate-catalog
+          path: imports/third-party/multi-repo-candidate-catalog.json
+          retention-days: 90
