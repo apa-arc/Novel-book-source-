@@ -29,8 +29,56 @@
       "confirmedFailureDisposition": "failed-only-after-repeat-confirmation",
       "maxRetries": 3,
       "retryDelaySeconds": 2.5,
-      "retryOnAllErrors": true,
-      "confirmedFailureRequiresSameFailureThreeConsecutiveAttempts": true
+      "retryOnAllErrors": false,
+      "confirmedFailureRequiresSameFailureThreeConsecutiveAttempts": true,
+      "retryPolicy": {
+        "http403": {
+          "maxAttempts": 2,
+          "delaySeconds": [
+            5
+          ],
+          "reason": "confirm access block once without hammering the host"
+        },
+        "http429": {
+          "maxAttempts": 3,
+          "delaySeconds": [
+            8,
+            16
+          ],
+          "reason": "rate limit needs longer exponential cooldown"
+        },
+        "crossDomainRedirect": {
+          "maxAttempts": 2,
+          "delaySeconds": [
+            5
+          ],
+          "reason": "confirm redirect behavior once; never treat as source failure"
+        },
+        "transientNetwork": {
+          "maxAttempts": 3,
+          "delaySeconds": [
+            4,
+            8
+          ],
+          "reason": "allow transport/DNS/timeouts to recover"
+        },
+        "http5xx": {
+          "maxAttempts": 3,
+          "delaySeconds": [
+            4,
+            8
+          ],
+          "reason": "allow upstream server recovery"
+        },
+        "parseErrors": {
+          "maxAttempts": 3,
+          "delaySeconds": [
+            2.5,
+            5
+          ],
+          "reason": "confirm deterministic parser/response failures"
+        }
+      }
     },
     "bothKeywordsMustHaveSuccessfulRequests": true,
     "minimumPositiveKeywordCount": 1,
@@ -53,6 +101,20 @@
       "sourceConcurrency": 1,
       "interSourceCooldownSeconds": 1.2,
       "reason": "reduce concurrent request interference, rate limits and false timeouts"
+    },
+    "diagnostics": {
+      "captureRequestUrl": true,
+      "captureHttpStatus": true,
+      "captureFinalResponseUrl": true,
+      "captureRedirectedFlag": true,
+      "captureContentType": true,
+      "captureSanitizedBodyPreviewMaxChars": 360,
+      "recordThrownErrorNameAndMessage": true,
+      "compareNodeDefaultAndIphoneUserAgentRedirectModes": true,
+      "neverClaimNodeFetchReproducesNativeIosNetworking": true,
+      "http403AndRedirectDisposition": "environment-inconclusive-require-independent-native-app-confirmation",
+      "rateLimitCooldownSeconds": 8,
+      "sourceConcurrency": 1
     }
   },
   "formalImportGate": {
@@ -171,8 +233,19 @@
       "zeroResultPolicy": "搜索请求正常完成且解析成功即搜索通过；0结果单独记录，不作为请求失败。",
       "searchRetry": {
         "maxAttempts": 3,
-        "delaySeconds": 2.5,
-        "retryAllThrownErrors": true,
+        "delaySeconds": [
+          4,
+          8
+        ],
+        "http403MaxAttempts": 2,
+        "http403DelaySeconds": 5,
+        "http429MaxAttempts": 3,
+        "http429DelaySeconds": [
+          8,
+          16
+        ],
+        "crossDomainRedirectMaxAttempts": 2,
+        "crossDomainRedirectDelaySeconds": 5,
         "classifyOnlyAfterFinalAttempt": true,
         "storeAttemptCount": true
       },
@@ -180,6 +253,14 @@
       "execution": {
         "sourceConcurrency": 1,
         "interSourceCooldownSeconds": 1.2
+      },
+      "networkDiagnostics": {
+        "recordFinalResponseUrl": true,
+        "recordRedirectedFlag": true,
+        "recordHttpStatusAndContentType": true,
+        "recordSanitizedBodyPreviewMaxChars": 360,
+        "recordThrownError": true,
+        "noNativeIosEquivalenceClaim": true
       }
     },
     "importPolicy": "新源必须通过许可审查、App兼容校验、两个关键词搜索请求、至少一个关键词返回结果，以及详情、目录、首末章正文和文本质量测试；环境不确定的源继续复测，不进入失败删除流程；不设置候选池。"
