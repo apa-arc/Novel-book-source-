@@ -49,6 +49,12 @@ function validateSourceQuality(meta, root) {
   }
   validateAppConfig(meta);
 
+  // Existing sources explicitly confirmed by the owner are grandfathered as the trusted baseline.
+  // Runtime probe failures are diagnostic only and must never silently revoke this baseline.
+  if (meta.userConfirmedExistingSource === true) {
+    return { ok: true, skipped: false, grandfathered: true };
+  }
+
   // Explicitly enabled integration fixtures may enter the ordinary app feed,
   // but are visibly marked test-only and are not treated as production-verified.
   if (meta.testOnly === true) {
