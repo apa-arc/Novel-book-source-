@@ -42,7 +42,7 @@ function nodeSummary(node) {
   }));
   const search = await get(SEARCH);
   const searchDoc = parseHTML(search.html).document;
-  const searchLinks = [...searchDoc.querySelectorAll("a[href]")].map(a => ({ text: (a.textContent || "").trim().replace(/\s+/g, " ").slice(0, 100), href: a.getAttribute("href") || "" })).filter(a => a.text || a.href).slice(0, 60);
+  const resultAnchors = [...searchDoc.querySelectorAll("a[href]")].filter(a => /^\\/\\d+$/.test(a.getAttribute("href") || ""));\n  const searchResultParents = resultAnchors.map(a => { const chain=[]; let n=a; for(let i=0;n&&i<5;i++,n=n.parentElement) chain.push({tag:n.tagName?.toLowerCase()||"",id:n.id||"",className:String(n.className?.baseVal||n.className||"").slice(0,100),childCount:n.children?.length||0}); return chain; });\n  const searchLinks = [...searchDoc.querySelectorAll("a[href]")].map(a => ({ text: (a.textContent || "").trim().replace(/\\s+/g, " ").slice(0, 100), href: a.getAttribute("href") || "" })).filter(a => a.text || a.href).slice(0, 60);
   const book = await get(BOOK);
   const bookDoc = parseHTML(book.html).document;
   const chapter = await get(CHAPTER);
