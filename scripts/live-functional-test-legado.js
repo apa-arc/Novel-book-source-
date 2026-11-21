@@ -90,8 +90,11 @@ function values(root, rule) {
 }
 function allNodes(root, rule) {
   const selected = executeSelector(root, selector(rule, "all"));
-  const result = Array.isArray(selected) ? selected :
-    selected && typeof selected === "object" ? Object.values(selected) : [];
+  if (Array.isArray(selected)) return selected.slice(0, MAX_RESULTS);
+  if (!selected || typeof selected !== "object") return [];
+  const recordKeys = ["name","title","bookName","book_name","novelName","chapterName","chapter_name","bookUrl","chapterUrl"];
+  const result = typeof selected.querySelectorAll === "function" || recordKeys.some(key => Object.prototype.hasOwnProperty.call(selected,key))
+    ? [selected] : Object.values(selected);
   return result.slice(0, MAX_RESULTS);
 }
 function registrableDomain(hostname) {
