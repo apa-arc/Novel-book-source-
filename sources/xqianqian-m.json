@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "xqianqian-m",
+  "name": "千千小说",
+  "kind": "public-web",
+  "version": "1.0.0",
+  "baseUrl": "https://m.xqianqian.com/",
+  "domains": [
+    "m.xqianqian.com"
+  ],
+  "script": "scripts/xqianqian-m.js",
+  "enabled": true,
+  "testOnly": true,
+  "testOnlyReason": "已转换公开上游 GET/CSS 规则；网页端仍有近期更新记录，尚未完成 AppleNovelApp 宿主四阶段复测。",
+  "description": "普通小说网页源；GET 搜索，详情、目录和正文使用 CSS 规则。公开上游标记为有效，网站近期仍有更新；当前宿主四阶段复测待完成。",
+  "licenseApproved": true,
+  "licenseType": "self-owned",
+  "licenseEvidence": "本仓库原创的声明式 GET/CSS 适配配置与解析器，不复制第三方脚本或小说正文。",
+  "licenseEvidenceUrl": "https://github.com/apa-arc/Novel-book-source-/blob/main/sources/xqianqian-m.json",
+  "hostValidated": false,
+  "appConfig": {
+    "searchUrl": "https://m.xqianqian.com/s.php?q={keyword}",
+    "bookUrl": "https://m.xqianqian.com/{bookUrl}",
+    "chapterListUrl": "https://m.xqianqian.com/{bookUrl}",
+    "chapterUrl": "https://m.xqianqian.com/{chapterUrl}",
+    "htmlRules": {
+      "search": {
+        "itemSelector": ".bookbox",
+        "titleSelector": ".bookname a",
+        "urlSelector": ".bookname a",
+        "authorSelector": ".author"
+      },
+      "detail": {
+        "titleSelector": ".name",
+        "descriptionSelector": ".book_about dd"
+      },
+      "chapters": {
+        "itemSelector": ".book_last dl dd",
+        "titleSelector": "a",
+        "urlSelector": "a"
+      },
+      "content": {
+        "contentSelector": "#chaptercontent",
+        "titleSelector": "h1"
+      }
+    }
+  }
+}
