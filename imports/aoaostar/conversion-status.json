@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T01:38:40.092Z",
+  "generatedAt": "2026-11-21T01:40:31.200Z",
   "provider": "AOAOSTAR / Legado",
   "sourceCount": 704,
   "counts": {
@@ -566,7 +566,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -609,7 +609,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -652,7 +652,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -695,7 +695,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -783,7 +783,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -826,7 +826,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -1259,7 +1259,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -2849,7 +2849,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -2892,7 +2892,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -2935,7 +2935,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -2978,7 +2978,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -3061,7 +3061,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -3104,7 +3104,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -3147,7 +3147,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -4440,39 +4440,29 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 6,
-          "manualReasons": {
-            "unsupported-jsonpath": 4
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 8,
-          "manualReasons": {
-            "unsupported-jsonpath": 7
-          }
+          "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 5,
-          "manualReasons": {
-            "unsupported-jsonpath": 4
-          }
+          "manualReasons": {}
         },
         "content": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 4,
-          "manualReasons": {
-            "unsupported-jsonpath": 1
-          }
+          "manualReasons": {}
         },
         "explore": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 7,
-          "manualReasons": {
-            "unsupported-jsonpath": 6
-          }
+          "manualReasons": {}
         }
       },
       "redistributionStatus": "not-assessed",
@@ -5821,11 +5811,9 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 10,
-          "manualReasons": {
-            "unsupported-jsonpath": 6
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "partial",
@@ -5839,7 +5827,7 @@
           "status": "partial",
           "fieldCount": 3,
           "manualReasons": {
-            "unsupported-jsonpath": 2
+            "unsupported-jsonpath": 1
           }
         },
         "content": {
@@ -5850,11 +5838,9 @@
           }
         },
         "explore": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 8,
-          "manualReasons": {
-            "unsupported-jsonpath": 6
-          }
+          "manualReasons": {}
         }
       },
       "redistributionStatus": "not-assessed",
@@ -5873,22 +5859,19 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 6,
-            "unsupported-fallback-part": 1
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-jsonpath": 6
-          }
+          "manualReasons": {}
         },
         "toc": {
           "status": "partial",
           "fieldCount": 5,
           "manualReasons": {
-            "unsupported-jsonpath": 2
+            "unsupported-jsonpath": 1
           }
         },
         "content": {
@@ -5900,7 +5883,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 7
+            "unsupported-jsonpath": 3
           }
         }
       },
@@ -6347,7 +6330,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -6390,7 +6373,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -6433,7 +6416,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -6476,7 +6459,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -6519,7 +6502,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -6562,7 +6545,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -6605,7 +6588,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -6650,7 +6633,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -6693,7 +6676,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -6736,7 +6719,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -6779,7 +6762,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -6822,7 +6805,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -6865,7 +6848,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -7072,7 +7055,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -7539,7 +7522,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -7625,7 +7608,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -7668,7 +7651,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -7711,7 +7694,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -7754,7 +7737,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -7796,39 +7779,31 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-jsonpath": 6
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 6
-          }
-        },
-        "toc": {
-          "status": "partial",
-          "fieldCount": 4,
-          "manualReasons": {
-            "unsupported-jsonpath": 2
-          }
-        },
-        "content": {
-          "status": "partial",
-          "fieldCount": 1,
-          "manualReasons": {
             "unsupported-jsonpath": 1
           }
         },
+        "toc": {
+          "status": "candidate",
+          "fieldCount": 4,
+          "manualReasons": {}
+        },
+        "content": {
+          "status": "candidate",
+          "fieldCount": 1,
+          "manualReasons": {}
+        },
         "explore": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 8,
-          "manualReasons": {
-            "unsupported-jsonpath": 5
-          }
+          "manualReasons": {}
         }
       },
       "redistributionStatus": "not-assessed",
@@ -7847,8 +7822,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 6,
-            "unsupported-concat-part": 1
+            "unsupported-jsonpath": 2
           }
         },
         "bookInfo": {
@@ -7860,7 +7834,7 @@
           "status": "partial",
           "fieldCount": 3,
           "manualReasons": {
-            "unsupported-jsonpath": 2
+            "unsupported-jsonpath": 1
           }
         },
         "content": {
@@ -7894,8 +7868,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 6,
-            "unsupported-fallback-part": 1
+            "unsupported-jsonpath": 3
           }
         },
         "bookInfo": {
@@ -7904,11 +7877,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 4,
-          "manualReasons": {
-            "unsupported-jsonpath": 2
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -7919,7 +7890,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 7
+            "unsupported-jsonpath": 3
           }
         }
       },
@@ -8383,8 +8354,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 7,
-            "unsupported-concat-part": 1
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -8406,8 +8376,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 7,
-            "unsupported-concat-part": 1
+            "unsupported-jsonpath": 1
           }
         }
       },
@@ -9377,8 +9346,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 7,
-            "unsupported-concat-part": 1
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -9400,8 +9368,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 7,
-            "unsupported-concat-part": 1
+            "unsupported-jsonpath": 1
           }
         }
       },
@@ -10575,8 +10542,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 6,
-            "unsupported-concat-part": 1
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -10590,7 +10556,7 @@
           "status": "partial",
           "fieldCount": 4,
           "manualReasons": {
-            "unsupported-jsonpath": 2
+            "unsupported-jsonpath": 1
           }
         },
         "content": {
@@ -10604,8 +10570,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 6,
-            "unsupported-concat-part": 1
+            "unsupported-jsonpath": 1
           }
         }
       },
@@ -11406,7 +11371,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -11449,7 +11414,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -11888,7 +11853,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -11931,7 +11896,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -12171,7 +12136,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -12214,7 +12179,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -12257,7 +12222,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -12414,7 +12379,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -13508,39 +13473,29 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 6,
-          "manualReasons": {
-            "unsupported-jsonpath": 4
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 8,
-          "manualReasons": {
-            "unsupported-jsonpath": 7
-          }
+          "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 5,
-          "manualReasons": {
-            "unsupported-jsonpath": 4
-          }
+          "manualReasons": {}
         },
         "content": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 4,
-          "manualReasons": {
-            "unsupported-jsonpath": 1
-          }
+          "manualReasons": {}
         },
         "explore": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 7,
-          "manualReasons": {
-            "unsupported-jsonpath": 6
-          }
+          "manualReasons": {}
         }
       },
       "redistributionStatus": "not-assessed",
@@ -14907,8 +14862,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 6,
-            "unsupported-fallback-part": 1
+            "unsupported-jsonpath": 3
           }
         },
         "bookInfo": {
@@ -14917,11 +14871,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 4,
-          "manualReasons": {
-            "unsupported-jsonpath": 2
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -14932,7 +14884,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 7
+            "unsupported-jsonpath": 3
           }
         }
       },
@@ -14952,22 +14904,19 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 6,
-            "unsupported-fallback-part": 1
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-jsonpath": 6
-          }
+          "manualReasons": {}
         },
         "toc": {
           "status": "partial",
           "fieldCount": 5,
           "manualReasons": {
-            "unsupported-jsonpath": 2
+            "unsupported-jsonpath": 1
           }
         },
         "content": {
@@ -14979,7 +14928,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 7
+            "unsupported-jsonpath": 3
           }
         }
       },
@@ -14998,11 +14947,9 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 10,
-          "manualReasons": {
-            "unsupported-jsonpath": 6
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "partial",
@@ -15016,7 +14963,7 @@
           "status": "partial",
           "fieldCount": 3,
           "manualReasons": {
-            "unsupported-jsonpath": 2
+            "unsupported-jsonpath": 1
           }
         },
         "content": {
@@ -15027,11 +14974,9 @@
           }
         },
         "explore": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 8,
-          "manualReasons": {
-            "unsupported-jsonpath": 6
-          }
+          "manualReasons": {}
         }
       },
       "redistributionStatus": "not-assessed",
@@ -15052,8 +14997,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 7,
-            "unsupported-concat-part": 1
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -15075,8 +15019,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 7,
-            "unsupported-concat-part": 1
+            "unsupported-jsonpath": 1
           }
         }
       },
@@ -15136,7 +15079,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -15179,7 +15122,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -15222,7 +15165,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -15265,7 +15208,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -15308,7 +15251,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -15351,7 +15294,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -15394,7 +15337,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -15439,7 +15382,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -15482,7 +15425,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -15525,7 +15468,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -15568,7 +15511,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -15611,7 +15554,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -15654,7 +15597,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -15697,7 +15640,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -15740,7 +15683,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -15783,7 +15726,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -15826,7 +15769,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -15869,7 +15812,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -15912,7 +15855,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -15955,7 +15898,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -16002,7 +15945,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -16250,7 +16193,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -16333,7 +16276,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -16376,7 +16319,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -16419,7 +16362,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -16462,7 +16405,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -16782,39 +16725,31 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-jsonpath": 6
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 6
-          }
-        },
-        "toc": {
-          "status": "partial",
-          "fieldCount": 4,
-          "manualReasons": {
-            "unsupported-jsonpath": 2
-          }
-        },
-        "content": {
-          "status": "partial",
-          "fieldCount": 1,
-          "manualReasons": {
             "unsupported-jsonpath": 1
           }
         },
+        "toc": {
+          "status": "candidate",
+          "fieldCount": 4,
+          "manualReasons": {}
+        },
+        "content": {
+          "status": "candidate",
+          "fieldCount": 1,
+          "manualReasons": {}
+        },
         "explore": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 8,
-          "manualReasons": {
-            "unsupported-jsonpath": 5
-          }
+          "manualReasons": {}
         }
       },
       "redistributionStatus": "not-assessed",
@@ -17262,11 +17197,9 @@
           "manualReasons": {}
         },
         "content": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-jsonpath": 1
-          }
+          "manualReasons": {}
         },
         "explore": {
           "status": "candidate",
@@ -17590,11 +17523,9 @@
           "manualReasons": {}
         },
         "content": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-jsonpath": 1
-          }
+          "manualReasons": {}
         },
         "explore": {
           "status": "candidate",
@@ -18699,39 +18630,31 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-jsonpath": 6
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 6
-          }
-        },
-        "toc": {
-          "status": "partial",
-          "fieldCount": 4,
-          "manualReasons": {
-            "unsupported-jsonpath": 2
-          }
-        },
-        "content": {
-          "status": "partial",
-          "fieldCount": 1,
-          "manualReasons": {
             "unsupported-jsonpath": 1
           }
         },
+        "toc": {
+          "status": "candidate",
+          "fieldCount": 4,
+          "manualReasons": {}
+        },
+        "content": {
+          "status": "candidate",
+          "fieldCount": 1,
+          "manualReasons": {}
+        },
         "explore": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 8,
-          "manualReasons": {
-            "unsupported-jsonpath": 5
-          }
+          "manualReasons": {}
         }
       },
       "redistributionStatus": "not-assessed",
@@ -19077,8 +19000,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 6,
-            "unsupported-concat-part": 1
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -19092,7 +19014,7 @@
           "status": "partial",
           "fieldCount": 4,
           "manualReasons": {
-            "unsupported-jsonpath": 2
+            "unsupported-jsonpath": 1
           }
         },
         "content": {
@@ -19106,8 +19028,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 6,
-            "unsupported-concat-part": 1
+            "unsupported-jsonpath": 1
           }
         }
       },
@@ -19840,8 +19761,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 6,
-            "unsupported-concat-part": 1
+            "unsupported-jsonpath": 2
           }
         },
         "bookInfo": {
@@ -19853,7 +19773,7 @@
           "status": "partial",
           "fieldCount": 3,
           "manualReasons": {
-            "unsupported-jsonpath": 2
+            "unsupported-jsonpath": 1
           }
         },
         "content": {
@@ -21908,7 +21828,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -22193,8 +22113,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 7,
-            "unsupported-concat-part": 1
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -22216,8 +22135,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 7,
-            "unsupported-concat-part": 1
+            "unsupported-jsonpath": 1
           }
         }
       },
@@ -22442,15 +22360,13 @@
           "status": "partial",
           "fieldCount": 10,
           "manualReasons": {
-            "unsupported-jsonpath": 8
+            "unsupported-jsonpath": 7
           }
         },
         "bookInfo": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-jsonpath": 1
-          }
+          "manualReasons": {}
         },
         "toc": {
           "status": "partial",
@@ -22461,11 +22377,9 @@
           }
         },
         "content": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 2,
-          "manualReasons": {
-            "unsupported-jsonpath": 1
-          }
+          "manualReasons": {}
         },
         "explore": {
           "status": "candidate",
@@ -22529,8 +22443,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 6,
-            "unsupported-fallback-part": 1
+            "unsupported-jsonpath": 3
           }
         },
         "bookInfo": {
@@ -22539,11 +22452,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 4,
-          "manualReasons": {
-            "unsupported-jsonpath": 2
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -22554,7 +22465,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 7
+            "unsupported-jsonpath": 3
           }
         }
       },
@@ -22574,22 +22485,19 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 6,
-            "unsupported-fallback-part": 1
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-jsonpath": 6
-          }
+          "manualReasons": {}
         },
         "toc": {
           "status": "partial",
           "fieldCount": 5,
           "manualReasons": {
-            "unsupported-jsonpath": 2
+            "unsupported-jsonpath": 1
           }
         },
         "content": {
@@ -22601,7 +22509,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 7
+            "unsupported-jsonpath": 3
           }
         }
       },
@@ -22620,11 +22528,9 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 10,
-          "manualReasons": {
-            "unsupported-jsonpath": 6
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "partial",
@@ -22638,7 +22544,7 @@
           "status": "partial",
           "fieldCount": 3,
           "manualReasons": {
-            "unsupported-jsonpath": 2
+            "unsupported-jsonpath": 1
           }
         },
         "content": {
@@ -22649,11 +22555,9 @@
           }
         },
         "explore": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 8,
-          "manualReasons": {
-            "unsupported-jsonpath": 6
-          }
+          "manualReasons": {}
         }
       },
       "redistributionStatus": "not-assessed",
@@ -22671,24 +22575,22 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-jsonpath": 6
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 6
+            "unsupported-jsonpath": 1
           }
         },
         "toc": {
           "status": "partial",
           "fieldCount": 3,
           "manualReasons": {
-            "unsupported-jsonpath": 2
+            "unsupported-jsonpath": 1
           }
         },
         "content": {
@@ -22699,11 +22601,9 @@
           }
         },
         "explore": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 7,
-          "manualReasons": {
-            "unsupported-jsonpath": 6
-          }
+          "manualReasons": {}
         }
       },
       "redistributionStatus": "not-assessed",
@@ -22721,39 +22621,31 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-jsonpath": 6
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 6
-          }
-        },
-        "toc": {
-          "status": "partial",
-          "fieldCount": 4,
-          "manualReasons": {
-            "unsupported-jsonpath": 2
-          }
-        },
-        "content": {
-          "status": "partial",
-          "fieldCount": 1,
-          "manualReasons": {
             "unsupported-jsonpath": 1
           }
         },
+        "toc": {
+          "status": "candidate",
+          "fieldCount": 4,
+          "manualReasons": {}
+        },
+        "content": {
+          "status": "candidate",
+          "fieldCount": 1,
+          "manualReasons": {}
+        },
         "explore": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 8,
-          "manualReasons": {
-            "unsupported-jsonpath": 5
-          }
+          "manualReasons": {}
         }
       },
       "redistributionStatus": "not-assessed",
@@ -22772,7 +22664,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -22815,7 +22707,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -22858,7 +22750,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -22901,7 +22793,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -22944,7 +22836,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -22987,7 +22879,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -23030,7 +22922,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -23075,7 +22967,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -23118,7 +23010,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -23161,7 +23053,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -23204,7 +23096,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -23247,7 +23139,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -23290,7 +23182,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -23333,7 +23225,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -23376,7 +23268,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -23419,7 +23311,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -23462,7 +23354,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -23505,7 +23397,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -23548,7 +23440,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -23629,7 +23521,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -23672,7 +23564,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -23719,8 +23611,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 7,
-            "unsupported-concat-part": 1
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -23742,8 +23633,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 7,
-            "unsupported-concat-part": 1
+            "unsupported-jsonpath": 1
           }
         }
       },
@@ -23928,7 +23818,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -23971,7 +23861,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -24014,7 +23904,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -24057,7 +23947,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -24100,7 +23990,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -24143,7 +24033,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -24186,7 +24076,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -24229,7 +24119,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -24272,7 +24162,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -24456,7 +24346,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -24499,7 +24389,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -24542,7 +24432,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 5
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -25183,8 +25073,7 @@
           "status": "partial",
           "fieldCount": 8,
           "manualReasons": {
-            "unsupported-jsonpath": 6,
-            "unsupported-concat-part": 1
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -25198,7 +25087,7 @@
           "status": "partial",
           "fieldCount": 3,
           "manualReasons": {
-            "unsupported-jsonpath": 2
+            "unsupported-jsonpath": 1
           }
         },
         "content": {
@@ -25212,8 +25101,7 @@
           "status": "partial",
           "fieldCount": 8,
           "manualReasons": {
-            "unsupported-jsonpath": 6,
-            "unsupported-concat-part": 1
+            "unsupported-jsonpath": 1
           }
         }
       },
@@ -25279,8 +25167,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 7,
-            "unsupported-concat-part": 1
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -25302,8 +25189,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 7,
-            "unsupported-concat-part": 1
+            "unsupported-jsonpath": 1
           }
         }
       },
@@ -25365,8 +25251,7 @@
           "status": "partial",
           "fieldCount": 8,
           "manualReasons": {
-            "unsupported-jsonpath": 6,
-            "unsupported-concat-part": 1
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -25380,7 +25265,7 @@
           "status": "partial",
           "fieldCount": 3,
           "manualReasons": {
-            "unsupported-jsonpath": 2
+            "unsupported-jsonpath": 1
           }
         },
         "content": {
@@ -25394,8 +25279,7 @@
           "status": "partial",
           "fieldCount": 8,
           "manualReasons": {
-            "unsupported-jsonpath": 6,
-            "unsupported-concat-part": 1
+            "unsupported-jsonpath": 1
           }
         }
       },
@@ -26618,8 +26502,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 6,
-            "unsupported-concat-part": 1
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -26633,7 +26516,7 @@
           "status": "partial",
           "fieldCount": 7,
           "manualReasons": {
-            "unsupported-jsonpath": 2
+            "unsupported-jsonpath": 1
           }
         },
         "content": {
@@ -26647,8 +26530,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 6,
-            "unsupported-concat-part": 1
+            "unsupported-jsonpath": 1
           }
         }
       },
@@ -26670,8 +26552,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 6,
-            "unsupported-concat-part": 1
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -26685,7 +26566,7 @@
           "status": "partial",
           "fieldCount": 7,
           "manualReasons": {
-            "unsupported-jsonpath": 2
+            "unsupported-jsonpath": 1
           }
         },
         "content": {
@@ -26699,8 +26580,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 6,
-            "unsupported-concat-part": 1
+            "unsupported-jsonpath": 1
           }
         }
       },
@@ -26717,12 +26597,9 @@
       "warningCodes": [],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-jsonpath": 4,
-            "unsupported-attribute-filter": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "candidate",
@@ -26798,12 +26675,9 @@
       "warningCodes": [],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-jsonpath": 4,
-            "unsupported-attribute-filter": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "candidate",
@@ -26926,8 +26800,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 7,
-            "unsupported-concat-part": 1
+            "unsupported-jsonpath": 1
           }
         },
         "bookInfo": {
@@ -26949,8 +26822,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-jsonpath": 7,
-            "unsupported-concat-part": 1
+            "unsupported-jsonpath": 1
           }
         }
       },
