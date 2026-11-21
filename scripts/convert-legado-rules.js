@@ -110,13 +110,13 @@ function parseLegacyChain(expression) {
       selection=parseSelection(bracket[2]);
       if (!selection) {
         let query=null;
-        const tagAttr=originalSegment.match(/^tag\.([a-zA-Z][\\w-]*)(\\[[^\\]]+\\])$/);
-        const classAttr=originalSegment.match(/^class\.([a-zA-Z_][\\w-]*)(\\[[^\\]]+\\])$/);
-        const idAttr=originalSegment.match(/^id\.([a-zA-Z_][\\w-]*)(\\[[^\\]]+\\])$/);
+        const tagAttr=originalSegment.match(/^tag\.([a-zA-Z][\w-]*)(\[[^\]]+\])$/);
+        const classAttr=originalSegment.match(/^class\.([a-zA-Z_][\w-]*)(\[[^\]]+\])$/);
+        const idAttr=originalSegment.match(/^id\.([a-zA-Z_][\w-]*)(\[[^\]]+\])$/);
         if(tagAttr) query=tagAttr[1]+tagAttr[2];
         else if(classAttr) query="."+classAttr[1]+classAttr[2];
         else if(idAttr) query="#"+idAttr[1]+idAttr[2];
-        else if(/^[a-zA-Z][\\w-]*(?:\\[[^\\]]+\\])+$/.test(originalSegment)) query=originalSegment;
+        else if(/^[a-zA-Z][\w-]*(?:\[[^\]]+\])+$/.test(originalSegment)) query=originalSegment;
         if(!query) return {status:"manual",reason:"unsupported-attribute-filter"};
         steps.push({kind:"css",query});
         continue;
@@ -141,14 +141,14 @@ function parseLegacyChain(expression) {
       steps.push({kind:"children",name:null,index,...(selection&&selection.mode!=="index"?{selection}:{})});
       continue;
     }
-    if (/^[.#][a-zA-Z_][\\w-]*(?:\\s|[>+~,:\\[])/.test(segment)) {
+    if (/^[.#][a-zA-Z_][\w-]*(?:\\s|[>+~,:\\[])/.test(segment)) {
       if (steps.length) return {status:"manual",reason:"mixed-css-and-chain"};
       return {status:"candidate",selector:{engine:"css",query:segment,output:"text"}};
     }
     let parts, kind;
-    if (/^\\.[a-zA-Z_][\\w-]*$/.test(segment)) {
+    if (/^\\.[a-zA-Z_][\w-]*$/.test(segment)) {
       kind="class"; parts=[segment.slice(1)];
-    } else if (/^#[a-zA-Z_][\\w-]*$/.test(segment)) {
+    } else if (/^#[a-zA-Z_][\w-]*$/.test(segment)) {
       kind="id"; parts=[segment.slice(1)];
     } else {
       const implicitTagIndex = segment.match(/^([a-zA-Z][\w-]*)\.(-?\d+)$/);
