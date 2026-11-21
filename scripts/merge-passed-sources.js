@@ -51,7 +51,21 @@ function main() {
   const candidates = [];
   for (const file of walk(ARTIFACTS).filter(file => /live-functional-test-passed-sources-\\d+-of-\\d+\\.json$/.test(file))) {
     const parsed = JSON.parse(fs.readFileSync(file, "utf8"));
-    if (Array.isArray(parsed)) candidates.push(...parsed);
+    const match = path.basename(file).match(/passed-sources-(\\d+)-of-(\\d+)\\.json$/);
+    if (!Array.isArray(parsed) || !match) continue;
+    const reportPath = path.join(path.dirname(file), `live-functional-test-${match[1]}-of-${match[2]}.json`);
+    if (!fs.existsSync(reportPath)) continue;
+    const report = JSON.parse(fs.readFileSync(reportPath, "utf8"));
+    for (const source of parsed) {
+      const host = (() => { try { return new URL(source.bookSourceUrl).hostname.toLowerCase(); } catch { return ""; } })();
+      const result = (report.results || []).find(item =>
+        item.provider === "luanmuc-candidate" && item.status === "passed" &&
+        item.name === source.bookSourceName && item.host === host
+      );
+      const contentStage = result && (result.stages || []).find(stage => stage.name === "content");
+      // A 150-character stub is not enough evidence for a usable novel chapter.
+      if (contentStage && Number(contentStage.length) >= 300) candidates.push(source);
+    }
   }
   const valid = candidates.filter(validateCandidate);
   if (!valid.length) {
