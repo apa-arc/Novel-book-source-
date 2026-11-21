@@ -5,7 +5,8 @@ import { searchNovelSource } from "../app/src/source-search.ts";
 import { fetchNovelDetail, fetchNovelChapterList, fetchNovelChapterContent } from "../app/src/source-catalog.ts";
 import type { NovelSource } from "../app/src/source.ts";
 
-const defaultKeywords = ["斗罗大陆", "斗破苍穹"];\nconst keywordsBySource: Record<string, string[]> = { "bsxiaoshuo-com": ["念念不忘遥相望", "傲娇甜妻：萌宝请助攻"] };
+const defaultKeywords = ["斗罗大陆", "斗破苍穹"];
+const keywordsBySource: Record<string, string[]> = { "bsxiaoshuo-com": ["念念不忘遥相望", "傲娇甜妻：萌宝请助攻"] };
 const raw = fs.readFileSync("development/candidate-subscription.json", "utf8");
 const parsed = parseSourceSubscription(raw);
 
