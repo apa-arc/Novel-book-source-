@@ -104,6 +104,18 @@ try{
  assert.deepEqual(rootWildcard.selector.path,[{kind:"wildcard"}]);
  const bareWildcard=parseLegacyChain("data[*].directory[*]");
  assert.equal(bareWildcard.status,"candidate");
+ const jsonSlice=parseLegacyChain("@json:$.data.data[1:]");
+ assert.equal(jsonSlice.status,"candidate");
+ assert.deepEqual(jsonSlice.selector.path[2],{kind:"slice",start:1,end:null,step:1});
+ const jsonUnion=parseLegacyChain("$.Novels[0,1]");
+ assert.equal(jsonUnion.status,"candidate");
+ assert.deepEqual(jsonUnion.selector.path[1],{kind:"union",indices:[0,1]});
+ const jsonFilter=parseLegacyChain('$.data.state[?(@.dataName = "x")].items[*]');
+ assert.equal(jsonFilter.status,"candidate");
+ const recursiveFilter=parseLegacyChain("$..[?(@.hasContent)]");
+ assert.equal(recursiveFilter.status,"candidate");
+ const dottedIndex=parseLegacyChain("$..chapterGroup.1.*");
+ assert.equal(dottedIndex.status,"candidate");
  const implicitIndex=parseLegacyChain("head@.1@text");
  assert.equal(implicitIndex.status,"candidate");
  assert.deepEqual(implicitIndex.selector.steps[1],{kind:"children",name:null,index:1});
