@@ -18,6 +18,7 @@ const SECONDARY_URL = "https://raw.githubusercontent.com/luanmuc/legado-book-sou
 const KEYWORD = "斗破苍穹";
 const TIMEOUT_MS = 12000;
 const MAX_BODY = 4 * 1024 * 1024;
+const MAX_RESULTS = 5000;
 const SHARD_COUNT = Number(process.env.TEST_SHARD_COUNT || 32);
 const SHARD_INDEX = Number(process.env.TEST_SHARD_INDEX || 0);
 const REPORT = path.join(ROOT, "reports", `live-functional-test-${SHARD_INDEX}-of-${SHARD_COUNT}.json`);
