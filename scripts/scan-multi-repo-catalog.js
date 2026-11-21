@@ -10,7 +10,7 @@ const INPUTS=[
  {id:"huanqingsha-main",url:"https://raw.githubusercontent.com/huanqingsha/legado-book-sources/main/legado-book-sources.json",repo:"huanqingsha/legado-book-sources",license:"not-declared"},
  {id:"jiwangyihao-source-j",url:"https://raw.githubusercontent.com/jiwangyihao/source-j-legado/main/bilinovel.json",repo:"jiwangyihao/source-j-legado",license:"MPL-2.0"}
 ];
-const ADULT=/🔞|成人|色情|情色|R18|18|十八|PO18|肉文|淫秽|海棠|御书屋|御宅|绅士|涩|腐|耽美|BL文学|污|渣女|脸红心跳|第一版主|日居月诸|UAA|Hentai|Erotic/i;
+const ADULT=/🔞|成人|色情|情色|R18|18|十八|PO18|肉文|淫秽|海棠|御书屋|御宅|绅士|涩|腐|耽美|BL文学|污|渣女|脸红心跳|第一版主|日居月诸|UAA|Hentai|Erotic|萝莉|BL文库/i;
 const NON_NOVEL=/漫画|動漫|动漫|韩漫|有声|听书|古籍|国学|诗词|詞典|词典|百科|维基|公版|杂志|影视|短剧|网盘|音乐|播客|英文|英语|English|日语|Japanese|原版小说|RSS|视频|音频|LightNovel|腐小说/i;
 const SCRIPT=/@js:|<js>|\bjavascript\b|\bfunction\b|\breturn\b|\$\{|java\.net|org\.jsoup|Packages\./i;
 const PAYWALL=/💰|🏷|VIP|付费|会员|需登录|须登陆|需要登录|正版|搜书专用/i;
@@ -60,7 +60,7 @@ async function main(){
   const prior=JSON.parse(fs.readFileSync(priorPath,"utf8"));
   const st=stats["liufuyou-yck-metadata"]={records:(prior.sources||[]).length,adult:0,nonNovel:0,paywall:0,nonHttps:0,loginOrCookie:0,script:0,duplicate:0,accepted:0};
   for(const s of prior.sources||[]){
-   const name=String(s.name||"").trim();const group=String(s.group||"");const label=name+" "+group;
+   const name=String(s.name||"").trim();const group=String(s.group||"");const label=name+" "+group+" "+String(s.baseUrl||"");
    if(ADULT.test(label)){st.adult++;continue;}
    if(NON_NOVEL.test(label)){st.nonNovel++;continue;}
    if(PAYWALL.test(label)){st.paywall++;continue;}
