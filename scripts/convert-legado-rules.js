@@ -190,17 +190,19 @@ function parseLegacyChain(expression) {
   let raw = String(expression).trim();
   if (!raw) return {status:"empty"};
   if (SCRIPT_RE.test(raw)) return {status:"manual",reason:"script-or-template"};
-  if(raw.includes("###")) return {status:"manual",reason:"unsupported-regex-mode"};
-  const regexParts=splitTopLevel(raw,"##");
+  const replaceFirst=raw.endsWith("###");
+  if(raw.includes("###")&&!replaceFirst) return {status:"manual",reason:"unsupported-regex-mode"};
+  const regexInput=replaceFirst?raw.slice(0,-3):raw;
+  const regexParts=splitTopLevel(regexInput,"##");
   if(regexParts){
-    if(regexParts.length<2||(regexParts.length>3&&(regexParts.length-1)%2!==0)) return {status:"manual",reason:"unsupported-regex-transform"};
+    if(regexParts.length<2||(regexParts.length>3&&(regexParts.length-1)%2!==0)||(replaceFirst&&regexParts.length!==3)) return {status:"manual",reason:"unsupported-regex-transform"};
     const base=regexParts[0]?parseLegacyChain(regexParts[0]):{status:"candidate",selector:{engine:"self",output:"text"}};
     if(base.status!=="candidate") return base;
     let selector=base.selector;
     for(let i=1;i<regexParts.length;i+=2){
       const pattern=regexParts[i],replacement=regexParts[i+1]||"";
       if(!pattern||pattern.length>256) return {status:"manual",reason:"unsupported-regex-transform"};
-      selector={engine:"replace",input:selector,pattern,replacement};
+      selector={engine:"replace",input:selector,pattern,replacement,replaceFirst};
     }
     return {status:"candidate",selector};
   }
@@ -209,6 +211,12 @@ function parseLegacyChain(expression) {
     const parts=fallbackParts.map(parseLegacyChain);
     if(parts.some(x=>x.status!=="candidate")) return {status:"manual",reason:"unsupported-fallback-part"};
     return {status:"candidate",selector:{engine:"composite",operator:"fallback",parts:parts.map(x=>x.selector)}};
+  }
+  const zipParts=splitTopLevel(raw,"%%");
+  if(zipParts){
+    const parts=zipParts.map(parseLegacyChain);
+    if(parts.some(x=>x.status!=="candidate")) return {status:"manual",reason:"unsupported-zip-part"};
+    return {status:"candidate",selector:{engine:"composite",operator:"zip",parts:parts.map(x=>x.selector)}};
   }
   const concatParts=splitTopLevel(raw,"&&");
   if(concatParts){
