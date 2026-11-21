@@ -58,12 +58,22 @@ async function testTerm(source: NovelSource, keyword: string): Promise<TermResul
     return out;
   }
 
-  const match = page.items.find(item => item.title.toLocaleLowerCase().includes(keyword.toLocaleLowerCase())) || page.items[0];
+  const match = page.items.find(item => item.title.toLocaleLowerCase().includes(keyword.toLocaleLowerCase()));
+  if (!match) {
+    out.status = "search-only";
+    out.stages.push({ stage: "书名匹配", status: "failed", detail: "搜索请求成功且有结果，但没有书名包含关键词「" + keyword + "」的书目；不拿无关书目继续测试阅读" });
+    out.stages.push({ stage: "详情", status: "skipped", detail: "没有匹配书目" });
+    out.stages.push({ stage: "目录", status: "skipped", detail: "没有匹配书目" });
+    out.stages.push({ stage: "正文", status: "skipped", detail: "没有匹配章节" });
+    return out;
+  }
   out.selectedTitle = match.title;
   out.status = "search-only";
+  let detailOk = false;
   try {
     const detail = await fetchNovelDetail(source, match, client);
     if (!detail.title) throw new Error("详情页没有书名");
+    detailOk = true;
     out.stages.push({ stage: "详情", status: "passed", detail: detail.title });
   } catch (error) {
     out.readingStatus = "detail-failed";
@@ -92,8 +102,8 @@ async function testTerm(source: NovelSource, keyword: string): Promise<TermResul
       const last = await fetchNovelChapterContent(source, lastChapter, client);
       if (!last.content || last.content.trim().length < 100) throw new Error("末章正文不可读或少于100字");
     }
-    out.readingStatus = "readable";
-    out.status = "passed";
+    out.readingStatus = detailOk ? "readable" : "detail-failed";
+    out.status = detailOk ? "passed" : "search-only";
     out.stages.push({ stage: "正文", status: "passed", detail: "首章及末章正文均通过100字检查" });
   } catch (error) {
     out.readingStatus = "content-failed";
