@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T17:43:06.514Z",
+  "generatedAt": "2026-11-21T18:12:04.748Z",
   "testStandard": "AppleNovelApp search semantics + separately reported reading stages; each search retries up to 3 times; transient Node network errors are environment-inconclusive; title relevance is separate from request success; reading tests only use title-matching results; sources run sequentially with 1.2s cooldown",
   "keywords": [
     "斗罗",
@@ -9,20 +9,20 @@
     "total": 10,
     "appCompatible": 10,
     "appUnsupported": 0,
-    "readableBoth": 4,
-    "readableOne": 1,
-    "searchOrCatalogOnly": 3,
+    "readableBoth": 5,
+    "readableOne": 2,
+    "searchOrCatalogOnly": 1,
     "environmentInconclusive": 2,
     "failed": 0,
     "searchPassed": 16,
-    "searchFailed": 0,
-    "searchInconclusive": 4,
+    "searchFailed": 1,
+    "searchInconclusive": 3,
     "searchRequestsPassed": 16,
     "searchZeroResults": 2,
     "searchHasResultsButNoTitleMatch": 1,
     "readingSkippedForNoTitleMatch": 1,
     "searchRetriesUsed": 4,
-    "chapterContentPassed": 9
+    "chapterContentPassed": 12
   },
   "results": [
     {
@@ -44,7 +44,7 @@
             {
               "stage": "目录",
               "status": "passed",
-              "detail": "获取 578 章；首章「完本感言，新书已发。」"
+              "detail": "获取 578 章；首章「完本感言，新书已发。」；尝试 1 次"
             },
             {
               "stage": "详情（可选）",
@@ -77,7 +77,7 @@
             {
               "stage": "目录",
               "status": "passed",
-              "detail": "获取 51 章；首章「后记」"
+              "detail": "获取 51 章；首章「后记」；尝试 1 次"
             },
             {
               "stage": "详情（可选）",
@@ -172,81 +172,6 @@
     {
       "id": "xinbiquge-info",
       "name": "新笔趣阁小说网",
-      "status": "search-or-catalog-only",
-      "terms": {
-        "斗罗": {
-          "keyword": "斗罗",
-          "status": "search-only",
-          "searchStatus": "passed",
-          "readingStatus": "catalog-failed",
-          "stages": [
-            {
-              "stage": "搜索",
-              "status": "passed",
-              "detail": "App 搜索请求及解析成功；返回 20 条结果；标题匹配关键词 20 条；尝试 1 次"
-            },
-            {
-              "stage": "目录",
-              "status": "failed",
-              "detail": "书源服务器返回 HTTP 502。"
-            },
-            {
-              "stage": "详情",
-              "status": "skipped",
-              "detail": "App 阅读流程先加载目录；目录失败后不会继续详情请求"
-            },
-            {
-              "stage": "正文",
-              "status": "skipped",
-              "detail": "目录不可用，无法取得章节链接"
-            }
-          ],
-          "attempts": 1,
-          "resultCount": 20,
-          "matchingResultCount": 20,
-          "relevanceStatus": "matched",
-          "selectedTitle": "[玄幻]斗罗之吞天帝",
-          "error": "书源服务器返回 HTTP 502。"
-        },
-        "斗破": {
-          "keyword": "斗破",
-          "status": "search-only",
-          "searchStatus": "passed",
-          "readingStatus": "catalog-failed",
-          "stages": [
-            {
-              "stage": "搜索",
-              "status": "passed",
-              "detail": "App 搜索请求及解析成功；返回 20 条结果；标题匹配关键词 17 条；尝试 1 次"
-            },
-            {
-              "stage": "目录",
-              "status": "failed",
-              "detail": "书源服务器返回 HTTP 502。"
-            },
-            {
-              "stage": "详情",
-              "status": "skipped",
-              "detail": "App 阅读流程先加载目录；目录失败后不会继续详情请求"
-            },
-            {
-              "stage": "正文",
-              "status": "skipped",
-              "detail": "目录不可用，无法取得章节链接"
-            }
-          ],
-          "attempts": 1,
-          "resultCount": 20,
-          "matchingResultCount": 17,
-          "relevanceStatus": "matched",
-          "selectedTitle": "[网游]斗破：拍卖万倍返还，我无敌了",
-          "error": "书源服务器返回 HTTP 502。"
-        }
-      }
-    },
-    {
-      "id": "biquge-17177",
-      "name": "笔趣阁小说网（17177）",
       "status": "readable-both",
       "terms": {
         "斗罗": {
@@ -263,24 +188,24 @@
             {
               "stage": "目录",
               "status": "passed",
-              "detail": "获取 100 章；首章「D1.主角开局」"
+              "detail": "获取 100 章；首章「第1章 诞生」；尝试 1 次"
             },
             {
               "stage": "详情（可选）",
               "status": "passed",
-              "detail": "详情页读取成功：[网游]圣骑斗罗"
+              "detail": "详情页读取成功：斗罗之吞天帝"
             },
             {
               "stage": "正文",
               "status": "passed",
-              "detail": "首章正文读取成功（797 字符）"
+              "detail": "首章正文读取成功（855 字符）"
             }
           ],
           "attempts": 1,
           "resultCount": 20,
           "matchingResultCount": 20,
           "relevanceStatus": "matched",
-          "selectedTitle": "[网游]圣骑斗罗"
+          "selectedTitle": "[玄幻]斗罗之吞天帝"
         },
         "斗破": {
           "keyword": "斗破",
@@ -296,7 +221,81 @@
             {
               "stage": "目录",
               "status": "passed",
-              "detail": "获取 66 章；首章「第一章 萧家新成员—萧薰儿」"
+              "detail": "获取 100 章；首章「第一章拍卖万倍返还系统！」；尝试 1 次"
+            },
+            {
+              "stage": "详情（可选）",
+              "status": "passed",
+              "detail": "详情页读取成功：斗破：拍卖万倍返还，我无敌了"
+            },
+            {
+              "stage": "正文",
+              "status": "passed",
+              "detail": "首章正文读取成功（996 字符）"
+            }
+          ],
+          "attempts": 1,
+          "resultCount": 20,
+          "matchingResultCount": 17,
+          "relevanceStatus": "matched",
+          "selectedTitle": "[网游]斗破：拍卖万倍返还，我无敌了"
+        }
+      }
+    },
+    {
+      "id": "biquge-17177",
+      "name": "笔趣阁小说网（17177）",
+      "status": "readable-one",
+      "terms": {
+        "斗罗": {
+          "keyword": "斗罗",
+          "status": "search-only",
+          "searchStatus": "passed",
+          "readingStatus": "catalog-failed",
+          "stages": [
+            {
+              "stage": "搜索",
+              "status": "passed",
+              "detail": "App 搜索请求及解析成功；返回 20 条结果；标题匹配关键词 20 条；尝试 1 次"
+            },
+            {
+              "stage": "目录",
+              "status": "failed",
+              "detail": "目录最多重试 3 次后仍失败：书源服务器返回 HTTP 404。"
+            },
+            {
+              "stage": "详情",
+              "status": "skipped",
+              "detail": "App 阅读流程先加载目录；目录失败后不会继续详情请求"
+            },
+            {
+              "stage": "正文",
+              "status": "skipped",
+              "detail": "目录不可用，无法取得章节链接"
+            }
+          ],
+          "attempts": 1,
+          "resultCount": 20,
+          "matchingResultCount": 20,
+          "relevanceStatus": "matched",
+          "selectedTitle": "[网游]斗罗：来自一人之下的唐门弟子",
+          "error": "书源服务器返回 HTTP 404。"
+        },
+        "斗破": {
+          "keyword": "斗破",
+          "status": "readable",
+          "searchStatus": "passed",
+          "readingStatus": "readable",
+          "stages": [
+            {
+              "stage": "搜索",
+              "status": "passed",
+              "detail": "App 搜索请求及解析成功；返回 20 条结果；标题匹配关键词 17 条；尝试 1 次"
+            },
+            {
+              "stage": "目录",
+              "status": "passed",
+              "detail": "获取 66 章；首章「第一章 萧家新成员—萧薰儿」；尝试 1 次"
             },
             {
               "stage": "详情（可选）",
@@ -320,13 +319,13 @@
     {
       "id": "d8zw-com",
       "name": "第八中文网",
-      "status": "search-or-catalog-only",
+      "status": "readable-both",
       "terms": {
         "斗罗": {
           "keyword": "斗罗",
-          "status": "search-only",
+          "status": "readable",
           "searchStatus": "passed",
-          "readingStatus": "catalog-failed",
+          "readingStatus": "readable",
           "stages": [
             {
               "stage": "搜索",
@@ -335,32 +334,31 @@
             },
             {
               "stage": "目录",
-              "status": "failed",
-              "detail": "书源服务器返回 HTTP 502。"
+              "status": "passed",
+              "detail": "获取 100 章；首章「第一章：吾乃审判之神，审判恶人玉小刚！」；尝试 1 次"
             },
             {
-              "stage": "详情",
-              "status": "skipped",
-              "detail": "App 阅读流程先加载目录；目录失败后不会继续详情请求"
+              "stage": "详情（可选）",
+              "status": "passed",
+              "detail": "详情页读取成功：我为审判神，审判斗罗十大恶人"
             },
             {
               "stage": "正文",
-              "status": "skipped",
-              "detail": "目录不可用，无法取得章节链接"
+              "status": "passed",
+              "detail": "首章正文读取成功（956 字符）"
             }
           ],
           "attempts": 1,
           "resultCount": 20,
           "matchingResultCount": 20,
           "relevanceStatus": "matched",
-          "selectedTitle": "[网游]我为审判神，审判斗罗十大恶人",
-          "error": "书源服务器返回 HTTP 502。"
+          "selectedTitle": "[网游]我为审判神，审判斗罗十大恶人"
         },
         "斗破": {
           "keyword": "斗破",
-          "status": "search-only",
+          "status": "readable",
           "searchStatus": "passed",
-          "readingStatus": "catalog-failed",
+          "readingStatus": "readable",
           "stages": [
             {
               "stage": "搜索",
@@ -369,26 +367,25 @@
             },
             {
               "stage": "目录",
-              "status": "failed",
-              "detail": "书源服务器返回 HTTP 502。"
+              "status": "passed",
+              "detail": "获取 11 章；首章「第一章：系统的正确打开方式」；尝试 1 次"
             },
             {
-              "stage": "详情",
-              "status": "skipped",
-              "detail": "App 阅读流程先加载目录；目录失败后不会继续详情请求"
+              "stage": "详情（可选）",
+              "status": "passed",
+              "detail": "详情页读取成功：斗破之这个系统喜欢被动"
             },
             {
               "stage": "正文",
-              "status": "skipped",
-              "detail": "目录不可用，无法取得章节链接"
+              "status": "passed",
+              "detail": "首章正文读取成功（1270 字符）"
             }
           ],
           "attempts": 1,
           "resultCount": 20,
           "matchingResultCount": 17,
           "relevanceStatus": "matched",
-          "selectedTitle": "[网游]斗破之这个系统喜欢被动",
-          "error": "书源服务器返回 HTTP 502。"
+          "selectedTitle": "[网游]斗破之这个系统喜欢被动"
         }
       }
     },
@@ -411,7 +408,7 @@
             {
               "stage": "目录",
               "status": "passed",
-              "detail": "获取 128 章；首章「第1章 高仁」"
+              "detail": "获取 128 章；首章「第1章 高仁」；尝试 1 次"
             },
             {
               "stage": "详情（可选）",
@@ -421,7 +418,7 @@
             {
               "stage": "正文",
               "status": "passed",
-              "detail": "首章正文读取成功（1176 字符）"
+              "detail": "首章正文读取成功（1178 字符）"
             }
           ],
           "attempts": 1,
@@ -444,7 +441,7 @@
             {
               "stage": "目录",
               "status": "passed",
-              "detail": "获取 170 章；首章「第一章 迦南学院，少年得志！」"
+              "detail": "获取 170 章；首章「第一章 迦南学院，少年得志！」；尝试 1 次"
             },
             {
               "stage": "详情（可选）",
@@ -454,7 +451,7 @@
             {
               "stage": "正文",
               "status": "passed",
-              "detail": "首章正文读取成功（1226 字符）"
+              "detail": "首章正文读取成功（1223 字符）"
             }
           ],
           "attempts": 1,
@@ -468,7 +465,7 @@
     {
       "id": "xqianqian-m",
       "name": "千千小说",
-      "status": "environment-inconclusive",
+      "status": "partly-inconclusive",
       "terms": {
         "斗罗": {
           "keyword": "斗罗",
@@ -502,14 +499,14 @@
         },
         "斗破": {
           "keyword": "斗破",
-          "status": "search-inconclusive",
-          "searchStatus": "inconclusive",
+          "status": "failed",
+          "searchStatus": "failed",
           "readingStatus": "not-tested",
           "stages": [
             {
               "stage": "搜索",
-              "status": "inconclusive",
-              "detail": "连续 3 次请求仍未成功：书源网络请求失败，请检查网络或站点状态。"
+              "status": "failed",
+              "detail": "连续 3 次请求仍未成功：书源服务器返回 HTTP 500。"
             },
             {
               "stage": "目录",
@@ -528,7 +525,7 @@
             }
           ],
           "attempts": 3,
-          "error": "书源网络请求失败，请检查网络或站点状态。"
+          "error": "书源服务器返回 HTTP 500。"
         }
       }
     },
@@ -551,7 +548,7 @@
             {
               "stage": "目录",
               "status": "passed",
-              "detail": "获取 129 章；首章「1. 是哪个刁民要害朕？！」"
+              "detail": "获取 129 章；首章「1. 是哪个刁民要害朕？！」；尝试 1 次"
             },
             {
               "stage": "详情（可选）",
@@ -690,7 +687,7 @@
             {
               "stage": "目录",
               "status": "passed",
-              "detail": "获取 2348 章；首章「第1页」"
+              "detail": "获取 2348 章；首章「第1页」；尝试 1 次"
             },
             {
               "stage": "详情（可选）",
@@ -723,7 +720,7 @@
             {
               "stage": "目录",
               "status": "passed",
-              "detail": "获取 126 章；首章「第1页」"
+              "detail": "获取 126 章；首章「第1页」；尝试 1 次"
             },
             {
               "stage": "详情（可选）",
