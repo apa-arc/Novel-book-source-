@@ -163,6 +163,16 @@ try{
  const zipExpression=parseLegacyChain("class.a%%class.b");
  assert.equal(zipExpression.status,"candidate");
  assert.equal(zipExpression.selector.operator,"zip");
+ const putExpression=parseLegacyChain("$.book_name@put:{bid:book_id,bookTitle:$.title}");
+ assert.equal(putExpression.status,"candidate");
+ assert.equal(putExpression.selector.engine,"put");
+ assert.equal(putExpression.selector.assignments.length,2);
+ const getExpression=parseLegacyChain("@get:bid");
+ assert.equal(getExpression.status,"candidate");
+ assert.equal(getExpression.selector.engine,"get");
+ const invalidPut=parseLegacyChain("$.book_name@put:{bid:}");
+ assert.equal(invalidPut.status,"manual");
+ assert.equal(invalidPut.reason,"unsupported-put-assignment");
  const literal=parseLegacyChain("@text: - 作者：");
  assert.equal(literal.status,"candidate");
  assert.equal(literal.selector.value," - 作者：");
