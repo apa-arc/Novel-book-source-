@@ -42,7 +42,7 @@ function nodeSummary(node) {
   }));
   const search = await get(SEARCH);
   const searchDoc = parseHTML(search.html).document;
-  const searchLinks = [...searchDoc.querySelectorAll("a[href]")].map(a => ({ text: (a.textContent || "").trim().replace(/\\s+/g, " ").slice(0, 100), href: a.getAttribute("href") || "" })).filter(a => /\\/mulu\\//i.test(a.href));
+  const searchLinks = [...searchDoc.querySelectorAll("a[href]")].map(a => ({ text: (a.textContent || "").trim().replace(/\s+/g, " ").slice(0, 100), href: a.getAttribute("href") || "" })).filter(a => /\/mulu\//i.test(a.href));
   const book = await get(BOOK);
   const bookDoc = parseHTML(book.html).document;
   const chapter = await get(CHAPTER);
