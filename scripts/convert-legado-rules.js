@@ -134,7 +134,7 @@ function parseSimpleXPath(expression) {
       const position=rest.match(/^\[(\d+)\]/);
       if(predicate){
         const value=predicate[3].replace(/\\/g,"\\\\").replace(/"/g,'\\"');
-        css+="["+predicate[1]+"=\\""+value+"\\"]";
+        css += "[" + predicate[1] + '="' + value + '"]';
         rest=rest.slice(predicate[0].length);
       }else if(position){
         css+=":nth-of-type("+position[1]+")";
