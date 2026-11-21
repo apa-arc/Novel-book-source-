@@ -4,8 +4,8 @@
   "name": "小说源",
   "description": "普通小说统一订阅；来源发现问题后持续修复或下架。",
   "repository": "https://github.com/apa-arc/Novel-book-source-",
-  "updatedAt": "2026-11-21T20:00:00.000Z",
-  "sourceCount": 6,
+  "updatedAt": "2026-11-21T20:30:00.000Z",
+  "sourceCount": 8,
   "sources": [
     {
       "id": "biquluo-la",
@@ -263,6 +263,90 @@
       },
       "testOnly": true,
       "testOnlyReason": "从公开上游 GET 搜索规则转换；已将详情、目录、正文映射为 CSS 规则，尚未完成当前站点实时与宿主实测。"
+    },
+    {
+      "id": "deqi-deqixs",
+      "name": "得奇小说网",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "普通小说网页源；GET 搜索，详情、目录与正文采用 CSS 规则，待实测。",
+      "baseUrl": "https://www.deqixs.com/",
+      "domains": [
+        "www.deqixs.com"
+      ],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/deqi-deqixs.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/deqi-deqixs.js",
+      "appConfig": {
+        "searchUrl": "https://www.deqixs.com/tag/?key={keyword}",
+        "bookUrl": "https://www.deqixs.com/",
+        "chapterListUrl": "https://www.deqixs.com/{bookUrl}",
+        "chapterUrl": "https://www.deqixs.com/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": ".item",
+            "titleSelector": "h3 a",
+            "urlSelector": "h3 a",
+            "authorSelector": "p a"
+          },
+          "detail": {
+            "titleSelector": ".itemtxt h1 a",
+            "descriptionSelector": ".des p"
+          },
+          "chapters": {
+            "itemSelector": "#list a",
+            "titleSelector": "a",
+            "urlSelector": "a"
+          },
+          "content": {
+            "contentSelector": ".con",
+            "titleSelector": "h1"
+          }
+        }
+      },
+      "testOnly": true,
+      "testOnlyReason": "从公开 AOAOSTAR 规则转换为本仓库 GET/CSS 配置；搜索、详情、目录、正文选择器已映射，尚未完成当前站点实时与宿主四阶段实测。"
+    },
+    {
+      "id": "sanyi-31xs",
+      "name": "三一小说",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "普通小说网页源；GET 搜索，详情、目录与正文采用 CSS 规则，待实测。",
+      "baseUrl": "https://www.31xs.com/",
+      "domains": [
+        "www.31xs.com"
+      ],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/sanyi-31xs.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/sanyi-31xs.js",
+      "appConfig": {
+        "searchUrl": "https://www.31xs.com/search.php?keyword={keyword}",
+        "bookUrl": "https://www.31xs.com/",
+        "chapterListUrl": "https://www.31xs.com/{bookUrl}",
+        "chapterUrl": "https://www.31xs.com/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": "#bookcase_list tr",
+            "titleSelector": "td:nth-child(2) a",
+            "urlSelector": "td:nth-child(2) a",
+            "authorSelector": "td:nth-child(4)"
+          },
+          "detail": {
+            "titleSelector": "#info h1",
+            "descriptionSelector": "#intro"
+          },
+          "chapters": {
+            "itemSelector": "#list dl dd",
+            "titleSelector": "a",
+            "urlSelector": "a"
+          },
+          "content": {
+            "contentSelector": "#content p",
+            "titleSelector": "h1"
+          }
+        }
+      },
+      "testOnly": true,
+      "testOnlyReason": "从公开 AOAOSTAR 规则转换为本仓库 GET/CSS 配置；搜索、详情、目录、正文选择器已映射，尚未完成当前站点实时与宿主四阶段实测。"
     }
   ]
 }
