@@ -6,7 +6,6 @@ const css = (query, output = "text") => ({ engine: "css", query, output });
 module.exports = createAdapter({
   baseUrl: "https://m.111bz.cc/",
   domains: ["www.111bz.cc", "m.111bz.cc"],
-  domains: ["www.111bz.cc"],
   search: {
     url: (keyword, page) => "https://www.111bz.cc/modules/article/search.php?searchkey=" +
       encodeURIComponent(keyword) + "&searchtype=articlename&page=" + encodeURIComponent(String(page)),
