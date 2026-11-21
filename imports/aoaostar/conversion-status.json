@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T02:06:14.881Z",
+  "generatedAt": "2026-11-21T02:08:27.612Z",
   "provider": "AOAOSTAR / Legado",
   "sourceCount": 3907,
   "counts": {
-    "candidate": 613,
-    "partial": 2671,
+    "candidate": 629,
+    "partial": 2655,
     "manual": 623,
     "unavailable": 0
   },
@@ -1019,8 +1019,7 @@
           "status": "partial",
           "fieldCount": 8,
           "manualReasons": {
-            "script-or-template": 1,
-            "unsupported-template-expression": 1
+            "script-or-template": 1
           }
         }
       },
@@ -3789,7 +3788,6 @@
           "status": "partial",
           "fieldCount": 5,
           "manualReasons": {
-            "unsupported-regex-transform": 1,
             "script-or-template": 1
           }
         },
@@ -4090,8 +4088,7 @@
           "status": "partial",
           "fieldCount": 4,
           "manualReasons": {
-            "script-or-template": 1,
-            "unsupported-regex-transform": 1
+            "script-or-template": 1
           }
         },
         "explore": {
@@ -6373,8 +6370,7 @@
           "status": "partial",
           "fieldCount": 10,
           "manualReasons": {
-            "script-or-template": 1,
-            "unsupported-regex-mode": 1
+            "script-or-template": 1
           }
         },
         "bookInfo": {
@@ -7291,8 +7287,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "script-or-template": 2,
-            "unsupported-regex-transform": 1
+            "script-or-template": 2
           }
         },
         "bookInfo": {
@@ -8436,11 +8431,9 @@
           }
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 6,
-          "manualReasons": {
-            "unsupported-regex-transform": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -8529,8 +8522,7 @@
           "status": "partial",
           "fieldCount": 6,
           "manualReasons": {
-            "script-or-template": 2,
-            "unsupported-regex-transform": 1
+            "script-or-template": 2
           }
         },
         "content": {
@@ -11513,11 +11505,9 @@
           "manualReasons": {}
         },
         "explore": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 8,
-          "manualReasons": {
-            "unsupported-concat-part": 1
-          }
+          "manualReasons": {}
         }
       },
       "redistributionStatus": "not-assessed",
@@ -14038,7 +14028,7 @@
       "index": 337,
       "name": "笔趣阁qu-la",
       "baseUrl": "https://www.qu-la.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [],
       "groups": {
         "search": {
@@ -14047,11 +14037,9 @@
           "manualReasons": {}
         },
         "bookInfo": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 6,
-          "manualReasons": {
-            "unsupported-regex-transform": 4
-          }
+          "manualReasons": {}
         },
         "toc": {
           "status": "candidate",
@@ -17533,8 +17521,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "script-or-template": 2,
-            "unsupported-regex-transform": 1
+            "script-or-template": 2
           }
         },
         "bookInfo": {
@@ -17576,8 +17563,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "script-or-template": 2,
-            "unsupported-regex-transform": 1
+            "script-or-template": 2
           }
         },
         "bookInfo": {
@@ -18118,7 +18104,7 @@
       "index": 435,
       "name": "ハーメルン",
       "baseUrl": "https://syosetu.org",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -18134,11 +18120,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 4,
-          "manualReasons": {
-            "unsupported-fallback-part": 2
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -18620,15 +18604,13 @@
       "index": 447,
       "name": "爱尚小说网",
       "baseUrl": "https://www.23hh.la",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 7,
-          "manualReasons": {
-            "unsupported-fallback-part": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "candidate",
@@ -19445,7 +19427,7 @@
       "index": 467,
       "name": "飞悦凡文网",
       "baseUrl": "https://www.feiyuefw.net",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -19466,11 +19448,9 @@
           "manualReasons": {}
         },
         "content": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-regex-transform": 1
-          }
+          "manualReasons": {}
         },
         "explore": {
           "status": "candidate",
@@ -20269,11 +20249,9 @@
           }
         },
         "bookInfo": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-regex-mode": 1
-          }
+          "manualReasons": {}
         },
         "toc": {
           "status": "candidate",
@@ -22520,8 +22498,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "script-or-template": 2,
-            "unsupported-regex-transform": 1
+            "script-or-template": 2
           }
         },
         "bookInfo": {
@@ -28221,11 +28198,9 @@
           "manualReasons": {}
         },
         "explore": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 7,
-          "manualReasons": {
-            "unsupported-concat-part": 1
-          }
+          "manualReasons": {}
         }
       },
       "redistributionStatus": "not-assessed",
@@ -34655,11 +34630,9 @@
           "manualReasons": {}
         },
         "bookInfo": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 6,
-          "manualReasons": {
-            "unsupported-regex-transform": 1
-          }
+          "manualReasons": {}
         },
         "toc": {
           "status": "partial",
@@ -38182,8 +38155,7 @@
           "status": "partial",
           "fieldCount": 8,
           "manualReasons": {
-            "script-or-template": 2,
-            "unsupported-template-expression": 1
+            "script-or-template": 2
           }
         }
       },
@@ -38567,11 +38539,9 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 7,
-          "manualReasons": {
-            "unsupported-regex-mode": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "partial",
@@ -38738,7 +38708,6 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-regex-transform": 2,
             "unsupported-xpath": 1
           }
         },
@@ -38860,18 +38829,16 @@
       "index": 939,
       "name": "🔖天地中文网",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 8,
-          "manualReasons": {
-            "unsupported-fallback-part": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "candidate",
@@ -38889,11 +38856,9 @@
           "manualReasons": {}
         },
         "explore": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 8,
-          "manualReasons": {
-            "unsupported-fallback-part": 1
-          }
+          "manualReasons": {}
         }
       },
       "redistributionStatus": "not-assessed",
@@ -38912,8 +38877,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "script-or-template": 1,
-            "unsupported-concat-part": 1
+            "script-or-template": 1
           }
         },
         "bookInfo": {
@@ -40846,8 +40810,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "script-or-template": 2,
-            "unsupported-concat-part": 1
+            "script-or-template": 2
           }
         },
         "bookInfo": {
@@ -40973,18 +40936,14 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 10,
-          "manualReasons": {
-            "unsupported-regex-mode": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-regex-mode": 1
-          }
+          "manualReasons": {}
         },
         "toc": {
           "status": "partial",
@@ -41532,17 +41491,15 @@
       "index": 1003,
       "name": "💰天地中文网",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 8,
-          "manualReasons": {
-            "unsupported-fallback-part": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "candidate",
@@ -41560,11 +41517,9 @@
           "manualReasons": {}
         },
         "explore": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 8,
-          "manualReasons": {
-            "unsupported-fallback-part": 1
-          }
+          "manualReasons": {}
         }
       },
       "redistributionStatus": "not-assessed",
@@ -44899,7 +44854,6 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-concat-part": 1,
             "script-or-template": 1
           }
         },
@@ -50731,8 +50685,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "script-or-template": 2,
-            "unsupported-regex-transform": 1
+            "script-or-template": 2
           }
         },
         "bookInfo": {
@@ -52567,8 +52520,7 @@
           "status": "partial",
           "fieldCount": 8,
           "manualReasons": {
-            "script-or-template": 1,
-            "unsupported-template-expression": 1
+            "script-or-template": 1
           }
         }
       },
@@ -52632,8 +52584,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "script-or-template": 1,
-            "unsupported-concat-part": 2
+            "script-or-template": 1
           }
         },
         "bookInfo": {
@@ -52644,11 +52595,9 @@
           }
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 8,
-          "manualReasons": {
-            "unsupported-regex-transform": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "partial",
@@ -61170,7 +61119,6 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-concat-part": 1,
             "script-or-template": 1
           }
         },
@@ -62132,8 +62080,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "script-or-template": 2,
-            "unsupported-regex-transform": 1
+            "script-or-template": 2
           }
         },
         "bookInfo": {
@@ -63412,11 +63359,9 @@
           "manualReasons": {}
         },
         "explore": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 8,
-          "manualReasons": {
-            "unsupported-concat-part": 1
-          }
+          "manualReasons": {}
         }
       },
       "redistributionStatus": "not-assessed",
@@ -64415,7 +64360,6 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-concat-part": 1,
             "script-or-template": 1
           }
         },
@@ -65048,7 +64992,6 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-concat-part": 1,
             "script-or-template": 1
           }
         },
@@ -65371,8 +65314,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "script-or-template": 1,
-            "unsupported-concat-part": 1
+            "script-or-template": 1
           }
         },
         "bookInfo": {
@@ -65732,7 +65674,7 @@
       "index": 1587,
       "name": "⚠️ハーメルン(R18)",
       "baseUrl": "https://syosetu.org",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -65748,11 +65690,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 4,
-          "manualReasons": {
-            "unsupported-fallback-part": 2
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -67748,7 +67688,6 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-concat-part": 1,
             "script-or-template": 1
           }
         },
@@ -67836,7 +67775,6 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-concat-part": 1,
             "script-or-template": 1
           }
         },
@@ -70447,8 +70385,7 @@
           "status": "partial",
           "fieldCount": 10,
           "manualReasons": {
-            "script-or-template": 1,
-            "unsupported-concat-part": 2
+            "script-or-template": 1
           }
         },
         "bookInfo": {
@@ -71654,11 +71591,9 @@
           }
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-fallback-part": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -73290,11 +73225,9 @@
           "manualReasons": {}
         },
         "bookInfo": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 7,
-          "manualReasons": {
-            "unsupported-concat-part": 1
-          }
+          "manualReasons": {}
         },
         "toc": {
           "status": "partial",
@@ -73378,11 +73311,9 @@
           "manualReasons": {}
         },
         "bookInfo": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 7,
-          "manualReasons": {
-            "unsupported-concat-part": 1
-          }
+          "manualReasons": {}
         },
         "toc": {
           "status": "partial",
@@ -74195,18 +74126,16 @@
       "index": 1787,
       "name": "爱尚小说网",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 7,
-          "manualReasons": {
-            "unsupported-fallback-part": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "candidate",
@@ -74778,7 +74707,6 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-regex-transform": 2,
             "unsupported-xpath": 1
           }
         },
@@ -75720,8 +75648,7 @@
           "status": "partial",
           "fieldCount": 8,
           "manualReasons": {
-            "script-or-template": 2,
-            "unsupported-template-expression": 1
+            "script-or-template": 2
           }
         }
       },
@@ -77314,11 +77241,9 @@
           "manualReasons": {}
         },
         "explore": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 8,
-          "manualReasons": {
-            "unsupported-concat-part": 1
-          }
+          "manualReasons": {}
         }
       },
       "redistributionStatus": "not-assessed",
@@ -77383,18 +77308,14 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 10,
-          "manualReasons": {
-            "unsupported-regex-mode": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-regex-mode": 1
-          }
+          "manualReasons": {}
         },
         "toc": {
           "status": "partial",
@@ -78109,8 +78030,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "script-or-template": 2,
-            "unsupported-regex-transform": 1
+            "script-or-template": 2
           }
         },
         "bookInfo": {
@@ -78492,11 +78412,9 @@
           }
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-fallback-part": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -80002,11 +79920,9 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 7,
-          "manualReasons": {
-            "unsupported-regex-mode": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "partial",
@@ -81760,7 +81676,6 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-regex-transform": 2,
             "unsupported-xpath": 1
           }
         },
@@ -81920,7 +81835,7 @@
       "index": 1970,
       "name": "笔趣阁qu-la",
       "baseUrl": "https://www.qu-la.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [],
       "groups": {
         "search": {
@@ -81929,11 +81844,9 @@
           "manualReasons": {}
         },
         "bookInfo": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 6,
-          "manualReasons": {
-            "unsupported-regex-transform": 4
-          }
+          "manualReasons": {}
         },
         "toc": {
           "status": "candidate",
@@ -81971,7 +81884,6 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-regex-transform": 2,
             "unsupported-xpath": 1
           }
         },
@@ -82019,7 +81931,6 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-regex-transform": 2,
             "unsupported-xpath": 1
           }
         },
@@ -82153,7 +82064,6 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-regex-transform": 2,
             "unsupported-xpath": 1
           }
         },
@@ -82198,7 +82108,6 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-regex-transform": 2,
             "unsupported-xpath": 1
           }
         },
@@ -82285,7 +82194,6 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-regex-transform": 2,
             "unsupported-xpath": 1
           }
         },
@@ -84017,11 +83925,9 @@
           "manualReasons": {}
         },
         "explore": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-concat-part": 1
-          }
+          "manualReasons": {}
         }
       },
       "redistributionStatus": "not-assessed",
@@ -84498,8 +84404,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "script-or-template": 1,
-            "unsupported-concat-part": 1
+            "script-or-template": 1
           }
         },
         "bookInfo": {
@@ -86697,11 +86602,9 @@
           "manualReasons": {}
         },
         "bookInfo": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 6,
-          "manualReasons": {
-            "unsupported-regex-transform": 1
-          }
+          "manualReasons": {}
         },
         "toc": {
           "status": "partial",
@@ -87729,7 +87632,7 @@
       "index": 2109,
       "name": "ハーメルン",
       "baseUrl": "https://syosetu.org",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -87745,11 +87648,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 4,
-          "manualReasons": {
-            "unsupported-fallback-part": 2
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -88203,8 +88104,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "script-or-template": 2,
-            "unsupported-regex-transform": 1
+            "script-or-template": 2
           }
         },
         "bookInfo": {
@@ -88548,11 +88448,9 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 10,
-          "manualReasons": {
-            "unsupported-regex-transform": 2
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "partial",
@@ -89126,8 +89024,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "script-or-template": 2,
-            "unsupported-regex-transform": 1
+            "script-or-template": 2
           }
         },
         "bookInfo": {
@@ -89219,8 +89116,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "script-or-template": 2,
-            "unsupported-regex-transform": 1
+            "script-or-template": 2
           }
         },
         "bookInfo": {
@@ -94035,11 +93931,9 @@
           }
         },
         "bookInfo": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-regex-mode": 1
-          }
+          "manualReasons": {}
         },
         "toc": {
           "status": "candidate",
@@ -95279,7 +95173,6 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-regex-transform": 2,
             "unsupported-xpath": 1
           }
         },
@@ -95321,11 +95214,9 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-regex-transform": 2
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "partial",
@@ -95370,7 +95261,6 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-regex-transform": 2,
             "unsupported-xpath": 1
           }
         },
@@ -95412,11 +95302,9 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-regex-transform": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "candidate",
@@ -95499,7 +95387,6 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-regex-transform": 2,
             "unsupported-xpath": 1
           }
         },
@@ -95586,7 +95473,6 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-regex-transform": 2,
             "unsupported-xpath": 1
           }
         },
@@ -96544,7 +96430,7 @@
       "index": 2318,
       "name": "🔖九五小说①",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "login-config-present",
@@ -96557,11 +96443,9 @@
           "manualReasons": {}
         },
         "bookInfo": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 2,
-          "manualReasons": {
-            "unsupported-regex-transform": 1
-          }
+          "manualReasons": {}
         },
         "toc": {
           "status": "candidate",
@@ -96844,7 +96728,6 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-regex-transform": 2,
             "unsupported-xpath": 1
           }
         },
@@ -97106,7 +96989,6 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-regex-transform": 1,
             "unsupported-xpath": 1
           }
         },
@@ -97177,8 +97059,7 @@
           "status": "partial",
           "fieldCount": 8,
           "manualReasons": {
-            "script-or-template": 1,
-            "unsupported-template-expression": 1
+            "script-or-template": 1
           }
         }
       },
@@ -98974,7 +98855,6 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-regex-transform": 2,
             "unsupported-xpath": 1
           }
         },
@@ -99019,7 +98899,6 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-regex-transform": 2,
             "unsupported-xpath": 1
           }
         },
@@ -100936,11 +100815,9 @@
           }
         },
         "bookInfo": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 6,
-          "manualReasons": {
-            "unsupported-regex-transform": 4
-          }
+          "manualReasons": {}
         },
         "toc": {
           "status": "candidate",
@@ -114344,11 +114221,9 @@
           }
         },
         "bookInfo": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-regex-mode": 1
-          }
+          "manualReasons": {}
         },
         "toc": {
           "status": "candidate",
@@ -115411,18 +115286,16 @@
       "index": 2776,
       "name": "🔖天地中文网",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required",
         "request-header-or-cookie-config-present"
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 8,
-          "manualReasons": {
-            "unsupported-fallback-part": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "candidate",
@@ -115440,11 +115313,9 @@
           "manualReasons": {}
         },
         "explore": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 8,
-          "manualReasons": {
-            "unsupported-fallback-part": 1
-          }
+          "manualReasons": {}
         }
       },
       "redistributionStatus": "not-assessed",
@@ -118239,17 +118110,15 @@
       "index": 2845,
       "name": "天地中文网",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 8,
-          "manualReasons": {
-            "unsupported-fallback-part": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "candidate",
@@ -126810,11 +126679,9 @@
           }
         },
         "bookInfo": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-regex-transform": 1
-          }
+          "manualReasons": {}
         },
         "toc": {
           "status": "candidate",
@@ -127061,15 +126928,13 @@
       "index": 3061,
       "name": "爱尚小说网",
       "baseUrl": "https://www.23hh.la",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 7,
-          "manualReasons": {
-            "unsupported-fallback-part": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "candidate",
@@ -129417,18 +129282,14 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 10,
-          "manualReasons": {
-            "unsupported-regex-mode": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-regex-mode": 1
-          }
+          "manualReasons": {}
         },
         "toc": {
           "status": "partial",
@@ -131304,11 +131165,9 @@
           "manualReasons": {}
         },
         "bookInfo": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 6,
-          "manualReasons": {
-            "unsupported-regex-transform": 1
-          }
+          "manualReasons": {}
         },
         "toc": {
           "status": "partial",
@@ -132169,17 +132028,15 @@
       "index": 3184,
       "name": "爱尚小说②",
       "baseUrl": null,
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "https-required"
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 7,
-          "manualReasons": {
-            "unsupported-fallback-part": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "candidate",
@@ -134613,7 +134470,6 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-regex-transform": 2,
             "unsupported-xpath": 1
           }
         },
@@ -135861,11 +135717,9 @@
           "manualReasons": {}
         },
         "explore": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 7,
-          "manualReasons": {
-            "unsupported-concat-part": 1
-          }
+          "manualReasons": {}
         }
       },
       "redistributionStatus": "not-assessed",
@@ -136693,8 +136547,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "script-or-template": 2,
-            "unsupported-concat-part": 1
+            "script-or-template": 2
           }
         },
         "bookInfo": {
@@ -137369,7 +137222,6 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-regex-transform": 2,
             "unsupported-xpath": 1
           }
         },
@@ -142842,7 +142694,6 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-concat-part": 1,
             "script-or-template": 1
           }
         },
@@ -143116,11 +142967,9 @@
           "manualReasons": {}
         },
         "explore": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-concat-part": 1
-          }
+          "manualReasons": {}
         }
       },
       "redistributionStatus": "not-assessed",
@@ -143717,8 +143566,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "script-or-template": 2,
-            "unsupported-regex-transform": 1
+            "script-or-template": 2
           }
         },
         "bookInfo": {
@@ -145450,11 +145298,9 @@
           "manualReasons": {}
         },
         "explore": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 8,
-          "manualReasons": {
-            "unsupported-concat-part": 1
-          }
+          "manualReasons": {}
         }
       },
       "redistributionStatus": "not-assessed",
@@ -145799,7 +145645,6 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-regex-transform": 1,
             "unsupported-xpath": 1
           }
         },
@@ -146467,7 +146312,6 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-regex-transform": 2,
             "unsupported-xpath": 1
           }
         },
@@ -146552,7 +146396,6 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-regex-transform": 2,
             "unsupported-xpath": 1
           }
         },
@@ -148168,11 +148011,9 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-regex-transform": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "candidate",
@@ -149794,11 +149635,9 @@
           "manualReasons": {}
         },
         "explore": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-concat-part": 1
-          }
+          "manualReasons": {}
         }
       },
       "redistributionStatus": "not-assessed",
@@ -150477,7 +150316,6 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-concat-part": 1,
             "script-or-template": 1
           }
         },
@@ -153365,8 +153203,7 @@
           "status": "partial",
           "fieldCount": 10,
           "manualReasons": {
-            "script-or-template": 1,
-            "unsupported-concat-part": 2
+            "script-or-template": 1
           }
         },
         "bookInfo": {
@@ -153583,7 +153420,6 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-concat-part": 1,
             "script-or-template": 1
           }
         },
@@ -154728,8 +154564,7 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "script-or-template": 1,
-            "unsupported-concat-part": 1
+            "script-or-template": 1
           }
         },
         "bookInfo": {
@@ -154782,11 +154617,9 @@
           }
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-fallback-part": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -155891,7 +155724,7 @@
       "index": 3745,
       "name": "⚠️ハーメルン(R18)",
       "baseUrl": "https://syosetu.org",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "request-header-or-cookie-config-present"
       ],
@@ -155907,11 +155740,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 4,
-          "manualReasons": {
-            "unsupported-fallback-part": 2
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -156263,7 +156094,6 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-regex-transform": 2,
             "unsupported-xpath": 1
           }
         },
@@ -158427,11 +158257,9 @@
           "manualReasons": {}
         },
         "explore": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 8,
-          "manualReasons": {
-            "unsupported-concat-part": 1
-          }
+          "manualReasons": {}
         }
       },
       "redistributionStatus": "not-assessed",
@@ -160006,7 +159834,6 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-concat-part": 1,
             "script-or-template": 1
           }
         },
@@ -161368,7 +161195,6 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-concat-part": 1,
             "script-or-template": 1
           }
         },
@@ -161456,7 +161282,6 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "unsupported-concat-part": 1,
             "script-or-template": 1
           }
         },
