@@ -75,7 +75,7 @@ assert.equal(assessment.sources[0].licenseReviewMethod, "manual-public-page-revi
 assert.equal(assessment.sources[0].licenseEvidence.length, 1);
 assert.equal(assessment.sources[2].licenseStatus, "no-explicit-evidence-in-candidate-metadata");
 assert.equal(assessment.sources[2].redistributionStatus, "not-approved-unverified");
-assert.equal(assessment.licenseReviewSummary.sourceRecordsReviewed, 4);
+assert.equal(assessment.licenseReviewSummary.sourceRecordsReviewed, 5);
 assert.equal(assessment.licenseReviewSummary.manualSiteReviewDomains, 1);
 assert.equal(assessment.licenseReviewSummary.redistributionApprovedRecords, 0);
 assert.equal(assessment.sources[2].accessibilityStatus, "manual-review");
