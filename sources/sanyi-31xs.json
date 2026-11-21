@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "sanyi-31xs",
+  "name": "三一小说",
+  "kind": "public-web",
+  "version": "1.0.0",
+  "baseUrl": "https://www.31xs.com/",
+  "domains": [
+    "www.31xs.com"
+  ],
+  "script": "scripts/sanyi-31xs.js",
+  "enabled": true,
+  "testOnly": true,
+  "testOnlyReason": "从公开 AOAOSTAR 规则转换为本仓库 GET/CSS 配置；搜索、详情、目录、正文选择器已映射，尚未完成当前站点实时与宿主四阶段实测。",
+  "description": "普通小说网页源；GET 搜索，详情、目录与正文采用 CSS 规则，待实测。",
+  "licenseApproved": true,
+  "licenseType": "self-owned",
+  "licenseEvidence": "本仓库原创声明式适配配置与解析器，不包含小说正文。",
+  "licenseEvidenceUrl": "https://github.com/apa-arc/Novel-book-source-/blob/main/sources/sanyi-31xs.json",
+  "hostValidated": false,
+  "appConfig": {
+    "searchUrl": "https://www.31xs.com/search.php?keyword={keyword}",
+    "bookUrl": "https://www.31xs.com/",
+    "chapterListUrl": "https://www.31xs.com/{bookUrl}",
+    "chapterUrl": "https://www.31xs.com/{chapterUrl}",
+    "htmlRules": {
+      "search": {
+        "itemSelector": "#bookcase_list tr",
+        "titleSelector": "td:nth-child(2) a",
+        "urlSelector": "td:nth-child(2) a",
+        "authorSelector": "td:nth-child(4)"
+      },
+      "detail": {
+        "titleSelector": "#info h1",
+        "descriptionSelector": "#intro"
+      },
+      "chapters": {
+        "itemSelector": "#list dl dd",
+        "titleSelector": "a",
+        "urlSelector": "a"
+      },
+      "content": {
+        "contentSelector": "#content p",
+        "titleSelector": "h1"
+      }
+    }
+  }
+}
