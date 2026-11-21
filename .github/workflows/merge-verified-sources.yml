@@ -35,12 +35,12 @@ jobs:
         run: node scripts/merge-passed-sources.js
       - name: Commit newly verified sources
         run: |
-          if git diff --quiet -- subscription.json adult-subscription.json reports/verified-source-merge-summary.json; then
+          if git diff --quiet -- subscription.json adult-subscription.json reports/verified-source-merge-summary.json reports/live-functional-test-summary.json; then
             echo "No new functionally verified sources to add."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add subscription.json adult-subscription.json reports/verified-source-merge-summary.json
+          git add subscription.json adult-subscription.json reports/verified-source-merge-summary.json reports/live-functional-test-summary.json
           git commit -m "chore: add functionally verified ordinary sources"
           git push
