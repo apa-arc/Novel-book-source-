@@ -1,4 +1,4 @@
-name: Batch compatibility review for AOAOSTAR candidates
+name: Full compatibility review for AOAOSTAR sources
 
 on:
   workflow_dispatch:
@@ -23,7 +23,7 @@ jobs:
           node-version: 22
       - name: Validate converter and tests
         run: npm run validate
-      - name: Build sanitized report for all 704 candidates
+      - name: Build sanitized report for the full AOAOSTAR snapshot
         run: node scripts/batch-convert-aoaostar.js
       - name: Commit metadata-only conversion progress
         run: |
