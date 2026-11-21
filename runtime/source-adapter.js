@@ -111,11 +111,11 @@ function createAdapter(config) {
       const visited = new Set();
       const parts = [];
       let title;
+      const context = { variables: { ...(chapterVariables.get(currentUrl) || {}) } };
       for (let page = 0; page < 12; page++) {
         if (visited.has(currentUrl)) throw new Error("chapter-page-cycle");
         visited.add(currentUrl);
         const document = await load(currentUrl, http);
-        const context = { variables: { ...(chapterVariables.get(currentUrl) || {}) } };
         if (!title) title = first(document, config.content?.title, context);
         const body = first(document, config.content?.body, context);
         if (typeof body !== "string" || !body.trim()) {
