@@ -27,6 +27,39 @@ function scanTextQuality(value) {
   };
 }
 
+// Remove only high-confidence promotional blocks. Avoid deleting ordinary story prose
+// merely because it contains words such as "更新" or "点击".
+const PROMO_BLOCK_PATTERNS = [
+  /(?:京东|京東)\\s*(?:搜索|搜一搜).{0,100}(?:红包|紅包|福利|优惠|優惠)/iu,
+  /(?:双11|雙11|双十一|雙十一).{0,80}(?:红包|紅包|福利|优惠|優惠)/iu,
+  /(?:搜索|搜尋)\\s*[：:].{0,100}(?:红包|紅包|福利|優惠|优惠)/iu,
+  /(?:最新最快更新|最新更新).{0,80}(?:点击直达|點擊直達|点击进入|點擊進入)/iu,
+  /(?:点击直达|點擊直達).{0,80}(?:搜索|搜尋|红包|紅包|福利)/iu
+];
+
+function cleanPromotionalContent(value) {
+  const original = String(value == null ? "" : value);
+  const blocks = original.split(/(\\n\\s*\\n|\\r?\\n)/u);
+  let removedBlocks = 0;
+  const kept = [];
+  for (const block of blocks) {
+    if (!block || /^\\s*(?:\\r?\\n)+\\s*$/u.test(block)) {
+      kept.push(block);
+      continue;
+    }
+    const isPromo = PROMO_BLOCK_PATTERNS.some(pattern => pattern.test(block));
+    if (isPromo) {
+      removedBlocks++;
+      continue;
+    }
+    kept.push(block);
+  }
+  return {
+    content: kept.join("").replace(/\\n{3,}/gu, "\\n\\n").trim(),
+    removedBlocks
+  };
+}
+
 function normalizeForDuplicateCheck(value) {
   return String(value == null ? "" : value)
     .replace(/\s+/gu, "")
@@ -60,4 +93,4 @@ function scanArticles(articles) {
   return { summary, results };
 }
 
-module.exports = { scanTextQuality, scanArticles };
+module.exports = { scanTextQuality, scanArticles, cleanPromotionalContent };
