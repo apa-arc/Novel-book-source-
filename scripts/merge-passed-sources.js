@@ -41,7 +41,8 @@ function validateCandidate(source) {
     if (requestConfig) {
       const config = JSON.parse(requestConfig[2]);
       if (!["GET","POST"].includes(String(config.method || "GET").toUpperCase()) ||
-          config.webView || config.cookie || config.header) return false;
+          config.webView || config.cookie || config.header ||
+          (typeof config.body === "string" && /(?:token|auth|password|secret|cookie|authorization)\\s*["']?\\s*[:=]/i.test(config.body))) return false;
       searchSpec = requestConfig[1].trim();
     } else if (rawSearch.includes(",")) {
       searchSpec = rawSearch.split(/,(?=https?:\/\/)/i)[0].trim();
