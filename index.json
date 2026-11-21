@@ -209,6 +209,13 @@
       "file": "sources/iyueba-net.json",
       "enabled": true,
       "testOnly": true
+    },
+    {
+      "id": "52shuku-net",
+      "name": "52书库（男频武侠）",
+      "kind": "public-web",
+      "file": "sources/52shuku-net.json",
+      "enabled": true
     }
   ]
 }
