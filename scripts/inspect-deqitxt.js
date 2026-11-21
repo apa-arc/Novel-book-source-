@@ -18,6 +18,7 @@ async function main(){
  for(const keyword of SEARCH_TERMS){
   const url=new URL("/",BASE);url.searchParams.set("key",keyword);
   const response=await get(url.href),doc=parseHTML(response.html).document;
+  const bodyText=String(doc.body?.textContent||"").trim().replace(/\s+/g," ");
   const links=[...doc.querySelectorAll("a[href]")].map(a=>({text:norm(a.textContent),href:a.getAttribute("href")||""})).filter(a=>a.text&&/^\/\d+\/?$/.test(a.href)).slice(0,30);
   searches.push({keyword,status:response.status,url:response.url,contentType:response.contentType,title:norm(doc.querySelector("title")?.textContent),bodyLength:bodyText.length,bodyStart:bodyText.slice(0,1400),bodyEnd:bodyText.slice(-1000),bookLinks:links});
  }
