@@ -54,7 +54,7 @@ function scanExpressionOperators(raw) {
 }
 function splitTopLevel(raw, operator) {
   const parts=[];
-  let quote=null, bracketDepth=0, parenDepth=0, start=0;
+  let quote=null, bracketDepth=0, parenDepth=0, braceDepth=0, start=0;
   for(let i=0;i<raw.length;i++){
     const ch=raw[i];
     if(ch==="\\"){i++;continue;}
@@ -65,6 +65,9 @@ function splitTopLevel(raw, operator) {
     if(bracketDepth>0) continue;
     if(ch==="("){parenDepth++;continue;}
     if(ch===")"&&parenDepth>0){parenDepth--;continue;}
+    if(ch==="{"){braceDepth++;continue;}
+    if(ch==="}"&&braceDepth>0){braceDepth--;continue;}
+    if(braceDepth>0) continue;
     if(parenDepth===0&&raw.startsWith(operator,i)){
       parts.push(raw.slice(start,i).trim());
       i+=operator.length-1;
@@ -160,6 +163,29 @@ function parseSimpleXPath(expression) {
   const query=segments.map((item,index)=>index===0?item.css:(item.axis==="descendant"?" ":" > ")+item.css).join("");
   return {engine:"css",query,output};
 }
+function parseTemplateExpression(raw) {
+  if(!raw.includes("{{")) return null;
+  const parts=[];
+  let cursor=0,found=false;
+  while(true){
+    const start=raw.indexOf("{{",cursor);
+    if(start<0) break;
+    const end=raw.indexOf("}}",start+2);
+    if(end<0) return {status:"manual",reason:"unclosed-template"};
+    if(start>cursor) parts.push({engine:"literal",value:raw.slice(cursor,start)});
+    const inner=raw.slice(start+2,end).trim();
+    if(!inner) return {status:"manual",reason:"empty-template-expression"};
+    const parsed=parseLegacyChain(inner);
+    if(parsed.status!=="candidate") return {status:"manual",reason:"unsupported-template-expression"};
+    parts.push(parsed.selector);
+    found=true;
+    cursor=end+2;
+  }
+  if(!found) return null;
+  if(cursor<raw.length) parts.push({engine:"literal",value:raw.slice(cursor)});
+  if(parts.length===1) return {status:"candidate",selector:parts[0]};
+  return {status:"candidate",selector:{engine:"composite",operator:"concat",parts}};
+}
 function parseLegacyChain(expression) {
   let raw = String(expression).trim();
   if (!raw) return {status:"empty"};
@@ -190,6 +216,9 @@ function parseLegacyChain(expression) {
     if(parts.some(x=>x.status!=="candidate")) return {status:"manual",reason:"unsupported-concat-part"};
     return {status:"candidate",selector:{engine:"composite",operator:"concat",parts:parts.map(x=>x.selector)}};
   }
+  const template=parseTemplateExpression(raw);
+  if(template) return template;
+  if(/^(['"])[\s\S]*\1$/.test(raw)) return {status:"candidate",selector:{engine:"literal",value:raw.slice(1,-1)}};
   if(raw.startsWith("@text:")) return {status:"candidate",selector:{engine:"literal",value:raw.slice(6)}};
   const legacyText=raw.match(/^text\.([^@]+?)(?:@text)?$/i);
   if(legacyText) return {status:"candidate",selector:{engine:"literal",value:legacyText[1]}};
