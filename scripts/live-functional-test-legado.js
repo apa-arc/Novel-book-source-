@@ -251,7 +251,7 @@ async function testSource(source, testId) {
       const name = first(node, source.ruleToc.chapterName);
       const url = first(node, source.ruleToc.chapterUrl);
       if (!name || !url) continue;
-      chapters.push({ title: String(name).trim(), url: absolute(url, tocPage.url, host) });
+      chapters.push({ title: String(name).trim(), url: absolute(url, tocPage.url, host, extraHosts) });
     }
     const unique = [...new Map(chapters.map(x => [x.url, x])).values()];
     if (unique.length < 2) throw new Error("chapter-list-empty-or-duplicate");
