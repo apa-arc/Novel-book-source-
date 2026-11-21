@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "deqi-deqixs",
+  "name": "得奇小说网",
+  "kind": "public-web",
+  "version": "1.0.0",
+  "baseUrl": "https://www.deqixs.com/",
+  "domains": [
+    "www.deqixs.com"
+  ],
+  "script": "scripts/deqi-deqixs.js",
+  "enabled": true,
+  "testOnly": true,
+  "testOnlyReason": "从公开 AOAOSTAR 规则转换为本仓库 GET/CSS 配置；搜索、详情、目录、正文选择器已映射，尚未完成当前站点实时与宿主四阶段实测。",
+  "description": "普通小说网页源；GET 搜索，详情、目录与正文采用 CSS 规则，待实测。",
+  "licenseApproved": true,
+  "licenseType": "self-owned",
+  "licenseEvidence": "本仓库原创声明式适配配置与解析器，不包含小说正文。",
+  "licenseEvidenceUrl": "https://github.com/apa-arc/Novel-book-source-/blob/main/sources/deqi-deqixs.json",
+  "hostValidated": false,
+  "appConfig": {
+    "searchUrl": "https://www.deqixs.com/tag/?key={keyword}",
+    "bookUrl": "https://www.deqixs.com/",
+    "chapterListUrl": "https://www.deqixs.com/{bookUrl}",
+    "chapterUrl": "https://www.deqixs.com/{chapterUrl}",
+    "htmlRules": {
+      "search": {
+        "itemSelector": ".item",
+        "titleSelector": "h3 a",
+        "urlSelector": "h3 a",
+        "authorSelector": "p a"
+      },
+      "detail": {
+        "titleSelector": ".itemtxt h1 a",
+        "descriptionSelector": ".des p"
+      },
+      "chapters": {
+        "itemSelector": "#list a",
+        "titleSelector": "a",
+        "urlSelector": "a"
+      },
+      "content": {
+        "contentSelector": ".con",
+        "titleSelector": "h1"
+      }
+    }
+  }
+}
