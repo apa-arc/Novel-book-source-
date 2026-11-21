@@ -1,0 +1,1311 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-21T12:40:47.894Z",
+  "results": [
+    {
+      "term": "凌天剑狂",
+      "status": 200,
+      "url": "https://so.ihuaben.com/search?keyword=%E5%87%8C%E5%A4%A9%E5%89%91%E7%8B%82",
+      "contentType": "text/html;charset=UTF-8",
+      "title": "凌天剑狂小说-热门凌天剑狂小说推荐-凌天剑狂小说免费读-话本小说网",
+      "body": "[搜索] [菜单] 首页 角色广场 分类 收藏 写作 我的 书架 登录 写作福利 写作后台 首页 分类 角色广场 手机版 黑夜的雪 今天 08:41 凌天剑狂 999+ 人看过 标签： 古装，仙剑小说 青绪. 09-29 少年自负凌云笔 谈笑间，天下星辰，不敌少年狂骄。第二部《创世之最强家族》，152~ 全新的故事，原著cp，三男主主角，浩侧重： 第一卷.阡浩神战卷.（已完结），152~202章。时空乱流，神界已拼上一切...——审判之剑，于黎明中落下。... 999+ 人看过 标签： all浩 日更 麟浩 $(\"#index_so_bar\").val(\"凌天剑狂\"); var _hmt = _hmt || []; (function () { var hm = document.createElement(\"script\"); hm.src = \"https://hm.baidu.com/hm.js?68eed4dba6a26437fc4464324625058c\"; var s = document.getElementsByTagName(\"script\")[0]; s.parentNode.insertBefore(hm, s); })(); 作者福利 | 签约标准 诚聘英才 关于我们 联系我们 举报专区 帮助中心 网编专区 下载客户端 关注微博 QQ群：437266680 下载客户端 关注微博 QQ群：437266680 津ICP备2022002164号-2 © 2016-2023 iHuaBen.com 版权保护声明 不良信息举报:tousu@liangzishidai.cn 举报电话:0772-2994948 津ICP备2022002164号 京网文5644-442号 增值电信业务经营许可证编号:京B2-20201692 京公网安备11010502036362号 北京市朝阳区东方梅地亚中心C座2809室",
+      "links": [
+        {
+          "text": "[搜索]",
+          "href": "//www.ihuaben.com/search.html",
+          "parent": "<ul class=\"pull-right\">\n\t\t\t\t<li><a href=\"//www.ihuaben.com/search.html\" class=\"huaben-img-btn search\">[搜索]</a></li>\n\t\t\t\t<li><a href=\"#\" id=\"huabenMore\" class=\"huaben-img-btn more\">[菜单]</a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "[菜单]",
+          "href": "#",
+          "parent": "<ul class=\"pull-right\">\n\t\t\t\t<li><a href=\"//www.ihuaben.com/search.html\" class=\"huaben-img-btn search\">[搜索]</a></li>\n\t\t\t\t<li><a href=\"#\" id=\"huabenMore\" class=\"huaben-img-btn more\">[菜单]</a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "首页",
+          "href": "//www.ihuaben.com/",
+          "parent": "<ul>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/\"><i class=\"hicon-home\"></i><span>首页</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/web-next/characters/home\"><i class=\"hicon-location\"></i><span>角色广场</span></a>\n\t\t\t\t</li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/tongren/\"><i class=\"hicon-catalog\"></i><span>分类</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "角色广场",
+          "href": "//www.ihuaben.com/web-next/characters/home",
+          "parent": "<ul>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/\"><i class=\"hicon-home\"></i><span>首页</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/web-next/characters/home\"><i class=\"hicon-location\"></i><span>角色广场</span></a>\n\t\t\t\t</li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/tongren/\"><i class=\"hicon-catalog\"></i><span>分类</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "分类",
+          "href": "//www.ihuaben.com/tongren/",
+          "parent": "<ul>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/\"><i class=\"hicon-home\"></i><span>首页</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/web-next/characters/home\"><i class=\"hicon-location\"></i><span>角色广场</span></a>\n\t\t\t\t</li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/tongren/\"><i class=\"hicon-catalog\"></i><span>分类</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "收藏",
+          "href": "//user.ihuaben.com/bookShelf/list",
+          "parent": "<ul>\n\t\t\t\t<li><a href=\"//user.ihuaben.com/bookShelf/list\"><i class=\"hicon-shelf\"></i><span>收藏</span></a></li>\n\t\t\t\t<li><a href=\"//author.ihuaben.com/\"><i class=\"hicon-write\"></i><span>写作</span></a></li>\n\t\t\t\t<li><a href=\"//user.ihuaben.com/\"><i class=\"hicon-my\"></i><span>我的</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "写作",
+          "href": "//author.ihuaben.com/",
+          "parent": "<ul>\n\t\t\t\t<li><a href=\"//user.ihuaben.com/bookShelf/list\"><i class=\"hicon-shelf\"></i><span>收藏</span></a></li>\n\t\t\t\t<li><a href=\"//author.ihuaben.com/\"><i class=\"hicon-write\"></i><span>写作</span></a></li>\n\t\t\t\t<li><a href=\"//user.ihuaben.com/\"><i class=\"hicon-my\"></i><span>我的</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "我的",
+          "href": "//user.ihuaben.com/",
+          "parent": "<ul>\n\t\t\t\t<li><a href=\"//user.ihuaben.com/bookShelf/list\"><i class=\"hicon-shelf\"></i><span>收藏</span></a></li>\n\t\t\t\t<li><a href=\"//author.ihuaben.com/\"><i class=\"hicon-write\"></i><span>写作</span></a></li>\n\t\t\t\t<li><a href=\"//user.ihuaben.com/\"><i class=\"hicon-my\"></i><span>我的</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "书架",
+          "href": "//user.ihuaben.com/bookShelf/list",
+          "parent": "<ul class=\"pull-right list-inline\">\n\t\t\t<li><a href=\"//user.ihuaben.com/bookShelf/list\" class=\"bookshelf\">书架</a></li>\n\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t<li id=\"nav_login_bar\"><a href=\"//passport.ihuaben.com/\" class=\"avatar\">登录</a></li>\n\t\t\t\t\t<li id=\"nav_usercenter_bar\" style=\"display: none;\">\n\t\t\t\t\t\t<a href=\"//user.ihuaben.com/\" class=\"userpic\">\n\t\t\t\t\t\t\t<img src=\"\" id=\"user_head_bar\" alt=\"\">\n\t\t\t\t\t\t\t<span></span>\n\t\t\t\t\t\t</a>\n\t\t\t\t\t</li>\n\t\t\t\t\n\t\t\t\n\t\t</ul>"
+        },
+        {
+          "text": "登录",
+          "href": "//passport.ihuaben.com/",
+          "parent": "<ul class=\"pull-right list-inline\">\n\t\t\t<li><a href=\"//user.ihuaben.com/bookShelf/list\" class=\"bookshelf\">书架</a></li>\n\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t<li id=\"nav_login_bar\"><a href=\"//passport.ihuaben.com/\" class=\"avatar\">登录</a></li>\n\t\t\t\t\t<li id=\"nav_usercenter_bar\" style=\"display: none;\">\n\t\t\t\t\t\t<a href=\"//user.ihuaben.com/\" class=\"userpic\">\n\t\t\t\t\t\t\t<img src=\"\" id=\"user_head_bar\" alt=\"\">\n\t\t\t\t\t\t\t<span></span>\n\t\t\t\t\t\t</a>\n\t\t\t\t\t</li>\n\t\t\t\t\n\t\t\t\n\t\t</ul>"
+        },
+        {
+          "text": "写作福利",
+          "href": "//www.ihuaben.com/fragment/fuli.html",
+          "parent": "<ul class=\"list-inline HuabenNavButton\">\n\t\t\t\t<li><a href=\"//www.ihuaben.com/fragment/fuli.html\" class=\"huaben-btn huaben-btn-yellow\"><i class=\"icon-money\"></i>写作福利</a></li>\n\t\t\t\t<li><a href=\"//author.ihuaben.com/\" class=\"huaben-btn huaben-btn-red\"><i class=\"icon-coffee\"></i>写作后台</a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "写作后台",
+          "href": "//author.ihuaben.com/",
+          "parent": "<ul class=\"list-inline HuabenNavButton\">\n\t\t\t\t<li><a href=\"//www.ihuaben.com/fragment/fuli.html\" class=\"huaben-btn huaben-btn-yellow\"><i class=\"icon-money\"></i>写作福利</a></li>\n\t\t\t\t<li><a href=\"//author.ihuaben.com/\" class=\"huaben-btn huaben-btn-red\"><i class=\"icon-coffee\"></i>写作后台</a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "首页",
+          "href": "//www.ihuaben.com/",
+          "parent": "<ul class=\"list-inline navTab\" lang=\"navTab\">\n\t\t\t\t<li><a href=\"//www.ihuaben.com/\"><span>首页</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/tongren/\"><span>分类</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/web-next/characters/home\"><span>角色广场</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/app.html\"><span>手机版</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "分类",
+          "href": "//www.ihuaben.com/tongren/",
+          "parent": "<ul class=\"list-inline navTab\" lang=\"navTab\">\n\t\t\t\t<li><a href=\"//www.ihuaben.com/\"><span>首页</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/tongren/\"><span>分类</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/web-next/characters/home\"><span>角色广场</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/app.html\"><span>手机版</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "角色广场",
+          "href": "//www.ihuaben.com/web-next/characters/home",
+          "parent": "<ul class=\"list-inline navTab\" lang=\"navTab\">\n\t\t\t\t<li><a href=\"//www.ihuaben.com/\"><span>首页</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/tongren/\"><span>分类</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/web-next/characters/home\"><span>角色广场</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/app.html\"><span>手机版</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "手机版",
+          "href": "//www.ihuaben.com/app.html",
+          "parent": "<ul class=\"list-inline navTab\" lang=\"navTab\">\n\t\t\t\t<li><a href=\"//www.ihuaben.com/\"><span>首页</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/tongren/\"><span>分类</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/web-next/characters/home\"><span>角色广场</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/app.html\"><span>手机版</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "黑夜的雪",
+          "href": "//user.ihuaben.com/129828978",
+          "parent": "<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/129828978\" class=\"text-muted\" target=\"_blank\">黑夜的雪</a></span>\n\t\t\t\t\t\t\t\t<small>今天 08:41</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>"
+        },
+        {
+          "text": "凌天剑狂",
+          "href": "//www.ihuaben.com/book/13416517.html",
+          "parent": "<div>\n\t\t\t\t\t\t\t<a href=\"//user.ihuaben.com/129828978\" target=\"_blank\"><img class=\"img-rounded\" src=\"//piccn.ihuaben.com/pic/user/202509/1417/1757843428599-1ewEh61pg2_120-120.jpg?x-oss-process=image/resize,w_50\"></a>\n\t\t\t\t\t\t\t<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/129828978\" class=\"text-muted\" target=\"_blank\">黑夜的雪</a></span>\n\t\t\t\t\t\t\t\t<small>今天 08:41</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<h2><a href=\"//www.ihuaben.com/book/13416517.html\" target=\"_blank\"><em>凌天剑狂</em></a></h2>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "古装，仙剑小说",
+          "href": "//www.ihuaben.com/category/guzhuangxianjianxiaoshuo/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/guzhuangxianjianxiaoshuo/\" class=\"text-warning\">古装，仙剑小说</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "青绪.",
+          "href": "//user.ihuaben.com/12542294",
+          "parent": "<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/12542294\" class=\"text-muted\" target=\"_blank\">青绪.</a></span>\n\t\t\t\t\t\t\t\t<small>09-29</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>"
+        },
+        {
+          "text": "少年自负凌云笔",
+          "href": "//www.ihuaben.com/book/2243567.html",
+          "parent": "<div>\n\t\t\t\t\t\t\t<a href=\"//user.ihuaben.com/12542294\" target=\"_blank\"><img class=\"img-rounded\" src=\"//piccn.ihuaben.com/pic/user/202112/0522/1638713593249-7p48U9rD00_1000-1000.jpeg?x-oss-process=image/resize,w_50\"></a>\n\t\t\t\t\t\t\t<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/12542294\" class=\"text-muted\" target=\"_blank\">青绪.</a></span>\n\t\t\t\t\t\t\t\t<small>09-29</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<h2><a href=\"//www.ihuaben.com/book/2243567.html\" target=\"_blank\">少年自负凌云笔</a></h2>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "谈笑间，天下星辰，不敌少年狂骄。第二部《创世之最强家族》，152~ 全新的故事，原著cp，三男主主角，浩侧重： 第一卷.阡浩神战卷.（已完结），152~202章。时空乱流，神界已拼上一切...——审判之剑，于黎明中落下。...",
+          "href": "//www.ihuaben.com/book/2243567.html",
+          "parent": "<div class=\"clearfix searchresult-info\">\n\t\t\t\t\t\t\t<p><a href=\"//www.ihuaben.com/book/2243567.html\" target=\"_blank\">谈笑间，天下星辰，不敌少年<em>狂</em>骄。第二部《创世之最强家族》，152~ 全新的故事，原著cp，三男主主角，浩侧重： 第一卷.阡浩神战卷.（已完结），152~202章。时空乱流，神界已拼上一切...——审判之<em>剑</em>，于黎明中落下。...</a></p>\n\t\t\t\t\t\t\t<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/allhao1/\" class=\"text-warning\">all浩</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/rigeng/\" class=\"text-warning\">日更</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/linhao2/\" class=\"text-warning\">麟浩</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "all浩",
+          "href": "//www.ihuaben.com/category/allhao1/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/allhao1/\" class=\"text-warning\">all浩</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/rigeng/\" class=\"text-warning\">日更</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/linhao2/\" class=\"text-warning\">麟浩</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "日更",
+          "href": "//www.ihuaben.com/category/rigeng/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/allhao1/\" class=\"text-warning\">all浩</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/rigeng/\" class=\"text-warning\">日更</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/linhao2/\" class=\"text-warning\">麟浩</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "麟浩",
+          "href": "//www.ihuaben.com/category/linhao2/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/allhao1/\" class=\"text-warning\">all浩</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/rigeng/\" class=\"text-warning\">日更</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/linhao2/\" class=\"text-warning\">麟浩</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "作者福利",
+          "href": "//stat.ihuaben.com/zw/552/",
+          "parent": "<div class=\"container navFooter\">\n  <div class=\"text-center hidden-md hidden-lg text-danger\">\n    <a href=\"//stat.ihuaben.com/zw/552/\" class=\"text-danger\">作者福利</a>&#160;|&#160;<a href=\"//www.ihuaben.com/book/1343385/14134250.html\" class=\"text-danger\">签约标准</a>\n  </div>\n  <div class=\"text-center footer\">\n    <ul>\n      <li><a href=\"//stat.ihuaben.com/zw/129/\" target=\"_blank\">诚聘英才</a></li>\n      <li><a href=\"//www.ihuaben.com/book/1343385/14123784.html\" target=\"_blank\">关于我们</a></li>\n      <li><a href=\"//www.ihuaben.com/book/1343385/14124646.html\" target=\"_blank\">联系我们</a></li>\n      <li><a href=\"//user.ihuaben.com/app/report/pagePrecinct\" target=\"_blank\">举报专区</a></li>\n      <li><a href=\"//www.ihuaben.com/book/1343385.html\" target=\"_blank\">帮助中心</a></li>\n      <li><a href=\"//editor.ihuaben.com/#/editor/apply\" target=\"_blank\">网编专区</a></li>\n    </ul>\n    <div class=\"text-center\" style=\"margin-top:-10px;\">\n      <ul class=\"foot2 visible-xs-block\">\n        <li><a href=\"//www.ihuaben.com/app.html\" class=\"text-dark\">下载客户端</a></li>\n        <li><a href=\"//weibo.com/ihuaben\" class=\"text-dark\">关注微博</a></li>\n        <li class=\"text-dark\">QQ群：437266680</li>\n      </ul>\n      <ul class=\"foot2 hidden-xs foot2-noscript-fallback\">\n        <li><a href=\"//www.ihuaben.com/app.html\" class=\"text-dark\">下载客户"
+        },
+        {
+          "text": "签约标准",
+          "href": "//www.ihuaben.com/book/1343385/14134250.html",
+          "parent": "<div class=\"container navFooter\">\n  <div class=\"text-center hidden-md hidden-lg text-danger\">\n    <a href=\"//stat.ihuaben.com/zw/552/\" class=\"text-danger\">作者福利</a>&#160;|&#160;<a href=\"//www.ihuaben.com/book/1343385/14134250.html\" class=\"text-danger\">签约标准</a>\n  </div>\n  <div class=\"text-center footer\">\n    <ul>\n      <li><a href=\"//stat.ihuaben.com/zw/129/\" target=\"_blank\">诚聘英才</a></li>\n      <li><a href=\"//www.ihuaben.com/book/1343385/14123784.html\" target=\"_blank\">关于我们</a></li>\n      <li><a href=\"//www.ihuaben.com/book/1343385/14124646.html\" target=\"_blank\">联系我们</a></li>\n      <li><a href=\"//user.ihuaben.com/app/report/pagePrecinct\" target=\"_blank\">举报专区</a></li>\n      <li><a href=\"//www.ihuaben.com/book/1343385.html\" target=\"_blank\">帮助中心</a></li>\n      <li><a href=\"//editor.ihuaben.com/#/editor/apply\" target=\"_blank\">网编专区</a></li>\n    </ul>\n    <div class=\"text-center\" style=\"margin-top:-10px;\">\n      <ul class=\"foot2 visible-xs-block\">\n        <li><a href=\"//www.ihuaben.com/app.html\" class=\"text-dark\">下载客户端</a></li>\n        <li><a href=\"//weibo.com/ihuaben\" class=\"text-dark\">关注微博</a></li>\n        <li class=\"text-dark\">QQ群：437266680</li>\n      </ul>\n      <ul class=\"foot2 hidden-xs foot2-noscript-fallback\">\n        <li><a href=\"//www.ihuaben.com/app.html\" class=\"text-dark\">下载客户"
+        },
+        {
+          "text": "诚聘英才",
+          "href": "//stat.ihuaben.com/zw/129/",
+          "parent": "<ul>\n      <li><a href=\"//stat.ihuaben.com/zw/129/\" target=\"_blank\">诚聘英才</a></li>\n      <li><a href=\"//www.ihuaben.com/book/1343385/14123784.html\" target=\"_blank\">关于我们</a></li>\n      <li><a href=\"//www.ihuaben.com/book/1343385/14124646.html\" target=\"_blank\">联系我们</a></li>\n      <li><a href=\"//user.ihuaben.com/app/report/pagePrecinct\" target=\"_blank\">举报专区</a></li>\n      <li><a href=\"//www.ihuaben.com/book/1343385.html\" target=\"_blank\">帮助中心</a></li>\n      <li><a href=\"//editor.ihuaben.com/#/editor/apply\" target=\"_blank\">网编专区</a></li>\n    </ul>"
+        },
+        {
+          "text": "关于我们",
+          "href": "//www.ihuaben.com/book/1343385/14123784.html",
+          "parent": "<ul>\n      <li><a href=\"//stat.ihuaben.com/zw/129/\" target=\"_blank\">诚聘英才</a></li>\n      <li><a href=\"//www.ihuaben.com/book/1343385/14123784.html\" target=\"_blank\">关于我们</a></li>\n      <li><a href=\"//www.ihuaben.com/book/1343385/14124646.html\" target=\"_blank\">联系我们</a></li>\n      <li><a href=\"//user.ihuaben.com/app/report/pagePrecinct\" target=\"_blank\">举报专区</a></li>\n      <li><a href=\"//www.ihuaben.com/book/1343385.html\" target=\"_blank\">帮助中心</a></li>\n      <li><a href=\"//editor.ihuaben.com/#/editor/apply\" target=\"_blank\">网编专区</a></li>\n    </ul>"
+        },
+        {
+          "text": "联系我们",
+          "href": "//www.ihuaben.com/book/1343385/14124646.html",
+          "parent": "<ul>\n      <li><a href=\"//stat.ihuaben.com/zw/129/\" target=\"_blank\">诚聘英才</a></li>\n      <li><a href=\"//www.ihuaben.com/book/1343385/14123784.html\" target=\"_blank\">关于我们</a></li>\n      <li><a href=\"//www.ihuaben.com/book/1343385/14124646.html\" target=\"_blank\">联系我们</a></li>\n      <li><a href=\"//user.ihuaben.com/app/report/pagePrecinct\" target=\"_blank\">举报专区</a></li>\n      <li><a href=\"//www.ihuaben.com/book/1343385.html\" target=\"_blank\">帮助中心</a></li>\n      <li><a href=\"//editor.ihuaben.com/#/editor/apply\" target=\"_blank\">网编专区</a></li>\n    </ul>"
+        },
+        {
+          "text": "举报专区",
+          "href": "//user.ihuaben.com/app/report/pagePrecinct",
+          "parent": "<ul>\n      <li><a href=\"//stat.ihuaben.com/zw/129/\" target=\"_blank\">诚聘英才</a></li>\n      <li><a href=\"//www.ihuaben.com/book/1343385/14123784.html\" target=\"_blank\">关于我们</a></li>\n      <li><a href=\"//www.ihuaben.com/book/1343385/14124646.html\" target=\"_blank\">联系我们</a></li>\n      <li><a href=\"//user.ihuaben.com/app/report/pagePrecinct\" target=\"_blank\">举报专区</a></li>\n      <li><a href=\"//www.ihuaben.com/book/1343385.html\" target=\"_blank\">帮助中心</a></li>\n      <li><a href=\"//editor.ihuaben.com/#/editor/apply\" target=\"_blank\">网编专区</a></li>\n    </ul>"
+        },
+        {
+          "text": "帮助中心",
+          "href": "//www.ihuaben.com/book/1343385.html",
+          "parent": "<ul>\n      <li><a href=\"//stat.ihuaben.com/zw/129/\" target=\"_blank\">诚聘英才</a></li>\n      <li><a href=\"//www.ihuaben.com/book/1343385/14123784.html\" target=\"_blank\">关于我们</a></li>\n      <li><a href=\"//www.ihuaben.com/book/1343385/14124646.html\" target=\"_blank\">联系我们</a></li>\n      <li><a href=\"//user.ihuaben.com/app/report/pagePrecinct\" target=\"_blank\">举报专区</a></li>\n      <li><a href=\"//www.ihuaben.com/book/1343385.html\" target=\"_blank\">帮助中心</a></li>\n      <li><a href=\"//editor.ihuaben.com/#/editor/apply\" target=\"_blank\">网编专区</a></li>\n    </ul>"
+        },
+        {
+          "text": "网编专区",
+          "href": "//editor.ihuaben.com/#/editor/apply",
+          "parent": "<ul>\n      <li><a href=\"//stat.ihuaben.com/zw/129/\" target=\"_blank\">诚聘英才</a></li>\n      <li><a href=\"//www.ihuaben.com/book/1343385/14123784.html\" target=\"_blank\">关于我们</a></li>\n      <li><a href=\"//www.ihuaben.com/book/1343385/14124646.html\" target=\"_blank\">联系我们</a></li>\n      <li><a href=\"//user.ihuaben.com/app/report/pagePrecinct\" target=\"_blank\">举报专区</a></li>\n      <li><a href=\"//www.ihuaben.com/book/1343385.html\" target=\"_blank\">帮助中心</a></li>\n      <li><a href=\"//editor.ihuaben.com/#/editor/apply\" target=\"_blank\">网编专区</a></li>\n    </ul>"
+        },
+        {
+          "text": "下载客户端",
+          "href": "//www.ihuaben.com/app.html",
+          "parent": "<ul class=\"foot2 visible-xs-block\">\n        <li><a href=\"//www.ihuaben.com/app.html\" class=\"text-dark\">下载客户端</a></li>\n        <li><a href=\"//weibo.com/ihuaben\" class=\"text-dark\">关注微博</a></li>\n        <li class=\"text-dark\">QQ群：437266680</li>\n      </ul>"
+        },
+        {
+          "text": "关注微博",
+          "href": "//weibo.com/ihuaben",
+          "parent": "<ul class=\"foot2 visible-xs-block\">\n        <li><a href=\"//www.ihuaben.com/app.html\" class=\"text-dark\">下载客户端</a></li>\n        <li><a href=\"//weibo.com/ihuaben\" class=\"text-dark\">关注微博</a></li>\n        <li class=\"text-dark\">QQ群：437266680</li>\n      </ul>"
+        },
+        {
+          "text": "下载客户端",
+          "href": "//www.ihuaben.com/app.html",
+          "parent": "<ul class=\"foot2 hidden-xs foot2-noscript-fallback\">\n        <li><a href=\"//www.ihuaben.com/app.html\" class=\"text-dark\">下载客户端</a></li>\n        <li><a href=\"//weibo.com/ihuaben\" class=\"text-dark\">关注微博</a></li>\n        <li class=\"text-dark\">QQ群：437266680</li>\n      </ul>"
+        },
+        {
+          "text": "关注微博",
+          "href": "//weibo.com/ihuaben",
+          "parent": "<ul class=\"foot2 hidden-xs foot2-noscript-fallback\">\n        <li><a href=\"//www.ihuaben.com/app.html\" class=\"text-dark\">下载客户端</a></li>\n        <li><a href=\"//weibo.com/ihuaben\" class=\"text-dark\">关注微博</a></li>\n        <li class=\"text-dark\">QQ群：437266680</li>\n      </ul>"
+        },
+        {
+          "text": "津ICP备2022002164号-2",
+          "href": "https://beian.miit.gov.cn/",
+          "parent": "<div class=\"text-center\" style=\"margin-top:-10px;\">\n      <ul class=\"foot2 visible-xs-block\">\n        <li><a href=\"//www.ihuaben.com/app.html\" class=\"text-dark\">下载客户端</a></li>\n        <li><a href=\"//weibo.com/ihuaben\" class=\"text-dark\">关注微博</a></li>\n        <li class=\"text-dark\">QQ群：437266680</li>\n      </ul>\n      <ul class=\"foot2 hidden-xs foot2-noscript-fallback\">\n        <li><a href=\"//www.ihuaben.com/app.html\" class=\"text-dark\">下载客户端</a></li>\n        <li><a href=\"//weibo.com/ihuaben\" class=\"text-dark\">关注微博</a></li>\n        <li class=\"text-dark\">QQ群：437266680</li>\n      </ul>\n      <ul class=\"foot2 hidden-xs\" id=\"QRlist\"></ul>\n      <p style=\"margin-top:3px;\">\n        <a target=\"_blank\" href=\"https://beian.miit.gov.cn/\" class=\"text-dark\">津ICP备2022002164号-2</a>\n        <span style=\"margin-left: 10px;\">© 2016-2023 iHuaBen.com <a href=\"//www.ihuaben.com/topic/right.html\" target=\"_blank\" class=\"text-dark\">版权保护声明</a></span>\n        <span style=\"margin-left: 10px;\">不良信息举报:<a href=\"mailto:tousu@liangzishidai.cn\" style=\"margin-left: 3px;\">tousu@liangzishidai.cn</a></span>\n        <span style=\"margin-left: 10px;\">举报电话:<a href=\"mailto:tousu@liangzishidai.cn\" style=\"margin-left: 3px;\">0772-2994948</a></span>\n      </p>\n      <p style=\"margin-top:3px;\">\n        <a target=\"_blank\" href=\"h"
+        },
+        {
+          "text": "版权保护声明",
+          "href": "//www.ihuaben.com/topic/right.html",
+          "parent": "<p style=\"margin-top:3px;\">\n        <a target=\"_blank\" href=\"https://beian.miit.gov.cn/\" class=\"text-dark\">津ICP备2022002164号-2</a>\n        <span style=\"margin-left: 10px;\">© 2016-2023 iHuaBen.com <a href=\"//www.ihuaben.com/topic/right.html\" target=\"_blank\" class=\"text-dark\">版权保护声明</a></span>\n        <span style=\"margin-left: 10px;\">不良信息举报:<a href=\"mailto:tousu@liangzishidai.cn\" style=\"margin-left: 3px;\">tousu@liangzishidai.cn</a></span>\n        <span style=\"margin-left: 10px;\">举报电话:<a href=\"mailto:tousu@liangzishidai.cn\" style=\"margin-left: 3px;\">0772-2994948</a></span>\n      </p>"
+        },
+        {
+          "text": "tousu@liangzishidai.cn",
+          "href": "mailto:tousu@liangzishidai.cn",
+          "parent": "<p style=\"margin-top:3px;\">\n        <a target=\"_blank\" href=\"https://beian.miit.gov.cn/\" class=\"text-dark\">津ICP备2022002164号-2</a>\n        <span style=\"margin-left: 10px;\">© 2016-2023 iHuaBen.com <a href=\"//www.ihuaben.com/topic/right.html\" target=\"_blank\" class=\"text-dark\">版权保护声明</a></span>\n        <span style=\"margin-left: 10px;\">不良信息举报:<a href=\"mailto:tousu@liangzishidai.cn\" style=\"margin-left: 3px;\">tousu@liangzishidai.cn</a></span>\n        <span style=\"margin-left: 10px;\">举报电话:<a href=\"mailto:tousu@liangzishidai.cn\" style=\"margin-left: 3px;\">0772-2994948</a></span>\n      </p>"
+        },
+        {
+          "text": "0772-2994948",
+          "href": "mailto:tousu@liangzishidai.cn",
+          "parent": "<p style=\"margin-top:3px;\">\n        <a target=\"_blank\" href=\"https://beian.miit.gov.cn/\" class=\"text-dark\">津ICP备2022002164号-2</a>\n        <span style=\"margin-left: 10px;\">© 2016-2023 iHuaBen.com <a href=\"//www.ihuaben.com/topic/right.html\" target=\"_blank\" class=\"text-dark\">版权保护声明</a></span>\n        <span style=\"margin-left: 10px;\">不良信息举报:<a href=\"mailto:tousu@liangzishidai.cn\" style=\"margin-left: 3px;\">tousu@liangzishidai.cn</a></span>\n        <span style=\"margin-left: 10px;\">举报电话:<a href=\"mailto:tousu@liangzishidai.cn\" style=\"margin-left: 3px;\">0772-2994948</a></span>\n      </p>"
+        },
+        {
+          "text": "津ICP备2022002164号",
+          "href": "https://beian.miit.gov.cn/",
+          "parent": "<div class=\"text-center\" style=\"margin-top:-10px;\">\n      <ul class=\"foot2 visible-xs-block\">\n        <li><a href=\"//www.ihuaben.com/app.html\" class=\"text-dark\">下载客户端</a></li>\n        <li><a href=\"//weibo.com/ihuaben\" class=\"text-dark\">关注微博</a></li>\n        <li class=\"text-dark\">QQ群：437266680</li>\n      </ul>\n      <ul class=\"foot2 hidden-xs foot2-noscript-fallback\">\n        <li><a href=\"//www.ihuaben.com/app.html\" class=\"text-dark\">下载客户端</a></li>\n        <li><a href=\"//weibo.com/ihuaben\" class=\"text-dark\">关注微博</a></li>\n        <li class=\"text-dark\">QQ群：437266680</li>\n      </ul>\n      <ul class=\"foot2 hidden-xs\" id=\"QRlist\"></ul>\n      <p style=\"margin-top:3px;\">\n        <a target=\"_blank\" href=\"https://beian.miit.gov.cn/\" class=\"text-dark\">津ICP备2022002164号-2</a>\n        <span style=\"margin-left: 10px;\">© 2016-2023 iHuaBen.com <a href=\"//www.ihuaben.com/topic/right.html\" target=\"_blank\" class=\"text-dark\">版权保护声明</a></span>\n        <span style=\"margin-left: 10px;\">不良信息举报:<a href=\"mailto:tousu@liangzishidai.cn\" style=\"margin-left: 3px;\">tousu@liangzishidai.cn</a></span>\n        <span style=\"margin-left: 10px;\">举报电话:<a href=\"mailto:tousu@liangzishidai.cn\" style=\"margin-left: 3px;\">0772-2994948</a></span>\n      </p>\n      <p style=\"margin-top:3px;\">\n        <a target=\"_blank\" href=\"h"
+        },
+        {
+          "text": "京公网安备11010502036362号",
+          "href": "//www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502036362",
+          "parent": "<div class=\"text-center\" style=\"margin-top:-10px;\">\n      <ul class=\"foot2 visible-xs-block\">\n        <li><a href=\"//www.ihuaben.com/app.html\" class=\"text-dark\">下载客户端</a></li>\n        <li><a href=\"//weibo.com/ihuaben\" class=\"text-dark\">关注微博</a></li>\n        <li class=\"text-dark\">QQ群：437266680</li>\n      </ul>\n      <ul class=\"foot2 hidden-xs foot2-noscript-fallback\">\n        <li><a href=\"//www.ihuaben.com/app.html\" class=\"text-dark\">下载客户端</a></li>\n        <li><a href=\"//weibo.com/ihuaben\" class=\"text-dark\">关注微博</a></li>\n        <li class=\"text-dark\">QQ群：437266680</li>\n      </ul>\n      <ul class=\"foot2 hidden-xs\" id=\"QRlist\"></ul>\n      <p style=\"margin-top:3px;\">\n        <a target=\"_blank\" href=\"https://beian.miit.gov.cn/\" class=\"text-dark\">津ICP备2022002164号-2</a>\n        <span style=\"margin-left: 10px;\">© 2016-2023 iHuaBen.com <a href=\"//www.ihuaben.com/topic/right.html\" target=\"_blank\" class=\"text-dark\">版权保护声明</a></span>\n        <span style=\"margin-left: 10px;\">不良信息举报:<a href=\"mailto:tousu@liangzishidai.cn\" style=\"margin-left: 3px;\">tousu@liangzishidai.cn</a></span>\n        <span style=\"margin-left: 10px;\">举报电话:<a href=\"mailto:tousu@liangzishidai.cn\" style=\"margin-left: 3px;\">0772-2994948</a></span>\n      </p>\n      <p style=\"margin-top:3px;\">\n        <a target=\"_blank\" href=\"h"
+        }
+      ]
+    },
+    {
+      "term": "斩神",
+      "status": 200,
+      "url": "https://so.ihuaben.com/search?keyword=%E6%96%A9%E7%A5%9E",
+      "contentType": "text/html;charset=UTF-8",
+      "title": "斩神小说-热门斩神小说推荐-斩神小说免费读-话本小说网",
+      "body": "[搜索] [菜单] 首页 角色广场 分类 收藏 写作 我的 书架 登录 写作福利 写作后台 首页 分类 角色广场 手机版 爱吃鱼的科比 今天 19:00 斩神：天使圣光 当执掌光明与审判的天使神王千仞雪，遇上以身斩神、守护人间的林七夜一众守夜人；当神域顶级神力碰撞异世诡异规则，一场全新的故事就此拉开序幕。 999+ 人看过 标签： 安卿鱼 沈青竹 王面 伊芝钦钦鸭 10-28 斩神：极致占有欲 为了完成攻略，我同时追好几个人，后来系统告诉我只要攻略林七夜一人，就可以顶替其他人。当我在全校面前准备向林七夜表白时，黑暗中出现了层层人影…… 999+ 人看过 标签： 假面小队 我在精神病院里学斩神 林七夜 乾坤雨儿 10-11 斩神：听说我是创世神 当混沌之神现身，如何能找到众神失踪的真相 林卿雨也好，神也好，混沌之神继承人也罢 我到底是谁 那她……到底是谁？她？创世之初的九霄明月，混沌初开的炽烈骄阳 不蛊不惑的朔望之神，不伤不死的不灭之灵 主宰秩序... 999+ 人看过 标签： 假面 王免 王面 看名字是什么 11-17 斩神：当假面觉醒武魂 她穿越到了看过的斩神世界，各个因素之下，纪柠加入了假面小队。一起经历八岐大蛇，救赵空城，训练新兵…… 什么什么？她原来就是这个世界的人吗？——— 第一本书，写的不好轻点喷꒰*•ɷ•*꒱ （太喜欢假面了，但... 999+ 人看过 标签： 假面小队 斩神all向 高燃爽文 雾霾不霾 10-07 斩神：灵冰降世 双男主 拆cp 雨浩团宠 与龙逍遥一战中本以为自己已是必死无疑，岂料一朝穿越霍雨浩竟异世重生 但 天崩开局，进了精神病院 院内群魔乱舞，啼笑皆非 唯有隔壁床蒙着眼睛的小病友乖巧可爱很粘人 吃饭时，看着林七夜嘴角... 999+ 人看过 标签： 双男主 我在精神病医院学斩神 雨浩 应枝意 今天 00:04 斩神：成为花神代理人后 沈余音一朝车祸身死，与系统签订员工协议，穿越到斩神的世界里收集功德，老阴比进新手村， 沈余音：桀桀桀，小可爱们我来了…… 于是： 林七夜：袅袅姐挺好的，就是有点阴…… 安卿鱼：这是另外的价钱，这事没个三管... 999+ 人看过 标签： 动漫同人 斩神 九仙凌云 05-01 综漫斩神：戏精同学们穿越后，剧情全癫了 由于同学们的到来，将整个斩神世界的画风都带偏了，不，应该是癫了。带着导演系统和玛丽苏系统的同学们：七夜同学！快！这里还有一场戏！林七夜：你们补药过来啊！同学们：桀桀桀 带着卧底系统和传教系统的同学们：... 999+ 人看过 标签： 斩神 瓜分挑战 观影 完颜忆灵 昨天 21:33 斩神：长夜之中 天杀的，我穿越的不是都市战神嘛……怎么给我干斩神来了？观影1：原著观影梵离 观影2：叶司令媳妇儿今天又装柔弱了吗？左青篇： 禁墟神笔马良，只要是我写的小说，但凡是笔下出现过的异能我都能拥有。袁罡篇： 我... 999+ 人看过 标签： 叶梵 斩神 英灵小队 爱吃鱼的科比 2025-12-24 斩神：拥有叶罗丽魔法的我改变意难平剧情 all向/万人迷/全员暧昧向/ —— 她是拥有叶罗丽精灵梦里银尘仙子之身的人 她是活泼开朗的李玥儿 她亦是大夏史上最年轻最神秘的人类天花板之一 她是136小队的临时队员 拥有一个改变意难平剧情系统的她，面对这么多... 999+ 人看过 标签： cp林七",
+      "links": [
+        {
+          "text": "[搜索]",
+          "href": "//www.ihuaben.com/search.html",
+          "parent": "<ul class=\"pull-right\">\n\t\t\t\t<li><a href=\"//www.ihuaben.com/search.html\" class=\"huaben-img-btn search\">[搜索]</a></li>\n\t\t\t\t<li><a href=\"#\" id=\"huabenMore\" class=\"huaben-img-btn more\">[菜单]</a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "[菜单]",
+          "href": "#",
+          "parent": "<ul class=\"pull-right\">\n\t\t\t\t<li><a href=\"//www.ihuaben.com/search.html\" class=\"huaben-img-btn search\">[搜索]</a></li>\n\t\t\t\t<li><a href=\"#\" id=\"huabenMore\" class=\"huaben-img-btn more\">[菜单]</a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "首页",
+          "href": "//www.ihuaben.com/",
+          "parent": "<ul>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/\"><i class=\"hicon-home\"></i><span>首页</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/web-next/characters/home\"><i class=\"hicon-location\"></i><span>角色广场</span></a>\n\t\t\t\t</li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/tongren/\"><i class=\"hicon-catalog\"></i><span>分类</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "角色广场",
+          "href": "//www.ihuaben.com/web-next/characters/home",
+          "parent": "<ul>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/\"><i class=\"hicon-home\"></i><span>首页</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/web-next/characters/home\"><i class=\"hicon-location\"></i><span>角色广场</span></a>\n\t\t\t\t</li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/tongren/\"><i class=\"hicon-catalog\"></i><span>分类</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "分类",
+          "href": "//www.ihuaben.com/tongren/",
+          "parent": "<ul>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/\"><i class=\"hicon-home\"></i><span>首页</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/web-next/characters/home\"><i class=\"hicon-location\"></i><span>角色广场</span></a>\n\t\t\t\t</li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/tongren/\"><i class=\"hicon-catalog\"></i><span>分类</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "收藏",
+          "href": "//user.ihuaben.com/bookShelf/list",
+          "parent": "<ul>\n\t\t\t\t<li><a href=\"//user.ihuaben.com/bookShelf/list\"><i class=\"hicon-shelf\"></i><span>收藏</span></a></li>\n\t\t\t\t<li><a href=\"//author.ihuaben.com/\"><i class=\"hicon-write\"></i><span>写作</span></a></li>\n\t\t\t\t<li><a href=\"//user.ihuaben.com/\"><i class=\"hicon-my\"></i><span>我的</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "写作",
+          "href": "//author.ihuaben.com/",
+          "parent": "<ul>\n\t\t\t\t<li><a href=\"//user.ihuaben.com/bookShelf/list\"><i class=\"hicon-shelf\"></i><span>收藏</span></a></li>\n\t\t\t\t<li><a href=\"//author.ihuaben.com/\"><i class=\"hicon-write\"></i><span>写作</span></a></li>\n\t\t\t\t<li><a href=\"//user.ihuaben.com/\"><i class=\"hicon-my\"></i><span>我的</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "我的",
+          "href": "//user.ihuaben.com/",
+          "parent": "<ul>\n\t\t\t\t<li><a href=\"//user.ihuaben.com/bookShelf/list\"><i class=\"hicon-shelf\"></i><span>收藏</span></a></li>\n\t\t\t\t<li><a href=\"//author.ihuaben.com/\"><i class=\"hicon-write\"></i><span>写作</span></a></li>\n\t\t\t\t<li><a href=\"//user.ihuaben.com/\"><i class=\"hicon-my\"></i><span>我的</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "书架",
+          "href": "//user.ihuaben.com/bookShelf/list",
+          "parent": "<ul class=\"pull-right list-inline\">\n\t\t\t<li><a href=\"//user.ihuaben.com/bookShelf/list\" class=\"bookshelf\">书架</a></li>\n\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t<li id=\"nav_login_bar\"><a href=\"//passport.ihuaben.com/\" class=\"avatar\">登录</a></li>\n\t\t\t\t\t<li id=\"nav_usercenter_bar\" style=\"display: none;\">\n\t\t\t\t\t\t<a href=\"//user.ihuaben.com/\" class=\"userpic\">\n\t\t\t\t\t\t\t<img src=\"\" id=\"user_head_bar\" alt=\"\">\n\t\t\t\t\t\t\t<span></span>\n\t\t\t\t\t\t</a>\n\t\t\t\t\t</li>\n\t\t\t\t\n\t\t\t\n\t\t</ul>"
+        },
+        {
+          "text": "登录",
+          "href": "//passport.ihuaben.com/",
+          "parent": "<ul class=\"pull-right list-inline\">\n\t\t\t<li><a href=\"//user.ihuaben.com/bookShelf/list\" class=\"bookshelf\">书架</a></li>\n\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t<li id=\"nav_login_bar\"><a href=\"//passport.ihuaben.com/\" class=\"avatar\">登录</a></li>\n\t\t\t\t\t<li id=\"nav_usercenter_bar\" style=\"display: none;\">\n\t\t\t\t\t\t<a href=\"//user.ihuaben.com/\" class=\"userpic\">\n\t\t\t\t\t\t\t<img src=\"\" id=\"user_head_bar\" alt=\"\">\n\t\t\t\t\t\t\t<span></span>\n\t\t\t\t\t\t</a>\n\t\t\t\t\t</li>\n\t\t\t\t\n\t\t\t\n\t\t</ul>"
+        },
+        {
+          "text": "写作福利",
+          "href": "//www.ihuaben.com/fragment/fuli.html",
+          "parent": "<ul class=\"list-inline HuabenNavButton\">\n\t\t\t\t<li><a href=\"//www.ihuaben.com/fragment/fuli.html\" class=\"huaben-btn huaben-btn-yellow\"><i class=\"icon-money\"></i>写作福利</a></li>\n\t\t\t\t<li><a href=\"//author.ihuaben.com/\" class=\"huaben-btn huaben-btn-red\"><i class=\"icon-coffee\"></i>写作后台</a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "写作后台",
+          "href": "//author.ihuaben.com/",
+          "parent": "<ul class=\"list-inline HuabenNavButton\">\n\t\t\t\t<li><a href=\"//www.ihuaben.com/fragment/fuli.html\" class=\"huaben-btn huaben-btn-yellow\"><i class=\"icon-money\"></i>写作福利</a></li>\n\t\t\t\t<li><a href=\"//author.ihuaben.com/\" class=\"huaben-btn huaben-btn-red\"><i class=\"icon-coffee\"></i>写作后台</a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "首页",
+          "href": "//www.ihuaben.com/",
+          "parent": "<ul class=\"list-inline navTab\" lang=\"navTab\">\n\t\t\t\t<li><a href=\"//www.ihuaben.com/\"><span>首页</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/tongren/\"><span>分类</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/web-next/characters/home\"><span>角色广场</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/app.html\"><span>手机版</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "分类",
+          "href": "//www.ihuaben.com/tongren/",
+          "parent": "<ul class=\"list-inline navTab\" lang=\"navTab\">\n\t\t\t\t<li><a href=\"//www.ihuaben.com/\"><span>首页</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/tongren/\"><span>分类</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/web-next/characters/home\"><span>角色广场</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/app.html\"><span>手机版</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "角色广场",
+          "href": "//www.ihuaben.com/web-next/characters/home",
+          "parent": "<ul class=\"list-inline navTab\" lang=\"navTab\">\n\t\t\t\t<li><a href=\"//www.ihuaben.com/\"><span>首页</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/tongren/\"><span>分类</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/web-next/characters/home\"><span>角色广场</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/app.html\"><span>手机版</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "手机版",
+          "href": "//www.ihuaben.com/app.html",
+          "parent": "<ul class=\"list-inline navTab\" lang=\"navTab\">\n\t\t\t\t<li><a href=\"//www.ihuaben.com/\"><span>首页</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/tongren/\"><span>分类</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/web-next/characters/home\"><span>角色广场</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/app.html\"><span>手机版</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "爱吃鱼的科比",
+          "href": "//user.ihuaben.com/112072918",
+          "parent": "<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/112072918\" class=\"text-muted\" target=\"_blank\">爱吃鱼的科比</a></span>\n\t\t\t\t\t\t\t\t<small>今天 19:00</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>"
+        },
+        {
+          "text": "斩神：天使圣光",
+          "href": "//www.ihuaben.com/book/13507325.html",
+          "parent": "<div>\n\t\t\t\t\t\t\t<a href=\"//user.ihuaben.com/112072918\" target=\"_blank\"><img class=\"img-rounded\" src=\"//piccn.ihuaben.com/pic/user/202312/1120/1702298692575-622P1B3287_132-132.jpg?x-oss-process=image/resize,w_50\"></a>\n\t\t\t\t\t\t\t<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/112072918\" class=\"text-muted\" target=\"_blank\">爱吃鱼的科比</a></span>\n\t\t\t\t\t\t\t\t<small>今天 19:00</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<h2><a href=\"//www.ihuaben.com/book/13507325.html\" target=\"_blank\"><em>斩神</em>：天使圣光</a></h2>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "当执掌光明与审判的天使神王千仞雪，遇上以身斩神、守护人间的林七夜一众守夜人；当神域顶级神力碰撞异世诡异规则，一场全新的故事就此拉开序幕。",
+          "href": "//www.ihuaben.com/book/13507325.html",
+          "parent": "<div class=\"clearfix searchresult-info\">\n\t\t\t\t\t\t\t<p><a href=\"//www.ihuaben.com/book/13507325.html\" target=\"_blank\">当执掌光明与审判的天使神王千仞雪，遇上以身<em>斩神</em>、守护人间的林七夜一众守夜人；当神域顶级神力碰撞异世诡异规则，一场全新的故事就此拉开序幕。</a></p>\n\t\t\t\t\t\t\t<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/anqingyu1/\" class=\"text-warning\">安卿鱼</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/shenqingzhu/\" class=\"text-warning\">沈青竹</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/wangmian1/\" class=\"text-warning\">王面</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "安卿鱼",
+          "href": "//www.ihuaben.com/category/anqingyu1/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/anqingyu1/\" class=\"text-warning\">安卿鱼</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/shenqingzhu/\" class=\"text-warning\">沈青竹</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/wangmian1/\" class=\"text-warning\">王面</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "沈青竹",
+          "href": "//www.ihuaben.com/category/shenqingzhu/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/anqingyu1/\" class=\"text-warning\">安卿鱼</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/shenqingzhu/\" class=\"text-warning\">沈青竹</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/wangmian1/\" class=\"text-warning\">王面</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "王面",
+          "href": "//www.ihuaben.com/category/wangmian1/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/anqingyu1/\" class=\"text-warning\">安卿鱼</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/shenqingzhu/\" class=\"text-warning\">沈青竹</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/wangmian1/\" class=\"text-warning\">王面</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "伊芝钦钦鸭",
+          "href": "//user.ihuaben.com/123886226",
+          "parent": "<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/123886226\" class=\"text-muted\" target=\"_blank\">伊芝钦钦鸭</a></span>\n\t\t\t\t\t\t\t\t<small>10-28</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>"
+        },
+        {
+          "text": "斩神：极致占有欲",
+          "href": "//www.ihuaben.com/book/12977157.html",
+          "parent": "<div>\n\t\t\t\t\t\t\t<a href=\"//user.ihuaben.com/123886226\" target=\"_blank\"><img class=\"img-rounded\" src=\"//piccn.ihuaben.com/pic/user/202510/0813/1759902071611-K13l3y88F4_640-640.png?x-oss-process=image/resize,w_50\"></a>\n\t\t\t\t\t\t\t<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/123886226\" class=\"text-muted\" target=\"_blank\">伊芝钦钦鸭</a></span>\n\t\t\t\t\t\t\t\t<small>10-28</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<h2><a href=\"//www.ihuaben.com/book/12977157.html\" target=\"_blank\"><em>斩神</em>：极致占有欲</a></h2>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "为了完成攻略，我同时追好几个人，后来系统告诉我只要攻略林七夜一人，就可以顶替其他人。当我在全校面前准备向林七夜表白时，黑暗中出现了层层人影……",
+          "href": "//www.ihuaben.com/book/12977157.html",
+          "parent": "<div class=\"clearfix searchresult-info\">\n\t\t\t\t\t\t\t<p><a href=\"//www.ihuaben.com/book/12977157.html\" target=\"_blank\">为了完成攻略，我同时追好几个人，后来系统告诉我只要攻略林七夜一人，就可以顶替其他人。当我在全校面前准备向林七夜表白时，黑暗中出现了层层人影……</a></p>\n\t\t\t\t\t\t\t<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/jiamianxiaodui/\" class=\"text-warning\">假面小队</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/wozaijingshenbingyuanlixuezhanshen/\" class=\"text-warning\">我在精神病院里学斩神</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/linqiye/\" class=\"text-warning\">林七夜</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "假面小队",
+          "href": "//www.ihuaben.com/category/jiamianxiaodui/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/jiamianxiaodui/\" class=\"text-warning\">假面小队</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/wozaijingshenbingyuanlixuezhanshen/\" class=\"text-warning\">我在精神病院里学斩神</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/linqiye/\" class=\"text-warning\">林七夜</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "我在精神病院里学斩神",
+          "href": "//www.ihuaben.com/category/wozaijingshenbingyuanlixuezhanshen/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/jiamianxiaodui/\" class=\"text-warning\">假面小队</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/wozaijingshenbingyuanlixuezhanshen/\" class=\"text-warning\">我在精神病院里学斩神</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/linqiye/\" class=\"text-warning\">林七夜</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "林七夜",
+          "href": "//www.ihuaben.com/category/linqiye/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/jiamianxiaodui/\" class=\"text-warning\">假面小队</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/wozaijingshenbingyuanlixuezhanshen/\" class=\"text-warning\">我在精神病院里学斩神</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/linqiye/\" class=\"text-warning\">林七夜</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "乾坤雨儿",
+          "href": "//user.ihuaben.com/14374605",
+          "parent": "<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/14374605\" class=\"text-muted\" target=\"_blank\">乾坤雨儿</a></span>\n\t\t\t\t\t\t\t\t<small>10-11</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>"
+        },
+        {
+          "text": "斩神：听说我是创世神",
+          "href": "//www.ihuaben.com/book/12899702.html",
+          "parent": "<div>\n\t\t\t\t\t\t\t<a href=\"//user.ihuaben.com/14374605\" target=\"_blank\"><img class=\"img-rounded\" src=\"//piccn.ihuaben.com/pic/user/202403/0818/1709894647085-81Jp3S67U0_640-640.png?x-oss-process=image/resize,w_50\"></a>\n\t\t\t\t\t\t\t<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/14374605\" class=\"text-muted\" target=\"_blank\">乾坤雨儿</a></span>\n\t\t\t\t\t\t\t\t<small>10-11</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<h2><a href=\"//www.ihuaben.com/book/12899702.html\" target=\"_blank\"><em>斩神</em>：听说我是创世神</a></h2>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "当混沌之神现身，如何能找到众神失踪的真相 林卿雨也好，神也好，混沌之神继承人也罢 我到底是谁 那她……到底是谁？她？创世之初的九霄明月，混沌初开的炽烈骄阳 不蛊不惑的朔望之神，不伤不死的不灭之灵 主宰秩序...",
+          "href": "//www.ihuaben.com/book/12899702.html",
+          "parent": "<div class=\"clearfix searchresult-info\">\n\t\t\t\t\t\t\t<p><a href=\"//www.ihuaben.com/book/12899702.html\" target=\"_blank\">当混沌之<em>神</em>现身，如何能找到众<em>神</em>失踪的真相 林卿雨也好，<em>神</em>也好，混沌之<em>神</em>继承人也罢 我到底是谁 那她……到底是谁？她？创世之初的九霄明月，混沌初开的炽烈骄阳 不蛊不惑的朔望之<em>神</em>，不伤不死的不灭之灵 主宰秩序...</a></p>\n\t\t\t\t\t\t\t<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/jiamian/\" class=\"text-warning\">假面</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/wangmian2/\" class=\"text-warning\">王免</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/wangmian1/\" class=\"text-warning\">王面</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "假面",
+          "href": "//www.ihuaben.com/category/jiamian/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/jiamian/\" class=\"text-warning\">假面</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/wangmian2/\" class=\"text-warning\">王免</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/wangmian1/\" class=\"text-warning\">王面</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "王免",
+          "href": "//www.ihuaben.com/category/wangmian2/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/jiamian/\" class=\"text-warning\">假面</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/wangmian2/\" class=\"text-warning\">王免</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/wangmian1/\" class=\"text-warning\">王面</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "王面",
+          "href": "//www.ihuaben.com/category/wangmian1/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/jiamian/\" class=\"text-warning\">假面</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/wangmian2/\" class=\"text-warning\">王免</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/wangmian1/\" class=\"text-warning\">王面</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "看名字是什么",
+          "href": "//user.ihuaben.com/131240740",
+          "parent": "<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/131240740\" class=\"text-muted\" target=\"_blank\">看名字是什么</a></span>\n\t\t\t\t\t\t\t\t<small>11-17</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>"
+        },
+        {
+          "text": "斩神：当假面觉醒武魂",
+          "href": "//www.ihuaben.com/book/13928683.html",
+          "parent": "<div>\n\t\t\t\t\t\t\t<a href=\"//user.ihuaben.com/131240740\" target=\"_blank\"><img class=\"img-rounded\" src=\"//piccn.ihuaben.com/pic/user/202608/1521/1786800072682-15l35927a0_640-640.png?x-oss-process=image/resize,w_50\"></a>\n\t\t\t\t\t\t\t<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/131240740\" class=\"text-muted\" target=\"_blank\">看名字是什么</a></span>\n\t\t\t\t\t\t\t\t<small>11-17</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<h2><a href=\"//www.ihuaben.com/book/13928683.html\" target=\"_blank\"><em>斩神</em>：当假面觉醒武魂</a></h2>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "她穿越到了看过的斩神世界，各个因素之下，纪柠加入了假面小队。一起经历八岐大蛇，救赵空城，训练新兵…… 什么什么？她原来就是这个世界的人吗？——— 第一本书，写的不好轻点喷꒰*•ɷ•*꒱ （太喜欢假面了，但...",
+          "href": "//www.ihuaben.com/book/13928683.html",
+          "parent": "<div class=\"clearfix searchresult-info\">\n\t\t\t\t\t\t\t<p><a href=\"//www.ihuaben.com/book/13928683.html\" target=\"_blank\">她穿越到了看过的<em>斩神</em>世界，各个因素之下，纪柠加入了假面小队。一起经历八岐大蛇，救赵空城，训练新兵…… 什么什么？她原来就是这个世界的人吗？——— 第一本书，写的不好轻点喷꒰*•ɷ•*꒱ （太喜欢假面了，但...</a></p>\n\t\t\t\t\t\t\t<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/jiamianxiaodui/\" class=\"text-warning\">假面小队</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zhanshenallxiang/\" class=\"text-warning\">斩神all向</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/gaoranshuangwen/\" class=\"text-warning\">高燃爽文</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "假面小队",
+          "href": "//www.ihuaben.com/category/jiamianxiaodui/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/jiamianxiaodui/\" class=\"text-warning\">假面小队</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zhanshenallxiang/\" class=\"text-warning\">斩神all向</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/gaoranshuangwen/\" class=\"text-warning\">高燃爽文</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "斩神all向",
+          "href": "//www.ihuaben.com/category/zhanshenallxiang/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/jiamianxiaodui/\" class=\"text-warning\">假面小队</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zhanshenallxiang/\" class=\"text-warning\">斩神all向</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/gaoranshuangwen/\" class=\"text-warning\">高燃爽文</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "高燃爽文",
+          "href": "//www.ihuaben.com/category/gaoranshuangwen/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/jiamianxiaodui/\" class=\"text-warning\">假面小队</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zhanshenallxiang/\" class=\"text-warning\">斩神all向</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/gaoranshuangwen/\" class=\"text-warning\">高燃爽文</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "雾霾不霾",
+          "href": "//user.ihuaben.com/64086682",
+          "parent": "<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/64086682\" class=\"text-muted\" target=\"_blank\">雾霾不霾</a></span>\n\t\t\t\t\t\t\t\t<small>10-07</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>"
+        },
+        {
+          "text": "斩神：灵冰降世",
+          "href": "//www.ihuaben.com/book/12268387.html",
+          "parent": "<div>\n\t\t\t\t\t\t\t<a href=\"//user.ihuaben.com/64086682\" target=\"_blank\"><img class=\"img-rounded\" src=\"//piccn.ihuaben.com/pic/user/202506/1213/1749707254392-6L1DOwIUK8_640-640.png?x-oss-process=image/resize,w_50\"></a>\n\t\t\t\t\t\t\t<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/64086682\" class=\"text-muted\" target=\"_blank\">雾霾不霾</a></span>\n\t\t\t\t\t\t\t\t<small>10-07</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<h2><a href=\"//www.ihuaben.com/book/12268387.html\" target=\"_blank\"><em>斩神</em>：灵冰降世</a></h2>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "双男主 拆cp 雨浩团宠 与龙逍遥一战中本以为自己已是必死无疑，岂料一朝穿越霍雨浩竟异世重生 但 天崩开局，进了精神病院 院内群魔乱舞，啼笑皆非 唯有隔壁床蒙着眼睛的小病友乖巧可爱很粘人 吃饭时，看着林七夜嘴角...",
+          "href": "//www.ihuaben.com/book/12268387.html",
+          "parent": "<div class=\"clearfix searchresult-info\">\n\t\t\t\t\t\t\t<p><a href=\"//www.ihuaben.com/book/12268387.html\" target=\"_blank\">双男主 拆cp 雨浩团宠 与龙逍遥一战中本以为自己已是必死无疑，岂料一朝穿越霍雨浩竟异世重生 但 天崩开局，进了精神病院 院内群魔乱舞，啼笑皆非 唯有隔壁床蒙着眼睛的小病友乖巧可爱很粘人 吃饭时，看着林七夜嘴角...</a></p>\n\t\t\t\t\t\t\t<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/shuangnanzhu/\" class=\"text-warning\">双男主</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/wozaijingshenbingyiyuanxuezhanshen/\" class=\"text-warning\">我在精神病医院学斩神</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yuhao4/\" class=\"text-warning\">雨浩</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "双男主",
+          "href": "//www.ihuaben.com/category/shuangnanzhu/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/shuangnanzhu/\" class=\"text-warning\">双男主</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/wozaijingshenbingyiyuanxuezhanshen/\" class=\"text-warning\">我在精神病医院学斩神</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yuhao4/\" class=\"text-warning\">雨浩</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "我在精神病医院学斩神",
+          "href": "//www.ihuaben.com/category/wozaijingshenbingyiyuanxuezhanshen/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/shuangnanzhu/\" class=\"text-warning\">双男主</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/wozaijingshenbingyiyuanxuezhanshen/\" class=\"text-warning\">我在精神病医院学斩神</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yuhao4/\" class=\"text-warning\">雨浩</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "雨浩",
+          "href": "//www.ihuaben.com/category/yuhao4/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/shuangnanzhu/\" class=\"text-warning\">双男主</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/wozaijingshenbingyiyuanxuezhanshen/\" class=\"text-warning\">我在精神病医院学斩神</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yuhao4/\" class=\"text-warning\">雨浩</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "应枝意",
+          "href": "//user.ihuaben.com/136060369",
+          "parent": "<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/136060369\" class=\"text-muted\" target=\"_blank\">应枝意</a></span>\n\t\t\t\t\t\t\t\t<small>今天 00:04</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>"
+        },
+        {
+          "text": "斩神：成为花神代理人后",
+          "href": "//www.ihuaben.com/book/15988632.html",
+          "parent": "<div>\n\t\t\t\t\t\t\t<a href=\"//user.ihuaben.com/136060369\" target=\"_blank\"><img class=\"img-rounded\" src=\"//piccn.ihuaben.com/pic/user/202609/2513/1790313191160-C64v1INFwK_640-640.png?x-oss-process=image/resize,w_50\"></a>\n\t\t\t\t\t\t\t<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/136060369\" class=\"text-muted\" target=\"_blank\">应枝意</a></span>\n\t\t\t\t\t\t\t\t<small>今天 00:04</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<h2><a href=\"//www.ihuaben.com/book/15988632.html\" target=\"_blank\"><em>斩神</em>：成为花神代理人后</a></h2>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "沈余音一朝车祸身死，与系统签订员工协议，穿越到斩神的世界里收集功德，老阴比进新手村， 沈余音：桀桀桀，小可爱们我来了…… 于是： 林七夜：袅袅姐挺好的，就是有点阴…… 安卿鱼：这是另外的价钱，这事没个三管...",
+          "href": "//www.ihuaben.com/book/15988632.html",
+          "parent": "<div class=\"clearfix searchresult-info\">\n\t\t\t\t\t\t\t<p><a href=\"//www.ihuaben.com/book/15988632.html\" target=\"_blank\">沈余音一朝车祸身死，与系统签订员工协议，穿越到<em>斩神</em>的世界里收集功德，老阴比进新手村， 沈余音：桀桀桀，小可爱们我来了…… 于是： 林七夜：袅袅姐挺好的，就是有点阴…… 安卿鱼：这是另外的价钱，这事没个三管...</a></p>\n\t\t\t\t\t\t\t<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/dongmantongren/\" class=\"text-warning\">动漫同人</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zhanshen1/\" class=\"text-warning\">斩神</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "动漫同人",
+          "href": "//www.ihuaben.com/category/dongmantongren/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/dongmantongren/\" class=\"text-warning\">动漫同人</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zhanshen1/\" class=\"text-warning\">斩神</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "斩神",
+          "href": "//www.ihuaben.com/category/zhanshen1/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/dongmantongren/\" class=\"text-warning\">动漫同人</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zhanshen1/\" class=\"text-warning\">斩神</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "九仙凌云",
+          "href": "//user.ihuaben.com/124223452",
+          "parent": "<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/124223452\" class=\"text-muted\" target=\"_blank\">九仙凌云</a></span>\n\t\t\t\t\t\t\t\t<small>05-01</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>"
+        },
+        {
+          "text": "综漫斩神：戏精同学们穿越后，剧情全癫了",
+          "href": "//www.ihuaben.com/book/12821845.html",
+          "parent": "<div>\n\t\t\t\t\t\t\t<a href=\"//user.ihuaben.com/124223452\" target=\"_blank\"><img class=\"img-rounded\" src=\"//piccn.ihuaben.com/pic/user/202501/0119/1735730001164-248065B4k2_640-640.png?x-oss-process=image/resize,w_50\"></a>\n\t\t\t\t\t\t\t<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/124223452\" class=\"text-muted\" target=\"_blank\">九仙凌云</a></span>\n\t\t\t\t\t\t\t\t<small>05-01</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<h2><a href=\"//www.ihuaben.com/book/12821845.html\" target=\"_blank\">综漫<em>斩神</em>：戏精同学们穿越后，剧情全癫了</a></h2>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "由于同学们的到来，将整个斩神世界的画风都带偏了，不，应该是癫了。带着导演系统和玛丽苏系统的同学们：七夜同学！快！这里还有一场戏！林七夜：你们补药过来啊！同学们：桀桀桀 带着卧底系统和传教系统的同学们：...",
+          "href": "//www.ihuaben.com/book/12821845.html",
+          "parent": "<div class=\"clearfix searchresult-info\">\n\t\t\t\t\t\t\t<p><a href=\"//www.ihuaben.com/book/12821845.html\" target=\"_blank\">由于同学们的到来，将整个<em>斩神</em>世界的画风都带偏了，不，应该是癫了。带着导演系统和玛丽苏系统的同学们：七夜同学！快！这里还有一场戏！林七夜：你们补药过来啊！同学们：桀桀桀 带着卧底系统和传教系统的同学们：...</a></p>\n\t\t\t\t\t\t\t<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zhanshen1/\" class=\"text-warning\">斩神</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/guafentiaozhan/\" class=\"text-warning\">瓜分挑战</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/guanying2/\" class=\"text-warning\">观影</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "斩神",
+          "href": "//www.ihuaben.com/category/zhanshen1/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zhanshen1/\" class=\"text-warning\">斩神</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/guafentiaozhan/\" class=\"text-warning\">瓜分挑战</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/guanying2/\" class=\"text-warning\">观影</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "瓜分挑战",
+          "href": "//www.ihuaben.com/category/guafentiaozhan/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zhanshen1/\" class=\"text-warning\">斩神</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/guafentiaozhan/\" class=\"text-warning\">瓜分挑战</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/guanying2/\" class=\"text-warning\">观影</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "观影",
+          "href": "//www.ihuaben.com/category/guanying2/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zhanshen1/\" class=\"text-warning\">斩神</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/guafentiaozhan/\" class=\"text-warning\">瓜分挑战</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/guanying2/\" class=\"text-warning\">观影</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "完颜忆灵",
+          "href": "//user.ihuaben.com/66392030",
+          "parent": "<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/66392030\" class=\"text-muted\" target=\"_blank\">完颜忆灵</a></span>\n\t\t\t\t\t\t\t\t<small>昨天 21:33</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>"
+        },
+        {
+          "text": "斩神：长夜之中",
+          "href": "//www.ihuaben.com/book/12669376.html",
+          "parent": "<div>\n\t\t\t\t\t\t\t<a href=\"//user.ihuaben.com/66392030\" target=\"_blank\"><img class=\"img-rounded\" src=\"//piccn.ihuaben.com/pic/user/202611/1500/1794675059657-1k00CwnC6n_640-640.png?x-oss-process=image/resize,w_50\"></a>\n\t\t\t\t\t\t\t<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/66392030\" class=\"text-muted\" target=\"_blank\">完颜忆灵</a></span>\n\t\t\t\t\t\t\t\t<small>昨天 21:33</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<h2><a href=\"//www.ihuaben.com/book/12669376.html\" target=\"_blank\"><em>斩神</em>：长夜之中</a></h2>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "天杀的，我穿越的不是都市战神嘛……怎么给我干斩神来了？观影1：原著观影梵离 观影2：叶司令媳妇儿今天又装柔弱了吗？左青篇： 禁墟神笔马良，只要是我写的小说，但凡是笔下出现过的异能我都能拥有。袁罡篇： 我...",
+          "href": "//www.ihuaben.com/book/12669376.html",
+          "parent": "<div class=\"clearfix searchresult-info\">\n\t\t\t\t\t\t\t<p><a href=\"//www.ihuaben.com/book/12669376.html\" target=\"_blank\">天杀的，我穿越的不是都市战神嘛……怎么给我干<em>斩神</em>来了？观影1：原著观影梵离 观影2：叶司令媳妇儿今天又装柔弱了吗？左青篇： 禁墟神笔马良，只要是我写的小说，但凡是笔下出现过的异能我都能拥有。袁罡篇： 我...</a></p>\n\t\t\t\t\t\t\t<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yefan2/\" class=\"text-warning\">叶梵</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zhanshen1/\" class=\"text-warning\">斩神</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yinglingxiaodui/\" class=\"text-warning\">英灵小队</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "叶梵",
+          "href": "//www.ihuaben.com/category/yefan2/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yefan2/\" class=\"text-warning\">叶梵</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zhanshen1/\" class=\"text-warning\">斩神</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yinglingxiaodui/\" class=\"text-warning\">英灵小队</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "斩神",
+          "href": "//www.ihuaben.com/category/zhanshen1/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yefan2/\" class=\"text-warning\">叶梵</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zhanshen1/\" class=\"text-warning\">斩神</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yinglingxiaodui/\" class=\"text-warning\">英灵小队</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "英灵小队",
+          "href": "//www.ihuaben.com/category/yinglingxiaodui/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yefan2/\" class=\"text-warning\">叶梵</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zhanshen1/\" class=\"text-warning\">斩神</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yinglingxiaodui/\" class=\"text-warning\">英灵小队</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "爱吃鱼的科比",
+          "href": "//user.ihuaben.com/112072918",
+          "parent": "<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/112072918\" class=\"text-muted\" target=\"_blank\">爱吃鱼的科比</a></span>\n\t\t\t\t\t\t\t\t<small>2025-12-24</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>"
+        },
+        {
+          "text": "斩神：拥有叶罗丽魔法的我改变意难平剧情",
+          "href": "//www.ihuaben.com/book/12373742.html",
+          "parent": "<div>\n\t\t\t\t\t\t\t<a href=\"//user.ihuaben.com/112072918\" target=\"_blank\"><img class=\"img-rounded\" src=\"//piccn.ihuaben.com/pic/user/202312/1120/1702298692575-622P1B3287_132-132.jpg?x-oss-process=image/resize,w_50\"></a>\n\t\t\t\t\t\t\t<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/112072918\" class=\"text-muted\" target=\"_blank\">爱吃鱼的科比</a></span>\n\t\t\t\t\t\t\t\t<small>2025-12-24</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<h2><a href=\"//www.ihuaben.com/book/12373742.html\" target=\"_blank\"><em>斩神</em>：拥有叶罗丽魔法的我改变意难平剧情</a></h2>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "all向/万人迷/全员暧昧向/ —— 她是拥有叶罗丽精灵梦里银尘仙子之身的人 她是活泼开朗的李玥儿 她亦是大夏史上最年轻最神秘的人类天花板之一 她是136小队的临时队员 拥有一个改变意难平剧情系统的她，面对这么多...",
+          "href": "//www.ihuaben.com/book/12373742.html",
+          "parent": "<div class=\"clearfix searchresult-info\">\n\t\t\t\t\t\t\t<p><a href=\"//www.ihuaben.com/book/12373742.html\" target=\"_blank\">all向/万人迷/全员暧昧向/ —— 她是拥有叶罗丽精灵梦里银尘仙子之身的人 她是活泼开朗的李玥儿 她亦是大夏史上最年轻最神秘的人类天花板之一 她是136小队的临时队员 拥有一个改变意难平剧情系统的她，面对这么多...</a></p>\n\t\t\t\t\t\t\t<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/cplinqiye/\" class=\"text-warning\">cp林七夜</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yuanchuangnu:zhucpwangmian/\" class=\"text-warning\">原创女主cp王面</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zhanshenxuanwo/\" class=\"text-warning\">斩神漩涡</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "cp林七夜",
+          "href": "//www.ihuaben.com/category/cplinqiye/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/cplinqiye/\" class=\"text-warning\">cp林七夜</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yuanchuangnu:zhucpwangmian/\" class=\"text-warning\">原创女主cp王面</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zhanshenxuanwo/\" class=\"text-warning\">斩神漩涡</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "原创女主cp王面",
+          "href": "//www.ihuaben.com/category/yuanchuangnu:zhucpwangmian/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/cplinqiye/\" class=\"text-warning\">cp林七夜</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yuanchuangnu:zhucpwangmian/\" class=\"text-warning\">原创女主cp王面</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zhanshenxuanwo/\" class=\"text-warning\">斩神漩涡</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "斩神漩涡",
+          "href": "//www.ihuaben.com/category/zhanshenxuanwo/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/cplinqiye/\" class=\"text-warning\">cp林七夜</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yuanchuangnu:zhucpwangmian/\" class=\"text-warning\">原创女主cp王面</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zhanshenxuanwo/\" class=\"text-warning\">斩神漩涡</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "钥焰玖熙",
+          "href": "//user.ihuaben.com/31587335",
+          "parent": "<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/31587335\" class=\"text-muted\" target=\"_blank\">钥焰玖熙</a></span>\n\t\t\t\t\t\t\t\t<small>07-08</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>"
+        }
+      ]
+    },
+    {
+      "term": "师兄啊师兄",
+      "status": 200,
+      "url": "https://so.ihuaben.com/search?keyword=%E5%B8%88%E5%85%84%E5%95%8A%E5%B8%88%E5%85%84",
+      "contentType": "text/html;charset=UTF-8",
+      "title": "师兄啊师兄小说-热门师兄啊师兄小说推荐-师兄啊师兄小说免费读-话本小说网",
+      "body": "[搜索] [菜单] 首页 角色广场 分类 收藏 写作 我的 书架 登录 写作福利 写作后台 首页 分类 角色广场 手机版 颜朱 今天 00:37 师兄啊师兄：多情 单元女主，一见钟情。 999+ 人看过 标签： 动漫周更 师兄啊 漫同征文 轻轻说 11-13 师兄啊师兄：奈何师尊实在貌美 偶尔暴躁美人脑小花精X温柔护短且腹黑大佬圣人 CP为太清圣人，有私设，剧情会跟着动漫走，人设有OOC预警，不喜勿入，创作不易，禁止抄袭。2026.08.28 已签约。花眠是北洲上的一个小花精，在陌生洪荒中小心翼翼地活了... 999+ 人看过 标签： 太清 太清圣人 太清圣人x原创女主 减肥妞妞 昨天 23:31 师兄啊师兄：天道弃我，大道护我 被天道放弃的平行世界，域外天魔出现，元莲衍师门全部为护人族战死，其他仙门道友也死了，她走的是丹道，全部修仙者只剩自己。她拜求天道和圣母，天道已经放弃了这个世界，自然不会理会，女娲被困洪荒，自顾不暇，... 999+ 人看过 标签： 动漫同人 洪荒 通天教主 甲以 今天 16:36 师兄啊师兄：师姐她不可理喻 （独立线）都是1v1，剧情线互相独立，对于每个男主的线来说，女主永远是年上“师姐”男主可打赏指定，目前是玉清 日更1-2章 999+ 人看过 标签： 元始天尊 圣人 漫同征文 云端之巅 今天 14:56 师兄啊师兄：貌美小师妹她总爱装柔弱 有个苟得惊天动地的师兄，李长寿。她生得貌美，娇气柔弱，风一吹就倒。整个人教都知道，小师妹是用来宠的。李长寿再苟，也得先护着她。可没人知道，这位娇滴滴的小师妹，其实强得离谱。她只想当一条安静貌美的咸鱼，... 999+ 人看过 标签： 师兄啊 师兄啊师兄动画 洪荒 观我旧往同我仰春 06-21 师兄啊师兄：你到底是谁 （已签约） 一朝穿越到洪荒之中，看瑶初会在此掀起怎样的巨浪吧 （若有与原著不同，就是作者私设） 999+ 人看过 标签： 万人迷 师兄啊师兄 漫同征文 弋江西 11-17 师兄啊师兄：丢人师妹她带了个苟系统 （不断更不弃更，草稿很多，可放心入） 李长庚/蓝灵娥：师妹！咱能不能要点面皮！清芜：那我下次蒙脸丢人^⎚‸⎚^ 以为清芜只是简单的不要面皮，结果是…压根没有… （看不下去自己退） 999+ 人看过 标签： all 哪吒 师兄啊师兄 小名春 今天 12:21 师兄啊师兄：蛊美人 蛊系美人不想当万人迷 999+ 人看过 标签： all原创女主 拆官配 苏爽嫖无逻辑 季北妄 11-16 师兄啊师兄：女主她是个万人迷 先天灵玉化形的苏清瑶，携一缕创世本源灵韵降世洪荒。她生来便有动人心魄的魅力，所到之处，仙神失神，妖魔倾心，连草木精怪都忍不住围着她打转。封神棋局波谲云诡，她是鸿钧剧本之外的唯一变数。... 999+ 人看过 标签： 动漫同人 女主万人迷 漫同征文 泠舟渡月芙 今天 00:02 师兄啊师兄：先天葵灵背债记 系统局赛道内卷严重，炮灰组、龙傲天组人人争抢，唯有洪荒部门无人愿意接手——洪荒岁月不计年，一蹲就是万古光阴。新兵先天向日葵灵根的葵婳，不幸被做局发配洪荒。扎根西极荒地，她每日面朝太阳晒太阳摆烂，熬到还... 999+ 人看过 标签： 动漫同人 孔宣 师兄啊师兄 三个咚咚咚 今天 19:56 师兄啊师兄：太清家的长寿小道侣 我叫李长寿，穿越到洪荒多年，只信奉十六字真",
+      "links": [
+        {
+          "text": "[搜索]",
+          "href": "//www.ihuaben.com/search.html",
+          "parent": "<ul class=\"pull-right\">\n\t\t\t\t<li><a href=\"//www.ihuaben.com/search.html\" class=\"huaben-img-btn search\">[搜索]</a></li>\n\t\t\t\t<li><a href=\"#\" id=\"huabenMore\" class=\"huaben-img-btn more\">[菜单]</a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "[菜单]",
+          "href": "#",
+          "parent": "<ul class=\"pull-right\">\n\t\t\t\t<li><a href=\"//www.ihuaben.com/search.html\" class=\"huaben-img-btn search\">[搜索]</a></li>\n\t\t\t\t<li><a href=\"#\" id=\"huabenMore\" class=\"huaben-img-btn more\">[菜单]</a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "首页",
+          "href": "//www.ihuaben.com/",
+          "parent": "<ul>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/\"><i class=\"hicon-home\"></i><span>首页</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/web-next/characters/home\"><i class=\"hicon-location\"></i><span>角色广场</span></a>\n\t\t\t\t</li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/tongren/\"><i class=\"hicon-catalog\"></i><span>分类</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "角色广场",
+          "href": "//www.ihuaben.com/web-next/characters/home",
+          "parent": "<ul>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/\"><i class=\"hicon-home\"></i><span>首页</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/web-next/characters/home\"><i class=\"hicon-location\"></i><span>角色广场</span></a>\n\t\t\t\t</li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/tongren/\"><i class=\"hicon-catalog\"></i><span>分类</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "分类",
+          "href": "//www.ihuaben.com/tongren/",
+          "parent": "<ul>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/\"><i class=\"hicon-home\"></i><span>首页</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/web-next/characters/home\"><i class=\"hicon-location\"></i><span>角色广场</span></a>\n\t\t\t\t</li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/tongren/\"><i class=\"hicon-catalog\"></i><span>分类</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "收藏",
+          "href": "//user.ihuaben.com/bookShelf/list",
+          "parent": "<ul>\n\t\t\t\t<li><a href=\"//user.ihuaben.com/bookShelf/list\"><i class=\"hicon-shelf\"></i><span>收藏</span></a></li>\n\t\t\t\t<li><a href=\"//author.ihuaben.com/\"><i class=\"hicon-write\"></i><span>写作</span></a></li>\n\t\t\t\t<li><a href=\"//user.ihuaben.com/\"><i class=\"hicon-my\"></i><span>我的</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "写作",
+          "href": "//author.ihuaben.com/",
+          "parent": "<ul>\n\t\t\t\t<li><a href=\"//user.ihuaben.com/bookShelf/list\"><i class=\"hicon-shelf\"></i><span>收藏</span></a></li>\n\t\t\t\t<li><a href=\"//author.ihuaben.com/\"><i class=\"hicon-write\"></i><span>写作</span></a></li>\n\t\t\t\t<li><a href=\"//user.ihuaben.com/\"><i class=\"hicon-my\"></i><span>我的</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "我的",
+          "href": "//user.ihuaben.com/",
+          "parent": "<ul>\n\t\t\t\t<li><a href=\"//user.ihuaben.com/bookShelf/list\"><i class=\"hicon-shelf\"></i><span>收藏</span></a></li>\n\t\t\t\t<li><a href=\"//author.ihuaben.com/\"><i class=\"hicon-write\"></i><span>写作</span></a></li>\n\t\t\t\t<li><a href=\"//user.ihuaben.com/\"><i class=\"hicon-my\"></i><span>我的</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "书架",
+          "href": "//user.ihuaben.com/bookShelf/list",
+          "parent": "<ul class=\"pull-right list-inline\">\n\t\t\t<li><a href=\"//user.ihuaben.com/bookShelf/list\" class=\"bookshelf\">书架</a></li>\n\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t<li id=\"nav_login_bar\"><a href=\"//passport.ihuaben.com/\" class=\"avatar\">登录</a></li>\n\t\t\t\t\t<li id=\"nav_usercenter_bar\" style=\"display: none;\">\n\t\t\t\t\t\t<a href=\"//user.ihuaben.com/\" class=\"userpic\">\n\t\t\t\t\t\t\t<img src=\"\" id=\"user_head_bar\" alt=\"\">\n\t\t\t\t\t\t\t<span></span>\n\t\t\t\t\t\t</a>\n\t\t\t\t\t</li>\n\t\t\t\t\n\t\t\t\n\t\t</ul>"
+        },
+        {
+          "text": "登录",
+          "href": "//passport.ihuaben.com/",
+          "parent": "<ul class=\"pull-right list-inline\">\n\t\t\t<li><a href=\"//user.ihuaben.com/bookShelf/list\" class=\"bookshelf\">书架</a></li>\n\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t<li id=\"nav_login_bar\"><a href=\"//passport.ihuaben.com/\" class=\"avatar\">登录</a></li>\n\t\t\t\t\t<li id=\"nav_usercenter_bar\" style=\"display: none;\">\n\t\t\t\t\t\t<a href=\"//user.ihuaben.com/\" class=\"userpic\">\n\t\t\t\t\t\t\t<img src=\"\" id=\"user_head_bar\" alt=\"\">\n\t\t\t\t\t\t\t<span></span>\n\t\t\t\t\t\t</a>\n\t\t\t\t\t</li>\n\t\t\t\t\n\t\t\t\n\t\t</ul>"
+        },
+        {
+          "text": "写作福利",
+          "href": "//www.ihuaben.com/fragment/fuli.html",
+          "parent": "<ul class=\"list-inline HuabenNavButton\">\n\t\t\t\t<li><a href=\"//www.ihuaben.com/fragment/fuli.html\" class=\"huaben-btn huaben-btn-yellow\"><i class=\"icon-money\"></i>写作福利</a></li>\n\t\t\t\t<li><a href=\"//author.ihuaben.com/\" class=\"huaben-btn huaben-btn-red\"><i class=\"icon-coffee\"></i>写作后台</a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "写作后台",
+          "href": "//author.ihuaben.com/",
+          "parent": "<ul class=\"list-inline HuabenNavButton\">\n\t\t\t\t<li><a href=\"//www.ihuaben.com/fragment/fuli.html\" class=\"huaben-btn huaben-btn-yellow\"><i class=\"icon-money\"></i>写作福利</a></li>\n\t\t\t\t<li><a href=\"//author.ihuaben.com/\" class=\"huaben-btn huaben-btn-red\"><i class=\"icon-coffee\"></i>写作后台</a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "首页",
+          "href": "//www.ihuaben.com/",
+          "parent": "<ul class=\"list-inline navTab\" lang=\"navTab\">\n\t\t\t\t<li><a href=\"//www.ihuaben.com/\"><span>首页</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/tongren/\"><span>分类</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/web-next/characters/home\"><span>角色广场</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/app.html\"><span>手机版</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "分类",
+          "href": "//www.ihuaben.com/tongren/",
+          "parent": "<ul class=\"list-inline navTab\" lang=\"navTab\">\n\t\t\t\t<li><a href=\"//www.ihuaben.com/\"><span>首页</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/tongren/\"><span>分类</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/web-next/characters/home\"><span>角色广场</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/app.html\"><span>手机版</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "角色广场",
+          "href": "//www.ihuaben.com/web-next/characters/home",
+          "parent": "<ul class=\"list-inline navTab\" lang=\"navTab\">\n\t\t\t\t<li><a href=\"//www.ihuaben.com/\"><span>首页</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/tongren/\"><span>分类</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/web-next/characters/home\"><span>角色广场</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/app.html\"><span>手机版</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "手机版",
+          "href": "//www.ihuaben.com/app.html",
+          "parent": "<ul class=\"list-inline navTab\" lang=\"navTab\">\n\t\t\t\t<li><a href=\"//www.ihuaben.com/\"><span>首页</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/tongren/\"><span>分类</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/web-next/characters/home\"><span>角色广场</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/app.html\"><span>手机版</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "颜朱",
+          "href": "//user.ihuaben.com/113799087",
+          "parent": "<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/113799087\" class=\"text-muted\" target=\"_blank\">颜朱</a></span>\n\t\t\t\t\t\t\t\t<small>今天 00:37</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>"
+        },
+        {
+          "text": "师兄啊师兄：多情",
+          "href": "//www.ihuaben.com/book/12498418.html",
+          "parent": "<div>\n\t\t\t\t\t\t\t<a href=\"//user.ihuaben.com/113799087\" target=\"_blank\"><img class=\"img-rounded\" src=\"//piccn.ihuaben.com/pic/user/202410/2116/1729499921723-44w074j04p_640-640.png?x-oss-process=image/resize,w_50\"></a>\n\t\t\t\t\t\t\t<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/113799087\" class=\"text-muted\" target=\"_blank\">颜朱</a></span>\n\t\t\t\t\t\t\t\t<small>今天 00:37</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<h2><a href=\"//www.ihuaben.com/book/12498418.html\" target=\"_blank\"><em>师兄啊师兄</em>：多情</a></h2>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "单元女主，一见钟情。",
+          "href": "//www.ihuaben.com/book/12498418.html",
+          "parent": "<div class=\"clearfix searchresult-info\">\n\t\t\t\t\t\t\t<p><a href=\"//www.ihuaben.com/book/12498418.html\" target=\"_blank\">单元女主，一见钟情。</a></p>\n\t\t\t\t\t\t\t<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/dongmanzhougeng/\" class=\"text-warning\">动漫周更</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/shixionga/\" class=\"text-warning\">师兄啊</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/mantongzhengwen/\" class=\"text-warning\">漫同征文</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "动漫周更",
+          "href": "//www.ihuaben.com/category/dongmanzhougeng/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/dongmanzhougeng/\" class=\"text-warning\">动漫周更</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/shixionga/\" class=\"text-warning\">师兄啊</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/mantongzhengwen/\" class=\"text-warning\">漫同征文</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "师兄啊",
+          "href": "//www.ihuaben.com/category/shixionga/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/dongmanzhougeng/\" class=\"text-warning\">动漫周更</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/shixionga/\" class=\"text-warning\">师兄啊</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/mantongzhengwen/\" class=\"text-warning\">漫同征文</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "漫同征文",
+          "href": "//www.ihuaben.com/category/mantongzhengwen/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/dongmanzhougeng/\" class=\"text-warning\">动漫周更</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/shixionga/\" class=\"text-warning\">师兄啊</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/mantongzhengwen/\" class=\"text-warning\">漫同征文</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "轻轻说",
+          "href": "//user.ihuaben.com/135493202",
+          "parent": "<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/135493202\" class=\"text-muted\" target=\"_blank\">轻轻说</a></span>\n\t\t\t\t\t\t\t\t<small>11-13</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>"
+        },
+        {
+          "text": "师兄啊师兄：奈何师尊实在貌美",
+          "href": "//www.ihuaben.com/book/15655546.html",
+          "parent": "<div>\n\t\t\t\t\t\t\t<a href=\"//user.ihuaben.com/135493202\" target=\"_blank\"><img class=\"img-rounded\" src=\"//piccn.ihuaben.com/pic/user/202608/1619/1786881027068-oqye12x0X2_640-640.png?x-oss-process=image/resize,w_50\"></a>\n\t\t\t\t\t\t\t<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/135493202\" class=\"text-muted\" target=\"_blank\">轻轻说</a></span>\n\t\t\t\t\t\t\t\t<small>11-13</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<h2><a href=\"//www.ihuaben.com/book/15655546.html\" target=\"_blank\"><em>师兄啊师兄</em>：奈何师尊实在貌美</a></h2>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "偶尔暴躁美人脑小花精X温柔护短且腹黑大佬圣人 CP为太清圣人，有私设，剧情会跟着动漫走，人设有OOC预警，不喜勿入，创作不易，禁止抄袭。2026.08.28 已签约。花眠是北洲上的一个小花精，在陌生洪荒中小心翼翼地活了...",
+          "href": "//www.ihuaben.com/book/15655546.html",
+          "parent": "<div class=\"clearfix searchresult-info\">\n\t\t\t\t\t\t\t<p><a href=\"//www.ihuaben.com/book/15655546.html\" target=\"_blank\">偶尔暴躁美人脑小花精X温柔护短且腹黑大佬圣人 CP为太清圣人，有私设，剧情会跟着动漫走，人设有OOC预警，不喜勿入，创作不易，禁止抄袭。2026.08.28 已签约。花眠是北洲上的一个小花精，在陌生洪荒中小心翼翼地活了...</a></p>\n\t\t\t\t\t\t\t<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/taiqing/\" class=\"text-warning\">太清</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/taiqingshengren/\" class=\"text-warning\">太清圣人</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/taiqingshengrenxyuanchuangnu:zhu/\" class=\"text-warning\">太清圣人x原创女主</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "太清",
+          "href": "//www.ihuaben.com/category/taiqing/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/taiqing/\" class=\"text-warning\">太清</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/taiqingshengren/\" class=\"text-warning\">太清圣人</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/taiqingshengrenxyuanchuangnu:zhu/\" class=\"text-warning\">太清圣人x原创女主</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "太清圣人",
+          "href": "//www.ihuaben.com/category/taiqingshengren/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/taiqing/\" class=\"text-warning\">太清</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/taiqingshengren/\" class=\"text-warning\">太清圣人</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/taiqingshengrenxyuanchuangnu:zhu/\" class=\"text-warning\">太清圣人x原创女主</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "太清圣人x原创女主",
+          "href": "//www.ihuaben.com/category/taiqingshengrenxyuanchuangnu:zhu/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/taiqing/\" class=\"text-warning\">太清</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/taiqingshengren/\" class=\"text-warning\">太清圣人</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/taiqingshengrenxyuanchuangnu:zhu/\" class=\"text-warning\">太清圣人x原创女主</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "减肥妞妞",
+          "href": "//user.ihuaben.com/134464468",
+          "parent": "<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/134464468\" class=\"text-muted\" target=\"_blank\">减肥妞妞</a></span>\n\t\t\t\t\t\t\t\t<small>昨天 23:31</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>"
+        },
+        {
+          "text": "师兄啊师兄：天道弃我，大道护我",
+          "href": "//www.ihuaben.com/book/15078425.html",
+          "parent": "<div>\n\t\t\t\t\t\t\t<a href=\"//user.ihuaben.com/134464468\" target=\"_blank\"><img class=\"img-rounded\" src=\"//piccn.ihuaben.com/pic/user/202606/2813/1782626369257-Y7U4g3aB5o_640-640.png?x-oss-process=image/resize,w_50\"></a>\n\t\t\t\t\t\t\t<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/134464468\" class=\"text-muted\" target=\"_blank\">减肥妞妞</a></span>\n\t\t\t\t\t\t\t\t<small>昨天 23:31</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<h2><a href=\"//www.ihuaben.com/book/15078425.html\" target=\"_blank\"><em>师兄啊师兄</em>：天道弃我，大道护我</a></h2>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "被天道放弃的平行世界，域外天魔出现，元莲衍师门全部为护人族战死，其他仙门道友也死了，她走的是丹道，全部修仙者只剩自己。她拜求天道和圣母，天道已经放弃了这个世界，自然不会理会，女娲被困洪荒，自顾不暇，...",
+          "href": "//www.ihuaben.com/book/15078425.html",
+          "parent": "<div class=\"clearfix searchresult-info\">\n\t\t\t\t\t\t\t<p><a href=\"//www.ihuaben.com/book/15078425.html\" target=\"_blank\">被天道放弃的平行世界，域外天魔出现，元莲衍师门全部为护人族战死，其他仙门道友也死了，她走的是丹道，全部修仙者只剩自己。她拜求天道和圣母，天道已经放弃了这个世界，自然不会理会，女娲被困洪荒，自顾不暇，...</a></p>\n\t\t\t\t\t\t\t<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/dongmantongren/\" class=\"text-warning\">动漫同人</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/honghuang/\" class=\"text-warning\">洪荒</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/tongtianjiaozhu/\" class=\"text-warning\">通天教主</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "动漫同人",
+          "href": "//www.ihuaben.com/category/dongmantongren/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/dongmantongren/\" class=\"text-warning\">动漫同人</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/honghuang/\" class=\"text-warning\">洪荒</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/tongtianjiaozhu/\" class=\"text-warning\">通天教主</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "洪荒",
+          "href": "//www.ihuaben.com/category/honghuang/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/dongmantongren/\" class=\"text-warning\">动漫同人</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/honghuang/\" class=\"text-warning\">洪荒</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/tongtianjiaozhu/\" class=\"text-warning\">通天教主</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "通天教主",
+          "href": "//www.ihuaben.com/category/tongtianjiaozhu/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/dongmantongren/\" class=\"text-warning\">动漫同人</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/honghuang/\" class=\"text-warning\">洪荒</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/tongtianjiaozhu/\" class=\"text-warning\">通天教主</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "甲以",
+          "href": "//user.ihuaben.com/130943530",
+          "parent": "<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/130943530\" class=\"text-muted\" target=\"_blank\">甲以</a></span>\n\t\t\t\t\t\t\t\t<small>今天 16:36</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>"
+        },
+        {
+          "text": "师兄啊师兄：师姐她不可理喻",
+          "href": "//www.ihuaben.com/book/15938422.html",
+          "parent": "<div>\n\t\t\t\t\t\t\t<a href=\"//user.ihuaben.com/130943530\" target=\"_blank\"><img class=\"img-rounded\" src=\"//piccn.ihuaben.com/pic/user/202512/0817/1765186662173-X62Ur866PX_640-640.png?x-oss-process=image/resize,w_50\"></a>\n\t\t\t\t\t\t\t<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/130943530\" class=\"text-muted\" target=\"_blank\">甲以</a></span>\n\t\t\t\t\t\t\t\t<small>今天 16:36</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<h2><a href=\"//www.ihuaben.com/book/15938422.html\" target=\"_blank\"><em>师兄啊师兄</em>：师姐她不可理喻</a></h2>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "（独立线）都是1v1，剧情线互相独立，对于每个男主的线来说，女主永远是年上“师姐”男主可打赏指定，目前是玉清 日更1-2章",
+          "href": "//www.ihuaben.com/book/15938422.html",
+          "parent": "<div class=\"clearfix searchresult-info\">\n\t\t\t\t\t\t\t<p><a href=\"//www.ihuaben.com/book/15938422.html\" target=\"_blank\">（独立线）都是1v1，剧情线互相独立，对于每个男主的线来说，女主永远是年上“师姐”男主可打赏指定，目前是玉清 日更1-2章</a></p>\n\t\t\t\t\t\t\t<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yuanshitianzun/\" class=\"text-warning\">元始天尊</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/shengren/\" class=\"text-warning\">圣人</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/mantongzhengwen/\" class=\"text-warning\">漫同征文</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "元始天尊",
+          "href": "//www.ihuaben.com/category/yuanshitianzun/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yuanshitianzun/\" class=\"text-warning\">元始天尊</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/shengren/\" class=\"text-warning\">圣人</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/mantongzhengwen/\" class=\"text-warning\">漫同征文</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "圣人",
+          "href": "//www.ihuaben.com/category/shengren/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yuanshitianzun/\" class=\"text-warning\">元始天尊</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/shengren/\" class=\"text-warning\">圣人</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/mantongzhengwen/\" class=\"text-warning\">漫同征文</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "漫同征文",
+          "href": "//www.ihuaben.com/category/mantongzhengwen/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yuanshitianzun/\" class=\"text-warning\">元始天尊</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/shengren/\" class=\"text-warning\">圣人</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/mantongzhengwen/\" class=\"text-warning\">漫同征文</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "云端之巅",
+          "href": "//user.ihuaben.com/118065488",
+          "parent": "<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/118065488\" class=\"text-muted\" target=\"_blank\">云端之巅</a></span>\n\t\t\t\t\t\t\t\t<small>今天 14:56</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>"
+        },
+        {
+          "text": "师兄啊师兄：貌美小师妹她总爱装柔弱",
+          "href": "//www.ihuaben.com/book/16148809.html",
+          "parent": "<div>\n\t\t\t\t\t\t\t<a href=\"//user.ihuaben.com/118065488\" target=\"_blank\"><img class=\"img-rounded\" src=\"//piccn.ihuaben.com/pic/user/202610/0619/1791284989166-66Geb93g3u_640-640.png?x-oss-process=image/resize,w_50\"></a>\n\t\t\t\t\t\t\t<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/118065488\" class=\"text-muted\" target=\"_blank\">云端之巅</a></span>\n\t\t\t\t\t\t\t\t<small>今天 14:56</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<h2><a href=\"//www.ihuaben.com/book/16148809.html\" target=\"_blank\"><em>师兄啊师兄</em>：貌美小师妹她总爱装柔弱</a></h2>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "有个苟得惊天动地的师兄，李长寿。她生得貌美，娇气柔弱，风一吹就倒。整个人教都知道，小师妹是用来宠的。李长寿再苟，也得先护着她。可没人知道，这位娇滴滴的小师妹，其实强得离谱。她只想当一条安静貌美的咸鱼，...",
+          "href": "//www.ihuaben.com/book/16148809.html",
+          "parent": "<div class=\"clearfix searchresult-info\">\n\t\t\t\t\t\t\t<p><a href=\"//www.ihuaben.com/book/16148809.html\" target=\"_blank\">有个苟得惊天动地的<em>师兄</em>，李长寿。她生得貌美，娇气柔弱，风一吹就倒。整个人教都知道，小师妹是用来宠的。李长寿再苟，也得先护着她。可没人知道，这位娇滴滴的小师妹，其实强得离谱。她只想当一条安静貌美的咸鱼，...</a></p>\n\t\t\t\t\t\t\t<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/shixionga/\" class=\"text-warning\">师兄啊</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/shixiongashixiongdonghua/\" class=\"text-warning\">师兄啊师兄动画</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/honghuang/\" class=\"text-warning\">洪荒</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "师兄啊",
+          "href": "//www.ihuaben.com/category/shixionga/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/shixionga/\" class=\"text-warning\">师兄啊</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/shixiongashixiongdonghua/\" class=\"text-warning\">师兄啊师兄动画</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/honghuang/\" class=\"text-warning\">洪荒</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "师兄啊师兄动画",
+          "href": "//www.ihuaben.com/category/shixiongashixiongdonghua/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/shixionga/\" class=\"text-warning\">师兄啊</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/shixiongashixiongdonghua/\" class=\"text-warning\">师兄啊师兄动画</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/honghuang/\" class=\"text-warning\">洪荒</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "洪荒",
+          "href": "//www.ihuaben.com/category/honghuang/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/shixionga/\" class=\"text-warning\">师兄啊</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/shixiongashixiongdonghua/\" class=\"text-warning\">师兄啊师兄动画</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/honghuang/\" class=\"text-warning\">洪荒</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "观我旧往同我仰春",
+          "href": "//user.ihuaben.com/127301077",
+          "parent": "<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/127301077\" class=\"text-muted\" target=\"_blank\">观我旧往同我仰春</a></span>\n\t\t\t\t\t\t\t\t<small>06-21</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>"
+        },
+        {
+          "text": "师兄啊师兄：你到底是谁",
+          "href": "//www.ihuaben.com/book/12971319.html",
+          "parent": "<div>\n\t\t\t\t\t\t\t<a href=\"//user.ihuaben.com/127301077\" target=\"_blank\"><img class=\"img-rounded\" src=\"//piccn.ihuaben.com/pic/user/202605/0416/1777883265678-vShpGLm6Hc_640-640.png?x-oss-process=image/resize,w_50\"></a>\n\t\t\t\t\t\t\t<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/127301077\" class=\"text-muted\" target=\"_blank\">观我旧往同我仰春</a></span>\n\t\t\t\t\t\t\t\t<small>06-21</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<h2><a href=\"//www.ihuaben.com/book/12971319.html\" target=\"_blank\"><em>师兄啊师兄</em>：你到底是谁</a></h2>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "（已签约） 一朝穿越到洪荒之中，看瑶初会在此掀起怎样的巨浪吧 （若有与原著不同，就是作者私设）",
+          "href": "//www.ihuaben.com/book/12971319.html",
+          "parent": "<div class=\"clearfix searchresult-info\">\n\t\t\t\t\t\t\t<p><a href=\"//www.ihuaben.com/book/12971319.html\" target=\"_blank\">（已签约） 一朝穿越到洪荒之中，看瑶初会在此掀起怎样的巨浪吧 （若有与原著不同，就是作者私设）</a></p>\n\t\t\t\t\t\t\t<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/wanrenmi/\" class=\"text-warning\">万人迷</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/shixiongashixiong/\" class=\"text-warning\">师兄啊师兄</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/mantongzhengwen/\" class=\"text-warning\">漫同征文</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "万人迷",
+          "href": "//www.ihuaben.com/category/wanrenmi/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/wanrenmi/\" class=\"text-warning\">万人迷</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/shixiongashixiong/\" class=\"text-warning\">师兄啊师兄</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/mantongzhengwen/\" class=\"text-warning\">漫同征文</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "师兄啊师兄",
+          "href": "//www.ihuaben.com/category/shixiongashixiong/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/wanrenmi/\" class=\"text-warning\">万人迷</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/shixiongashixiong/\" class=\"text-warning\">师兄啊师兄</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/mantongzhengwen/\" class=\"text-warning\">漫同征文</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "漫同征文",
+          "href": "//www.ihuaben.com/category/mantongzhengwen/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/wanrenmi/\" class=\"text-warning\">万人迷</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/shixiongashixiong/\" class=\"text-warning\">师兄啊师兄</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/mantongzhengwen/\" class=\"text-warning\">漫同征文</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "弋江西",
+          "href": "//user.ihuaben.com/134002735",
+          "parent": "<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/134002735\" class=\"text-muted\" target=\"_blank\">弋江西</a></span>\n\t\t\t\t\t\t\t\t<small>11-17</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>"
+        },
+        {
+          "text": "师兄啊师兄：丢人师妹她带了个苟系统",
+          "href": "//www.ihuaben.com/book/15220502.html",
+          "parent": "<div>\n\t\t\t\t\t\t\t<a href=\"//user.ihuaben.com/134002735\" target=\"_blank\"><img class=\"img-rounded\" src=\"//piccn.ihuaben.com/pic/user/202607/1619/1784199687194-F92hf46y18_640-640.png?x-oss-process=image/resize,w_50\"></a>\n\t\t\t\t\t\t\t<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/134002735\" class=\"text-muted\" target=\"_blank\">弋江西</a></span>\n\t\t\t\t\t\t\t\t<small>11-17</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<h2><a href=\"//www.ihuaben.com/book/15220502.html\" target=\"_blank\"><em>师兄啊师兄</em>：丢人师妹她带了个苟系统</a></h2>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "（不断更不弃更，草稿很多，可放心入） 李长庚/蓝灵娥：师妹！咱能不能要点面皮！清芜：那我下次蒙脸丢人^⎚‸⎚^ 以为清芜只是简单的不要面皮，结果是…压根没有… （看不下去自己退）",
+          "href": "//www.ihuaben.com/book/15220502.html",
+          "parent": "<div class=\"clearfix searchresult-info\">\n\t\t\t\t\t\t\t<p><a href=\"//www.ihuaben.com/book/15220502.html\" target=\"_blank\">（不断更不弃更，草稿很多，可放心入） 李长庚/蓝灵娥：师妹！咱能不能要点面皮！清芜：那我下次蒙脸丢人^⎚‸⎚^ 以为清芜只是简单的不要面皮，结果是…压根没有… （看不下去自己退）</a></p>\n\t\t\t\t\t\t\t<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/all/\" class=\"text-warning\">all</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/nezha1/\" class=\"text-warning\">哪吒</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/shixiongashixiong/\" class=\"text-warning\">师兄啊师兄</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "all",
+          "href": "//www.ihuaben.com/category/all/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/all/\" class=\"text-warning\">all</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/nezha1/\" class=\"text-warning\">哪吒</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/shixiongashixiong/\" class=\"text-warning\">师兄啊师兄</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "哪吒",
+          "href": "//www.ihuaben.com/category/nezha1/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/all/\" class=\"text-warning\">all</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/nezha1/\" class=\"text-warning\">哪吒</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/shixiongashixiong/\" class=\"text-warning\">师兄啊师兄</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "师兄啊师兄",
+          "href": "//www.ihuaben.com/category/shixiongashixiong/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/all/\" class=\"text-warning\">all</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/nezha1/\" class=\"text-warning\">哪吒</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/shixiongashixiong/\" class=\"text-warning\">师兄啊师兄</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "小名春",
+          "href": "//user.ihuaben.com/132176980",
+          "parent": "<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/132176980\" class=\"text-muted\" target=\"_blank\">小名春</a></span>\n\t\t\t\t\t\t\t\t<small>今天 12:21</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>"
+        },
+        {
+          "text": "师兄啊师兄：蛊美人",
+          "href": "//www.ihuaben.com/book/14707353.html",
+          "parent": "<div>\n\t\t\t\t\t\t\t<a href=\"//user.ihuaben.com/132176980\" target=\"_blank\"><img class=\"img-rounded\" src=\"//piccn.ihuaben.com/pic/user/202611/2109/1795223891931-sAKI86Jv5a_640-640.png?x-oss-process=image/resize,w_50\"></a>\n\t\t\t\t\t\t\t<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/132176980\" class=\"text-muted\" target=\"_blank\">小名春</a></span>\n\t\t\t\t\t\t\t\t<small>今天 12:21</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<h2><a href=\"//www.ihuaben.com/book/14707353.html\" target=\"_blank\"><em>师兄啊师兄</em>：蛊美人</a></h2>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "蛊系美人不想当万人迷",
+          "href": "//www.ihuaben.com/book/14707353.html",
+          "parent": "<div class=\"clearfix searchresult-info\">\n\t\t\t\t\t\t\t<p><a href=\"//www.ihuaben.com/book/14707353.html\" target=\"_blank\">蛊系美人不想当万人迷</a></p>\n\t\t\t\t\t\t\t<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/allyuanchuangnvzhu/\" class=\"text-warning\">all原创女主</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/chaiguanpei/\" class=\"text-warning\">拆官配</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/sushuangpiaowuluoji/\" class=\"text-warning\">苏爽嫖无逻辑</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "all原创女主",
+          "href": "//www.ihuaben.com/category/allyuanchuangnvzhu/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/allyuanchuangnvzhu/\" class=\"text-warning\">all原创女主</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/chaiguanpei/\" class=\"text-warning\">拆官配</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/sushuangpiaowuluoji/\" class=\"text-warning\">苏爽嫖无逻辑</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "拆官配",
+          "href": "//www.ihuaben.com/category/chaiguanpei/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/allyuanchuangnvzhu/\" class=\"text-warning\">all原创女主</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/chaiguanpei/\" class=\"text-warning\">拆官配</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/sushuangpiaowuluoji/\" class=\"text-warning\">苏爽嫖无逻辑</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "苏爽嫖无逻辑",
+          "href": "//www.ihuaben.com/category/sushuangpiaowuluoji/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/allyuanchuangnvzhu/\" class=\"text-warning\">all原创女主</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/chaiguanpei/\" class=\"text-warning\">拆官配</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/sushuangpiaowuluoji/\" class=\"text-warning\">苏爽嫖无逻辑</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "季北妄",
+          "href": "//user.ihuaben.com/37202176",
+          "parent": "<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/37202176\" class=\"text-muted\" target=\"_blank\">季北妄</a></span>\n\t\t\t\t\t\t\t\t<small>11-16</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>"
+        },
+        {
+          "text": "师兄啊师兄：女主她是个万人迷",
+          "href": "//www.ihuaben.com/book/16202240.html",
+          "parent": "<div>\n\t\t\t\t\t\t\t<a href=\"//user.ihuaben.com/37202176\" target=\"_blank\"><img class=\"img-rounded\" src=\"//piccn.ihuaben.com/pic/user/202207/1815/1658127862432-9396H9jd97_719-700.jpeg?x-oss-process=image/resize,w_50\"></a>\n\t\t\t\t\t\t\t<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/37202176\" class=\"text-muted\" target=\"_blank\">季北妄</a></span>\n\t\t\t\t\t\t\t\t<small>11-16</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<h2><a href=\"//www.ihuaben.com/book/16202240.html\" target=\"_blank\"><em>师兄啊师兄</em>：女主她是个万人迷</a></h2>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "先天灵玉化形的苏清瑶，携一缕创世本源灵韵降世洪荒。她生来便有动人心魄的魅力，所到之处，仙神失神，妖魔倾心，连草木精怪都忍不住围着她打转。封神棋局波谲云诡，她是鸿钧剧本之外的唯一变数。...",
+          "href": "//www.ihuaben.com/book/16202240.html",
+          "parent": "<div class=\"clearfix searchresult-info\">\n\t\t\t\t\t\t\t<p><a href=\"//www.ihuaben.com/book/16202240.html\" target=\"_blank\">先天灵玉化形的苏清瑶，携一缕创世本源灵韵降世洪荒。她生来便有动人心魄的魅力，所到之处，仙神失神，妖魔倾心，连草木精怪都忍不住围着她打转。封神棋局波谲云诡，她是鸿钧剧本之外的唯一变数。...</a></p>\n\t\t\t\t\t\t\t<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/dongmantongren/\" class=\"text-warning\">动漫同人</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/nvzhuwanrenmi/\" class=\"text-warning\">女主万人迷</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/mantongzhengwen/\" class=\"text-warning\">漫同征文</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "动漫同人",
+          "href": "//www.ihuaben.com/category/dongmantongren/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/dongmantongren/\" class=\"text-warning\">动漫同人</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/nvzhuwanrenmi/\" class=\"text-warning\">女主万人迷</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/mantongzhengwen/\" class=\"text-warning\">漫同征文</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "女主万人迷",
+          "href": "//www.ihuaben.com/category/nvzhuwanrenmi/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/dongmantongren/\" class=\"text-warning\">动漫同人</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/nvzhuwanrenmi/\" class=\"text-warning\">女主万人迷</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/mantongzhengwen/\" class=\"text-warning\">漫同征文</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "漫同征文",
+          "href": "//www.ihuaben.com/category/mantongzhengwen/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/dongmantongren/\" class=\"text-warning\">动漫同人</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/nvzhuwanrenmi/\" class=\"text-warning\">女主万人迷</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/mantongzhengwen/\" class=\"text-warning\">漫同征文</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        }
+      ]
+    },
+    {
+      "term": "TF四代",
+      "status": 200,
+      "url": "https://so.ihuaben.com/search?keyword=TF%E5%9B%9B%E4%BB%A3",
+      "contentType": "text/html;charset=UTF-8",
+      "title": "TF四代小说-热门TF四代小说推荐-TF四代小说免费读-话本小说网",
+      "body": "[搜索] [菜单] 首页 角色广场 分类 收藏 写作 我的 书架 登录 写作福利 写作后台 首页 分类 角色广场 手机版 俺有点聪明 昨天 23:47 TF四代：饲养手册 【原创】【虚构】【禁抄袭融梗】她被当做奖励，送进深渊。Abyss，一个连名字都让人窒息的地方。盘踞于地下深处的黑恶帝国，所有人听令于Padrino——教父，一个无限接近于上帝的角色。而字母团，是Padrino豢养的六只... 999+ 人看过 标签： TF四代张桂源 TF四代王橹杰 TF四代陈浚铭 西了个瓜子 11-18 TF四代：不要试图攻略 《TF四代：不要试图攻略》 又名《貌美脆皮用脸横扫十八楼》《她用一格电打出满级伤害》《那个空降咖今天又闹了什么幺蛾子》 关键词：#伪现背#万人迷#修罗场#团宠#BG向#细水流长#群像#搞笑#梦女 “养成经不起等待，粉... 999+ 人看过 标签： 左奇函 杨博文 陈奕恒 俺有点聪明 今天 00:11 TF四代：枝头青梅落谁家 古言#强强联合#双向奔赴#微强制爱#穿书#女配#青梅竹马#修罗场#训狗文学#极限拉扯#甜宠苏爽 余朝朝穿进了一本书里，成了注定惨死的恶毒女配。原书里，她是八位男主年少时的青梅，却是他们成年后最厌恶的人。... 999+ 人看过 标签： TF四代左奇函 TF四代王橹杰 TF四代陈奕恒 云千丞 今天 18:16 TF四代：转盘抽人，今天轮到谁心动 一切，注：伪现背会改动不会和物料完全一样有我自己的想法｜桂，瑞，奇，文，铭，罕，橹，东，恒，然 顾今朝意外绑定系统，每日转盘随机匹配练习生，完成互动任务才能解锁剧情奖励。她一心只想完成系统任务交差，... 999+ 人看过 标签： 左奇函 杨博文 陈奕恒 学长下三白 今天 20:00 TF四代：空拍心跳 【伪现背/细水长流/万人迷/团宠/群像/暧昧】 原创男主/主四代 能不能 借天冷的理由 再靠近你一点点 999+ 人看过 标签： 原创男主 杨博文 陈奕恒 一颗牙o 今天 19:58 TF四代：我真没想炒cp 手握无数人原生家庭的四代女练桑柚枝，一直被产孝女称为楼内cp饭最香的爱豆 决战柚夫之巅# 【四代这么多人究竟谁是柚一夫？【其实我们all柚杂食党才是最爽的】 【妈妈我出生了，不对我怎么那么多爸爸】 【家产nb，我... 999+ 人看过 标签： 左奇函 陈思罕 陈浚铭 俺有点聪明 09-26 TF四代：顶级诱捕陷阱 【全员恶人觉醒+最强Omega+雄竞修罗场+微玛丽苏】 上一世，许糯米是人人喊打的恶毒女配，被原女主姜茶茶的绿茶系统玩弄于股掌之间，最终惨死雨中。重生归来，她绑定了【拯救恶女】系统。规则很简单：诱导因她而失控... 999+ 人看过 标签： TF四代左奇函 TF四代张桂源 TF四代陈浚铭 顾亦潼 今天 10:26 TF四代：适合不适合 【连载中】／TF四代／原创男主／桂文恒奇瑞橹铭/甜宠/万人迷 林冰晗是TF四代的一位练习生，从23年就上楼，在这期间，他经历了人生的许多转变和自己的成长，但集训后却感觉他们怪怪的。又名《TF四代：我的同事好像... 999+ 人看过 标签： 张桂源 杨博文 陈奕恒 晏鸢 08-08 TF四代：降神在上 [玄幻｜卡牌技能｜竞技｜养成｜热血｜成长｜家国｜群像｜战斗｜养成流] 又名《月揽大陆的七神祇诞生记》 [CAST：程渝野 张函瑞",
+      "links": [
+        {
+          "text": "[搜索]",
+          "href": "//www.ihuaben.com/search.html",
+          "parent": "<ul class=\"pull-right\">\n\t\t\t\t<li><a href=\"//www.ihuaben.com/search.html\" class=\"huaben-img-btn search\">[搜索]</a></li>\n\t\t\t\t<li><a href=\"#\" id=\"huabenMore\" class=\"huaben-img-btn more\">[菜单]</a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "[菜单]",
+          "href": "#",
+          "parent": "<ul class=\"pull-right\">\n\t\t\t\t<li><a href=\"//www.ihuaben.com/search.html\" class=\"huaben-img-btn search\">[搜索]</a></li>\n\t\t\t\t<li><a href=\"#\" id=\"huabenMore\" class=\"huaben-img-btn more\">[菜单]</a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "首页",
+          "href": "//www.ihuaben.com/",
+          "parent": "<ul>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/\"><i class=\"hicon-home\"></i><span>首页</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/web-next/characters/home\"><i class=\"hicon-location\"></i><span>角色广场</span></a>\n\t\t\t\t</li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/tongren/\"><i class=\"hicon-catalog\"></i><span>分类</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "角色广场",
+          "href": "//www.ihuaben.com/web-next/characters/home",
+          "parent": "<ul>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/\"><i class=\"hicon-home\"></i><span>首页</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/web-next/characters/home\"><i class=\"hicon-location\"></i><span>角色广场</span></a>\n\t\t\t\t</li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/tongren/\"><i class=\"hicon-catalog\"></i><span>分类</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "分类",
+          "href": "//www.ihuaben.com/tongren/",
+          "parent": "<ul>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/\"><i class=\"hicon-home\"></i><span>首页</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/web-next/characters/home\"><i class=\"hicon-location\"></i><span>角色广场</span></a>\n\t\t\t\t</li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/tongren/\"><i class=\"hicon-catalog\"></i><span>分类</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "收藏",
+          "href": "//user.ihuaben.com/bookShelf/list",
+          "parent": "<ul>\n\t\t\t\t<li><a href=\"//user.ihuaben.com/bookShelf/list\"><i class=\"hicon-shelf\"></i><span>收藏</span></a></li>\n\t\t\t\t<li><a href=\"//author.ihuaben.com/\"><i class=\"hicon-write\"></i><span>写作</span></a></li>\n\t\t\t\t<li><a href=\"//user.ihuaben.com/\"><i class=\"hicon-my\"></i><span>我的</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "写作",
+          "href": "//author.ihuaben.com/",
+          "parent": "<ul>\n\t\t\t\t<li><a href=\"//user.ihuaben.com/bookShelf/list\"><i class=\"hicon-shelf\"></i><span>收藏</span></a></li>\n\t\t\t\t<li><a href=\"//author.ihuaben.com/\"><i class=\"hicon-write\"></i><span>写作</span></a></li>\n\t\t\t\t<li><a href=\"//user.ihuaben.com/\"><i class=\"hicon-my\"></i><span>我的</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "我的",
+          "href": "//user.ihuaben.com/",
+          "parent": "<ul>\n\t\t\t\t<li><a href=\"//user.ihuaben.com/bookShelf/list\"><i class=\"hicon-shelf\"></i><span>收藏</span></a></li>\n\t\t\t\t<li><a href=\"//author.ihuaben.com/\"><i class=\"hicon-write\"></i><span>写作</span></a></li>\n\t\t\t\t<li><a href=\"//user.ihuaben.com/\"><i class=\"hicon-my\"></i><span>我的</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "书架",
+          "href": "//user.ihuaben.com/bookShelf/list",
+          "parent": "<ul class=\"pull-right list-inline\">\n\t\t\t<li><a href=\"//user.ihuaben.com/bookShelf/list\" class=\"bookshelf\">书架</a></li>\n\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t<li id=\"nav_login_bar\"><a href=\"//passport.ihuaben.com/\" class=\"avatar\">登录</a></li>\n\t\t\t\t\t<li id=\"nav_usercenter_bar\" style=\"display: none;\">\n\t\t\t\t\t\t<a href=\"//user.ihuaben.com/\" class=\"userpic\">\n\t\t\t\t\t\t\t<img src=\"\" id=\"user_head_bar\" alt=\"\">\n\t\t\t\t\t\t\t<span></span>\n\t\t\t\t\t\t</a>\n\t\t\t\t\t</li>\n\t\t\t\t\n\t\t\t\n\t\t</ul>"
+        },
+        {
+          "text": "登录",
+          "href": "//passport.ihuaben.com/",
+          "parent": "<ul class=\"pull-right list-inline\">\n\t\t\t<li><a href=\"//user.ihuaben.com/bookShelf/list\" class=\"bookshelf\">书架</a></li>\n\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t<li id=\"nav_login_bar\"><a href=\"//passport.ihuaben.com/\" class=\"avatar\">登录</a></li>\n\t\t\t\t\t<li id=\"nav_usercenter_bar\" style=\"display: none;\">\n\t\t\t\t\t\t<a href=\"//user.ihuaben.com/\" class=\"userpic\">\n\t\t\t\t\t\t\t<img src=\"\" id=\"user_head_bar\" alt=\"\">\n\t\t\t\t\t\t\t<span></span>\n\t\t\t\t\t\t</a>\n\t\t\t\t\t</li>\n\t\t\t\t\n\t\t\t\n\t\t</ul>"
+        },
+        {
+          "text": "写作福利",
+          "href": "//www.ihuaben.com/fragment/fuli.html",
+          "parent": "<ul class=\"list-inline HuabenNavButton\">\n\t\t\t\t<li><a href=\"//www.ihuaben.com/fragment/fuli.html\" class=\"huaben-btn huaben-btn-yellow\"><i class=\"icon-money\"></i>写作福利</a></li>\n\t\t\t\t<li><a href=\"//author.ihuaben.com/\" class=\"huaben-btn huaben-btn-red\"><i class=\"icon-coffee\"></i>写作后台</a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "写作后台",
+          "href": "//author.ihuaben.com/",
+          "parent": "<ul class=\"list-inline HuabenNavButton\">\n\t\t\t\t<li><a href=\"//www.ihuaben.com/fragment/fuli.html\" class=\"huaben-btn huaben-btn-yellow\"><i class=\"icon-money\"></i>写作福利</a></li>\n\t\t\t\t<li><a href=\"//author.ihuaben.com/\" class=\"huaben-btn huaben-btn-red\"><i class=\"icon-coffee\"></i>写作后台</a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "首页",
+          "href": "//www.ihuaben.com/",
+          "parent": "<ul class=\"list-inline navTab\" lang=\"navTab\">\n\t\t\t\t<li><a href=\"//www.ihuaben.com/\"><span>首页</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/tongren/\"><span>分类</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/web-next/characters/home\"><span>角色广场</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/app.html\"><span>手机版</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "分类",
+          "href": "//www.ihuaben.com/tongren/",
+          "parent": "<ul class=\"list-inline navTab\" lang=\"navTab\">\n\t\t\t\t<li><a href=\"//www.ihuaben.com/\"><span>首页</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/tongren/\"><span>分类</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/web-next/characters/home\"><span>角色广场</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/app.html\"><span>手机版</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "角色广场",
+          "href": "//www.ihuaben.com/web-next/characters/home",
+          "parent": "<ul class=\"list-inline navTab\" lang=\"navTab\">\n\t\t\t\t<li><a href=\"//www.ihuaben.com/\"><span>首页</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/tongren/\"><span>分类</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/web-next/characters/home\"><span>角色广场</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/app.html\"><span>手机版</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "手机版",
+          "href": "//www.ihuaben.com/app.html",
+          "parent": "<ul class=\"list-inline navTab\" lang=\"navTab\">\n\t\t\t\t<li><a href=\"//www.ihuaben.com/\"><span>首页</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/tongren/\"><span>分类</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/web-next/characters/home\"><span>角色广场</span></a></li>\n\t\t\t\t<li><a href=\"//www.ihuaben.com/app.html\"><span>手机版</span></a></li>\n\t\t\t</ul>"
+        },
+        {
+          "text": "俺有点聪明",
+          "href": "//user.ihuaben.com/62013395",
+          "parent": "<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/62013395\" class=\"text-muted\" target=\"_blank\">俺有点聪明</a></span>\n\t\t\t\t\t\t\t\t<small>昨天 23:47</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>"
+        },
+        {
+          "text": "TF四代：饲养手册",
+          "href": "//www.ihuaben.com/book/14344210.html",
+          "parent": "<div>\n\t\t\t\t\t\t\t<a href=\"//user.ihuaben.com/62013395\" target=\"_blank\"><img class=\"img-rounded\" src=\"//piccn.ihuaben.com/pic/user/202611/1913/1795067989207-187I6L04G3_640-640.png?x-oss-process=image/resize,w_50\"></a>\n\t\t\t\t\t\t\t<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/62013395\" class=\"text-muted\" target=\"_blank\">俺有点聪明</a></span>\n\t\t\t\t\t\t\t\t<small>昨天 23:47</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<h2><a href=\"//www.ihuaben.com/book/14344210.html\" target=\"_blank\"><em>TF四代</em>：饲养手册</a></h2>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "【原创】【虚构】【禁抄袭融梗】她被当做奖励，送进深渊。Abyss，一个连名字都让人窒息的地方。盘踞于地下深处的黑恶帝国，所有人听令于Padrino——教父，一个无限接近于上帝的角色。而字母团，是Padrino豢养的六只...",
+          "href": "//www.ihuaben.com/book/14344210.html",
+          "parent": "<div class=\"clearfix searchresult-info\">\n\t\t\t\t\t\t\t<p><a href=\"//www.ihuaben.com/book/14344210.html\" target=\"_blank\">【原创】【虚构】【禁抄袭融梗】她被当做奖励，送进深渊。Abyss，一个连名字都让人窒息的地方。盘踞于地下深处的黑恶帝国，所有人听令于Padrino——教父，一个无限接近于上帝的角色。而字母团，是Padrino豢养的六只...</a></p>\n\t\t\t\t\t\t\t<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaizhangguiyuan/\" class=\"text-warning\">TF四代张桂源</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaiwanglujie/\" class=\"text-warning\">TF四代王橹杰</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaichenjunming/\" class=\"text-warning\">TF四代陈浚铭</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "TF四代张桂源",
+          "href": "//www.ihuaben.com/category/TFsidaizhangguiyuan/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaizhangguiyuan/\" class=\"text-warning\">TF四代张桂源</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaiwanglujie/\" class=\"text-warning\">TF四代王橹杰</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaichenjunming/\" class=\"text-warning\">TF四代陈浚铭</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "TF四代王橹杰",
+          "href": "//www.ihuaben.com/category/TFsidaiwanglujie/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaizhangguiyuan/\" class=\"text-warning\">TF四代张桂源</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaiwanglujie/\" class=\"text-warning\">TF四代王橹杰</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaichenjunming/\" class=\"text-warning\">TF四代陈浚铭</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "TF四代陈浚铭",
+          "href": "//www.ihuaben.com/category/TFsidaichenjunming/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaizhangguiyuan/\" class=\"text-warning\">TF四代张桂源</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaiwanglujie/\" class=\"text-warning\">TF四代王橹杰</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaichenjunming/\" class=\"text-warning\">TF四代陈浚铭</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "西了个瓜子",
+          "href": "//user.ihuaben.com/63122108",
+          "parent": "<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/63122108\" class=\"text-muted\" target=\"_blank\">西了个瓜子</a></span>\n\t\t\t\t\t\t\t\t<small>11-18</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>"
+        },
+        {
+          "text": "TF四代：不要试图攻略",
+          "href": "//www.ihuaben.com/book/14543667.html",
+          "parent": "<div>\n\t\t\t\t\t\t\t<a href=\"//user.ihuaben.com/63122108\" target=\"_blank\"><img class=\"img-rounded\" src=\"//piccn.ihuaben.com/pic/user/202610/2905/1793224300003-iwr93n9s86_640-640.png?x-oss-process=image/resize,w_50\"></a>\n\t\t\t\t\t\t\t<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/63122108\" class=\"text-muted\" target=\"_blank\">西了个瓜子</a></span>\n\t\t\t\t\t\t\t\t<small>11-18</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<h2><a href=\"//www.ihuaben.com/book/14543667.html\" target=\"_blank\"><em>TF四代</em>：不要试图攻略</a></h2>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "《TF四代：不要试图攻略》 又名《貌美脆皮用脸横扫十八楼》《她用一格电打出满级伤害》《那个空降咖今天又闹了什么幺蛾子》 关键词：#伪现背#万人迷#修罗场#团宠#BG向#细水流长#群像#搞笑#梦女 “养成经不起等待，粉...",
+          "href": "//www.ihuaben.com/book/14543667.html",
+          "parent": "<div class=\"clearfix searchresult-info\">\n\t\t\t\t\t\t\t<p><a href=\"//www.ihuaben.com/book/14543667.html\" target=\"_blank\">《<em>TF四代</em>：不要试图攻略》 又名《貌美脆皮用脸横扫十八楼》《她用一格电打出满级伤害》《那个空降咖今天又闹了什么幺蛾子》 关键词：#伪现背#万人迷#修罗场#团宠#BG向#细水流长#群像#搞笑#梦女 “养成经不起等待，粉...</a></p>\n\t\t\t\t\t\t\t<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zuoqihan/\" class=\"text-warning\">左奇函</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yangbowen/\" class=\"text-warning\">杨博文</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/chenyiheng/\" class=\"text-warning\">陈奕恒</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "左奇函",
+          "href": "//www.ihuaben.com/category/zuoqihan/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zuoqihan/\" class=\"text-warning\">左奇函</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yangbowen/\" class=\"text-warning\">杨博文</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/chenyiheng/\" class=\"text-warning\">陈奕恒</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "杨博文",
+          "href": "//www.ihuaben.com/category/yangbowen/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zuoqihan/\" class=\"text-warning\">左奇函</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yangbowen/\" class=\"text-warning\">杨博文</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/chenyiheng/\" class=\"text-warning\">陈奕恒</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "陈奕恒",
+          "href": "//www.ihuaben.com/category/chenyiheng/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zuoqihan/\" class=\"text-warning\">左奇函</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yangbowen/\" class=\"text-warning\">杨博文</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/chenyiheng/\" class=\"text-warning\">陈奕恒</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "俺有点聪明",
+          "href": "//user.ihuaben.com/62013395",
+          "parent": "<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/62013395\" class=\"text-muted\" target=\"_blank\">俺有点聪明</a></span>\n\t\t\t\t\t\t\t\t<small>今天 00:11</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>"
+        },
+        {
+          "text": "TF四代：枝头青梅落谁家",
+          "href": "//www.ihuaben.com/book/15146488.html",
+          "parent": "<div>\n\t\t\t\t\t\t\t<a href=\"//user.ihuaben.com/62013395\" target=\"_blank\"><img class=\"img-rounded\" src=\"//piccn.ihuaben.com/pic/user/202611/1913/1795067989207-187I6L04G3_640-640.png?x-oss-process=image/resize,w_50\"></a>\n\t\t\t\t\t\t\t<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/62013395\" class=\"text-muted\" target=\"_blank\">俺有点聪明</a></span>\n\t\t\t\t\t\t\t\t<small>今天 00:11</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<h2><a href=\"//www.ihuaben.com/book/15146488.html\" target=\"_blank\"><em>TF四代</em>：枝头青梅落谁家</a></h2>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "古言#强强联合#双向奔赴#微强制爱#穿书#女配#青梅竹马#修罗场#训狗文学#极限拉扯#甜宠苏爽 余朝朝穿进了一本书里，成了注定惨死的恶毒女配。原书里，她是八位男主年少时的青梅，却是他们成年后最厌恶的人。...",
+          "href": "//www.ihuaben.com/book/15146488.html",
+          "parent": "<div class=\"clearfix searchresult-info\">\n\t\t\t\t\t\t\t<p><a href=\"//www.ihuaben.com/book/15146488.html\" target=\"_blank\">古言#强强联合#双向奔赴#微强制爱#穿书#女配#青梅竹马#修罗场#训狗文学#极限拉扯#甜宠苏爽 余朝朝穿进了一本书里，成了注定惨死的恶毒女配。原书里，她是八位男主年少时的青梅，却是他们成年后最厌恶的人。...</a></p>\n\t\t\t\t\t\t\t<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaizuoqihan/\" class=\"text-warning\">TF四代左奇函</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaiwanglujie/\" class=\"text-warning\">TF四代王橹杰</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaichenyiheng/\" class=\"text-warning\">TF四代陈奕恒</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "TF四代左奇函",
+          "href": "//www.ihuaben.com/category/TFsidaizuoqihan/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaizuoqihan/\" class=\"text-warning\">TF四代左奇函</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaiwanglujie/\" class=\"text-warning\">TF四代王橹杰</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaichenyiheng/\" class=\"text-warning\">TF四代陈奕恒</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "TF四代王橹杰",
+          "href": "//www.ihuaben.com/category/TFsidaiwanglujie/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaizuoqihan/\" class=\"text-warning\">TF四代左奇函</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaiwanglujie/\" class=\"text-warning\">TF四代王橹杰</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaichenyiheng/\" class=\"text-warning\">TF四代陈奕恒</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "TF四代陈奕恒",
+          "href": "//www.ihuaben.com/category/TFsidaichenyiheng/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaizuoqihan/\" class=\"text-warning\">TF四代左奇函</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaiwanglujie/\" class=\"text-warning\">TF四代王橹杰</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaichenyiheng/\" class=\"text-warning\">TF四代陈奕恒</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "云千丞",
+          "href": "//user.ihuaben.com/131600914",
+          "parent": "<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/131600914\" class=\"text-muted\" target=\"_blank\">云千丞</a></span>\n\t\t\t\t\t\t\t\t<small>今天 18:16</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>"
+        },
+        {
+          "text": "TF四代：转盘抽人，今天轮到谁心动",
+          "href": "//www.ihuaben.com/book/15140721.html",
+          "parent": "<div>\n\t\t\t\t\t\t\t<a href=\"//user.ihuaben.com/131600914\" target=\"_blank\"><img class=\"img-rounded\" src=\"//piccn.ihuaben.com/pic/user/202611/0401/1793725911390-2908f8877k_640-640.png?x-oss-process=image/resize,w_50\"></a>\n\t\t\t\t\t\t\t<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/131600914\" class=\"text-muted\" target=\"_blank\">云千丞</a></span>\n\t\t\t\t\t\t\t\t<small>今天 18:16</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<h2><a href=\"//www.ihuaben.com/book/15140721.html\" target=\"_blank\"><em>TF四代</em>：转盘抽人，今天轮到谁心动</a></h2>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "一切，注：伪现背会改动不会和物料完全一样有我自己的想法｜桂，瑞，奇，文，铭，罕，橹，东，恒，然 顾今朝意外绑定系统，每日转盘随机匹配练习生，完成互动任务才能解锁剧情奖励。她一心只想完成系统任务交差，...",
+          "href": "//www.ihuaben.com/book/15140721.html",
+          "parent": "<div class=\"clearfix searchresult-info\">\n\t\t\t\t\t\t\t<p><a href=\"//www.ihuaben.com/book/15140721.html\" target=\"_blank\">一切，注：伪现背会改动不会和物料完全一样有我自己的想法｜桂，瑞，奇，文，铭，罕，橹，东，恒，然 顾今朝意外绑定系统，每日转盘随机匹配练习生，完成互动任务才能解锁剧情奖励。她一心只想完成系统任务交差，...</a></p>\n\t\t\t\t\t\t\t<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zuoqihan/\" class=\"text-warning\">左奇函</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yangbowen/\" class=\"text-warning\">杨博文</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/chenyiheng/\" class=\"text-warning\">陈奕恒</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "左奇函",
+          "href": "//www.ihuaben.com/category/zuoqihan/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zuoqihan/\" class=\"text-warning\">左奇函</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yangbowen/\" class=\"text-warning\">杨博文</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/chenyiheng/\" class=\"text-warning\">陈奕恒</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "杨博文",
+          "href": "//www.ihuaben.com/category/yangbowen/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zuoqihan/\" class=\"text-warning\">左奇函</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yangbowen/\" class=\"text-warning\">杨博文</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/chenyiheng/\" class=\"text-warning\">陈奕恒</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "陈奕恒",
+          "href": "//www.ihuaben.com/category/chenyiheng/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zuoqihan/\" class=\"text-warning\">左奇函</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yangbowen/\" class=\"text-warning\">杨博文</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/chenyiheng/\" class=\"text-warning\">陈奕恒</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "学长下三白",
+          "href": "//user.ihuaben.com/135549814",
+          "parent": "<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/135549814\" class=\"text-muted\" target=\"_blank\">学长下三白</a></span>\n\t\t\t\t\t\t\t\t<small>今天 20:00</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>"
+        },
+        {
+          "text": "TF四代：空拍心跳",
+          "href": "//www.ihuaben.com/book/15691746.html",
+          "parent": "<div>\n\t\t\t\t\t\t\t<a href=\"//user.ihuaben.com/135549814\" target=\"_blank\"><img class=\"img-rounded\" src=\"//piccn.ihuaben.com/pic/user/202608/2302/1787421600944-4n958wJ3Lm_640-640.png?x-oss-process=image/resize,w_50\"></a>\n\t\t\t\t\t\t\t<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/135549814\" class=\"text-muted\" target=\"_blank\">学长下三白</a></span>\n\t\t\t\t\t\t\t\t<small>今天 20:00</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<h2><a href=\"//www.ihuaben.com/book/15691746.html\" target=\"_blank\"><em>TF四代</em>：空拍心跳</a></h2>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "【伪现背/细水长流/万人迷/团宠/群像/暧昧】 原创男主/主四代 能不能 借天冷的理由 再靠近你一点点",
+          "href": "//www.ihuaben.com/book/15691746.html",
+          "parent": "<div class=\"clearfix searchresult-info\">\n\t\t\t\t\t\t\t<p><a href=\"//www.ihuaben.com/book/15691746.html\" target=\"_blank\">【伪现背/细水长流/万人迷/团宠/群像/暧昧】 原创男主/主<em>四代</em> 能不能 借天冷的理由 再靠近你一点点 </a></p>\n\t\t\t\t\t\t\t<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yuanchuangnanzhu/\" class=\"text-warning\">原创男主</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yangbowen/\" class=\"text-warning\">杨博文</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/chenyiheng/\" class=\"text-warning\">陈奕恒</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "原创男主",
+          "href": "//www.ihuaben.com/category/yuanchuangnanzhu/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yuanchuangnanzhu/\" class=\"text-warning\">原创男主</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yangbowen/\" class=\"text-warning\">杨博文</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/chenyiheng/\" class=\"text-warning\">陈奕恒</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "杨博文",
+          "href": "//www.ihuaben.com/category/yangbowen/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yuanchuangnanzhu/\" class=\"text-warning\">原创男主</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yangbowen/\" class=\"text-warning\">杨博文</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/chenyiheng/\" class=\"text-warning\">陈奕恒</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "陈奕恒",
+          "href": "//www.ihuaben.com/category/chenyiheng/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yuanchuangnanzhu/\" class=\"text-warning\">原创男主</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yangbowen/\" class=\"text-warning\">杨博文</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/chenyiheng/\" class=\"text-warning\">陈奕恒</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "一颗牙o",
+          "href": "//user.ihuaben.com/15554523",
+          "parent": "<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/15554523\" class=\"text-muted\" target=\"_blank\">一颗牙o</a></span>\n\t\t\t\t\t\t\t\t<small>今天 19:58</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>"
+        },
+        {
+          "text": "TF四代：我真没想炒cp",
+          "href": "//www.ihuaben.com/book/15429205.html",
+          "parent": "<div>\n\t\t\t\t\t\t\t<a href=\"//user.ihuaben.com/15554523\" target=\"_blank\"><img class=\"img-rounded\" src=\"//piccn.ihuaben.com/pic/user/202611/2001/1795108282945-pwG0Iroqe6_640-640.png?x-oss-process=image/resize,w_50\"></a>\n\t\t\t\t\t\t\t<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/15554523\" class=\"text-muted\" target=\"_blank\">一颗牙o</a></span>\n\t\t\t\t\t\t\t\t<small>今天 19:58</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<h2><a href=\"//www.ihuaben.com/book/15429205.html\" target=\"_blank\"><em>TF四代</em>：我真没想炒cp</a></h2>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "手握无数人原生家庭的四代女练桑柚枝，一直被产孝女称为楼内cp饭最香的爱豆 决战柚夫之巅# 【四代这么多人究竟谁是柚一夫？【其实我们all柚杂食党才是最爽的】 【妈妈我出生了，不对我怎么那么多爸爸】 【家产nb，我...",
+          "href": "//www.ihuaben.com/book/15429205.html",
+          "parent": "<div class=\"clearfix searchresult-info\">\n\t\t\t\t\t\t\t<p><a href=\"//www.ihuaben.com/book/15429205.html\" target=\"_blank\">手握无数人原生家庭的<em>四代</em>女练桑柚枝，一直被产孝女称为楼内cp饭最香的爱豆 决战柚夫之巅# 【<em>四代</em>这么多人究竟谁是柚一夫？【其实我们all柚杂食党才是最爽的】 【妈妈我出生了，不对我怎么那么多爸爸】 【家产nb，我...</a></p>\n\t\t\t\t\t\t\t<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zuoqihan/\" class=\"text-warning\">左奇函</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/chensihan/\" class=\"text-warning\">陈思罕</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/chenjunming/\" class=\"text-warning\">陈浚铭</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "左奇函",
+          "href": "//www.ihuaben.com/category/zuoqihan/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zuoqihan/\" class=\"text-warning\">左奇函</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/chensihan/\" class=\"text-warning\">陈思罕</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/chenjunming/\" class=\"text-warning\">陈浚铭</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "陈思罕",
+          "href": "//www.ihuaben.com/category/chensihan/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zuoqihan/\" class=\"text-warning\">左奇函</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/chensihan/\" class=\"text-warning\">陈思罕</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/chenjunming/\" class=\"text-warning\">陈浚铭</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "陈浚铭",
+          "href": "//www.ihuaben.com/category/chenjunming/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zuoqihan/\" class=\"text-warning\">左奇函</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/chensihan/\" class=\"text-warning\">陈思罕</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/chenjunming/\" class=\"text-warning\">陈浚铭</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "俺有点聪明",
+          "href": "//user.ihuaben.com/62013395",
+          "parent": "<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/62013395\" class=\"text-muted\" target=\"_blank\">俺有点聪明</a></span>\n\t\t\t\t\t\t\t\t<small>09-26</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>"
+        },
+        {
+          "text": "TF四代：顶级诱捕陷阱",
+          "href": "//www.ihuaben.com/book/14082169.html",
+          "parent": "<div>\n\t\t\t\t\t\t\t<a href=\"//user.ihuaben.com/62013395\" target=\"_blank\"><img class=\"img-rounded\" src=\"//piccn.ihuaben.com/pic/user/202611/1913/1795067989207-187I6L04G3_640-640.png?x-oss-process=image/resize,w_50\"></a>\n\t\t\t\t\t\t\t<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/62013395\" class=\"text-muted\" target=\"_blank\">俺有点聪明</a></span>\n\t\t\t\t\t\t\t\t<small>09-26</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<h2><a href=\"//www.ihuaben.com/book/14082169.html\" target=\"_blank\"><em>TF四代</em>：顶级诱捕陷阱</a></h2>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "【全员恶人觉醒+最强Omega+雄竞修罗场+微玛丽苏】 上一世，许糯米是人人喊打的恶毒女配，被原女主姜茶茶的绿茶系统玩弄于股掌之间，最终惨死雨中。重生归来，她绑定了【拯救恶女】系统。规则很简单：诱导因她而失控...",
+          "href": "//www.ihuaben.com/book/14082169.html",
+          "parent": "<div class=\"clearfix searchresult-info\">\n\t\t\t\t\t\t\t<p><a href=\"//www.ihuaben.com/book/14082169.html\" target=\"_blank\">【全员恶人觉醒+最强Omega+雄竞修罗场+微玛丽苏】 上一世，许糯米是人人喊打的恶毒女配，被原女主姜茶茶的绿茶系统玩弄于股掌之间，最终惨死雨中。重生归来，她绑定了【拯救恶女】系统。规则很简单：诱导因她而失控...</a></p>\n\t\t\t\t\t\t\t<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaizuoqihan/\" class=\"text-warning\">TF四代左奇函</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaizhangguiyuan/\" class=\"text-warning\">TF四代张桂源</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaichenjunming/\" class=\"text-warning\">TF四代陈浚铭</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "TF四代左奇函",
+          "href": "//www.ihuaben.com/category/TFsidaizuoqihan/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaizuoqihan/\" class=\"text-warning\">TF四代左奇函</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaizhangguiyuan/\" class=\"text-warning\">TF四代张桂源</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaichenjunming/\" class=\"text-warning\">TF四代陈浚铭</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "TF四代张桂源",
+          "href": "//www.ihuaben.com/category/TFsidaizhangguiyuan/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaizuoqihan/\" class=\"text-warning\">TF四代左奇函</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaizhangguiyuan/\" class=\"text-warning\">TF四代张桂源</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaichenjunming/\" class=\"text-warning\">TF四代陈浚铭</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "TF四代陈浚铭",
+          "href": "//www.ihuaben.com/category/TFsidaichenjunming/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaizuoqihan/\" class=\"text-warning\">TF四代左奇函</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaizhangguiyuan/\" class=\"text-warning\">TF四代张桂源</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaichenjunming/\" class=\"text-warning\">TF四代陈浚铭</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "顾亦潼",
+          "href": "//user.ihuaben.com/49441952",
+          "parent": "<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/49441952\" class=\"text-muted\" target=\"_blank\">顾亦潼</a></span>\n\t\t\t\t\t\t\t\t<small>今天 10:26</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>"
+        },
+        {
+          "text": "TF四代：适合不适合",
+          "href": "//www.ihuaben.com/book/13939744.html",
+          "parent": "<div>\n\t\t\t\t\t\t\t<a href=\"//user.ihuaben.com/49441952\" target=\"_blank\"><img class=\"img-rounded\" src=\"//piccn.ihuaben.com/pic/user/202608/1812/1787029146116-6wx337236G_640-640.png?x-oss-process=image/resize,w_50\"></a>\n\t\t\t\t\t\t\t<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/49441952\" class=\"text-muted\" target=\"_blank\">顾亦潼</a></span>\n\t\t\t\t\t\t\t\t<small>今天 10:26</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<h2><a href=\"//www.ihuaben.com/book/13939744.html\" target=\"_blank\"><em>TF四代</em>：适合不适合</a></h2>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "【连载中】／TF四代／原创男主／桂文恒奇瑞橹铭/甜宠/万人迷 林冰晗是TF四代的一位练习生，从23年就上楼，在这期间，他经历了人生的许多转变和自己的成长，但集训后却感觉他们怪怪的。又名《TF四代：我的同事好像...",
+          "href": "//www.ihuaben.com/book/13939744.html",
+          "parent": "<div class=\"clearfix searchresult-info\">\n\t\t\t\t\t\t\t<p><a href=\"//www.ihuaben.com/book/13939744.html\" target=\"_blank\">【连载中】／<em>TF四代</em>／原创男主／桂文恒奇瑞橹铭/甜宠/万人迷 林冰晗是<em>TF四代</em>的一位练习生，从23年就上楼，在这期间，他经历了人生的许多转变和自己的成长，但集训后却感觉他们怪怪的。又名《<em>TF四代</em>：我的同事好像...</a></p>\n\t\t\t\t\t\t\t<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zhangguiyuan/\" class=\"text-warning\">张桂源</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yangbowen/\" class=\"text-warning\">杨博文</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/chenyiheng/\" class=\"text-warning\">陈奕恒</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "张桂源",
+          "href": "//www.ihuaben.com/category/zhangguiyuan/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zhangguiyuan/\" class=\"text-warning\">张桂源</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yangbowen/\" class=\"text-warning\">杨博文</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/chenyiheng/\" class=\"text-warning\">陈奕恒</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "杨博文",
+          "href": "//www.ihuaben.com/category/yangbowen/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zhangguiyuan/\" class=\"text-warning\">张桂源</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yangbowen/\" class=\"text-warning\">杨博文</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/chenyiheng/\" class=\"text-warning\">陈奕恒</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "陈奕恒",
+          "href": "//www.ihuaben.com/category/chenyiheng/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zhangguiyuan/\" class=\"text-warning\">张桂源</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/yangbowen/\" class=\"text-warning\">杨博文</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/chenyiheng/\" class=\"text-warning\">陈奕恒</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "晏鸢",
+          "href": "//user.ihuaben.com/114873160",
+          "parent": "<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/114873160\" class=\"text-muted\" target=\"_blank\">晏鸢</a></span>\n\t\t\t\t\t\t\t\t<small>08-08</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>"
+        },
+        {
+          "text": "TF四代：降神在上",
+          "href": "//www.ihuaben.com/book/11746941.html",
+          "parent": "<div>\n\t\t\t\t\t\t\t<a href=\"//user.ihuaben.com/114873160\" target=\"_blank\"><img class=\"img-rounded\" src=\"//piccn.ihuaben.com/pic/user/202506/1201/1749663057541-2R069s2JU4_640-640.png?x-oss-process=image/resize,w_50\"></a>\n\t\t\t\t\t\t\t<p class=\"text-muted\">\n\t\t\t\t\t\t\t\t<span><a href=\"//user.ihuaben.com/114873160\" class=\"text-muted\" target=\"_blank\">晏鸢</a></span>\n\t\t\t\t\t\t\t\t<small>08-08</small>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t<h2><a href=\"//www.ihuaben.com/book/11746941.html\" target=\"_blank\"><em>TF四代</em>：降神在上</a></h2>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "[玄幻｜卡牌技能｜竞技｜养成｜热血｜成长｜家国｜群像｜战斗｜养成流] 又名《月揽大陆的七神祇诞生记》 [CAST：程渝野 张函瑞 杨博文 左奇函 张桂源 陈浚铭 王橹杰 陈奕恒] ☾“以卡牌为载体踏上成长之路。...",
+          "href": "//www.ihuaben.com/book/11746941.html",
+          "parent": "<div class=\"clearfix searchresult-info\">\n\t\t\t\t\t\t\t<p><a href=\"//www.ihuaben.com/book/11746941.html\" target=\"_blank\">[玄幻｜卡牌技能｜竞技｜养成｜热血｜成长｜家国｜群像｜战斗｜养成流] 又名《月揽大陆的七神祇诞生记》 [CAST：程渝野 张函瑞 杨博文 左奇函 张桂源 陈浚铭 王橹杰 陈奕恒] ☾“以卡牌为载体踏上成长之路。...</a></p>\n\t\t\t\t\t\t\t<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaichenyiheng/\" class=\"text-warning\">TF四代陈奕恒</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zuoqihan/\" class=\"text-warning\">左奇函</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zhanghanrui/\" class=\"text-warning\">张函瑞</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>\n\t\t\t\t\t\t</div>"
+        },
+        {
+          "text": "TF四代陈奕恒",
+          "href": "//www.ihuaben.com/category/TFsidaichenyiheng/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaichenyiheng/\" class=\"text-warning\">TF四代陈奕恒</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zuoqihan/\" class=\"text-warning\">左奇函</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zhanghanrui/\" class=\"text-warning\">张函瑞</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "左奇函",
+          "href": "//www.ihuaben.com/category/zuoqihan/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaichenyiheng/\" class=\"text-warning\">TF四代陈奕恒</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zuoqihan/\" class=\"text-warning\">左奇函</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zhanghanrui/\" class=\"text-warning\">张函瑞</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        },
+        {
+          "text": "张函瑞",
+          "href": "//www.ihuaben.com/category/zhanghanrui/",
+          "parent": "<ul class=\"list-inline text-muted\">\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t999+\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t人看过</li>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<li>标签：</li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/TFsidaichenyiheng/\" class=\"text-warning\">TF四代陈奕恒</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zuoqihan/\" class=\"text-warning\">左奇函</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t<li><a href=\"//www.ihuaben.com/category/zhanghanrui/\" class=\"text-warning\">张函瑞</a></li>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</ul>"
+        }
+      ]
+    }
+  ]
+}
