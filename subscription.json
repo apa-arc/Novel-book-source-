@@ -4,8 +4,8 @@
   "name": "小说源",
   "description": "普通小说统一订阅；来源发现问题后持续修复或下架。",
   "repository": "https://github.com/apa-arc/Novel-book-source-",
-  "updatedAt": "2026-11-21T20:30:00.000Z",
-  "sourceCount": 8,
+  "updatedAt": "2026-11-21T20:45:00.000Z",
+  "sourceCount": 9,
   "sources": [
     {
       "id": "biquluo-la",
@@ -347,6 +347,48 @@
       },
       "testOnly": true,
       "testOnlyReason": "从公开 AOAOSTAR 规则转换为本仓库 GET/CSS 配置；搜索、详情、目录、正文选择器已映射，尚未完成当前站点实时与宿主四阶段实测。"
+    },
+    {
+      "id": "lingling-00shu",
+      "name": "零零小说",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "普通小说网页源；GET 搜索，详情、目录与正文采用 CSS 规则，待实测。",
+      "baseUrl": "https://www.00shu.la/",
+      "domains": [
+        "www.00shu.la"
+      ],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/lingling-00shu.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/lingling-00shu.js",
+      "appConfig": {
+        "searchUrl": "https://www.00shu.la/modules/article/search.php?q={keyword}",
+        "bookUrl": "https://www.00shu.la/",
+        "chapterListUrl": "https://www.00shu.la/{bookUrl}",
+        "chapterUrl": "https://www.00shu.la/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": ".grid tr",
+            "titleSelector": "td:nth-child(1) a",
+            "urlSelector": "td:nth-child(1) a",
+            "authorSelector": "td:nth-child(3)"
+          },
+          "detail": {
+            "titleSelector": "#info h1",
+            "descriptionSelector": "#intro"
+          },
+          "chapters": {
+            "itemSelector": "#list dd",
+            "titleSelector": "a",
+            "urlSelector": "a"
+          },
+          "content": {
+            "contentSelector": "#content",
+            "titleSelector": "h1"
+          }
+        }
+      },
+      "testOnly": true,
+      "testOnlyReason": "从公开 AOAOSTAR 规则转换为本仓库 GET/CSS 配置；已移除上游封面 JS 依赖并映射四阶段选择器，尚未完成当前站点实时与宿主实测。"
     }
   ]
 }
