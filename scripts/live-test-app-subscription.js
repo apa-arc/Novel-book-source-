@@ -65,10 +65,13 @@ async function testSource(source) {
       const search = await get(searchUrl, domains);
       const sd = doc(search.body);
       const searchItems = nodes(sd, rules.search.itemSelector);
-      const books = searchItems.map(n => ({
-        title:text(n, rules.search.titleSelector, rules.search.titleAttribute),
-        href:resolveSafe(text(n, rules.search.urlSelector, rules.search.urlAttribute) || (n.querySelector(rules.search.urlSelector || "a") || {}).getAttribute?.("href"), search.url, domains)
-      })).filter(x => x.title && x.href);
+      const books = searchItems.map(n => {
+        const titleEl = rules.search.titleSelector === ":self" ? n : n.querySelector(rules.search.titleSelector || "a");
+        const urlEl = rules.search.urlSelector === ":self" ? n : n.querySelector(rules.search.urlSelector || "a");
+        const title = rules.search.titleAttribute ? String(titleEl?.getAttribute(rules.search.titleAttribute) || "").trim() : String(titleEl?.textContent || "").replace(/\s+/g, " ").trim();
+        const href = rules.search.urlAttribute ? String(urlEl?.getAttribute(rules.search.urlAttribute) || "") : String(urlEl?.getAttribute("href") || "");
+        return { title, href:resolveSafe(href, search.url, domains) };
+      }).filter(x => x.title && x.href);
       if (!books.length) throw new Error("搜索无结果（HTTP 200，选择器未提取到书名/链接）");
       stage(tr,"搜索","passed",{http:200,count:books.length,selected:books[0].title});
       const book = books[0];
