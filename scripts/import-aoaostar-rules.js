@@ -120,7 +120,6 @@ function main() {
   fs.mkdirSync(OUT, { recursive: true });
   const write = (name, data) => fs.writeFileSync(path.join(OUT, name), JSON.stringify(data, null, 2) + "\n");
   write("legado-ordinary.json", ordinary);
-  write("legado-adult.json", adult);
   // Export only to the isolated Legado archive. Never overwrite the AppleNovelApp
   // native subscription or publish adult-source subscriptions from this importer.
   write("aoaostar-import-report.json", {
@@ -146,7 +145,6 @@ function main() {
     stats,
     outputs: {
       ordinary: "exports/legado-ordinary.json",
-      adult: "exports/legado-adult.json"
     }
   });
   console.log(JSON.stringify(stats, null, 2));
