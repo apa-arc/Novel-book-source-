@@ -60,7 +60,7 @@ try{
  assert.deepEqual(xpathText.selector,{engine:"css",query:'span[class="author"]',output:"text"});
  const xpathPosition=parseLegacyChain("@xpath://ul/li[1]/a/@href");
  assert.equal(xpathPosition.status,"candidate");
- assert.equal(xpathPosition.selector.query,"ul li:nth-of-type(1) > a");
+ assert.equal(xpathPosition.selector.query,"ul > li:nth-of-type(1) > a");
  assert.equal(xpathPosition.selector.output,"attr:href");
  const complexXPath=parseLegacyChain("@xpath://div[contains(@class,'book')]/a");
  assert.equal(complexXPath.status,"manual");
