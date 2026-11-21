@@ -1,0 +1,590 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-21T12:04:23.467Z",
+  "note": "已将旧域名首页重定向到的最终 HTTPS 主机作为新 baseUrl 检查；只测试首页和 GET 搜索表单，不代表详情、目录、正文已通过。",
+  "counts": {
+    "total": 14,
+    "manual-search-required": 8,
+    "POST-search-incompatible": 4,
+    "GET-search-needs-functional-check": 1,
+    "unreachable-after-normalization": 1
+  },
+  "results": [
+    {
+      "host": "ixdzs8.com",
+      "baseUrl": "https://ixdzs8.com/",
+      "names": [
+        "爱下电子书"
+      ],
+      "homeStatus": 403,
+      "homeContentType": "text/html",
+      "forms": [],
+      "inputs": [],
+      "searchAnchors": [],
+      "search": null,
+      "classification": "manual-search-required",
+      "elapsedMs": 665
+    },
+    {
+      "host": "m.8tsw.com",
+      "baseUrl": "https://m.8tsw.com/",
+      "names": [
+        "笔趣阁"
+      ],
+      "homeStatus": 200,
+      "homeContentType": "text/html; charset=gbk",
+      "forms": [
+        {
+          "action": "/s.php",
+          "method": "POST",
+          "inputs": [
+            {
+              "type": "",
+              "name": "type",
+              "value": "",
+              "placeholder": ""
+            },
+            {
+              "type": "text",
+              "name": "s",
+              "value": "�������������ߣ������ֲ�Ҫ����",
+              "placeholder": ""
+            },
+            {
+              "type": "submit",
+              "name": "submit",
+              "value": "",
+              "placeholder": ""
+            }
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "type": "text",
+          "name": "s",
+          "placeholder": "",
+          "onclick": "this.value=''"
+        },
+        {
+          "type": "submit",
+          "name": "submit",
+          "placeholder": "",
+          "onclick": ""
+        }
+      ],
+      "searchAnchors": [],
+      "search": {
+        "method": "POST",
+        "compatible": false
+      },
+      "classification": "POST-search-incompatible",
+      "elapsedMs": 202
+    },
+    {
+      "host": "m.hafukewx.cc",
+      "baseUrl": "https://m.hafukewx.cc/",
+      "names": [
+        "📖 顶点小说"
+      ],
+      "homeStatus": 200,
+      "homeContentType": "text/html; charset=gb2312",
+      "forms": [],
+      "inputs": [],
+      "searchAnchors": [],
+      "search": null,
+      "classification": "manual-search-required",
+      "elapsedMs": 652
+    },
+    {
+      "host": "m.i25zw.com",
+      "baseUrl": "https://m.i25zw.com/",
+      "names": [
+        "白中文网（发现）"
+      ],
+      "homeStatus": 200,
+      "homeContentType": "text/html; charset=utf-8",
+      "forms": [
+        {
+          "action": "/search.html",
+          "method": "POST",
+          "inputs": [
+            {
+              "type": "text",
+              "name": "searchkey",
+              "value": "",
+              "placeholder": "请输入搜索内容！"
+            },
+            {
+              "type": "",
+              "name": "",
+              "value": "",
+              "placeholder": ""
+            }
+          ]
+        },
+        {
+          "action": "/search.html",
+          "method": "POST",
+          "inputs": [
+            {
+              "type": "text",
+              "name": "searchkey",
+              "value": "",
+              "placeholder": "请输入搜索内容！"
+            },
+            {
+              "type": "",
+              "name": "",
+              "value": "",
+              "placeholder": ""
+            }
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "type": "text",
+          "name": "searchkey",
+          "placeholder": "请输入搜索内容！",
+          "onclick": ""
+        },
+        {
+          "type": "text",
+          "name": "searchkey",
+          "placeholder": "请输入搜索内容！",
+          "onclick": ""
+        }
+      ],
+      "searchAnchors": [],
+      "search": {
+        "method": "POST",
+        "compatible": false
+      },
+      "classification": "POST-search-incompatible",
+      "elapsedMs": 622
+    },
+    {
+      "host": "m.jhsssd.com",
+      "baseUrl": "https://m.jhsssd.com/",
+      "names": [
+        "精华书阁"
+      ],
+      "homeStatus": 200,
+      "homeContentType": "text/html; charset=utf-8",
+      "forms": [],
+      "inputs": [],
+      "searchAnchors": [],
+      "search": null,
+      "classification": "manual-search-required",
+      "elapsedMs": 691
+    },
+    {
+      "host": "m.yedukuxs.net",
+      "baseUrl": "https://m.yedukuxs.net/",
+      "names": [
+        "安夜读库"
+      ],
+      "homeStatus": 200,
+      "homeContentType": "text/html; charset=utf-8",
+      "forms": [
+        {
+          "action": "/search.html",
+          "method": "POST",
+          "inputs": [
+            {
+              "type": "text",
+              "name": "369koolearn",
+              "value": "",
+              "placeholder": "请输入搜索内容！"
+            },
+            {
+              "type": "",
+              "name": "",
+              "value": "",
+              "placeholder": ""
+            }
+          ]
+        },
+        {
+          "action": "/search.html",
+          "method": "POST",
+          "inputs": [
+            {
+              "type": "text",
+              "name": "369koolearn",
+              "value": "",
+              "placeholder": "请输入搜索内容！"
+            },
+            {
+              "type": "",
+              "name": "",
+              "value": "",
+              "placeholder": ""
+            }
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "type": "text",
+          "name": "369koolearn",
+          "placeholder": "请输入搜索内容！",
+          "onclick": ""
+        },
+        {
+          "type": "text",
+          "name": "369koolearn",
+          "placeholder": "请输入搜索内容！",
+          "onclick": ""
+        }
+      ],
+      "searchAnchors": [],
+      "search": {
+        "method": "POST",
+        "compatible": false
+      },
+      "classification": "POST-search-incompatible",
+      "elapsedMs": 741
+    },
+    {
+      "host": "m2.sywxs.cc",
+      "baseUrl": "https://m2.sywxs.cc/",
+      "names": [
+        "📖 书阅屋网"
+      ],
+      "homeStatus": 200,
+      "homeContentType": "text/html; charset=gb2312",
+      "forms": [],
+      "inputs": [],
+      "searchAnchors": [],
+      "search": null,
+      "classification": "manual-search-required",
+      "elapsedMs": 742
+    },
+    {
+      "host": "www.35xss.net",
+      "baseUrl": "https://www.35xss.net/",
+      "names": [
+        "🎉 闪舞小说"
+      ],
+      "homeStatus": 200,
+      "homeContentType": "text/html; charset=utf-8",
+      "forms": [],
+      "inputs": [],
+      "searchAnchors": [],
+      "search": null,
+      "classification": "manual-search-required",
+      "elapsedMs": 333
+    },
+    {
+      "host": "www.52shuku.net",
+      "baseUrl": "https://www.52shuku.net/",
+      "names": [
+        "52书库②"
+      ],
+      "homeStatus": 200,
+      "homeContentType": "text/html; charset=utf-8",
+      "forms": [
+        {
+          "action": "https://www.52shuku.net/so/search.php",
+          "method": "GET",
+          "inputs": [
+            {
+              "type": "text",
+              "name": "q",
+              "value": "",
+              "placeholder": "输入书名或作者"
+            },
+            {
+              "type": "submit",
+              "name": "",
+              "value": "",
+              "placeholder": ""
+            }
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "type": "text",
+          "name": "q",
+          "placeholder": "输入书名或作者",
+          "onclick": ""
+        }
+      ],
+      "searchAnchors": [],
+      "search": {
+        "method": "GET",
+        "url": "https://www.52shuku.net/so/search.php?q=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+        "status": 200,
+        "contentType": "text/html; charset=UTF-8",
+        "charsetOk": true,
+        "body": "52书库 搜索 网站首页 书单推荐 耽美作者 现代耽美 穿越耽美 古架耽美 GL百合 综漫同人 言情小说 男频小说 为您找到40项符合查询结果。（搜索耗时：0.0037秒） 栏目： 全部 言情 耽美 百合 综漫 男频 排序： 相关性 最新发布 最早发布 浏览量 1. [斗罗大陆同人] 暗烨_夜雨沾衣【完结】 [BL同人] 《(斗罗大陆同人)暗烨》作者：夜雨沾衣【完结】 简介： 最近喜欢上了看同人，看着看着就想自己写了。 同人系列第一部，斗罗同人。 当初看斗罗大陆的时候就觉得小三很受，嘻嘻。 坚持1vs1 腹黑攻vs... 所属栏目：综漫同人 发布时间：2023-04-11 浏览量：2,617 2. 斗罗之清墨gl_墨崽【完结+番外】 [ＧＬ百合] 《（斗罗同人）斗罗之清墨gl》作者：墨崽【完结+番外】 文案： 斗罗同人文 朱竹清X苏墨 大体原著向 没有看过斗罗也没有关系，不影响食用 有雷点可以提 内容标签： 强强 情有独钟 ... 所属栏目：GL百合 发布时间：2021-04-28 浏览量：7,622 3. [斗罗大陆同人] 翎清_暗月莹莹【完结】 [ＢＧ同人] 《（斗罗大陆同人）翎清》作者：暗月莹莹【完结】 简介： 女主宁清清，男主光翎。 宁清清意外穿越到斗罗大陆，因为觉得光翎可爱，所以决定要改变光翎的命运。 第1章 穿越初遇光翎 一栋... 所属栏目：综漫同人 发布时间：2024-08-02 浏览量：365 4. 斗罗大陆4终极斗罗_唐家三少【完结】 《斗罗大陆IV终极斗罗》作者：唐家三少【完结】 内容简介： 一万年后，冰化了。 斗罗联邦科考队在极北之地科考时发现了一个有着金银双色花纹的蛋，用仪器探察之后，发现里面居然有生命体征，赶忙将其带... 所属栏目：武侠玄幻 发布时间：2021-10-05 浏览量：1,917 5. [斗罗同人]从斗罗开始打卡(上)_夏竖琴【完结】 《（斗罗同人）从斗罗开始打卡》作者：夏竖琴【完结】 内容简介： 穿越斗罗大陆，本想咸鱼一生的王枫，却意外开启打卡辅助系统！ &ldquo;叮，斗罗大陆剧情正式开启，宿主打卡成功，恭喜获得：流星泪！&rdqu... 所属栏目：综漫同人 发布时间：2021-10-05 浏览量：2,806 6. [斗罗]幻武魂之君子魅_顾一砚【完结+番外】 [ＢＬ同人] 《（斗罗同人）[斗罗]幻武魂之君子魅》作者：顾一砚【完结+番外】 本文文案 唐三被捡来的小尾巴给拐了。 呆萌乐天受V禁欲隐忍攻 唐三攻 本文为斗罗大陆同人文，不喜误入，同时请尊重原... 所属栏目：综漫同人 发布时间：2021-03-30 浏览量：3,393 7. 斗罗大陆3龙王传说_唐家三少【完结】 《斗罗大陆3龙王传说》作者：唐家三少【完结】 内容介绍： 伴随着魂导科技的进步，斗罗大陆上的人类征服了海洋，又发现了两片大陆。魂兽也随着人类魂师的猎杀无度走向灭 所属栏目：武侠玄幻 发布时间：2018-10-09 浏览量：26,061 8. 斗罗大陆_唐家三少【完结】 《斗罗大陆》作者：唐家三少【完结】 【文案】 唐门外门弟子唐三，因偷学内门绝学为唐门所不容，跳崖明志时却来到了另一个世界，一个属于武魂的世界。名叫斗罗大陆。 所属栏目：武侠玄幻 发布时间：2018-10-09 浏览量：114,562 9. 斗罗之武魂是爪机怎么破_秦洹【",
+        "links": [
+          {
+            "text": "52书库",
+            "href": "/"
+          },
+          {
+            "text": "网站首页",
+            "href": "https://www.52shuku.net/"
+          },
+          {
+            "text": "书单推荐",
+            "href": "https://www.52shuku.net/tuijian/"
+          },
+          {
+            "text": "耽美作者",
+            "href": "https://www.52shuku.net/zuozhe/"
+          },
+          {
+            "text": "现代耽美",
+            "href": "https://www.52shuku.net/xiandaidushi/"
+          },
+          {
+            "text": "穿越耽美",
+            "href": "https://www.52shuku.net/chongsheng/"
+          },
+          {
+            "text": "古架耽美",
+            "href": "https://www.52shuku.net/jiakong/"
+          },
+          {
+            "text": "GL百合",
+            "href": "https://www.52shuku.net/gl/"
+          },
+          {
+            "text": "综漫同人",
+            "href": "https://www.52shuku.net/bl/"
+          },
+          {
+            "text": "言情小说",
+            "href": "https://www.52shuku.net/yanqing/"
+          },
+          {
+            "text": "男频小说",
+            "href": "https://www.52shuku.net/nan/"
+          },
+          {
+            "text": "言情",
+            "href": "/so/search.php?q=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86&m=no&f=_all&syn=no&c=10"
+          },
+          {
+            "text": "耽美",
+            "href": "/so/search.php?q=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86&m=no&f=_all&syn=no&c=1%2C2%2C3"
+          },
+          {
+            "text": "百合",
+            "href": "/so/search.php?q=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86&m=no&f=_all&syn=no&c=5"
+          },
+          {
+            "text": "综漫",
+            "href": "/so/search.php?q=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86&m=no&f=_all&syn=no&c=4"
+          },
+          {
+            "text": "男频",
+            "href": "/so/search.php?q=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86&m=no&f=_all&syn=no&c=15%2C16%2C18%2C19%2C20%2C23"
+          },
+          {
+            "text": "最新发布",
+            "href": "/so/search.php?q=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86&m=no&f=_all&syn=no&s=time"
+          },
+          {
+            "text": "最早发布",
+            "href": "/so/search.php?q=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86&m=no&f=_all&syn=no&s=time_asc"
+          },
+          {
+            "text": "浏览量",
+            "href": "/so/search.php?q=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86&m=no&f=_all&syn=no&s=click"
+          },
+          {
+            "text": "1. [斗罗大陆同人] 暗烨_夜雨沾衣【完结】",
+            "href": "https://www.52shuku.net/bl/b/bjOk1.html"
+          },
+          {
+            "text": "综漫同人",
+            "href": "https://www.52shuku.net/bl/"
+          },
+          {
+            "text": "2. 斗罗之清墨gl_墨崽【完结+番外】",
+            "href": "https://www.52shuku.net/gl/pm/h3bn.html"
+          },
+          {
+            "text": "GL百合",
+            "href": "https://www.52shuku.net/gl/"
+          },
+          {
+            "text": "3. [斗罗大陆同人] 翎清_暗月莹莹【完结】",
+            "href": "https://www.52shuku.net/bl/02_b/bjUGP.html"
+          },
+          {
+            "text": "综漫同人",
+            "href": "https://www.52shuku.net/bl/"
+          },
+          {
+            "text": "4. 斗罗大陆4终极斗罗_唐家三少【完结】",
+            "href": "https://www.52shuku.net/wuxia/h5Jr.html"
+          },
+          {
+            "text": "武侠玄幻",
+            "href": "https://www.52shuku.net/wuxia/"
+          },
+          {
+            "text": "5. [斗罗同人]从斗罗开始打卡(上)_夏竖琴【完结】",
+            "href": "https://www.52shuku.net/bl/pm/h5Js.html"
+          },
+          {
+            "text": "综漫同人",
+            "href": "https://www.52shuku.net/bl/"
+          },
+          {
+            "text": "6. [斗罗]幻武魂之君子魅_顾一砚【完结+番外】",
+            "href": "https://www.52shuku.net/bl/am/h2E0.html"
+          },
+          {
+            "text": "综漫同人",
+            "href": "https://www.52shuku.net/bl/"
+          },
+          {
+            "text": "7. 斗罗大陆3龙王传说_唐家三少【完结】",
+            "href": "https://www.52shuku.net/wuxia/hqO5.html"
+          },
+          {
+            "text": "武侠玄幻",
+            "href": "https://www.52shuku.net/wuxia/"
+          },
+          {
+            "text": "8. 斗罗大陆_唐家三少【完结】",
+            "href": "https://www.52shuku.net/wuxia/hqO7.html"
+          },
+          {
+            "text": "武侠玄幻",
+            "href": "https://www.52shuku.net/wuxia/"
+          }
+        ],
+        "containsKeyword": true
+      },
+      "classification": "GET-search-needs-functional-check",
+      "elapsedMs": 234
+    },
+    {
+      "host": "www.iidcr.com",
+      "baseUrl": "https://www.iidcr.com/",
+      "names": [
+        "稻草书屋"
+      ],
+      "error": "TypeError: fetch failed",
+      "classification": "unreachable-after-normalization",
+      "elapsedMs": 395
+    },
+    {
+      "host": "www.ixs7.com",
+      "baseUrl": "https://www.ixs7.com/",
+      "names": [
+        "小说旗2"
+      ],
+      "homeStatus": 200,
+      "homeContentType": "text/html; charset=utf-8",
+      "forms": [
+        {
+          "action": "/search.html",
+          "method": "POST",
+          "inputs": [
+            {
+              "type": "text",
+              "name": "searchkey",
+              "value": "请在此处输入书名或作者。",
+              "placeholder": ""
+            },
+            {
+              "type": "hidden",
+              "name": "searchtype",
+              "value": "all",
+              "placeholder": ""
+            },
+            {
+              "type": "submit",
+              "name": "Submit",
+              "value": "",
+              "placeholder": ""
+            }
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "type": "text",
+          "name": "searchkey",
+          "placeholder": "",
+          "onclick": "this.value = ''"
+        },
+        {
+          "type": "hidden",
+          "name": "searchtype",
+          "placeholder": "",
+          "onclick": ""
+        },
+        {
+          "type": "submit",
+          "name": "Submit",
+          "placeholder": "",
+          "onclick": ""
+        }
+      ],
+      "searchAnchors": [],
+      "search": {
+        "method": "POST",
+        "compatible": false
+      },
+      "classification": "POST-search-incompatible",
+      "elapsedMs": 434
+    },
+    {
+      "host": "www.jhsssd.com",
+      "baseUrl": "https://www.jhsssd.com/",
+      "names": [
+        "精华书阁"
+      ],
+      "homeStatus": 200,
+      "homeContentType": "text/html",
+      "forms": [],
+      "inputs": [],
+      "searchAnchors": [],
+      "search": null,
+      "classification": "manual-search-required",
+      "elapsedMs": 347
+    },
+    {
+      "host": "www.kunnu8.com",
+      "baseUrl": "https://www.kunnu8.com/",
+      "names": [
+        "落霞小说",
+        "梦阮读书"
+      ],
+      "homeStatus": 200,
+      "homeContentType": "text/html; charset=UTF-8",
+      "forms": [],
+      "inputs": [],
+      "searchAnchors": [],
+      "search": null,
+      "classification": "manual-search-required",
+      "elapsedMs": 101
+    },
+    {
+      "host": "www.rdqsdy.cc",
+      "baseUrl": "https://www.rdqsdy.cc/",
+      "names": [
+        "格格党"
+      ],
+      "homeStatus": 200,
+      "homeContentType": "text/html; charset=utf-8",
+      "forms": [],
+      "inputs": [],
+      "searchAnchors": [],
+      "search": null,
+      "classification": "manual-search-required",
+      "elapsedMs": 263
+    }
+  ]
+}
