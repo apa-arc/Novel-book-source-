@@ -38,8 +38,8 @@
           },
           "chapters": {
             "itemSelector": "#list dd",
-            "titleSelector": ":self",
-            "urlSelector": ":self"
+            "titleSelector": "a",
+            "urlSelector": "a"
           },
           "content": {
             "contentSelector": "#content",
@@ -85,8 +85,8 @@
           },
           "chapters": {
             "itemSelector": "a[href$='.html']",
-            "titleSelector": "a",
-            "urlSelector": "a"
+            "titleSelector": ":self",
+            "urlSelector": ":self"
           },
           "content": {
             "contentSelector": "#content",
