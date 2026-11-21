@@ -184,21 +184,21 @@ function main() {
   const functionalSummary = aggregateFunctionalReports();
   const ordinaryCandidates = collectCandidates(false);
   const ordinaryValid = ordinaryCandidates.filter(source => validateCandidate(source, false));
-  const ordinary = mergeIntoSubscription(SUBSCRIPTION, ordinaryValid, false);
   const summary = {
     schemaVersion: 1,
     generatedAt: new Date().toISOString(),
     source: "luanmuc/legado-book-sources (MIT License)",
     ordinary: {
-      candidates: ordinaryCandidates.length,
-      valid: ordinaryValid.length,
-      ...ordinary
+      passedAndExported: ordinaryCandidates.length,
+      structurallyValid: ordinaryValid.length,
+      addedToNativeSubscription: 0,
+      pending: "Legado rules must first be converted into this repository's native appConfig and pass the native adapter live tests."
     },
-    policy: "Only ordinary novel sources are merged. Adult sources are excluded from the repository subscription."
+    policy: "Do not merge raw Legado JSON into subscription.json: the app feed is a native metadata object, not a Legado JSON array. Adult sources are excluded entirely."
   };
   fs.mkdirSync(path.join(ROOT, "reports"), { recursive: true });
   fs.writeFileSync(path.join(ROOT, "reports", "verified-source-merge-summary.json"), JSON.stringify(summary, null, 2) + "\n");
   fs.writeFileSync(path.join(ROOT, "reports", "live-functional-test-summary.json"), JSON.stringify(functionalSummary, null, 2) + "\n");
-  console.log(JSON.stringify({ functional: functionalSummary, merge: summary }, null, 2));
+  console.log(JSON.stringify({ functional: functionalSummary, review: summary }, null, 2));
 }
 main();
