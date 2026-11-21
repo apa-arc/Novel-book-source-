@@ -20,9 +20,9 @@
   "hostValidated": false,
   "appConfig": {
     "searchUrl": "https://www.biquluo.la/search.html?name={keyword}",
-    "bookUrl": "https://www.biquluo.la/{bookUrl}",
-    "chapterListUrl": "https://www.biquluo.la/{bookUrl}",
-    "chapterUrl": "https://www.biquluo.la/{chapterUrl}",
+    "bookUrl": "https://www.biquluo.la{bookUrl}",
+    "chapterListUrl": "https://www.biquluo.la{bookUrl}",
+    "chapterUrl": "https://www.biquluo.la{chapterUrl}",
     "htmlRules": {
       "search": {
         "itemSelector": ".novelslist2 li",
