@@ -221,12 +221,19 @@ function parseTemplateExpression(raw) {
   if(parts.length===1) return {status:"candidate",selector:parts[0]};
   return {status:"candidate",selector:{engine:"composite",operator:"concat",parts}};
 }
+function parseCompositePart(raw) {
+  const value=String(raw||"").trim();
+  if(!value) return null;
+  if(/^[A-Za-z_$][\\w$-]*$/.test(value)) return {status:"candidate",selector:{engine:"variable",name:value}};
+  return parseLegacyChain(value);
+}
 function parseLegacyChain(expression) {
   let raw = String(expression).trim();
   if (!raw) return {status:"empty"};
   if (SCRIPT_RE.test(raw)) return {status:"manual",reason:"script-or-template"};
-  const replaceFirst=raw.endsWith("###");
-  if(raw.includes("###")&&!replaceFirst) return {status:"manual",reason:"unsupported-regex-mode"};
+  const tripleHashParts=splitTopLevel(raw,"###");
+  const replaceFirst=!!tripleHashParts&&raw.endsWith("###");
+  if(tripleHashParts&&!replaceFirst) return {status:"manual",reason:"unsupported-regex-mode"};
   const regexInput=replaceFirst?raw.slice(0,-3):raw;
   const regexParts=splitTopLevel(regexInput,"##");
   if(regexParts){
@@ -253,21 +260,24 @@ function parseLegacyChain(expression) {
   if(getMatch) return {status:"candidate",selector:{engine:"get",key:getMatch[1]}};
   const fallbackParts=splitTopLevel(raw,"||");
   if(fallbackParts){
-    const parts=fallbackParts.map(parseLegacyChain);
+    const parts=fallbackParts.map(parseCompositePart).filter(Boolean);
+    if(!parts.length) return {status:"manual",reason:"unsupported-fallback-part"};
     if(parts.some(x=>x.status!=="candidate")) return {status:"manual",reason:"unsupported-fallback-part"};
-    return {status:"candidate",selector:{engine:"composite",operator:"fallback",parts:parts.map(x=>x.selector)}};
+    return parts.length===1?parts[0]:{status:"candidate",selector:{engine:"composite",operator:"fallback",parts:parts.map(x=>x.selector)}};
   }
   const zipParts=splitTopLevel(raw,"%%");
   if(zipParts){
-    const parts=zipParts.map(parseLegacyChain);
+    const parts=zipParts.map(parseCompositePart).filter(Boolean);
+    if(!parts.length) return {status:"manual",reason:"unsupported-zip-part"};
     if(parts.some(x=>x.status!=="candidate")) return {status:"manual",reason:"unsupported-zip-part"};
-    return {status:"candidate",selector:{engine:"composite",operator:"zip",parts:parts.map(x=>x.selector)}};
+    return parts.length===1?parts[0]:{status:"candidate",selector:{engine:"composite",operator:"zip",parts:parts.map(x=>x.selector)}};
   }
   const concatParts=splitTopLevel(raw,"&&");
   if(concatParts){
-    const parts=concatParts.map(parseLegacyChain);
+    const parts=concatParts.map(parseCompositePart).filter(Boolean);
+    if(!parts.length) return {status:"manual",reason:"unsupported-concat-part"};
     if(parts.some(x=>x.status!=="candidate")) return {status:"manual",reason:"unsupported-concat-part"};
-    return {status:"candidate",selector:{engine:"composite",operator:"concat",parts:parts.map(x=>x.selector)}};
+    return parts.length===1?parts[0]:{status:"candidate",selector:{engine:"composite",operator:"concat",parts:parts.map(x=>x.selector)}};
   }
   const template=parseTemplateExpression(raw);
   if(template) return template;
