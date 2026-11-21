@@ -119,20 +119,25 @@
   },
   "formalImportGate": {
     "requireLicenseEvidence": true,
-    "requireSearchBothKeywords": true,
-    "requireSearchAtLeastOnePositiveResult": true,
-    "requireDetail": true,
-    "requireChapters": true,
-    "requireFirstAndLastChapterContent": true,
-    "requireTextQualityPass": true,
-    "requireAppRuntimePass": true,
+    "requireRuleFormatAndParserStructure": true,
+    "requireUniqueIdAndDeduplication": true,
     "requireHttpsAndAllowedDomains": true,
+    "requireNativeAppConfig": true,
+    "requireSearchBothKeywords": false,
+    "requireSearchAtLeastOnePositiveResult": false,
+    "requireDetail": false,
+    "requireChapters": false,
+    "requireFirstAndLastChapterContent": false,
+    "requireTextQualityPass": false,
+    "requireAppRuntimePass": false,
+    "requireHostReachability": false,
+    "http404Disposition": "import-unverified",
+    "networkErrorDisposition": "import-unverified",
+    "runtimeStatusForUnverified": "imported-unverified",
     "rejectAdultOrEroticSources": true,
     "rejectLoginPaywallCaptchaOrDrmBypass": true,
-    "homepageReachableOrJsonSchemaValidIsNotEnough": true,
     "existingUserConfirmedSourcesDoNotNeedToRequalifyForRetention": true,
-    "requireAtLeastOneTitleMatchingKeyword": true,
-    "existingConfirmedSourcesAreNeverRemovedByImportGate": true
+    "note": "新源只要来源许可依据、App原生规则结构、HTTPS域名白名单和解析器接口符合要求，即可先进入订阅并标记为未验证；网站HTTP 404、403、5xx、DNS或超时不得单独阻止导入，也不得伪装成已验证可读。"
   },
   "baseline": {
     "date": "2026-11-21",
@@ -193,13 +198,19 @@
       "52shuku-net"
     ],
     "protectedFromAutomaticRemoval": true,
-    "requiresManualReviewBeforeFormalChange": true,
+    "requiresManualReviewBeforeFormalChange": false,
     "autoDelete": [],
     "autoDisable": [],
-    "candidateImportRequiresFullNativeRuntimePass": true
+    "candidateImportRequiresFullNativeRuntimePass": false,
+    "candidateImportRequiresStaticAppCompatibility": true,
+    "siteAvailabilityDoesNotBlockImport": true,
+    "http404Disposition": "import-unverified",
+    "networkFailureDisposition": "import-unverified",
+    "importedUnverifiedMustBeClearlyMarked": true,
+    "adultSourcesExcluded": true
   },
   "existingSubscriptionRecovery": {
-    "enabled": true,
+    "enabled": false,
     "baselineDate": "2026-11-22",
     "registryPath": "config/subscription-source-registry.json",
     "protectedSourceIds": [
@@ -293,7 +304,8 @@
         "iyueba-net": "HTTP403视为环境不确定，不绕过挑战或访问控制。"
       }
     },
-    "importPolicy": "新源必须通过许可审查、App兼容校验、两个关键词搜索请求、至少一个关键词返回结果，以及详情、目录、首末章正文和文本质量测试；环境不确定的源继续复测，不进入失败删除流程；不设置候选池。"
+    "importPolicy": "新源不以网站在线状态或HTTP 404作为导入门槛；先完成原生App格式转换和静态结构检查，再以未验证状态进入订阅。成人源、登录/付费墙/验证码/DRM依赖源排除。",
+    "routineScanPolicy": "skip-the-10-user-confirmed-baseline-sources"
   },
   "historicalBaselineNote": "原 baseline 使用「斗罗大陆」「斗破苍穹」，与当前正确关键词「斗罗」「斗破」不同；只保留为历史记录，不参与当前自动判定、删除或导入。"
 }
