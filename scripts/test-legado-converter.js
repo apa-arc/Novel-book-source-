@@ -16,7 +16,7 @@ try{
  const report=JSON.parse(fs.readFileSync(output,"utf8"));
  assert.equal(report.sourceCount,2);
  assert.equal(report.sources[0].groups.search.fields.name.selector.engine,"legado-chain");
- assert.equal(report.sources[0].groups.bookInfo.fields.name.selector.query,'meta[property="og:title"]');
+ assert.equal(report.sources[0].groups.bookInfo.fields.name.selector.steps[0].query,'meta[property="og:title"]');
  assert.equal(report.sources[0].groups.content.fields.content.selector.engine,"css");
  assert.equal(report.sources[1].groups.search.fields.name.status,"manual");
  assert.equal(report.sources[1].groups.search.fields.name.reason,"script-or-template");
