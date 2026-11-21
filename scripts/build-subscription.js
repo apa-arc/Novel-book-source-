@@ -69,20 +69,13 @@ function main() {
   const root = path.resolve(__dirname, "..");
   const ordinaryIndex = JSON.parse(fs.readFileSync(path.join(root, "index.json"), "utf8"));
   const adultIndex = JSON.parse(fs.readFileSync(path.join(root, "adult-index.json"), "utf8"));
-  const ordinary = buildSubscription(ordinaryIndex, root, undefined, {
+  const unified = buildSubscription(ordinaryIndex, root, undefined, {
     subscriptionId: "apa-arc-novel-book-source",
-    name: "普通小说书源",
-    description: "所有非成人书源统一订阅"
+    name: "小说源",
+    description: "普通与成人小说统一订阅；来源发现问题后持续修复或下架"
   });
-  const adult = buildSubscription(adultIndex, root, undefined, {
-    subscriptionId: "apa-arc-adult-novel-book-source",
-    name: "成人小说书源",
-    description: "独立隔离的成人书源订阅"
-  });
-  fs.writeFileSync(path.join(root, "app-subscription.json"), JSON.stringify(ordinary, null, 2) + "\n");
-  fs.writeFileSync(path.join(root, "adult-app-subscription.json"), JSON.stringify(adult, null, 2) + "\n");
-  console.log("App 原生普通清单：", ordinary.sourceCount, "个已验证书源");
-  console.log("App 原生成年清单：", adult.sourceCount, "个已验证书源");
+  fs.writeFileSync(path.join(root, "subscription.json"), JSON.stringify(unified, null, 2) + "\n");
+  console.log("小说源统一清单：", unified.sourceCount, "个书源（含明确标记的联调源）");
 }
 
 module.exports = { buildSubscription };
