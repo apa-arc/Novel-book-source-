@@ -11,7 +11,7 @@ on:
       - ".github/workflows/daily-source-maintenance.yml"
       - "scripts/live-host-probe.js"
       - "scripts/live-test-app-runtime.ts"
-      - "subscription.json"
+      - "subscription.json"\n      - "config/health-check-subscription.json"\n      - "config/subscription-source-registry.json"
 
 permissions:
   contents: write
@@ -48,9 +48,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+users.noreply.github.com"
-          git add reports/live-host-probe.json reports/app-runtime-live-test.json
+          git add reports/live-host-probe.json reports/app-runtime-live-test.json config/source-health-history.json index.json sources/*.json quality-reports/*.json
           if ! git diff --cached --quiet; then
-            git commit -m "chore: update scheduled novel source health reports"
+            git commit -m "chore: update novel source health history"
             git pull --rebase origin main
             git push
           fi
