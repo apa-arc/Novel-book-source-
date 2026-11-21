@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T02:24:46.590Z",
+  "generatedAt": "2026-11-21T02:25:05.408Z",
   "provider": "AOAOSTAR / Legado",
   "sourceCount": 3907,
   "counts": {
@@ -87986,11 +87986,9 @@
           }
         },
         "bookInfo": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-jsonpath": 1
-          }
+          "manualReasons": {}
         },
         "toc": {
           "status": "partial",
@@ -88902,16 +88900,13 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "script-or-template": 2,
-            "unsupported-fallback-part": 1
+            "script-or-template": 2
           }
         },
         "bookInfo": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 5,
-          "manualReasons": {
-            "unsupported-jsonpath": 1
-          }
+          "manualReasons": {}
         },
         "toc": {
           "status": "partial",
@@ -94063,11 +94058,9 @@
           }
         },
         "bookInfo": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "unsupported-jsonpath": 1
-          }
+          "manualReasons": {}
         },
         "toc": {
           "status": "partial",
@@ -94111,11 +94104,9 @@
           "manualReasons": {}
         },
         "bookInfo": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 5,
-          "manualReasons": {
-            "unsupported-jsonpath": 1
-          }
+          "manualReasons": {}
         },
         "toc": {
           "status": "partial",
@@ -133260,16 +133251,13 @@
           "status": "partial",
           "fieldCount": 9,
           "manualReasons": {
-            "script-or-template": 2,
-            "unsupported-fallback-part": 1
+            "script-or-template": 2
           }
         },
         "bookInfo": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 5,
-          "manualReasons": {
-            "unsupported-jsonpath": 1
-          }
+          "manualReasons": {}
         },
         "toc": {
           "status": "partial",
