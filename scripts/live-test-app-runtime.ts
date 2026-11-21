@@ -147,7 +147,7 @@ async function testTerm(source: NovelSource, keyword: string): Promise<TermResul
       break;
     } catch (error) {
       catalogError = errorText(error);
-      const transient = /HTTP\\s*5\\d\\d\\b|HTTP\\s*429\\b|timed?\\s*out|timeout|超时|ECONNRESET|ECONNREFUSED|ENOTFOUND|EAI_AGAIN|fetch failed|网络请求失败/i.test(catalogError);
+      const transient = /HTTP\s*5\d\d\b|HTTP\s*429\b|timed?\s*out|timeout|超时|ECONNRESET|ECONNREFUSED|ENOTFOUND|EAI_AGAIN|fetch failed|网络请求失败/i.test(catalogError);
       if (!transient || attempt === catalogMaxAttempts) break;
       await new Promise((resolve) => setTimeout(resolve, attempt === 1 ? 4000 : 8000));
     }
