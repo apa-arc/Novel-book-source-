@@ -6,7 +6,7 @@ const ROOT=path.resolve(__dirname,"..");
 const input=path.join(ROOT,"imports/third-party/multi-repo-candidate-catalog.json");
 const output=path.join(ROOT,"reports/candidate-homepage-probe.json");
 const catalog=JSON.parse(fs.readFileSync(input,"utf8"));
-const rows=catalog.sources||[];
+const rows=catalog.sources||[]; // Re-probe after each curated catalogue refresh.
 async function probe(source){
  const started=Date.now();
  try{
