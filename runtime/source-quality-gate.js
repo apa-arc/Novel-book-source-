@@ -49,6 +49,18 @@ function validateSourceQuality(meta, root) {
   }
   validateAppConfig(meta);
 
+  // Explicitly enabled integration fixtures may enter the ordinary app feed,
+  // but are visibly marked test-only and are not treated as production-verified.
+  if (meta.testOnly === true) {
+    if (typeof meta.testOnlyReason !== "string" || !meta.testOnlyReason.trim()) {
+      throw new Error("enabled-test-source-reason-required:" + meta.id);
+    }
+    if (meta.hostValidated === true) {
+      throw new Error("test-source-cannot-claim-host-validation:" + meta.id);
+    }
+    return { ok: true, skipped: true, testOnly: true };
+  }
+
   const reportPath = meta.qualityReport;
   if (typeof reportPath !== "string" || !reportPath.startsWith("quality-reports/") || reportPath.includes("..")) {
     throw new Error("enabled-source-quality-report-required:" + meta.id);
