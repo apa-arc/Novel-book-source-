@@ -276,7 +276,7 @@ async function testSource(source, testId) {
     if (/non-novel-source/.test(message)) result.status = "excluded";
     else if (/login-required|upstream-source-disabled|challenge-or-access-denied|http-(401|403|429)/i.test(message)) result.status = "blocked";
     else if (currentStage === "preflight" || /unsupported|invalid-request|unsafe-search-url|credential-or-unsupported-header|unexpected-content-type/i.test(message)) result.status = "unsupported";
-    else if (/fetch failed|aborted|timeout|http-5\\d\\d|too-many-redirects/i.test(message)) result.status = "unverified";
+    else if (/fetch failed|aborted|timeout|http-5\d\d|too-many-redirects/i.test(message)) result.status = "unverified";
     else result.status = "failed";
     if (error && error.cause) result.errorCause = String(error.cause.code || error.cause.message || error.cause).slice(0, 180);
   }
