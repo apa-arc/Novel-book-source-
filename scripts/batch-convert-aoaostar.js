@@ -110,3 +110,5 @@ async function main(){
  if(failures.length) process.exitCode=1;
 }
 main().catch(e=>{console.error(e);process.exitCode=1;});
+
+// Expansion target: 300 ordinary, app-compatible sources; never auto-promote candidates.
