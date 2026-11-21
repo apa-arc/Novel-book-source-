@@ -25,7 +25,7 @@ function resolveAllowed(value, baseUrl, domains, required = false) {
 function first(document, selector) {
   if (!selector) return undefined;
   const values = executeSelector(document, selector);
-  return Array.isArray(values) ? values[0] : values;
+  return Array.isArray(values) ? values.filter(value => value != null && String(value).trim()).map(String).join("\n") : values;
 }
 
 function all(document, selector) {
@@ -41,7 +41,7 @@ function all(document, selector) {
 function value(node, selector) {
   if (!selector) return undefined;
   const result = executeSelector(node, selector);
-  return Array.isArray(result) ? result[0] : result;
+  return Array.isArray(result) ? result.filter(value => value != null && String(value).trim()).map(String).join("\n") : result;
 }
 
 function createAdapter(config) {
