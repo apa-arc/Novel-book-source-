@@ -4,14 +4,14 @@
   "name": "小说源",
   "description": "普通小说统一订阅；来源发现问题后持续修复或下架",
   "repository": "https://github.com/apa-arc/Novel-book-source-",
-  "updatedAt": "2026-11-21T16:45:47.576Z",
+  "updatedAt": "2026-11-21T19:49:53.128Z",
   "sourceCount": 10,
   "sources": [
     {
       "id": "biquluo-la",
       "name": "壁落小说",
       "kind": "public-web",
-      "version": "1.0.1",
+      "version": "1.0.3",
       "description": "普通小说测试源。支持 GET 搜索、书籍详情、章节目录与正文；正文经过推广文本清洗。当前为 App 宿主联调状态。",
       "baseUrl": "https://www.biquluo.la/",
       "domains": [
@@ -30,7 +30,8 @@
             "itemSelector": ".novelslist2 li",
             "titleSelector": ".s2 a",
             "urlSelector": ".s2 a",
-            "authorSelector": ".s4"
+            "authorSelector": ".s4",
+            "coverSelector": "img"
           },
           "detail": {
             "titleSelector": "#info h1",
@@ -52,7 +53,7 @@
       "id": "jiuyi-91zww",
       "name": "九一中文",
       "kind": "public-web",
-      "version": "1.0.0",
+      "version": "1.0.2",
       "description": "普通小说网页源；已转换为 GET + CSS 四阶段配置，待实测。",
       "baseUrl": "https://www.91zww.com/",
       "domains": [
@@ -71,7 +72,8 @@
             "itemSelector": ".txt-list li",
             "titleSelector": ".s2 a",
             "urlSelector": ".s2 a",
-            "authorSelector": ".s4"
+            "authorSelector": ".s4",
+            "coverSelector": "img"
           },
           "detail": {
             "titleSelector": "h1",
@@ -93,8 +95,8 @@
       "id": "xinbiquge-info",
       "name": "新笔趣阁小说网",
       "kind": "public-web",
-      "version": "1.0.1",
-      "description": "普通小说网页源；GET 搜索，目录分页，正文使用 article.font_max；章节可能分页，需后续补齐翻页处理。 目录请求改为详情页，修复 index_1.html 404，等待复测。",
+      "version": "1.0.3",
+      "description": "普通小说网页源；GET 搜索，目录分页，正文使用 article.font_max；章节可能分页，需后续补齐翻页处理。 2026-11-22 修复：目录请求改为直接读取书籍详情页，避免 index_1.html 返回404；等待复测。",
       "baseUrl": "https://www.xbiquge.info/",
       "domains": [
         "www.xbiquge.info"
@@ -112,7 +114,8 @@
             "itemSelector": ".box.hot dl",
             "titleSelector": "dd h3 a",
             "urlSelector": "dd h3 a",
-            "authorSelector": "dd.book_other span"
+            "authorSelector": "dd.book_other span",
+            "coverSelector": "img"
           },
           "detail": {
             "titleSelector": "h1",
@@ -134,7 +137,7 @@
       "id": "biquge-17177",
       "name": "笔趣阁小说网（17177）",
       "kind": "public-web",
-      "version": "1.0.0",
+      "version": "1.0.2",
       "description": "普通小说网页源；GET 搜索，详情页元信息、目录与正文使用 CSS 提取。",
       "baseUrl": "https://www.17177.cc/",
       "domains": [
@@ -177,8 +180,8 @@
       "id": "d8zw-com",
       "name": "第八中文网",
       "kind": "public-web",
-      "version": "1.0.1",
-      "description": "普通小说网页源；GET 搜索，目录使用 CSS 选择器，正文使用 article.font_max。上游规则注明偶发 502，需控制请求频率。 目录请求改为详情页，修复 index_1.html 404，等待复测。",
+      "version": "1.0.3",
+      "description": "普通小说网页源；GET 搜索，目录使用 CSS 选择器，正文使用 article.font_max。上游规则注明偶发 502，需控制请求频率。 2026-11-22 修复：目录请求改为直接读取书籍详情页，避免 index_1.html 返回404；等待复测。",
       "baseUrl": "https://www.d8zw.com/",
       "domains": [
         "www.d8zw.com"
@@ -196,7 +199,8 @@
             "itemSelector": ".box.hot dl",
             "titleSelector": "dd h3 a",
             "urlSelector": "dd h3 a",
-            "authorSelector": "dd.book_other span"
+            "authorSelector": "dd.book_other span",
+            "coverSelector": "img"
           },
           "detail": {
             "titleSelector": "h1",
@@ -218,7 +222,7 @@
       "id": "bqg-info",
       "name": "笔趣阁info",
       "kind": "public-web",
-      "version": "1.0.0",
+      "version": "1.0.2",
       "description": "普通小说网页源；GET 搜索，书籍详情页内含章节目录，正文使用 #booktxt。",
       "baseUrl": "https://www.bqg.info/",
       "domains": [
@@ -236,7 +240,8 @@
           "search": {
             "itemSelector": "div.book-coverlist",
             "titleSelector": "h4 a",
-            "urlSelector": "h4 a"
+            "urlSelector": "h4 a",
+            "coverSelector": "img"
           },
           "detail": {
             "titleSelector": "h1",
@@ -258,7 +263,7 @@
       "id": "xqianqian-m",
       "name": "千千小说",
       "kind": "public-web",
-      "version": "1.0.0",
+      "version": "1.0.2",
       "description": "普通小说网页源；GET 搜索，详情、目录和正文使用 CSS 规则。公开上游标记为有效，网站近期仍有更新；当前宿主四阶段复测待完成。",
       "baseUrl": "https://m.xqianqian.com/",
       "domains": [
@@ -277,7 +282,8 @@
             "itemSelector": ".bookbox",
             "titleSelector": ".bookname a",
             "urlSelector": ".bookname a",
-            "authorSelector": ".author"
+            "authorSelector": ".author",
+            "coverSelector": "img"
           },
           "detail": {
             "titleSelector": ".name",
@@ -299,7 +305,7 @@
       "id": "douhua-wenxue",
       "name": "豆花文学",
       "kind": "public-web",
-      "version": "1.0.0",
+      "version": "1.0.2",
       "description": "原创小说站网页源；GET 搜索，详情、目录和正文采用 CSS 规则。站点近期仍有更新内容；部分作品可能存在付费章节，当前宿主四阶段复测待完成。",
       "baseUrl": "https://www.douhuawenxue.com/",
       "domains": [
@@ -319,7 +325,8 @@
             "titleSelector": "h3 a",
             "urlSelector": "h3 a",
             "authorSelector": ".book_author",
-            "descriptionSelector": ".book_ct"
+            "descriptionSelector": ".book_ct",
+            "coverSelector": "img"
           },
           "detail": {
             "titleSelector": "h1"
@@ -340,7 +347,7 @@
       "id": "iyueba-net",
       "name": "爱阅吧网",
       "kind": "public-web",
-      "version": "1.0.0",
+      "version": "1.0.2",
       "description": "普通小说网页源；GET 搜索，书籍详情、目录和正文采用 CSS 规则。站点近期仍有更新记录；当前宿主四阶段复测待完成。",
       "baseUrl": "https://iyueba.net/",
       "domains": [
@@ -358,7 +365,8 @@
           "search": {
             "itemSelector": ".item",
             "titleSelector": "a:nth-of-type(2)",
-            "urlSelector": "a:nth-of-type(2)"
+            "urlSelector": "a:nth-of-type(2)",
+            "coverSelector": "img"
           },
           "detail": {
             "titleSelector": "h1"
@@ -379,7 +387,7 @@
       "id": "52shuku-net",
       "name": "52书库（男频武侠）",
       "kind": "public-web",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "description": "GET 搜索、详情与分页正文已通过 AppleNovelApp 原生运行时双关键词测试。搜索仅匹配武侠分类结果；目录按站点分页页面呈现。",
       "baseUrl": "https://www.52shuku.net/",
       "domains": [
@@ -400,7 +408,8 @@
           "search": {
             "itemSelector": "article.excerpt a[href*=\"/wuxia/\"]",
             "titleSelector": ":self",
-            "urlSelector": ":self"
+            "urlSelector": ":self",
+            "coverSelector": "img"
           },
           "detail": {
             "titleSelector": "h1.article-title"
