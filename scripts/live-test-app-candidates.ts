@@ -23,7 +23,7 @@ async function testTerm(source: NovelSource, keyword: string): Promise<TermResul
   try {
     const page = await searchNovelSource(source, keyword, client);
     const match = page.items.find(item => item.title.toLocaleLowerCase().includes(keyword.toLocaleLowerCase()));
-    if (!match) throw new Error("搜索响应有 " + page.items.length + " 条结果，但没有书名包含关键词「" + keyword + "」的书目");
+    if (!match) throw new Error("搜索响应有 " + page.items.length + " 条结果，但没有书名包含关键词「" + keyword + "」的书目。前20条：" + page.items.slice(0,20).map(item => item.title).join(" | "));
     out.stages.push({ stage: "搜索", status: "passed", detail: "结果 " + page.items.length + " 条；命中「" + match.title + "」" });
     const detail = await fetchNovelDetail(source, match, client);
     if (!detail.title) throw new Error("详情页没有书名");
