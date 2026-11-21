@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T02:26:40.019Z",
+  "generatedAt": "2026-11-21T02:30:16.911Z",
   "provider": "AOAOSTAR / Legado",
   "sourceCount": 3907,
   "counts": {
-    "candidate": 638,
-    "partial": 2646,
+    "candidate": 639,
+    "partial": 2645,
     "manual": 623,
     "unavailable": 0
   },
@@ -8116,11 +8116,9 @@
           "manualReasons": {}
         },
         "explore": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-fallback-part": 1
-          }
+          "manualReasons": {}
         }
       },
       "redistributionStatus": "not-assessed",
@@ -12141,11 +12139,9 @@
           }
         },
         "bookInfo": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 8,
-          "manualReasons": {
-            "unsupported-selector-step": 1
-          }
+          "manualReasons": {}
         },
         "toc": {
           "status": "candidate",
@@ -14045,11 +14041,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 5,
-          "manualReasons": {
-            "empty-selector-chain": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "partial",
@@ -14080,11 +14074,9 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 6,
-          "manualReasons": {
-            "unsupported-selector-step": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "candidate",
@@ -18742,11 +18734,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 4,
-          "manualReasons": {
-            "empty-selector-chain": 2
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -21337,11 +21327,9 @@
           "manualReasons": {}
         },
         "explore": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-fallback-part": 1
-          }
+          "manualReasons": {}
         }
       },
       "redistributionStatus": "not-assessed",
@@ -25090,11 +25078,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 6,
-          "manualReasons": {
-            "empty-selector-chain": 2
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "partial",
@@ -25633,8 +25619,7 @@
           "status": "partial",
           "fieldCount": 3,
           "manualReasons": {
-            "script-or-template": 2,
-            "unsupported-template-expression": 1
+            "script-or-template": 2
           }
         },
         "content": {
@@ -25717,11 +25702,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 6,
-          "manualReasons": {
-            "empty-selector-chain": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "partial",
@@ -28829,11 +28812,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 6,
-          "manualReasons": {
-            "empty-selector-chain": 2
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "partial",
@@ -40810,11 +40791,9 @@
           "manualReasons": {}
         },
         "explore": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 7,
-          "manualReasons": {
-            "empty-selector-chain": 1
-          }
+          "manualReasons": {}
         }
       },
       "redistributionStatus": "not-assessed",
@@ -40843,11 +40822,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "empty-selector-chain": 2
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -41570,11 +41547,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 4,
-          "manualReasons": {
-            "empty-selector-chain": 2
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -42975,8 +42950,7 @@
           "status": "partial",
           "fieldCount": 10,
           "manualReasons": {
-            "script-or-template": 1,
-            "invalid-selector-index": 1
+            "script-or-template": 1
           }
         },
         "bookInfo": {
@@ -43278,7 +43252,6 @@
           "status": "partial",
           "fieldCount": 3,
           "manualReasons": {
-            "empty-selector-chain": 1,
             "script-or-template": 1
           }
         },
@@ -44783,7 +44756,6 @@
           "status": "partial",
           "fieldCount": 8,
           "manualReasons": {
-            "invalid-selector-index": 1,
             "script-or-template": 1
           }
         },
@@ -51083,11 +51055,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 6,
-          "manualReasons": {
-            "empty-selector-chain": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -53797,11 +53767,9 @@
           }
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 4,
-          "manualReasons": {
-            "empty-selector-chain": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -61008,7 +60976,6 @@
           "status": "partial",
           "fieldCount": 8,
           "manualReasons": {
-            "invalid-selector-index": 1,
             "script-or-template": 1
           }
         },
@@ -64247,7 +64214,6 @@
           "status": "partial",
           "fieldCount": 8,
           "manualReasons": {
-            "invalid-selector-index": 1,
             "script-or-template": 1
           }
         },
@@ -64879,7 +64845,6 @@
           "status": "partial",
           "fieldCount": 8,
           "manualReasons": {
-            "invalid-selector-index": 1,
             "script-or-template": 1
           }
         },
@@ -66543,11 +66508,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 4,
-          "manualReasons": {
-            "empty-selector-chain": 2
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -67573,7 +67536,6 @@
           "status": "partial",
           "fieldCount": 8,
           "manualReasons": {
-            "invalid-selector-index": 1,
             "script-or-template": 1
           }
         },
@@ -67660,7 +67622,6 @@
           "status": "partial",
           "fieldCount": 8,
           "manualReasons": {
-            "invalid-selector-index": 1,
             "script-or-template": 1
           }
         },
@@ -70689,11 +70650,9 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 8,
-          "manualReasons": {
-            "unsupported-selector-step": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "candidate",
@@ -76787,11 +76746,9 @@
           "manualReasons": {}
         },
         "explore": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 7,
-          "manualReasons": {
-            "empty-selector-chain": 1
-          }
+          "manualReasons": {}
         }
       },
       "redistributionStatus": "not-assessed",
@@ -78228,11 +78185,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 4,
-          "manualReasons": {
-            "empty-selector-chain": 2
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -78515,7 +78470,6 @@
           "status": "partial",
           "fieldCount": 3,
           "manualReasons": {
-            "empty-selector-chain": 1,
             "script-or-template": 1
           }
         },
@@ -79664,11 +79618,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "empty-selector-chain": 2
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -79706,11 +79658,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 4,
-          "manualReasons": {
-            "empty-selector-chain": 2
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -79832,11 +79782,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 2,
-          "manualReasons": {
-            "empty-selector-chain": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "partial",
@@ -95345,11 +95293,9 @@
           "manualReasons": {}
         },
         "explore": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "unsupported-fallback-part": 1
-          }
+          "manualReasons": {}
         }
       },
       "redistributionStatus": "not-assessed",
@@ -96333,11 +96279,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 4,
-          "manualReasons": {
-            "empty-selector-chain": 2
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -109413,11 +109357,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 6,
-          "manualReasons": {
-            "empty-selector-chain": 2
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "partial",
@@ -117213,11 +117155,9 @@
           "manualReasons": {}
         },
         "explore": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 7,
-          "manualReasons": {
-            "empty-selector-chain": 1
-          }
+          "manualReasons": {}
         }
       },
       "redistributionStatus": "not-assessed",
@@ -127033,11 +126973,9 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 8,
-          "manualReasons": {
-            "empty-selector-chain": 2
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "candidate",
@@ -129360,11 +129298,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 6,
-          "manualReasons": {
-            "empty-selector-chain": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -132397,11 +132333,9 @@
           }
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 4,
-          "manualReasons": {
-            "empty-selector-chain": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -136482,11 +136416,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 3,
-          "manualReasons": {
-            "empty-selector-chain": 2
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -141313,8 +141245,7 @@
           "status": "partial",
           "fieldCount": 10,
           "manualReasons": {
-            "script-or-template": 1,
-            "invalid-selector-index": 1
+            "script-or-template": 1
           }
         },
         "bookInfo": {
@@ -142437,7 +142368,6 @@
           "status": "partial",
           "fieldCount": 8,
           "manualReasons": {
-            "invalid-selector-index": 1,
             "script-or-template": 1
           }
         },
@@ -143104,7 +143034,7 @@
       "index": 3456,
       "name": "九怀中文网/九怀文学",
       "baseUrl": "https://www.jiuhuaiwenxue.com",
-      "conversionStatus": "partial",
+      "conversionStatus": "candidate",
       "warningCodes": [
         "login-config-present",
         "request-header-or-cookie-config-present"
@@ -143121,11 +143051,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 5,
-          "manualReasons": {
-            "invalid-selector-index": 1
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -144586,8 +144514,7 @@
           "status": "partial",
           "fieldCount": 3,
           "manualReasons": {
-            "script-or-template": 2,
-            "unsupported-template-expression": 1
+            "script-or-template": 2
           }
         },
         "content": {
@@ -150036,7 +149963,6 @@
           "status": "partial",
           "fieldCount": 8,
           "manualReasons": {
-            "invalid-selector-index": 1,
             "script-or-template": 1
           }
         },
@@ -151441,11 +151367,9 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 9,
-          "manualReasons": {
-            "empty-selector-chain": 2
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "candidate",
@@ -153131,7 +153055,6 @@
           "status": "partial",
           "fieldCount": 8,
           "manualReasons": {
-            "invalid-selector-index": 1,
             "script-or-template": 1
           }
         },
@@ -155396,11 +155319,9 @@
       ],
       "groups": {
         "search": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 8,
-          "manualReasons": {
-            "unsupported-selector-step": 1
-          }
+          "manualReasons": {}
         },
         "bookInfo": {
           "status": "candidate",
@@ -158708,11 +158629,9 @@
           "manualReasons": {}
         },
         "toc": {
-          "status": "partial",
+          "status": "candidate",
           "fieldCount": 4,
-          "manualReasons": {
-            "empty-selector-chain": 2
-          }
+          "manualReasons": {}
         },
         "content": {
           "status": "candidate",
@@ -159525,7 +159444,6 @@
           "status": "partial",
           "fieldCount": 8,
           "manualReasons": {
-            "invalid-selector-index": 1,
             "script-or-template": 1
           }
         },
@@ -160886,7 +160804,6 @@
           "status": "partial",
           "fieldCount": 8,
           "manualReasons": {
-            "invalid-selector-index": 1,
             "script-or-template": 1
           }
         },
@@ -160973,7 +160890,6 @@
           "status": "partial",
           "fieldCount": 8,
           "manualReasons": {
-            "invalid-selector-index": 1,
             "script-or-template": 1
           }
         },
