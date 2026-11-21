@@ -70,7 +70,8 @@ async function mapLimit<T, R>(items: T[], limit: number, fn: (item: T) => Promis
       return result;
     }
     const source = { ...compatible, id: entry.id, enabled: true, importedAt: Date.now() } as unknown as NovelSource;
-    const keywords = keywordsBySource[entry.id] || defaultKeywords;\n    for (const keyword of keywords) result.terms[keyword] = await testTerm(source, keyword);
+    const keywords = keywordsBySource[entry.id] || defaultKeywords;
+    for (const keyword of keywords) result.terms[keyword] = await testTerm(source, keyword);
     const states = Object.values(result.terms).map(x => x.status);
     result.status = states.every(x => x === "passed") ? "passed-both" : states.some(x => x === "passed") ? "passed-one" : "failed";
     return result;
