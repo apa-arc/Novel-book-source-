@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-21T12:15:36.743Z",
+  "sourceId": "52shuku-net",
+  "sourceVersion": "1.0.0",
+  "status": "passed",
+  "summary": {
+    "passedStages": 10,
+    "failedStages": 0,
+    "sampledChapters": 4,
+    "qualityPassed": true
+  },
+  "evidence": {
+    "workflowRunId": 44902986659,
+    "report": "app-candidate-live-test-report",
+    "keywords": [
+      "斗罗大陆",
+      "斗破苍穹"
+    ],
+    "stages": [
+      "搜索",
+      "详情",
+      "分页目录",
+      "首页面正文",
+      "末页面正文"
+    ]
+  },
+  "note": "由 AppleNovelApp 原生运行时执行。该站点将阅读文本分页，App 目录显示为第N页；这不是站点提供的传统章节标题。"
+}
