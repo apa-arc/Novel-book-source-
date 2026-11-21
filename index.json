@@ -49,6 +49,22 @@
       "file": "sources/tianyu-tycqzw.json",
       "enabled": true,
       "testOnly": true
+    },
+    {
+      "id": "deqi-deqixs",
+      "name": "得奇小说网",
+      "kind": "public-web",
+      "file": "sources/deqi-deqixs.json",
+      "enabled": true,
+      "testOnly": true
+    },
+    {
+      "id": "sanyi-31xs",
+      "name": "三一小说",
+      "kind": "public-web",
+      "file": "sources/sanyi-31xs.json",
+      "enabled": true,
+      "testOnly": true
     }
   ]
 }
