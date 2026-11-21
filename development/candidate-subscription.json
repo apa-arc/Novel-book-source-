@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "subscriptionId": "apa-arc-native-candidate-test",
   "name": "候选源 App 兼容测试",
-  "updatedAt": "2026-11-21T12:10:00.000Z",
+  "updatedAt": "2026-11-21T12:18:14.237Z",
   "sourceCount": 1,
   "sources": [
     {
@@ -28,7 +28,7 @@
             "titleSelector": "h1.article-title"
           },
           "chapters": {
-            "itemSelector": "article.article-content ul.list.clearfix li.mulu",
+            "itemSelector": "ul.list.clearfix li.mulu",
             "titleSelector": "a",
             "urlSelector": "a"
           },
