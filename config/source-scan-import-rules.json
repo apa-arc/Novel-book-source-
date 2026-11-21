@@ -252,7 +252,8 @@
       "resultRelevance": "Record total parsed results and title-matching results separately; reading tests only use a title-matching result; if none exists, skip reading without downgrading search request success.",
       "execution": {
         "sourceConcurrency": 1,
-        "interSourceCooldownSeconds": 1.2
+        "interSourceCooldownSeconds": 2,
+        "reason": "串行测试并增加源间冷却，降低502/429和上游临时限流干扰。"
       },
       "networkDiagnostics": {
         "recordFinalResponseUrl": true,
@@ -261,6 +262,35 @@
         "recordSanitizedBodyPreviewMaxChars": 360,
         "recordThrownError": true,
         "noNativeIosEquivalenceClaim": true
+      },
+      "catalogRetry": {
+        "maxAttempts": 3,
+        "delaySeconds": [
+          4,
+          8
+        ],
+        "retryOn": [
+          "http-5xx",
+          "http-429",
+          "timeout",
+          "dns-error",
+          "connection-reset",
+          "connection-error"
+        ],
+        "noRetryOn": [
+          "empty-catalog-parse",
+          "invalid-selector",
+          "other-deterministic-parser-errors"
+        ],
+        "policy": "目录阶段瞬时网络/服务端错误最多重试3次；不改变搜索状态，不自动下架；记录尝试次数与最终错误。"
+      },
+      "sourceSpecificDiagnostics": {
+        "jiuyi-91zww": "HTTP200返回JS挑战/请稍候页面，跨域跳转至yaokanwx.com；只记录挑战/跳转，不执行JS、不绕过访问控制。需用户App真机结果或站点提供正常公开搜索接口后再适配。",
+        "xinbiquge-info": "搜索正常但目录请求HTTP502；先使用目录阶段冷却重试，不盲改URL/选择器。",
+        "d8zw-com": "搜索正常但目录请求HTTP502；先使用目录阶段冷却重试，不盲改URL/选择器。",
+        "xqianqian-m": "搜索请求连续失败，需采集具体请求URL/错误；不因Node网络失败判源失效。",
+        "douhua-wenxue": "斗破返回10条但标题匹配0条；保留搜索成功状态，不用无关首条结果测试阅读。",
+        "iyueba-net": "HTTP403视为环境不确定，不绕过挑战或访问控制。"
       }
     },
     "importPolicy": "新源必须通过许可审查、App兼容校验、两个关键词搜索请求、至少一个关键词返回结果，以及详情、目录、首末章正文和文本质量测试；环境不确定的源继续复测，不进入失败删除流程；不设置候选池。"
