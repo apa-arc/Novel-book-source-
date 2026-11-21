@@ -45,5 +45,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: live-functional-test-report-${{ matrix.shard }}
-          path: reports/live-functional-test-${{ matrix.shard }}-of-32.json
+          path: |
+            reports/live-functional-test-${{ matrix.shard }}-of-32.json
+            reports/live-functional-test-passed-sources-${{ matrix.shard }}-of-32.json
           retention-days: 90
