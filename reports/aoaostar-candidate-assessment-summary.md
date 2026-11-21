@@ -10,27 +10,35 @@
 - 成人/非小说与普通混合域名：4
 - 非成人待审域名：363
 - 已完成公开页面/章节样本扫描：363
+- 逐条完成许可元数据检查：704 条
+- 候选元数据中含逐源许可/授权字段：0 条
+- 人工核查公开许可声明的域名：2 个（对应 3 条候选记录）
+- 已获批准再分发的候选记录：0 条
 - 已具备明确许可且完成 App 四接口验收、可进入订阅：0
 
 ## 域名扫描结果
 
 | 状态 | 域名数 |
 |---|---:|
-| chapter-content-unavailable | 1 |
 | chapter-sample-clean | 2 |
-| manual-review | 287 |
+| manual-review | 290 |
 | needs-adapter | 15 |
 | non-novel-or-undiscovered | 7 |
 | robots-disallowed | 8 |
-| unreachable-or-blocked | 43 |
+| unreachable-or-blocked | 41 |
 
 ## 许可与技术状态
 
-- 许可/再分发依据：704 条全部为 not-assessed，没有将上游 AGPL 误当作站点内容授权。
-- App 四接口：704 条均未由本报告证明通过；搜索、详情、目录、正文均标记 not-run。
+- 许可/再分发依据：候选元数据已逐条检查；无逐源许可证/授权字段的记录标记为 no-explicit-evidence-in-candidate-metadata，不能视为已获许可。
+- 上游仓库虽声明 AGPL-3.0，但其目录明确指出单条规则来源和再分发权未评估；AGPL 不能替代站点内容授权。
+- 已人工核查两个章节样本可访问域名；公开声明均未提供授权链或再分发许可，保持 not-approved。
+- App 四接口：候选队列中所有记录仍未由本报告证明通过；搜索、详情、目录、正文均标记 not-run。
 - 技术适配：非成人候选均为 not-adapted；章节样本干净只代表抽样页质量初筛，不代表适配器可用。
 - 只有明确许可证据、四接口真实测试和质量门禁全部通过，才会加入正式订阅。
 
+人工许可审查记录：imports/aoaostar/license-review.json
 机器可读逐条评估：imports/aoaostar/candidate-assessment.json
 
+- m.ttshu12.com：首页声明站内小说整理自互联网公开资源、著作权归原作者及出版方所有，仅供在线阅读与交流；这不是权利人授权或再分发许可。首页还呈现混合成人题材内容，因此不进入普通源队列。
+- www.tangsanbooks.com：公开书籍页注明作品版权归作者所有，并称本站转载收集最新章节；未提供作者或权利人授权链、许可协议或再分发范围。
 扫描限制：GitHub Actions 网络环境下的 403、超时或连接失败只能说明当前探测环境不可访问，不能推断站点永久失效。
