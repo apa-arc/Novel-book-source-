@@ -1,0 +1,29 @@
+name: Inspect GET-compatible novel source candidate
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/inspect-deqitxt.js"
+      - ".github/workflows/inspect-deqitxt.yml"
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install HTML parser
+        run: npm install --no-save --no-package-lock linkedom
+      - name: Inspect search, book, and chapter endpoints
+        run: node scripts/inspect-deqitxt.js
+      - name: Upload sanitized inspection
+        uses: actions/upload-artifact@v4
+        with:
+          name: deqitxt-inspection
+          path: reports/deqitxt-inspection.json
+          retention-days: 30
