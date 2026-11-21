@@ -1,0 +1,1352 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-21T11:55:43.449Z",
+  "note": "只检测当前 App GET/UTF-8 HTTP 边界下的搜索入口；不代表详情、目录、正文已通过。POST、跨域跳转和非 UTF-8 来源不会自动加入正式订阅。",
+  "counts": {
+    "total": 86,
+    "get-search-responds": 4,
+    "needs-manual-search-discovery": 29,
+    "get-search-no-keyword-hit": 10,
+    "request-error-or-redirect": 25,
+    "app-incompatible-post-search": 18
+  },
+  "results": [
+    {
+      "id": "5563836ebefd0cb7",
+      "name": "🌐 博览群书",
+      "host": "readnovelfull.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html; charset=UTF-8",
+      "searchMode": "GET",
+      "searchUrl": "https://readnovelfull.com/novel-list/search?keyword=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+      "searchStatus": 200,
+      "searchContentType": "text/html; charset=UTF-8",
+      "charsetOk": true,
+      "isHtml": true,
+      "containsKeyword": true,
+      "linkCount": 50,
+      "linkSamples": [
+        {
+          "text": "Read Novel Full",
+          "href": "/"
+        },
+        {
+          "text": "Novel List",
+          "href": "#"
+        },
+        {
+          "text": "Latest Release",
+          "href": "/novel-list/latest-release-novel"
+        },
+        {
+          "text": "Hot Novel",
+          "href": "/novel-list/hot-novel"
+        },
+        {
+          "text": "Completed Novel",
+          "href": "/novel-list/completed-novel"
+        },
+        {
+          "text": "Most Popular",
+          "href": "/novel-list/most-popular-novel"
+        },
+        {
+          "text": "Genre",
+          "href": "#"
+        },
+        {
+          "text": "Action",
+          "href": "/genres/action"
+        }
+      ],
+      "bodySample": "Show menu Read Novel Full Novel List Latest ReleaseHot NovelCompleted NovelMost Popular Genre ActionAdultAdventureComedyDramaEasternEcchiFan-fictionFanfictionFantasyGameGender BenderHaremHentaiHistoricalHorrorJoseiMartial ArtsMatureMechaModern LifeMysteryOtherPsychologicalReincarnationRomanceSchool lifeSci-fiSeinenShoujoShounenSlice of LifeSmutSportsSupernaturalSystem Options BackgroundLight grayLight blueLight yellowSepiaDark blueDark yellowWood grainWhiteDarkFont familyPalatino LinotypeBookerlyMinionSegoe UIRobotoRoboto CondensedPatrick HandNoticia TextTimes New RomanVerdanaTahomaArialFont size16182022242628303234363840Line height100%120%140%160%180%200%Full frame Yes NoNo line break Yes NoNovelSearch: 斗罗大陆Search: 斗罗大陆Family Management Game In Immortal Continent darktea Chapter 1425: Chapter 1419: Year 1100Blood Awakening: The Strongest Hybrid and His Vampire Bride TheDragonSlayer Chap",
+      "classification": "get-search-responds",
+      "elapsedMs": 1745
+    },
+    {
+      "id": "42074fb0129d50c0",
+      "name": "🌸夜伴书屋",
+      "host": "www.yeban360.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html",
+      "searchMode": "no-form",
+      "classification": "needs-manual-search-discovery",
+      "elapsedMs": 626
+    },
+    {
+      "id": "113620b008c73d12",
+      "name": "🍊 17K小说网",
+      "host": "h5.17k.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html",
+      "searchMode": "no-form",
+      "classification": "needs-manual-search-discovery",
+      "elapsedMs": 1146
+    },
+    {
+      "id": "f49224b4ddd8f3ba",
+      "name": "🎉 读书小说",
+      "host": "www.dushu.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html",
+      "searchMode": "GET",
+      "searchUrl": "https://www.dushu.com/search.aspx?qd=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+      "searchStatus": 200,
+      "searchContentType": "text/html; charset=utf-8",
+      "charsetOk": true,
+      "isHtml": true,
+      "containsKeyword": false,
+      "linkCount": 40,
+      "linkSamples": [
+        {
+          "text": "注册",
+          "href": "#"
+        },
+        {
+          "text": "登录",
+          "href": "#"
+        },
+        {
+          "text": "首页",
+          "href": "https://www.dushu.com"
+        },
+        {
+          "text": "在线读书",
+          "href": "/readbook/"
+        },
+        {
+          "text": "每日一读",
+          "href": "/meiwen/"
+        },
+        {
+          "text": "国学/古籍",
+          "href": "/guoxue/"
+        },
+        {
+          "text": "出版图书",
+          "href": "/book/"
+        },
+        {
+          "text": "读书导航",
+          "href": "/daohang/"
+        }
+      ],
+      "bodySample": "注册 | 登录读书好，好读书，读好书！ 首页 在线读书 每日一读 国学/古籍 出版图书 读书导航 我的账户 我的书架 首页 在线读书 每日一读 国学/古籍 出版图书 读书导航 当前位置： 首页图书搜索 请输入查询关键词！ 读书推荐 01黄土长歌 01 黄土长歌 02卫煌 02 卫煌 03心灵判官：起源1-2（组套… 03 心灵判官：起源1-2（组套2册） 04诡秘之主10 不死者 上（典… 04 诡秘之主10 不死者 上（典藏版）… 05破晓 05 破晓 06珍本绣像志怪小说 06 珍本绣像志怪小说 07雷峰塔（全新改版） 07 雷峰塔（全新改版） 08恶魔之眼 08 恶魔之眼 09从群星归来 09 从群星归来 10安娜·卡列尼娜（全2… 10 安娜·卡列尼娜（全2册 插图… 关于读书 免责声明 读书目录 联系我们 Copyright © 读书网 www.dushu.com 2005-2026, All Rights Reserved. 鄂ICP备15019699号 鄂公网安备 42010302001612号 $(function () { $(\".img152 img\").lazyload({ effect: \"fadeIn\" }); });",
+      "classification": "get-search-no-keyword-hit",
+      "elapsedMs": 1373
+    },
+    {
+      "id": "611e9c69b14653e3",
+      "name": "🎉 闪舞小说",
+      "host": "www.35xss.com",
+      "classification": "request-error-or-redirect",
+      "error": "TypeError: fetch failed",
+      "elapsedMs": 653
+    },
+    {
+      "id": "0a33c50aa9ae53bc",
+      "name": "🎉爱奇艺文学#嘚嘚21.0201",
+      "host": "wenxue.iqiyi.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html;charset=UTF-8",
+      "searchMode": "no-form",
+      "classification": "needs-manual-search-discovery",
+      "elapsedMs": 4324
+    },
+    {
+      "id": "eeebb070313d8d06",
+      "name": "🎉笔趣库②",
+      "host": "www.c66c.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html",
+      "searchMode": "no-form",
+      "classification": "needs-manual-search-discovery",
+      "elapsedMs": 628
+    },
+    {
+      "id": "8b1676b6b18a7037",
+      "name": "🎻全本同人小说",
+      "host": "www.qbtr.cc",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html",
+      "searchMode": "POST",
+      "classification": "app-incompatible-post-search",
+      "elapsedMs": 735
+    },
+    {
+      "id": "006b874f12e5f855",
+      "name": "📖 顶点小说",
+      "host": "m.hafuke5.com",
+      "classification": "request-error-or-redirect",
+      "error": "TypeError: fetch failed",
+      "elapsedMs": 341
+    },
+    {
+      "id": "945087e73c4df2c1",
+      "name": "📖 花溪小说",
+      "host": "w.huaxi.net",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html;charset=utf-8",
+      "searchMode": "GET",
+      "searchUrl": "https://w.huaxi.net/search?key=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+      "searchStatus": 200,
+      "searchContentType": "text/html;charset=utf-8",
+      "charsetOk": true,
+      "isHtml": true,
+      "containsKeyword": false,
+      "linkCount": 28,
+      "linkSamples": [
+        {
+          "text": "/data/vhosts/huayux/app/tpls/themes/cloud/novel/search.html on line 58 \"> 斗罗大陆 作者：非琴非瑟自风流",
+          "href": "/<br />\n<b>Warning</b>:  Undefined array key "
+        },
+        {
+          "text": "/data/vhosts/huayux/app/tpls/themes/cloud/novel/search.html on line 58 \"> 永恒仙尊 作者：涉鹄",
+          "href": "/<br />\n<b>Warning</b>:  Undefined array key "
+        },
+        {
+          "text": "/data/vhosts/huayux/app/tpls/themes/cloud/novel/search.html on line 58 \"> 偷欢定情 作者：书妻",
+          "href": "/<br />\n<b>Warning</b>:  Undefined array key "
+        },
+        {
+          "text": "/data/vhosts/huayux/app/tpls/themes/cloud/novel/search.html on line 58 \"> 夫人，我们领证吧 作者：咸鱼灰居居",
+          "href": "/<br />\n<b>Warning</b>:  Undefined array key "
+        },
+        {
+          "text": "/data/vhosts/huayux/app/tpls/themes/cloud/novel/search.html on line 58 \"> 陛下，我们和离吧 作者：琉夏",
+          "href": "/<br />\n<b>Warning</b>:  Undefined array key "
+        },
+        {
+          "text": "/data/vhosts/huayux/app/tpls/themes/cloud/novel/search.html on line 58 \"> 大凤女 作者：紫箫",
+          "href": "/<br />\n<b>Warning</b>:  Undefined array key "
+        },
+        {
+          "text": "/data/vhosts/huayux/app/tpls/themes/cloud/novel/search.html on line 58 \"> 暖暖 作者：罗傻傻",
+          "href": "/<br />\n<b>Warning</b>:  Undefined array key "
+        },
+        {
+          "text": "/data/vhosts/huayux/app/tpls/themes/cloud/novel/search.html on line 58 \"> 重生成权臣的掌心宝 作者：二更尚早",
+          "href": "/<br />\n<b>Warning</b>:  Undefined array key "
+        }
+      ],
+      "bodySample": "",
+      "classification": "get-search-responds",
+      "elapsedMs": 1003
+    },
+    {
+      "id": "5335172e28834cf1",
+      "name": "📖 火星小说",
+      "host": "mobile.hotread.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html;charset=UTF-8",
+      "searchMode": "no-form",
+      "classification": "needs-manual-search-discovery",
+      "elapsedMs": 994
+    },
+    {
+      "id": "cd82a9b4182c254e",
+      "name": "📖 落初文学",
+      "host": "m.luochu.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html; charset=utf-8",
+      "searchMode": "no-form",
+      "classification": "needs-manual-search-discovery",
+      "elapsedMs": 1559
+    },
+    {
+      "id": "7f2765a2bad767c3",
+      "name": "📖 玫瑰言情",
+      "host": "www.mgyqw.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html",
+      "searchMode": "GET",
+      "searchUrl": "https://www.mgyqw.com/modules/article/search.php?searchtype=all&searchkey=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+      "searchStatus": 200,
+      "searchContentType": "text/html",
+      "charsetOk": true,
+      "isHtml": true,
+      "containsKeyword": false,
+      "linkCount": 50,
+      "linkSamples": [
+        {
+          "text": "��Ϊ��ҳ",
+          "href": "javascript:;"
+        },
+        {
+          "text": "�ղ�õ������",
+          "href": "javascript:;"
+        },
+        {
+          "text": "��������",
+          "href": "/modules/article/search.php?searchtype=all&searchkey=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86&charset=big5"
+        },
+        {
+          "text": "��������",
+          "href": "/modules/article/search.php?searchtype=all&searchkey=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86&charset=gbk"
+        },
+        {
+          "text": "�ֻ���",
+          "href": "javascript:;"
+        },
+        {
+          "text": "��ҳ",
+          "href": "/gbk/"
+        },
+        {
+          "text": "����С˵",
+          "href": "/gbk/sort/1/1.html"
+        },
+        {
+          "text": "���а�",
+          "href": "/gbk/top/all.html"
+        }
+      ],
+      "bodySample": "��Ϊ��ҳ �ղ�õ������ �������� �������� �ֻ��� ��ҳ ����С˵ ���а� ������� ��Ա���� �����б� �����Ķ� �����а� �����а� �����а� ������Ʒ�� ϯ����Ʒ�� ������Ʒ�� ������Ʒ�� �����Ʒ�� ������Ʒ�� ������Ʒ�� ������� �� Ʒ & �½� ���� С˵ϵ�� ������ Ů���� ����ʱ�� ǿ���Ƽ� �ҵ��๫��ֻ�� �ҵĿ����� �ܲõ�һ������ Ԧ��ү ���׳�޸����ܲ� �ް�СŮ�� ����ֻ�¹����� ����֮�� С�����ܲ� �����Ϲ� �ܼ������� ����һ�Ц �ҵ�Ů�˲����� �����ҵĲ� ����Ů�� ����>> Ǳ�������Ƽ� ��ͬǰ�δ����� ���ϸ��� ��ʦ���������� ��үı�� ����Ϯ�� ����˾��С�� ����ǧ�� ������� ���˳���ĥ�˾� ���㽿�� ����СŮ�� ͨ��С���� ��ױ˽���� ҽ��ͬ�� ����Ҫ���� ����>> õ���������ܾ��κ��漰���Ρ���ɫ���ƻ���г�������ݡ������緢��������ݣ���ӭ�ٱ������ǽ����ദ���� �����ַ����Ȩ�棬����ϵ����ɾ���� Copyright By õ������������С˵�� www.mgyqw.com All Rights Reserved ��վ����¼��Ʒ���������⡢������ۼ���վ����֮�������������Ϊ���뱾վ�����޹�",
+      "classification": "get-search-no-keyword-hit",
+      "elapsedMs": 1714
+    },
+    {
+      "id": "4d58266b0bf3ef74",
+      "name": "📖 奇妙小说",
+      "host": "miao.qimao.com",
+      "classification": "request-error-or-redirect",
+      "error": "TypeError: fetch failed",
+      "elapsedMs": 816
+    },
+    {
+      "id": "7bc03a4e9603b942",
+      "name": "📖 书阅屋网",
+      "host": "m.sywtxt.com",
+      "classification": "request-error-or-redirect",
+      "error": "TypeError: fetch failed",
+      "elapsedMs": 234
+    },
+    {
+      "id": "453975a513b24a13",
+      "name": "📖 QQ浏览器",
+      "host": "novel.html5.qq.com",
+      "classification": "request-error-or-redirect",
+      "error": "TypeError: fetch failed",
+      "elapsedMs": 881
+    },
+    {
+      "id": "f2bc474f6331f889",
+      "name": "📥 知乎趣集",
+      "host": "ifun.cool",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html;charset=utf-8",
+      "searchMode": "no-form",
+      "classification": "needs-manual-search-discovery",
+      "elapsedMs": 2182
+    },
+    {
+      "id": "9e7ebd3769801321",
+      "name": "🚬肉肉屋",
+      "host": "m.rourouwu10.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html",
+      "searchMode": "POST",
+      "classification": "app-incompatible-post-search",
+      "elapsedMs": 414
+    },
+    {
+      "id": "bb3ec0ecd7e3a2e0",
+      "name": "242小说",
+      "host": "www.242xs.info",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html; charset=UTF-8",
+      "searchMode": "no-form",
+      "classification": "needs-manual-search-discovery",
+      "elapsedMs": 177
+    },
+    {
+      "id": "eb13313756f00c79",
+      "name": "52书库②",
+      "host": "www.po5.net",
+      "classification": "request-error-or-redirect",
+      "error": "TypeError: fetch failed",
+      "elapsedMs": 86
+    },
+    {
+      "id": "6ce0f43e5218a9fb",
+      "name": "61看书",
+      "host": "www.61ksw.com",
+      "classification": "request-error-or-redirect",
+      "error": "TypeError: fetch failed",
+      "elapsedMs": 848
+    },
+    {
+      "id": "fd78a9897eca08e3",
+      "name": "爱下电子书",
+      "host": "m.aixdzs.com",
+      "classification": "request-error-or-redirect",
+      "error": "TypeError: fetch failed",
+      "elapsedMs": 523
+    },
+    {
+      "id": "11d57716b129d7cf",
+      "name": "爱下电子书(ixdzs8)",
+      "host": "ixdzs8.com",
+      "homepageStatus": 403,
+      "homepageContentType": "text/html",
+      "searchMode": "no-form",
+      "classification": "needs-manual-search-discovery",
+      "elapsedMs": 544
+    },
+    {
+      "id": "c00bcc7fa8cc81c4",
+      "name": "安夜读库",
+      "host": "m.yeduku.com",
+      "classification": "request-error-or-redirect",
+      "error": "TypeError: fetch failed",
+      "elapsedMs": 128
+    },
+    {
+      "id": "9dde695b57b38ec1",
+      "name": "白中文网（发现）",
+      "host": "m.25zhongwen.com",
+      "classification": "request-error-or-redirect",
+      "error": "TypeError: fetch failed",
+      "elapsedMs": 355
+    },
+    {
+      "id": "73cd0cc3bec462a6",
+      "name": "笔趣阁",
+      "host": "www.seekchimp.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html;charset=UTF-8",
+      "searchMode": "POST",
+      "classification": "app-incompatible-post-search",
+      "elapsedMs": 241
+    },
+    {
+      "id": "8b25d943b85b6889",
+      "name": "笔趣阁",
+      "host": "m.biquge.tv",
+      "classification": "request-error-or-redirect",
+      "error": "TypeError: fetch failed",
+      "elapsedMs": 266
+    },
+    {
+      "id": "f36aa97850e63ae9",
+      "name": "笔趣阁(xinbiquge)",
+      "host": "wap2.xinbiquge.org",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html; charset=utf-8",
+      "searchMode": "no-form",
+      "classification": "needs-manual-search-discovery",
+      "elapsedMs": 330
+    },
+    {
+      "id": "fbc6405589c27ad4",
+      "name": "笔趣阁227",
+      "host": "m.bqg227.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html; charset=utf-8",
+      "searchMode": "no-form",
+      "classification": "needs-manual-search-discovery",
+      "elapsedMs": 831
+    },
+    {
+      "id": "946ca39a34931c23",
+      "name": "笔下文学",
+      "host": "www.bxwx.la",
+      "classification": "request-error-or-redirect",
+      "error": "TypeError: fetch failed",
+      "elapsedMs": 755
+    },
+    {
+      "id": "8ea9f94c9d0cd2fd",
+      "name": "笔仙阁子",
+      "host": "www.bixiange.top",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html",
+      "searchMode": "POST",
+      "classification": "app-incompatible-post-search",
+      "elapsedMs": 265
+    },
+    {
+      "id": "e6bad697c18c5879",
+      "name": "春雨书屋",
+      "host": "www.chunyushuwu.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html; charset=utf-8",
+      "searchMode": "no-form",
+      "classification": "needs-manual-search-discovery",
+      "elapsedMs": 1139
+    },
+    {
+      "id": "92b07d954e7973b4",
+      "name": "大众文学-夜明空",
+      "host": "www.gzhgxs.com",
+      "classification": "request-error-or-redirect",
+      "error": "TypeError: fetch failed",
+      "elapsedMs": 606
+    },
+    {
+      "id": "ed8e44f89e270f6d",
+      "name": "稻草书屋",
+      "host": "www.dcrbk.com",
+      "classification": "request-error-or-redirect",
+      "error": "TypeError: fetch failed",
+      "elapsedMs": 446
+    },
+    {
+      "id": "ee7fb846fd417a19",
+      "name": "得奇小说网",
+      "host": "www.deqitxt.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html; charset=utf-8",
+      "searchMode": "GET",
+      "searchUrl": "https://www.deqitxt.com/?key=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+      "searchStatus": 200,
+      "searchContentType": "text/html; charset=utf-8",
+      "charsetOk": true,
+      "isHtml": true,
+      "containsKeyword": false,
+      "linkCount": 50,
+      "linkSamples": [
+        {
+          "text": "首页",
+          "href": "/"
+        },
+        {
+          "text": "分类",
+          "href": "/fenlei/"
+        },
+        {
+          "text": "排行",
+          "href": "/paihang/"
+        },
+        {
+          "text": "完结",
+          "href": "/wanjie/"
+        },
+        {
+          "text": "看过",
+          "href": "/jilu/"
+        },
+        {
+          "text": "搜 索",
+          "href": "javascript:doit()"
+        },
+        {
+          "text": "阅读排行",
+          "href": "/paihang/"
+        },
+        {
+          "text": "全部",
+          "href": "/paihang/"
+        }
+      ],
+      "bodySample": "首页 分类 排行 完结 看过 搜 索 阅读排行全部 青山 武道长生，不死的我终将无敌 百岁修仙：从觉醒天灵根开始 聚宝仙盆 我在精神病院学斩神 网游之死亡武侠 最新更新全部 置顶夜无疆连载中玄幻小说6471阅读作者：辰东更新时间最新章节11-16第874章 身世之秘11-14第873章 改命涉因果11-13第872章 见朕为何不跑 官场从秘书开始连载中都市小说3660阅读作者：老冰棍更新时间最新章节8分钟前第2976章 高额处罚8分钟前第2975章 夜间检查昨天第2974章 再次突检 真实历史模拟游戏连载中历史小说5阅读作者：斩刀人更新时间最新章节12分钟前第458章 大网！（加更）昨天第457章 新旧交织，大戏开幕11-19第456章 种一千颗树，一万棵树（求月票） 领主：我在苦痛世界，养成少女连载中玄幻言情115阅读作者：嘎嘎乱写更新时间最新章节15分钟前第 2057章 棉花和辣椒15分钟前第 2056章 神之躯成长15分钟前第 2055章 消灭埃涅努特 娘娘她只想吃瓜连载中古代言情486阅读作者：尤妮丝更新时间最新章节18分钟前第542章 被遗忘的老六（下）18分钟前第541章 被遗忘的老六（上）昨天第540章 唯盼～夜梦巫山 凤归来连载中古代言情686阅读作者：梨花白更新时间最新章节18分钟前第二百五十二章 前所未有10小时前第二百五十一章 权力是个好东西昨天第二百五十章 让皇上开先河 长生：我的天赋无限叠加连载中仙侠小说7阅读作者：廿三声更新时间最新章节23分钟前第678章 天赋！灵体！终得灵体！昨天第677章 盛名之威！暗属性与火灵韵满百11-19第676章 新的天赋，人造神通，意外之喜 民国，卦了！连载中军事小说1583阅读作者：集虚斋小学士更新时间最新章节29分钟前第961章 夺命！夺命！29分钟前第960章 处世若大梦29分钟前第959章 你是谁？ 修仙：旁门左道就是这样的连载中玄幻小说6545阅读作者：火云柱更新时间最新章节32分钟前第984章 石板邪恶、邪神王权、王权塔19小时前第983章 封印邪神者：传说中的传说：王权昨天第982章 邪神、半人半",
+      "classification": "get-search-no-keyword-hit",
+      "elapsedMs": 735
+    },
+    {
+      "id": "ade2e495e39f5f8d",
+      "name": "抖音小说",
+      "host": "m.douxsw.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html; charset=utf-8",
+      "searchMode": "POST",
+      "classification": "app-incompatible-post-search",
+      "elapsedMs": 389
+    },
+    {
+      "id": "a73b846385a9e884",
+      "name": "抖音小说",
+      "host": "www.douyinxs.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html; charset=utf-8",
+      "searchMode": "no-form",
+      "classification": "needs-manual-search-discovery",
+      "elapsedMs": 198
+    },
+    {
+      "id": "df565c0a330f9f33",
+      "name": "抖音小说",
+      "host": "m.douyinxs.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html; charset=utf-8",
+      "searchMode": "POST",
+      "classification": "app-incompatible-post-search",
+      "elapsedMs": 276
+    },
+    {
+      "id": "a0033c85b8f69b8d",
+      "name": "恩施轻语（优+）",
+      "host": "www.esjzone.one",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html; charset=utf-8",
+      "searchMode": "no-form",
+      "classification": "needs-manual-search-discovery",
+      "elapsedMs": 1671
+    },
+    {
+      "id": "88a7aa390073497b",
+      "name": "饭饭小说[挂梯]",
+      "host": "www.ffxs8.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html",
+      "searchMode": "POST",
+      "classification": "app-incompatible-post-search",
+      "elapsedMs": 249
+    },
+    {
+      "id": "80cd038ab8aefef2",
+      "name": "飞卢小说",
+      "host": "b.faloo.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html; charset=gb2312",
+      "searchMode": "no-form",
+      "classification": "needs-manual-search-discovery",
+      "elapsedMs": 1125
+    },
+    {
+      "id": "c1ef602a008084cf",
+      "name": "飞卢小说",
+      "host": "wap.faloo.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html; charset=gb2312",
+      "searchMode": "no-form",
+      "classification": "needs-manual-search-discovery",
+      "elapsedMs": 1186
+    },
+    {
+      "id": "6a1747db0552391d",
+      "name": "疯读小说（优++）",
+      "host": "fiction.fengduxiaoshuo.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html",
+      "searchMode": "no-form",
+      "classification": "needs-manual-search-discovery",
+      "elapsedMs": 1855
+    },
+    {
+      "id": "14e8e69fffb1ff7f",
+      "name": "格格党",
+      "host": "www.rdqsdy.net",
+      "classification": "request-error-or-redirect",
+      "error": "TypeError: fetch failed",
+      "elapsedMs": 341
+    },
+    {
+      "id": "11d48a02e563e8cc",
+      "name": "果露小说",
+      "host": "www.guolu78.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html",
+      "searchMode": "POST",
+      "classification": "app-incompatible-post-search",
+      "elapsedMs": 318
+    },
+    {
+      "id": "7481fcd2a32a16d9",
+      "name": "花生小说（优）",
+      "host": "api.wan123x.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html; charset=UTF-8",
+      "searchMode": "no-form",
+      "classification": "needs-manual-search-discovery",
+      "elapsedMs": 820
+    },
+    {
+      "id": "d998abbc3c9cead0",
+      "name": "华龙文学🎃",
+      "host": "m.hltxt.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html; charset=utf-8",
+      "searchMode": "POST",
+      "classification": "app-incompatible-post-search",
+      "elapsedMs": 154
+    },
+    {
+      "id": "c8bd090a5e373499",
+      "name": "话本小说（优++）",
+      "host": "www.ihuaben.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html; charset=utf-8",
+      "searchMode": "GET",
+      "searchUrl": "https://so.ihuaben.com/search?keyword=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+      "searchStatus": 200,
+      "searchContentType": "text/html;charset=UTF-8",
+      "charsetOk": true,
+      "isHtml": true,
+      "containsKeyword": false,
+      "linkCount": 34,
+      "linkSamples": [
+        {
+          "text": "[搜索]",
+          "href": "//www.ihuaben.com/search.html"
+        },
+        {
+          "text": "[菜单]",
+          "href": "#"
+        },
+        {
+          "text": "首页",
+          "href": "//www.ihuaben.com/"
+        },
+        {
+          "text": "角色广场",
+          "href": "//www.ihuaben.com/web-next/characters/home"
+        },
+        {
+          "text": "分类",
+          "href": "//www.ihuaben.com/tongren/"
+        },
+        {
+          "text": "收藏",
+          "href": "//user.ihuaben.com/bookShelf/list"
+        },
+        {
+          "text": "写作",
+          "href": "//author.ihuaben.com/"
+        },
+        {
+          "text": "我的",
+          "href": "//user.ihuaben.com/"
+        }
+      ],
+      "bodySample": "[搜索] [菜单] 首页 角色广场 分类 收藏 写作 我的 书架 登录 写作福利 写作后台 首页 分类 角色广场 手机版 没有搜索到相关内容 var _hmt = _hmt || []; (function () { var hm = document.createElement(\"script\"); hm.src = \"https://hm.baidu.com/hm.js?68eed4dba6a26437fc4464324625058c\"; var s = document.getElementsByTagName(\"script\")[0]; s.parentNode.insertBefore(hm, s); })(); 作者福利 | 签约标准 诚聘英才 关于我们 联系我们 举报专区 帮助中心 网编专区 下载客户端 关注微博 QQ群：437266680 下载客户端 关注微博 QQ群：437266680 津ICP备2022002164号-2 © 2016-2023 iHuaBen.com 版权保护声明 不良信息举报:tousu@liangzishidai.cn 举报电话:0772-2994948 津ICP备2022002164号 京网文5644-442号 增值电信业务经营许可证编号:京B2-20201692 京公网安备11010502036362号 北京市朝阳区东方梅地亚中心C座2809室",
+      "classification": "get-search-no-keyword-hit",
+      "elapsedMs": 1157
+    },
+    {
+      "id": "7a2f96a80518a76b",
+      "name": "金庸小说（优）",
+      "host": "www.jinyongwang.net",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html; charset=utf-8",
+      "searchMode": "no-form",
+      "classification": "needs-manual-search-discovery",
+      "elapsedMs": 788
+    },
+    {
+      "id": "8194935bc7a9f179",
+      "name": "经典书库 jingdianbook.com",
+      "host": "www.jingdianbook.com",
+      "classification": "request-error-or-redirect",
+      "error": "TimeoutError: The operation was aborted due to timeout",
+      "elapsedMs": 10001
+    },
+    {
+      "id": "d33f6f26db79cfd6",
+      "name": "精华书阁",
+      "host": "wap.jhssd.com",
+      "classification": "request-error-or-redirect",
+      "error": "TypeError: fetch failed",
+      "elapsedMs": 254
+    },
+    {
+      "id": "56bf2d82e317335b",
+      "name": "精华书阁",
+      "host": "m.jhsssd.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html; charset=utf-8",
+      "searchMode": "no-form",
+      "classification": "needs-manual-search-discovery",
+      "elapsedMs": 210
+    },
+    {
+      "id": "8c3c761cbe812852",
+      "name": "精华书阁",
+      "host": "m.jhssd.com",
+      "classification": "request-error-or-redirect",
+      "error": "TypeError: fetch failed",
+      "elapsedMs": 169
+    },
+    {
+      "id": "cd62b42432b2e7d8",
+      "name": "精华书阁",
+      "host": "www.jhssd.com",
+      "classification": "request-error-or-redirect",
+      "error": "TypeError: fetch failed",
+      "elapsedMs": 205
+    },
+    {
+      "id": "5dacc68e27d95a96",
+      "name": "精品小说（优）",
+      "host": "jpxs123.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html",
+      "searchMode": "POST",
+      "classification": "app-incompatible-post-search",
+      "elapsedMs": 160
+    },
+    {
+      "id": "a1cf2af43a1cdd62",
+      "name": "看书",
+      "host": "uukanshu.cc",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html; charset=UTF-8",
+      "searchMode": "POST",
+      "classification": "app-incompatible-post-search",
+      "elapsedMs": 119
+    },
+    {
+      "id": "8bd3b80f3e89363e",
+      "name": "酷匠网吧（优+）",
+      "host": "app.kujiang.com",
+      "classification": "request-error-or-redirect",
+      "error": "TypeError: fetch failed",
+      "elapsedMs": 894
+    },
+    {
+      "id": "246a63890456961b",
+      "name": "连城读书",
+      "host": "www.lcread.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html",
+      "searchMode": "GET",
+      "searchUrl": "https://www.lcread.com/?dowhat=query&kw=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86&type=",
+      "searchStatus": 200,
+      "searchContentType": "text/html",
+      "charsetOk": true,
+      "isHtml": true,
+      "containsKeyword": false,
+      "linkCount": 50,
+      "linkSamples": [
+        {
+          "text": "lcdudu.com",
+          "href": "https://www.lcdudu.com"
+        },
+        {
+          "text": "С˵",
+          "href": "https://lcread.com/"
+        },
+        {
+          "text": "��������",
+          "href": "https://my.lc1001.com/booklist/m"
+        },
+        {
+          "text": "���Ҹ���",
+          "href": "http://h5.lc1001.com/h5_html/zuojiafulipc.html"
+        },
+        {
+          "text": "ŮƵ",
+          "href": "http://xizi.lc1001.com/"
+        },
+        {
+          "text": "��Ƶ",
+          "href": "http://yy.lc1001.com"
+        },
+        {
+          "text": "�ഺС˵",
+          "href": "https://lcread.com/book/library.html?yy=book_img&prefer=20&bt=4&vip=0&state=0&word=0&quality=0&updays=0&rank=renqi&pn=0&lc_html="
+        },
+        {
+          "text": "����С˵",
+          "href": "https://lcread.com/book/library.html?yy=book_img&prefer=20&bt=3&vip=0&state=0&word=0&quality=0&updays=0&rank=renqi&pn=0&lc_html="
+        }
+      ],
+      "bodySample": "������ַ lcdudu.com var urlA= window.location.href; if(urlA==\"http://www.lcread.com/\" | urlA==\"http://www.lcread.com\" | urlA==\"http://lcread.com/\" | urlA==\"http://lcread.com\" | urlA==\"http://m.lcread.com/\" | urlA==\"http://m.lcread.com\"){ window.location.replace(\"https://lcread.com/\"); } function SetCookie(cookieName, cookieValue, nDays){ var today = new Date(); var expire = new Date(); if (nDays==null || nDays==0) nDays=1; expire.setTime(today.getTime() + 3600000*24*nDays); document.cookie = cookieName+\"=\"+escape(cookieValue) + \";path=/;expires=\"+expire.toGMTString(); } function getCookieVal (offset) { var endstr = document.cookie.indexOf (\";\", offset); if (endstr == -1) endstr = document.cookie.length; return unescape(document.cookie.substring(offset, endstr)); } function GetCookie (name) { var key = name + \"=\"; var klen = key.length; var clen = document.cookie.length; var i = 0; while (",
+      "classification": "get-search-no-keyword-hit",
+      "elapsedMs": 262
+    },
+    {
+      "id": "f7309c3bde0323b1",
+      "name": "露露书",
+      "host": "m.lulushu123.net",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html; charset=UTF-8",
+      "searchMode": "no-form",
+      "classification": "needs-manual-search-discovery",
+      "elapsedMs": 88
+    },
+    {
+      "id": "293070e3f5ffa019",
+      "name": "落霞小说",
+      "host": "www.luoxia.com",
+      "classification": "request-error-or-redirect",
+      "error": "TypeError: fetch failed",
+      "elapsedMs": 139
+    },
+    {
+      "id": "9599cfba82b4700f",
+      "name": "蚂蚁文学网",
+      "host": "m.myxzm.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html; charset=utf-8",
+      "searchMode": "GET",
+      "searchUrl": "https://m.myxzm.com/search/?q=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+      "searchStatus": 200,
+      "searchContentType": "text/html; charset=utf-8",
+      "charsetOk": true,
+      "isHtml": true,
+      "containsKeyword": true,
+      "linkCount": 50,
+      "linkSamples": [
+        {
+          "text": "历史记录",
+          "href": "/user/history"
+        },
+        {
+          "text": "我的收藏",
+          "href": "/user/favorite"
+        },
+        {
+          "text": "登录",
+          "href": "/user/login"
+        },
+        {
+          "text": "注册",
+          "href": "/user/register"
+        },
+        {
+          "text": "张三",
+          "href": "/user"
+        },
+        {
+          "text": "历史记录",
+          "href": "/user/history"
+        },
+        {
+          "text": "我的收藏",
+          "href": "/user/favorite"
+        },
+        {
+          "text": "退出",
+          "href": "javascript:void(0)"
+        }
+      ],
+      "bodySample": "历史记录 | 我的收藏 | 登录 | 注册 欢迎您， 张三 | 历史记录 | 我的收藏 | 退出 首页 最近更新 韩国漫画 日本漫画 大陆漫画 欧美漫画 港台漫画 小编推荐 蚂蚁漫画 排行榜 完本漫画 关于“斗罗大陆”的搜索结果 共检索到 22 条记录 完结 第5节 斗罗大陆3龙王传说漫画免费阅读 作者：峰仓和也 完结 第4节 斗罗大陆3龙王传说漫画 作者：高桥和希 完结 第55节 斗罗大陆漫画免费观看完整版下拉式 作者：陈岗 完结 第48节 6漫画免费下拉式六漫画斗罗大陆 作者：岛本和彦 完结 第56节 斗罗大陆漫画2绝世唐门漫画 作者：伏濑 完结 第43节 斗罗大陆漫画免费下拉式6漫画 作者：顾世鸿 完结 第47节 斗罗大陆漫画完整免费观看下拉式 作者：聂峻 完结 第55节 六漫画-好看的热门漫画斗罗大陆 作者：极乐鸟 完结 第47节 斗罗大陆漫画完整免费观看下拉式6漫画 作者：英韬 完结 第43节 斗罗大陆之众女沦落笔趣阁 作者：Geof Darrow 完结 第46节 斗罗大陆(下拉式)六漫画 作者：华不魅 完结 第39节 斗罗大陆中女神的沦丧 作者：任长虹 完结 第37节 斗罗大陆漫画免费观看下拉式 作者：契克·扬 完结 第51节 斗罗大陆2黄化漫画免费阅读 作者：小树 完结 第50节 斗罗大陆漫画免费观看 作者：爱欧 完结 第50节 斗罗大陆天上人间漫画 作者：呀哆 完结 第46节 斗罗大陆漫画下拉式完整版免费 作者：曹开翔 连载 第1话 斗罗大陆 作者：穆逢春,唐家三少 完结 第49节 斗罗大陆漫画在线看下拉 作者：船户明里 连载 斗罗大陆2绝世唐门-第43话 斗罗大陆2绝世唐门 作者：唐家三少 22条 2 下一页 本站所有漫画和资讯均来自互联网收集而来，版权归原创者所有，本网站只提供web页面服务，并不提供资源存储，也不参与录制、上传 若本站收录的节目无意侵犯了贵司版权，请发邮件至123456@qq.com （我们会在3个工作日内删除侵权内容，谢谢。） © 2026 蚂蚁漫画 关于我们 版权声明 网站地图 韩国漫画 日本漫画 大陆漫画 欧美漫画 港台漫画 ",
+      "classification": "get-search-responds",
+      "elapsedMs": 2069
+    },
+    {
+      "id": "08e39830095cbf0c",
+      "name": "梦阮读书",
+      "host": "www.mengruan.com",
+      "classification": "request-error-or-redirect",
+      "error": "TypeError: fetch failed",
+      "elapsedMs": 191
+    },
+    {
+      "id": "2c25c912d673bb58",
+      "name": "免费小说阅读网",
+      "host": "www.mianfeixiaoshuoyueduwang.com",
+      "classification": "request-error-or-redirect",
+      "error": "TypeError: fetch failed",
+      "elapsedMs": 3320
+    },
+    {
+      "id": "1f0ebe2220935a88",
+      "name": "破万卷",
+      "host": "powanjuan.cc",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html",
+      "searchMode": "POST",
+      "classification": "app-incompatible-post-search",
+      "elapsedMs": 489
+    },
+    {
+      "id": "b66cc218562d002f",
+      "name": "球球览器",
+      "host": "so.html5.qq.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html; charset=utf-8",
+      "searchMode": "no-form",
+      "classification": "needs-manual-search-discovery",
+      "elapsedMs": 935
+    },
+    {
+      "id": "4356989021e2d3d1",
+      "name": "全本小说[io]",
+      "host": "www.qb5.io",
+      "classification": "request-error-or-redirect",
+      "error": "TypeError: Cannot destructure property 'firstElementChild' of 'documentElement' as it is null.",
+      "elapsedMs": 824
+    },
+    {
+      "id": "fe2560cfe5d58c6f",
+      "name": "三五中文网",
+      "host": "m.guigushi2.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html; charset=utf-8",
+      "searchMode": "POST",
+      "classification": "app-incompatible-post-search",
+      "elapsedMs": 490
+    },
+    {
+      "id": "1a65b039db7996e0",
+      "name": "书海阁小说",
+      "host": "m.shuhaige.tw",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html; charset=utf-8",
+      "searchMode": "POST",
+      "classification": "app-incompatible-post-search",
+      "elapsedMs": 568
+    },
+    {
+      "id": "5ccd92dfa54f1aca",
+      "name": "书旗小说",
+      "host": "t.shuqi.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html; charset=utf-8",
+      "searchMode": "GET",
+      "searchUrl": "https://t.shuqi.com/",
+      "searchStatus": 200,
+      "searchContentType": "text/html; charset=utf-8",
+      "charsetOk": true,
+      "isHtml": true,
+      "containsKeyword": false,
+      "linkCount": 24,
+      "linkSamples": [
+        {
+          "text": "不灭神王 观棋",
+          "href": "/book/8016707.html"
+        },
+        {
+          "text": "万世至尊 化十",
+          "href": "/book/7526800.html"
+        },
+        {
+          "text": "玄幻：从蛋开始无敌 突兀",
+          "href": "/book/8229478.html"
+        },
+        {
+          "text": "遮天记陆安是一个弃婴，准确地说是要被父亲扼杀的孩子。于古江之水漂流到最贫瘠的地方，成为了最低等的奴隶。食物，住所，还有尊严，都成为奢侈品。 于是，他身着麻衣，行走与蛮荒各处，行走于诸侯列国，行走于十五",
+          "href": "/book/7356799.html"
+        },
+        {
+          "text": "第一战神千万级销量作家我本纯洁火爆玄幻作品来袭——少年杨武遭美女陷害入狱，侥幸获神犬之助，破狱场，驰沙场，揽美人，闯凶地，扬威名，成就第一战神。 [2018阿里文学星辰奖最受读者欢迎奖作品]、[201",
+          "href": "/book/7151431.html"
+        },
+        {
+          "text": "不朽神帝【最燃玄幻】刚正少年被渣女利用，遭奸人陷害，陷入死地，拼死搏杀激活不朽神功，承侍灵之威，夺大帝传承，掌天地之势，历无尽苦难，一路不服干翻天，万敌匍匐，霸陵万古！项华爽文传统玄幻修炼玄幻霸气炼丹",
+          "href": "/book/6955077.html"
+        },
+        {
+          "text": "锦上娇重生后的琇莹发现自己原来是蒙尘的明珠，反过来成了她前世的渣男夫君的白月光，还想要再死命扒上来。 琇莹表示：当年你弃我如敝履，如今你高攀不起！ 在虐渣有仇报仇之余，琇莹想起她年轻有为的三叔父，官越",
+          "href": "/book/7211238.html"
+        },
+        {
+          "text": "重生之独宠小王妃重生前，她愚昧单纯，害死一家人。 重生后，她只想好好守护身边宠她如命的家人们。 可……招惹上神秘王爷该怎么办？在线等，挺急的。 某王爷：“渣我虐，人我打，活我干，嫁我！” 她：“你太老",
+          "href": "/book/8319085.html"
+        }
+      ],
+      "bodySample": "(function (d) { var t = d.createElement(\"script\"); t.type = \"text/javascript\"; t.id = \"beacon-aplus\"; //src的选择请参见上面的特别注意事项 t.src=\"//g.alicdn.com/alilog/mlog/aplus_wap.js\"; function track() { var custom_info = \"&web_sn=\" + getCookie('shuqi_fingerprint'); var trackParamsEl = document.getElementById('shuqi-track-exparams'); if (trackParamsEl) { t.setAttribute(\"exparams\", trackParamsEl.getAttribute('exparams') + custom_info); trackParamsEl.parentNode.removeChild(trackParamsEl); } t.async=true; t.defer=true; document.body.insertBefore(t, document.body.firstChild); } function setCookie(name, value, days) { var expires = \"\"; if (days) { var date = new Date(); date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000)); expires = \"; expires=\" + date.toUTCString(); } document.cookie = name + \"=\" + (value || \"\") + expires + \"; path=/\"; } function getCookie(name) { const value = document.cookie || ",
+      "classification": "get-search-no-keyword-hit",
+      "elapsedMs": 1194
+    },
+    {
+      "id": "ed072d089e5f9b65",
+      "name": "书斋阁",
+      "host": "www.shuzhaige.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html",
+      "searchMode": "POST",
+      "classification": "app-incompatible-post-search",
+      "elapsedMs": 195
+    },
+    {
+      "id": "557c73c1476bc710",
+      "name": "四三中文",
+      "host": "www.zw43.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html",
+      "searchMode": "no-form",
+      "classification": "needs-manual-search-discovery",
+      "elapsedMs": 116
+    },
+    {
+      "id": "ec4cd460870ce10c",
+      "name": "搜小说",
+      "host": "www.sou78.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html",
+      "searchMode": "GET",
+      "searchUrl": "https://www.sou78.com/modules/article/search.php?keywords=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86&searchkey=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86&submit=%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD",
+      "searchStatus": 200,
+      "searchContentType": "text/html",
+      "charsetOk": true,
+      "isHtml": true,
+      "containsKeyword": false,
+      "linkCount": 50,
+      "linkSamples": [
+        {
+          "text": "��ҳ",
+          "href": "/"
+        },
+        {
+          "text": "���",
+          "href": "/books"
+        },
+        {
+          "text": "�������",
+          "href": "/lastupdate"
+        },
+        {
+          "text": "����dushi",
+          "href": "https://www.sou78.com/sort_1"
+        },
+        {
+          "text": "Ũ��nongqing",
+          "href": "https://www.sou78.com/sort_2"
+        },
+        {
+          "text": "����xuanhuan",
+          "href": "https://www.sou78.com/sort_6"
+        },
+        {
+          "text": "��Խchuanyue",
+          "href": "https://www.sou78.com/sort_7"
+        },
+        {
+          "text": "����xuanyi",
+          "href": "https://www.sou78.com/sort_9"
+        }
+      ],
+      "bodySample": "����С˵������С˵�� �ֻ��� ��Ʒ���� ��ҳ ��� ������� ����dushi Ũ��nongqing ����xuanhuan ��Խchuanyue ����xuanyi ����yanqing ��Ʒjingpin �ٺ�baihe �ƻ�xuanhuan ����wuxia У԰xiaoyuan ���jingsong ����zhongtian �߸�gaogan ������� ��:0�� ҳ��:1/1ÿҳ:12 ��ҳ 1 βҳ С˵���Ѱ� NO. AV����ָ��4478670���� Ũ��· С˵����� AV����ָ�� 4478670 NO. �����������ϵͳ��np�����ģ�4221444���� ��ʷ· �uС�� �����������ϵͳ��np�����ģ� 4221444 NO. �������ͣ���H�������Զ��ϼ���4109917���� Ũ��· ������ �������ͣ���H�������Զ��ϼ��� 4109917 NO. ���ϵ�Ů��np��4109593���� Ũ��· һ������ ���ϵ�Ů��np�� 4109593 NO. ������������ġ��ж�ƪ���ĺϼ���3656758���� Ũ��· ������ ������������ġ��ж�ƪ���ĺϼ��� 3656758 NO. ���H�� ������3485942���� У԰· ���� ���H�� ������ 3485942 NO. Po18 ɨ�ļ�¼3054371���� Ũ��· ���� Po18 ɨ�ļ�¼ 3054371 NO. ȷ���飨�߸� ���2335633���� ��ʷ· ���� ȷ���飨�߸� ��� 2335633 NO. ÿ�����������ǵĴ��Σ�NPH��2305459���� ��ʷ· ��Ϧ�� ÿ�����������ǵĴ��Σ�NPH�� 2305459 NO. �ؽ���H��2",
+      "classification": "get-search-no-keyword-hit",
+      "elapsedMs": 1091
+    },
+    {
+      "id": "c280d2daa63cf42b",
+      "name": "搜小说 wap.sou78.com",
+      "host": "wap.sou78.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html",
+      "searchMode": "POST",
+      "classification": "app-incompatible-post-search",
+      "elapsedMs": 303
+    },
+    {
+      "id": "c54d0c9b461b99b6",
+      "name": "完结小说",
+      "host": "m.mddtxt.net",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html; charset=utf-8",
+      "searchMode": "no-form",
+      "classification": "needs-manual-search-discovery",
+      "elapsedMs": 191
+    },
+    {
+      "id": "83470ddacb3032bb",
+      "name": "微风小说",
+      "host": "m.wfxs.tw",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html; charset=UTF-8",
+      "searchMode": "no-form",
+      "classification": "needs-manual-search-discovery",
+      "elapsedMs": 101
+    },
+    {
+      "id": "77647b9d57aad4c6",
+      "name": "我是盐神（优+）",
+      "host": "onehu.xyz",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html; charset=utf-8",
+      "searchMode": "no-form",
+      "classification": "needs-manual-search-discovery",
+      "elapsedMs": 139
+    },
+    {
+      "id": "7a1f39a58b7aa884",
+      "name": "无影小说网",
+      "host": "www.seying.cc",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html; charset=UTF-8",
+      "searchMode": "no-form",
+      "classification": "needs-manual-search-discovery",
+      "elapsedMs": 214
+    },
+    {
+      "id": "7820ecd858e2b485",
+      "name": "乡土小说",
+      "host": "www.xiangtxsw.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html",
+      "searchMode": "POST",
+      "classification": "app-incompatible-post-search",
+      "elapsedMs": 97
+    },
+    {
+      "id": "d53ca43d6e4438af",
+      "name": "小说旗2",
+      "host": "www.xs7.com",
+      "classification": "request-error-or-redirect",
+      "error": "TypeError: fetch failed",
+      "elapsedMs": 271
+    },
+    {
+      "id": "b31eb9e4b7836038",
+      "name": "新ak小说网",
+      "host": "xakxsw.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html",
+      "searchMode": "no-form",
+      "classification": "needs-manual-search-discovery",
+      "elapsedMs": 171
+    },
+    {
+      "id": "cf926544162d4069",
+      "name": "元网小说（发现）",
+      "host": "metanetnovel.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html; charset=utf-8",
+      "searchMode": "GET",
+      "searchUrl": "https://metanetnovel.com/s?keyword=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+      "searchStatus": 200,
+      "searchContentType": "text/html; charset=utf-8",
+      "charsetOk": true,
+      "isHtml": true,
+      "containsKeyword": false,
+      "linkCount": 0,
+      "linkSamples": [],
+      "bodySample": "$.ajax({ method: \"POST\", url: \"/code\", beforeSend: function() { $(\"#tips\").text(\"验证码加载中...\") }, success: function(data) { $(\"#tips\").text(\"\") $(\"#code\").attr('src', data.Image); $(\"#cid\").val(data.CId); }, error: function() { $(\"#tips\").text(\"验证码加载失败\") } }); (function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML=\"window.__CF$cv$params={r:'a5df819dfc690da3',t:'MTc5NTI2MjEzNQ=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a5df819dfc690da3',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);\";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('ifr",
+      "classification": "get-search-no-keyword-hit",
+      "elapsedMs": 213
+    },
+    {
+      "id": "0fe14150780117de",
+      "name": "阅友小说（优+）",
+      "host": "sma.yueyouxs.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html; charset=utf-8",
+      "searchMode": "no-form",
+      "classification": "needs-manual-search-discovery",
+      "elapsedMs": 1016
+    },
+    {
+      "id": "c2630744a90229ce",
+      "name": "找故事网",
+      "host": "www.zhaogushi.cn",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html",
+      "searchMode": "POST",
+      "classification": "app-incompatible-post-search",
+      "elapsedMs": 836
+    },
+    {
+      "id": "9694f6840a859def",
+      "name": "㊣ 笔尚小说 #一程",
+      "host": "www.bsxiaoshuo.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html; charset=utf-8",
+      "searchMode": "GET",
+      "searchUrl": "https://www.bsxiaoshuo.com/s.php?sid=3&k=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+      "searchStatus": 200,
+      "searchContentType": "text/html; charset=utf-8",
+      "charsetOk": true,
+      "isHtml": true,
+      "containsKeyword": true,
+      "linkCount": 1,
+      "linkSamples": [
+        {
+          "text": "书城",
+          "href": "/"
+        }
+      ],
+      "bodySample": "书城搜索综合找书找章节找作者搜索function shou1(){ document.getElementById(\"fh\").submit(); } function shou2(id){ document.getElementById(\"ns_sid\").value=id; for(var i=0;i<=3;i++){ var o=document.getElementById(\"ns_\"+i); var c=''; if (i==id) c='c'; o.className=c; } document.getElementById(\"fh\").submit(); } 搜索书名“斗罗大陆” - 按结果自然排序抱歉，无相关作品……foot()",
+      "classification": "get-search-responds",
+      "elapsedMs": 1459
+    },
+    {
+      "id": "636dc06eeb1230ba",
+      "name": "㊣梧桐中文 1201",
+      "host": "www.wtzw.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html; charset=UTF-8",
+      "searchMode": "GET",
+      "searchUrl": "https://www.wtzw.com/",
+      "searchStatus": 200,
+      "searchContentType": "text/html; charset=UTF-8",
+      "charsetOk": true,
+      "isHtml": true,
+      "containsKeyword": false,
+      "linkCount": 50,
+      "linkSamples": [
+        {
+          "text": "免费小说就在梧桐中文网（七猫中文网）",
+          "href": "http://www.wtzw.com"
+        },
+        {
+          "text": "首页",
+          "href": "/"
+        },
+        {
+          "text": "作者专区",
+          "href": "//zuozhe.qimao.com"
+        },
+        {
+          "text": "绿色阅读平台倡议书",
+          "href": "/propose.html"
+        },
+        {
+          "text": "",
+          "href": "javascript:void(0);"
+        },
+        {
+          "text": "不限",
+          "href": "javascript:;"
+        },
+        {
+          "text": "30万以下",
+          "href": "javascript:;"
+        },
+        {
+          "text": "30万-50万",
+          "href": "javascript:;"
+        }
+      ],
+      "bodySample": "免费小说就在梧桐中文网（七猫中文网） 首页 作者专区 绿色阅读平台倡议书  作品字数 不限 30万以下 30万-50万 50万以上 更新时间 不限 3天内 7天内 30天内 是否免费 不限 免费 收费 是否完结 不限 已完结 连载中 按点击量 按总字数 最近更新 按创建时间 图文 文字 序号 书名 更新章节 作者 字数 分类 状态 最近更新 1 我的少年班 敬空军少年班的我们！VIP 卿殇 42万字 都市生活 已完结 2022-03-11 08:53 2 一个人与一座城市的故事 一座有着英雄传统的城市VIP 庐上雁 12万字 历史小说 已完结 2021-03-08 11:44 3 地星使命 地星使命VIP 未来的猫 36万字 青春校园 已完结 2022-04-26 14:19 4 扎西德勒 第130章VIP 胡说 26万字 历史小说 已完结 2022-08-19 10:58 5 意识方舟 火种(终)VIP 火箭上的蜗牛 7万字 都市生活 已完结 2022-04-30 22:36 6 城市骑手 正式编制（大结局）VIP 一叶凉秋01 45万字 都市生活 已完结 2022-03-01 14:44 7 你想要的样子我全都有 尾声VIP 山涧清秋月 43万字 青春校园 已完结 2022-04-30 23:31 8 腾格里的记忆 美好的未来VIP 白马出凉州 30万字 历史小说 已完结 2022-09-23 12:10 9 我是角 新的征程（大结局）VIP 文踪 25万字 历史传奇 已完结 2021-04-30 22:12 10 我在你身前 有缘再见VIP 九幽公子 26万字 历史小说 已完结 2021-04-29 16:02 11 居委会的“男”大妈 最具幸福感小区VIP 张宁熙 31万字 历史小说 已完结 2021-05-12 23:08 12 爱宠机密 共赴美好VIP 我不是莫神 38万字 青春校园 已完结 2022-02-28 23:44 13 嗯，吴小花是我妈！ 嗯，吴小花是我妈VIP HL寒露 13万字 都市生活 已完结 2021-12-27 09:48 14 ",
+      "classification": "get-search-no-keyword-hit",
+      "elapsedMs": 2505
+    },
+    {
+      "id": "5e22293e51ea025f",
+      "name": "逐浪网手机版",
+      "host": "m.zhulang.com",
+      "homepageStatus": 200,
+      "homepageContentType": "text/html; charset=UTF-8",
+      "searchMode": "GET",
+      "searchUrl": "https://m.zhulang.com/search/index.html?k=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86",
+      "searchStatus": 200,
+      "searchContentType": "text/html; charset=utf-8",
+      "charsetOk": true,
+      "isHtml": true,
+      "containsKeyword": false,
+      "linkCount": 14,
+      "linkSamples": [
+        {
+          "text": "",
+          "href": "javascript:void(0)"
+        },
+        {
+          "text": "",
+          "href": "https://m.zhulang.com"
+        },
+        {
+          "text": "血与骨的磨砺，踏上崛起之路：绝世帝君",
+          "href": "https://m.zhulang.com/583937/index.html"
+        },
+        {
+          "text": "世界黑暗，禁地苏醒：听鬼说故事",
+          "href": "https://m.zhulang.com/587770/index.html"
+        },
+        {
+          "text": "大陆之巅，异军突起：玄灵帝君",
+          "href": "https://m.zhulang.com/593237/index.html"
+        },
+        {
+          "text": "除魔未绝，执剑崛起：铸剑集录",
+          "href": "https://m.zhulang.com/603088/index.html"
+        },
+        {
+          "text": "旷古烁今的时代：断古纪",
+          "href": "https://m.zhulang.com/604215/index.html"
+        },
+        {
+          "text": "纵横天下：鬼谷传说",
+          "href": "https://m.zhulang.com/602354/index.html"
+        }
+      ],
+      "bodySample": "   取消  小海豚没找到结果~~ 试试别的吧！ 大家都在看 血与骨的磨砺，踏上崛起之路：绝世帝君 世界黑暗，禁地苏醒：听鬼说故事 大陆之巅，异军突起：玄灵帝君 除魔未绝，执剑崛起：铸剑集录 旷古烁今的时代：断古纪 纵横天下：鬼谷传说 悲催的穿越：史上最悲催穿越 穿越先秦时代：这儿有一个城穿 国破山河在：江南塞北 万古不灭：御琴 登录  返回顶部 $(function(){ var head = $('header.sch-hd'), ipt = head.find('input.txt'), onCls = 'sch-fcs'; ipt.on('focus',function(){ head.addClass(onCls) }) head.on('click','div .icon-cls',function(){ ipt.val('') }) .on('click','.reset',function(){ ipt.val(''); head.removeClass(onCls); }); var _height = document.body.offsetHeight; $(\".sch-showtags\").height(_height); });",
+      "classification": "get-search-no-keyword-hit",
+      "elapsedMs": 1061
+    }
+  ]
+}
