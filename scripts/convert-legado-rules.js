@@ -150,104 +150,70 @@ function parseSimpleXPath(expression) {
   let raw=String(expression||"").trim().replace(/^@xpath:/i,"");
   if(!raw.startsWith("/")) return null;
   let output="text";
-  const attr=raw.match(/\/@([\w:-]+)$/);
+  const attr=raw.match(/\/@\s*([\w:-]+)\s*$/);
   if(attr){output="attr:"+attr[1];raw=raw.slice(0,-attr[0].length);}
-  else if(/\/text\(\)$/.test(raw)) raw=raw.replace(/\/text\(\)$/,"");
-  const segments=[];
-  let axis=raw.startsWith("//")?"descendant":"child";
-  let i=raw.startsWith("//")?2:1;
-  while(i<raw.length){
-    const next=raw.indexOf("/",i);
-    const segment=raw.slice(i,next<0?raw.length:next);
-    if(!segment) return null;
-    const name=segment.match(/^([A-Za-z*][\w*-]*)/);
-    if(!name) return null;
-    let rest=segment.slice(name[1].length);
-    let css=name[1];
-    while(rest){
-      const predicate=rest.match(/^\[@([\w:-]+)\s*=\s*(['"])(.*?)\2\]/);
-      const position=rest.match(/^\[(\d+)\]/);
-      if(predicate){
-        const value=predicate[3].replace(/\\/g,"\\\\").replace(/"/g,'\\"');
-        css += "[" + predicate[1] + '="' + value + '"]';
-        rest=rest.slice(predicate[0].length);
-      }else if(position){
-        css+=":nth-of-type("+position[1]+")";
-        rest=rest.slice(position[0].length);
-      }else return null;
+  else{
+    const outputMod=raw.match(/@(html|text|allText|href|src|content)\s*$/i);
+    if(outputMod){
+      const mode=outputMod[1].toLowerCase();
+      output=mode==="alltext"?"text":mode==="href"||mode==="src"||mode==="content"?"attr:"+mode:mode;
+      raw=raw.slice(0,-outputMod[0].length);
+    }else if(/\/+(?:text|allText)\(\)\s*$/.test(raw)){
+      raw=raw.replace(/\/+(?:text|allText)\(\)\s*$/,"");
+      output="text";
     }
-    segments.push({axis,css});
-    if(next<0) break;
-    if(raw.startsWith("//",next)){axis="descendant";i=next+2;}
-    else{axis="child";i=next+1;}
   }
-  if(!segments.length) return null;
-  const query=segments.map((item,index)=>index===0?item.css:(item.axis==="descendant"?" ":" > ")+item.css).join("");
-  return {engine:"css",query,output};
-}
-function parsePutValue(raw) {
-  const value=String(raw||"").trim();
-  if(!value) return null;
-  if(/^(['"])[\s\S]*\1$/.test(value)) return {engine:"literal",value:value.slice(1,-1)};
-  if(/^-?\d+(?:\.\d+)?$/.test(value)||/^(?:true|false|null)$/i.test(value)) return {engine:"literal",value};
-  const getMatch=value.match(/^@get:([A-Za-z_$][\w$-]{0,63})$/i);
-  if(getMatch) return {engine:"get",key:getMatch[1]};
-  if(/^[A-Za-z_$][\w$-]*$/.test(value)) return {engine:"variable",name:value};
-  const fallback=splitTopLevel(value,"||");
-  if(fallback){
-    const parts=fallback.map(parsePutValue);
-    return parts.every(Boolean)?{engine:"composite",operator:"fallback",parts}:null;
+  if(raw==="/"||raw==="") raw="//*";
+  const steps=[];
+  let i=0;
+  let axis=raw.startsWith("//")?"descendant":"child";
+  i=raw.startsWith("//")?2:1;
+  while(i<raw.length){
+    const start=i;
+    let bracketDepth=0,quote=null;
+    while(i<raw.length){
+      const ch=raw[i];
+      if(quote){if(ch===quote) quote=null;i++;continue;}
+      if(ch==="'"||ch==='"'){quote=ch;i++;continue;}
+      if(ch==="["){bracketDepth++;i++;continue;}
+      if(ch==="]"&&bracketDepth>0){bracketDepth--;i++;continue;}
+      if(ch==="/"&&bracketDepth===0) break;
+      i++;
+    }
+    const segment=raw.slice(start,i).trim();
+    if(!segment) return null;
+    let stepAxis=axis,tag="*",rest=segment;
+    if(rest===".."){stepAxis="parent";rest="";}
+    else if(rest.startsWith("following-sibling::")){stepAxis="followingSibling";rest=rest.slice(18);}
+    else if(rest.startsWith("preceding-sibling::")){stepAxis="precedingSibling";rest=rest.slice(19);}
+    else{
+      const name=rest.match(/^([A-Za-z*][\w*-]*)/);
+      if(!name) return null;
+      tag=name[1];
+      rest=rest.slice(name[1].length);
+    }
+    const filters=[];
+    while(rest){
+      const predicate=rest.match(/^\[([^\]]+)\]/);
+      if(!predicate) return null;
+      const value=predicate[1].trim();
+      const attrFilter=value.match(/^@([\w:-]+)\s*=\s*(['"])(.*?)\2$/);
+      const textFilter=value.match(/^text\(\)\s*=\s*(['"])(.*?)\1$/);
+      const position=value.match(/^(\d+)$/);
+      if(attrFilter) filters.push({kind:"attributeEquals",name:attrFilter[1],value:attrFilter[3]});
+      else if(textFilter) filters.push({kind:"textEquals",value:textFilter[2]});
+      else if(position) filters.push({kind:"position",index:Number(position[1])});
+      else if(/^last\(\)$/i.test(value)) filters.push({kind:"last"});
+      else if(/^[A-Za-z][\w-]*$/.test(value)) filters.push({kind:"childExists",tag:value});
+      else return null;
+      rest=rest.slice(predicate[0].length);
+    }
+    steps.push({axis:stepAxis,tag,filters});
+    if(i>=raw.length) break;
+    if(raw.startsWith("//",i)){axis="descendant";i+=2;}
+    else{axis="child";i++;}
   }
-  const concat=splitTopLevel(value,"&&");
-  if(concat){
-    const parts=concat.map(parsePutValue);
-    return parts.every(Boolean)?{engine:"composite",operator:"concat",parts}:null;
-  }
-  const parsed=parseLegacyChain(value);
-  return parsed.status==="candidate"?parsed.selector:null;
-}
-function parsePutAssignments(raw) {
-  const entries=splitTopLevel(String(raw||""),",")||[String(raw||"").trim()];
-  if(!entries||!entries.length||entries.length>32) return null;
-  const assignments=[];
-  for(const entry of entries){
-    const colon=entry.indexOf(":");
-    if(colon<1) return null;
-    const key=entry.slice(0,colon).trim();
-    const value=parsePutValue(entry.slice(colon+1));
-    if(!/^[A-Za-z_$][\w$-]{0,63}$/.test(key)||!value) return null;
-    assignments.push({key,value});
-  }
-  return assignments;
-}
-function parseTemplateExpression(raw) {
-  if(!raw.includes("{{")) return null;
-  const parts=[];
-  let cursor=0,found=false;
-  while(true){
-    const start=raw.indexOf("{{",cursor);
-    if(start<0) break;
-    const end=raw.indexOf("}}",start+2);
-    if(end<0) return {status:"manual",reason:"unclosed-template"};
-    if(start>cursor) parts.push({engine:"literal",value:raw.slice(cursor,start)});
-    const inner=raw.slice(start+2,end).trim();
-    if(!inner) return {status:"manual",reason:"empty-template-expression"};
-    const parsed=parseLegacyChain(inner);
-    if(parsed.status!=="candidate") return {status:"manual",reason:"unsupported-template-expression"};
-    parts.push(parsed.selector);
-    found=true;
-    cursor=end+2;
-  }
-  if(!found) return null;
-  if(cursor<raw.length) parts.push({engine:"literal",value:raw.slice(cursor)});
-  if(parts.length===1) return {status:"candidate",selector:parts[0]};
-  return {status:"candidate",selector:{engine:"composite",operator:"concat",parts}};
-}
-function parseCompositePart(raw) {
-  const value=String(raw||"").trim();
-  if(!value) return null;
-  if(/^[A-Za-z_$][\w$-]*$/.test(value)) return {status:"candidate",selector:{engine:"variable",name:value}};
-  return parseLegacyChain(value);
+  return steps.length?{engine:"xpath",steps,output}:null;
 }
 function parseLegacyChain(expression) {
   let raw = String(expression).trim();
