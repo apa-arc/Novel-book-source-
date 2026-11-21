@@ -20,8 +20,11 @@
     "minimumContentCharacters": 100,
     "failureHandling": "自动检测失败仅记录并告警，不得自动下架用户已确认可用的源；需人工核实是否为真实站点失效并完成修复复测后，才可调整正式订阅。",
     "recovery": "修复后重新完成两关键词搜索和详情、目录、正文四阶段测试，全部通过才重新入订阅。",
-    "noCandidates": true,
-    "importRule": "用户已确认可用的现有订阅源作为可信基线保留；新导入源必须通过规则检查和四阶段测试。"
+    "noCandidates": false,
+    "importRule": "新源满足合法来源依据、原生App格式、HTTPS域名白名单和解析器结构即可先导入；站点HTTP404/403/5xx、DNS或超时只记录为未验证状态，不阻止导入。成人、登录、付费墙、验证码和DRM依赖源排除。",
+    "existingBaselineRoutineScan": "skip-user-confirmed-10",
+    "siteAvailabilityRequiredForImport": false,
+    "http404Disposition": "import-unverified"
   },
   "sources": [
     {
