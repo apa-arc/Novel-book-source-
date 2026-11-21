@@ -2,39 +2,39 @@
   "schemaVersion": 1,
   "subscriptionId": "apa-arc-native-candidate-test",
   "name": "候选源 App 兼容测试",
-  "updatedAt": "2026-11-21T11:38:54.368Z",
+  "updatedAt": "2026-11-21T12:10:00.000Z",
   "sourceCount": 1,
   "sources": [
     {
-      "id": "bsxiaoshuo-com",
-      "name": "笔尚小说",
+      "id": "52shuku-net",
+      "name": "52书库（男频）",
       "version": "1.0.0",
-      "baseUrl": "https://www.bsxiaoshuo.com/",
+      "baseUrl": "https://www.52shuku.net/",
       "domains": [
-        "www.bsxiaoshuo.com"
+        "www.52shuku.net"
       ],
       "appConfig": {
-        "searchUrl": "https://www.bsxiaoshuo.com/s.php?sid=3&k={keyword}",
-        "bookUrl": "https://www.bsxiaoshuo.com/mulu{bookUrl}.html",
-        "chapterListUrl": "https://www.bsxiaoshuo.com/mulu/{bookId}.html",
-        "chapterUrl": "https://www.bsxiaoshuo.com/{chapterUrl}",
+        "searchUrl": "https://www.52shuku.net/so/search.php?q={keyword}&m=no&f=_all&syn=no&c=15%2C16%2C18%2C19%2C20%2C23",
+        "bookUrl": "https://www.52shuku.net/{bookUrl}",
+        "chapterListUrl": "https://www.52shuku.net/{bookUrl}",
+        "chapterUrl": "https://www.52shuku.net/{chapterUrl}",
         "htmlRules": {
           "search": {
-            "itemSelector": "#j li",
+            "itemSelector": "article.excerpt",
+            "titleSelector": "h2",
+            "urlSelector": "h2 a"
+          },
+          "detail": {
+            "titleSelector": "h1.article-title"
+          },
+          "chapters": {
+            "itemSelector": "article.article-content ul.list.clearfix li.mulu",
             "titleSelector": "a",
             "urlSelector": "a"
           },
-          "detail": {
-            "titleSelector": ".page-title"
-          },
-          "chapters": {
-            "itemSelector": "div.chapter-list ul.float-list li",
-            "titleSelector": "a.name",
-            "urlSelector": "a.name"
-          },
           "content": {
-            "contentSelector": ".page-content",
-            "titleSelector": "#nz h1"
+            "contentSelector": "article.article-content",
+            "titleSelector": "h1.article-title"
           }
         }
       }
