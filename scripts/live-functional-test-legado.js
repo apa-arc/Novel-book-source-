@@ -383,7 +383,8 @@ async function main() {
   if (!response.ok) throw new Error("secondary-upstream-http-" + response.status);
   const secondary = asArray(await response.json());
   const ordinarySubscription = JSON.parse(fs.readFileSync(path.join(ROOT, "subscription.json"), "utf8"));
-  const adultSubscription = JSON.parse(fs.readFileSync(path.join(ROOT, "adult-subscription.json"), "utf8"));
+  // Adult sources are intentionally excluded from this repository and all test matrices.
+  const adultSubscription = [];
   const seenCandidateSignatures = new Set();
   const candidates = [];
   function signature(source) { return hash(JSON.stringify(source)); }
@@ -402,8 +403,8 @@ async function main() {
   }
   ordinarySubscription.forEach((source, index) => addSubscription(source, "subscription-ordinary", index));
   adultSubscription.forEach((source, index) => addSubscription(source, "subscription-adult", index));
-  for (const source of aoaostar) addCandidate(source, "AOAOSTAR-candidate");
-  for (const source of secondary) addCandidate(source, "luanmuc-candidate");
+  for (const source of aoaostar) if (!adultSource(source)) addCandidate(source, "AOAOSTAR-candidate");
+  for (const source of secondary) if (!adultSource(source)) addCandidate(source, "luanmuc-candidate");
   const selected = candidates.filter((_, index) => index % SHARD_COUNT === SHARD_INDEX);
   const results = new Array(selected.length);
   let next = 0;
