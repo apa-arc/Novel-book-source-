@@ -53,15 +53,32 @@ try{
  assert.equal(valueTag.selector.steps[1].name,"value");
  const unknownSelector=parseLegacyChain("@xpath://div");
  assert.equal(unknownSelector.status,"candidate");
- assert.deepEqual(unknownSelector.selector,{engine:"css",query:"div",output:"text"});
+ assert.equal(unknownSelector.selector.engine,"xpath");
+ assert.deepEqual(unknownSelector.selector.steps,[{axis:"descendant",tag:"div",filters:[]}]);
  const xpathAttr=parseLegacyChain('@xpath://div[@id="book"]//a/@href');
- assert.deepEqual(xpathAttr.selector,{engine:"css",query:'div[id="book"] a',output:"attr:href"});
+ assert.deepEqual(xpathAttr.selector,{engine:"xpath",steps:[
+   {axis:"descendant",tag:"div",filters:[{kind:"attributeEquals",name:"id",value:"book"}]},
+   {axis:"descendant",tag:"a",filters:[]}
+ ],output:"attr:href"});
  const xpathText=parseLegacyChain("//span[@class='author']/text()");
- assert.deepEqual(xpathText.selector,{engine:"css",query:'span[class="author"]',output:"text"});
+ assert.equal(xpathText.selector.output,"text");
+ assert.equal(xpathText.selector.steps[0].filters[0].kind,"attributeEquals");
  const xpathPosition=parseLegacyChain("@xpath://ul/li[1]/a/@href");
  assert.equal(xpathPosition.status,"candidate");
- assert.equal(xpathPosition.selector.query,"ul > li:nth-of-type(1) > a");
+ assert.deepEqual(xpathPosition.selector.steps[1].filters,[{kind:"position",index:1}]);
  assert.equal(xpathPosition.selector.output,"attr:href");
+ const xpathTextPredicate=parseLegacyChain('//a[text()="目录"]/@href');
+ assert.equal(xpathTextPredicate.status,"candidate");
+ assert.equal(xpathTextPredicate.selector.steps[0].filters[0].kind,"textEquals");
+ const xpathSibling=parseLegacyChain("//dt[2]/following-sibling::dd/a");
+ assert.equal(xpathSibling.status,"candidate");
+ assert.equal(xpathSibling.selector.steps[1].axis,"followingSibling");
+ const xpathChildExists=parseLegacyChain("//li[span]/a");
+ assert.equal(xpathChildExists.status,"candidate");
+ assert.equal(xpathChildExists.selector.steps[0].filters[0].kind,"childExists");
+ const xpathParent=parseLegacyChain("//a/../following-sibling::li/a");
+ assert.equal(xpathParent.status,"candidate");
+ assert.equal(xpathParent.selector.steps[1].axis,"parent");
  const complexXPath=parseLegacyChain("@xpath://div[contains(@class,'book')]/a");
  assert.equal(complexXPath.status,"manual");
  const rootShorthand=parseLegacyChain("@p.0@text");
