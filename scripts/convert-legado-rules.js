@@ -220,8 +220,6 @@ function parseLegacyChain(expression) {
   if(template) return template;
   if(/^(['"])[\s\S]*\1$/.test(raw)) return {status:"candidate",selector:{engine:"literal",value:raw.slice(1,-1)}};
   if(raw.startsWith("@text:")) return {status:"candidate",selector:{engine:"literal",value:raw.slice(6)}};
-  const legacyText=raw.match(/^text\.([^@]+?)(?:@text)?$/i);
-  if(legacyText) return {status:"candidate",selector:{engine:"literal",value:legacyText[1]}};
   if(raw.startsWith("@@")) raw=raw.slice(2);
   const expressionShape=scanExpressionOperators(raw);
   if(expressionShape.operators.length || expressionShape.regexDelimiterCount>0) return {status:"manual",reason:"unsupported-compound-expression"};
