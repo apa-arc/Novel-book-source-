@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-21",
+  "note": "只用于后续站点搜索入口探测，不是正式书源，也不得直接导入订阅。优先选择普通中文小说网站；所有候选仍须许可审查及 App 四阶段实测。",
+  "candidates": [
+    {
+      "id": "hotread-mobile",
+      "name": "火星小说",
+      "baseUrl": "https://mobile.hotread.com/",
+      "searchPaths": [
+        "/storySearch/search?keyword={keyword}",
+        "/storySearch/search?searchkey={keyword}",
+        "/storySearch/search?key={keyword}",
+        "/storySearch/search?searchKey={keyword}"
+      ],
+      "discovery": "首页搜索入口指向 /storySearch/search；需确认真实 GET 参数与结果结构。"
+    },
+    {
+      "id": "luochu-mobile",
+      "name": "落初文学",
+      "baseUrl": "https://m.luochu.com/",
+      "searchPaths": [
+        "/book/search?keyword={keyword}",
+        "/book/search?searchkey={keyword}",
+        "/book/search?key={keyword}",
+        "/book/search?name={keyword}"
+      ],
+      "discovery": "首页可见“搜索书名、作者、主角”入口 /book/search。"
+    },
+    {
+      "id": "lulushu-mobile",
+      "name": "露露书",
+      "baseUrl": "https://m.lulushu123.net/",
+      "searchPaths": [
+        "/home/search?keyword={keyword}",
+        "/home/search?searchkey={keyword}",
+        "/home/search?key={keyword}",
+        "/home/search?name={keyword}"
+      ],
+      "discovery": "首页可见“快速搜索”入口 /home/search。"
+    }
+  ]
+}
