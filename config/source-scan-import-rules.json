@@ -44,7 +44,15 @@
       "titleMatchCountRecordedSeparately": true,
       "readingTestSelectsTitleMatchingKeywordWhenAvailable": true,
       "noTitleMatchDoesNotDowngradeRequestSuccess": true,
-      "unrelatedFirstResultMustNotBeUsedWhenMatchingResultExists": true
+      "unrelatedFirstResultMustNotBeUsedWhenMatchingResultExists": true,
+      "readingTestRequiresTitleMatch": true,
+      "neverFallbackToUnrelatedFirstResult": true,
+      "noTitleMatchReadingDisposition": "skip-reading-record-search-success-and-no-title-match-separately"
+    },
+    "execution": {
+      "sourceConcurrency": 1,
+      "interSourceCooldownSeconds": 1.2,
+      "reason": "reduce concurrent request interference, rate limits and false timeouts"
     }
   },
   "formalImportGate": {
@@ -168,7 +176,11 @@
         "classifyOnlyAfterFinalAttempt": true,
         "storeAttemptCount": true
       },
-      "resultRelevance": "Record total parsed results and title-matching results separately; relevance failure never overwrites request success."
+      "resultRelevance": "Record total parsed results and title-matching results separately; reading tests only use a title-matching result; if none exists, skip reading without downgrading search request success.",
+      "execution": {
+        "sourceConcurrency": 1,
+        "interSourceCooldownSeconds": 1.2
+      }
     },
     "importPolicy": "新源必须通过许可审查、App兼容校验、两个关键词搜索请求、至少一个关键词返回结果，以及详情、目录、首末章正文和文本质量测试；环境不确定的源继续复测，不进入失败删除流程；不设置候选池。"
   },
