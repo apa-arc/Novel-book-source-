@@ -47,7 +47,7 @@ async function runOne(source: NovelSource, keyword: string, mode: typeof modes[n
       const response = await mode.fetchImpl(input, init);
       let bodyPreview = "";
       try {
-        bodyPreview = (await response.clone().text()).replace(/\\s+/g, " ").slice(0, 360);
+        bodyPreview = (await response.clone().text()).replace(/\s+/g, " ").slice(0, 360);
       } catch {
         bodyPreview = "[response body unavailable]";
       }
