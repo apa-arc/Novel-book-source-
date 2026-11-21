@@ -49,9 +49,9 @@ function validateCandidate(source) {
 }
 function main() {
   const candidates = [];
-  for (const file of walk(ARTIFACTS).filter(file => /live-functional-test-passed-sources-\\d+-of-\\d+\\.json$/.test(file))) {
+  for (const file of walk(ARTIFACTS).filter(file => /live-functional-test-passed-sources-\d+-of-\d+\.json$/.test(file))) {
     const parsed = JSON.parse(fs.readFileSync(file, "utf8"));
-    const match = path.basename(file).match(/passed-sources-(\\d+)-of-(\\d+)\\.json$/);
+    const match = path.basename(file).match(/passed-sources-(\d+)-of-(\d+)\.json$/);
     if (!Array.isArray(parsed) || !match) continue;
     const reportPath = path.join(path.dirname(file), `live-functional-test-${match[1]}-of-${match[2]}.json`);
     if (!fs.existsSync(reportPath)) continue;
