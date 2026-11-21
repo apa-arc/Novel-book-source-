@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "subscriptionId": "apa-arc-novel-book-source",
   "name": "小说源",
-  "description": "普通小说统一订阅；包含当前仓库已适配的26条普通书源。",
+  "description": "普通小说统一订阅；来源发现问题后持续修复或下架",
   "repository": "https://github.com/apa-arc/Novel-book-source-",
-  "updatedAt": "2026-11-21T10:57:03.157Z",
-  "sourceCount": 26,
+  "updatedAt": "2026-11-21T12:25:45.246Z",
+  "sourceCount": 27,
   "sources": [
     {
       "id": "biquluo-la",
@@ -80,8 +80,8 @@
           },
           "chapters": {
             "itemSelector": "#content_1 a",
-            "titleSelector": ":self",
-            "urlSelector": ":self"
+            "titleSelector": "a",
+            "urlSelector": "a"
           },
           "content": {
             "contentSelector": "#booktxt",
@@ -274,6 +274,7 @@
       "domains": [
         "www.deqixs.com"
       ],
+      "categories": [],
       "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/deqi-deqixs.json",
       "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/deqi-deqixs.js",
       "appConfig": {
@@ -294,8 +295,8 @@
           },
           "chapters": {
             "itemSelector": "#list a",
-            "titleSelector": ":self",
-            "urlSelector": ":self"
+            "titleSelector": "a",
+            "urlSelector": "a"
           },
           "content": {
             "contentSelector": ".con",
@@ -316,6 +317,7 @@
       "domains": [
         "www.31xs.com"
       ],
+      "categories": [],
       "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/sanyi-31xs.json",
       "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/sanyi-31xs.js",
       "appConfig": {
@@ -340,7 +342,7 @@
             "urlSelector": "a"
           },
           "content": {
-            "contentSelector": "#content",
+            "contentSelector": "#content p",
             "titleSelector": "h1"
           }
         }
@@ -358,6 +360,7 @@
       "domains": [
         "www.00shu.la"
       ],
+      "categories": [],
       "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/lingling-00shu.json",
       "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/lingling-00shu.js",
       "appConfig": {
@@ -400,6 +403,7 @@
       "domains": [
         "wujixsw.info"
       ],
+      "categories": [],
       "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/wujixsw-info.json",
       "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/wujixsw-info.js",
       "appConfig": {
@@ -416,8 +420,7 @@
           },
           "detail": {
             "titleSelector": "h1",
-            "descriptionSelector": "meta[property='og:description']",
-            "descriptionAttribute": "content"
+            "descriptionSelector": "meta[property='og:description']"
           },
           "chapters": {
             "itemSelector": "#list dd",
@@ -443,6 +446,7 @@
       "domains": [
         "www.ysfwxc.com"
       ],
+      "categories": [],
       "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/yushufang-ysfwxc.json",
       "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/yushufang-ysfwxc.js",
       "appConfig": {
@@ -459,8 +463,7 @@
           },
           "detail": {
             "titleSelector": "h1",
-            "descriptionSelector": "meta[property='og:description']",
-            "descriptionAttribute": "content"
+            "descriptionSelector": "meta[property='og:description']"
           },
           "chapters": {
             "itemSelector": ".con dd",
@@ -486,12 +489,13 @@
       "domains": [
         "www.xbiquge.info"
       ],
+      "categories": [],
       "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/xinbiquge-info.json",
       "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/xinbiquge-info.js",
       "appConfig": {
         "searchUrl": "https://www.xbiquge.info/search.php?q={keyword}",
         "bookUrl": "https://www.xbiquge.info/{bookUrl}",
-        "chapterListUrl": "https://www.xbiquge.info/{bookPath}/index_1.html",
+        "chapterListUrl": "https://www.xbiquge.info/{bookUrl}index_1.html",
         "chapterUrl": "https://www.xbiquge.info/{chapterUrl}",
         "htmlRules": {
           "search": {
@@ -528,6 +532,7 @@
       "domains": [
         "www.17177.cc"
       ],
+      "categories": [],
       "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/biquge-17177.json",
       "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/biquge-17177.js",
       "appConfig": {
@@ -546,10 +551,7 @@
           "detail": {
             "titleSelector": "meta[property='og:novel:book_name']",
             "authorSelector": "meta[property='og:novel:author']",
-            "descriptionSelector": "meta[property='og:description']",
-            "titleAttribute": "content",
-            "authorAttribute": "content",
-            "descriptionAttribute": "content"
+            "descriptionSelector": "meta[property='og:description']"
           },
           "chapters": {
             "itemSelector": ".book_list2 li",
@@ -581,7 +583,7 @@
       "appConfig": {
         "searchUrl": "https://www.d8zw.com/search.php?q={keyword}",
         "bookUrl": "https://www.d8zw.com/{bookUrl}",
-        "chapterListUrl": "https://www.d8zw.com/{bookPath}/index_1.html",
+        "chapterListUrl": "https://www.d8zw.com/{bookUrl}index_1.html",
         "chapterUrl": "https://www.d8zw.com/{chapterUrl}",
         "htmlRules": {
           "search": {
@@ -664,7 +666,7 @@
       "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/biqubao-com.json",
       "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/biqubao-com.js",
       "appConfig": {
-        "searchUrl": "https://www.biqubao.com/search.php?keyword={keyword}&page=1",
+        "searchUrl": "https://www.biqubao.com//search.php?keyword={keyword}&page=1",
         "bookUrl": "https://www.biqubao.com/{bookUrl}",
         "chapterListUrl": "https://www.biqubao.com/{bookUrl}",
         "chapterUrl": "https://www.biqubao.com/{chapterUrl}",
@@ -706,7 +708,7 @@
       "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/zwda-com.json",
       "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/zwda-com.js",
       "appConfig": {
-        "searchUrl": "https://www.zwda.com/search.php?keyword={keyword}&page={page}",
+        "searchUrl": "https://www.zwda.com//search.php?keyword={keyword}&page={page}",
         "bookUrl": "https://www.zwda.com/{bookUrl}",
         "chapterListUrl": "https://www.zwda.com/{bookUrl}",
         "chapterUrl": "https://www.zwda.com/{chapterUrl}",
@@ -748,7 +750,7 @@
       "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/yb3-cc.json",
       "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/yb3-cc.js",
       "appConfig": {
-        "searchUrl": "https://www.yb3.cc/search.php?keyword={keyword}&page={page}",
+        "searchUrl": "https://www.yb3.cc//search.php?keyword={keyword}&page={page}",
         "bookUrl": "https://www.yb3.cc/{bookUrl}",
         "chapterListUrl": "https://www.yb3.cc/{bookUrl}",
         "chapterUrl": "https://www.yb3.cc/{chapterUrl}",
@@ -790,7 +792,7 @@
       "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/biquwu-cc.json",
       "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/biquwu-cc.js",
       "appConfig": {
-        "searchUrl": "https://www.biquwu.cc/search.php?keyword={keyword}&page={page}",
+        "searchUrl": "https://www.biquwu.cc//search.php?keyword={keyword}&page={page}",
         "bookUrl": "https://www.biquwu.cc/{bookUrl}",
         "chapterListUrl": "https://www.biquwu.cc/{bookUrl}",
         "chapterUrl": "https://www.biquwu.cc/{chapterUrl}",
@@ -832,7 +834,7 @@
       "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/liewen-cc.json",
       "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/liewen-cc.js",
       "appConfig": {
-        "searchUrl": "https://www.liewen.cc/search.php?keyword={keyword}&page={page}",
+        "searchUrl": "https://www.liewen.cc//search.php?keyword={keyword}&page={page}",
         "bookUrl": "https://www.liewen.cc/{bookUrl}",
         "chapterListUrl": "https://www.liewen.cc/{bookUrl}",
         "chapterUrl": "https://www.liewen.cc/{chapterUrl}",
@@ -1112,6 +1114,48 @@
       },
       "testOnly": true,
       "testOnlyReason": "已转换公开上游 GET/CSS 规则；站点近期仍有更新作品，尚未完成 AppleNovelApp 宿主四阶段复测。"
+    },
+    {
+      "id": "52shuku-net",
+      "name": "52书库（男频武侠）",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "GET 搜索、详情与分页正文已通过 AppleNovelApp 原生运行时双关键词测试。搜索仅匹配武侠分类结果；目录按站点分页页面呈现。",
+      "baseUrl": "https://www.52shuku.net/",
+      "domains": [
+        "www.52shuku.net"
+      ],
+      "categories": [
+        "男频",
+        "武侠玄幻"
+      ],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/52shuku-net.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/52shuku-net.js",
+      "appConfig": {
+        "searchUrl": "https://www.52shuku.net/so/search.php?q={keyword}&m=no&f=_all&syn=no",
+        "bookUrl": "https://www.52shuku.net/{bookUrl}",
+        "chapterListUrl": "https://www.52shuku.net/{bookUrl}",
+        "chapterUrl": "https://www.52shuku.net/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": "article.excerpt a[href*=\"/wuxia/\"]",
+            "titleSelector": ":self",
+            "urlSelector": ":self"
+          },
+          "detail": {
+            "titleSelector": "h1.article-title"
+          },
+          "chapters": {
+            "itemSelector": "ul.list.clearfix li.mulu",
+            "titleSelector": "a",
+            "urlSelector": "a"
+          },
+          "content": {
+            "contentSelector": "article.article-content",
+            "titleSelector": "h1.article-title"
+          }
+        }
+      }
     }
   ]
 }
