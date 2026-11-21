@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "subscriptionId": "apa-arc-native-candidate-test",
   "name": "候选源 App 兼容测试",
-  "updatedAt": "2026-11-21T11:36:12.113Z",
+  "updatedAt": "2026-11-21T11:37:22.575Z",
   "sourceCount": 1,
   "sources": [
     {
@@ -16,7 +16,7 @@
       "appConfig": {
         "searchUrl": "https://www.bsxiaoshuo.com/s.php?sid=3&k={keyword}",
         "bookUrl": "https://www.bsxiaoshuo.com/mulu{bookUrl}.html",
-        "chapterListUrl": "https://www.bsxiaoshuo.com/mulu{bookUrl}.html",
+        "chapterListUrl": "https://www.bsxiaoshuo.com/mulu/{bookId}.html",
         "chapterUrl": "https://www.bsxiaoshuo.com/{chapterUrl}",
         "htmlRules": {
           "search": {
