@@ -150,6 +150,13 @@ function executeSelector(root,selector){
       }
       return "";
     }
+    if(selector.operator==="zip"){
+      const lists=values.map(value=>Array.isArray(value)?value:(value==null||value===""?[]:[value]));
+      const max=lists.reduce((count,list)=>Math.max(count,list.length),0);
+      const output=[];
+      for(let index=0;index<max;index++) for(const list of lists) if(index<list.length) output.push(list[index]);
+      return output;
+    }
     throw new Error("unsupported-composite-operator");
   }
   if(selector.engine==="replace"){
@@ -159,7 +166,7 @@ function executeSelector(root,selector){
     const value=Array.isArray(input)?input.join(""):String(input==null?"":input);
     if(value.length>200000) throw new Error("regex-input-limit");
     let regex;
-    try{regex=new RegExp(selector.pattern,"gu");}catch{throw new Error("invalid-regex-transform");}
+    try{regex=new RegExp(selector.pattern,selector.replaceFirst?"u":"gu");}catch{throw new Error("invalid-regex-transform");}
     return value.replace(regex,selector.replacement);
   }
   if(selector.engine==="self") return readOutput(root, selector.output || "text");
