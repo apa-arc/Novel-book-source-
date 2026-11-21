@@ -6,7 +6,7 @@ import { fetchNovelDetail, fetchNovelChapterList, fetchNovelChapterContent } fro
 import type { NovelSource } from "../app/src/source.ts";
 import { classifyAppSearchError } from "./app-runtime-classification.ts";
 
-const keywords = ["斗罗大陆", "斗破苍穹"];
+const keywords = ["斗罗", "斗破"];
 const healthSubscriptionPath = fs.existsSync("config/health-check-subscription.json") ? "config/health-check-subscription.json" : "subscription.json";
 const raw = fs.readFileSync(healthSubscriptionPath, "utf8");
 const subscription = JSON.parse(raw);
