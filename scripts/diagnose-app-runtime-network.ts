@@ -72,6 +72,7 @@ async function mapLimit<T, R>(items: T[], limit: number, fn: (item: T) => Promis
       const index = next++;
       if (index >= items.length) return;
       output[index] = await fn(items[index]);
+      await new Promise((resolve) => setTimeout(resolve, 1200));
     }
   }));
   return output;
@@ -84,7 +85,7 @@ async function mapLimit<T, R>(items: T[], limit: number, fn: (item: T) => Promis
     return { ...item, id: item.remoteId, enabled: true, importedAt: Date.now() } as unknown as NovelSource;
   });
   const jobs = sources.flatMap((source) => keywords.flatMap((keyword) => modes.map((mode) => ({ source, keyword, mode }))));
-  const results = await mapLimit(jobs, 3, ({ source, keyword, mode }) => runOne(source, keyword, mode));
+  const results = await mapLimit(jobs, 1, ({ source, keyword, mode }) => runOne(source, keyword, mode));
   fs.mkdirSync("reports", { recursive: true });
   fs.writeFileSync("reports/app-runtime-network-diagnostics.json", JSON.stringify({
     generatedAt: new Date().toISOString(),
