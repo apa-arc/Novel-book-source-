@@ -14,8 +14,8 @@ const review = {
 const reports = [{
   generatedAt: "2026-11-22T00:00:00.000Z",
   offset: 0,
-  totalUniqueCandidates: 1,
-  candidateCount: 1,
+  totalUniqueCandidates: 2,
+  candidateCount: 2,
   results: [{
     id: "normal-www",
     name: "普通书源",
@@ -29,6 +29,19 @@ const reports = [{
     sampledChapters: 1,
     quality: { clean: 1 },
     reasons: []
+  }, {
+    id: "adult",
+    name: "成人书源",
+    domain: "adult.example",
+    status: "manual-review",
+    homepage: true,
+    robotsChecked: true,
+    robotsStatus: "ok",
+    sitemapFound: false,
+    chapterPagesFound: 0,
+    sampledChapters: 0,
+    quality: null,
+    reasons: ["no-chapter-link-in-homepage-or-public-sitemap"]
   }]
 }];
 const licenseReview = {
@@ -44,9 +57,11 @@ const assessment = buildCandidateAssessment(review, reports, undefined, licenseR
 assert.equal(assessment.totals.sourceRecords, 4);
 assert.equal(assessment.totals.uniqueDomains, 3);
 assert.equal(assessment.totals.duplicateSourceRecords, 1);
-assert.equal(assessment.totals.eligibleUniqueDomains, 1);
-assert.equal(assessment.totals.scannedUniqueDomains, 1);
-assert.equal(assessment.totals.adultExcludedSourceRecords, 1);
+assert.equal(assessment.totals.eligibleUniqueDomains, 2);
+assert.equal(assessment.totals.scannedUniqueDomains, 2);
+assert.equal(assessment.totals.adultCategorySourceRecords, 1);
+assert.equal(assessment.totals.adultExcludedSourceRecords, 0);
+assert.equal(assessment.totals.adultOnlyDomains, 1);
 assert.equal(assessment.totals.nonNovelExcludedSourceRecords, 1);
 assert.equal(assessment.totals.nonNovelOnlyDomains, 1);
 assert.equal(assessment.totals.readyForSubscription, 0);
@@ -62,8 +77,9 @@ assert.equal(assessment.sources[2].redistributionStatus, "not-approved-unverifie
 assert.equal(assessment.licenseReviewSummary.sourceRecordsReviewed, 4);
 assert.equal(assessment.licenseReviewSummary.manualSiteReviewDomains, 1);
 assert.equal(assessment.licenseReviewSummary.redistributionApprovedRecords, 0);
-assert.equal(assessment.sources[2].accessibilityStatus, "excluded-adult-policy");
-assert.equal(assessment.sources[2].chapterSampleStatus, "not-run-adult-excluded");
+assert.equal(assessment.sources[2].accessibilityStatus, "manual-review");
+assert.equal(assessment.sources[2].chapterSampleStatus, "manual-review");
+assert.equal(assessment.sources[2].technicalStatus, "not-adapted");
 assert.equal(assessment.sources[3].accessibilityStatus, "excluded-non-novel-category");
 assert.equal(assessment.sources[3].technicalStatus, "excluded-non-novel-category");
 assert.throws(() => buildCandidateAssessment(review, []), /没有找到/);

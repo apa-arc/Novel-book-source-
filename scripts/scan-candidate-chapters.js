@@ -2,7 +2,6 @@
 const { scanArticles } = require("../runtime/text-quality");
 const CHAPTER_URL = /(?:chapter|chapters|read|book|novel|content|\/(?:\d{1,}|[a-z0-9_-]+\/\d+)(?:[/.?]|$)|第[零〇一二三四五六七八九十百千万\d]+[章节回])/i;
 const CHAPTER_TEXT = /(?:第[零〇一二三四五六七八九十百千万\d]+章|正文|阅读|继续阅读|chapter)/i;
-const ADULT = /(?:色情|成人|情色|淫|18\+|18禁|r[-_ ]?18|🔞|adult)/i;
 const NON_NOVEL = /(?:漫画|动漫|音乐|有声|听书|视频)/i;
 const SCANNER_UA = "NovelSourceQualityScanner/1.2";
 function hostAliases(host) {
@@ -104,7 +103,7 @@ async function scanOne(c,fetchImpl){
  }catch(e){r.status="unreachable-or-blocked";r.reasons.push(String(e.message||e).slice(0,120));return r;}
 }
 async function scanCandidates({candidates,fetchImpl=fetch,limit=100,offset=0}){
- const unique=[],hostsSeen=new Set();for(const c of candidates||[]){if(!c?.baseUrl||ADULT.test(String(c.group||"")+" "+String(c.name||""))||NON_NOVEL.test(String(c.group||"")+" "+String(c.name||"")))continue;let h;try{h=new URL(c.baseUrl).hostname.toLowerCase();}catch{continue;}
+ const unique=[],hostsSeen=new Set();for(const c of candidates||[]){if(!c?.baseUrl||NON_NOVEL.test(String(c.group||"")+" "+String(c.name||"")))continue;let h;try{h=new URL(c.baseUrl).hostname.toLowerCase();}catch{continue;}
  const aliases=hostAliases(h);const key=[...aliases].sort().join("|");if(hostsSeen.has(key))continue;hostsSeen.add(key);unique.push(c);}
  const start=Math.max(0,Number(offset)||0),size=Math.max(1,Math.min(100,Number(limit)||100));const chosen=unique.slice(start,start+size);
  const results=[];for(const c of chosen)results.push(await scanOne(c,fetchImpl));const counts={};for(const r of results)counts[r.status]=(counts[r.status]||0)+1;
