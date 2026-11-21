@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T17:28:15.714Z",
+  "generatedAt": "2026-11-21T17:43:06.514Z",
   "testStandard": "AppleNovelApp search semantics + separately reported reading stages; each search retries up to 3 times; transient Node network errors are environment-inconclusive; title relevance is separate from request success; reading tests only use title-matching results; sources run sequentially with 1.2s cooldown",
   "keywords": [
     "斗罗",
@@ -9,9 +9,9 @@
     "total": 10,
     "appCompatible": 10,
     "appUnsupported": 0,
-    "readableBoth": 6,
+    "readableBoth": 4,
     "readableOne": 1,
-    "searchOrCatalogOnly": 1,
+    "searchOrCatalogOnly": 3,
     "environmentInconclusive": 2,
     "failed": 0,
     "searchPassed": 16,
@@ -22,7 +22,7 @@
     "searchHasResultsButNoTitleMatch": 1,
     "readingSkippedForNoTitleMatch": 1,
     "searchRetriesUsed": 4,
-    "chapterContentPassed": 13
+    "chapterContentPassed": 9
   },
   "results": [
     {
@@ -172,13 +172,13 @@
     {
       "id": "xinbiquge-info",
       "name": "新笔趣阁小说网",
-      "status": "readable-both",
+      "status": "search-or-catalog-only",
       "terms": {
         "斗罗": {
           "keyword": "斗罗",
-          "status": "readable",
+          "status": "search-only",
           "searchStatus": "passed",
-          "readingStatus": "readable",
+          "readingStatus": "catalog-failed",
           "stages": [
             {
               "stage": "搜索",
@@ -187,31 +187,32 @@
             },
             {
               "stage": "目录",
-              "status": "passed",
-              "detail": "获取 100 章；首章「第一章 弑神剑」"
+              "status": "failed",
+              "detail": "书源服务器返回 HTTP 502。"
             },
             {
-              "stage": "详情（可选）",
-              "status": "passed",
-              "detail": "详情页读取成功：从斗罗开始俘获女神"
+              "stage": "详情",
+              "status": "skipped",
+              "detail": "App 阅读流程先加载目录；目录失败后不会继续详情请求"
             },
             {
               "stage": "正文",
-              "status": "passed",
-              "detail": "首章正文读取成功（653 字符）"
+              "status": "skipped",
+              "detail": "目录不可用，无法取得章节链接"
             }
           ],
           "attempts": 1,
           "resultCount": 20,
           "matchingResultCount": 20,
           "relevanceStatus": "matched",
-          "selectedTitle": "[网游]从斗罗开始俘获女神"
+          "selectedTitle": "[玄幻]斗罗之吞天帝",
+          "error": "书源服务器返回 HTTP 502。"
         },
         "斗破": {
           "keyword": "斗破",
-          "status": "readable",
+          "status": "search-only",
           "searchStatus": "passed",
-          "readingStatus": "readable",
+          "readingStatus": "catalog-failed",
           "stages": [
             {
               "stage": "搜索",
@@ -220,25 +221,26 @@
             },
             {
               "stage": "目录",
-              "status": "passed",
-              "detail": "获取 100 章；首章「第1章 纳兰嫣然爱上我」"
+              "status": "failed",
+              "detail": "书源服务器返回 HTTP 502。"
             },
             {
-              "stage": "详情（可选）",
-              "status": "passed",
-              "detail": "详情页读取成功：斗破从异火开局"
+              "stage": "详情",
+              "status": "skipped",
+              "detail": "App 阅读流程先加载目录；目录失败后不会继续详情请求"
             },
             {
               "stage": "正文",
-              "status": "passed",
-              "detail": "首章正文读取成功（1001 字符）"
+              "status": "skipped",
+              "detail": "目录不可用，无法取得章节链接"
             }
           ],
           "attempts": 1,
           "resultCount": 20,
           "matchingResultCount": 17,
           "relevanceStatus": "matched",
-          "selectedTitle": "[网游]斗破从异火开局"
+          "selectedTitle": "[网游]斗破：拍卖万倍返还，我无敌了",
+          "error": "书源服务器返回 HTTP 502。"
         }
       }
     },
@@ -294,37 +296,37 @@
             {
               "stage": "目录",
               "status": "passed",
-              "detail": "获取 100 章；首章「第1章 萧峰」"
+              "detail": "获取 66 章；首章「第一章 萧家新成员—萧薰儿」"
             },
             {
               "stage": "详情（可选）",
               "status": "passed",
-              "detail": "详情页读取成功：[网游]斗破里的鸿蒙灵宝"
+              "detail": "详情页读取成功：[网游]斗破苍穹之扶弟狂魔"
             },
             {
               "stage": "正文",
               "status": "passed",
-              "detail": "首章正文读取成功（976 字符）"
+              "detail": "首章正文读取成功（1230 字符）"
             }
           ],
           "attempts": 1,
           "resultCount": 20,
           "matchingResultCount": 17,
           "relevanceStatus": "matched",
-          "selectedTitle": "[网游]斗破里的鸿蒙灵宝"
+          "selectedTitle": "[网游]斗破苍穹之扶弟狂魔"
         }
       }
     },
     {
       "id": "d8zw-com",
       "name": "第八中文网",
-      "status": "readable-both",
+      "status": "search-or-catalog-only",
       "terms": {
         "斗罗": {
           "keyword": "斗罗",
-          "status": "readable",
+          "status": "search-only",
           "searchStatus": "passed",
-          "readingStatus": "readable",
+          "readingStatus": "catalog-failed",
           "stages": [
             {
               "stage": "搜索",
@@ -333,58 +335,60 @@
             },
             {
               "stage": "目录",
-              "status": "passed",
-              "detail": "获取 100 章；首章「第1章 神王大计恐怖如斯」"
+              "status": "failed",
+              "detail": "书源服务器返回 HTTP 502。"
             },
             {
-              "stage": "详情（可选）",
-              "status": "passed",
-              "detail": "详情页读取成功：斗罗之二周目从独孤博开始"
+              "stage": "详情",
+              "status": "skipped",
+              "detail": "App 阅读流程先加载目录；目录失败后不会继续详情请求"
             },
             {
               "stage": "正文",
-              "status": "passed",
-              "detail": "首章正文读取成功（1290 字符）"
+              "status": "skipped",
+              "detail": "目录不可用，无法取得章节链接"
             }
           ],
           "attempts": 1,
           "resultCount": 20,
           "matchingResultCount": 20,
           "relevanceStatus": "matched",
-          "selectedTitle": "[网游]斗罗之二周目从独孤博开始"
+          "selectedTitle": "[网游]我为审判神，审判斗罗十大恶人",
+          "error": "书源服务器返回 HTTP 502。"
         },
         "斗破": {
           "keyword": "斗破",
-          "status": "readable",
+          "status": "search-only",
           "searchStatus": "passed",
-          "readingStatus": "readable",
+          "readingStatus": "catalog-failed",
           "stages": [
             {
               "stage": "搜索",
               "status": "passed",
-              "detail": "App 搜索请求及解析成功；返回 20 条结果；标题匹配关键词 20 条；尝试 1 次"
+              "detail": "App 搜索请求及解析成功；返回 20 条结果；标题匹配关键词 17 条；尝试 1 次"
             },
             {
               "stage": "目录",
-              "status": "passed",
-              "detail": "获取 100 章；首章「第一章 墨家墨唐」"
+              "status": "failed",
+              "detail": "书源服务器返回 HTTP 502。"
             },
             {
-              "stage": "详情（可选）",
-              "status": "passed",
-              "detail": "详情页读取成功：斗破之我有系统面板"
+              "stage": "详情",
+              "status": "skipped",
+              "detail": "App 阅读流程先加载目录；目录失败后不会继续详情请求"
             },
             {
               "stage": "正文",
-              "status": "passed",
-              "detail": "首章正文读取成功（737 字符）"
+              "status": "skipped",
+              "detail": "目录不可用，无法取得章节链接"
             }
           ],
           "attempts": 1,
           "resultCount": 20,
-          "matchingResultCount": 20,
+          "matchingResultCount": 17,
           "relevanceStatus": "matched",
-          "selectedTitle": "[玄幻]斗破之我有系统面板"
+          "selectedTitle": "[网游]斗破之这个系统喜欢被动",
+          "error": "书源服务器返回 HTTP 502。"
         }
       }
     },
@@ -450,7 +454,7 @@
             {
               "stage": "正文",
               "status": "passed",
-              "detail": "首章正文读取成功（1225 字符）"
+              "detail": "首章正文读取成功（1226 字符）"
             }
           ],
           "attempts": 1,

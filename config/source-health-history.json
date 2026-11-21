@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-21T17:28:15.714Z",
+  "updatedAt": "2026-11-21T17:43:06.514Z",
   "policy": {
     "testKeywords": [
       "斗罗",
@@ -20,9 +20,9 @@
   },
   "sources": {
     "biquluo-la": {
-      "checks": 6,
+      "checks": 7,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T17:28:15.714Z",
+      "lastCheckedAt": "2026-11-21T17:43:06.514Z",
       "lastStatus": "passed-both",
       "lastResult": {
         "id": "biquluo-la",
@@ -163,9 +163,9 @@
       }
     },
     "jiuyi-91zww": {
-      "checks": 6,
+      "checks": 7,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T17:28:15.714Z",
+      "lastCheckedAt": "2026-11-21T17:43:06.514Z",
       "lastStatus": "failed",
       "lastResult": {
         "id": "jiuyi-91zww",
@@ -276,9 +276,9 @@
       }
     },
     "xinbiquge-info": {
-      "checks": 6,
+      "checks": 7,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T17:28:15.714Z",
+      "lastCheckedAt": "2026-11-21T17:43:06.514Z",
       "lastStatus": "failed",
       "lastResult": {
         "id": "xinbiquge-info",
@@ -335,17 +335,17 @@
       "userConfirmedWorking": true,
       "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。",
       "sourceAvailabilityStatus": "user-confirmed-baseline",
-      "lastProbeStatus": "readable-both",
+      "lastProbeStatus": "search-or-catalog-only",
       "lastProbeResult": {
         "id": "xinbiquge-info",
         "name": "新笔趣阁小说网",
-        "status": "readable-both",
+        "status": "search-or-catalog-only",
         "terms": {
           "斗罗": {
             "keyword": "斗罗",
-            "status": "readable",
+            "status": "search-only",
             "searchStatus": "passed",
-            "readingStatus": "readable",
+            "readingStatus": "catalog-failed",
             "stages": [
               {
                 "stage": "搜索",
@@ -354,31 +354,32 @@
               },
               {
                 "stage": "目录",
-                "status": "passed",
-                "detail": "获取 100 章；首章「第一章 弑神剑」"
+                "status": "failed",
+                "detail": "书源服务器返回 HTTP 502。"
               },
               {
-                "stage": "详情（可选）",
-                "status": "passed",
-                "detail": "详情页读取成功：从斗罗开始俘获女神"
+                "stage": "详情",
+                "status": "skipped",
+                "detail": "App 阅读流程先加载目录；目录失败后不会继续详情请求"
               },
               {
                 "stage": "正文",
-                "status": "passed",
-                "detail": "首章正文读取成功（653 字符）"
+                "status": "skipped",
+                "detail": "目录不可用，无法取得章节链接"
               }
             ],
             "attempts": 1,
             "resultCount": 20,
             "matchingResultCount": 20,
             "relevanceStatus": "matched",
-            "selectedTitle": "[网游]从斗罗开始俘获女神"
+            "selectedTitle": "[玄幻]斗罗之吞天帝",
+            "error": "书源服务器返回 HTTP 502。"
           },
           "斗破": {
             "keyword": "斗破",
-            "status": "readable",
+            "status": "search-only",
             "searchStatus": "passed",
-            "readingStatus": "readable",
+            "readingStatus": "catalog-failed",
             "stages": [
               {
                 "stage": "搜索",
@@ -387,33 +388,34 @@
               },
               {
                 "stage": "目录",
-                "status": "passed",
-                "detail": "获取 100 章；首章「第1章 纳兰嫣然爱上我」"
+                "status": "failed",
+                "detail": "书源服务器返回 HTTP 502。"
               },
               {
-                "stage": "详情（可选）",
-                "status": "passed",
-                "detail": "详情页读取成功：斗破从异火开局"
+                "stage": "详情",
+                "status": "skipped",
+                "detail": "App 阅读流程先加载目录；目录失败后不会继续详情请求"
               },
               {
                 "stage": "正文",
-                "status": "passed",
-                "detail": "首章正文读取成功（1001 字符）"
+                "status": "skipped",
+                "detail": "目录不可用，无法取得章节链接"
               }
             ],
             "attempts": 1,
             "resultCount": 20,
             "matchingResultCount": 17,
             "relevanceStatus": "matched",
-            "selectedTitle": "[网游]斗破从异火开局"
+            "selectedTitle": "[网游]斗破：拍卖万倍返还，我无敌了",
+            "error": "书源服务器返回 HTTP 502。"
           }
         }
       }
     },
     "biquge-17177": {
-      "checks": 6,
+      "checks": 7,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T17:28:15.714Z",
+      "lastCheckedAt": "2026-11-21T17:43:06.514Z",
       "lastStatus": "passed-both",
       "lastResult": {
         "id": "biquge-17177",
@@ -531,32 +533,32 @@
               {
                 "stage": "目录",
                 "status": "passed",
-                "detail": "获取 100 章；首章「第1章 萧峰」"
+                "detail": "获取 66 章；首章「第一章 萧家新成员—萧薰儿」"
               },
               {
                 "stage": "详情（可选）",
                 "status": "passed",
-                "detail": "详情页读取成功：[网游]斗破里的鸿蒙灵宝"
+                "detail": "详情页读取成功：[网游]斗破苍穹之扶弟狂魔"
               },
               {
                 "stage": "正文",
                 "status": "passed",
-                "detail": "首章正文读取成功（976 字符）"
+                "detail": "首章正文读取成功（1230 字符）"
               }
             ],
             "attempts": 1,
             "resultCount": 20,
             "matchingResultCount": 17,
             "relevanceStatus": "matched",
-            "selectedTitle": "[网游]斗破里的鸿蒙灵宝"
+            "selectedTitle": "[网游]斗破苍穹之扶弟狂魔"
           }
         }
       }
     },
     "d8zw-com": {
-      "checks": 6,
+      "checks": 7,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T17:28:15.714Z",
+      "lastCheckedAt": "2026-11-21T17:43:06.514Z",
       "lastStatus": "failed",
       "lastResult": {
         "id": "d8zw-com",
@@ -613,17 +615,17 @@
       "userConfirmedWorking": true,
       "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。",
       "sourceAvailabilityStatus": "user-confirmed-baseline",
-      "lastProbeStatus": "readable-both",
+      "lastProbeStatus": "search-or-catalog-only",
       "lastProbeResult": {
         "id": "d8zw-com",
         "name": "第八中文网",
-        "status": "readable-both",
+        "status": "search-or-catalog-only",
         "terms": {
           "斗罗": {
             "keyword": "斗罗",
-            "status": "readable",
+            "status": "search-only",
             "searchStatus": "passed",
-            "readingStatus": "readable",
+            "readingStatus": "catalog-failed",
             "stages": [
               {
                 "stage": "搜索",
@@ -632,66 +634,68 @@
               },
               {
                 "stage": "目录",
-                "status": "passed",
-                "detail": "获取 100 章；首章「第1章 神王大计恐怖如斯」"
+                "status": "failed",
+                "detail": "书源服务器返回 HTTP 502。"
               },
               {
-                "stage": "详情（可选）",
-                "status": "passed",
-                "detail": "详情页读取成功：斗罗之二周目从独孤博开始"
+                "stage": "详情",
+                "status": "skipped",
+                "detail": "App 阅读流程先加载目录；目录失败后不会继续详情请求"
               },
               {
                 "stage": "正文",
-                "status": "passed",
-                "detail": "首章正文读取成功（1290 字符）"
+                "status": "skipped",
+                "detail": "目录不可用，无法取得章节链接"
               }
             ],
             "attempts": 1,
             "resultCount": 20,
             "matchingResultCount": 20,
             "relevanceStatus": "matched",
-            "selectedTitle": "[网游]斗罗之二周目从独孤博开始"
+            "selectedTitle": "[网游]我为审判神，审判斗罗十大恶人",
+            "error": "书源服务器返回 HTTP 502。"
           },
           "斗破": {
             "keyword": "斗破",
-            "status": "readable",
+            "status": "search-only",
             "searchStatus": "passed",
-            "readingStatus": "readable",
+            "readingStatus": "catalog-failed",
             "stages": [
               {
                 "stage": "搜索",
                 "status": "passed",
-                "detail": "App 搜索请求及解析成功；返回 20 条结果；标题匹配关键词 20 条；尝试 1 次"
+                "detail": "App 搜索请求及解析成功；返回 20 条结果；标题匹配关键词 17 条；尝试 1 次"
               },
               {
                 "stage": "目录",
-                "status": "passed",
-                "detail": "获取 100 章；首章「第一章 墨家墨唐」"
+                "status": "failed",
+                "detail": "书源服务器返回 HTTP 502。"
               },
               {
-                "stage": "详情（可选）",
-                "status": "passed",
-                "detail": "详情页读取成功：斗破之我有系统面板"
+                "stage": "详情",
+                "status": "skipped",
+                "detail": "App 阅读流程先加载目录；目录失败后不会继续详情请求"
               },
               {
                 "stage": "正文",
-                "status": "passed",
-                "detail": "首章正文读取成功（737 字符）"
+                "status": "skipped",
+                "detail": "目录不可用，无法取得章节链接"
               }
             ],
             "attempts": 1,
             "resultCount": 20,
-            "matchingResultCount": 20,
+            "matchingResultCount": 17,
             "relevanceStatus": "matched",
-            "selectedTitle": "[玄幻]斗破之我有系统面板"
+            "selectedTitle": "[网游]斗破之这个系统喜欢被动",
+            "error": "书源服务器返回 HTTP 502。"
           }
         }
       }
     },
     "bqg-info": {
-      "checks": 6,
+      "checks": 7,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T17:28:15.714Z",
+      "lastCheckedAt": "2026-11-21T17:43:06.514Z",
       "lastStatus": "passed-both",
       "lastResult": {
         "id": "bqg-info",
@@ -819,7 +823,7 @@
               {
                 "stage": "正文",
                 "status": "passed",
-                "detail": "首章正文读取成功（1225 字符）"
+                "detail": "首章正文读取成功（1226 字符）"
               }
             ],
             "attempts": 1,
@@ -832,9 +836,9 @@
       }
     },
     "xqianqian-m": {
-      "checks": 6,
+      "checks": 7,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T17:28:15.714Z",
+      "lastCheckedAt": "2026-11-21T17:43:06.514Z",
       "lastStatus": "failed",
       "lastResult": {
         "id": "xqianqian-m",
@@ -941,9 +945,9 @@
       }
     },
     "douhua-wenxue": {
-      "checks": 6,
+      "checks": 7,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T17:28:15.714Z",
+      "lastCheckedAt": "2026-11-21T17:43:06.514Z",
       "lastStatus": "failed",
       "lastResult": {
         "id": "douhua-wenxue",
@@ -1055,9 +1059,9 @@
       }
     },
     "iyueba-net": {
-      "checks": 6,
+      "checks": 7,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T17:28:15.714Z",
+      "lastCheckedAt": "2026-11-21T17:43:06.514Z",
       "lastStatus": "failed",
       "lastResult": {
         "id": "iyueba-net",
@@ -1164,9 +1168,9 @@
       }
     },
     "52shuku-net": {
-      "checks": 6,
+      "checks": 7,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T17:28:15.714Z",
+      "lastCheckedAt": "2026-11-21T17:43:06.514Z",
       "lastStatus": "passed-both",
       "lastResult": {
         "id": "52shuku-net",
