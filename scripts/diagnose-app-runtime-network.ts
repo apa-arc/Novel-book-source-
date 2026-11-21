@@ -34,7 +34,7 @@ function cleanSnippet(value: string): string {
     .slice(0, 360);
 }
 
-async function probe(source: any, keyword: string, variant: typeof variants[number]) {
+async function probe(source: any, keyword: string, variant: typeof variants[number], redirectPolicy: "manual" | "follow") {
   const url = source.appConfig.searchUrl.replace(/\{keyword\}/g, encodeURIComponent(keyword)).replace(/\{page\}/g, "1");
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 12000);
@@ -43,7 +43,7 @@ async function probe(source: any, keyword: string, variant: typeof variants[numb
       method: "GET",
       headers: variant.headers,
       credentials: "omit",
-      redirect: "error",
+      redirect: redirectPolicy,
       signal: controller.signal,
     });
     const body = await response.text();
@@ -52,8 +52,10 @@ async function probe(source: any, keyword: string, variant: typeof variants[numb
       id: source.id,
       keyword,
       variant: variant.name,
+      redirectPolicy,
       requestUrl: url,
       status: response.status,
+      location: response.headers.get("location") || "",
       finalUrl: response.url,
       contentType: response.headers.get("content-type") || "",
       server: response.headers.get("server") || "",
@@ -68,6 +70,7 @@ async function probe(source: any, keyword: string, variant: typeof variants[numb
       id: source.id,
       keyword,
       variant: variant.name,
+      redirectPolicy,
       requestUrl: url,
       errorName: e.name,
       error: e.message,
@@ -84,14 +87,14 @@ async function probe(source: any, keyword: string, variant: typeof variants[numb
   for (const source of sources) {
     const entry = JSON.parse(raw).sources.find((item: any) => item.id === source.remoteId);
     for (const keyword of keywords) {
-      for (const variant of variants) results.push(await probe(entry, keyword, variant));
+      for (const variant of variants) for (const redirectPolicy of ["manual", "follow"] as const) results.push(await probe(entry, keyword, variant, redirectPolicy));
     }
   }
   fs.mkdirSync("reports", { recursive: true });
   fs.writeFileSync("reports/app-runtime-network-diagnostics.json", JSON.stringify({
     generatedAt: new Date().toISOString(),
     environment: { runtime: process.version, platform: process.platform },
-    note: "Same search URLs as the App subscription; compares Node default, iPhone Safari UA, and desktop Chrome UA. This is a GitHub-hosted runner diagnostic, not an iPhone measurement.",
+    note: "Same search URLs as the App subscription; compares Node default, iPhone Safari UA, and desktop Chrome UA under manual/follow redirect policies. This is a GitHub-hosted runner diagnostic, not an iPhone measurement.",
     results,
   }, null, 2));
   for (const result of results) console.log(JSON.stringify(result));
