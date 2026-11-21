@@ -295,13 +295,19 @@ function parseLegacyChain(expression) {
   const regexInput=replaceFirst?raw.slice(0,-3):raw;
   const regexParts=splitTopLevel(regexInput,"##");
   if(regexParts){
+    while(regexParts.length>1&&regexParts[regexParts.length-1].trim()==="") regexParts.pop();
+    if(regexParts.length===1){
+      if(!regexParts[0].trim()) return {status:"manual",reason:"unsupported-regex-transform"};
+      return parseLegacyChain(regexParts[0]);
+    }
     if(regexParts.length<2||(regexParts.length>3&&(regexParts.length-1)%2!==0)||(replaceFirst&&regexParts.length!==3)) return {status:"manual",reason:"unsupported-regex-transform"};
     const base=regexParts[0]?parseLegacyChain(regexParts[0]):{status:"candidate",selector:{engine:"self",output:"text"}};
     if(base.status!=="candidate") return base;
     let selector=base.selector;
     for(let i=1;i<regexParts.length;i+=2){
-      const pattern=regexParts[i],replacement=regexParts[i+1]||"";
-      if(!pattern||pattern.length>256) return {status:"manual",reason:"unsupported-regex-transform"};
+      const rawPattern=regexParts[i],replacement=regexParts[i+1]||"";
+      const pattern=rawPattern.replace(/\\h/g,"[\\t\\x20]").replace(/\\v/g,"[\\r\\n\\x0B\\f]");
+      if(!pattern||pattern.length>1024||/(?:\\([^)]*[+*][^)]*\\))[+*{]/.test(pattern)) return {status:"manual",reason:"unsupported-regex-transform"};
       selector={engine:"replace",input:selector,pattern,replacement,replaceFirst};
     }
     return {status:"candidate",selector};
@@ -355,7 +361,7 @@ function parseLegacyChain(expression) {
     return xpath?{status:"candidate",selector:xpath}:{status:"manual",reason:"unsupported-xpath"};
   }
   const jsonExpression=raw.match(/^@json:(.*)$/i);
-  const implicitJson=/^\$[.[]/.test(raw)||/^[A-Za-z_$][\w$-]*\[(?:\*|\d|:)/.test(raw);
+  const implicitJson=/^\$[.[]/.test(raw)||/^[A-Za-z_$][\w$-]*\[(?:\*|\d|:)\][.]([A-Za-z_$][\w$-]*)/.test(raw);
   if(jsonExpression||implicitJson){
     let expression=jsonExpression?jsonExpression[1].trim():raw;
     const braceParts=expression.match(/\{([^{}]+)\}/g);
