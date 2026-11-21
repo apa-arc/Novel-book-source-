@@ -1,4 +1,4 @@
-name: Daily novel source health scan and app runtime test
+name: Event-driven novel source health scan and app runtime test
 
 on:
   workflow_dispatch:
@@ -22,6 +22,7 @@ concurrency:
 
 jobs:
   scan-and-test:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 60
     steps:
