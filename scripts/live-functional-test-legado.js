@@ -82,7 +82,7 @@ function selector(rule, outputOverride) {
 }
 function first(root, rule) {
   const result = executeSelector(root, selector(rule));
-  return Array.isArray(result) ? result.find(x => x != null && String(x).trim() !== "") : result;
+  return Array.isArray(result) ? result.filter(x => x != null && String(x).trim() !== "").map(String).join("\n") : result;
 }
 function values(root, rule) {
   const result = executeSelector(root, selector(rule));
