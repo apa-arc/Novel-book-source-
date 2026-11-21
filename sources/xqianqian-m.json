@@ -3,7 +3,7 @@
   "id": "xqianqian-m",
   "name": "千千小说",
   "kind": "public-web",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "baseUrl": "https://m.xqianqian.com/",
   "domains": [
     "m.xqianqian.com"
@@ -26,7 +26,8 @@
         "itemSelector": ".bookbox",
         "titleSelector": ".bookname a",
         "urlSelector": ".bookname a",
-        "authorSelector": ".author"
+        "authorSelector": ".author",
+        "coverSelector": "img"
       },
       "detail": {
         "titleSelector": ".name",
