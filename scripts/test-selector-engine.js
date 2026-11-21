@@ -44,7 +44,7 @@ assert.deepEqual(executeSelector(root,chain([{kind:"class",name:"list",index:nul
 assert.deepEqual(executeSelector(root,chain([{kind:"class",name:"list",index:null},{kind:"tag",name:"a",index:null}],"href",true)),["/3","/2","/1"]);
 assert.deepEqual(executeSelector(root,{engine:"css",query:"a",output:"text"}),["第一章","第二章","第三章"]);
 assert.deepEqual(executeSelector(root,{engine:"xpath",steps:[
-  {axis:"descendant",tag:"li",filters:[{kind:"childExists",tag:"a"}]},
+  {axis:"descendant",tag:"div",filters:[{kind:"childExists",tag:"a"}]},
   {axis:"child",tag:"a",filters:[{kind:"position",index:1}]}
 ],output:"text"}),["第一章","第二章","第三章"]);
 assert.deepEqual(executeSelector(root,{engine:"xpath",steps:[
@@ -52,9 +52,12 @@ assert.deepEqual(executeSelector(root,{engine:"xpath",steps:[
 ],output:"attr:href"}),["/2"]);
 assert.deepEqual(executeSelector(root,{engine:"xpath",steps:[
   {axis:"descendant",tag:"a",filters:[{kind:"textEquals",value:"第二章"}]},
-  {axis:"parent",tag:"li",filters:[]},
-  {axis:"followingSibling",tag:"li",filters:[{kind:"position",index:1}]}
+  {axis:"followingSibling",tag:"a",filters:[{kind:"position",index:1}]}
 ],output:"text"}),["第三章"]);
+assert.deepEqual(executeSelector(root,{engine:"xpath",steps:[
+  {axis:"descendant",tag:"a",filters:[{kind:"textEquals",value:"第二章"}]},
+  {axis:"parent",tag:"div",filters:[]}
+],output:"text"}),["第一章第二章第三章"]);
 assert.equal(executeSelector(a,{engine:"self",output:"text"}),"第一章");
 assert.equal(executeSelector(a,{engine:"self",output:"href"}),"/1");
 assert.deepEqual(executeSelector(root,chain([{kind:"class",name:"list",index:null},{kind:"tag",name:"a",index:null}],"href")),["/1","/2","/3"]);
