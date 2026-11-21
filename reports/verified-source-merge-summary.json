@@ -1,47 +1,12 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T06:05:05.657Z",
+  "generatedAt": "2026-11-21T09:15:39.990Z",
   "source": "luanmuc/legado-book-sources (MIT License)",
   "ordinary": {
-    "candidates": 4,
-    "valid": 4,
-    "added": 0,
-    "updated": 4,
-    "addedSources": [],
-    "updatedSources": [
-      {
-        "name": "笔趣阁140",
-        "url": "https://www.biquluo.la"
-      },
-      {
-        "name": "书斋阁书",
-        "url": "https://www.shuzhaige.com"
-      },
-      {
-        "name": "得奇小说1",
-        "url": "https://www.deqitxt.com"
-      },
-      {
-        "name": "新御宅屋",
-        "url": "https://mm.xyuzhaiwu.xyz/"
-      }
-    ]
+    "passedAndExported": 4,
+    "structurallyValid": 4,
+    "addedToNativeSubscription": 0,
+    "pending": "Legado rules must first be converted into this repository's native appConfig and pass the native adapter live tests."
   },
-  "adult": {
-    "candidates": 2,
-    "valid": 2,
-    "added": 0,
-    "updated": 2,
-    "addedSources": [],
-    "updatedSources": [
-      {
-        "name": "🐦夜书吧po18mx",
-        "url": "https://www.po18mx.com"
-      },
-      {
-        "name": "肉书屋②",
-        "url": "https://m.roushuwu2.com"
-      }
-    ]
-  }
+  "policy": "Do not merge raw Legado JSON into subscription.json: the app feed is a native metadata object, not a Legado JSON array. Adult sources are excluded entirely."
 }
