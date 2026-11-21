@@ -5,7 +5,7 @@ import { searchNovelSource } from "../app/src/source-search.ts";
 import { fetchNovelDetail, fetchNovelChapterList, fetchNovelChapterContent } from "../app/src/source-catalog.ts";
 import type { NovelSource } from "../app/src/source.ts";
 
-const keywords = ["斗罗大陆", "斗破苍穹"];
+const defaultKeywords = ["斗罗大陆", "斗破苍穹"];\nconst keywordsBySource: Record<string, string[]> = { "bsxiaoshuo-com": ["念念不忘遥相望", "傲娇甜妻：萌宝请助攻"] };
 const raw = fs.readFileSync("development/candidate-subscription.json", "utf8");
 const parsed = parseSourceSubscription(raw);
 
@@ -63,7 +63,7 @@ async function mapLimit<T, R>(items: T[], limit: number, fn: (item: T) => Promis
       return result;
     }
     const source = { ...compatible, id: entry.id, enabled: true, importedAt: Date.now() } as unknown as NovelSource;
-    for (const keyword of keywords) result.terms[keyword] = await testTerm(source, keyword);
+    const keywords = keywordsBySource[entry.id] || defaultKeywords;\n    for (const keyword of keywords) result.terms[keyword] = await testTerm(source, keyword);
     const states = Object.values(result.terms).map(x => x.status);
     result.status = states.every(x => x === "passed") ? "passed-both" : states.some(x => x === "passed") ? "passed-one" : "failed";
     return result;
@@ -77,7 +77,7 @@ async function mapLimit<T, R>(items: T[], limit: number, fn: (item: T) => Promis
     failed: sourceResults.filter(x => x.status === "failed").length
   };
   fs.mkdirSync("reports", { recursive: true });
-  fs.writeFileSync("reports/app-candidate-live-test.json", JSON.stringify({ generatedAt: new Date().toISOString(), keywords, counts, results: sourceResults }, null, 2));
+  fs.writeFileSync("reports/app-candidate-live-test.json", JSON.stringify({ generatedAt: new Date().toISOString(), defaultKeywords, keywordsBySource, counts, results: sourceResults }, null, 2));
   for (const result of sourceResults) {
     const summary = Object.entries(result.terms).map(([key, value]) => key + ":" + value.status + (value.error ? " (" + value.error + ")" : "")).join(" | ");
     console.log(result.name + " [" + result.status + "] " + summary);
