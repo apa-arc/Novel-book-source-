@@ -11,8 +11,6 @@ const crypto = require("node:crypto");
 const ROOT = path.resolve(__dirname, "..");
 const INPUT = path.join(ROOT, "imports/aoaostar/raw/aoaostar-full.json");
 const OUT = path.join(ROOT, "exports");
-const ROOT_ORDINARY = path.join(ROOT, "subscription.json");
-const ROOT_ADULT = path.join(ROOT, "adult-subscription.json");
 const TICKMAO_VERIFIED = path.join(ROOT, "imports/third-party/tickmao/verified-safe.json");
 const REQUIRED = ["ruleSearch", "ruleBookInfo", "ruleToc", "ruleContent"];
 const ADULT = /🔞|成人|色情|情色|黄文|黃文|肉文|淫秽|淫穢|R18|18\+/i;
@@ -123,9 +121,8 @@ function main() {
   const write = (name, data) => fs.writeFileSync(path.join(OUT, name), JSON.stringify(data, null, 2) + "\n");
   write("legado-ordinary.json", ordinary);
   write("legado-adult.json", adult);
-  // The stable public subscription URLs are native Legado JSON arrays.
-  fs.writeFileSync(ROOT_ORDINARY, JSON.stringify(ordinary, null, 2) + "\n");
-  fs.writeFileSync(ROOT_ADULT, JSON.stringify(adult, null, 2) + "\n");
+  // Export only to the isolated Legado archive. Never overwrite the AppleNovelApp
+  // native subscription or publish adult-source subscriptions from this importer.
   write("aoaostar-import-report.json", {
     schemaVersion: 1,
     sourceSha256: crypto.createHash("sha256").update(rawText).digest("hex"),
