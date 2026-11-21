@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T11:19:03.630Z",
+  "generatedAt": "2026-11-21T11:20:29.519Z",
   "provider": "liufuyou/read metadata-only discovery",
   "upstream": [
     "https://raw.githubusercontent.com/liufuyou/read/main/sources/yck-novel.json",
@@ -11,15 +11,15 @@
   "filterStats": {
     "upstreamRecords": 2355,
     "nonText": 49,
-    "nonNovel": 21,
+    "nonNovel": 37,
     "adult": 13,
-    "cookieOrSecret": 962,
-    "nonGetOrScript": 1075,
+    "cookieOrSecret": 954,
+    "nonGetOrScript": 1069,
     "nonHttps": 45,
-    "duplicateHost": 50,
-    "accepted": 140
+    "duplicateHost": 49,
+    "accepted": 139
   },
-  "sourceCount": 140,
+  "sourceCount": 139,
   "sources": [
     {
       "id": "9dba3c3c3757e39c",
@@ -1215,15 +1215,6 @@
       "baseUrl": "https://www.yruan.com/",
       "group": "小说源",
       "upstream": "Yiove 星辰整理",
-      "redistributionStatus": "not-assessed",
-      "runtimeStatus": "not-converted"
-    },
-    {
-      "id": "df07cc808619784b",
-      "name": "英文小说（英）",
-      "baseUrl": "https://www.yingyuxiaoshuo.com/",
-      "group": "小说 书源",
-      "upstream": "YCK 书单 1067",
       "redistributionStatus": "not-assessed",
       "runtimeStatus": "not-converted"
     },
