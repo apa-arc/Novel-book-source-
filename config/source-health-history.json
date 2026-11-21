@@ -12,12 +12,11 @@
       "目录",
       "正文"
     ],
-    "consecutiveFailureThreshold": 3,
-    "oneFailureDoesNotRemoveSource": true,
+    "userConfirmedSourcesAreProtected": true,
+    "probeFailuresAreDiagnosticOnly": true,
+    "automaticQuarantine": false,
     "backupsRetained": true,
-    "reactivationRequiresAllFourStagesAndQualityLicenseEvidence": true,
-    "automaticQuarantineDisabledPendingValidatedAppTest": true,
-    "userConfirmedBaseline": true
+    "manualReviewAndRepairRequiredBeforeAnyFormalRemoval": true
   },
   "sources": {
     "biquluo-la": {
@@ -86,7 +85,8 @@
       },
       "baseline": true,
       "userConfirmedWorking": true,
-      "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。"
+      "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。",
+      "sourceAvailabilityStatus": "user-confirmed-baseline"
     },
     "jiuyi-91zww": {
       "checks": 1,
@@ -126,7 +126,8 @@
       },
       "baseline": true,
       "userConfirmedWorking": true,
-      "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。"
+      "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。",
+      "sourceAvailabilityStatus": "user-confirmed-baseline"
     },
     "xinbiquge-info": {
       "checks": 1,
@@ -186,7 +187,8 @@
       },
       "baseline": true,
       "userConfirmedWorking": true,
-      "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。"
+      "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。",
+      "sourceAvailabilityStatus": "user-confirmed-baseline"
     },
     "biquge-17177": {
       "checks": 1,
@@ -254,7 +256,8 @@
       },
       "baseline": true,
       "userConfirmedWorking": true,
-      "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。"
+      "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。",
+      "sourceAvailabilityStatus": "user-confirmed-baseline"
     },
     "d8zw-com": {
       "checks": 1,
@@ -314,7 +317,8 @@
       },
       "baseline": true,
       "userConfirmedWorking": true,
-      "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。"
+      "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。",
+      "sourceAvailabilityStatus": "user-confirmed-baseline"
     },
     "bqg-info": {
       "checks": 1,
@@ -382,7 +386,8 @@
       },
       "baseline": true,
       "userConfirmedWorking": true,
-      "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。"
+      "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。",
+      "sourceAvailabilityStatus": "user-confirmed-baseline"
     },
     "xqianqian-m": {
       "checks": 1,
@@ -422,7 +427,8 @@
       },
       "baseline": true,
       "userConfirmedWorking": true,
-      "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。"
+      "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。",
+      "sourceAvailabilityStatus": "user-confirmed-baseline"
     },
     "douhua-wenxue": {
       "checks": 1,
@@ -462,7 +468,8 @@
       },
       "baseline": true,
       "userConfirmedWorking": true,
-      "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。"
+      "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。",
+      "sourceAvailabilityStatus": "user-confirmed-baseline"
     },
     "iyueba-net": {
       "checks": 1,
@@ -502,7 +509,8 @@
       },
       "baseline": true,
       "userConfirmedWorking": true,
-      "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。"
+      "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。",
+      "sourceAvailabilityStatus": "user-confirmed-baseline"
     },
     "52shuku-net": {
       "checks": 1,
@@ -570,7 +578,8 @@
       },
       "baseline": true,
       "userConfirmedWorking": true,
-      "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。"
+      "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。",
+      "sourceAvailabilityStatus": "user-confirmed-baseline"
     }
   }
 }
