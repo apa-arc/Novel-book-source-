@@ -22,7 +22,12 @@ assert.equal(cleanedPromo.removedBlocks, 3);
 assert.ok(cleanedPromo.content.includes("主角推门走进院子"));
 assert.ok(cleanedPromo.content.includes("主角抬头看向窗外"));
 assert.ok(!cleanedPromo.content.includes("京東搜索"));
-assert.ok(!cleanedPromo.content.includes("點擊直達"));
+assert.ok(!cleanedPromo.content.includes("点击直达"));
+const concatenatedPromo = cleanPromotionalContent("正文前段。本章未完，点击下方红色链接，免费看神通者完整章节内容神通者最新最快更新，点击直达京東搜索：福利大红包962，领取至高26888元双11红包。正文后段。");
+assert.ok(concatenatedPromo.content.startsWith("正文前段。"));
+assert.ok(concatenatedPromo.content.endsWith("正文后段。"));
+assert.ok(!concatenatedPromo.content.includes("福利大红包"));
+assert.ok(concatenatedPromo.removedBlocks >= 3);
 const ordinaryClickProse = "他点击桌上的按钮，随后最新消息传来。";
 assert.equal(cleanPromotionalContent(ordinaryClickProse).content, ordinaryClickProse);
 
