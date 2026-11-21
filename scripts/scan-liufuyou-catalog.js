@@ -11,7 +11,8 @@ const UPSTREAM = [
   { name: "Daiaji LegadoSource", url: "https://raw.githubusercontent.com/daiaji/LegadoSource/main/%E4%B9%A6%E6%BA%90.json" }
 ];
 const ADULT = /🔞|成人|色情|情色|R18|18\+|18禁|PO18|肉文|淫秽|色情小说/i;
-const NON_NOVEL = /漫画|動漫|动漫|有声|听书|古籍|国学|诗词|詞典|词典|百科|维基|公版|杂志|影视|短剧|网盘|音乐|播客|英文|英语|English|日语|Japanese|原版小说/i;\nconst PAYWALL = /💰|🏷|VIP|付费|会员|需登录|须登陆|需要登录|正版|搜书专用/i;
+const NON_NOVEL = /漫画|動漫|动漫|有声|听书|古籍|国学|诗词|詞典|词典|百科|维基|公版|杂志|影视|短剧|网盘|音乐|播客|英文|英语|English|日语|Japanese|原版小说/i;
+const PAYWALL = /💰|🏷|VIP|付费|会员|需登录|须登陆|需要登录|正版|搜书专用/i;
 const SECRET = /cookie|authorization|access[_-]?token|password|secret|login/i;
 
 async function fetchJson(item) {
@@ -68,25 +69,25 @@ async function fetchYckCollection() {
     .replace(/&#39;|&apos;/gi, "'")
     .replace(/&lt;/gi, "<")
     .replace(/&gt;/gi, ">")
-    .replace(/&#(\\d+);/g, (_, n) => String.fromCodePoint(Number(n)))
+    .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)))
     .replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16)));
-  const strip = value => decode(String(value).replace(/<br\\s*\\/?\\s*>/gi, " ").replace(/<[^>]+>/g, " "))
-    .replace(/\\s+/g, " ").trim();
+  const strip = value => decode(String(value).replace(/<br\s*\/?\s*>/gi, " ").replace(/<[^>]+>/g, " "))
+    .replace(/\s+/g, " ").trim();
   const rows = [];
-  for (const match of html.matchAll(/<tr\\b[^>]*>([\\s\\S]*?)<\\/tr>/gi)) {
-    const cells = [...match[1].matchAll(/<t[dh]\\b[^>]*>([\\s\\S]*?)<\\/t[dh]>/gi)].map(x => x[1]);
+  for (const match of html.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)) {
+    const cells = [...match[1].matchAll(/<t[dh]\b[^>]*>([\s\S]*?)<\/t[dh]>/gi)].map(x => x[1]);
     if (cells.length < 2) continue;
     const name = strip(cells[0]);
     const cell = cells[1];
-    const href = cell.match(/href\\s*=\\s*["']([^"']+)["']/i)?.[1] || "";
-    const textUrl = strip(cell).match(/https?:\\/\\/[^\\s<>"']+/i)?.[0] || "";
+    const href = cell.match(/href\s*=\s*["']([^"']+)["']/i)?.[1] || "";
+    const textUrl = strip(cell).match(/https?:\/\/[^\s<>"']+/i)?.[0] || "";
     const candidateUrl = href || textUrl;
     if (name && candidateUrl) rows.push({ name, url: decode(candidateUrl).replace(/[),，；;]+$/, "") });
   }
   if (rows.length < 100) {
-    const plain = strip(html.replace(/<\\/tr>/gi, "\\n"));
-    for (const line of plain.split(/\\n+/)) {
-      const match = line.match(/^(.{1,100}?)\\s*[|｜]\\s*(https?:\\/\\/\\S+)/);
+    const plain = strip(html.replace(/<\/tr>/gi, "\n"));
+    for (const line of plain.split(/\n+/)) {
+      const match = line.match(/^(.{1,100}?)\s*[|｜]\s*(https?:\/\/\S+)/);
       if (match) rows.push({ name: match[1].trim(), url: match[2].replace(/[),，；;]+$/, "") });
     }
   }
@@ -108,7 +109,8 @@ async function fetchYckCollection() {
       const group = String(source.bookSourceGroup || "");
       const comment = String(source.bookSourceComment || "");
       if (ADULT.test([name, group, comment].join(" "))) { stats.adult++; continue; }
-      if (NON_NOVEL.test([name, group, comment].join(" "))) { stats.nonNovel++; continue; }\n      if (PAYWALL.test([name, group, comment].join(" "))) { stats.paywall++; continue; }
+      if (NON_NOVEL.test([name, group, comment].join(" "))) { stats.nonNovel++; continue; }
+      if (PAYWALL.test([name, group, comment].join(" "))) { stats.paywall++; continue; }
       if (source.enabledCookieJar === true || SECRET.test(JSON.stringify({ header: source.header, searchUrl: source.searchUrl, comment }))) { stats.cookieOrSecret++; continue; }
       if (!simpleGetSearch(source)) { stats.nonGetOrScript++; continue; }
       const baseUrl = normalizeBase(source.bookSourceUrl);
