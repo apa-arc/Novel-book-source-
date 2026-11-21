@@ -354,6 +354,8 @@ function safePassedSource(source, category = "ordinary") {
   out.enabled = true;
   out.enabledExplore = false;
   out.bookSourceComment = "规则来源：luanmuc/legado-book-sources（MIT License）；已完成公开搜索、详情、目录及正文实测。此条目不含 Cookie、登录态或认证凭据。";
+  const safeHeaderValues = safeHeaders(source);
+  if (Object.keys(safeHeaderValues).length) out.header = JSON.stringify(safeHeaderValues);
   const groups = {
     ruleSearch: ["bookList","name","bookUrl"],
     ruleBookInfo: ["name","author","intro","tocUrl","kind","lastChapter","wordCount"],
