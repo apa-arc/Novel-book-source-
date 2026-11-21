@@ -31,6 +31,8 @@ function summary(n){return {tag:n.tagName?.toLowerCase()||"",id:n.id||"",classNa
      const chapter=await get(chapterUrl),cd=parseHTML(chapter.html).document;
      const bodies=[...cd.querySelectorAll("div,article,section,main,p")].map(summary).filter(x=>x.textLength>200).sort((a,b)=>b.textLength-a.textLength).slice(0,12);
      result[kind+"Chapter"]={status:chapter.status,url:chapter.url,contentType:chapter.contentType,title:norm(cd.querySelector("title")?.textContent),headings:[...cd.querySelectorAll("h1,h2,h3")].map(summary),bodies};
+   } catch(error) { result.bookError=String(error).slice(0,180); }
+  }
     }
   results.push(result);
  }
