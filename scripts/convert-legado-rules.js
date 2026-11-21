@@ -133,6 +133,12 @@ function parseJsonPath(expression) {
       else if(/^(['"])[\s\S]*\1$/.test(token)) steps.push({kind:"property",name:token.slice(1,-1)});
       else return null;
       i=end+1;
+      if(i<raw.length&&/[A-Za-z_$]/.test(raw[i])&&raw[i-1]==="]"){
+        const adjacent=raw.slice(i).match(/^([A-Za-z_$][\w$-]*)/);
+        if(!adjacent) return null;
+        steps.push({kind:"property",name:adjacent[1]});
+        i+=adjacent[1].length;
+      }
       continue;
     }
     if(i===0){
