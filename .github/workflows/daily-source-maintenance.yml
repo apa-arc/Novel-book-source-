@@ -1,6 +1,8 @@
 name: Event-driven novel source health scan and app runtime test
 
 on:
+  schedule:
+    - cron: "17 19 * * *" # 每天北京时间 03:17
   workflow_dispatch:
   workflow_run:
     workflows: ["Build the single ordinary novel subscription"]
@@ -11,7 +13,9 @@ on:
       - ".github/workflows/daily-source-maintenance.yml"
       - "scripts/live-host-probe.js"
       - "scripts/live-test-app-runtime.ts"
-      - "subscription.json"\n      - "config/health-check-subscription.json"\n      - "config/subscription-source-registry.json"
+      - "subscription.json"
+      - "config/health-check-subscription.json"
+      - "config/subscription-source-registry.json"
 
 permissions:
   contents: write
