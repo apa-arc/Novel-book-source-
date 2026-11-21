@@ -6,8 +6,9 @@ const { parseHTML } = require("linkedom");
 
 const ROOT = path.resolve(__dirname, "..");
 const BASE = "https://www.bsxiaoshuo.com/";
+const SEARCH = "https://www.bsxiaoshuo.com/s.php?sid=3&k=" + encodeURIComponent("念念不忘遥相望");
 const BOOK = "https://www.bsxiaoshuo.com/mulu/2098.html";
-const CHAPTER = "https://www.bsxiaoshuo.com/html/373855.html";
+const CHAPTER = "https://www.bsxiaoshuo.com/html/373751.html";
 const headers = { "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/131.0.0.0 Safari/537.36", "accept": "text/html,application/xhtml+xml" };
 
 async function get(url) {
@@ -39,6 +40,9 @@ function nodeSummary(node) {
       placeholder: el.getAttribute("placeholder") || ""
     }))
   }));
+  const search = await get(SEARCH);
+  const searchDoc = parseHTML(search.html).document;
+  const searchLinks = [...searchDoc.querySelectorAll("a[href]")].map(a => ({ text: (a.textContent || "").trim().replace(/\\s+/g, " ").slice(0, 100), href: a.getAttribute("href") || "" })).filter(a => /\\/mulu\\//i.test(a.href));
   const book = await get(BOOK);
   const bookDoc = parseHTML(book.html).document;
   const chapter = await get(CHAPTER);
@@ -49,11 +53,12 @@ function nodeSummary(node) {
     href: a.getAttribute("href") || ""
   })).filter(a => /\/html\//i.test(a.href));
   const contentCandidates = [...chapterDoc.querySelectorAll("div,article,section,p")].map(nodeSummary)
-    .filter(x => x.textLength >= 300)
+    .filter(x => x.textLength >= 100)
     .sort((a,b) => b.textLength-a.textLength).slice(0,20);
   const report = {
     generatedAt: new Date().toISOString(),
     homepage: { status: home.status, finalUrl: home.url, title: homeDoc.querySelector("title")?.textContent || "", forms, searchForms },
+    searchPage: { status: search.status, finalUrl: search.url, title: searchDoc.querySelector("title")?.textContent || "", headings: [...searchDoc.querySelectorAll("h1,h2,h3")].map(nodeSummary), resultLinks: searchLinks.slice(0,30) },
     bookPage: { status: book.status, finalUrl: book.url, title: bookDoc.querySelector("title")?.textContent || "", headings: [...bookDoc.querySelectorAll("h1,h2,h3")].map(nodeSummary), chapterLinks: bookLinks.slice(0,30) },
     chapterPage: { status: chapter.status, finalUrl: chapter.url, title: chapterDoc.querySelector("title")?.textContent || "", headings: [...chapterDoc.querySelectorAll("h1,h2,h3")].map(nodeSummary), contentCandidates }
   };
