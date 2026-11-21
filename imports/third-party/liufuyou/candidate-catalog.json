@@ -1,0 +1,618 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-21T11:14:06.808Z",
+  "provider": "liufuyou/read metadata-only discovery",
+  "upstream": [
+    "https://raw.githubusercontent.com/liufuyou/read/main/sources/yck-novel.json",
+    "https://raw.githubusercontent.com/liufuyou/read/main/sources/yiove-novel.json"
+  ],
+  "licenseNote": "Only candidate names, HTTPS base URLs and group labels are retained. Upstream README says source-rule copyrights belong to their original organizers; no rules or source code are copied. Redistribution status remains unassessed.",
+  "filterStats": {
+    "upstreamRecords": 981,
+    "nonText": 0,
+    "nonNovel": 17,
+    "adult": 0,
+    "cookieOrSecret": 564,
+    "nonGetOrScript": 252,
+    "nonHttps": 37,
+    "duplicateHost": 45,
+    "accepted": 66
+  },
+  "sourceCount": 66,
+  "sources": [
+    {
+      "id": "a67851568a51731e",
+      "name": "爱笔楼",
+      "baseUrl": "https://www.ibiquge.info/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "52dfb3eb25c5a087",
+      "name": "爱下书吧",
+      "baseUrl": "https://www.aixiawx.com/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "7762f4064ccf4310",
+      "name": "百度小说",
+      "baseUrl": "https://dushu.baidu.com/",
+      "group": "正版小说 书源",
+      "upstream": "YCK 书单 1067",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "c34fbb160a92be80",
+      "name": "百度小说",
+      "baseUrl": "https://novelapi.baidu.com/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "7486a624d24aa127",
+      "name": "百合爱会（优+）",
+      "baseUrl": "https://www.yamibo.com/",
+      "group": "小说 书源",
+      "upstream": "YCK 书单 1067",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "dccab72261a81f21",
+      "name": "被电子书",
+      "baseUrl": "https://www.iwurexs.info/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "041a86bb8b82512c",
+      "name": "笔趣阁",
+      "baseUrl": "https://www.biqusk.com/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "89a2d7337b8d43bf",
+      "name": "笔趣阁",
+      "baseUrl": "https://m.biqukun.com/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "8f9b38e31ae02006",
+      "name": "笔趣阁",
+      "baseUrl": "https://www.ibiquge.la/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "bea3ad6ca9cc4258",
+      "name": "笔趣阁",
+      "baseUrl": "https://www.biqusa.com/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "b90748d7a72eaaf6",
+      "name": "笔趣阁",
+      "baseUrl": "https://www.xbiquge.la/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "9ec5024366ffdd66",
+      "name": "笔尚小说",
+      "baseUrl": "https://www.bsxiaoshuo.com/",
+      "group": "正版小说 书源",
+      "upstream": "YCK 书单 1067",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "56c86c7b5039216f",
+      "name": "次元姬子（优）",
+      "baseUrl": "https://www.ciyuanji.com/",
+      "group": "正版小说 书源",
+      "upstream": "YCK 书单 1067",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "9a5d3d499c30f28c",
+      "name": "刺猬猫吧",
+      "baseUrl": "https://www.ciweimao.com/",
+      "group": "正版小说 书源",
+      "upstream": "YCK 书单 1067",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "212ac621c296ace8",
+      "name": "顶点小说",
+      "baseUrl": "https://www.x23us.us/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "21341609651b9b9d",
+      "name": "恩施轻语（优+）",
+      "baseUrl": "https://www.esjzone.one/",
+      "group": "小说 书源",
+      "upstream": "YCK 书单 1067",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "4af8ef4bd03fb795",
+      "name": "飞卢小说",
+      "baseUrl": "https://wap.faloo.com/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "ae873a50cd131065",
+      "name": "疯读小说",
+      "baseUrl": "https://touchlife.cootekservice.com/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "d12ab25bd07c53fb",
+      "name": "疯读小说（优++）",
+      "baseUrl": "https://fiction.fengduxiaoshuo.com/",
+      "group": "小说 书源",
+      "upstream": "YCK 书单 1067",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "ecf42e21bf61fadc",
+      "name": "阁笔趣网",
+      "baseUrl": "https://www.gebiqu.com/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "91645e78507fb65d",
+      "name": "花生小说（优）",
+      "baseUrl": "https://api.wan123x.com/",
+      "group": "小说 书源",
+      "upstream": "YCK 书单 1067",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "8a922abef4c4ed52",
+      "name": "话本小说（优++）",
+      "baseUrl": "https://www.ihuaben.com/",
+      "group": "小说 书源",
+      "upstream": "YCK 书单 1067",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "575e058926bb7a4c",
+      "name": "金庸小说（优+）",
+      "baseUrl": "https://www.jinyongwang.net/",
+      "group": "小说 书源",
+      "upstream": "YCK 书单 1067",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "d3b91bdab4199ce1",
+      "name": "晋江文学",
+      "baseUrl": "https://m.jjwxc.net/",
+      "group": "正版小说 书源",
+      "upstream": "YCK 书单 1067",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "576160f665eb4d2e",
+      "name": "精华书阁",
+      "baseUrl": "https://www.jhssd.com/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "ef85457c1b81b231",
+      "name": "精华书阁",
+      "baseUrl": "https://m.jhssd.com/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "2770b79b231fdda1",
+      "name": "精华书阁",
+      "baseUrl": "https://wap.jhssd.com/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "d5d304076a9894a5",
+      "name": "鲸云轻说（优++）",
+      "baseUrl": "https://jyapi.jyacg.com/",
+      "group": "小说 书源",
+      "upstream": "YCK 书单 1067",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "5550140e2d154018",
+      "name": "酷匠网吧（优+）",
+      "baseUrl": "https://app.kujiang.com/",
+      "group": "小说 书源",
+      "upstream": "YCK 书单 1067",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "55fa32ce7c2c6412",
+      "name": "连城读书",
+      "baseUrl": "https://www.lcread.com/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "bdec2d5fca09884b",
+      "name": "零零小说",
+      "baseUrl": "https://www.00shu.la/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "b2a7a50b1369763c",
+      "name": "零零小说",
+      "baseUrl": "https://m.00shu.la/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "c541ed8d880c0b90",
+      "name": "落霞小说",
+      "baseUrl": "https://luoxiadushu.com/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "32f36139712905f0",
+      "name": "棉花糖小说",
+      "baseUrl": "https://www.mhtxs.la/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "430471ef2347419a",
+      "name": "飘然文学（优）",
+      "baseUrl": "https://www.xbiquwx.la/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "8e9d5881a00bdd7e",
+      "name": "企鹅阅读",
+      "baseUrl": "https://ubook.reader.qq.com/",
+      "group": "正版小说 书源",
+      "upstream": "YCK 书单 1067",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "682803641ae63b2b",
+      "name": "铅笔轻说（优+）",
+      "baseUrl": "https://www.qxsw.cc/",
+      "group": "小说 书源",
+      "upstream": "YCK 书单 1067",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "76f5463b0909599b",
+      "name": "轻之文库（优++）",
+      "baseUrl": "https://www.linovel.net/",
+      "group": "小说 书源",
+      "upstream": "YCK 书单 1067",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "073ed7e7e3f78435",
+      "name": "球球览器",
+      "baseUrl": "https://so.html5.qq.com/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "566cfbf07003754d",
+      "name": "若初文学",
+      "baseUrl": "https://search.ruochu.com/",
+      "group": "正版小说 书源",
+      "upstream": "YCK 书单 1067",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "0a3269c912f67370",
+      "name": "手机小说",
+      "baseUrl": "https://m.xiaxs.la/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "033e71bd2962cf6a",
+      "name": "书旗小说",
+      "baseUrl": "https://t.shuqi.com/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "a6c83530e3cc25f0",
+      "name": "天域小说",
+      "baseUrl": "https://www.tycqzw.la/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "d86920e0a24db382",
+      "name": "天域小说",
+      "baseUrl": "https://www.tycqzw.com/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "e48547ad10f89742",
+      "name": "天域小说",
+      "baseUrl": "https://www.zmccx.com/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "0b04d9cc6eb45b1d",
+      "name": "网易小说",
+      "baseUrl": "https://m.yuedu.163.com/",
+      "group": "正版小说 书源",
+      "upstream": "YCK 书单 1067",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "6f5c9489dcc147d5",
+      "name": "文档小说",
+      "baseUrl": "https://www.xiaxs.la/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "19bd2ea8d52cac65",
+      "name": "我是盐神（优+）",
+      "baseUrl": "https://onehu.xyz/",
+      "group": "小说 书源",
+      "upstream": "YCK 书单 1067",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "2d38cb58f66637a6",
+      "name": "无极小说",
+      "baseUrl": "https://wujixsw.info/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "1d5e1913ab2f476c",
+      "name": "唔爱书包",
+      "baseUrl": "https://www.ishubao.org/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "6ce552a361aa7eb4",
+      "name": "唔电子书",
+      "baseUrl": "https://www.iwurexs.com/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "1fe519f5c5dce3aa",
+      "name": "梧桐中文",
+      "baseUrl": "https://www.wtzw.com/",
+      "group": "正版小说 书源",
+      "upstream": "YCK 书单 1067",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "e057f0bfbd2eb2ee",
+      "name": "香书小说",
+      "baseUrl": "https://www.ibiquges.com/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "2abbbf586bb325a0",
+      "name": "小米阅读（优+）",
+      "baseUrl": "https://reader.browser.miui.com/",
+      "group": "小说 书源",
+      "upstream": "YCK 书单 1067",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "b1a33bd4f5aae8f5",
+      "name": "新读小说（繁）",
+      "baseUrl": "https://m.dxs.tw/",
+      "group": "小说 书源",
+      "upstream": "YCK 书单 1067",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "646d38e047a1428d",
+      "name": "熊猫文学（优+）",
+      "baseUrl": "https://www.dxmwx.org/",
+      "group": "小说 书源",
+      "upstream": "YCK 书单 1067",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "6ed1158b6c3d8d7e",
+      "name": "一般小说",
+      "baseUrl": "https://www.2kxs.info/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "c9a2193e5d60fc53",
+      "name": "亿软网吧",
+      "baseUrl": "https://www.iyruan.com/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "6be70d958060b60b",
+      "name": "亿软网吧",
+      "baseUrl": "https://www.yruan.com/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "df07cc808619784b",
+      "name": "英文小说（英）",
+      "baseUrl": "https://www.yingyuxiaoshuo.com/",
+      "group": "小说 书源",
+      "upstream": "YCK 书单 1067",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "b4a1c2c3bc851dbf",
+      "name": "有度轻说（优+）",
+      "baseUrl": "https://www.yodu.org/",
+      "group": "小说 书源",
+      "upstream": "YCK 书单 1067",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "62e00b51d40aed82",
+      "name": "雨电子书",
+      "baseUrl": "https://m.iwurexs.com/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "9302dcebae65d4d0",
+      "name": "阅友小说",
+      "baseUrl": "https://sma.yueyouxs.com/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "389b345671f0d851",
+      "name": "镇魂小说（优++）",
+      "baseUrl": "https://www.zhenhunxiaoshuo.com/",
+      "group": "小说 书源",
+      "upstream": "YCK 书单 1067",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "4b8adb8a1f27d08b",
+      "name": "㊣飞卢小说 #破冰1101",
+      "baseUrl": "https://b.faloo.com/",
+      "group": "小说源",
+      "upstream": "Yiove 星辰整理",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "9dcb27395b8a8042",
+      "name": "纵横中文",
+      "baseUrl": "https://www.zongheng.com/",
+      "group": "正版小说 书源",
+      "upstream": "YCK 书单 1067",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    }
+  ]
+}
