@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "iyueba-net",
+  "name": "爱阅吧网",
+  "kind": "public-web",
+  "version": "1.0.0",
+  "baseUrl": "https://iyueba.net/",
+  "domains": [
+    "iyueba.net"
+  ],
+  "script": "scripts/iyueba-net.js",
+  "enabled": true,
+  "testOnly": true,
+  "testOnlyReason": "已转换公开上游 GET/CSS 规则；站点近期仍有更新作品，尚未完成 AppleNovelApp 宿主四阶段复测。",
+  "description": "普通小说网页源；GET 搜索，书籍详情、目录和正文采用 CSS 规则。站点近期仍有更新记录；当前宿主四阶段复测待完成。",
+  "licenseApproved": true,
+  "licenseType": "self-owned",
+  "licenseEvidence": "本仓库原创的声明式 GET/CSS 适配配置与解析器，不复制第三方脚本或小说正文。",
+  "licenseEvidenceUrl": "https://github.com/apa-arc/Novel-book-source-/blob/main/sources/iyueba-net.json",
+  "hostValidated": false,
+  "appConfig": {
+    "searchUrl": "https://iyueba.net/z/?keyword={keyword}",
+    "bookUrl": "https://iyueba.net/{bookUrl}",
+    "chapterListUrl": "https://iyueba.net/{bookUrl}",
+    "chapterUrl": "https://iyueba.net/{chapterUrl}",
+    "htmlRules": {
+      "search": {
+        "itemSelector": ".item",
+        "titleSelector": "a:nth-of-type(2)",
+        "urlSelector": "a:nth-of-type(2)"
+      },
+      "detail": {
+        "titleSelector": "h1"
+      },
+      "chapters": {
+        "itemSelector": "#content_1 a",
+        "titleSelector": "dd",
+        "urlSelector": "a"
+      },
+      "content": {
+        "contentSelector": "#booktxt",
+        "titleSelector": "h1"
+      }
+    }
+  }
+}
