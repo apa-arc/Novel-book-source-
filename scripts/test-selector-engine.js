@@ -45,8 +45,12 @@ assert.deepEqual(executeSelector(root,chain([{kind:"class",name:"list",index:nul
 assert.deepEqual(executeSelector(root,{engine:"css",query:"a",output:"text"}),["第一章","第二章","第三章"]);
 assert.deepEqual(executeSelector(root,{engine:"xpath",steps:[
   {axis:"descendant",tag:"div",filters:[{kind:"childExists",tag:"a"}]},
-  {axis:"child",tag:"a",filters:[{kind:"position",index:1}]}
+  {axis:"child",tag:"a",filters:[]}
 ],output:"text"}),["第一章","第二章","第三章"]);
+assert.deepEqual(executeSelector(root,{engine:"xpath",steps:[
+  {axis:"descendant",tag:"div",filters:[{kind:"childExists",tag:"a"}]},
+  {axis:"child",tag:"a",filters:[{kind:"position",index:1}]}
+],output:"text"}),["第一章"]);
 assert.deepEqual(executeSelector(root,{engine:"xpath",steps:[
   {axis:"descendant",tag:"a",filters:[{kind:"textEquals",value:"第二章"}]}
 ],output:"attr:href"}),["/2"]);
