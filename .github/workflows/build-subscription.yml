@@ -1,18 +1,16 @@
-name: Build subscriptions
+name: Build the single ordinary novel subscription
 
 on:
   push:
     branches: [main]
     paths:
       - "index.json"
-      - "adult-index.json"
       - "sources/**"
-      - "scripts/**"
       - ".github/workflows/build-subscription.yml"
   workflow_dispatch:
 
 concurrency:
-  group: build-source-subscriptions
+  group: build-novel-subscription
   cancel-in-progress: true
 
 permissions:
@@ -28,16 +26,16 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Build ordinary and adult subscription manifests
+      - name: Build the single ordinary subscription
         run: node scripts/build-subscription.js
-      - name: Commit updated manifests
+      - name: Commit updated subscription manifest
         run: |
-          if git diff --quiet -- app-subscription.json adult-app-subscription.json; then
-            echo "Subscription manifests are already up to date."
+          if git diff --quiet -- subscription.json; then
+            echo "subscription.json is already up to date."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add app-subscription.json adult-app-subscription.json
-          git commit -m "chore: update ordinary and adult subscriptions"
+          git add subscription.json
+          git commit -m "chore: update novel source subscription"
           git push
