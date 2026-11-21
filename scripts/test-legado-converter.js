@@ -164,7 +164,8 @@ try{
  assert.equal(literal.selector.value," - 作者：");
  const legacyText=parseLegacyChain("text.字数@text");
  assert.equal(legacyText.status,"candidate");
- assert.equal(legacyText.selector.value,"字数");
+ assert.equal(legacyText.selector.steps[0].kind,"text");
+ assert.equal(legacyText.selector.steps[0].name,"字数");
  const standaloneRegex=parseLegacyChain("##最新网址.*");
  assert.equal(standaloneRegex.status,"candidate");
  assert.equal(standaloneRegex.selector.engine,"replace");
