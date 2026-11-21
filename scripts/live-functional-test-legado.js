@@ -341,7 +341,7 @@ async function testSource(source, testId) {
   }
   return result;
 }
-function safePassedSource(source) {
+function safePassedSource(source, category = "ordinary") {
   const allowedTop = ["bookSourceName","bookSourceUrl","searchUrl"];
   const out = {};
   for (const key of allowedTop) {
@@ -350,7 +350,7 @@ function safePassedSource(source) {
     out[key] = value;
   }
   out.bookSourceType = 0;
-  out.bookSourceGroup = "实测可用";
+  out.bookSourceGroup = category === "adult" ? "🔞实测可用" : "实测可用";
   out.enabled = true;
   out.enabledExplore = false;
   out.bookSourceComment = "规则来源：luanmuc/legado-book-sources（MIT License）；已完成公开搜索、详情、目录及正文实测。此条目不含 Cookie、登录态或认证凭据。";
@@ -416,18 +416,24 @@ async function main() {
   }
   await Promise.all(Array.from({ length: CONCURRENCY }, worker));
   const passedSourceCandidates = [];
+  const passedAdultSourceCandidates = [];
   for (let index = 0; index < results.length; index++) {
     const result = results[index];
     const candidate = selected[index];
-    if (result.status !== "passed" || candidate.provider !== "luanmuc-candidate" || result.category !== "ordinary") continue;
+    if (result.status !== "passed" || candidate.provider !== "luanmuc-candidate") continue;
+    const contentStage = (result.stages || []).find(stage => stage.name === "content");
+    if (!contentStage || Number(contentStage.length) < 300) continue;
     try {
-      passedSourceCandidates.push(safePassedSource(candidate.source));
+      if (result.category === "ordinary") passedSourceCandidates.push(safePassedSource(candidate.source, "ordinary"));
+      else if (result.category === "adult") passedAdultSourceCandidates.push(safePassedSource(candidate.source, "adult"));
     } catch (error) {
       console.warn("passed source export skipped", result.name, String(error.message || error));
     }
   }
   const passedSourcesPath = path.join(ROOT, "reports", `live-functional-test-passed-sources-${SHARD_INDEX}-of-${SHARD_COUNT}.json`);
+  const passedAdultSourcesPath = path.join(ROOT, "reports", `live-functional-test-passed-adult-sources-${SHARD_INDEX}-of-${SHARD_COUNT}.json`);
   fs.writeFileSync(passedSourcesPath, JSON.stringify(passedSourceCandidates, null, 2) + "\n");
+  fs.writeFileSync(passedAdultSourcesPath, JSON.stringify(passedAdultSourceCandidates, null, 2) + "\n");
   const countStatus = status => results.filter(item => item.status === status).length;
   const report = {
     schemaVersion: 2,
@@ -452,6 +458,7 @@ async function main() {
       unverified: countStatus("unverified"),
       excluded: countStatus("excluded"),
       passedSourceCandidatesExported: passedSourceCandidates.length,
+      passedAdultSourceCandidatesExported: passedAdultSourceCandidates.length,
       subscriptionChanges: 0
     },
     note: "Statuses are separated: failed means a functional stage failed; unsupported means the bounded adapter cannot run the rule; blocked means login/access controls or upstream disabled; unverified means transient network/timeout. This report is diagnostic only and does not approve redistribution or alter subscriptions.",
