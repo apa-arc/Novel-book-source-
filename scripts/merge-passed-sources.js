@@ -57,8 +57,17 @@ function validateCandidate(source) {
   for (const [group, fields] of Object.entries(required)) {
     for (const field of fields) if (typeof source[group]?.[field] !== "string" || !source[group][field].trim()) return false;
   }
-  const serialized = JSON.stringify(source);
-  if (/cookie|authorization|access[_-]?token|password|secret|loginUrl|loginUi/i.test(serialized)) return false;
+  function hasCredentialKey(value) {
+    if (Array.isArray(value)) return value.some(hasCredentialKey);
+    if (!value || typeof value !== "object") return false;
+    for (const [key, nested] of Object.entries(value)) {
+      if (/cookie|authorization|access[_-]?token|password|secret|loginUrl|loginUi/i.test(key)) return true;
+      if (hasCredentialKey(nested)) return true;
+    }
+    return false;
+  }
+  if (hasCredentialKey(source)) return false;
+  if (/[?&](?:token|auth|password|secret|cookie)=/i.test(source.searchUrl)) return false;
   return true;
 }
 function main() {
