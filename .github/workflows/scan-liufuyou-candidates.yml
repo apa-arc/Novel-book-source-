@@ -13,7 +13,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: liufuyou-source-discovery
+  group: liufuyou-source-discovery-v2
   cancel-in-progress: true
 
 jobs:
