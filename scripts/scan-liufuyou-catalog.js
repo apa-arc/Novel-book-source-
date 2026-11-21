@@ -11,7 +11,7 @@ const UPSTREAM = [
   { name: "Daiaji LegadoSource", url: "https://raw.githubusercontent.com/daiaji/LegadoSource/main/%E4%B9%A6%E6%BA%90.json" }
 ];
 const ADULT = /🔞|成人|色情|情色|R18|18\+|18禁|PO18|肉文|淫秽|色情小说/i;
-const NON_NOVEL = /漫画|動漫|动漫|有声|听书|古籍|国学|诗词|詞典|词典|百科|维基|公版|杂志|影视|短剧|网盘|音乐|播客/i;
+const NON_NOVEL = /漫画|動漫|动漫|有声|听书|古籍|国学|诗词|詞典|词典|百科|维基|公版|杂志|影视|短剧|网盘|音乐|播客|英文|English|日语|Japanese|原版小说/i;
 const SECRET = /cookie|authorization|access[_-]?token|password|secret|login/i;
 
 async function fetchJson(item) {
