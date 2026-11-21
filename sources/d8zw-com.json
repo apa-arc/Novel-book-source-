@@ -9,7 +9,7 @@
     "www.d8zw.com"
   ],
   "script": "scripts/d8zw-com.js",
-  "enabled": false,
+  "enabled": true,
   "testOnly": true,
   "testOnlyReason": "来源于公开书源规则库；已过滤上游 JavaScript 依赖并转换为 GET/CSS。站点实时及当前宿主四阶段尚未完成实测。",
   "description": "普通小说网页源；GET 搜索，目录使用 CSS 选择器，正文使用 article.font_max。上游规则注明偶发 502，需控制请求频率。",
