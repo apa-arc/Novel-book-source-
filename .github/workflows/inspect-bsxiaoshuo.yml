@@ -1,0 +1,32 @@
+name: Inspect candidate novel site for native adapter
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/inspect-bsxiaoshuo.js"
+      - ".github/workflows/inspect-bsxiaoshuo.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install HTML parser
+        run: npm install --no-save --no-package-lock linkedom
+      - name: Inspect public form and page structure
+        run: node scripts/inspect-bsxiaoshuo.js
+      - name: Upload sanitized structure report
+        uses: actions/upload-artifact@v4
+        with:
+          name: bsxiaoshuo-inspection
+          path: reports/bsxiaoshuo-inspection.json
+          retention-days: 30
