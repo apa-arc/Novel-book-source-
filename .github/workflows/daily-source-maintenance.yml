@@ -43,7 +43,7 @@ jobs:
           node-version: 22
       - name: Scan public source host connectivity
         run: node scripts/live-host-probe.js
-      - name: Test current subscription with AppleNovelApp native runtime
+      - name: Retest registered sources with AppleNovelApp native runtime
         run: |
           npm install --no-save --no-package-lock tsx
           npx tsx scripts/live-test-app-runtime.ts
