@@ -10,8 +10,6 @@
   ],
   "script": "scripts/bqg-info.js",
   "enabled": true,
-  "testOnly": true,
-  "testOnlyReason": "来源于公开书源规则库；已移除上游章节翻页脚本依赖并转换为 GET/CSS。搜索结果结构和正文分页尚未完成实时与当前宿主实测。",
   "description": "普通小说网页源；GET 搜索，书籍详情页内含章节目录，正文使用 #booktxt。",
   "licenseApproved": true,
   "licenseType": "self-owned",
@@ -43,5 +41,7 @@
         "titleSelector": "h1.readTitle"
       }
     }
-  }
+  },
+  "userConfirmedExistingSource": true,
+  "userConfirmedWorkingAt": "2026-11-21"
 }
