@@ -68,7 +68,6 @@ function buildSubscription(index, root, updatedAt = new Date().toISOString(), op
 function main() {
   const root = path.resolve(__dirname, "..");
   const ordinaryIndex = JSON.parse(fs.readFileSync(path.join(root, "index.json"), "utf8"));
-  const adultIndex = JSON.parse(fs.readFileSync(path.join(root, "adult-index.json"), "utf8"));
   const unified = buildSubscription(ordinaryIndex, root, undefined, {
     subscriptionId: "apa-arc-novel-book-source",
     name: "小说源",
