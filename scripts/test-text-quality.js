@@ -1,6 +1,6 @@
 "use strict";
 const assert = require("node:assert/strict");
-const { scanTextQuality, scanArticles } = require("../runtime/text-quality");
+const { scanTextQuality, scanArticles, cleanPromotionalContent } = require("../runtime/text-quality");
 
 const clean = "第一回 宴桃園豪傑三結義，斬黃巾英雄首立功。這是一段正常的繁體中文古典小說正文。".repeat(4);
 assert.equal(scanTextQuality(clean).status, "normal");
@@ -15,6 +15,16 @@ assert.ok(scanTextQuality("\u0001").flags.some(flag => flag.rule === "control-ch
 assert.ok(scanTextQuality("正常文字\u3000繁體字與异体字".repeat(10)).status === "normal");
 assert.ok(scanTextQuality("").flags.some(flag => flag.rule === "empty-content"));
 assert.equal(scanTextQuality("短").status, "review");
+
+const promoSample = "第一章\\n主角推门走进院子，屋内灯火通明。\\n你说说一日暴富，神通者最新最快更新，點擊直達\\n京東搜索：福利大紅包962，領取至高26888元雙11紅包。\\n主角抬头看向窗外。";
+const cleanedPromo = cleanPromotionalContent(promoSample);
+assert.equal(cleanedPromo.removedBlocks, 2);
+assert.ok(cleanedPromo.content.includes("主角推门走进院子"));
+assert.ok(cleanedPromo.content.includes("主角抬头看向窗外"));
+assert.ok(!cleanedPromo.content.includes("京東搜索"));
+assert.ok(!cleanedPromo.content.includes("點擊直達"));
+const ordinaryClickProse = "他点击桌上的按钮，随后最新消息传来。";
+assert.equal(cleanPromotionalContent(ordinaryClickProse).content, ordinaryClickProse);
 
 const batch = scanArticles([
   { title: "第一回", content: clean },
