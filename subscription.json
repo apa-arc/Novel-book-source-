@@ -4,7 +4,7 @@
   "name": "小说源",
   "description": "普通小说统一订阅；来源发现问题后持续修复或下架。",
   "repository": "https://github.com/apa-arc/Novel-book-source-",
-  "updatedAt": "2026-11-21T12:05:00.000Z",
+  "updatedAt": "2026-11-21T09:33:31.360Z",
   "sourceCount": 26,
   "sources": [
     {
@@ -80,8 +80,8 @@
           },
           "chapters": {
             "itemSelector": "#content_1 a",
-            "titleSelector": "a",
-            "urlSelector": "a"
+            "titleSelector": ":self",
+            "urlSelector": ":self"
           },
           "content": {
             "contentSelector": "#booktxt",
@@ -294,8 +294,8 @@
           },
           "chapters": {
             "itemSelector": "#list a",
-            "titleSelector": "a",
-            "urlSelector": "a"
+            "titleSelector": ":self",
+            "urlSelector": ":self"
           },
           "content": {
             "contentSelector": ".con",
@@ -340,7 +340,7 @@
             "urlSelector": "a"
           },
           "content": {
-            "contentSelector": "#content p",
+            "contentSelector": "#content",
             "titleSelector": "h1"
           }
         }
@@ -416,7 +416,8 @@
           },
           "detail": {
             "titleSelector": "h1",
-            "descriptionSelector": "meta[property='og:description']"
+            "descriptionSelector": "meta[property='og:description']",
+            "descriptionAttribute": "content"
           },
           "chapters": {
             "itemSelector": "#list dd",
@@ -458,7 +459,8 @@
           },
           "detail": {
             "titleSelector": "h1",
-            "descriptionSelector": "meta[property='og:description']"
+            "descriptionSelector": "meta[property='og:description']",
+            "descriptionAttribute": "content"
           },
           "chapters": {
             "itemSelector": ".con dd",
@@ -489,7 +491,7 @@
       "appConfig": {
         "searchUrl": "https://www.xbiquge.info/search.php?q={keyword}",
         "bookUrl": "https://www.xbiquge.info/{bookUrl}",
-        "chapterListUrl": "https://www.xbiquge.info/{bookUrl}index_1.html",
+        "chapterListUrl": "https://www.xbiquge.info/{bookPath}/index_1.html",
         "chapterUrl": "https://www.xbiquge.info/{chapterUrl}",
         "htmlRules": {
           "search": {
@@ -544,7 +546,10 @@
           "detail": {
             "titleSelector": "meta[property='og:novel:book_name']",
             "authorSelector": "meta[property='og:novel:author']",
-            "descriptionSelector": "meta[property='og:description']"
+            "descriptionSelector": "meta[property='og:description']",
+            "titleAttribute": "content",
+            "authorAttribute": "content",
+            "descriptionAttribute": "content"
           },
           "chapters": {
             "itemSelector": ".book_list2 li",
@@ -576,7 +581,7 @@
       "appConfig": {
         "searchUrl": "https://www.d8zw.com/search.php?q={keyword}",
         "bookUrl": "https://www.d8zw.com/{bookUrl}",
-        "chapterListUrl": "https://www.d8zw.com/{bookUrl}index_1.html",
+        "chapterListUrl": "https://www.d8zw.com/{bookPath}/index_1.html",
         "chapterUrl": "https://www.d8zw.com/{chapterUrl}",
         "htmlRules": {
           "search": {
@@ -659,7 +664,7 @@
       "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/biqubao-com.json",
       "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/biqubao-com.js",
       "appConfig": {
-        "searchUrl": "https://www.biqubao.com//search.php?keyword={keyword}&page=1",
+        "searchUrl": "https://www.biqubao.com/search.php?keyword={keyword}&page=1",
         "bookUrl": "https://www.biqubao.com/{bookUrl}",
         "chapterListUrl": "https://www.biqubao.com/{bookUrl}",
         "chapterUrl": "https://www.biqubao.com/{chapterUrl}",
@@ -701,7 +706,7 @@
       "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/zwda-com.json",
       "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/zwda-com.js",
       "appConfig": {
-        "searchUrl": "https://www.zwda.com//search.php?keyword={keyword}&page={page}",
+        "searchUrl": "https://www.zwda.com/search.php?keyword={keyword}&page={page}",
         "bookUrl": "https://www.zwda.com/{bookUrl}",
         "chapterListUrl": "https://www.zwda.com/{bookUrl}",
         "chapterUrl": "https://www.zwda.com/{chapterUrl}",
@@ -743,7 +748,7 @@
       "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/yb3-cc.json",
       "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/yb3-cc.js",
       "appConfig": {
-        "searchUrl": "https://www.yb3.cc//search.php?keyword={keyword}&page={page}",
+        "searchUrl": "https://www.yb3.cc/search.php?keyword={keyword}&page={page}",
         "bookUrl": "https://www.yb3.cc/{bookUrl}",
         "chapterListUrl": "https://www.yb3.cc/{bookUrl}",
         "chapterUrl": "https://www.yb3.cc/{chapterUrl}",
@@ -785,7 +790,7 @@
       "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/biquwu-cc.json",
       "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/biquwu-cc.js",
       "appConfig": {
-        "searchUrl": "https://www.biquwu.cc//search.php?keyword={keyword}&page={page}",
+        "searchUrl": "https://www.biquwu.cc/search.php?keyword={keyword}&page={page}",
         "bookUrl": "https://www.biquwu.cc/{bookUrl}",
         "chapterListUrl": "https://www.biquwu.cc/{bookUrl}",
         "chapterUrl": "https://www.biquwu.cc/{chapterUrl}",
@@ -827,7 +832,7 @@
       "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/liewen-cc.json",
       "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/liewen-cc.js",
       "appConfig": {
-        "searchUrl": "https://www.liewen.cc//search.php?keyword={keyword}&page={page}",
+        "searchUrl": "https://www.liewen.cc/search.php?keyword={keyword}&page={page}",
         "bookUrl": "https://www.liewen.cc/{bookUrl}",
         "chapterListUrl": "https://www.liewen.cc/{bookUrl}",
         "chapterUrl": "https://www.liewen.cc/{chapterUrl}",
