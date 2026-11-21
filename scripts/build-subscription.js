@@ -54,7 +54,8 @@ function buildSubscription(index, root, updatedAt = new Date().toISOString(), op
       description: meta.description || "", baseUrl: meta.baseUrl, domains: meta.domains,
       categories: Array.isArray(meta.categories) ? meta.categories : [],
       metadataUrl: RAW_BASE + item.file, scriptUrl: RAW_BASE + meta.script,
-      ...(meta.appConfig ? { appConfig: meta.appConfig } : {})
+      ...(meta.appConfig ? { appConfig: meta.appConfig } : {}),
+      ...(meta.testOnly === true ? { testOnly: true, testOnlyReason: meta.testOnlyReason } : {})
     });
   }
   return {
