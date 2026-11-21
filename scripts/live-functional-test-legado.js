@@ -162,10 +162,10 @@ function simpleSearchUrl(source, keyword, page) {
     .replace(/\{\{\s*page\s*-\s*1\s*\}\}/gi, String(page - 1))
     .replace(/\{\{\s*page\s*\+\s*1\s*\}\}/gi, String(page + 1));
   const u = new URL(replaced, source.bookSourceUrl);
+  if (u.protocol === "http:") u.protocol = "https:";
   const host = u.hostname.toLowerCase();
   const privateHost = host === "localhost" || host.endsWith(".local") || ["127.","10.","192.168.","172.16.","172.17.","172.18.","172.19.","172.20.","172.21.","172.22.","172.23.","172.24.","172.25.","172.26.","172.27.","172.28.","172.29.","172.30.","172.31."].some(prefix => host.startsWith(prefix));
   if (u.protocol !== "https:" || u.username || u.password || !host || privateHost) throw new Error("unsafe-search-url");
-  return u.href;
   return u.href;
 }
 function extract(node, rules, baseUrl, host, extraHosts = []) {
