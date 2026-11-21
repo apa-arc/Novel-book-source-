@@ -8,6 +8,13 @@
       "kind": "public-web",
       "file": "sources/bqg-info.json",
       "enabled": false
+    },
+    {
+      "id": "deqi-novel",
+      "name": "得奇小说（App适配候选）",
+      "kind": "public-web",
+      "file": "sources/deqi-novel.json",
+      "enabled": false
     }
   ]
 }
