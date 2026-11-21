@@ -59,14 +59,14 @@ async function testTerm(source: NovelSource, keyword: string): Promise<TermResul
       lastError = errorText(error);
       out.attempts = attempt;
       const classification = classifyAppSearchError(lastError);
-      const isForbiddenOrRedirect = /HTTP\\s*403\\b|redirect|重定向/i.test(lastError);
+      const isForbiddenOrRedirect = /HTTP\s*403\b|redirect|重定向/i.test(lastError);
       const retryLimit = isForbiddenOrRedirect ? 2 : maxAttempts;
       if (attempt < retryLimit) {
         // Avoid hammering deterministic access blocks; give rate limits and transient
         // transport failures a longer recovery window before the next attempt.
-        const delayMs = /HTTP\\s*429\\b/i.test(lastError)
+        const delayMs = /HTTP\s*429\b/i.test(lastError)
           ? 8000 * attempt
-          : /HTTP\\s*5\\d\\d\\b|timed?\\s*out|timeout|超时|ECONNRESET|ECONNREFUSED|ENOTFOUND|EAI_AGAIN|fetch failed|网络请求失败/i.test(lastError)
+          : /HTTP\s*5\d\d\b|timed?\s*out|timeout|超时|ECONNRESET|ECONNREFUSED|ENOTFOUND|EAI_AGAIN|fetch failed|网络请求失败/i.test(lastError)
             ? 4000 * attempt
             : isForbiddenOrRedirect
               ? 5000
