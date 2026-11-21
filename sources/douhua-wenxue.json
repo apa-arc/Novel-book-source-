@@ -3,7 +3,7 @@
   "id": "douhua-wenxue",
   "name": "豆花文学",
   "kind": "public-web",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "baseUrl": "https://www.douhuawenxue.com/",
   "domains": [
     "www.douhuawenxue.com"
