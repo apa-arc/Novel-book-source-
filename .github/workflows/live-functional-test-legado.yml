@@ -7,6 +7,7 @@ on:
     branches: [main]
     paths:
       - "scripts/live-functional-test-legado.js"
+      - "scripts/merge-passed-sources.js"
       - "scripts/convert-legado-rules.js"
       - "runtime/selector-engine.js"
       - "runtime/text-quality.js"
