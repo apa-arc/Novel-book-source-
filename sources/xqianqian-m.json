@@ -9,7 +9,7 @@
     "m.xqianqian.com"
   ],
   "script": "scripts/xqianqian-m.js",
-  "enabled": false,
+  "enabled": true,
   "testOnly": true,
   "testOnlyReason": "已转换公开上游 GET/CSS 规则；网页端仍有近期更新记录，尚未完成 AppleNovelApp 宿主四阶段复测。",
   "description": "普通小说网页源；GET 搜索，详情、目录和正文使用 CSS 规则。公开上游标记为有效，网站近期仍有更新；当前宿主四阶段复测待完成。",
