@@ -15,16 +15,16 @@
       "name": "九一中文",
       "kind": "public-web",
       "file": "sources/jiuyi-91zww.json",
-      "enabled": true,
-      "testOnly": true
+      "enabled": false,
+      "testOnly": false
     },
     {
       "id": "xinbiquge-info",
       "name": "新笔趣阁小说网",
       "kind": "public-web",
       "file": "sources/xinbiquge-info.json",
-      "enabled": true,
-      "testOnly": true
+      "enabled": false,
+      "testOnly": false
     },
     {
       "id": "biquge-17177",
@@ -39,8 +39,8 @@
       "name": "第八中文网",
       "kind": "public-web",
       "file": "sources/d8zw-com.json",
-      "enabled": true,
-      "testOnly": true
+      "enabled": false,
+      "testOnly": false
     },
     {
       "id": "bqg-info",
@@ -55,31 +55,32 @@
       "name": "千千小说",
       "kind": "public-web",
       "file": "sources/xqianqian-m.json",
-      "enabled": true,
-      "testOnly": true
+      "enabled": false,
+      "testOnly": false
     },
     {
       "id": "douhua-wenxue",
       "name": "豆花文学",
       "kind": "public-web",
       "file": "sources/douhua-wenxue.json",
-      "enabled": true,
-      "testOnly": true
+      "enabled": false,
+      "testOnly": false
     },
     {
       "id": "iyueba-net",
       "name": "爱阅吧网",
       "kind": "public-web",
       "file": "sources/iyueba-net.json",
-      "enabled": true,
-      "testOnly": true
+      "enabled": false,
+      "testOnly": false
     },
     {
       "id": "52shuku-net",
       "name": "52书库（男频武侠）",
       "kind": "public-web",
       "file": "sources/52shuku-net.json",
-      "enabled": true
+      "enabled": true,
+      "testOnly": true
     }
   ]
 }
