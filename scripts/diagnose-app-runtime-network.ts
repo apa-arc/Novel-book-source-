@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import { parseSourceSubscription } from "../app/src/source-subscription.ts";
+import { parseHtmlSearchResults } from "../app/src/html-source-parser.ts";
 
 const raw = fs.readFileSync("config/health-check-subscription.json", "utf8");
 const parsed = parseSourceSubscription(raw);
@@ -88,6 +89,29 @@ async function probe(source: any, keyword: string, variant: typeof variants[numb
     const entry = JSON.parse(raw).sources.find((item: any) => item.id === source.remoteId);
     for (const keyword of keywords) {
       for (const variant of variants) for (const redirectPolicy of ["manual", "follow"] as const) results.push(await probe(entry, keyword, variant, redirectPolicy));
+    }
+  }
+  const qianqian = parsed.compatible.find((source) => source.remoteId === "xqianqian-m");
+  if (qianqian) {
+    try {
+      const response = await fetch("https://m.xqianqian.com/", {
+        headers: { Accept: "text/html,application/json;q=0.9,*/*;q=0.5" },
+        redirect: "follow",
+      });
+      const body = await response.text();
+      const page = parseHtmlSearchResults(body, qianqian.remoteId, qianqian.name, "斗罗大陆", response.url, qianqian.htmlRules!.search!);
+      results.push({
+        source: "千千小说",
+        id: "xqianqian-m",
+        variant: "homepage-parser-control",
+        status: response.status,
+        finalUrl: response.url,
+        resultCount: page.items.length,
+        firstTitles: page.items.slice(0, 8).map((item) => item.title),
+        note: "Control test: parses the redirected homepage using the configured search CSS rules, not a real search response.",
+      });
+    } catch (error) {
+      results.push({ source: "千千小说", id: "xqianqian-m", variant: "homepage-parser-control", error: error instanceof Error ? error.message : String(error) });
     }
   }
   fs.mkdirSync("reports", { recursive: true });
