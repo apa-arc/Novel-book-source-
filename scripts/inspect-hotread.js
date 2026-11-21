@@ -1,0 +1,23 @@
+#!/usr/bin/env node
+"use strict";
+const fs=require("node:fs"),path=require("node:path");
+const {parseHTML}=require("linkedom");
+const ROOT=path.resolve(__dirname,".."),BASE="https://mobile.hotread.com/";
+const TERMS=["斗罗大陆","斗破苍穹"];
+const headers={"user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/131.0.0.0 Safari/537.36","accept":"text/html,application/xhtml+xml"};
+async function get(url){const r=await fetch(url,{headers,signal:AbortSignal.timeout(15000),redirect:"error"});return {status:r.status,url:r.url,contentType:r.headers.get("content-type")||"",html:await r.text()};}
+function norm(v,n=1400){return String(v||"").trim().replace(/\s+/g," ").slice(0,n);}
+function summary(n){return {tag:n.tagName?.toLowerCase()||"",id:n.id||"",className:String(n.className?.baseVal||n.className||"").slice(0,100),textLength:(n.textContent||"").trim().length,text:norm(n.textContent,180)};}
+(async()=>{
+ const results=[];
+ for(const keyword of TERMS){
+  const url=new URL("/search",BASE);url.searchParams.set("keyWord",keyword);
+  const search=await get(url.href),doc=parseHTML(search.html).document;
+  const anchors=[...doc.querySelectorAll("a[href]")].map(a=>({text:norm(a.textContent,120),href:a.getAttribute("href")||""})).filter(a=>a.text&&a.href).slice(0,100);
+  const candidates=[...doc.querySelectorAll("div,li,article,section")].map(summary).filter(x=>x.textLength>30).sort((a,b)=>b.textLength-a.textLength).slice(0,20);
+  results.push({keyword,search:{status:search.status,url:search.url,contentType:search.contentType,title:norm(doc.querySelector("title")?.textContent),body:norm(doc.body?.textContent),anchors,candidates}});
+ }
+ const report={schemaVersion:1,generatedAt:new Date().toISOString(),note:"仅检查 GET 搜索结果页结构，不登录、不保存小说正文。",results};
+ const out=path.join(ROOT,"reports/hotread-search-inspection.json");fs.mkdirSync(path.dirname(out),{recursive:true});fs.writeFileSync(out,JSON.stringify(report,null,2)+"\n");
+ console.log(results.map(x=>({keyword:x.keyword,status:x.search.status,anchors:x.search.anchors.length,title:x.search.title})));
+})().catch(e=>{console.error(e);process.exit(1);});
