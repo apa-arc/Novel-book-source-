@@ -73,6 +73,22 @@
       "file": "sources/lingling-00shu.json",
       "enabled": true,
       "testOnly": true
+    },
+    {
+      "id": "wujixsw-info",
+      "name": "无极小说",
+      "kind": "public-web",
+      "file": "sources/wujixsw-info.json",
+      "enabled": true,
+      "testOnly": true
+    },
+    {
+      "id": "yushufang-ysfwxc",
+      "name": "御书房",
+      "kind": "public-web",
+      "file": "sources/yushufang-ysfwxc.json",
+      "enabled": true,
+      "testOnly": true
     }
   ]
 }
