@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "subscriptionId": "apa-arc-native-candidate-test",
+  "name": "候选源 App 兼容测试",
+  "updatedAt": "2026-11-21T11:10:59.201Z",
+  "sourceCount": 2,
+  "sources": [
+    {
+      "id": "deqitxt-com",
+      "name": "得奇小说1",
+      "version": "1.0.0",
+      "baseUrl": "https://www.deqitxt.com/",
+      "domains": [
+        "www.deqitxt.com"
+      ],
+      "appConfig": {
+        "searchUrl": "https://www.deqitxt.com/so/so.aspx?key={keyword}",
+        "bookUrl": "https://www.deqitxt.com/{bookUrl}",
+        "chapterListUrl": "https://www.deqitxt.com/{bookUrl}",
+        "chapterUrl": "https://www.deqitxt.com/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": "div.container div.item",
+            "titleSelector": "h3 a",
+            "urlSelector": "h3 a"
+          },
+          "detail": {
+            "titleSelector": ".itemtxt h1 a",
+            "authorSelector": ".itemtxt p:nth-of-type(2) a",
+            "descriptionSelector": ".des"
+          },
+          "chapters": {
+            "itemSelector": "#list li",
+            "titleSelector": "a",
+            "urlSelector": "a"
+          },
+          "content": {
+            "contentSelector": "div.con p",
+            "titleSelector": "h1"
+          }
+        }
+      }
+    },
+    {
+      "id": "shuzhaige-com",
+      "name": "书斋阁书",
+      "version": "1.0.0",
+      "baseUrl": "https://www.shuzhaige.com/",
+      "domains": [
+        "www.shuzhaige.com"
+      ],
+      "appConfig": {
+        "searchUrl": "https://www.shuzhaige.com/e/search/index.php?tbname=bookname&show=title,writer&tempid=1&keyboard={keyword}",
+        "bookUrl": "https://www.shuzhaige.com/{bookUrl}",
+        "chapterListUrl": "https://www.shuzhaige.com/{bookUrl}",
+        "chapterUrl": "https://www.shuzhaige.com/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": "table.table tbody tr",
+            "titleSelector": "td:nth-of-type(1) a",
+            "urlSelector": "td:nth-of-type(1) a"
+          },
+          "detail": {
+            "titleSelector": "h1"
+          },
+          "chapters": {
+            "itemSelector": "#play_0 ul li",
+            "titleSelector": "a",
+            "urlSelector": "a"
+          },
+          "content": {
+            "contentSelector": "#content",
+            "titleSelector": "h1"
+          }
+        }
+      }
+    }
+  ]
+}
