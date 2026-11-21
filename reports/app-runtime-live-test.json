@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-21T16:55:51.826Z",
-  "testStandard": "AppleNovelApp search semantics + separately reported reading stages; Node network errors are environment-inconclusive",
+  "generatedAt": "2026-11-21T17:09:37.424Z",
+  "testStandard": "AppleNovelApp search semantics + separately reported reading stages; each search retries up to 3 times; transient Node network errors are environment-inconclusive; title relevance is separate from request success",
   "keywords": [
     "斗罗",
     "斗破"
@@ -9,16 +9,19 @@
     "total": 10,
     "appCompatible": 10,
     "appUnsupported": 0,
-    "readableBoth": 5,
+    "readableBoth": 7,
     "readableOne": 0,
-    "searchOrCatalogOnly": 3,
+    "searchOrCatalogOnly": 1,
     "environmentInconclusive": 2,
     "failed": 0,
-    "searchPassed": 14,
+    "searchPassed": 16,
     "searchFailed": 0,
-    "searchInconclusive": 6,
-    "searchRequestsPassed": 14,
-    "chapterContentPassed": 10
+    "searchInconclusive": 4,
+    "searchRequestsPassed": 16,
+    "searchZeroResults": 2,
+    "searchHasResultsButNoTitleMatch": 1,
+    "searchRetriesUsed": 4,
+    "chapterContentPassed": 14
   },
   "results": [
     {
@@ -35,7 +38,7 @@
             {
               "stage": "搜索",
               "status": "passed",
-              "detail": "App 搜索请求及解析成功；返回 100 条结果"
+              "detail": "App 搜索请求及解析成功；返回 100 条结果；标题匹配关键词 100 条；尝试 1 次"
             },
             {
               "stage": "目录",
@@ -53,7 +56,9 @@
               "detail": "首章正文读取成功（917 字符）"
             }
           ],
+          "attempts": 1,
           "resultCount": 100,
+          "matchingResultCount": 100,
           "selectedTitle": "斗罗之双子斗罗"
         },
         "斗破": {
@@ -65,7 +70,7 @@
             {
               "stage": "搜索",
               "status": "passed",
-              "detail": "App 搜索请求及解析成功；返回 100 条结果"
+              "detail": "App 搜索请求及解析成功；返回 100 条结果；标题匹配关键词 98 条；尝试 1 次"
             },
             {
               "stage": "目录",
@@ -83,7 +88,9 @@
               "detail": "首章正文读取成功（1023 字符）"
             }
           ],
+          "attempts": 1,
           "resultCount": 100,
+          "matchingResultCount": 98,
           "selectedTitle": "斗破皇城"
         }
       }
@@ -102,7 +109,7 @@
             {
               "stage": "搜索",
               "status": "passed",
-              "detail": "App 搜索请求及解析成功；返回 0 条结果"
+              "detail": "App 搜索请求及解析成功；返回 0 条结果；标题匹配关键词 0 条；尝试 1 次"
             },
             {
               "stage": "目录",
@@ -120,7 +127,9 @@
               "detail": "没有搜索结果可供打开"
             }
           ],
-          "resultCount": 0
+          "attempts": 1,
+          "resultCount": 0,
+          "matchingResultCount": 0
         },
         "斗破": {
           "keyword": "斗破",
@@ -131,7 +140,7 @@
             {
               "stage": "搜索",
               "status": "passed",
-              "detail": "App 搜索请求及解析成功；返回 0 条结果"
+              "detail": "App 搜索请求及解析成功；返回 0 条结果；标题匹配关键词 0 条；尝试 1 次"
             },
             {
               "stage": "目录",
@@ -149,74 +158,80 @@
               "detail": "没有搜索结果可供打开"
             }
           ],
-          "resultCount": 0
+          "attempts": 1,
+          "resultCount": 0,
+          "matchingResultCount": 0
         }
       }
     },
     {
       "id": "xinbiquge-info",
       "name": "新笔趣阁小说网",
-      "status": "search-or-catalog-only",
+      "status": "readable-both",
       "terms": {
         "斗罗": {
           "keyword": "斗罗",
-          "status": "search-inconclusive",
-          "searchStatus": "inconclusive",
-          "readingStatus": "not-tested",
-          "stages": [
-            {
-              "stage": "搜索",
-              "status": "inconclusive",
-              "detail": "书源请求超时（12 秒）。"
-            },
-            {
-              "stage": "目录",
-              "status": "skipped",
-              "detail": "搜索请求未成功或响应无法解析"
-            },
-            {
-              "stage": "详情",
-              "status": "skipped",
-              "detail": "没有可用搜索结果"
-            },
-            {
-              "stage": "正文",
-              "status": "skipped",
-              "detail": "没有可用搜索结果"
-            }
-          ],
-          "error": "书源请求超时（12 秒）。"
-        },
-        "斗破": {
-          "keyword": "斗破",
-          "status": "search-only",
+          "status": "readable",
           "searchStatus": "passed",
-          "readingStatus": "catalog-failed",
+          "readingStatus": "readable",
           "stages": [
             {
               "stage": "搜索",
               "status": "passed",
-              "detail": "App 搜索请求及解析成功；返回 20 条结果"
+              "detail": "App 搜索请求及解析成功；返回 20 条结果；标题匹配关键词 20 条；尝试 1 次"
             },
             {
               "stage": "目录",
-              "status": "failed",
-              "detail": "书源服务器返回 HTTP 404。"
+              "status": "passed",
+              "detail": "获取 100 章；首章「第一章 弑神剑」"
             },
             {
-              "stage": "详情",
-              "status": "skipped",
-              "detail": "App 阅读流程先加载目录；目录失败后不会继续详情请求"
+              "stage": "详情（可选）",
+              "status": "passed",
+              "detail": "详情页读取成功：从斗罗开始俘获女神"
             },
             {
               "stage": "正文",
-              "status": "skipped",
-              "detail": "目录不可用，无法取得章节链接"
+              "status": "passed",
+              "detail": "首章正文读取成功（653 字符）"
             }
           ],
+          "attempts": 1,
           "resultCount": 20,
-          "selectedTitle": "[网游]斗破从异火开局",
-          "error": "书源服务器返回 HTTP 404。"
+          "matchingResultCount": 20,
+          "selectedTitle": "[网游]从斗罗开始俘获女神"
+        },
+        "斗破": {
+          "keyword": "斗破",
+          "status": "readable",
+          "searchStatus": "passed",
+          "readingStatus": "readable",
+          "stages": [
+            {
+              "stage": "搜索",
+              "status": "passed",
+              "detail": "App 搜索请求及解析成功；返回 20 条结果；标题匹配关键词 17 条；尝试 1 次"
+            },
+            {
+              "stage": "目录",
+              "status": "passed",
+              "detail": "获取 100 章；首章「第1章 纳兰嫣然爱上我」"
+            },
+            {
+              "stage": "详情（可选）",
+              "status": "passed",
+              "detail": "详情页读取成功：斗破从异火开局"
+            },
+            {
+              "stage": "正文",
+              "status": "passed",
+              "detail": "首章正文读取成功（1001 字符）"
+            }
+          ],
+          "attempts": 1,
+          "resultCount": 20,
+          "matchingResultCount": 17,
+          "selectedTitle": "[网游]斗破从异火开局"
         }
       }
     },
@@ -234,7 +249,7 @@
             {
               "stage": "搜索",
               "status": "passed",
-              "detail": "App 搜索请求及解析成功；返回 20 条结果"
+              "detail": "App 搜索请求及解析成功；返回 20 条结果；标题匹配关键词 20 条；尝试 1 次"
             },
             {
               "stage": "目录",
@@ -252,7 +267,9 @@
               "detail": "首章正文读取成功（797 字符）"
             }
           ],
+          "attempts": 1,
           "resultCount": 20,
+          "matchingResultCount": 20,
           "selectedTitle": "[网游]圣骑斗罗"
         },
         "斗破": {
@@ -264,7 +281,7 @@
             {
               "stage": "搜索",
               "status": "passed",
-              "detail": "App 搜索请求及解析成功；返回 20 条结果"
+              "detail": "App 搜索请求及解析成功；返回 20 条结果；标题匹配关键词 17 条；尝试 1 次"
             },
             {
               "stage": "目录",
@@ -282,7 +299,9 @@
               "detail": "首章正文读取成功（976 字符）"
             }
           ],
+          "attempts": 1,
           "resultCount": 20,
+          "matchingResultCount": 17,
           "selectedTitle": "[网游]斗破里的鸿蒙灵宝"
         }
       }
@@ -290,67 +309,71 @@
     {
       "id": "d8zw-com",
       "name": "第八中文网",
-      "status": "search-or-catalog-only",
+      "status": "readable-both",
       "terms": {
         "斗罗": {
           "keyword": "斗罗",
-          "status": "search-only",
+          "status": "readable",
           "searchStatus": "passed",
-          "readingStatus": "catalog-failed",
+          "readingStatus": "readable",
           "stages": [
             {
               "stage": "搜索",
               "status": "passed",
-              "detail": "App 搜索请求及解析成功；返回 20 条结果"
+              "detail": "App 搜索请求及解析成功；返回 20 条结果；标题匹配关键词 20 条；尝试 1 次"
             },
             {
               "stage": "目录",
-              "status": "failed",
-              "detail": "书源请求超时（12 秒）。"
+              "status": "passed",
+              "detail": "获取 100 章；首章「第1章 神王大计恐怖如斯」"
             },
             {
-              "stage": "详情",
-              "status": "skipped",
-              "detail": "App 阅读流程先加载目录；目录失败后不会继续详情请求"
+              "stage": "详情（可选）",
+              "status": "passed",
+              "detail": "详情页读取成功：斗罗之二周目从独孤博开始"
             },
             {
               "stage": "正文",
-              "status": "skipped",
-              "detail": "目录不可用，无法取得章节链接"
+              "status": "passed",
+              "detail": "首章正文读取成功（1290 字符）"
             }
           ],
+          "attempts": 1,
           "resultCount": 20,
-          "selectedTitle": "[网游]斗罗之二周目从独孤博开始",
-          "error": "书源请求超时（12 秒）。"
+          "matchingResultCount": 20,
+          "selectedTitle": "[网游]斗罗之二周目从独孤博开始"
         },
         "斗破": {
           "keyword": "斗破",
-          "status": "search-inconclusive",
-          "searchStatus": "inconclusive",
-          "readingStatus": "not-tested",
+          "status": "readable",
+          "searchStatus": "passed",
+          "readingStatus": "readable",
           "stages": [
             {
               "stage": "搜索",
-              "status": "inconclusive",
-              "detail": "书源请求超时（12 秒）。"
+              "status": "passed",
+              "detail": "App 搜索请求及解析成功；返回 20 条结果；标题匹配关键词 20 条；尝试 1 次"
             },
             {
               "stage": "目录",
-              "status": "skipped",
-              "detail": "搜索请求未成功或响应无法解析"
+              "status": "passed",
+              "detail": "获取 100 章；首章「第一章 墨家墨唐」"
             },
             {
-              "stage": "详情",
-              "status": "skipped",
-              "detail": "没有可用搜索结果"
+              "stage": "详情（可选）",
+              "status": "passed",
+              "detail": "详情页读取成功：斗破之我有系统面板"
             },
             {
               "stage": "正文",
-              "status": "skipped",
-              "detail": "没有可用搜索结果"
+              "status": "passed",
+              "detail": "首章正文读取成功（737 字符）"
             }
           ],
-          "error": "书源请求超时（12 秒）。"
+          "attempts": 1,
+          "resultCount": 20,
+          "matchingResultCount": 20,
+          "selectedTitle": "[玄幻]斗破之我有系统面板"
         }
       }
     },
@@ -368,7 +391,7 @@
             {
               "stage": "搜索",
               "status": "passed",
-              "detail": "App 搜索请求及解析成功；返回 100 条结果"
+              "detail": "App 搜索请求及解析成功；返回 100 条结果；标题匹配关键词 100 条；尝试 1 次"
             },
             {
               "stage": "目录",
@@ -383,10 +406,12 @@
             {
               "stage": "正文",
               "status": "passed",
-              "detail": "首章正文读取成功（1174 字符）"
+              "detail": "首章正文读取成功（1180 字符）"
             }
           ],
+          "attempts": 1,
           "resultCount": 100,
+          "matchingResultCount": 100,
           "selectedTitle": "斗罗：武魂鸡腿和酒，玄子魔王护"
         },
         "斗破": {
@@ -398,7 +423,7 @@
             {
               "stage": "搜索",
               "status": "passed",
-              "detail": "App 搜索请求及解析成功；返回 97 条结果"
+              "detail": "App 搜索请求及解析成功；返回 97 条结果；标题匹配关键词 96 条；尝试 1 次"
             },
             {
               "stage": "目录",
@@ -413,10 +438,12 @@
             {
               "stage": "正文",
               "status": "passed",
-              "detail": "首章正文读取成功（1225 字符）"
+              "detail": "首章正文读取成功（1221 字符）"
             }
           ],
+          "attempts": 1,
           "resultCount": 97,
+          "matchingResultCount": 96,
           "selectedTitle": "斗破：无限模拟，从古族客卿开始"
         }
       }
@@ -435,7 +462,7 @@
             {
               "stage": "搜索",
               "status": "inconclusive",
-              "detail": "书源网络请求失败，请检查网络或站点状态。"
+              "detail": "连续 3 次请求仍未成功：书源网络请求失败，请检查网络或站点状态。"
             },
             {
               "stage": "目录",
@@ -453,6 +480,7 @@
               "detail": "没有可用搜索结果"
             }
           ],
+          "attempts": 3,
           "error": "书源网络请求失败，请检查网络或站点状态。"
         },
         "斗破": {
@@ -464,7 +492,7 @@
             {
               "stage": "搜索",
               "status": "inconclusive",
-              "detail": "书源网络请求失败，请检查网络或站点状态。"
+              "detail": "连续 3 次请求仍未成功：书源网络请求失败，请检查网络或站点状态。"
             },
             {
               "stage": "目录",
@@ -482,6 +510,7 @@
               "detail": "没有可用搜索结果"
             }
           ],
+          "attempts": 3,
           "error": "书源网络请求失败，请检查网络或站点状态。"
         }
       }
@@ -500,26 +529,28 @@
             {
               "stage": "搜索",
               "status": "passed",
-              "detail": "App 搜索请求及解析成功；返回 10 条结果"
+              "detail": "App 搜索请求及解析成功；返回 10 条结果；标题匹配关键词 2 条；尝试 1 次"
             },
             {
               "stage": "目录",
               "status": "passed",
-              "detail": "获取 550 章；首章「穿越与重生」"
+              "detail": "获取 129 章；首章「1. 是哪个刁民要害朕？！」"
             },
             {
               "stage": "详情（可选）",
               "status": "passed",
-              "detail": "详情页读取成功：「系统」重生之我是马红俊\n已完结"
+              "detail": "详情页读取成功：唐门还是唐家堡？【剑三+斗罗】\n已完结"
             },
             {
               "stage": "正文",
               "status": "passed",
-              "detail": "首章正文读取成功（647 字符）"
+              "detail": "首章正文读取成功（795 字符）"
             }
           ],
+          "attempts": 1,
           "resultCount": 10,
-          "selectedTitle": "「系统」重生之我是马红俊"
+          "matchingResultCount": 2,
+          "selectedTitle": "唐门还是唐家堡？【剑三+斗罗】"
         },
         "斗破": {
           "keyword": "斗破",
@@ -530,7 +561,7 @@
             {
               "stage": "搜索",
               "status": "passed",
-              "detail": "App 搜索请求及解析成功；返回 10 条结果"
+              "detail": "App 搜索请求及解析成功；返回 10 条结果；标题匹配关键词 0 条；尝试 1 次"
             },
             {
               "stage": "目录",
@@ -548,7 +579,9 @@
               "detail": "首章正文读取成功（771 字符）"
             }
           ],
+          "attempts": 1,
           "resultCount": 10,
+          "matchingResultCount": 0,
           "selectedTitle": "决斗"
         }
       }
@@ -567,7 +600,7 @@
             {
               "stage": "搜索",
               "status": "inconclusive",
-              "detail": "书源服务器返回 HTTP 403。"
+              "detail": "连续 3 次请求仍未成功：书源服务器返回 HTTP 403。"
             },
             {
               "stage": "目录",
@@ -585,6 +618,7 @@
               "detail": "没有可用搜索结果"
             }
           ],
+          "attempts": 3,
           "error": "书源服务器返回 HTTP 403。"
         },
         "斗破": {
@@ -596,7 +630,7 @@
             {
               "stage": "搜索",
               "status": "inconclusive",
-              "detail": "书源服务器返回 HTTP 403。"
+              "detail": "连续 3 次请求仍未成功：书源服务器返回 HTTP 403。"
             },
             {
               "stage": "目录",
@@ -614,6 +648,7 @@
               "detail": "没有可用搜索结果"
             }
           ],
+          "attempts": 3,
           "error": "书源服务器返回 HTTP 403。"
         }
       }
@@ -632,7 +667,7 @@
             {
               "stage": "搜索",
               "status": "passed",
-              "detail": "App 搜索请求及解析成功；返回 4 条结果"
+              "detail": "App 搜索请求及解析成功；返回 4 条结果；标题匹配关键词 2 条；尝试 1 次"
             },
             {
               "stage": "目录",
@@ -650,7 +685,9 @@
               "detail": "首章正文读取成功（2185 字符）"
             }
           ],
+          "attempts": 1,
           "resultCount": 4,
+          "matchingResultCount": 2,
           "selectedTitle": "3. 斗罗大陆4终极斗罗_唐家三少【完结】"
         },
         "斗破": {
@@ -662,7 +699,7 @@
             {
               "stage": "搜索",
               "status": "passed",
-              "detail": "App 搜索请求及解析成功；返回 10 条结果"
+              "detail": "App 搜索请求及解析成功；返回 10 条结果；标题匹配关键词 2 条；尝试 1 次"
             },
             {
               "stage": "目录",
@@ -680,7 +717,9 @@
               "detail": "首章正文读取成功（2624 字符）"
             }
           ],
+          "attempts": 1,
           "resultCount": 10,
+          "matchingResultCount": 2,
           "selectedTitle": "2. 斗破苍穹前传之药老传奇_天蚕土豆【完结】"
         }
       }
