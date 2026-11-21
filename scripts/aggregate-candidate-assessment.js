@@ -245,7 +245,7 @@ function renderSummary(assessment) {
     "- 成人专属域名：" + t.adultOnlyDomains + "（已纳入公开页面扫描）",
     "- 非小说专属域名：" + t.nonNovelOnlyDomains,
     "- 成人/非小说与普通混合域名：" + t.mixedOutOfScopeAndNovelDomains,
-    "- 非成人待审域名：" + t.eligibleUniqueDomains,
+    "- 普通/成人小说待审域名：" + t.eligibleUniqueDomains,
     "- 已完成公开页面/章节样本扫描：" + t.scannedUniqueDomains,
     "- 逐条完成许可元数据检查：" + t.licenseMetadataReviewedRecords + " 条",
     "- 候选元数据中含逐源许可/授权字段：" + t.recordsWithExplicitLicenseMetadata + " 条",
