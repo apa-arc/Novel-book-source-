@@ -17,7 +17,7 @@ function ancestors(node){const out=[];let n=node;for(let i=0;n&&i<5;i++,n=n.pare
   const anchors=[...sd.querySelectorAll("a[href]")].map(a=>({text:norm(a.textContent,120),href:a.getAttribute("href")||""})).filter(a=>a.text&&a.href).slice(0,100);
   const candidates=[...sd.querySelectorAll("li,article,div")].map(summary).filter(x=>x.textLength>30).sort((a,b)=>b.textLength-a.textLength).slice(0,20);
   const forms=[...sd.querySelectorAll("form")].map(f=>({action:f.getAttribute("action")||"",method:f.getAttribute("method")||"GET",inputs:[...f.querySelectorAll("input")].map(e=>({name:e.getAttribute("name")||"",type:e.getAttribute("type")||"",placeholder:e.getAttribute("placeholder")||""}))}));
-  const searchItems=[...sd.querySelectorAll("a[href]")].filter(a=>a.textContent.includes(keyword)).slice(0,30).map(a=>({text:norm(a.textContent,150),href:a.getAttribute("href"),parent:a.parentElement?.parentElement?.outerHTML?.slice(0,1500)||""}));
+  const searchItems=[...sd.querySelectorAll("a[href]")].filter(a=>a.textContent.includes(keyword)).slice(0,30).map(a=>({text:norm(a.textContent,150),href:a.getAttribute("href"),parent:a.parentElement?.parentElement?.parentElement?.outerHTML?.slice(0,2600)||""}));
   const resultNode=[...sd.querySelectorAll("a[href]")].find(a=>a.textContent.includes(keyword)&&a.getAttribute("href")?.includes("/wuxia/"));
   const searchResultAncestors=resultNode?ancestors(resultNode):[];
   const result={keyword,search:{status:search.status,url:search.url,contentType:search.contentType,title:norm(sd.querySelector("title")?.textContent),body:norm(sd.body?.textContent),anchors,candidates,forms,searchItems,searchResultAncestors}};
@@ -28,7 +28,7 @@ function ancestors(node){const out=[];let n=node;for(let i=0;n&&i<5;i++,n=n.pare
     const book=await get(bookUrl),bd=parseHTML(book.html).document;
     const pageNode=[...bd.querySelectorAll("a[href]")].find(a=>/^第1页$/.test(norm(a.textContent,100)));
     const pageAncestors=pageNode?ancestors(pageNode):[];
-    const chapterLinks=[...bd.querySelectorAll("a[href]")].map(a=>({text:norm(a.textContent,100),href:a.getAttribute("href")||""})).filter(a=>a.text&&/chapter|read|\.html/i.test(a.href)).slice(0,80);
+    const chapterLinks=[...bd.querySelectorAll("a[href]")].map(a=>({text:norm(a.textContent,100),href:a.getAttribute("href")||"",parent:a.parentElement?.parentElement?.outerHTML?.slice(0,1000)||""})).filter(a=>a.text&&(/chapter|read|\.html/i.test(a.href)||/^第\d+页$/.test(a.text)||/开始阅读|上一页|下一页/.test(a.text))).slice(0,100);
     result.book={status:book.status,url:book.url,contentType:book.contentType,title:norm(bd.querySelector("title")?.textContent),headings:[...bd.querySelectorAll("h1,h2,h3")].map(summary),chapterLinks,pageAncestors};
     const first=chapterLinks.find(a=>a.text==="第1页")||chapterLinks.find(a=>a.text==="开始阅读");
     const last=[...chapterLinks].reverse().find(a=>/^第\d+页$/.test(a.text));
