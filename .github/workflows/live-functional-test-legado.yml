@@ -5,7 +5,7 @@ on:
   push:
     branches: [main]
     paths:
-      - "scripts/live-test-app-subscription.js"
+      - "scripts/live-test-app-runtime.ts"
       - ".github/workflows/live-functional-test-legado.yml"
 
 permissions:
@@ -24,14 +24,14 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Install HTML parser
-        run: npm install --no-save --no-package-lock linkedom
-      - name: Run live tests for all 26 subscription sources
-        run: node scripts/live-test-app-subscription.js
+      - name: Install TypeScript runner
+        run: npm install --no-save --no-package-lock tsx
+      - name: Run live tests with AppleNovelApp runtime
+        run: npx tsx scripts/live-test-app-runtime.ts
       - name: Upload per-source report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: app-subscription-live-test-report
-          path: reports/app-subscription-live-test.json
+          name: app-runtime-live-test-report
+          path: reports/app-runtime-live-test.json
           retention-days: 90
