@@ -3,7 +3,7 @@
   "id": "jiuyi-91zww",
   "name": "九一中文",
   "kind": "public-web",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "baseUrl": "https://www.91zww.com/",
   "domains": [
     "www.91zww.com"
@@ -26,7 +26,8 @@
         "itemSelector": ".txt-list li",
         "titleSelector": ".s2 a",
         "urlSelector": ".s2 a",
-        "authorSelector": ".s4"
+        "authorSelector": ".s4",
+        "coverSelector": "img"
       },
       "detail": {
         "titleSelector": "h1",
