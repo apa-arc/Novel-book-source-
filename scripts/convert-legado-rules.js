@@ -372,12 +372,13 @@ function parseLegacyChain(expression) {
   }
   const jsonExpression=raw.match(/^@json:(.*)$/i);
   const implicitIndexJson=/^[A-Za-z_$][\w$-]*\[(?:\*|\d|:)\][.]([A-Za-z_$][\w$-]*)/.test(raw);
+  const implicitBracketJson=/^[A-Za-z_$][\w$-]*(?:\.[A-Za-z_$][\w$-]*)+\[(?:\*|-?\d+|:)\](?:(?:\.[A-Za-z_$][\w$-]*)|(?:\[(?:\*|-?\d+|:)\]))*$/.test(raw);
   const htmlTags=new Set(["a","abbr","address","article","aside","audio","b","blockquote","body","br","button","canvas","caption","code","col","dd","div","dl","dt","em","fieldset","figcaption","figure","footer","form","h1","h2","h3","h4","h5","h6","head","header","hr","i","iframe","img","input","label","li","link","main","meta","nav","ol","optgroup","option","p","pre","script","section","select","small","source","span","strong","style","sub","summary","sup","table","tbody","td","textarea","tfoot","th","thead","time","title","tr","track","u","ul","video"]);
   const dottedJson=raw.match(/^([A-Za-z_$][\w$-]*(?:\.[A-Za-z_$][\w$-]*)+)$/);
   const implicitDottedJson=!!dottedJson&&!htmlTags.has(dottedJson[1].split(".")[0].toLowerCase());
   const adjacentJson=raw.match(/^([A-Za-z_$][\w$-]*)\[(?:\*|-?\d+)\]([A-Za-z_$][\w$-]*)$/);
   const implicitAdjacentJson=!!adjacentJson&&!htmlTags.has(adjacentJson[1].toLowerCase());
-  const implicitJson=/^\$[.[]/.test(raw)||implicitIndexJson||implicitDottedJson||implicitAdjacentJson;
+  const implicitJson=/^\$[.[]/.test(raw)||implicitIndexJson||implicitDottedJson||implicitAdjacentJson||(implicitBracketJson&&!htmlTags.has(raw.split(/[.[]/)[0].toLowerCase()));
   if(jsonExpression||implicitJson){
     let expression=jsonExpression?jsonExpression[1].trim():raw;
     const braceParts=expression.match(/\{([^{}]+)\}/g);
