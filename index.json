@@ -185,6 +185,22 @@
       "file": "sources/kuxiaoshuo-com.json",
       "enabled": true,
       "testOnly": true
+    },
+    {
+      "id": "xqianqian-m",
+      "name": "千千小说",
+      "kind": "public-web",
+      "file": "sources/xqianqian-m.json",
+      "enabled": true,
+      "testOnly": true
+    },
+    {
+      "id": "douhua-wenxue",
+      "name": "豆花文学",
+      "kind": "public-web",
+      "file": "sources/douhua-wenxue.json",
+      "enabled": true,
+      "testOnly": true
     }
   ]
 }
