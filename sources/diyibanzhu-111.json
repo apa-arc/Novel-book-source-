@@ -5,14 +5,15 @@
   "kind": "public-web",
   "version": "1.0.0",
   "description": "成人与综合小说站点；先并入统一小说源，后续根据 App 实测修正规则。",
-  "baseUrl": "https://www.111bz.cc/",
+  "baseUrl": "https://m.111bz.cc/",
   "domains": [
-    "www.111bz.cc"
+    "www.111bz.cc",
+    "m.111bz.cc"
   ],
   "script": "scripts/diyibanzhu-111.js",
   "enabled": true,
   "testOnly": true,
-  "testOnlyReason": "已依据现有公开书源规则转换为 App 原生配置；搜索与章节接口尚待 App 真机联调，发现问题后继续修复。",
+  "testOnlyReason": "网站会从 www 跳转至 m 子域，已补充跳转域名白名单并改用移动站地址；目录选择器仍待 App 宿主验证。",
   "licenseApproved": true,
   "licenseType": "open-license",
   "licenseEvidence": "适配规则参考 aoaostar/legado 公共书源仓库；仓库 README 标示 AGPL-3.0。此说明仅涉及规则代码来源，不代表站点对小说正文作出授权。",
@@ -20,9 +21,9 @@
   "hostValidated": false,
   "appConfig": {
     "searchUrl": "https://www.111bz.cc/modules/article/search.php?searchkey={keyword}&searchtype=articlename&page={page}",
-    "bookUrl": "https://www.111bz.cc{bookUrl}",
-    "chapterListUrl": "https://www.111bz.cc{bookUrl}",
-    "chapterUrl": "https://www.111bz.cc{chapterUrl}",
+    "bookUrl": "https://m.111bz.cc{bookUrl}",
+    "chapterListUrl": "https://m.111bz.cc{bookUrl}",
+    "chapterUrl": "https://m.111bz.cc{chapterUrl}",
     "htmlRules": {
       "search": {
         "itemSelector": "tbody#nr tr",
@@ -36,7 +37,7 @@
         "descriptionSelector": "#intro"
       },
       "chapters": {
-        "itemSelector": "dl dd",
+        "itemSelector": "a[href$='.html']",
         "titleSelector": "a",
         "urlSelector": "a"
       },
