@@ -89,6 +89,14 @@
       "file": "sources/yushufang-ysfwxc.json",
       "enabled": true,
       "testOnly": true
+    },
+    {
+      "id": "xinbiquge-info",
+      "name": "新笔趣阁小说网",
+      "kind": "public-web",
+      "file": "sources/xinbiquge-info.json",
+      "enabled": true,
+      "testOnly": true
     }
   ]
 }
