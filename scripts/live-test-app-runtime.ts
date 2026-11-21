@@ -24,6 +24,7 @@ type TermResult = {
   error?: string;
   attempts?: number;
   matchingResultCount?: number;
+  relevanceStatus?: "matched" | "zero-results" | "no-title-match";
 };
 type Result = { id: string; name: string; status: string; terms: Record<string, TermResult> };
 
@@ -92,6 +93,7 @@ async function testTerm(source: NovelSource, keyword: string): Promise<TermResul
   });
 
   if (page.items.length === 0) {
+    out.relevanceStatus = "zero-results";
     out.status = "search-only";
     out.readingStatus = "not-tested";
     out.stages.push({
@@ -104,7 +106,21 @@ async function testTerm(source: NovelSource, keyword: string): Promise<TermResul
     return out;
   }
 
-  const summary = page.items.find((item) => item.title.toLocaleLowerCase().includes(keyword.toLocaleLowerCase())) || page.items[0];
+  const summary = page.items.find((item) => item.title.toLocaleLowerCase().includes(keyword.toLocaleLowerCase()));
+  if (!summary) {
+    out.relevanceStatus = "no-title-match";
+    out.status = "search-only";
+    out.readingStatus = "not-tested";
+    out.stages.push({
+      stage: "目录",
+      status: "skipped",
+      detail: "搜索请求成功但没有标题匹配关键词的结果；不使用无关首条结果冒充阅读测试",
+    });
+    out.stages.push({ stage: "详情", status: "skipped", detail: "没有相关搜索结果可供打开" });
+    out.stages.push({ stage: "正文", status: "skipped", detail: "没有相关搜索结果可供打开" });
+    return out;
+  }
+  out.relevanceStatus = "matched";
   out.selectedTitle = summary.title;
 
   let chapters;
@@ -171,6 +187,7 @@ async function mapLimit<T, R>(items: T[], limit: number, fn: (item: T) => Promis
       const index = next++;
       if (index >= items.length) return;
       output[index] = await fn(items[index]);
+      await new Promise((resolve) => setTimeout(resolve, 1200));
     }
   });
   await Promise.all(workers);
@@ -180,7 +197,8 @@ async function mapLimit<T, R>(items: T[], limit: number, fn: (item: T) => Promis
 (async () => {
   const compatibleById = new Map(parsed.compatible.map(item => [item.remoteId, item]));
   const entries = Array.isArray(subscription.sources) ? subscription.sources : [];
-  const sourceResults = await mapLimit(entries, 4, async (entry: any) => {
+  // Run sources sequentially with a short cooldown to reduce cross-source rate limits and timeouts.
+  const sourceResults = await mapLimit(entries, 1, async (entry: any) => {
     const result: Result = { id: entry.id, name: entry.name, status: "failed", terms: {} };
     const compatible = compatibleById.get(entry.id);
     if (!compatible) {
@@ -233,6 +251,7 @@ async function mapLimit<T, R>(items: T[], limit: number, fn: (item: T) => Promis
     searchRequestsPassed: allTerms.filter(term => term.searchStatus === "passed").length,
     searchZeroResults: allTerms.filter(term => term.searchStatus === "passed" && term.resultCount === 0).length,
     searchHasResultsButNoTitleMatch: allTerms.filter(term => term.searchStatus === "passed" && (term.resultCount || 0) > 0 && (term.matchingResultCount || 0) === 0).length,
+    readingSkippedForNoTitleMatch: allTerms.filter(term => term.relevanceStatus === "no-title-match" && term.readingStatus === "not-tested").length,
     searchRetriesUsed: allTerms.filter(term => (term.attempts || 0) > 1).length,
     chapterContentPassed: allTerms.filter(term => term.readingStatus === "readable").length,
   };
@@ -240,7 +259,7 @@ async function mapLimit<T, R>(items: T[], limit: number, fn: (item: T) => Promis
   fs.mkdirSync("reports", { recursive: true });
   fs.writeFileSync("reports/app-runtime-live-test.json", JSON.stringify({
     generatedAt: new Date().toISOString(),
-    testStandard: "AppleNovelApp search semantics + separately reported reading stages; each search retries up to 3 times; transient Node network errors are environment-inconclusive; title relevance is separate from request success",
+    testStandard: "AppleNovelApp search semantics + separately reported reading stages; each search retries up to 3 times; transient Node network errors are environment-inconclusive; title relevance is separate from request success; reading tests only use title-matching results; sources run sequentially with 1.2s cooldown",
     keywords,
     counts,
     results: sourceResults,
