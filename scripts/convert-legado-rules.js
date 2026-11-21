@@ -111,6 +111,45 @@ function parseJsonPath(expression) {
   }
   return steps.length?steps:null;
 }
+function parseSimpleXPath(expression) {
+  let raw=String(expression||"").trim().replace(/^@xpath:/i,"");
+  if(!raw.startsWith("/")) return null;
+  let output="text";
+  const attr=raw.match(/\/@([\w:-]+)$/);
+  if(attr){output="attr:"+attr[1];raw=raw.slice(0,-attr[0].length);}
+  else if(/\/text\(\)$/.test(raw)) raw=raw.replace(/\/text\(\)$/,"");
+  const segments=[];
+  let axis=raw.startsWith("//")?"descendant":"child";
+  let i=raw.startsWith("//")?2:1;
+  while(i<raw.length){
+    const next=raw.indexOf("/",i);
+    const segment=raw.slice(i,next<0?raw.length:next);
+    if(!segment) return null;
+    const name=segment.match(/^([A-Za-z*][\w*-]*)/);
+    if(!name) return null;
+    let rest=segment.slice(name[1].length);
+    let css=name[1];
+    while(rest){
+      const predicate=rest.match(/^\[@([\w:-]+)\s*=\s*(['"])(.*?)\2\]/);
+      const position=rest.match(/^\[(\d+)\]/);
+      if(predicate){
+        const value=predicate[3].replace(/\\/g,"\\\\").replace(/"/g,'\\"');
+        css+="["+predicate[1]+"=\\""+value+"\\"]";
+        rest=rest.slice(predicate[0].length);
+      }else if(position){
+        css+=":nth-of-type("+position[1]+")";
+        rest=rest.slice(position[0].length);
+      }else return null;
+    }
+    segments.push({axis,css});
+    if(next<0) break;
+    if(raw.startsWith("//",next)){axis="descendant";i=next+2;}
+    else{axis="child";i=next+1;}
+  }
+  if(!segments.length) return null;
+  const query=segments.map((item,index)=>index===0?item.css:(item.axis==="descendant"?" ":" > ")+item.css).join("");
+  return {engine:"css",query,output};
+}
 function parseLegacyChain(expression) {
   let raw = String(expression).trim();
   if (!raw) return {status:"empty"};
@@ -145,14 +184,10 @@ function parseLegacyChain(expression) {
     if (!match || !match[1]) return {status:"manual",reason:"unsupported-css-expression"};
     return {status:"candidate",selector:{engine:"css",query:match[1],output:(match[2]||"text").toLowerCase()}};
   }
-  if (raw.startsWith("//")) {
-    const match=raw.match(/^\/\/([a-zA-Z][\w-]*)(?:\[@([\w:-]+)=['"]([^'"]+)['"]\])?\/@([\w:-]+)$/);
-    if (!match) return {status:"manual",reason:"unsupported-xpath"};
-    const [,tag,attr,value,out]=match;
-    const query=attr ? tag+"["+attr+"=\""+value.replace(/"/g,'\\"')+"\"]" : tag;
-    return {status:"candidate",selector:{engine:"css",query,output:out==="text"?"text":"attr:"+out}};
+  if (raw.startsWith("//") || /^@xpath:/i.test(raw)) {
+    const xpath=parseSimpleXPath(raw);
+    return xpath?{status:"candidate",selector:xpath}:{status:"manual",reason:"unsupported-xpath"};
   }
-  if (/^@xpath:/i.test(raw)) return {status:"manual",reason:"unsupported-xpath"};
   const jsonExpression=raw.match(/^@json:(.*)$/i);
   if(jsonExpression||/^\$[.[]/.test(raw)){
     const jsonPath=parseJsonPath(jsonExpression?jsonExpression[1]:raw);
