@@ -6,7 +6,7 @@ const path = require("node:path");
 const ROOT = path.resolve(__dirname, "..");
 const ARTIFACTS = path.join(ROOT, "artifacts");
 const SUBSCRIPTION = path.join(ROOT, "subscription.json");
-const ADULT_HINT = /成人|情色|色情|R18|18\\+/i;
+const ADULT_HINT = /成人|情色|色情|R18|18\+/i;
 
 function walk(dir) {
   if (!fs.existsSync(dir)) return [];
@@ -20,7 +20,7 @@ function normalizeUrl(value) {
     const u = new URL(value);
     u.hash = "";
     u.search = "";
-    u.pathname = u.pathname.replace(/\\/+$/, "") || "/";
+    u.pathname = u.pathname.replace(/\/+$/, "") || "/";
     return u.href.toLowerCase();
   } catch { return ""; }
 }
