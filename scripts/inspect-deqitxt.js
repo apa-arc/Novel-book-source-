@@ -16,10 +16,12 @@ async function main(){
  const paths=keyword=>["/?key=","/?searchkey=","/search/?key=","/search?key=","/search.html?key=","/search.html?searchkey=","/index.php?key=","/search/?searchkey="].map(p=>p+encodeURIComponent(keyword));
  for(const keyword of SEARCH_TERMS){
   for(const p of paths(keyword)){
-   const response=await get(new URL(p,BASE).href),doc=parseHTML(response.html).document;
-   const bodyText=String(doc.body?.textContent||"").trim().replace(/\s+/g," ");
-   const links=[...doc.querySelectorAll("a[href]")].map(a=>({text:norm(a.textContent),href:a.getAttribute("href")||""})).filter(a=>a.text&&/^\/\d+\/?$/.test(a.href)).slice(0,30);
-   searches.push({keyword,status:response.status,url:response.url,contentType:response.contentType,title:norm(doc.querySelector("title")?.textContent),bodyLength:bodyText.length,bodyStart:bodyText.slice(0,1400),bodyEnd:bodyText.slice(-1000),bookLinks:links});
+   try {
+    const response=await get(new URL(p,BASE).href),doc=parseHTML(response.html).document;
+    const bodyText=String(doc.body?.textContent||"").trim().replace(/\s+/g," ");
+    const links=[...doc.querySelectorAll("a[href]")].map(a=>({text:norm(a.textContent),href:a.getAttribute("href")||""})).filter(a=>a.text&&/^\/\d+\/?$/.test(a.href)).slice(0,30);
+    searches.push({keyword,path:p,status:response.status,url:response.url,contentType:response.contentType,title:norm(doc.querySelector("title")?.textContent),bodyLength:bodyText.length,bodyStart:bodyText.slice(0,1400),bodyEnd:bodyText.slice(-1000),bookLinks:links});
+   } catch(error) { searches.push({keyword,path:p,error:String(error).slice(0,200)}); }
   }
  }
  const book=await get(BOOK),bd=parseHTML(book.html).document;
