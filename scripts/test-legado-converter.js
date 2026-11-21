@@ -157,8 +157,12 @@ try{
  assert.equal(regexExpression.selector.engine,"replace");
  assert.equal(regexExpression.selector.pattern,"\\s+");
  const onlyOneRegex=parseLegacyChain("class.title##x##y###");
- assert.equal(onlyOneRegex.status,"manual");
- assert.equal(onlyOneRegex.reason,"unsupported-regex-mode");
+ assert.equal(onlyOneRegex.status,"candidate");
+ assert.equal(onlyOneRegex.selector.engine,"replace");
+ assert.equal(onlyOneRegex.selector.replaceFirst,true);
+ const zipExpression=parseLegacyChain("class.a%%class.b");
+ assert.equal(zipExpression.status,"candidate");
+ assert.equal(zipExpression.selector.operator,"zip");
  const literal=parseLegacyChain("@text: - 作者：");
  assert.equal(literal.status,"candidate");
  assert.equal(literal.selector.value," - 作者：");
