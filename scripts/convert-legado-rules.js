@@ -163,6 +163,40 @@ function parseSimpleXPath(expression) {
   const query=segments.map((item,index)=>index===0?item.css:(item.axis==="descendant"?" ":" > ")+item.css).join("");
   return {engine:"css",query,output};
 }
+function parsePutValue(raw) {
+  const value=String(raw||"").trim();
+  if(!value) return null;
+  if(/^(['"])[\s\S]*\1$/.test(value)) return {engine:"literal",value:value.slice(1,-1)};
+  if(/^-?\d+(?:\.\d+)?$/.test(value)||/^(?:true|false|null)$/i.test(value)) return {engine:"literal",value};
+  if(/^@get:/i.test(value)) return {engine:"get",key:value.slice(5).trim()};
+  if(/^[A-Za-z_$][\w$-]*$/.test(value)) return {engine:"variable",name:value};
+  const fallback=splitTopLevel(value,"||");
+  if(fallback){
+    const parts=fallback.map(parsePutValue);
+    return parts.every(Boolean)?{engine:"composite",operator:"fallback",parts}:null;
+  }
+  const concat=splitTopLevel(value,"&&");
+  if(concat){
+    const parts=concat.map(parsePutValue);
+    return parts.every(Boolean)?{engine:"composite",operator:"concat",parts}:null;
+  }
+  const parsed=parseLegacyChain(value);
+  return parsed.status==="candidate"?parsed.selector:null;
+}
+function parsePutAssignments(raw) {
+  const entries=splitTopLevel(String(raw||""),",");
+  if(!entries||!entries.length||entries.length>32) return null;
+  const assignments=[];
+  for(const entry of entries){
+    const colon=entry.indexOf(":");
+    if(colon<1) return null;
+    const key=entry.slice(0,colon).trim();
+    const value=parsePutValue(entry.slice(colon+1));
+    if(!/^[A-Za-z_$][\w$-]{0,63}$/.test(key)||!value) return null;
+    assignments.push({key,value});
+  }
+  return assignments;
+}
 function parseTemplateExpression(raw) {
   if(!raw.includes("{{")) return null;
   const parts=[];
@@ -205,6 +239,18 @@ function parseLegacyChain(expression) {
       selector={engine:"replace",input:selector,pattern,replacement,replaceFirst};
     }
     return {status:"candidate",selector};
+  }
+  const putMatch=raw.match(/^(.*)@put:\\{([\\s\\S]*)\\}$/i);
+  if(putMatch){
+    const assignments=parsePutAssignments(putMatch[2]);
+    if(!assignments) return {status:"manual",reason:"unsupported-put-assignment"};
+    const base=putMatch[1]?parseLegacyChain(putMatch[1]):{status:"candidate",selector:{engine:"self",output:"text"}};
+    if(base.status!=="candidate") return base;
+    return {status:"candidate",selector:{engine:"put",input:base.selector,assignments}};
+  }
+  if(/^@get:/i.test(raw)){
+    const key=raw.slice(5).trim();
+    return /^[A-Za-z_$][\\w$-]{0,63}$/.test(key)?{status:"candidate",selector:{engine:"get",key}}:{status:"manual",reason:"invalid-get-key"};
   }
   const fallbackParts=splitTopLevel(raw,"||");
   if(fallbackParts){
