@@ -3,7 +3,7 @@
   "id": "xqianqian-m",
   "name": "千千小说",
   "kind": "public-web",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "baseUrl": "https://m.xqianqian.com/",
   "domains": [
     "m.xqianqian.com"
