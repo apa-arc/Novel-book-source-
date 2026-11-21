@@ -104,18 +104,19 @@ function registrableDomain(hostname) {
   const multiLevel = new Set(["co.uk","com.cn","net.cn","org.cn","com.hk","com.tw","co.jp","com.au","net.au"]);
   return multiLevel.has(two) && labels.length >= 3 ? labels.slice(-3).join(".") : two;
 }
-function hostAllowed(candidate, baseHost) {
-  return registrableDomain(candidate) === registrableDomain(baseHost);
+function hostAllowed(candidate, baseHost, extraHosts = []) {
+  const allowed = [baseHost, ...extraHosts].filter(Boolean).map(value => String(value).toLowerCase());
+  return allowed.some(host => candidate.toLowerCase() === host || registrableDomain(candidate) === registrableDomain(host));
 }
-function absolute(raw, base, host) {
+function absolute(raw, base, host, extraHosts = []) {
   const u = new URL(String(raw || ""), base);
-  if (u.protocol !== "https:" || u.username || u.password || !hostAllowed(u.hostname, host)) {
-    throw new Error("url-outside-https-source-host:" + u.hostname.toLowerCase() + ":expected-" + host);
+  if (u.protocol !== "https:" || u.username || u.password || !hostAllowed(u.hostname, host, extraHosts)) {
+    throw new Error("url-outside-https-source-host:" + u.hostname.toLowerCase() + ":expected-" + [host,...extraHosts].join("|"));
   }
   return u.href;
 }
-async function fetchHtml(rawUrl, host, requestHeaders = {}) {
-  let url = absolute(rawUrl, "https://" + host + "/", host);
+async function fetchHtml(rawUrl, host, requestHeaders = {}, extraHosts = []) {
+  let url = absolute(rawUrl, "https://" + host + "/", host, extraHosts);
   for (let redirects = 0; redirects <= 4; redirects++) {
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
@@ -129,7 +130,7 @@ async function fetchHtml(rawUrl, host, requestHeaders = {}) {
     if ([301,302,303,307,308].includes(response.status)) {
       const location = response.headers.get("location");
       if (!location) throw new Error("redirect-without-location");
-      url = absolute(location, url, host);
+      url = absolute(location, url, host, extraHosts);
       continue;
     }
     if (!response.ok) throw new Error("http-" + response.status);
@@ -167,14 +168,14 @@ function simpleSearchUrl(source, keyword, page) {
   return u.href;
   return u.href;
 }
-function extract(node, rules, baseUrl, host) {
+function extract(node, rules, baseUrl, host, extraHosts = []) {
   const out = {};
   const nonSelector = new Set(["bookList","chapterList","checkKeyWord","init","replaceRegex","webJs","sourceRegex","imageStyle"]);
   for (const [key, rule] of Object.entries(rules || {})) {
     if (nonSelector.has(key) || !rule || typeof rule !== "string") continue;
     const value = first(node, rule);
     if (value == null || value === "") continue;
-    if (["bookUrl","tocUrl","chapterUrl"].includes(key)) out[key] = absolute(value, baseUrl, host);
+    if (["bookUrl","tocUrl","chapterUrl"].includes(key)) out[key] = absolute(value, baseUrl, host, extraHosts);
     else out[key] = String(value).replace(/\s+/g, " ").trim();
   }
   return out;
@@ -218,11 +219,12 @@ async function testSource(source, testId) {
     for (const term of terms) {
       const searchUrl = simpleSearchUrl(source, term, 1);
       const searchHost = new URL(searchUrl).hostname.toLowerCase();
-      const searchPage = await fetchHtml(searchUrl, searchHost, headers);
+      const extraHosts = [...new Set([searchHost])];
+      const searchPage = await fetchHtml(searchUrl, host, headers, extraHosts);
       const searchItems = allNodes(searchPage.document, source.ruleSearch.bookList);
       const books = [];
       for (const item of searchItems.slice(0, 80)) {
-        const fields = extract(item, source.ruleSearch, searchPage.url, host);
+        const fields = extract(item, source.ruleSearch, searchPage.url, host, extraHosts);
         if (fields.name && fields.bookUrl) books.push(fields);
       }
       if (books.length) {
@@ -235,14 +237,14 @@ async function testSource(source, testId) {
     if (!chosen) throw new Error("search-returned-no-books");
     stage("search", { resultCount, selectedTitle: chosen.name, keywordUsed });
 
-    const detailPage = await fetchHtml(chosen.bookUrl, host, headers);
-    const detail = extract(detailPage.document, source.ruleBookInfo, detailPage.url, host);
+    const detailPage = await fetchHtml(chosen.bookUrl, host, headers, extraHosts);
+    const detail = extract(detailPage.document, source.ruleBookInfo, detailPage.url, host, extraHosts);
     const title = detail.name || chosen.name;
     if (!title) throw new Error("book-detail-title-empty");
     stage("bookDetail", { title });
     const tocUrl = detail.tocUrl || chosen.bookUrl;
     currentStage = "chapters";
-    const tocPage = await fetchHtml(tocUrl, host, headers);
+    const tocPage = await fetchHtml(tocUrl, host, headers, extraHosts);
     const chapterNodes = allNodes(tocPage.document, source.ruleToc.chapterList);
     const chapters = [];
     for (const node of chapterNodes.slice(0, 200)) {
@@ -259,7 +261,7 @@ async function testSource(source, testId) {
     currentStage = "content";
     for (const chapter of unique.slice(0, 5)) {
       try {
-        const page = await fetchHtml(chapter.url, host, headers);
+        const page = await fetchHtml(chapter.url, host, headers, extraHosts);
         const raw = values(page.document, source.ruleContent.content).join("\n");
         const content = htmlToText(raw);
         const quality = scanArticles([{ title: chapter.title, content }]);
