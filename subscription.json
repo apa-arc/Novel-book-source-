@@ -4,8 +4,8 @@
   "name": "小说源",
   "description": "普通小说统一订阅；来源发现问题后持续修复或下架。",
   "repository": "https://github.com/apa-arc/Novel-book-source-",
-  "updatedAt": "2026-11-21T20:45:00.000Z",
-  "sourceCount": 9,
+  "updatedAt": "2026-11-21T21:00:00.000Z",
+  "sourceCount": 11,
   "sources": [
     {
       "id": "biquluo-la",
@@ -389,6 +389,90 @@
       },
       "testOnly": true,
       "testOnlyReason": "从公开 AOAOSTAR 规则转换为本仓库 GET/CSS 配置；已移除上游封面 JS 依赖并映射四阶段选择器，尚未完成当前站点实时与宿主实测。"
+    },
+    {
+      "id": "wujixsw-info",
+      "name": "无极小说",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "普通小说网页源；GET 搜索，详情、目录与正文采用 CSS 规则，待实测。",
+      "baseUrl": "https://wujixsw.info/",
+      "domains": [
+        "wujixsw.info"
+      ],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/wujixsw-info.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/wujixsw-info.js",
+      "appConfig": {
+        "searchUrl": "https://wujixsw.info/search.html?name={keyword}",
+        "bookUrl": "https://wujixsw.info/",
+        "chapterListUrl": "https://wujixsw.info/{bookUrl}",
+        "chapterUrl": "https://wujixsw.info/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": ".novelslist2 li",
+            "titleSelector": ".s2 a",
+            "urlSelector": ".s2 a",
+            "authorSelector": ".s4"
+          },
+          "detail": {
+            "titleSelector": "h1",
+            "descriptionSelector": "meta[property='og:description']"
+          },
+          "chapters": {
+            "itemSelector": "#list dd",
+            "titleSelector": "a",
+            "urlSelector": "a"
+          },
+          "content": {
+            "contentSelector": "#content",
+            "titleSelector": "h1"
+          }
+        }
+      },
+      "testOnly": true,
+      "testOnlyReason": "由公开上游小说源规则转换为本仓库 GET/CSS 配置；已映射搜索、详情、目录、正文，尚未完成当前站点实时与宿主四阶段实测。"
+    },
+    {
+      "id": "yushufang-ysfwxc",
+      "name": "御书房",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "普通小说网页源；GET 搜索，详情、目录与正文采用 CSS 规则，待实测。",
+      "baseUrl": "https://www.ysfwxc.com/",
+      "domains": [
+        "www.ysfwxc.com"
+      ],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/yushufang-ysfwxc.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/yushufang-ysfwxc.js",
+      "appConfig": {
+        "searchUrl": "https://www.ysfwxc.com/search/?searchkey={keyword}",
+        "bookUrl": "https://www.ysfwxc.com/",
+        "chapterListUrl": "https://www.ysfwxc.com/{bookUrl}",
+        "chapterUrl": "https://www.ysfwxc.com/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": ".book_data",
+            "titleSelector": "h1 a",
+            "urlSelector": "h1 a",
+            "authorSelector": ".author span"
+          },
+          "detail": {
+            "titleSelector": "h1",
+            "descriptionSelector": "meta[property='og:description']"
+          },
+          "chapters": {
+            "itemSelector": ".con dd",
+            "titleSelector": "a",
+            "urlSelector": "a"
+          },
+          "content": {
+            "contentSelector": ".content",
+            "titleSelector": "h1"
+          }
+        }
+      },
+      "testOnly": true,
+      "testOnlyReason": "由公开上游小说源规则转换为本仓库 GET/CSS 配置；已映射搜索、详情、目录、正文，尚未完成当前站点实时与宿主四阶段实测。"
     }
   ]
 }
