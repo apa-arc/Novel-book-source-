@@ -4,6 +4,13 @@ on:
   schedule:
     - cron: "0 2 * * *"
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/daily-source-maintenance.yml"
+      - "scripts/live-host-probe.js"
+      - "scripts/live-test-app-runtime.ts"
+      - "subscription.json"
 
 permissions:
   contents: write
