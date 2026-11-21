@@ -168,7 +168,8 @@ function parsePutValue(raw) {
   if(!value) return null;
   if(/^(['"])[\s\S]*\1$/.test(value)) return {engine:"literal",value:value.slice(1,-1)};
   if(/^-?\d+(?:\.\d+)?$/.test(value)||/^(?:true|false|null)$/i.test(value)) return {engine:"literal",value};
-  if(/^@get:/i.test(value)) return {engine:"get",key:value.slice(5).trim()};
+  const getMatch=value.match(/^@get:([A-Za-z_$][\w$-]{0,63})$/i);
+  if(getMatch) return {engine:"get",key:getMatch[1]};
   if(/^[A-Za-z_$][\w$-]*$/.test(value)) return {engine:"variable",name:value};
   const fallback=splitTopLevel(value,"||");
   if(fallback){
@@ -248,10 +249,8 @@ function parseLegacyChain(expression) {
     if(base.status!=="candidate") return base;
     return {status:"candidate",selector:{engine:"put",input:base.selector,assignments}};
   }
-  if(/^@get:/i.test(raw)){
-    const key=raw.slice(5).trim();
-    return /^[A-Za-z_$][\w$-]{0,63}$/.test(key)?{status:"candidate",selector:{engine:"get",key}}:{status:"manual",reason:"invalid-get-key"};
-  }
+  const getMatch=raw.match(/^@get:([A-Za-z_$][\w$-]{0,63})$/i);
+  if(getMatch) return {status:"candidate",selector:{engine:"get",key:getMatch[1]}};
   const fallbackParts=splitTopLevel(raw,"||");
   if(fallbackParts){
     const parts=fallbackParts.map(parseLegacyChain);
