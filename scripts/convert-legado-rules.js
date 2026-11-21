@@ -215,6 +215,70 @@ function parseSimpleXPath(expression) {
   }
   return steps.length?{engine:"xpath",steps,output}:null;
 }
+function parsePutValue(raw) {
+  const value=String(raw||"").trim();
+  if(!value) return null;
+  if(/^(['"])[\s\S]*\1$/.test(value)) return {engine:"literal",value:value.slice(1,-1)};
+  if(/^-?\d+(?:\.\d+)?$/.test(value)||/^(?:true|false|null)$/i.test(value)) return {engine:"literal",value};
+  const getMatch=value.match(/^@get:([A-Za-z_$][\w$-]{0,63})$/i);
+  if(getMatch) return {engine:"get",key:getMatch[1]};
+  if(/^[A-Za-z_$][\w$-]*$/.test(value)) return {engine:"variable",name:value};
+  const fallback=splitTopLevel(value,"||");
+  if(fallback){
+    const parts=fallback.map(parsePutValue).filter(Boolean);
+    return parts.length?{engine:"composite",operator:"fallback",parts}:null;
+  }
+  const concat=splitTopLevel(value,"&&");
+  if(concat){
+    const parts=concat.map(parsePutValue).filter(Boolean);
+    return parts.length?{engine:"composite",operator:"concat",parts}:null;
+  }
+  const parsed=parseLegacyChain(value);
+  return parsed.status==="candidate"?parsed.selector:null;
+}
+function parsePutAssignments(raw) {
+  const entries=splitTopLevel(String(raw||""),",")||[String(raw||"").trim()];
+  if(!entries.length||entries.length>32) return null;
+  const assignments=[];
+  for(const entry of entries){
+    const colon=entry.indexOf(":");
+    if(colon<1) return null;
+    const key=entry.slice(0,colon).trim();
+    const value=parsePutValue(entry.slice(colon+1));
+    if(!/^[A-Za-z_$][\w$-]{0,63}$/.test(key)||!value) return null;
+    assignments.push({key,value});
+  }
+  return assignments;
+}
+function parseTemplateExpression(raw) {
+  if(!raw.includes("{{")) return null;
+  const parts=[];
+  let cursor=0,found=false;
+  while(true){
+    const start=raw.indexOf("{{",cursor);
+    if(start<0) break;
+    const end=raw.indexOf("}}",start+2);
+    if(end<0) return {status:"manual",reason:"unclosed-template"};
+    if(start>cursor) parts.push({engine:"literal",value:raw.slice(cursor,start)});
+    const inner=raw.slice(start+2,end).trim();
+    if(!inner) return {status:"manual",reason:"empty-template-expression"};
+    const parsed=parseLegacyChain(inner);
+    if(parsed.status!=="candidate") return {status:"manual",reason:"unsupported-template-expression"};
+    parts.push(parsed.selector);
+    found=true;
+    cursor=end+2;
+  }
+  if(!found) return null;
+  if(cursor<raw.length) parts.push({engine:"literal",value:raw.slice(cursor)});
+  if(parts.length===1) return {status:"candidate",selector:parts[0]};
+  return {status:"candidate",selector:{engine:"composite",operator:"concat",parts}};
+}
+function parseCompositePart(raw) {
+  const value=String(raw||"").trim();
+  if(!value) return null;
+  if(/^[A-Za-z_$][\w$-]*$/.test(value)) return {status:"candidate",selector:{engine:"variable",name:value}};
+  return parseLegacyChain(value);
+}
 function parseLegacyChain(expression) {
   let raw = String(expression).trim();
   if (!raw) return {status:"empty"};
