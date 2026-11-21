@@ -184,7 +184,7 @@ function parsePutValue(raw) {
   return parsed.status==="candidate"?parsed.selector:null;
 }
 function parsePutAssignments(raw) {
-  const entries=splitTopLevel(String(raw||""),",");
+  const entries=splitTopLevel(String(raw||""),",")||[String(raw||"").trim()];
   if(!entries||!entries.length||entries.length>32) return null;
   const assignments=[];
   for(const entry of entries){
