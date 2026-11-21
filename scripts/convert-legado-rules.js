@@ -240,7 +240,7 @@ function parseLegacyChain(expression) {
     }
     return {status:"candidate",selector};
   }
-  const putMatch=raw.match(/^(.*)@put:\\{([\\s\\S]*)\\}$/i);
+  const putMatch=raw.match(/^(.*)@put:\{([\s\S]*)\}$/i);
   if(putMatch){
     const assignments=parsePutAssignments(putMatch[2]);
     if(!assignments) return {status:"manual",reason:"unsupported-put-assignment"};
@@ -250,7 +250,7 @@ function parseLegacyChain(expression) {
   }
   if(/^@get:/i.test(raw)){
     const key=raw.slice(5).trim();
-    return /^[A-Za-z_$][\\w$-]{0,63}$/.test(key)?{status:"candidate",selector:{engine:"get",key}}:{status:"manual",reason:"invalid-get-key"};
+    return /^[A-Za-z_$][\w$-]{0,63}$/.test(key)?{status:"candidate",selector:{engine:"get",key}}:{status:"manual",reason:"invalid-get-key"};
   }
   const fallbackParts=splitTopLevel(raw,"||");
   if(fallbackParts){
