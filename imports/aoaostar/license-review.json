@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-22T03:14:00+08:00",
+  "sourceCatalog": "imports/aoaostar/candidate-review.json",
+  "method": [
+    "对704条候选记录逐条检查候选元数据中的 license、licenseUrl、licenseEvidence、redistributionEvidence 字段；当前目录未提供逐源许可或授权证据。",
+    "上游目录声明 AGPL-3.0，但同时注明单条规则来源和再分发权未评估；该声明不能证明目标网站小说内容或第三方书源规则已获授权。",
+    "对全部可访问章节样本中的两个域名进行公开页面许可声明复核；没有发现明确授权或可再分发许可。"
+  ],
+  "sites": [
+    {
+      "domain": "m.ttshu12.com",
+      "candidateIds": [
+        "4cfd6bb1d038fdd0",
+        "e57cb46b8773e1bd"
+      ],
+      "licenseStatus": "no-authorization-evidence-found",
+      "redistributionStatus": "not-approved",
+      "assessmentNote": "首页声明站内小说整理自互联网公开资源、著作权归原作者及出版方所有，仅供在线阅读与交流；这不是权利人授权或再分发许可。首页还呈现混合成人题材内容，因此不进入普通源队列。",
+      "evidence": [
+        {
+          "url": "https://m.ttshu12.com/",
+          "observation": "首页版权说明称站内小说整理自互联网公开资源，著作权归原作者及出版方所有；未提供权利人授权、许可协议或再分发范围。"
+        }
+      ]
+    },
+    {
+      "domain": "www.tangsanbooks.com",
+      "candidateIds": [
+        "10795e32c3d81fc8"
+      ],
+      "licenseStatus": "no-authorization-evidence-found",
+      "redistributionStatus": "not-approved",
+      "assessmentNote": "公开书籍页注明作品版权归作者所有，并称本站转载收集最新章节；未提供作者或权利人授权链、许可协议或再分发范围。",
+      "evidence": [
+        {
+          "url": "https://www.tangsanbooks.com/xs/woshixian",
+          "observation": "书籍页声明作品版权归署名作者所有，并称网站转载收集最新章节；未见权利人授权或再分发许可。"
+        }
+      ]
+    }
+  ]
+}

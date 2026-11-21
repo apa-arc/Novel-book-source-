@@ -9,6 +9,9 @@ on:
       - "scripts/scan-candidate-chapters-cli.js"
       - "runtime/text-quality.js"
       - "imports/aoaostar/candidate-review.json"
+      - "imports/aoaostar/license-review.json"
+      - "scripts/aggregate-candidate-assessment.js"
+      - "scripts/test-candidate-assessment.js"
       - ".github/workflows/scan-candidate-chapters.yml"
 
 permissions:

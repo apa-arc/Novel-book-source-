@@ -31,7 +31,16 @@ const reports = [{
     reasons: []
   }]
 }];
-const assessment = buildCandidateAssessment(review, reports);
+const licenseReview = {
+  sites: [{
+    domain: "www.example.com",
+    licenseStatus: "no-authorization-evidence-found",
+    redistributionStatus: "not-approved",
+    assessmentNote: "公开声明未提供授权。",
+    evidence: [{ url: "https://www.example.com/terms", observation: "未发现授权条款。" }]
+  }]
+};
+const assessment = buildCandidateAssessment(review, reports, undefined, licenseReview);
 assert.equal(assessment.totals.sourceRecords, 4);
 assert.equal(assessment.totals.uniqueDomains, 3);
 assert.equal(assessment.totals.duplicateSourceRecords, 1);
@@ -44,7 +53,15 @@ assert.equal(assessment.totals.readyForSubscription, 0);
 assert.equal(assessment.sources[0].chapterSampleStatus, "chapter-sample-clean");
 assert.equal(assessment.sources[1].chapterSampleStatus, "chapter-sample-clean");
 assert.equal(assessment.sources[0].technicalStatus, "not-adapted");
-assert.equal(assessment.sources[0].licenseStatus, "not-assessed");
+assert.equal(assessment.sources[0].licenseStatus, "no-authorization-evidence-found");
+assert.equal(assessment.sources[0].redistributionStatus, "not-approved");
+assert.equal(assessment.sources[0].licenseReviewMethod, "manual-public-page-review");
+assert.equal(assessment.sources[0].licenseEvidence.length, 1);
+assert.equal(assessment.sources[2].licenseStatus, "no-explicit-evidence-in-candidate-metadata");
+assert.equal(assessment.sources[2].redistributionStatus, "not-approved-unverified");
+assert.equal(assessment.licenseReviewSummary.sourceRecordsReviewed, 4);
+assert.equal(assessment.licenseReviewSummary.manualSiteReviewDomains, 1);
+assert.equal(assessment.licenseReviewSummary.redistributionApprovedRecords, 0);
 assert.equal(assessment.sources[2].accessibilityStatus, "excluded-adult-policy");
 assert.equal(assessment.sources[2].chapterSampleStatus, "not-run-adult-excluded");
 assert.equal(assessment.sources[3].accessibilityStatus, "excluded-non-novel-category");

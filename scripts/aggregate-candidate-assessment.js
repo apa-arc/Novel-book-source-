@@ -34,7 +34,7 @@ function countBy(items, selector) {
   }
   return Object.fromEntries(Object.entries(counts).sort((a, b) => a[0].localeCompare(b[0])));
 }
-function buildCandidateAssessment(candidateReview, reports, generatedAt) {
+function buildCandidateAssessment(candidateReview, reports, generatedAt, licenseReview = null) {
   const sources = candidateReview && candidateReview.sources;
   if (!Array.isArray(sources) || sources.length !== candidateReview.sourceCount) {
     throw new Error("candidate-review.json sourceCount 与 sources 数组不匹配");
@@ -43,6 +43,9 @@ function buildCandidateAssessment(candidateReview, reports, generatedAt) {
     throw new Error("没有找到候选站点扫描报告");
   }
 
+  const manualLicenseReviews = new Map(
+    (licenseReview?.sites || []).map(site => [String(site.domain || "").toLowerCase(), site])
+  );
   const groups = new Map();
   let invalidUrlRecords = 0;
   for (const source of sources) {
@@ -108,6 +111,24 @@ function buildCandidateAssessment(candidateReview, reports, generatedAt) {
           ? "invalid-or-missing-url"
           : scan.status;
     const sampleStatus = adult ? "not-run-adult-excluded" : nonNovel ? "not-run-non-novel-category" : scan ? scan.status : "not-run-invalid-url";
+    const manualLicenseReview = host ? manualLicenseReviews.get(host) : null;
+    const candidateLicenseEvidence = [
+      ["license", source.license],
+      ["licenseUrl", source.licenseUrl],
+      ["licenseEvidence", source.licenseEvidence],
+      ["redistributionEvidence", source.redistributionEvidence]
+    ].filter(([, value]) => value !== undefined && value !== null && value !== "" && !(Array.isArray(value) && value.length === 0));
+    const licenseStatus = manualLicenseReview?.licenseStatus ||
+      (candidateLicenseEvidence.length ? "evidence-present-not-yet-verified" : "no-explicit-evidence-in-candidate-metadata");
+    const redistributionStatus = manualLicenseReview?.redistributionStatus || "not-approved-unverified";
+    const licenseEvidence = [
+      ...candidateLicenseEvidence.map(([kind, value]) => ({ kind: "candidate-metadata:" + kind, value })),
+      ...(manualLicenseReview?.evidence || [])
+    ];
+    const licenseAssessmentNote = manualLicenseReview?.assessmentNote ||
+      (candidateLicenseEvidence.length
+        ? "候选元数据含有许可相关字段，但尚未验证授权主体、范围、期限及再分发权，不能据此启用。"
+        : "已检查该条候选元数据；未提供逐源许可证、授权链接或再分发证据。上游仓库声明 AGPL-3.0 不代表目标站点小说内容或第三方规则已获授权。");
     return {
       id: source.id,
       collectionId: source.collectionId,
@@ -132,10 +153,11 @@ function buildCandidateAssessment(candidateReview, reports, generatedAt) {
         chapters: "not-run",
         content: "not-run"
       },
-      licenseStatus: "not-assessed",
-      redistributionStatus: "not-assessed",
-      licenseEvidence: [],
-      licenseAssessmentNote: "未找到该站点或该条规则的明确授权/再分发证据；上游仓库的 AGPL 声明不代表站点内容或第三方书源规则已获授权。"
+      licenseStatus,
+      redistributionStatus,
+      licenseEvidence,
+      licenseReviewMethod: manualLicenseReview ? "manual-public-page-review" : "candidate-metadata-review",
+      licenseAssessmentNote
     };
   });
 
@@ -166,6 +188,11 @@ function buildCandidateAssessment(candidateReview, reports, generatedAt) {
     mixedOutOfScopeAndNovelDomains: mixedGroups.length,
     eligibleUniqueDomains: expectedHosts,
     scannedUniqueDomains: scanResults.size,
+    licenseMetadataReviewedRecords: assessments.length,
+    recordsWithExplicitLicenseMetadata: assessments.filter(x => x.licenseReviewMethod === "candidate-metadata-review" && x.licenseStatus === "evidence-present-not-yet-verified").length,
+    manuallyReviewedLicenseRecords: assessments.filter(x => x.licenseReviewMethod === "manual-public-page-review").length,
+    manuallyReviewedLicenseDomains: manualLicenseReviews.size,
+    redistributionApprovedRecords: assessments.filter(x => x.redistributionStatus === "approved").length,
     readyForSubscription: 0
   };
 
@@ -184,6 +211,14 @@ function buildCandidateAssessment(candidateReview, reports, generatedAt) {
     technicalStatusCounts: countBy(assessments, x => x.technicalStatus),
     licenseStatusCounts: countBy(assessments, x => x.licenseStatus),
     redistributionStatusCounts: countBy(assessments, x => x.redistributionStatus),
+    licenseReviewSummary: {
+      sourceRecordsReviewed: assessments.length,
+      explicitLicenseMetadataRecords: assessments.filter(x => x.licenseReviewMethod === "candidate-metadata-review" && x.licenseStatus === "evidence-present-not-yet-verified").length,
+      manualSiteReviewDomains: manualLicenseReviews.size,
+      manuallyReviewedSourceRecords: assessments.filter(x => x.licenseReviewMethod === "manual-public-page-review").length,
+      redistributionApprovedRecords: assessments.filter(x => x.redistributionStatus === "approved").length
+    },
+    manualSiteLicenseReviews: licenseReview?.sites || [],
     hostResults: hostResults,
     sources: assessments
   };
@@ -208,6 +243,10 @@ function renderSummary(assessment) {
     "- 成人/非小说与普通混合域名：" + t.mixedOutOfScopeAndNovelDomains,
     "- 非成人待审域名：" + t.eligibleUniqueDomains,
     "- 已完成公开页面/章节样本扫描：" + t.scannedUniqueDomains,
+    "- 逐条完成许可元数据检查：" + t.licenseMetadataReviewedRecords + " 条",
+    "- 候选元数据中含逐源许可/授权字段：" + t.recordsWithExplicitLicenseMetadata + " 条",
+    "- 人工核查公开许可声明的域名：" + t.manuallyReviewedLicenseDomains + " 个（对应 " + t.manuallyReviewedLicenseRecords + " 条候选记录）",
+    "- 已获批准再分发的候选记录：" + t.redistributionApprovedRecords + " 条",
     "- 已具备明确许可且完成 App 四接口验收、可进入订阅：" + t.readyForSubscription,
     "",
     "## 域名扫描结果",
@@ -218,13 +257,17 @@ function renderSummary(assessment) {
     "",
     "## 许可与技术状态",
     "",
-    "- 许可/再分发依据：704 条全部为 not-assessed，没有将上游 AGPL 误当作站点内容授权。",
-    "- App 四接口：704 条均未由本报告证明通过；搜索、详情、目录、正文均标记 not-run。",
+    "- 许可/再分发依据：候选元数据已逐条检查；无逐源许可证/授权字段的记录标记为 no-explicit-evidence-in-candidate-metadata，不能视为已获许可。",
+    "- 上游仓库虽声明 AGPL-3.0，但其目录明确指出单条规则来源和再分发权未评估；AGPL 不能替代站点内容授权。",
+    "- 已人工核查两个章节样本可访问域名；公开声明均未提供授权链或再分发许可，保持 not-approved。",
+    "- App 四接口：候选队列中所有记录仍未由本报告证明通过；搜索、详情、目录、正文均标记 not-run。",
     "- 技术适配：非成人候选均为 not-adapted；章节样本干净只代表抽样页质量初筛，不代表适配器可用。",
     "- 只有明确许可证据、四接口真实测试和质量门禁全部通过，才会加入正式订阅。",
     "",
+    "人工许可审查记录：imports/aoaostar/license-review.json",
     "机器可读逐条评估：imports/aoaostar/candidate-assessment.json",
     "",
+    ...(assessment.manualSiteLicenseReviews || []).map(site => "- " + site.domain + "：" + site.assessmentNote),
     "扫描限制：GitHub Actions 网络环境下的 403、超时或连接失败只能说明当前探测环境不可访问，不能推断站点永久失效。"
   ].join("\n") + "\n";
 }
@@ -244,9 +287,13 @@ function main() {
   const root = path.resolve(__dirname, "..");
   const reportsDir = path.resolve(process.argv[2] || path.join(root, "artifacts/scans"));
   const review = JSON.parse(fs.readFileSync(path.join(root, "imports/aoaostar/candidate-review.json"), "utf8"));
+  const licenseReviewPath = path.join(root, "imports/aoaostar/license-review.json");
+  const licenseReview = fs.existsSync(licenseReviewPath)
+    ? JSON.parse(fs.readFileSync(licenseReviewPath, "utf8"))
+    : null;
   const files = walkJsonFiles(reportsDir);
   const reports = files.map(file => JSON.parse(fs.readFileSync(file, "utf8")));
-  const assessment = buildCandidateAssessment(review, reports);
+  const assessment = buildCandidateAssessment(review, reports, undefined, licenseReview);
   fs.mkdirSync(path.join(root, "imports/aoaostar"), { recursive: true });
   fs.mkdirSync(path.join(root, "reports"), { recursive: true });
   fs.writeFileSync(path.join(root, "imports/aoaostar/candidate-assessment.json"), JSON.stringify(assessment, null, 2) + "\n");
