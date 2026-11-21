@@ -32,6 +32,8 @@ try{
  assert.equal(textNodes.selector.output,"textnodes");
  const indexed=parseLegacyChain("class.chapter.2@text");
  assert.equal(indexed.selector.steps[0].index,2);
+ const dottedRange=parseLegacyChain("tag.p.3:4:5@text");
+ assert.deepEqual(dottedRange.selector.steps[0].selection,{mode:"range",start:3,end:4,step:5});
  const textMatch=parseLegacyChain("text.小说@text");
  assert.equal(textMatch.status,"candidate");
  assert.deepEqual(textMatch.selector.steps[0],{kind:"text",name:"小说",index:null});
