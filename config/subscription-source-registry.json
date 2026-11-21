@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "name": "小说源现有订阅源规则备份与健康基线",
+  "baselineAt": "2026-11-21T14:59:04.269Z",
+  "subscriptionId": "apa-arc-novel-book-source",
+  "subscriptionName": "小说源",
+  "sourceCount": 10,
+  "policy": {
+    "backupFiles": "sources/<id>.json + scripts/<id>.js",
+    "healthKeywords": [
+      "斗罗大陆",
+      "斗破苍穹"
+    ],
+    "requiredStages": [
+      "search",
+      "detail",
+      "chapters",
+      "content"
+    ],
+    "minimumContentCharacters": 100,
+    "failureHandling": "单次失败仅告警并复测；连续3次完整运行失败后隔离出订阅，但保留源配置与解析器备份。",
+    "recovery": "修复后重新完成两关键词搜索和详情、目录、正文四阶段测试，全部通过才重新入订阅。",
+    "noCandidates": true
+  },
+  "sources": [
+    {
+      "id": "biquluo-la",
+      "name": "壁落小说",
+      "baseUrl": "https://www.biquluo.la/",
+      "metadataFile": "sources/biquluo-la.json",
+      "parserFile": "scripts/biquluo-la.js",
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/biquluo-la.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/biquluo-la.js",
+      "baselineAppRuntimeStatus": "passed-both",
+      "testOnly": true,
+      "testOnlyReason": "旧版 Legado 四阶段联网测试曾通过；当前先开放给 AppleNovelApp 原生宿主联调，尚未完成 App 侧复测。",
+      "baselineTestedAt": "2026-11-21T15:03:20.552Z"
+    },
+    {
+      "id": "jiuyi-91zww",
+      "name": "九一中文",
+      "baseUrl": "https://www.91zww.com/",
+      "metadataFile": "sources/jiuyi-91zww.json",
+      "parserFile": "scripts/jiuyi-91zww.js",
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/jiuyi-91zww.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/jiuyi-91zww.js",
+      "baselineAppRuntimeStatus": "failed",
+      "testOnly": true,
+      "testOnlyReason": "从公开上游 GET 搜索规则转换；目录和正文 CSS 规则已补齐，尚未完成当前站点实时与宿主实测。",
+      "baselineTestedAt": "2026-11-21T15:03:20.552Z"
+    },
+    {
+      "id": "xinbiquge-info",
+      "name": "新笔趣阁小说网",
+      "baseUrl": "https://www.xbiquge.info/",
+      "metadataFile": "sources/xinbiquge-info.json",
+      "parserFile": "scripts/xinbiquge-info.js",
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/xinbiquge-info.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/xinbiquge-info.js",
+      "baselineAppRuntimeStatus": "failed",
+      "testOnly": true,
+      "testOnlyReason": "来源于公开书源规则库；站点搜索近期可检索到有效结果，已转换为 GET/CSS。详情、目录、正文尚未完成目标宿主四阶段实测。",
+      "baselineTestedAt": "2026-11-21T15:03:20.552Z"
+    },
+    {
+      "id": "biquge-17177",
+      "name": "笔趣阁小说网（17177）",
+      "baseUrl": "https://www.17177.cc/",
+      "metadataFile": "sources/biquge-17177.json",
+      "parserFile": "scripts/biquge-17177.js",
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/biquge-17177.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/biquge-17177.js",
+      "baselineAppRuntimeStatus": "passed-both",
+      "testOnly": true,
+      "testOnlyReason": "取自公开书源规则库，已转换为 GET/CSS。目标站当前实时访问及搜索、详情、目录、正文四阶段尚未完成实测。",
+      "baselineTestedAt": "2026-11-21T15:03:20.552Z"
+    },
+    {
+      "id": "d8zw-com",
+      "name": "第八中文网",
+      "baseUrl": "https://www.d8zw.com/",
+      "metadataFile": "sources/d8zw-com.json",
+      "parserFile": "scripts/d8zw-com.js",
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/d8zw-com.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/d8zw-com.js",
+      "baselineAppRuntimeStatus": "failed",
+      "testOnly": true,
+      "testOnlyReason": "来源于公开书源规则库；已过滤上游 JavaScript 依赖并转换为 GET/CSS。站点实时及当前宿主四阶段尚未完成实测。",
+      "baselineTestedAt": "2026-11-21T15:03:20.552Z"
+    },
+    {
+      "id": "bqg-info",
+      "name": "笔趣阁info",
+      "baseUrl": "https://www.bqg.info/",
+      "metadataFile": "sources/bqg-info.json",
+      "parserFile": "scripts/bqg-info.js",
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/bqg-info.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/bqg-info.js",
+      "baselineAppRuntimeStatus": "passed-both",
+      "testOnly": true,
+      "testOnlyReason": "来源于公开书源规则库；已移除上游章节翻页脚本依赖并转换为 GET/CSS。搜索结果结构和正文分页尚未完成实时与当前宿主实测。",
+      "baselineTestedAt": "2026-11-21T15:03:20.552Z"
+    },
+    {
+      "id": "xqianqian-m",
+      "name": "千千小说",
+      "baseUrl": "https://m.xqianqian.com/",
+      "metadataFile": "sources/xqianqian-m.json",
+      "parserFile": "scripts/xqianqian-m.js",
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/xqianqian-m.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/xqianqian-m.js",
+      "baselineAppRuntimeStatus": "failed",
+      "testOnly": true,
+      "testOnlyReason": "已转换公开上游 GET/CSS 规则；网页端仍有近期更新记录，尚未完成 AppleNovelApp 宿主四阶段复测。",
+      "baselineTestedAt": "2026-11-21T15:03:20.552Z"
+    },
+    {
+      "id": "douhua-wenxue",
+      "name": "豆花文学",
+      "baseUrl": "https://www.douhuawenxue.com/",
+      "metadataFile": "sources/douhua-wenxue.json",
+      "parserFile": "scripts/douhua-wenxue.js",
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/douhua-wenxue.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/douhua-wenxue.js",
+      "baselineAppRuntimeStatus": "failed",
+      "testOnly": true,
+      "testOnlyReason": "已转换公开上游 GET/CSS 规则；站点近期可检索到更新作品，但部分章节可能付费，尚未完成 AppleNovelApp 宿主四阶段复测。",
+      "baselineTestedAt": "2026-11-21T15:03:20.552Z"
+    },
+    {
+      "id": "iyueba-net",
+      "name": "爱阅吧网",
+      "baseUrl": "https://iyueba.net/",
+      "metadataFile": "sources/iyueba-net.json",
+      "parserFile": "scripts/iyueba-net.js",
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/iyueba-net.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/iyueba-net.js",
+      "baselineAppRuntimeStatus": "failed",
+      "testOnly": true,
+      "testOnlyReason": "已转换公开上游 GET/CSS 规则；站点近期仍有更新作品，尚未完成 AppleNovelApp 宿主四阶段复测。",
+      "baselineTestedAt": "2026-11-21T15:03:20.552Z"
+    },
+    {
+      "id": "52shuku-net",
+      "name": "52书库（男频武侠）",
+      "baseUrl": "https://www.52shuku.net/",
+      "metadataFile": "sources/52shuku-net.json",
+      "parserFile": "scripts/52shuku-net.js",
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/52shuku-net.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/52shuku-net.js",
+      "baselineAppRuntimeStatus": "passed-both",
+      "testOnly": false,
+      "testOnlyReason": null,
+      "baselineTestedAt": "2026-11-21T15:03:20.552Z"
+    }
+  ]
+}
