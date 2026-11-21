@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "xinbiquge-info",
+  "name": "新笔趣阁小说网",
+  "kind": "public-web",
+  "version": "1.0.0",
+  "baseUrl": "https://www.xbiquge.info/",
+  "domains": [
+    "www.xbiquge.info"
+  ],
+  "script": "scripts/xinbiquge-info.js",
+  "enabled": true,
+  "testOnly": true,
+  "testOnlyReason": "来源于公开书源规则库；站点搜索近期可检索到有效结果，已转换为 GET/CSS。详情、目录、正文尚未完成目标宿主四阶段实测。",
+  "description": "普通小说网页源；GET 搜索，目录分页，正文使用 article.font_max；章节可能分页，需后续补齐翻页处理。",
+  "licenseApproved": true,
+  "licenseType": "self-owned",
+  "licenseEvidence": "本仓库原创声明式适配配置与解析器，不包含小说正文。",
+  "licenseEvidenceUrl": "https://github.com/apa-arc/Novel-book-source-/blob/main/sources/xinbiquge-info.json",
+  "hostValidated": false,
+  "appConfig": {
+    "searchUrl": "https://www.xbiquge.info/search.php?q={keyword}",
+    "bookUrl": "https://www.xbiquge.info/{bookUrl}",
+    "chapterListUrl": "https://www.xbiquge.info/{bookUrl}index_1.html",
+    "chapterUrl": "https://www.xbiquge.info/{chapterUrl}",
+    "htmlRules": {
+      "search": {
+        "itemSelector": ".box.hot dl",
+        "titleSelector": "dd h3 a",
+        "urlSelector": "dd h3 a",
+        "authorSelector": "dd.book_other span"
+      },
+      "detail": {
+        "titleSelector": "h1",
+        "descriptionSelector": "#intro"
+      },
+      "chapters": {
+        "itemSelector": ".book_list2 > ul > li",
+        "titleSelector": "a",
+        "urlSelector": "a"
+      },
+      "content": {
+        "contentSelector": "article.font_max",
+        "titleSelector": "h1"
+      }
+    }
+  }
+}
