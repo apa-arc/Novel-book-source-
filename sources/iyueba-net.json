@@ -3,7 +3,7 @@
   "id": "iyueba-net",
   "name": "爱阅吧网",
   "kind": "public-web",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "baseUrl": "https://iyueba.net/",
   "domains": [
     "iyueba.net"
