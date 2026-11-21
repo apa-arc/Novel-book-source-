@@ -4,7 +4,8 @@ const { createAdapter } = require("../runtime/source-adapter");
 const css = (query, output = "text") => ({ engine: "css", query, output });
 
 module.exports = createAdapter({
-  baseUrl: "https://www.111bz.cc/",
+  baseUrl: "https://m.111bz.cc/",
+  domains: ["www.111bz.cc", "m.111bz.cc"],
   domains: ["www.111bz.cc"],
   search: {
     url: (keyword, page) => "https://www.111bz.cc/modules/article/search.php?searchkey=" +
@@ -25,7 +26,7 @@ module.exports = createAdapter({
     }
   },
   toc: {
-    list: css("dl dd a", "all"),
+    list: css("a[href$='.html']", "all"),
     fields: {
       title: { engine: "self", output: "text" },
       chapterUrl: { engine: "self", output: "href" }
