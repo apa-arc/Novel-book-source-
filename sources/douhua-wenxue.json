@@ -10,8 +10,6 @@
   ],
   "script": "scripts/douhua-wenxue.js",
   "enabled": true,
-  "testOnly": true,
-  "testOnlyReason": "已转换公开上游 GET/CSS 规则；站点近期可检索到更新作品，但部分章节可能付费，尚未完成 AppleNovelApp 宿主四阶段复测。",
   "description": "原创小说站网页源；GET 搜索，详情、目录和正文采用 CSS 规则。站点近期仍有更新内容；部分作品可能存在付费章节，当前宿主四阶段复测待完成。",
   "licenseApproved": true,
   "licenseType": "self-owned",
@@ -44,5 +42,7 @@
         "titleSelector": "h1"
       }
     }
-  }
+  },
+  "userConfirmedExistingSource": true,
+  "userConfirmedWorkingAt": "2026-11-21"
 }
