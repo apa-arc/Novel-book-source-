@@ -100,8 +100,29 @@ function readOutput(node,output){
   }
   throw new Error("unsupported-selector-output");
 }
-function executeSelector(root,selector){
+function executeSelector(root,selector,context={}){
   if(root==null||!selector||typeof selector!=="object") throw new Error("invalid-selector-input");
+  if(!context||typeof context!=="object") context={};
+  if(selector.engine==="get"){
+    const variables=context.variables&&typeof context.variables==="object"?context.variables:{};
+    return Object.prototype.hasOwnProperty.call(variables,selector.key)?variables[selector.key]:"";
+  }
+  if(selector.engine==="variable"){
+    const variables=context.variables&&typeof context.variables==="object"?context.variables:{};
+    if(Object.prototype.hasOwnProperty.call(variables,selector.name)) return variables[selector.name];
+    if(root&&typeof root==="object"&&Object.prototype.hasOwnProperty.call(root,selector.name)) return root[selector.name];
+    return "";
+  }
+  if(selector.engine==="put"){
+    if(!Array.isArray(selector.assignments)||selector.assignments.length>32) throw new Error("invalid-put-assignments");
+    if(!context.variables||typeof context.variables!=="object") context.variables={};
+    const result=executeSelector(root,selector.input,context);
+    for(const assignment of selector.assignments){
+      const value=executeSelector(root,assignment.value,context);
+      context.variables[assignment.key]=value;
+    }
+    return result;
+  }
   if(selector.engine==="json"){
     if(!Array.isArray(selector.path)||!selector.path.length||selector.path.length>32) throw new Error("invalid-json-path");
     let current=[root];
@@ -141,7 +162,7 @@ function executeSelector(root,selector){
   if(selector.engine==="literal") return String(selector.value==null?"":selector.value);
   if(selector.engine==="composite"){
     if(!Array.isArray(selector.parts)||!selector.parts.length||selector.parts.length>32) throw new Error("invalid-composite-selector");
-    const values=selector.parts.map(part=>executeSelector(root,part));
+    const values=selector.parts.map(part=>executeSelector(root,part,context));
     if(selector.operator==="concat") return values.flatMap(value=>Array.isArray(value)?value:[value]).filter(value=>value!=null&&value!=="");
     if(selector.operator==="fallback"){
       for(const value of values){
@@ -162,7 +183,7 @@ function executeSelector(root,selector){
   if(selector.engine==="replace"){
     if(typeof selector.pattern!=="string"||selector.pattern.length>256||typeof selector.replacement!=="string") throw new Error("invalid-regex-transform");
     if(/\([^)]*[+*][^)]*\)[+*{]|\([^)]*\+[^)]*\)\+/u.test(selector.pattern)) throw new Error("unsafe-regex-transform");
-    const input=executeSelector(root,selector.input);
+    const input=executeSelector(root,selector.input,context);
     const wasArray=Array.isArray(input);
     const values=wasArray?input:[input];
     if(values.some(value=>String(value==null?"":value).length>200000)) throw new Error("regex-input-limit");
