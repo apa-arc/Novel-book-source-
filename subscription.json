@@ -4,7 +4,7 @@
   "name": "小说源",
   "description": "普通与成人小说统一订阅；来源发现问题后持续修复或下架。",
   "repository": "https://github.com/apa-arc/Novel-book-source-",
-  "updatedAt": "2026-11-21T06:40:23.111Z",
+  "updatedAt": "2026-11-21T12:00:00.000Z",
   "sourceCount": 2,
   "sources": [
     {
@@ -22,9 +22,9 @@
       "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/biquluo-la.js",
       "appConfig": {
         "searchUrl": "https://www.biquluo.la/search.html?name={keyword}",
-        "bookUrl": "https://www.biquluo.la{bookUrl}",
-        "chapterListUrl": "https://www.biquluo.la{bookUrl}",
-        "chapterUrl": "https://www.biquluo.la{chapterUrl}",
+        "bookUrl": "https://www.biquluo.la/",
+        "chapterListUrl": "https://www.biquluo.la/{bookUrl}",
+        "chapterUrl": "https://www.biquluo.la/{chapterUrl}",
         "htmlRules": {
           "search": {
             "itemSelector": ".novelslist2 li",
@@ -38,8 +38,8 @@
           },
           "chapters": {
             "itemSelector": "#list dd",
-            "titleSelector": "a",
-            "urlSelector": "a"
+            "titleSelector": ":self",
+            "urlSelector": ":self"
           },
           "content": {
             "contentSelector": "#content",
@@ -67,10 +67,10 @@
       "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/diyibanzhu-111.json",
       "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/diyibanzhu-111.js",
       "appConfig": {
-        "searchUrl": "https://www.111bz.cc/modules/article/search.php?searchkey={keyword}&searchtype=articlename&page={page}",
-        "bookUrl": "https://m.111bz.cc{bookUrl}",
-        "chapterListUrl": "https://m.111bz.cc{bookUrl}",
-        "chapterUrl": "https://m.111bz.cc{chapterUrl}",
+        "searchUrl": "https://m.111bz.cc/modules/article/search.php?searchkey={keyword}&searchtype=articlename&page=1",
+        "bookUrl": "https://m.111bz.cc/",
+        "chapterListUrl": "https://m.111bz.cc/html/{bookPath}/index.html",
+        "chapterUrl": "https://m.111bz.cc/{chapterUrl}",
         "htmlRules": {
           "search": {
             "itemSelector": "tbody#nr tr",
