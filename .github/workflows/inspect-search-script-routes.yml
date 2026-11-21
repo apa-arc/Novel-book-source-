@@ -1,0 +1,31 @@
+name: Inspect search routes in candidate site scripts
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/inspect-search-script-routes.js"
+      - ".github/workflows/inspect-search-script-routes.yml"
+permissions:
+  contents: write
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install --no-save --no-package-lock linkedom
+      - run: node scripts/inspect-search-script-routes.js
+      - name: Commit sanitized report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/search-script-route-inspection.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Inspect search route scripts for candidate sites"
+            git pull --rebase origin main
+            git push
+          fi
