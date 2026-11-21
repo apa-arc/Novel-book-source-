@@ -22,9 +22,9 @@
       "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/biquluo-la.js",
       "appConfig": {
         "searchUrl": "https://www.biquluo.la/search.html?name={keyword}",
-        "bookUrl": "https://www.biquluo.la/{bookUrl}",
-        "chapterListUrl": "https://www.biquluo.la/{bookUrl}",
-        "chapterUrl": "https://www.biquluo.la/{chapterUrl}",
+        "bookUrl": "https://www.biquluo.la{bookUrl}",
+        "chapterListUrl": "https://www.biquluo.la{bookUrl}",
+        "chapterUrl": "https://www.biquluo.la{chapterUrl}",
         "htmlRules": {
           "search": {
             "itemSelector": ".novelslist2 li",
@@ -67,9 +67,9 @@
       "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/diyibanzhu-111.js",
       "appConfig": {
         "searchUrl": "https://www.111bz.cc/modules/article/search.php?searchkey={keyword}&searchtype=articlename&page={page}",
-        "bookUrl": "https://www.111bz.cc/{bookUrl}",
-        "chapterListUrl": "https://www.111bz.cc/{bookUrl}",
-        "chapterUrl": "https://www.111bz.cc/{chapterUrl}",
+        "bookUrl": "https://www.111bz.cc{bookUrl}",
+        "chapterListUrl": "https://www.111bz.cc{bookUrl}",
+        "chapterUrl": "https://www.111bz.cc{chapterUrl}",
         "htmlRules": {
           "search": {
             "itemSelector": "tbody#nr tr",
