@@ -30,7 +30,12 @@ function first(document, selector) {
 
 function all(document, selector) {
   if (!selector) return [];
-  return executeSelector(document, { ...selector, output: "all" });
+  const selected = executeSelector(document, { ...selector, output: "all" });
+  if (Array.isArray(selected)) return selected;
+  if (!selected || typeof selected !== "object") return [];
+  const recordKeys = ["name","title","bookName","book_name","novelName","chapterName","chapter_name","bookUrl","chapterUrl"];
+  if (typeof selected.querySelectorAll === "function" || recordKeys.some(key => Object.prototype.hasOwnProperty.call(selected,key))) return [selected];
+  return Object.values(selected);
 }
 
 function value(node, selector) {
