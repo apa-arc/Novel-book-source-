@@ -22,6 +22,8 @@ type TermResult = {
   selectedTitle?: string;
   stages: Stage[];
   error?: string;
+  attempts?: number;
+  matchingResultCount?: number;
 };
 type Result = { id: string; name: string; status: string; terms: Record<string, TermResult> };
 
@@ -45,29 +47,49 @@ async function testTerm(source: NovelSource, keyword: string): Promise<TermResul
   const client = createSourceHttpClient(source);
 
   let page;
-  try {
-    page = await searchNovelSource(source, keyword, client);
-    out.searchStatus = "passed";
-    out.resultCount = page.items.length;
-    out.stages.push({
-      stage: "搜索",
-      status: "passed",
-      detail: "App 搜索请求及解析成功；返回 " + page.items.length + " 条结果",
-    });
-  } catch (error) {
-    out.error = errorText(error);
-    out.searchStatus = classifyAppSearchError(out.error);
+  let lastError = "";
+  const maxAttempts = 3;
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    try {
+      page = await searchNovelSource(source, keyword, client);
+      out.attempts = attempt;
+      break;
+    } catch (error) {
+      lastError = errorText(error);
+      out.attempts = attempt;
+      const classification = classifyAppSearchError(lastError);
+      if (attempt < maxAttempts) {
+        // Repeat failures before classifying a source; transient network and parser errors
+        // must not become a one-shot false negative.
+        await new Promise((resolve) => setTimeout(resolve, 2500));
+        continue;
+      }
+      out.error = lastError;
+      out.searchStatus = classification;
+    }
+  }
+  if (!page) {
     out.status = out.searchStatus === "inconclusive" ? "search-inconclusive" : "failed";
     out.stages.push({
       stage: "搜索",
       status: out.searchStatus === "inconclusive" ? "inconclusive" : "failed",
-      detail: out.error,
+      detail: "连续 " + maxAttempts + " 次请求仍未成功：" + lastError,
     });
     out.stages.push({ stage: "目录", status: "skipped", detail: "搜索请求未成功或响应无法解析" });
     out.stages.push({ stage: "详情", status: "skipped", detail: "没有可用搜索结果" });
     out.stages.push({ stage: "正文", status: "skipped", detail: "没有可用搜索结果" });
     return out;
   }
+  out.searchStatus = "passed";
+  out.resultCount = page.items.length;
+  out.matchingResultCount = page.items.filter((item) =>
+    item.title.toLocaleLowerCase().includes(keyword.toLocaleLowerCase())
+  ).length;
+  out.stages.push({
+    stage: "搜索",
+    status: "passed",
+    detail: "App 搜索请求及解析成功；返回 " + page.items.length + " 条结果；标题匹配关键词 " + out.matchingResultCount + " 条；尝试 " + out.attempts + " 次",
+  });
 
   if (page.items.length === 0) {
     out.status = "search-only";
@@ -82,7 +104,7 @@ async function testTerm(source: NovelSource, keyword: string): Promise<TermResul
     return out;
   }
 
-  const summary = page.items[0];
+  const summary = page.items.find((item) => item.title.toLocaleLowerCase().includes(keyword.toLocaleLowerCase())) || page.items[0];
   out.selectedTitle = summary.title;
 
   let chapters;
@@ -209,13 +231,16 @@ async function mapLimit<T, R>(items: T[], limit: number, fn: (item: T) => Promis
     searchFailed: allTerms.filter(term => term.searchStatus === "failed").length,
     searchInconclusive: allTerms.filter(term => term.searchStatus === "inconclusive").length,
     searchRequestsPassed: allTerms.filter(term => term.searchStatus === "passed").length,
+    searchZeroResults: allTerms.filter(term => term.searchStatus === "passed" && term.resultCount === 0).length,
+    searchHasResultsButNoTitleMatch: allTerms.filter(term => term.searchStatus === "passed" && (term.resultCount || 0) > 0 && (term.matchingResultCount || 0) === 0).length,
+    searchRetriesUsed: allTerms.filter(term => (term.attempts || 0) > 1).length,
     chapterContentPassed: allTerms.filter(term => term.readingStatus === "readable").length,
   };
 
   fs.mkdirSync("reports", { recursive: true });
   fs.writeFileSync("reports/app-runtime-live-test.json", JSON.stringify({
     generatedAt: new Date().toISOString(),
-    testStandard: "AppleNovelApp search semantics + separately reported reading stages; Node network errors are environment-inconclusive",
+    testStandard: "AppleNovelApp search semantics + separately reported reading stages; each search retries up to 3 times; transient Node network errors are environment-inconclusive; title relevance is separate from request success",
     keywords,
     counts,
     results: sourceResults,
