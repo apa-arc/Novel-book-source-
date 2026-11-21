@@ -3,7 +3,7 @@
   "id": "d8zw-com",
   "name": "第八中文网",
   "kind": "public-web",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "baseUrl": "https://www.d8zw.com/",
   "domains": [
     "www.d8zw.com"
@@ -26,7 +26,8 @@
         "itemSelector": ".box.hot dl",
         "titleSelector": "dd h3 a",
         "urlSelector": "dd h3 a",
-        "authorSelector": "dd.book_other span"
+        "authorSelector": "dd.book_other span",
+        "coverSelector": "img"
       },
       "detail": {
         "titleSelector": "h1",
