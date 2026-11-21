@@ -100,6 +100,47 @@ function readOutput(node,output){
   }
   throw new Error("unsupported-selector-output");
 }
+function matchesTag(node,tag){
+  return !!node&&node.nodeType===1&&(tag==="*"||String(node.tagName||"").toLowerCase()===String(tag).toLowerCase());
+}
+function selectXPath(root,selector){
+  if(!Array.isArray(selector.steps)||selector.steps.length>32) throw new Error("invalid-xpath-steps");
+  let current=[root];
+  for(const step of selector.steps){
+    const next=[];
+    for(const parent of current){
+      let candidates=[];
+      if(step.axis==="descendant"){
+        candidates=parent&&typeof parent.querySelectorAll==="function"?Array.from(parent.querySelectorAll(step.tag)): [];
+      }else if(step.axis==="child"){
+        candidates=Array.from(parent&&parent.children||[]).filter(node=>matchesTag(node,step.tag));
+      }else if(step.axis==="parent"){
+        const node=parent&&(parent.parentElement||parent.parentNode);
+        if(matchesTag(node,step.tag)) candidates=[node];
+      }else if(step.axis==="followingSibling"||step.axis==="precedingSibling"){
+        const siblings=Array.from(parent&&parent.parentElement&&parent.parentElement.children||[]);
+        const index=siblings.indexOf(parent);
+        if(index>=0){
+          if(step.axis==="followingSibling") candidates=siblings.slice(index+1).filter(node=>matchesTag(node,step.tag));
+          else candidates=siblings.slice(0,index).reverse().filter(node=>matchesTag(node,step.tag));
+        }
+      }else throw new Error("unsupported-xpath-axis");
+      for(const filter of step.filters||[]){
+        if(filter.kind==="attributeEquals") candidates=candidates.filter(node=>node.getAttribute&&node.getAttribute(filter.name)===filter.value);
+        else if(filter.kind==="textEquals") candidates=candidates.filter(node=>String(node.textContent||"").trim()===filter.value);
+        else if(filter.kind==="childExists") candidates=candidates.filter(node=>Array.from(node.children||[]).some(child=>matchesTag(child,filter.tag)));
+        else if(filter.kind==="position") candidates=filter.index>0&&filter.index<=candidates.length?[candidates[filter.index-1]]:[];
+        else if(filter.kind==="last") candidates=candidates.length?[candidates[candidates.length-1]]:[];
+        else throw new Error("unsupported-xpath-filter");
+      }
+      next.push(...candidates);
+      if(next.length>MAX_RESULTS) throw new Error("xpath-result-limit");
+    }
+    current=next;
+    if(!current.length) break;
+  }
+  return current;
+}
 function executeSelector(root,selector,context={}){
   if(root==null||!selector||typeof selector!=="object") throw new Error("invalid-selector-input");
   if(!context||typeof context!=="object") context={};
@@ -122,6 +163,11 @@ function executeSelector(root,selector,context={}){
       context.variables[assignment.key]=value;
     }
     return result;
+  }
+  if(selector.engine==="xpath"){
+    const nodes=selectXPath(root,selector);
+    if(selector.output==="all") return nodes;
+    return nodes.map(node=>readOutput(node,selector.output||"text"));
   }
   if(selector.engine==="json"){
     if(!Array.isArray(selector.path)||!selector.path.length||selector.path.length>32) throw new Error("invalid-json-path");
