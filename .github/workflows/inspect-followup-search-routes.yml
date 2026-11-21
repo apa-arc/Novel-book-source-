@@ -1,0 +1,29 @@
+name: Inspect follow-up GET search routes
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/inspect-followup-search-routes.js"
+      - ".github/workflows/inspect-followup-search-routes.yml"
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install HTML parser
+        run: npm install --no-save --no-package-lock linkedom
+      - name: Inspect candidate search routes
+        run: node scripts/inspect-followup-search-routes.js
+      - name: Upload inspection report
+        uses: actions/upload-artifact@v4
+        with:
+          name: followup-search-route-inspection
+          path: reports/followup-search-route-inspection.json
+          retention-days: 30
