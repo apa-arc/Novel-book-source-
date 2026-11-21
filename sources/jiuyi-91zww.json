@@ -9,7 +9,7 @@
     "www.91zww.com"
   ],
   "script": "scripts/jiuyi-91zww.js",
-  "enabled": true,
+  "enabled": false,
   "testOnly": true,
   "testOnlyReason": "从公开上游 GET 搜索规则转换；目录和正文 CSS 规则已补齐，尚未完成当前站点实时与宿主实测。",
   "description": "普通小说网页源；已转换为 GET + CSS 四阶段配置，待实测。",
