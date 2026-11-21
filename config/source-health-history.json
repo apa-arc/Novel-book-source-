@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-21T17:09:37.424Z",
+  "updatedAt": "2026-11-21T17:28:15.714Z",
   "policy": {
     "testKeywords": [
       "斗罗",
@@ -20,9 +20,9 @@
   },
   "sources": {
     "biquluo-la": {
-      "checks": 5,
+      "checks": 6,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T17:09:37.424Z",
+      "lastCheckedAt": "2026-11-21T17:28:15.714Z",
       "lastStatus": "passed-both",
       "lastResult": {
         "id": "biquluo-la",
@@ -123,6 +123,7 @@
             "attempts": 1,
             "resultCount": 100,
             "matchingResultCount": 100,
+            "relevanceStatus": "matched",
             "selectedTitle": "斗罗之双子斗罗"
           },
           "斗破": {
@@ -155,15 +156,16 @@
             "attempts": 1,
             "resultCount": 100,
             "matchingResultCount": 98,
+            "relevanceStatus": "matched",
             "selectedTitle": "斗破皇城"
           }
         }
       }
     },
     "jiuyi-91zww": {
-      "checks": 5,
+      "checks": 6,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T17:09:37.424Z",
+      "lastCheckedAt": "2026-11-21T17:28:15.714Z",
       "lastStatus": "failed",
       "lastResult": {
         "id": "jiuyi-91zww",
@@ -235,7 +237,8 @@
             ],
             "attempts": 1,
             "resultCount": 0,
-            "matchingResultCount": 0
+            "matchingResultCount": 0,
+            "relevanceStatus": "zero-results"
           },
           "斗破": {
             "keyword": "斗破",
@@ -266,15 +269,16 @@
             ],
             "attempts": 1,
             "resultCount": 0,
-            "matchingResultCount": 0
+            "matchingResultCount": 0,
+            "relevanceStatus": "zero-results"
           }
         }
       }
     },
     "xinbiquge-info": {
-      "checks": 5,
+      "checks": 6,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T17:09:37.424Z",
+      "lastCheckedAt": "2026-11-21T17:28:15.714Z",
       "lastStatus": "failed",
       "lastResult": {
         "id": "xinbiquge-info",
@@ -367,6 +371,7 @@
             "attempts": 1,
             "resultCount": 20,
             "matchingResultCount": 20,
+            "relevanceStatus": "matched",
             "selectedTitle": "[网游]从斗罗开始俘获女神"
           },
           "斗破": {
@@ -399,15 +404,16 @@
             "attempts": 1,
             "resultCount": 20,
             "matchingResultCount": 17,
+            "relevanceStatus": "matched",
             "selectedTitle": "[网游]斗破从异火开局"
           }
         }
       }
     },
     "biquge-17177": {
-      "checks": 5,
+      "checks": 6,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T17:09:37.424Z",
+      "lastCheckedAt": "2026-11-21T17:28:15.714Z",
       "lastStatus": "passed-both",
       "lastResult": {
         "id": "biquge-17177",
@@ -508,6 +514,7 @@
             "attempts": 1,
             "resultCount": 20,
             "matchingResultCount": 20,
+            "relevanceStatus": "matched",
             "selectedTitle": "[网游]圣骑斗罗"
           },
           "斗破": {
@@ -540,15 +547,16 @@
             "attempts": 1,
             "resultCount": 20,
             "matchingResultCount": 17,
+            "relevanceStatus": "matched",
             "selectedTitle": "[网游]斗破里的鸿蒙灵宝"
           }
         }
       }
     },
     "d8zw-com": {
-      "checks": 5,
+      "checks": 6,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T17:09:37.424Z",
+      "lastCheckedAt": "2026-11-21T17:28:15.714Z",
       "lastStatus": "failed",
       "lastResult": {
         "id": "d8zw-com",
@@ -641,6 +649,7 @@
             "attempts": 1,
             "resultCount": 20,
             "matchingResultCount": 20,
+            "relevanceStatus": "matched",
             "selectedTitle": "[网游]斗罗之二周目从独孤博开始"
           },
           "斗破": {
@@ -673,15 +682,16 @@
             "attempts": 1,
             "resultCount": 20,
             "matchingResultCount": 20,
+            "relevanceStatus": "matched",
             "selectedTitle": "[玄幻]斗破之我有系统面板"
           }
         }
       }
     },
     "bqg-info": {
-      "checks": 5,
+      "checks": 6,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T17:09:37.424Z",
+      "lastCheckedAt": "2026-11-21T17:28:15.714Z",
       "lastStatus": "passed-both",
       "lastResult": {
         "id": "bqg-info",
@@ -776,12 +786,13 @@
               {
                 "stage": "正文",
                 "status": "passed",
-                "detail": "首章正文读取成功（1180 字符）"
+                "detail": "首章正文读取成功（1176 字符）"
               }
             ],
             "attempts": 1,
             "resultCount": 100,
             "matchingResultCount": 100,
+            "relevanceStatus": "matched",
             "selectedTitle": "斗罗：武魂鸡腿和酒，玄子魔王护"
           },
           "斗破": {
@@ -808,21 +819,22 @@
               {
                 "stage": "正文",
                 "status": "passed",
-                "detail": "首章正文读取成功（1221 字符）"
+                "detail": "首章正文读取成功（1225 字符）"
               }
             ],
             "attempts": 1,
             "resultCount": 97,
             "matchingResultCount": 96,
+            "relevanceStatus": "matched",
             "selectedTitle": "斗破：无限模拟，从古族客卿开始"
           }
         }
       }
     },
     "xqianqian-m": {
-      "checks": 5,
+      "checks": 6,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T17:09:37.424Z",
+      "lastCheckedAt": "2026-11-21T17:28:15.714Z",
       "lastStatus": "failed",
       "lastResult": {
         "id": "xqianqian-m",
@@ -929,9 +941,9 @@
       }
     },
     "douhua-wenxue": {
-      "checks": 5,
+      "checks": 6,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T17:09:37.424Z",
+      "lastCheckedAt": "2026-11-21T17:28:15.714Z",
       "lastStatus": "failed",
       "lastResult": {
         "id": "douhua-wenxue",
@@ -968,11 +980,11 @@
       "userConfirmedWorking": true,
       "baselineNote": "用户明确确认该源原订阅中可正常使用；自动检测器失败记录仅作诊断，不代表源不可用。",
       "sourceAvailabilityStatus": "user-confirmed-baseline",
-      "lastProbeStatus": "readable-both",
+      "lastProbeStatus": "readable-one",
       "lastProbeResult": {
         "id": "douhua-wenxue",
         "name": "豆花文学",
-        "status": "readable-both",
+        "status": "readable-one",
         "terms": {
           "斗罗": {
             "keyword": "斗罗",
@@ -1004,13 +1016,14 @@
             "attempts": 1,
             "resultCount": 10,
             "matchingResultCount": 2,
+            "relevanceStatus": "matched",
             "selectedTitle": "唐门还是唐家堡？【剑三+斗罗】"
           },
           "斗破": {
             "keyword": "斗破",
-            "status": "readable",
+            "status": "search-only",
             "searchStatus": "passed",
-            "readingStatus": "readable",
+            "readingStatus": "not-tested",
             "stages": [
               {
                 "stage": "搜索",
@@ -1019,32 +1032,32 @@
               },
               {
                 "stage": "目录",
-                "status": "passed",
-                "detail": "获取 1 章；首章「决斗」"
+                "status": "skipped",
+                "detail": "搜索请求成功但没有标题匹配关键词的结果；不使用无关首条结果冒充阅读测试"
               },
               {
-                "stage": "详情（可选）",
-                "status": "passed",
-                "detail": "详情页读取成功：决斗\n连载中"
+                "stage": "详情",
+                "status": "skipped",
+                "detail": "没有相关搜索结果可供打开"
               },
               {
                 "stage": "正文",
-                "status": "passed",
-                "detail": "首章正文读取成功（771 字符）"
+                "status": "skipped",
+                "detail": "没有相关搜索结果可供打开"
               }
             ],
             "attempts": 1,
             "resultCount": 10,
             "matchingResultCount": 0,
-            "selectedTitle": "决斗"
+            "relevanceStatus": "no-title-match"
           }
         }
       }
     },
     "iyueba-net": {
-      "checks": 5,
+      "checks": 6,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T17:09:37.424Z",
+      "lastCheckedAt": "2026-11-21T17:28:15.714Z",
       "lastStatus": "failed",
       "lastResult": {
         "id": "iyueba-net",
@@ -1151,9 +1164,9 @@
       }
     },
     "52shuku-net": {
-      "checks": 5,
+      "checks": 6,
       "consecutiveFailures": 0,
-      "lastCheckedAt": "2026-11-21T17:09:37.424Z",
+      "lastCheckedAt": "2026-11-21T17:28:15.714Z",
       "lastStatus": "passed-both",
       "lastResult": {
         "id": "52shuku-net",
@@ -1254,6 +1267,7 @@
             "attempts": 1,
             "resultCount": 4,
             "matchingResultCount": 2,
+            "relevanceStatus": "matched",
             "selectedTitle": "3. 斗罗大陆4终极斗罗_唐家三少【完结】"
           },
           "斗破": {
@@ -1286,6 +1300,7 @@
             "attempts": 1,
             "resultCount": 10,
             "matchingResultCount": 2,
+            "relevanceStatus": "matched",
             "selectedTitle": "2. 斗破苍穹前传之药老传奇_天蚕土豆【完结】"
           }
         }

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-21T17:09:37.424Z",
-  "testStandard": "AppleNovelApp search semantics + separately reported reading stages; each search retries up to 3 times; transient Node network errors are environment-inconclusive; title relevance is separate from request success",
+  "generatedAt": "2026-11-21T17:28:15.714Z",
+  "testStandard": "AppleNovelApp search semantics + separately reported reading stages; each search retries up to 3 times; transient Node network errors are environment-inconclusive; title relevance is separate from request success; reading tests only use title-matching results; sources run sequentially with 1.2s cooldown",
   "keywords": [
     "斗罗",
     "斗破"
@@ -9,8 +9,8 @@
     "total": 10,
     "appCompatible": 10,
     "appUnsupported": 0,
-    "readableBoth": 7,
-    "readableOne": 0,
+    "readableBoth": 6,
+    "readableOne": 1,
     "searchOrCatalogOnly": 1,
     "environmentInconclusive": 2,
     "failed": 0,
@@ -20,8 +20,9 @@
     "searchRequestsPassed": 16,
     "searchZeroResults": 2,
     "searchHasResultsButNoTitleMatch": 1,
+    "readingSkippedForNoTitleMatch": 1,
     "searchRetriesUsed": 4,
-    "chapterContentPassed": 14
+    "chapterContentPassed": 13
   },
   "results": [
     {
@@ -59,6 +60,7 @@
           "attempts": 1,
           "resultCount": 100,
           "matchingResultCount": 100,
+          "relevanceStatus": "matched",
           "selectedTitle": "斗罗之双子斗罗"
         },
         "斗破": {
@@ -91,6 +93,7 @@
           "attempts": 1,
           "resultCount": 100,
           "matchingResultCount": 98,
+          "relevanceStatus": "matched",
           "selectedTitle": "斗破皇城"
         }
       }
@@ -129,7 +132,8 @@
           ],
           "attempts": 1,
           "resultCount": 0,
-          "matchingResultCount": 0
+          "matchingResultCount": 0,
+          "relevanceStatus": "zero-results"
         },
         "斗破": {
           "keyword": "斗破",
@@ -160,7 +164,8 @@
           ],
           "attempts": 1,
           "resultCount": 0,
-          "matchingResultCount": 0
+          "matchingResultCount": 0,
+          "relevanceStatus": "zero-results"
         }
       }
     },
@@ -199,6 +204,7 @@
           "attempts": 1,
           "resultCount": 20,
           "matchingResultCount": 20,
+          "relevanceStatus": "matched",
           "selectedTitle": "[网游]从斗罗开始俘获女神"
         },
         "斗破": {
@@ -231,6 +237,7 @@
           "attempts": 1,
           "resultCount": 20,
           "matchingResultCount": 17,
+          "relevanceStatus": "matched",
           "selectedTitle": "[网游]斗破从异火开局"
         }
       }
@@ -270,6 +277,7 @@
           "attempts": 1,
           "resultCount": 20,
           "matchingResultCount": 20,
+          "relevanceStatus": "matched",
           "selectedTitle": "[网游]圣骑斗罗"
         },
         "斗破": {
@@ -302,6 +310,7 @@
           "attempts": 1,
           "resultCount": 20,
           "matchingResultCount": 17,
+          "relevanceStatus": "matched",
           "selectedTitle": "[网游]斗破里的鸿蒙灵宝"
         }
       }
@@ -341,6 +350,7 @@
           "attempts": 1,
           "resultCount": 20,
           "matchingResultCount": 20,
+          "relevanceStatus": "matched",
           "selectedTitle": "[网游]斗罗之二周目从独孤博开始"
         },
         "斗破": {
@@ -373,6 +383,7 @@
           "attempts": 1,
           "resultCount": 20,
           "matchingResultCount": 20,
+          "relevanceStatus": "matched",
           "selectedTitle": "[玄幻]斗破之我有系统面板"
         }
       }
@@ -406,12 +417,13 @@
             {
               "stage": "正文",
               "status": "passed",
-              "detail": "首章正文读取成功（1180 字符）"
+              "detail": "首章正文读取成功（1176 字符）"
             }
           ],
           "attempts": 1,
           "resultCount": 100,
           "matchingResultCount": 100,
+          "relevanceStatus": "matched",
           "selectedTitle": "斗罗：武魂鸡腿和酒，玄子魔王护"
         },
         "斗破": {
@@ -438,12 +450,13 @@
             {
               "stage": "正文",
               "status": "passed",
-              "detail": "首章正文读取成功（1221 字符）"
+              "detail": "首章正文读取成功（1225 字符）"
             }
           ],
           "attempts": 1,
           "resultCount": 97,
           "matchingResultCount": 96,
+          "relevanceStatus": "matched",
           "selectedTitle": "斗破：无限模拟，从古族客卿开始"
         }
       }
@@ -518,7 +531,7 @@
     {
       "id": "douhua-wenxue",
       "name": "豆花文学",
-      "status": "readable-both",
+      "status": "readable-one",
       "terms": {
         "斗罗": {
           "keyword": "斗罗",
@@ -550,13 +563,14 @@
           "attempts": 1,
           "resultCount": 10,
           "matchingResultCount": 2,
+          "relevanceStatus": "matched",
           "selectedTitle": "唐门还是唐家堡？【剑三+斗罗】"
         },
         "斗破": {
           "keyword": "斗破",
-          "status": "readable",
+          "status": "search-only",
           "searchStatus": "passed",
-          "readingStatus": "readable",
+          "readingStatus": "not-tested",
           "stages": [
             {
               "stage": "搜索",
@@ -565,24 +579,24 @@
             },
             {
               "stage": "目录",
-              "status": "passed",
-              "detail": "获取 1 章；首章「决斗」"
+              "status": "skipped",
+              "detail": "搜索请求成功但没有标题匹配关键词的结果；不使用无关首条结果冒充阅读测试"
             },
             {
-              "stage": "详情（可选）",
-              "status": "passed",
-              "detail": "详情页读取成功：决斗\n连载中"
+              "stage": "详情",
+              "status": "skipped",
+              "detail": "没有相关搜索结果可供打开"
             },
             {
               "stage": "正文",
-              "status": "passed",
-              "detail": "首章正文读取成功（771 字符）"
+              "status": "skipped",
+              "detail": "没有相关搜索结果可供打开"
             }
           ],
           "attempts": 1,
           "resultCount": 10,
           "matchingResultCount": 0,
-          "selectedTitle": "决斗"
+          "relevanceStatus": "no-title-match"
         }
       }
     },
@@ -688,6 +702,7 @@
           "attempts": 1,
           "resultCount": 4,
           "matchingResultCount": 2,
+          "relevanceStatus": "matched",
           "selectedTitle": "3. 斗罗大陆4终极斗罗_唐家三少【完结】"
         },
         "斗破": {
@@ -720,6 +735,7 @@
           "attempts": 1,
           "resultCount": 10,
           "matchingResultCount": 2,
+          "relevanceStatus": "matched",
           "selectedTitle": "2. 斗破苍穹前传之药老传奇_天蚕土豆【完结】"
         }
       }
