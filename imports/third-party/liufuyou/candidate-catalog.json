@@ -1,25 +1,692 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T11:14:52.081Z",
+  "generatedAt": "2026-11-21T11:19:03.630Z",
   "provider": "liufuyou/read metadata-only discovery",
   "upstream": [
     "https://raw.githubusercontent.com/liufuyou/read/main/sources/yck-novel.json",
-    "https://raw.githubusercontent.com/liufuyou/read/main/sources/yiove-novel.json"
+    "https://raw.githubusercontent.com/liufuyou/read/main/sources/yiove-novel.json",
+    "https://raw.githubusercontent.com/daiaji/LegadoSource/main/%E4%B9%A6%E6%BA%90.json"
   ],
-  "licenseNote": "Only candidate names, HTTPS base URLs and group labels are retained. Upstream README says source-rule copyrights belong to their original organizers; no rules or source code are copied. Redistribution status remains unassessed.",
+  "licenseNote": "Only candidate names, HTTPS base URLs and group labels are retained. No upstream rules or source code are copied. The Liufuyou collection notes that source-rule rights belong to original organizers; Daiaji repository is AGPL-3.0. Source-level redistribution and site-use permissions remain unassessed.",
   "filterStats": {
-    "upstreamRecords": 981,
-    "nonText": 0,
-    "nonNovel": 17,
-    "adult": 0,
-    "cookieOrSecret": 564,
-    "nonGetOrScript": 252,
-    "nonHttps": 37,
-    "duplicateHost": 45,
-    "accepted": 66
+    "upstreamRecords": 2355,
+    "nonText": 49,
+    "nonNovel": 21,
+    "adult": 13,
+    "cookieOrSecret": 962,
+    "nonGetOrScript": 1075,
+    "nonHttps": 45,
+    "duplicateHost": 50,
+    "accepted": 140
   },
-  "sourceCount": 66,
+  "sourceCount": 140,
   "sources": [
+    {
+      "id": "9dba3c3c3757e39c",
+      "name": "🌐 博览群书",
+      "baseUrl": "https://readnovelfull.com/",
+      "group": "💠 综合",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "3e9024da6cf85449",
+      "name": "🌐 英语小说",
+      "baseUrl": "https://bestlightnovel.com/",
+      "group": "💠 综合",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "5dcb30db42355229",
+      "name": "👔 艾利浩斯",
+      "baseUrl": "https://alhs.xyz/",
+      "group": "👔 绅士",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "6d69a67acca7a24c",
+      "name": "👔 读书网站",
+      "baseUrl": "https://readbook.men/",
+      "group": "👔 绅士",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "a2a65aacede2dcd1",
+      "name": "👔 海棠书屋",
+      "baseUrl": "https://haitang123.net/",
+      "group": "👔 绅士",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "1bfb91bdaf1462ef",
+      "name": "👔 海棠文学",
+      "baseUrl": "https://www.htlvbooks.com/",
+      "group": "👔 绅士",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "ff2e1747a9d06b97",
+      "name": "👔 日居月诸",
+      "baseUrl": "https://m.po18yu.com/",
+      "group": "👔 绅士",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "18c09d0ddb754ab0",
+      "name": "👔 UAA小说",
+      "baseUrl": "https://www.uaa.com/",
+      "group": "👔 绅士",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "053002a62ab5196f",
+      "name": "📖 17K网",
+      "baseUrl": "https://h5.17k.com/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "440db9116d256dbb",
+      "name": "📖 22中文网",
+      "baseUrl": "https://www.6zw.net/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "6d5be2a1d70a9c89",
+      "name": "📖 33言情网",
+      "baseUrl": "https://wap.33yqxs.com/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "ecab7f5ab1b2b642",
+      "name": "📖 八一中文",
+      "baseUrl": "https://m.81zw.org/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "0c62c595147ec49b",
+      "name": "📖 百合小说",
+      "baseUrl": "https://m.baihexs.com/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "61b30f2bf81003e0",
+      "name": "📖 笔趣阁119",
+      "baseUrl": "https://m.bqg119.com/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "fef81a281431aff8",
+      "name": "📖 笔趣阁网",
+      "baseUrl": "https://www.qu-la.com/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "e84c9b9e38f58683",
+      "name": "📖 笔趣阁网",
+      "baseUrl": "https://api.pigqq.com/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "34e1c93088a342ad",
+      "name": "📖 笔趣阁网",
+      "baseUrl": "https://m.bqktxt.com/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "aaa7554d7952989b",
+      "name": "📖 笔趣阁网",
+      "baseUrl": "https://m.52biquge.com/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "bd0eac291c248299",
+      "name": "📖 笔趣阁网",
+      "baseUrl": "https://www.bqg34.com/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "0d112fbbc92d673e",
+      "name": "📖 笔趣阁网",
+      "baseUrl": "https://m.shengxu5w.com/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "b008638a406c9d98",
+      "name": "📖 笔趣阁网",
+      "baseUrl": "https://m.bqg18.cc/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "4ad4c7a6a28fc01a",
+      "name": "📖 笔趣阁网",
+      "baseUrl": "https://m.bswtan.com/",
+      "group": "👻 隐藏",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "0da2e700f0390878",
+      "name": "📖 笔趣阁源",
+      "baseUrl": "https://scxs.pysmei.com/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "279a73adafc536ee",
+      "name": "📖 笔趣搜搜",
+      "baseUrl": "https://so.biqusoso.com/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "54d1a7aa216315ba",
+      "name": "📖 嗒嗒中文",
+      "baseUrl": "https://www.dadazw8.com/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "beecf17201c46eaf",
+      "name": "📖 耽美网网",
+      "baseUrl": "https://m.dmxso.com/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "362190e1b7cdca6e",
+      "name": "📖 得间小说",
+      "baseUrl": "https://wechat.idejian.com/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "ce9e265b9cedf70f",
+      "name": "📖 灯笔小说",
+      "baseUrl": "https://wap.jzxtyun.net/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "a289ba535af3ead4",
+      "name": "📖 顶点小说",
+      "baseUrl": "https://www.23wx.la/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "39435d8a00df29ac",
+      "name": "📖 顶点小说",
+      "baseUrl": "https://www.booktxt.net/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "ecc441cbbe66c1de",
+      "name": "📖 顶点小说",
+      "baseUrl": "https://wap.maxreader.net/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "2981d02460891ada",
+      "name": "📖 顶点小说",
+      "baseUrl": "https://m.hafuke5.com/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "fe2dabe63651842b",
+      "name": "📖 独步小说",
+      "baseUrl": "https://www.dubu123.com/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "b61a58a3611e1001",
+      "name": "📖 花溪小说",
+      "baseUrl": "https://w.huaxi.net/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "49ea4cfa51c8e4b4",
+      "name": "📖 火星小说",
+      "baseUrl": "https://mobile.hotread.com/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "602d10ca8db7afb0",
+      "name": "📖 看书啦网",
+      "baseUrl": "https://wap.shuxinyi.net/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "75b2417b02256dea",
+      "name": "📖 快读小说",
+      "baseUrl": "https://api.jiaston.com/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "f19d5f6145b0f2a8",
+      "name": "📖 灵武中文",
+      "baseUrl": "https://www.05zw.com/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "6fc460a81f608e15",
+      "name": "📖 落初文学",
+      "baseUrl": "https://m.luochu.com/",
+      "group": "👻 隐藏",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "ed97b6f7509e7266",
+      "name": "📖 玫瑰言情",
+      "baseUrl": "https://www.mgyqw.com/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "17373d775e8724a6",
+      "name": "📖 梦琪小说",
+      "baseUrl": "https://m.gdasqjob.com/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "83a2d94de733ebf6",
+      "name": "📖 飘天中文",
+      "baseUrl": "https://www.ptzw.com/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "28b143c5f1be35d8",
+      "name": "📖 奇妙小说",
+      "baseUrl": "https://miao.qimao.com/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "dd153ed64b47f5fb",
+      "name": "📖 全本小说",
+      "baseUrl": "https://www.qb5.io/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "ff2ca2f249236ca0",
+      "name": "📖 三秋书屋",
+      "baseUrl": "https://www.d4j.cn/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "645b1e4821290ef2",
+      "name": "📖 神八宝网",
+      "baseUrl": "https://quapp.shenbabao.com/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "1a098f86bcb52f77",
+      "name": "📖 书香之家",
+      "baseUrl": "https://s.lhdqsb.cn/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "7eda1ed23799ab99",
+      "name": "📖 书阅屋网",
+      "baseUrl": "https://m.sywtxt.com/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "c96a4a6dc1133b5c",
+      "name": "📖 思路客网",
+      "baseUrl": "https://www.siluke520.com/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "f47e77146f0e3863",
+      "name": "📖 天籁小说",
+      "baseUrl": "https://m.23sk.net/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "fa92e98feb966e66",
+      "name": "📖 听小说网",
+      "baseUrl": "https://ts.txs12.com/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "339c16f4332ff2e6",
+      "name": "📖 晚星封藏",
+      "baseUrl": "https://api.whhaxfjc.com/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "f303a1d6860ac9b7",
+      "name": "📖 五一看书",
+      "baseUrl": "https://m.51nm.cc/",
+      "group": "👻 隐藏",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "3241544dacbc0491",
+      "name": "📖 悟空看书",
+      "baseUrl": "https://www.wkxs.net/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "c922c655bdb6f030",
+      "name": "📖 下书文学",
+      "baseUrl": "https://get.xiashuzhan.com/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "53c74be8e9c7dcbb",
+      "name": "📖 星星小说",
+      "baseUrl": "https://m.zbcxw.cn/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "aa1dd645de0db9fa",
+      "name": "📖 言耽社网",
+      "baseUrl": "https://yandanshe.com/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "5a60333b355d146b",
+      "name": "📖 言情小说笔趣阁",
+      "baseUrl": "https://m2.yqxs.cc/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "36f67146b64827f6",
+      "name": "📖 言情中文",
+      "baseUrl": "https://www.yqzww.cc/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "2642b1193622dc90",
+      "name": "📖 夜伴书屋",
+      "baseUrl": "https://www.yeban360.com/",
+      "group": "👻 隐藏",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "79ca04e3198a4571",
+      "name": "📖 逐浪小说",
+      "baseUrl": "https://m.zhulang.com/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "bd59fd2c20d30360",
+      "name": "📖 追书网站",
+      "baseUrl": "https://m.zhuishu.com/",
+      "group": "👻 隐藏",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "b111bed72a123a81",
+      "name": "📖 追书小说",
+      "baseUrl": "https://js.jsxsapp.com/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "a34c51d6b481fdc9",
+      "name": "📖 QQ浏览器",
+      "baseUrl": "https://novel.html5.qq.com/",
+      "group": "📖 小说",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "7bb7f73baafd1b20",
+      "name": "📚 17K小说",
+      "baseUrl": "https://www.17k.com/",
+      "group": "📚 正版",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "dad66c59ff1e8801",
+      "name": "📚 爱发电网",
+      "baseUrl": "https://afdian.net/",
+      "group": "📚 正版",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "b4af041c735c65b9",
+      "name": "📚 参考书刊",
+      "baseUrl": "https://www.fx361.com/",
+      "group": "📚 正版",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "3e3271efd46e176d",
+      "name": "📚 得间小说",
+      "baseUrl": "https://qq.idejian.com/",
+      "group": "📚 正版",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "29499f017b50e0b4",
+      "name": "📚 黑岩网站",
+      "baseUrl": "https://www.heiyan.com/",
+      "group": "📚 正版",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "4b070df68a2909c7",
+      "name": "📚 夸克搜书",
+      "baseUrl": "https://quark.sm.cn/",
+      "group": "📚 正版",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "cc7513f350ffcdd0",
+      "name": "📚 鲲弩小说",
+      "baseUrl": "https://www.kunnu.com/",
+      "group": "📚 正版",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "8c9637bd3552fecd",
+      "name": "📚 熊猫看书",
+      "baseUrl": "https://anduril.xmkanshu.com/",
+      "group": "📚 正版",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "50d6c42f8e207f44",
+      "name": "📚 崽崽的小站",
+      "baseUrl": "https://www.zaizairead.com/",
+      "group": "📚 正版",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
+    {
+      "id": "d0b5f832474aca0f",
+      "name": "📥 知乎趣集",
+      "baseUrl": "https://ifun.cool/",
+      "group": "💠 综合",
+      "upstream": "Daiaji LegadoSource",
+      "redistributionStatus": "not-assessed",
+      "runtimeStatus": "not-converted"
+    },
     {
       "id": "a67851568a51731e",
       "name": "爱笔楼",
