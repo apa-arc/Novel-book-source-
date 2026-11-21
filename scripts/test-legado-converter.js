@@ -90,8 +90,8 @@ try{
  const implicitBracket=parseLegacyChain("head@[1]@text");
  assert.deepEqual(implicitBracket.selector.steps[1],{kind:"children",name:null,index:1});
  const unsupportedAttribute=parseLegacyChain("a[href]@text");
- assert.equal(unsupportedAttribute.status,"manual");
- assert.equal(unsupportedAttribute.reason,"unsupported-attribute-filter");
+ assert.equal(unsupportedAttribute.status,"candidate");
+ assert.deepEqual(unsupportedAttribute.selector.steps,[{kind:"css",query:"a[href]"}]);
  const tagAttribute=parseLegacyChain("tag.a[href]@href");
  assert.equal(tagAttribute.status,"candidate");
  assert.deepEqual(tagAttribute.selector.steps,[{kind:"css",query:"a[href]"}]);
@@ -117,7 +117,7 @@ try{
  assert.equal(onlyOneRegex.expression.onlyOne,true);
  assert.equal(onlyOneRegex.expression.regexDelimiterCount,3);
  const quotedOperator=parseLegacyChain('a[href="x&&y"]@text');
- assert.equal(quotedOperator.status,"manual");
- assert.equal(quotedOperator.reason,"unsupported-attribute-filter");
+ assert.equal(quotedOperator.status,"candidate");
+ assert.deepEqual(quotedOperator.selector.steps,[{kind:"css",query:'a[href="x&&y"]'}]);
  console.log("Legado converter fixture tests passed.");
 }finally{fs.rmSync(temp,{recursive:true,force:true});}
