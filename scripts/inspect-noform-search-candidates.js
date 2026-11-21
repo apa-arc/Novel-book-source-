@@ -15,6 +15,7 @@ function sanitize(value){
  if(value&&typeof value==="object")return Object.fromEntries(Object.entries(value).map(([k,v])=>[k,sanitize(v)]));
  return value;
 }
+async function inspect(source){
  const started=Date.now();
  try{
   const response=await fetch(source.baseUrl,{headers,signal:AbortSignal.timeout(12000),redirect:"error"});
