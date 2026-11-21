@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "d8zw-com",
+  "name": "第八中文网",
+  "kind": "public-web",
+  "version": "1.0.0",
+  "baseUrl": "https://www.d8zw.com/",
+  "domains": [
+    "www.d8zw.com"
+  ],
+  "script": "scripts/d8zw-com.js",
+  "enabled": true,
+  "testOnly": true,
+  "testOnlyReason": "来源于公开书源规则库；已过滤上游 JavaScript 依赖并转换为 GET/CSS。站点实时及当前宿主四阶段尚未完成实测。",
+  "description": "普通小说网页源；GET 搜索，目录使用 CSS 选择器，正文使用 article.font_max。上游规则注明偶发 502，需控制请求频率。",
+  "licenseApproved": true,
+  "licenseType": "self-owned",
+  "licenseEvidence": "本仓库原创声明式适配配置与解析器，不包含小说正文。",
+  "licenseEvidenceUrl": "https://github.com/apa-arc/Novel-book-source-/blob/main/sources/d8zw-com.json",
+  "hostValidated": false,
+  "appConfig": {
+    "searchUrl": "https://www.d8zw.com/search.php?q={keyword}",
+    "bookUrl": "https://www.d8zw.com/{bookUrl}",
+    "chapterListUrl": "https://www.d8zw.com/{bookUrl}index_1.html",
+    "chapterUrl": "https://www.d8zw.com/{chapterUrl}",
+    "htmlRules": {
+      "search": {
+        "itemSelector": ".box.hot dl",
+        "titleSelector": "dd h3 a",
+        "urlSelector": "dd h3 a",
+        "authorSelector": "dd.book_other span"
+      },
+      "detail": {
+        "titleSelector": "h1",
+        "descriptionSelector": "#intro"
+      },
+      "chapters": {
+        "itemSelector": ".book_list2 > ul > li",
+        "titleSelector": "a",
+        "urlSelector": "a"
+      },
+      "content": {
+        "contentSelector": "article.font_max",
+        "titleSelector": "h1"
+      }
+    }
+  }
+}
