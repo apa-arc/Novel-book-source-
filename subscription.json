@@ -4,8 +4,8 @@
   "name": "小说源",
   "description": "普通小说统一订阅；来源发现问题后持续修复或下架。",
   "repository": "https://github.com/apa-arc/Novel-book-source-",
-  "updatedAt": "2026-11-21T08:01:32.028Z",
-  "sourceCount": 12,
+  "updatedAt": "2026-11-21T08:02:59.387Z",
+  "sourceCount": 13,
   "sources": [
     {
       "id": "biquluo-la",
@@ -515,6 +515,50 @@
       },
       "testOnly": true,
       "testOnlyReason": "来源于公开书源规则库；站点搜索近期可检索到有效结果，已转换为 GET/CSS。详情、目录、正文尚未完成目标宿主四阶段实测。"
+    },
+    {
+      "id": "biquge-17177",
+      "name": "笔趣阁小说网（17177）",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "普通小说网页源；GET 搜索，详情页元信息、目录与正文使用 CSS 提取。",
+      "baseUrl": "https://www.17177.cc/",
+      "domains": [
+        "www.17177.cc"
+      ],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/biquge-17177.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/biquge-17177.js",
+      "appConfig": {
+        "searchUrl": "https://www.17177.cc/search.php?q={keyword}&p={page}",
+        "bookUrl": "https://www.17177.cc/{bookUrl}",
+        "chapterListUrl": "https://www.17177.cc/{bookUrl}",
+        "chapterUrl": "https://www.17177.cc/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": ".hot dl",
+            "titleSelector": "h3 a",
+            "urlSelector": "h3 a",
+            "authorSelector": ".book_other span",
+            "coverSelector": "dt img"
+          },
+          "detail": {
+            "titleSelector": "meta[property='og:novel:book_name']",
+            "authorSelector": "meta[property='og:novel:author']",
+            "descriptionSelector": "meta[property='og:description']"
+          },
+          "chapters": {
+            "itemSelector": ".book_list2 li",
+            "titleSelector": "a",
+            "urlSelector": "a"
+          },
+          "content": {
+            "contentSelector": ".single article",
+            "titleSelector": "h1"
+          }
+        }
+      },
+      "testOnly": true,
+      "testOnlyReason": "取自公开书源规则库，已转换为 GET/CSS。目标站当前实时访问及搜索、详情、目录、正文四阶段尚未完成实测。"
     }
   ]
 }
