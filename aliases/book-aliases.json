@@ -4,7 +4,7 @@
   "name": "小说别名库",
   "description": "用于将用户搜索别名映射到真实书名；记录来源与验证状态，不代表正文书源。",
   "updatedAt": "2026-11-24T00:00:00.000Z",
-  "recordCount": 7,
+  "recordCount": 6,
   "records": [
     {
       "id": "douluo-wuhun-puti-tree-tangsan-mowanghu",
@@ -105,23 +105,6 @@
         "platform": "公开作品资料",
         "sourceUrl": "https://wapbaike.baidu.com/item/悬疑作者求生指南/24684107",
         "note": "公开作品资料同时列出三个别名；尚未逐个平台验证别名搜索结果。"
-      },
-      "verification": "source-attested-unverified",
-      "createdAt": "2026-11-24T00:00:00.000Z"
-    },
-    {
-      "id": "douluo-waizhuan-shenjie-chuanshuo",
-      "aliases": [
-        "神界传说"
-      ],
-      "title": "斗罗大陆外传神界传说",
-      "author": "唐家三少",
-      "description": "《斗罗大陆II绝世唐门》与《斗罗大陆III龙王传说》之间的系列外传作品。",
-      "evidence": {
-        "type": "secondary-reference",
-        "platform": "公开作品资料",
-        "sourceUrl": "https://wapbaike.baidu.com/item/斗罗大陆外传神界传说/16818627",
-        "note": "公开作品资料明确记载别名《神界传说》；该简称也可能指向其他同名作品，匹配时应优先使用作者辅助消歧。"
       },
       "verification": "source-attested-unverified",
       "createdAt": "2026-11-24T00:00:00.000Z"
