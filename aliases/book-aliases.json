@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "registryId": "apa-arc-novel-book-aliases",
+  "name": "小说别名库",
+  "description": "用于将用户搜索别名映射到真实书名；记录来源与验证状态，不代表正文书源。",
+  "updatedAt": "2026-11-24T00:00:00.000Z",
+  "recordCount": 1,
+  "records": [
+    {
+      "id": "douluo-wuhun-puti-tree-tangsan-mowanghu",
+      "aliases": [
+        "五月轮回"
+      ],
+      "title": "斗罗：武魂菩提树，唐三魔王护",
+      "author": "浮生一日闲啊",
+      "description": "夏乾穿越斗罗大陆，觉醒武魂菩提树。在菩提树下修行，可提升修炼速度，也可开启百世轮回的人生模拟。唐三称夏乾为如师如父的存在；小舞愿意在菩提树下生活；水冰儿、千仞雪、古月娜等角色也在菩提树下体验百世轮回。夏乾感悟万世人生，自创神位——轮回神帝。",
+      "evidence": {
+        "type": "user-provided-search-result",
+        "platform": "QQ阅读",
+        "note": "由用户提供的 QQ 阅读搜索结果资料录入；尚未独立验证平台官方别名关系。"
+      },
+      "verification": "user-supplied-unverified",
+      "createdAt": "2026-11-24T00:00:00.000Z"
+    }
+  ]
+}
