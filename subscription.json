@@ -4,8 +4,8 @@
   "name": "小说源",
   "description": "普通小说统一订阅；来源发现问题后持续修复或下架",
   "repository": "https://github.com/apa-arc/Novel-book-source-",
-  "updatedAt": "2026-11-22T00:00:00.000Z",
-  "sourceCount": 10,
+  "updatedAt": "2026-11-24T00:00:00.000Z",
+  "sourceCount": 11,
   "sources": [
     {
       "id": "biquluo-la",
@@ -425,6 +425,14 @@
           }
         }
       }
+    },
+    {
+      "id": "book-alias-dictionary",
+      "name": "小说别名库",
+      "kind": "alias-dictionary",
+      "version": "1.0.0",
+      "description": "搜索别名映射到真实书名；不提供正文，匹配后由其他正文书源搜索。",
+      "dataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/aliases/book-aliases.json"
     }
   ]
 }
