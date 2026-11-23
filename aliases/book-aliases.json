@@ -4,7 +4,7 @@
   "name": "小说别名库",
   "description": "用于将用户搜索别名映射到真实书名；记录来源与验证状态，不代表正文书源。",
   "updatedAt": "2026-11-24T00:00:00.000Z",
-  "recordCount": 6,
+  "recordCount": 12,
   "records": [
     {
       "id": "douluo-wuhun-puti-tree-tangsan-mowanghu",
@@ -105,6 +105,109 @@
         "platform": "公开作品资料",
         "sourceUrl": "https://wapbaike.baidu.com/item/悬疑作者求生指南/24684107",
         "note": "公开作品资料同时列出三个别名；尚未逐个平台验证别名搜索结果。"
+      },
+      "verification": "source-attested-unverified",
+      "createdAt": "2026-11-24T00:00:00.000Z"
+    },
+    {
+      "id": "chongqi-rensheng-wangzijing",
+      "aliases": [
+        "都重生谁还考试啊",
+        "都重生了作者还不会取书名"
+      ],
+      "title": "重启人生",
+      "author": "王梓钧",
+      "description": "王梓钧创作的都市重生类网络小说。",
+      "evidence": {
+        "type": "secondary-reference",
+        "platform": "公开作品资料",
+        "sourceUrl": "https://wapbaike.baidu.com/item/重启人生/65509927",
+        "note": "公开作品资料列出两个别名；需结合作者信息消歧。 尚未逐个平台验证别名搜索结果。"
+      },
+      "verification": "source-attested-unverified",
+      "createdAt": "2026-11-24T00:00:00.000Z"
+    },
+    {
+      "id": "potian-yaoyuan",
+      "aliases": [
+        "破天行"
+      ],
+      "title": "破天",
+      "author": "姚远",
+      "description": "姚远创作的东方玄幻网络小说，部分平台存在《破天行》名称版本。",
+      "evidence": {
+        "type": "secondary-reference",
+        "platform": "公开作品资料",
+        "sourceUrl": "https://wapbaike.baidu.com/item/破天/9091873",
+        "note": "公开作品资料记载不同平台存在《破天行》名称微调版本。 尚未逐个平台验证别名搜索结果。"
+      },
+      "verification": "source-attested-unverified",
+      "createdAt": "2026-11-24T00:00:00.000Z"
+    },
+    {
+      "id": "wo-zhi-xiang-zili-gengsheng",
+      "aliases": [
+        "我真是个拆二代"
+      ],
+      "title": "我只想自力更生",
+      "author": "中秋月明",
+      "description": "都市、青春校园题材网络小说。",
+      "evidence": {
+        "type": "secondary-reference",
+        "platform": "公开作品资料",
+        "sourceUrl": "https://wapbaike.baidu.com/item/我只想自力更生/54820994",
+        "note": "公开作品资料明确记载又名《我真是个拆二代》。 尚未逐个平台验证别名搜索结果。"
+      },
+      "verification": "source-attested-unverified",
+      "createdAt": "2026-11-24T00:00:00.000Z"
+    },
+    {
+      "id": "wo-de-quanshijie-jiushi-ni",
+      "aliases": [
+        "你就是我的全世界"
+      ],
+      "title": "我的全世界就是你",
+      "author": "忘记呼吸的猫",
+      "description": "都市言情小说，实体出版名称为《你就是我的全世界》。",
+      "evidence": {
+        "type": "secondary-reference",
+        "platform": "公开作品资料",
+        "sourceUrl": "https://wapbaike.baidu.com/item/我的全世界就是你/23773003",
+        "note": "公开作品资料记载实体出版名称；跨平台检索时可作为名称变体。 尚未逐个平台验证别名搜索结果。"
+      },
+      "verification": "source-attested-unverified",
+      "createdAt": "2026-11-24T00:00:00.000Z"
+    },
+    {
+      "id": "cong-shenji-zhong-zouchu-de-qiangzhe",
+      "aliases": [
+        "河卒道"
+      ],
+      "title": "从神迹中走出的强者",
+      "author": "胡春秋",
+      "description": "胡春秋创作的玄幻网络小说。",
+      "evidence": {
+        "type": "secondary-reference",
+        "platform": "公开作品资料",
+        "sourceUrl": "https://wapbaike.baidu.com/item/从神迹中走出的强者/24675301",
+        "note": "公开作品资料明确列出别称《河卒道》。 尚未逐个平台验证别名搜索结果。"
+      },
+      "verification": "source-attested-unverified",
+      "createdAt": "2026-11-24T00:00:00.000Z"
+    },
+    {
+      "id": "wo-dang-yinyang-xiansheng",
+      "aliases": [
+        "鬼叫魂之阴阳先生"
+      ],
+      "title": "我当阴阳先生的那几年",
+      "author": "崔走召",
+      "description": "都市灵异类网络小说，连载于起点中文网。",
+      "evidence": {
+        "type": "secondary-reference",
+        "platform": "公开作品资料",
+        "sourceUrl": "https://wapbaike.baidu.com/item/我当阴阳先生的那几年/1882446",
+        "note": "公开作品资料明确列出作品别名。 尚未逐个平台验证别名搜索结果。"
       },
       "verification": "source-attested-unverified",
       "createdAt": "2026-11-24T00:00:00.000Z"
