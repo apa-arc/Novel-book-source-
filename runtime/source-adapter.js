@@ -45,6 +45,36 @@ function value(node, selector, context) {
   return Array.isArray(result) ? result.filter(value => value != null && String(value).trim()).map(String).join("\n") : result;
 }
 
+function isPlaceholderCover(value) {
+  const url = String(value || "").trim().toLowerCase().split(/[?#]/, 1)[0];
+  return !url || url.includes("loading") || url.includes("placeholder") ||
+    url.includes("lazy") || url.endsWith("/nocover.jpg") ||
+    url.endsWith("/nopic.gif") || url.includes("default_cover") ||
+    url.includes("noimg") || url.includes("no-cover");
+}
+
+function firstImageUrl(value, isSrcset = false) {
+  let url = String(value || "").trim();
+  if (isSrcset) url = url.split(",")[0].trim().split(/\\s+/)[0];
+  return url;
+}
+
+function fallbackCover(node, context) {
+  const attributes = ["data-src", "data-original", "data-lazy-src", "data-url", "data-echo", "data-srcset", "srcset", "src"];
+  let placeholder = "";
+  for (const attribute of attributes) {
+    const raw = value(node, { engine: "css", query: "img", output: "attr:" + attribute }, context);
+    const candidate = firstImageUrl(raw, attribute === "srcset" || attribute === "data-srcset");
+    if (!candidate) continue;
+    if (isPlaceholderCover(candidate)) {
+      if (!placeholder) placeholder = candidate;
+      continue;
+    }
+    return candidate;
+  }
+  return "";
+}
+
 function createAdapter(config) {
   const safe = assertConfig(config);
   const allow = value => resolveAllowed(value, safe.baseUrl, safe.domains);
@@ -61,7 +91,8 @@ function createAdapter(config) {
   function extract(node, fields, context = { variables: {} }) {
     const out = {};
     for (const [key, selector] of Object.entries(fields || {})) {
-      const raw = value(node, selector, context);
+      let raw = value(node, selector, context);
+      if (key === "coverUrl" && isPlaceholderCover(raw)) raw = fallbackCover(node, context);
       if (raw == null || raw === "") continue;
       if (["bookUrl", "coverUrl", "chapterUrl"].includes(key)) {
         const url = allow(raw);
