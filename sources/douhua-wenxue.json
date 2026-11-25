@@ -3,7 +3,7 @@
   "id": "douhua-wenxue",
   "name": "豆花文学",
   "kind": "public-web",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "baseUrl": "https://www.douhuawenxue.com/",
   "domains": [
     "www.douhuawenxue.com",
@@ -12,7 +12,7 @@
   ],
   "script": "scripts/douhua-wenxue.js",
   "enabled": true,
-  "description": "原创小说站网页源；GET 搜索，详情、目录和正文采用 CSS 规则。站点近期仍有更新内容；部分作品可能存在付费章节，当前宿主四阶段复测待完成。",
+  "description": "原创小说站网页源；GET 搜索，详情、目录和正文采用 CSS 规则。站点近期仍有更新内容；部分作品可能存在付费章节，当前宿主四阶段复测待完成。 2026-11-25 修复：搜索结果封面明确读取 img 的 src 属性。",
   "licenseApproved": true,
   "licenseType": "self-owned",
   "licenseEvidence": "本仓库原创的声明式 GET/CSS 适配配置与解析器，不复制第三方脚本或小说正文。",
@@ -30,7 +30,8 @@
         "urlSelector": "h3 a",
         "authorSelector": ".book_author",
         "descriptionSelector": ".book_ct",
-        "coverSelector": "img.book_img"
+        "coverSelector": "img.book_img",
+        "coverAttribute": "src"
       },
       "detail": {
         "titleSelector": "h1"
