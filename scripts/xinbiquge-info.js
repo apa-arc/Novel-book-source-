@@ -8,7 +8,7 @@ module.exports = createAdapter({
     list: css(".box.hot dl", "all"),
     fields: { title: css("dd h3 a"), bookUrl: css("dd h3 a", "href"), author: css("dd.book_other span"), coverUrl: css("dt img", "src") }
   },
-  bookInfo: { fields: { title: css("h1"), intro: css("#intro"), coverUrl: css("img.img-thumbnail", "src") } },
+  bookInfo: { fields: { title: css("h1"), intro: css("#intro"), coverUrl: css("meta[property='og:image']", "content"), } },
   toc: {
     url: bookUrl => "https://www.xbiquge.info/" + String(bookUrl).replace(/^\//, "") + "index_1.html",
     list: css(".book_list2 > ul > li", "all"),
