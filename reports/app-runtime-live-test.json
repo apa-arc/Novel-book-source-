@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T10:17:00.837Z",
+  "generatedAt": "2026-11-25T10:31:14.784Z",
   "testStandard": "AppleNovelApp search semantics + separately reported reading stages; each search retries up to 3 times; transient Node network errors are environment-inconclusive; title relevance is separate from request success; reading tests only use title-matching results; sources run sequentially with 1.2s cooldown",
   "keywords": [
     "斗罗",
