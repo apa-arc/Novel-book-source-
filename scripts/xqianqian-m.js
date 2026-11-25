@@ -11,7 +11,7 @@ module.exports = createAdapter({
     list: css(".category-div", "all"),
     fields: {
       title: css(".commend-title h3"),
-      bookUrl: css(":scope > a", "href"),
+      bookUrl: css("a:first-child", "href"),
       author: css(".commend-title span"),
       coverUrl: css("img", "attr:data-original")
     }
