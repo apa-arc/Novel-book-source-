@@ -285,7 +285,7 @@
           "search": {
             "itemSelector": ".category-div",
             "titleSelector": ".commend-title h3",
-            "urlSelector": ".category-div > a",
+            "urlSelector": "a:first-child",
             "authorSelector": ".commend-title span",
             "coverSelector": "img",
             "coverAttribute": "data-original"
