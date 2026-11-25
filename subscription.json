@@ -11,8 +11,8 @@
       "id": "biquluo-la",
       "name": "壁落小说",
       "kind": "public-web",
-      "version": "1.0.3",
-      "description": "普通小说测试源。支持 GET 搜索、书籍详情、章节目录与正文；正文经过推广文本清洗。当前为 App 宿主联调状态。",
+      "version": "1.0.5",
+      "description": "普通小说测试源。支持 GET 搜索、书籍详情、章节目录与正文；正文经过推广文本清洗。当前为 App 宿主联调状态。 2026-11-25 修复：详情页封面改从已验证的 og:image 元数据提取。 2026-11-25 修复：详情页封面改从已验证的 og:image 元数据提取。",
       "baseUrl": "https://www.biquluo.la/",
       "domains": [
         "www.biquluo.la"
