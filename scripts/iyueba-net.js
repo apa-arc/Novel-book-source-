@@ -5,7 +5,7 @@ const css = (query, output = "text") => ({ engine: "css", query, output });
 
 module.exports = createAdapter({
   baseUrl: "https://iyueba.net/",
-  domains: ["iyueba.net"],
+  domains: ["iyueba.net", "qcdn.zhangzhongyun.com"],
   search: {
     url: (keyword) => "https://iyueba.net/z/?keyword=" + encodeURIComponent(keyword),
     list: css(".item", "all"),
@@ -14,7 +14,7 @@ module.exports = createAdapter({
       bookUrl: css("a:nth-of-type(2)", "href")
     }
   },
-  bookInfo: { fields: { title: css("h1") } },
+  bookInfo: { fields: { title: css("h1"), coverUrl: css("meta[property='og:image']", "attr:content") } },
   toc: {
     list: css("#content_1 dd", "all"),
     fields: {
