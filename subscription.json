@@ -4,7 +4,7 @@
   "name": "小说源",
   "description": "普通小说统一订阅；来源发现问题后持续修复或下架",
   "repository": "https://github.com/apa-arc/Novel-book-source-",
-  "updatedAt": "2026-11-25T01:05:14.163Z",
+  "updatedAt": "2026-11-25T08:30:00.000Z",
   "sourceCount": 10,
   "sources": [
     {
@@ -95,7 +95,7 @@
       "id": "xinbiquge-info",
       "name": "新笔趣阁小说网",
       "kind": "public-web",
-      "version": "1.0.3",
+      "version": "1.0.4",
       "description": "普通小说网页源；GET 搜索，目录分页，正文使用 article.font_max；章节可能分页，需后续补齐翻页处理。 2026-11-22 修复：目录请求改为直接读取书籍详情页，避免 index_1.html 返回404；等待复测。",
       "baseUrl": "https://www.xbiquge.info/",
       "domains": [
@@ -115,7 +115,7 @@
             "titleSelector": "dd h3 a",
             "urlSelector": "dd h3 a",
             "authorSelector": "dd.book_other span",
-            "coverSelector": "img"
+            "coverSelector": "dt img"
           },
           "detail": {
             "titleSelector": "h1",
@@ -180,7 +180,7 @@
       "id": "d8zw-com",
       "name": "第八中文网",
       "kind": "public-web",
-      "version": "1.0.3",
+      "version": "1.0.4",
       "description": "普通小说网页源；GET 搜索，目录使用 CSS 选择器，正文使用 article.font_max。上游规则注明偶发 502，需控制请求频率。 2026-11-22 修复：目录请求改为直接读取书籍详情页，避免 index_1.html 返回404；等待复测。",
       "baseUrl": "https://www.d8zw.com/",
       "domains": [
@@ -200,7 +200,7 @@
             "titleSelector": "dd h3 a",
             "urlSelector": "dd h3 a",
             "authorSelector": "dd.book_other span",
-            "coverSelector": "img"
+            "coverSelector": "dt img"
           },
           "detail": {
             "titleSelector": "h1",
@@ -305,11 +305,13 @@
       "id": "douhua-wenxue",
       "name": "豆花文学",
       "kind": "public-web",
-      "version": "1.0.3",
+      "version": "1.0.4",
       "description": "原创小说站网页源；GET 搜索，详情、目录和正文采用 CSS 规则。站点近期仍有更新内容；部分作品可能存在付费章节，当前宿主四阶段复测待完成。",
       "baseUrl": "https://www.douhuawenxue.com/",
       "domains": [
-        "www.douhuawenxue.com"
+        "www.douhuawenxue.com",
+        "img.douhuawenxue.com",
+        "imgold2.douhuawenxue.com"
       ],
       "categories": [],
       "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/douhua-wenxue.json",
