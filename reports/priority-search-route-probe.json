@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-25T08:26:00.062Z",
+  "generatedAt": "2026-11-25T08:29:02.673Z",
   "keywords": [
     "斗罗大陆",
     "斗破苍穹"
@@ -9,8 +9,7 @@
   "note": "仅探测已发现的公开 GET 搜索路由；不执行站点 JavaScript、不登录、不绕过访问控制、不读取或保存小说正文。搜索入口响应不等于 App 兼容或可正式导入。",
   "counts": {
     "total": 24,
-    "request-error": 10,
-    "http-success-no-keyword-hit": 6,
+    "http-success-no-keyword-hit": 16,
     "redirect-target-no-keyword-hit": 8
   },
   "results": [
@@ -20,9 +19,13 @@
       "baseUrl": "https://mobile.hotread.com/",
       "keyword": "斗罗大陆",
       "path": "/storySearch/search?keyword={keyword}",
-      "classification": "request-error",
-      "error": "TimeoutError: The operation was aborted due to timeout",
-      "elapsedMs": 12003
+      "status": 200,
+      "contentType": "text/html;charset=UTF-8",
+      "title": "小说排行榜_火星小说|好看的免费小说下载网",
+      "hasKeyword": false,
+      "links": [],
+      "classification": "http-success-no-keyword-hit",
+      "elapsedMs": 1468
     },
     {
       "id": "hotread-mobile",
@@ -30,9 +33,13 @@
       "baseUrl": "https://mobile.hotread.com/",
       "keyword": "斗罗大陆",
       "path": "/storySearch/search?searchkey={keyword}",
-      "classification": "request-error",
-      "error": "TimeoutError: The operation was aborted due to timeout",
-      "elapsedMs": 12001
+      "status": 200,
+      "contentType": "text/html;charset=UTF-8",
+      "title": "小说排行榜_火星小说|好看的免费小说下载网",
+      "hasKeyword": false,
+      "links": [],
+      "classification": "http-success-no-keyword-hit",
+      "elapsedMs": 1326
     },
     {
       "id": "hotread-mobile",
@@ -40,9 +47,13 @@
       "baseUrl": "https://mobile.hotread.com/",
       "keyword": "斗罗大陆",
       "path": "/storySearch/search?key={keyword}",
-      "classification": "request-error",
-      "error": "TimeoutError: The operation was aborted due to timeout",
-      "elapsedMs": 12002
+      "status": 200,
+      "contentType": "text/html;charset=UTF-8",
+      "title": "小说排行榜_火星小说|好看的免费小说下载网",
+      "hasKeyword": false,
+      "links": [],
+      "classification": "http-success-no-keyword-hit",
+      "elapsedMs": 1556
     },
     {
       "id": "hotread-mobile",
@@ -56,7 +67,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 1411
+      "elapsedMs": 1700
     },
     {
       "id": "hotread-mobile",
@@ -64,9 +75,13 @@
       "baseUrl": "https://mobile.hotread.com/",
       "keyword": "斗罗大陆",
       "path": "/storySearch/search?wd={keyword}",
-      "classification": "request-error",
-      "error": "TimeoutError: The operation was aborted due to timeout",
-      "elapsedMs": 12001
+      "status": 200,
+      "contentType": "text/html;charset=UTF-8",
+      "title": "小说排行榜_火星小说|好看的免费小说下载网",
+      "hasKeyword": false,
+      "links": [],
+      "classification": "http-success-no-keyword-hit",
+      "elapsedMs": 1719
     },
     {
       "id": "hotread-mobile",
@@ -74,9 +89,13 @@
       "baseUrl": "https://mobile.hotread.com/",
       "keyword": "斗罗大陆",
       "path": "/storySearch/search?word={keyword}",
-      "classification": "request-error",
-      "error": "TimeoutError: The operation was aborted due to timeout",
-      "elapsedMs": 12001
+      "status": 200,
+      "contentType": "text/html;charset=UTF-8",
+      "title": "小说排行榜_火星小说|好看的免费小说下载网",
+      "hasKeyword": false,
+      "links": [],
+      "classification": "http-success-no-keyword-hit",
+      "elapsedMs": 1699
     },
     {
       "id": "hotread-mobile",
@@ -90,7 +109,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 273
+      "elapsedMs": 372
     },
     {
       "id": "hotread-mobile",
@@ -98,9 +117,13 @@
       "baseUrl": "https://mobile.hotread.com/",
       "keyword": "斗罗大陆",
       "path": "/storySearch/search?bookName={keyword}",
-      "classification": "request-error",
-      "error": "TimeoutError: The operation was aborted due to timeout",
-      "elapsedMs": 12000
+      "status": 200,
+      "contentType": "text/html;charset=UTF-8",
+      "title": "小说排行榜_火星小说|好看的免费小说下载网",
+      "hasKeyword": false,
+      "links": [],
+      "classification": "http-success-no-keyword-hit",
+      "elapsedMs": 359
     },
     {
       "id": "hotread-mobile",
@@ -108,9 +131,13 @@
       "baseUrl": "https://mobile.hotread.com/",
       "keyword": "斗破苍穹",
       "path": "/storySearch/search?keyword={keyword}",
-      "classification": "request-error",
-      "error": "TimeoutError: The operation was aborted due to timeout",
-      "elapsedMs": 12000
+      "status": 200,
+      "contentType": "text/html;charset=UTF-8",
+      "title": "小说排行榜_火星小说|好看的免费小说下载网",
+      "hasKeyword": false,
+      "links": [],
+      "classification": "http-success-no-keyword-hit",
+      "elapsedMs": 321
     },
     {
       "id": "hotread-mobile",
@@ -124,7 +151,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 1336
+      "elapsedMs": 335
     },
     {
       "id": "hotread-mobile",
@@ -138,7 +165,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 1588
+      "elapsedMs": 323
     },
     {
       "id": "hotread-mobile",
@@ -152,7 +179,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 1564
+      "elapsedMs": 329
     },
     {
       "id": "hotread-mobile",
@@ -160,9 +187,13 @@
       "baseUrl": "https://mobile.hotread.com/",
       "keyword": "斗破苍穹",
       "path": "/storySearch/search?wd={keyword}",
-      "classification": "request-error",
-      "error": "TimeoutError: The operation was aborted due to timeout",
-      "elapsedMs": 12000
+      "status": 200,
+      "contentType": "text/html;charset=UTF-8",
+      "title": "小说排行榜_火星小说|好看的免费小说下载网",
+      "hasKeyword": false,
+      "links": [],
+      "classification": "http-success-no-keyword-hit",
+      "elapsedMs": 335
     },
     {
       "id": "hotread-mobile",
@@ -170,9 +201,13 @@
       "baseUrl": "https://mobile.hotread.com/",
       "keyword": "斗破苍穹",
       "path": "/storySearch/search?word={keyword}",
-      "classification": "request-error",
-      "error": "TimeoutError: The operation was aborted due to timeout",
-      "elapsedMs": 12000
+      "status": 200,
+      "contentType": "text/html;charset=UTF-8",
+      "title": "小说排行榜_火星小说|好看的免费小说下载网",
+      "hasKeyword": false,
+      "links": [],
+      "classification": "http-success-no-keyword-hit",
+      "elapsedMs": 355
     },
     {
       "id": "hotread-mobile",
@@ -186,7 +221,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 385
+      "elapsedMs": 320
     },
     {
       "id": "hotread-mobile",
@@ -194,9 +229,13 @@
       "baseUrl": "https://mobile.hotread.com/",
       "keyword": "斗破苍穹",
       "path": "/storySearch/search?bookName={keyword}",
-      "classification": "request-error",
-      "error": "TimeoutError: The operation was aborted due to timeout",
-      "elapsedMs": 12000
+      "status": 200,
+      "contentType": "text/html;charset=UTF-8",
+      "title": "小说排行榜_火星小说|好看的免费小说下载网",
+      "hasKeyword": false,
+      "links": [],
+      "classification": "http-success-no-keyword-hit",
+      "elapsedMs": 476
     },
     {
       "id": "luochu-mobile",
@@ -238,7 +277,7 @@
         }
       ],
       "classification": "redirect-target-no-keyword-hit",
-      "elapsedMs": 2480
+      "elapsedMs": 2848
     },
     {
       "id": "luochu-mobile",
@@ -280,7 +319,7 @@
         }
       ],
       "classification": "redirect-target-no-keyword-hit",
-      "elapsedMs": 2260
+      "elapsedMs": 2570
     },
     {
       "id": "luochu-mobile",
@@ -322,7 +361,7 @@
         }
       ],
       "classification": "redirect-target-no-keyword-hit",
-      "elapsedMs": 1091
+      "elapsedMs": 2510
     },
     {
       "id": "luochu-mobile",
@@ -364,7 +403,7 @@
         }
       ],
       "classification": "redirect-target-no-keyword-hit",
-      "elapsedMs": 1655
+      "elapsedMs": 2405
     },
     {
       "id": "luochu-mobile",
@@ -406,7 +445,7 @@
         }
       ],
       "classification": "redirect-target-no-keyword-hit",
-      "elapsedMs": 1759
+      "elapsedMs": 2639
     },
     {
       "id": "luochu-mobile",
@@ -448,7 +487,7 @@
         }
       ],
       "classification": "redirect-target-no-keyword-hit",
-      "elapsedMs": 1623
+      "elapsedMs": 2216
     },
     {
       "id": "luochu-mobile",
@@ -490,7 +529,7 @@
         }
       ],
       "classification": "redirect-target-no-keyword-hit",
-      "elapsedMs": 1681
+      "elapsedMs": 1813
     },
     {
       "id": "luochu-mobile",
@@ -532,7 +571,7 @@
         }
       ],
       "classification": "redirect-target-no-keyword-hit",
-      "elapsedMs": 1719
+      "elapsedMs": 1716
     }
   ]
 }
