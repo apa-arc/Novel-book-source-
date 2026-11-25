@@ -5,10 +5,15 @@ module.exports = createAdapter({
   baseUrl: "https://www.xbiquge.info/", domains: ["www.xbiquge.info"],
   search: {
     url: keyword => "https://www.xbiquge.info/search.php?q=" + encodeURIComponent(keyword),
-    list: css(".box.hot dl", "all"),
-    fields: { title: css("dd h3 a"), bookUrl: css("dd h3 a", "href"), author: css("dd.book_other span"), coverUrl: css("dt img", "src") }
+    list: css("div.col-12.col-md-6 > list", "all"),
+    fields: {
+      title: css("listitem > heading > a"),
+      bookUrl: css("listitem > heading > a", "href"),
+      author: css("listitem.book_other:nth-of-type(1) > span:nth-of-type(2)"),
+      coverUrl: css("term > a > img", "src")
+    }
   },
-  bookInfo: { fields: { title: css("h1"), intro: css("#intro"), coverUrl: css("meta[property='og:image']", "content"), } },
+  bookInfo: { fields: { title: css("h1"), intro: css("#intro"), coverUrl: css("meta[property='og:image']", "content") } },
   toc: {
     url: bookUrl => "https://www.xbiquge.info/" + String(bookUrl).replace(/^\//, "") + "index_1.html",
     list: css(".book_list2 > ul > li", "all"),
