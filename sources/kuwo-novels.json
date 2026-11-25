@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "kuwo-novels",
+  "name": "酷我小说（开放接口）",
+  "kind": "public-web",
+  "version": "1.0.0",
+  "description": "依据清阅开源项目验证的酷我小说 GET JSON 接口；搜索、详情、章节、正文及阅文封面 CDN 均已实测。",
+  "baseUrl": "https://appi.kuwo.cn/",
+  "domains": [
+    "appi.kuwo.cn",
+    "openbookcover.yuewen.com"
+  ],
+  "script": "scripts/kuwo-novels.js",
+  "enabled": true,
+  "categories": [
+    "男频",
+    "女频"
+  ],
+  "appConfig": {
+    "searchUrl": "https://appi.kuwo.cn/novels/api/book/search?keyword={keyword}&pi={page}&ps=30",
+    "bookUrl": "https://appi.kuwo.cn/novels/api/book/{bookUrl}",
+    "chapterListUrl": "https://appi.kuwo.cn/novels/api/book/{bookUrl}/chapters?paging=0",
+    "chapterUrl": "https://appi.kuwo.cn/novels/api/book/{bookUrl}/chapters/{chapterUrl}"
+  },
+  "hostValidated": false
+}
