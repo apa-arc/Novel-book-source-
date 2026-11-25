@@ -4,8 +4,8 @@
   "name": "小说源",
   "description": "普通小说统一订阅；来源发现问题后持续修复或下架",
   "repository": "https://github.com/apa-arc/Novel-book-source-",
-  "updatedAt": "2026-11-25T10:02:57.601Z",
-  "sourceCount": 10,
+  "updatedAt": "2026-11-25T22:55:00+08:00",
+  "sourceCount": 11,
   "sources": [
     {
       "id": "biquluo-la",
@@ -431,6 +431,57 @@
           "content": {
             "contentSelector": "article.article-content",
             "titleSelector": "h1.article-title"
+          }
+        }
+      }
+    },
+    {
+      "id": "biquges123-web",
+      "name": "新笔趣阁（biquges123）",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "从清阅开源项目验证的新笔趣阁网页源；搜索结果使用真实 CDN 封面，支持详情、目录和正文。",
+      "baseUrl": "https://www.biquges123.com/",
+      "domains": [
+        "www.biquges123.com",
+        "cdn.biquge7.top"
+      ],
+      "categories": [
+        "男频",
+        "女频"
+      ],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/biquges123-web.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/biquges123-web.js",
+      "appConfig": {
+        "searchUrl": "https://www.biquges123.com/search?keyword={keyword}&page={page}",
+        "bookUrl": "https://www.biquges123.com/{bookUrl}",
+        "chapterListUrl": "https://www.biquges123.com/{bookUrl}",
+        "chapterUrl": "https://www.biquges123.com/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": ".hot_4_item",
+            "titleSelector": ".hot_name",
+            "urlSelector": "a",
+            "urlAttribute": "href",
+            "authorSelector": ".author",
+            "descriptionSelector": ".hot_des",
+            "coverSelector": "img",
+            "coverAttribute": "src"
+          },
+          "detail": {
+            "titleSelector": "h1.info_title",
+            "authorSelector": ".info_ct > div:nth-child(2)",
+            "descriptionSelector": ".des"
+          },
+          "chapters": {
+            "itemSelector": ".list li",
+            "titleSelector": "a",
+            "urlSelector": "a",
+            "urlAttribute": "href"
+          },
+          "content": {
+            "contentSelector": "article.article",
+            "titleSelector": "h1"
           }
         }
       }
