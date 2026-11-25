@@ -6,11 +6,11 @@ module.exports = createAdapter({
   search: {
     url: keyword => "https://www.xbiquge.info/search.php?q=" + encodeURIComponent(keyword),
     list: css(".box.hot dl", "all"),
-    fields: { title: css("dd h3 a"), bookUrl: css("dd h3 a", "href"), author: css("dd.book_other span") }
+    fields: { title: css("dd h3 a"), bookUrl: css("dd h3 a", "href"), author: css("dd.book_other span"), coverUrl: css("dt img", "src") }
   },
   bookInfo: { fields: { title: css("h1"), intro: css("#intro") } },
   toc: {
-    url: bookUrl => "https://www.xbiquge.info/" + String(bookUrl).replace(/^\//, "") + "index_1.html",
+    url: bookUrl => "https://www.xbiquge.info/" + String(bookUrl).replace(/^\\//, "") + "index_1.html",
     list: css(".book_list2 > ul > li", "all"),
     fields: { title: css("a"), chapterUrl: css("a", "href") }
   },
