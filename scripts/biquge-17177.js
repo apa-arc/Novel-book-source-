@@ -8,7 +8,7 @@ module.exports = createAdapter({
     list: css(".hot dl", "all"),
     fields: { title: css("h3 a"), bookUrl: css("h3 a", "href"), author: css(".book_other span"), coverUrl: css("dt img", "src") }
   },
-  bookInfo: { fields: { title: css("meta[property='og:novel:book_name']", "content"), author: css("meta[property='og:novel:author']", "content"), intro: css("meta[property='og:description']", "content") } },
+  bookInfo: { fields: { title: css("meta[property='og:novel:book_name']", "content"), author: css("meta[property='og:novel:author']", "content"), intro: css("meta[property='og:description']", "content"), coverUrl: css("meta[property='og:image']", "content") } },
   toc: {
     list: css(".book_list2 li", "all"),
     fields: { title: css("a"), chapterUrl: css("a", "href") }
