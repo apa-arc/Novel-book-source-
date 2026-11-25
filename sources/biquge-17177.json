@@ -3,14 +3,14 @@
   "id": "biquge-17177",
   "name": "笔趣阁小说网（17177）",
   "kind": "public-web",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "baseUrl": "https://www.17177.cc/",
   "domains": [
     "www.17177.cc"
   ],
   "script": "scripts/biquge-17177.js",
   "enabled": true,
-  "description": "普通小说网页源；GET 搜索，详情页元信息、目录与正文使用 CSS 提取。 2026-11-25 修复：详情页封面改从已验证的 og:image 元数据提取。",
+  "description": "普通小说网页源；GET 搜索，详情页元信息、目录与正文使用 CSS 提取。 2026-11-25 修复：详情页封面改从已验证的 og:image 元数据提取。 2026-11-25 修复：搜索结果封面明确读取 img 的 src 属性。",
   "licenseApproved": true,
   "licenseType": "self-owned",
   "licenseEvidence": "本仓库原创声明式适配配置与解析器，不包含小说正文。",
@@ -27,7 +27,8 @@
         "titleSelector": "h3 a",
         "urlSelector": "h3 a",
         "authorSelector": ".book_other span",
-        "coverSelector": "dt img"
+        "coverSelector": "dt img",
+        "coverAttribute": "src"
       },
       "detail": {
         "titleSelector": "meta[property='og:novel:book_name']",
