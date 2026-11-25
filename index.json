@@ -81,6 +81,22 @@
       "file": "sources/52shuku-net.json",
       "enabled": true,
       "testOnly": false
+    },
+    {
+      "id": "biquges123-web",
+      "name": "新笔趣阁（biquges123）",
+      "kind": "public-web",
+      "file": "sources/biquges123-web.json",
+      "enabled": false,
+      "testOnly": true
+    },
+    {
+      "id": "kuwo-novels",
+      "name": "酷我小说（开放接口）",
+      "kind": "public-web",
+      "file": "sources/kuwo-novels.json",
+      "enabled": false,
+      "testOnly": true
     }
   ]
 }
