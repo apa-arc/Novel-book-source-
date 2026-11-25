@@ -8,7 +8,7 @@ module.exports = createAdapter({
     list: css("div.book-coverlist", "all"),
     fields: { title: css("h4 a"), bookUrl: css("h4 a", "href"), intro: css("div.caption p") }
   },
-  bookInfo: { fields: { title: css("h1"), intro: css("#bookIntro") } },
+  bookInfo: { fields: { title: css("h1"), intro: css("#bookIntro"), coverUrl: css("img.img-thumbnail", "src") } },
   toc: {
     list: css("dl#newlist > dd", "all"),
     fields: { title: css("a"), chapterUrl: css("a", "href") }
