@@ -4,7 +4,7 @@
   "name": "小说源",
   "description": "普通小说统一订阅；来源发现问题后持续修复或下架",
   "repository": "https://github.com/apa-arc/Novel-book-source-",
-  "updatedAt": "2026-11-25T08:42:22.456Z",
+  "updatedAt": "2026-11-25T09:30:00.000Z",
   "sourceCount": 10,
   "sources": [
     {
@@ -53,8 +53,8 @@
       "id": "jiuyi-91zww",
       "name": "九一中文",
       "kind": "public-web",
-      "version": "1.0.2",
-      "description": "普通小说网页源；已转换为 GET + CSS 四阶段配置，待实测。",
+      "version": "1.0.3",
+      "description": "普通小说网页源；GET + CSS 四阶段配置。详情页已验证提供 og:image，解析器可提取真实封面。",
       "baseUrl": "https://www.91zww.com/",
       "domains": [
         "www.91zww.com"
@@ -350,11 +350,12 @@
       "id": "iyueba-net",
       "name": "爱阅吧网",
       "kind": "public-web",
-      "version": "1.0.2",
-      "description": "普通小说网页源；GET 搜索，书籍详情、目录和正文采用 CSS 规则。站点近期仍有更新记录；当前宿主四阶段复测待完成。",
+      "version": "1.0.3",
+      "description": "普通小说网页源；GET 搜索入口待修复，详情页已验证提供 og:image，解析器可从封面 CDN 提取真实封面。",
       "baseUrl": "https://iyueba.net/",
       "domains": [
-        "iyueba.net"
+        "iyueba.net",
+        "qcdn.zhangzhongyun.com"
       ],
       "categories": [],
       "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/iyueba-net.json",
