@@ -3,14 +3,15 @@
   "id": "xqianqian-m",
   "name": "千千小说",
   "kind": "public-web",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "baseUrl": "https://m.xqianqian.com/",
   "domains": [
-    "m.xqianqian.com"
+    "m.xqianqian.com",
+    "www.xqianqian.com"
   ],
   "script": "scripts/xqianqian-m.js",
   "enabled": true,
-  "description": "普通小说网页源；GET 搜索，详情、目录和正文使用 CSS 规则。公开上游标记为有效，网站近期仍有更新；当前宿主四阶段复测待完成。",
+  "description": "普通小说网页源；详情页已验证提供 og:image，脚本补充真实封面提取。当前搜索入口 /s.php?q=关键词 会跳回首页，搜索功能待修复。",
   "licenseApproved": true,
   "licenseType": "self-owned",
   "licenseEvidence": "本仓库原创的声明式 GET/CSS 适配配置与解析器，不复制第三方脚本或小说正文。",
