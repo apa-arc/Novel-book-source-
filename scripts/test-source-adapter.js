@@ -58,6 +58,31 @@ const http = { async get(url) { requests.push(url); return { url, document: root
   assert.deepEqual(await adapter.search({ keyword: "测试", page: 2, http }), [
     { title: "测试小说", bookUrl: "https://example.test/book/1", author: "作者甲" }
   ]);
+
+  const lazyCoverRoot = node("main", {}, "", [
+    node("article", {}, "", [
+      node("a", { href: "/book/cover" }, "懒加载封面测试"),
+      node("img", { src: "https://example.test/nocover.jpg", "data-original": "https://example.test/real-cover.jpg" })
+    ])
+  ]);
+  const lazyCoverAdapter = createAdapter({
+    baseUrl: "https://example.test",
+    domains: ["example.test"],
+    search: {
+      url: () => "https://example.test/search",
+      list: { engine: "css", query: "article", output: "all" },
+      fields: {
+        title: { engine: "css", query: "a", output: "text" },
+        bookUrl: { engine: "css", query: "a", output: "href" },
+        coverUrl: { engine: "css", query: "img", output: "src" }
+      }
+    }
+  });
+  const lazyCoverResult = await lazyCoverAdapter.search({
+    keyword: "懒加载",
+    http: { async get(url) { return { url, document: lazyCoverRoot }; } }
+  });
+  assert.equal(lazyCoverResult[0].coverUrl, "https://example.test/real-cover.jpg");
   assert.deepEqual(await adapter.getBookDetail({ bookUrl: "https://example.test/book/1", http }), {
     title: "测试小说", author: "作者甲"
   });
