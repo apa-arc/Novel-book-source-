@@ -3,14 +3,14 @@
   "id": "jiuyi-91zww",
   "name": "九一中文",
   "kind": "public-web",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "baseUrl": "https://www.91zww.com/",
   "domains": [
     "www.91zww.com"
   ],
   "script": "scripts/jiuyi-91zww.js",
   "enabled": true,
-  "description": "普通小说网页源；已转换为 GET + CSS 四阶段配置，待实测。",
+  "description": "普通小说网页源；GET + CSS 四阶段配置。详情页已验证提供 og:image，解析器可提取真实封面。",
   "licenseApproved": true,
   "licenseType": "self-owned",
   "licenseEvidence": "本仓库自行编写的声明式适配配置与解析器，不包含小说正文。",
