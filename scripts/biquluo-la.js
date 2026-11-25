@@ -20,7 +20,7 @@ module.exports = createAdapter({
       title: css("#info h1"),
       author: css("#info p:nth-of-type(1)"),
       intro: css("#intro"),
-      coverUrl: css("#fmimg img", "src")
+      coverUrl: css("meta[property='og:image']", "content")
     }
   },
   toc: {
