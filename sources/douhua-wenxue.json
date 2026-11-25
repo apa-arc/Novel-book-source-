@@ -3,7 +3,7 @@
   "id": "douhua-wenxue",
   "name": "豆花文学",
   "kind": "public-web",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "baseUrl": "https://www.douhuawenxue.com/",
   "domains": [
     "www.douhuawenxue.com"
@@ -28,7 +28,7 @@
         "urlSelector": "h3 a",
         "authorSelector": ".book_author",
         "descriptionSelector": ".book_ct",
-        "coverSelector": "img"
+        "coverSelector": "img.book_img"
       },
       "detail": {
         "titleSelector": "h1"
