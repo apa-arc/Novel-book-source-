@@ -4,8 +4,8 @@
   "name": "小说源",
   "description": "普通小说统一订阅；来源发现问题后持续修复或下架",
   "repository": "https://github.com/apa-arc/Novel-book-source-",
-  "updatedAt": "2026-11-25T22:43:00+08:00",
-  "sourceCount": 10,
+  "updatedAt": "2026-11-25T23:00:00+08:00",
+  "sourceCount": 12,
   "sources": [
     {
       "id": "biquluo-la",
@@ -433,6 +433,81 @@
             "titleSelector": "h1.article-title"
           }
         }
+      }
+    },
+    {
+      "id": "biquges123-web",
+      "name": "新笔趣阁（biquges123）",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "候选扩充源，网页结构已检查；App 真机搜索、详情、目录、正文及封面待用户实测。",
+      "baseUrl": "https://www.biquges123.com/",
+      "domains": [
+        "www.biquges123.com",
+        "cdn.biquge7.top"
+      ],
+      "categories": [
+        "男频",
+        "女频"
+      ],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/biquges123-web.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/biquges123-web.js",
+      "appConfig": {
+        "searchUrl": "https://www.biquges123.com/search?keyword={keyword}&page={page}",
+        "bookUrl": "https://www.biquges123.com/{bookUrl}",
+        "chapterListUrl": "https://www.biquges123.com/{bookUrl}",
+        "chapterUrl": "https://www.biquges123.com/{chapterUrl}",
+        "htmlRules": {
+          "search": {
+            "itemSelector": ".hot_4_item",
+            "titleSelector": ".hot_name",
+            "urlSelector": "a",
+            "urlAttribute": "href",
+            "authorSelector": ".author",
+            "descriptionSelector": ".hot_des",
+            "coverSelector": "img",
+            "coverAttribute": "src"
+          },
+          "detail": {
+            "titleSelector": "h1.info_title",
+            "authorSelector": ".info_ct > div:nth-child(2)",
+            "descriptionSelector": ".des"
+          },
+          "chapters": {
+            "itemSelector": ".list li",
+            "titleSelector": "a",
+            "urlSelector": "a",
+            "urlAttribute": "href"
+          },
+          "content": {
+            "contentSelector": "article.article",
+            "titleSelector": "h1"
+          }
+        }
+      }
+    },
+    {
+      "id": "kuwo-novels",
+      "name": "酷我小说（开放接口）",
+      "kind": "public-web",
+      "version": "1.0.0",
+      "description": "候选扩充源，接口结构已检查；App 宿主脚本兼容性、搜索、详情、目录、正文及封面待用户实测。",
+      "baseUrl": "https://appi.kuwo.cn/",
+      "domains": [
+        "appi.kuwo.cn",
+        "openbookcover.yuewen.com"
+      ],
+      "categories": [
+        "男频",
+        "女频"
+      ],
+      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/kuwo-novels.json",
+      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/kuwo-novels.js",
+      "appConfig": {
+        "searchUrl": "https://appi.kuwo.cn/novels/api/book/search?keyword={keyword}&pi={page}&ps=30",
+        "bookUrl": "https://appi.kuwo.cn/novels/api/book/{bookUrl}",
+        "chapterListUrl": "https://appi.kuwo.cn/novels/api/book/{bookUrl}/chapters?paging=0",
+        "chapterUrl": "https://appi.kuwo.cn/novels/api/book/{bookUrl}/chapters/{chapterUrl}"
       }
     }
   ]
