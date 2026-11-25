@@ -4,7 +4,7 @@
   "name": "小说源",
   "description": "普通小说统一订阅；来源发现问题后持续修复或下架",
   "repository": "https://github.com/apa-arc/Novel-book-source-",
-  "updatedAt": "2026-11-25T09:45:00.000Z",
+  "updatedAt": "2026-11-25T09:15:12.721Z",
   "sourceCount": 10,
   "sources": [
     {
@@ -115,7 +115,8 @@
             "titleSelector": "dd h3 a",
             "urlSelector": "dd h3 a",
             "authorSelector": "dd.book_other span",
-            "coverSelector": "dt img"
+            "coverSelector": "dt img",
+            "coverAttribute": "src"
           },
           "detail": {
             "titleSelector": "h1",
@@ -157,7 +158,8 @@
             "titleSelector": "h3 a",
             "urlSelector": "h3 a",
             "authorSelector": ".book_other span",
-            "coverSelector": "dt img"
+            "coverSelector": "dt img",
+            "coverAttribute": "src"
           },
           "detail": {
             "titleSelector": "meta[property='og:novel:book_name']",
@@ -200,7 +202,8 @@
             "titleSelector": "dd h3 a",
             "urlSelector": "dd h3 a",
             "authorSelector": "dd.book_other span",
-            "coverSelector": "dt img"
+            "coverSelector": "dt img",
+            "coverAttribute": "src"
           },
           "detail": {
             "titleSelector": "h1",
@@ -329,7 +332,8 @@
             "urlSelector": "h3 a",
             "authorSelector": ".book_author",
             "descriptionSelector": ".book_ct",
-            "coverSelector": "img.book_img"
+            "coverSelector": "img.book_img",
+            "coverAttribute": "src"
           },
           "detail": {
             "titleSelector": "h1"
