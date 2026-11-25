@@ -3,14 +3,14 @@
   "id": "biquluo-la",
   "name": "壁落小说",
   "kind": "public-web",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "baseUrl": "https://www.biquluo.la/",
   "domains": [
     "www.biquluo.la"
   ],
   "script": "scripts/biquluo-la.js",
   "enabled": true,
-  "description": "普通小说测试源。支持 GET 搜索、书籍详情、章节目录与正文；正文经过推广文本清洗。当前为 App 宿主联调状态。 2026-11-25 修复：详情页封面改从已验证的 og:image 元数据提取。",
+  "description": "普通小说测试源。支持 GET 搜索、书籍详情、章节目录与正文；正文经过推广文本清洗。当前为 App 宿主联调状态。 2026-11-25 修复：详情页封面改从已验证的 og:image 元数据提取。 2026-11-25 修复：详情页封面改从已验证的 og:image 元数据提取。",
   "licenseApproved": true,
   "licenseType": "open-license",
   "licenseEvidence": "解析规则基于 luanmuc/legado-book-sources 仓库中的 MIT License 来源规则适配；此许可仅覆盖规则代码的再分发，不代表目标网站对其收录小说内容作出授权。",
