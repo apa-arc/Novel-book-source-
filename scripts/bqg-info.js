@@ -6,9 +6,20 @@ module.exports = createAdapter({
   search: {
     url: keyword => "https://www.bqg.info/search/?searchkey=" + encodeURIComponent(keyword),
     list: css("div.book-coverlist", "all"),
-    fields: { title: css("h4 a"), bookUrl: css("h4 a", "href"), intro: css("div.caption p") }
+    fields: {
+      title: css("h4 a"),
+      bookUrl: css("h4 a", "href"),
+      intro: css("div.caption p"),
+      coverUrl: {
+        engine: "replace",
+        input: css("a.thumbnail", "attr:style"),
+        pattern: "^.*url\\((?:['\\"])?([^)'\\"]+)(?:['\\"])?\\).*$",
+        replacement: "$1",
+        replaceFirst: true
+      }
+    }
   },
-  bookInfo: { fields: { title: css("h1"), intro: css("#bookIntro"), coverUrl: css("img.img-thumbnail", "src") } },
+  bookInfo: { fields: { title: css("h1"), intro: css("#bookIntro") } },
   toc: {
     list: css("dl#newlist > dd", "all"),
     fields: { title: css("a"), chapterUrl: css("a", "href") }
