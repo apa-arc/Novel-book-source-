@@ -4,7 +4,7 @@
   "name": "小说源",
   "description": "普通小说统一订阅；来源发现问题后持续修复或下架",
   "repository": "https://github.com/apa-arc/Novel-book-source-",
-  "updatedAt": "2026-11-24T00:00:00.000Z",
+  "updatedAt": "2026-11-25T01:05:04.771Z",
   "sourceCount": 11,
   "sources": [
     {
@@ -305,7 +305,7 @@
       "id": "douhua-wenxue",
       "name": "豆花文学",
       "kind": "public-web",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "description": "原创小说站网页源；GET 搜索，详情、目录和正文采用 CSS 规则。站点近期仍有更新内容；部分作品可能存在付费章节，当前宿主四阶段复测待完成。",
       "baseUrl": "https://www.douhuawenxue.com/",
       "domains": [
@@ -326,7 +326,7 @@
             "urlSelector": "h3 a",
             "authorSelector": ".book_author",
             "descriptionSelector": ".book_ct",
-            "coverSelector": "img"
+            "coverSelector": "img.book_img"
           },
           "detail": {
             "titleSelector": "h1"
