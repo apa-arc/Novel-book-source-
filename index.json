@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-21",
+  "updatedAt": "2026-11-25",
   "sources": [
     {
       "id": "biquluo-la",
@@ -87,16 +87,16 @@
       "name": "新笔趣阁（biquges123）",
       "kind": "public-web",
       "file": "sources/biquges123-web.json",
-      "enabled": false,
-      "testOnly": true
+      "enabled": true,
+      "testOnly": false
     },
     {
       "id": "kuwo-novels",
       "name": "酷我小说（开放接口）",
       "kind": "public-web",
       "file": "sources/kuwo-novels.json",
-      "enabled": false,
-      "testOnly": true
+      "enabled": true,
+      "testOnly": false
     }
   ]
 }
