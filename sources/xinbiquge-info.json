@@ -3,14 +3,14 @@
   "id": "xinbiquge-info",
   "name": "新笔趣阁小说网",
   "kind": "public-web",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "baseUrl": "https://www.xbiquge.info/",
   "domains": [
     "www.xbiquge.info"
   ],
   "script": "scripts/xinbiquge-info.js",
   "enabled": true,
-  "description": "普通小说网页源；GET 搜索，目录分页，正文使用 article.font_max；章节可能分页，需后续补齐翻页处理。 2026-11-22 修复：目录请求改为直接读取书籍详情页，避免 index_1.html 返回404；等待复测。",
+  "description": "普通小说网页源；GET 搜索，目录分页，正文使用 article.font_max；章节可能分页，需后续补齐翻页处理。 2026-11-22 修复：目录请求改为直接读取书籍详情页，避免 index_1.html 返回404；等待复测。 2026-11-25 修复：详情页封面改从已验证的 og:image 元数据提取。",
   "licenseApproved": true,
   "licenseType": "self-owned",
   "licenseEvidence": "本仓库原创声明式适配配置与解析器，不包含小说正文。",
