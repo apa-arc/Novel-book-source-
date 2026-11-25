@@ -13,7 +13,7 @@ module.exports = createAdapter({
       coverUrl: {
         engine: "replace",
         input: css("a.thumbnail", "attr:style"),
-        pattern: "^.*url\\((?:['\\"])?([^)'\\"]+)(?:['\\"])?\\).*$",
+        pattern: "url\\(([^)]+)\\)",
         replacement: "$1",
         replaceFirst: true
       }
