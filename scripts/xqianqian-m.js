@@ -5,7 +5,7 @@ const css = (query, output = "text") => ({ engine: "css", query, output });
 
 module.exports = createAdapter({
   baseUrl: "https://m.xqianqian.com/",
-  domains: ["m.xqianqian.com"],
+  domains: ["m.xqianqian.com", "www.xqianqian.com"],
   search: {
     url: (keyword) => "https://m.xqianqian.com/s.php?q=" + encodeURIComponent(keyword),
     list: css(".bookbox", "all"),
@@ -18,7 +18,8 @@ module.exports = createAdapter({
   bookInfo: {
     fields: {
       title: css(".name"),
-      description: css(".book_about dd")
+      description: css(".book_about dd"),
+      coverUrl: css("meta[property='og:image']", "content")
     }
   },
   toc: {
