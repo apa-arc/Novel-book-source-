@@ -3,14 +3,14 @@
   "id": "xinbiquge-info",
   "name": "新笔趣阁小说网",
   "kind": "public-web",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "baseUrl": "https://www.xbiquge.info/",
   "domains": [
     "www.xbiquge.info"
   ],
   "script": "scripts/xinbiquge-info.js",
   "enabled": true,
-  "description": "普通小说网页源；GET 搜索，目录分页，正文使用 article.font_max；章节可能分页，需后续补齐翻页处理。 2026-11-22 修复：目录请求改为直接读取书籍详情页，避免 index_1.html 返回404；等待复测。 2026-11-25 修复：详情页封面改从已验证的 og:image 元数据提取。 2026-11-25 修复：搜索结果封面明确读取 img 的 src 属性。",
+  "description": "普通小说网页源；GET 搜索，目录分页，正文使用 article.font_max。2026-11-25 修复搜索规则：网站搜索页已改版，结果容器为 div.col-12.col-md-6 > list，书名链接位于 listitem > heading > a，作者位于首个 book_other 元数据行，封面位于 term > a > img。搜索页实测可返回结果；详情、目录、正文仍需完整验证。",
   "licenseApproved": true,
   "licenseType": "self-owned",
   "licenseEvidence": "本仓库原创声明式适配配置与解析器，不包含小说正文。",
@@ -23,11 +23,11 @@
     "chapterUrl": "https://www.xbiquge.info/{chapterUrl}",
     "htmlRules": {
       "search": {
-        "itemSelector": ".box.hot dl",
-        "titleSelector": "dd h3 a",
-        "urlSelector": "dd h3 a",
-        "authorSelector": "dd.book_other span",
-        "coverSelector": "dt img",
+        "itemSelector": "div.col-12.col-md-6 > list",
+        "titleSelector": "listitem > heading > a",
+        "urlSelector": "listitem > heading > a",
+        "authorSelector": "listitem.book_other:nth-of-type(1) > span:nth-of-type(2)",
+        "coverSelector": "term > a > img",
         "coverAttribute": "src"
       },
       "detail": {
