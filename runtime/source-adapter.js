@@ -47,10 +47,8 @@ function value(node, selector, context) {
 
 function isPlaceholderCover(value) {
   const url = String(value || "").trim().toLowerCase().split(/[?#]/, 1)[0];
-  return !url || url.includes("loading") || url.includes("placeholder") ||
-    url.includes("lazy") || url.endsWith("/nocover.jpg") ||
-    url.endsWith("/nopic.gif") || url.includes("default_cover") ||
-    url.includes("noimg") || url.includes("no-cover");
+  if (!url) return true;
+  return /(?:^|[\\/_-])(?:loading|placeholder|lazy|default(?:img|image|cover)?|book[-_]?default|cover[-_]?default|no[-_]?cover|nocover|no[-_]?pic|nopic|no[-_]?image|noimg|none)(?:[._/-]|$)/i.test(url);
 }
 
 function firstImageUrl(value, isSrcset = false) {
@@ -60,7 +58,7 @@ function firstImageUrl(value, isSrcset = false) {
 }
 
 function fallbackCover(node, context) {
-  const attributes = ["data-src", "data-original", "data-lazy-src", "data-url", "data-echo", "data-srcset", "srcset", "src"];
+  const attributes = ["data-src", "data-original", "data-original-src", "data-lazy-src", "data-lazy", "data-ks-lazyload", "data-url", "data-echo", "data-srcset", "srcset", "src"];
   let placeholder = "";
   for (const attribute of attributes) {
     const raw = value(node, { engine: "css", query: "img", output: "attr:" + attribute }, context);
