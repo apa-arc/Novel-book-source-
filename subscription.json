@@ -55,8 +55,8 @@
       "id": "jiuyi-91zww",
       "name": "九一中文",
       "kind": "public-web",
-      "version": "1.0.4",
-      "description": "普通小说网页源；GET + CSS 四阶段配置。详情页已验证提供 og:image，解析器可提取真实封面。 封面规则补全：搜索列表读取站点真实图片属性，详情页读取已配置的 og:image 或封面图片；不伪造无封面站点的图片。",
+      "version": "1.0.5",
+      "description": "普通小说网页源；保留已由用户真机验证可用的 GET 搜索入口，不因网页端改版贸然替换请求方式。2026-11-26 修复：搜索解析器补充 img[src] 封面提取，并由通用运行时兼容 data-src、data-original、srcset 等懒加载字段；详情页继续读取 og:image。新版 POST 搜索表单仍需宿主请求层支持后再接入。",
       "baseUrl": "https://www.91zww.com/",
       "domains": [
         "www.91zww.com"
