@@ -11,7 +11,8 @@ module.exports = createAdapter({
     list: css(".item", "all"),
     fields: {
       title: css("a:nth-of-type(2)"),
-      bookUrl: css("a:nth-of-type(2)", "href")
+      bookUrl: css("a:nth-of-type(2)", "href"),
+      coverUrl: css("img", "attr:src")
     }
   },
   bookInfo: { fields: { title: css("h1"), coverUrl: css("meta[property='og:image']", "attr:content") } },
