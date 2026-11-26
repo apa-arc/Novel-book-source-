@@ -50,6 +50,25 @@ try {
   assert.equal(ordinary.sources[0].appConfig.htmlRules.search.itemSelector, ".book");
   assert.equal(ordinary.sources[0].scriptUrl, "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/demo-source.js");
   assert.equal(ordinary.updatedAt, "2026-11-20T00:00:00.000Z");
+  const pendingMeta = {
+    ...meta,
+    id: "pending-source",
+    name: "待验证书源",
+    hostValidated: false,
+    validationStatus: "imported-unverified",
+    validationNote: "等待 App 真机四阶段验证",
+  };
+  delete pendingMeta.qualityReport;
+  delete pendingMeta.functionalTestReport;
+  fs.writeFileSync(path.join(root, "sources/pending-source.json"), JSON.stringify(pendingMeta));
+  fs.writeFileSync(path.join(root, "scripts/pending-source.js"), "module.exports = {};");
+  const pending = buildSubscription({ schemaVersion: 1, sources: [
+    { id: "pending-source", name: "待验证书源", kind: "public-web", file: "sources/pending-source.json", enabled: true }
+  ] }, root, "2026-11-20T00:00:00.000Z");
+  assert.equal(pending.sourceCount, 1);
+  assert.equal(pending.sources[0].validationStatus, "imported-unverified");
+  assert.equal(pending.sources[0].validationNote, "等待 App 真机四阶段验证");
+
   const adult = buildSubscription({ schemaVersion: 1, sources: [] }, root, "2026-11-20T00:00:00.000Z", {
     subscriptionId: "apa-arc-adult-novel-book-source", name: "成人小说书源", description: "独立隔离"
   });
