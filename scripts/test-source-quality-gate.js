@@ -40,7 +40,12 @@ try {
   assert.throws(() => validateSourceQuality({ ...meta, licenseApproved: false }, root), /license-review-required/);
   assert.throws(() => validateSourceQuality({ ...meta, licenseType: "unknown" }, root), /license-type-required/);
   assert.throws(() => validateSourceQuality({ ...meta, licenseEvidenceUrl: "http://example.com/license" }, root), /evidence-url-invalid/);
-  assert.throws(() => validateSourceQuality({ ...meta, hostValidated: false }, root), /host-validation-required/);
+  const unverified = { ...meta, hostValidated: false, validationStatus: "imported-unverified", validationNote: "等待 App 真机完整验证" };
+  assert.deepEqual(validateSourceQuality(unverified, root), {
+    ok: true, skipped: false, unverified: true, status: "imported-unverified"
+  });
+  assert.throws(() => validateSourceQuality({ ...unverified, validationNote: "" }, root), /unverified-status-required/);
+  assert.throws(() => validateSourceQuality({ ...meta, hostValidated: false }, root), /unverified-status-required/);
   assert.throws(() => validateSourceQuality({ ...meta, qualityReport: "" }, root), /quality-report-required/);
   assert.throws(() => validateSourceQuality({ ...meta, functionalTestReport: "" }, root), /functional-report-required/);
   assert.throws(() => validateSourceQuality({ ...meta, appConfig: { ...meta.appConfig, chapterUrl: "https://other.example/chapter" } }, root), /outside-allowlist/);
