@@ -4,7 +4,7 @@
   "name": "酷我小说（开放接口）",
   "kind": "public-web",
   "version": "1.0.0",
-  "description": "依据清阅开源项目验证的酷我小说 GET JSON 接口；搜索、详情、章节、正文及阅文封面 CDN 均已实测。",
+  "description": "依据清阅开源项目验证的酷我小说 GET JSON 接口；搜索、详情、章节、正文及阅文封面 CDN 均已实测。 当前状态：已导入，待 App 真机完整验证；不代表已验证可读。",
   "baseUrl": "https://appi.kuwo.cn/",
   "domains": [
     "appi.kuwo.cn",
@@ -26,5 +26,7 @@
   "licenseApproved": true,
   "licenseType": "self-owned",
   "licenseEvidence": "本仓库中的书源适配器、字段映射和请求解析代码由项目维护者在本仓库独立编写；不包含小说正文，也不主张拥有或授权目标网站收录的作品。该声明仅覆盖本仓库适配代码。",
-  "licenseEvidenceUrl": "https://github.com/apa-arc/Novel-book-source-/blob/main/scripts/kuwo-novels.js"
+  "licenseEvidenceUrl": "https://github.com/apa-arc/Novel-book-source-/blob/main/scripts/kuwo-novels.js",
+  "validationStatus": "imported-unverified",
+  "validationNote": "已通过静态 HTTPS 域名白名单、App 原生配置结构和解析器接口检查；尚未取得完整 iOS App 真机搜索、详情、目录、正文四阶段通过报告。"
 }
