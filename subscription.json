@@ -92,49 +92,6 @@
       }
     },
     {
-      "id": "xinbiquge-info",
-      "name": "新笔趣阁小说网",
-      "kind": "public-web",
-      "version": "1.0.6",
-      "description": "普通小说网页源；GET 搜索，目录分页，正文使用 article.font_max；章节可能分页，需后续补齐翻页处理。 2026-11-22 修复：目录请求改为直接读取书籍详情页，避免 index_1.html 返回404；等待复测。 2026-11-25 修复：详情页封面改从已验证的 og:image 元数据提取。 2026-11-25 修复：搜索结果封面明确读取 img 的 src 属性。",
-      "baseUrl": "https://www.xbiquge.info/",
-      "domains": [
-        "www.xbiquge.info"
-      ],
-      "categories": [],
-      "metadataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/sources/xinbiquge-info.json",
-      "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/xinbiquge-info.js",
-      "appConfig": {
-        "searchUrl": "https://www.xbiquge.info/search.php?q={keyword}",
-        "bookUrl": "https://www.xbiquge.info/{bookUrl}",
-        "chapterListUrl": "https://www.xbiquge.info/{bookUrl}",
-        "chapterUrl": "https://www.xbiquge.info/{chapterUrl}",
-        "htmlRules": {
-          "search": {
-            "itemSelector": ".box.hot dl",
-            "titleSelector": "dd h3 a",
-            "urlSelector": "dd h3 a",
-            "authorSelector": "dd.book_other span",
-            "coverSelector": "dt img",
-            "coverAttribute": "src"
-          },
-          "detail": {
-            "titleSelector": "h1",
-            "descriptionSelector": "#intro"
-          },
-          "chapters": {
-            "itemSelector": ".book_list2 > ul > li",
-            "titleSelector": "a",
-            "urlSelector": "a"
-          },
-          "content": {
-            "contentSelector": "article.font_max",
-            "titleSelector": "h1"
-          }
-        }
-      }
-    },
-    {
       "id": "biquge-17177",
       "name": "笔趣阁小说网（17177）",
       "kind": "public-web",
