@@ -22,5 +22,9 @@
     "chapterListUrl": "https://appi.kuwo.cn/novels/api/book/{bookUrl}/chapters?paging=0",
     "chapterUrl": "https://appi.kuwo.cn/novels/api/book/{bookUrl}/chapters/{chapterUrl}"
   },
-  "hostValidated": false
+  "hostValidated": false,
+  "licenseApproved": true,
+  "licenseType": "self-owned",
+  "licenseEvidence": "本仓库中的书源适配器、字段映射和请求解析代码由项目维护者在本仓库独立编写；不包含小说正文，也不主张拥有或授权目标网站收录的作品。该声明仅覆盖本仓库适配代码。",
+  "licenseEvidenceUrl": "https://github.com/apa-arc/Novel-book-source-/blob/main/scripts/kuwo-novels.js"
 }
