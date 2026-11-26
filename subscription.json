@@ -4,7 +4,7 @@
   "name": "小说源",
   "description": "普通小说统一订阅；来源发现问题后持续修复或下架",
   "repository": "https://github.com/apa-arc/Novel-book-source-",
-  "updatedAt": "2026-11-26T20:00:00+08:00",
+  "updatedAt": "2026-11-26T23:30:00+08:00",
   "sourceCount": 12,
   "sources": [
     {
@@ -100,8 +100,8 @@
       "id": "xinbiquge-info",
       "name": "新笔趣阁小说网",
       "kind": "public-web",
-      "version": "1.0.8",
-      "description": "普通小说网页源；GET 搜索，目录分页，正文使用 article.font_max。2026-11-25 搜索规则按新版页面结构修复；封面规则对齐 biquges123-web：搜索列表提取 img[src]，详情页优先读取 og:image。已实测样本详情页 og:image 指向本站 180×240 封面图；App 真机显示仍待复测。",
+      "version": "1.0.9",
+      "description": "普通小说网页源；GET 搜索，目录分页，正文使用 article.font_max。2026-11-26 按实时搜索页结构修复列表卡片选择器：dl / h3 / a / img；详情封面使用 og:image。 搜索页和详情页封面均提取真实图片地址；App 显示待设备回归验证。",
       "baseUrl": "https://www.xbiquge.info/",
       "domains": [
         "www.xbiquge.info"
@@ -116,11 +116,11 @@
         "chapterUrl": "https://www.xbiquge.info/{chapterUrl}",
         "htmlRules": {
           "search": {
-            "itemSelector": "div.col-12.col-md-6 > list",
-            "titleSelector": "listitem > heading > a",
-            "urlSelector": "listitem > heading > a",
-            "authorSelector": "listitem.book_other:nth-of-type(1) > span:nth-of-type(2)",
-            "coverSelector": "term > a > img",
+            "itemSelector": "dl",
+            "titleSelector": "h3",
+            "urlSelector": "a",
+            "authorSelector": "dd:nth-of-type(2)",
+            "coverSelector": "img",
             "coverAttribute": "src"
           },
           "detail": {
