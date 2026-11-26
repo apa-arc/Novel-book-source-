@@ -10,7 +10,7 @@
   ],
   "script": "scripts/jiuyi-91zww.js",
   "enabled": true,
-  "description": "普通小说网页源；保留已由用户真机验证可用的 GET 搜索入口，不因网页端改版贸然替换请求方式。2026-11-26 修复：搜索解析器补充 img[src] 封面提取，并由通用运行时兼容 data-src、data-original、srcset 等懒加载字段；详情页继续读取 og:image。新版 POST 搜索表单仍需宿主请求层支持后再接入。",
+  "description": "普通小说网页源；保留已由用户真机验证可用的 GET 搜索入口，不因网页端改版贸然替换请求方式。2026-11-26 补充搜索列表 img[src] 提取和详情页 og:image；旧版规则曾使用外部图片 CDN 拼接封面，但当前 CDN 尚未复核，因此不硬编码旧地址。若搜索结果没有图片节点，由 App 的 QQ 封面兜底处理。新版 POST 搜索表单仍待确认后接入。",
   "licenseApproved": true,
   "licenseType": "self-owned",
   "licenseEvidence": "本仓库自行编写的声明式适配配置与解析器，不包含小说正文。",
