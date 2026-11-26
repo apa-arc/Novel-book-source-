@@ -55,7 +55,7 @@ function isPlaceholderCover(value) {
 
 function firstImageUrl(value, isSrcset = false) {
   let url = String(value || "").trim();
-  if (isSrcset) url = url.split(",")[0].trim().split(/\\s+/)[0];
+  if (isSrcset) url = url.split(",")[0].trim().split(/\s+/)[0];
   return url;
 }
 
