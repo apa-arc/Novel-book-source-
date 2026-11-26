@@ -1,28 +1,167 @@
 {
-  "generatedAt": "2026-11-26T13:48:51.599Z",
+  "generatedAt": "2026-11-26T20:28:03.332Z",
   "testStandard": "AppleNovelApp search semantics + separately reported reading stages; each search retries up to 3 times; transient Node network errors are environment-inconclusive; title relevance is separate from request success; reading tests only use title-matching results; sources run sequentially with 1.2s cooldown",
   "keywords": [
     "斗罗",
     "斗破"
   ],
   "counts": {
-    "total": 0,
-    "appCompatible": 0,
+    "total": 2,
+    "appCompatible": 2,
     "appUnsupported": 0,
     "readableBoth": 0,
     "readableOne": 0,
-    "searchOrCatalogOnly": 0,
-    "environmentInconclusive": 0,
+    "searchOrCatalogOnly": 1,
+    "environmentInconclusive": 1,
     "failed": 0,
-    "searchPassed": 0,
+    "searchPassed": 2,
     "searchFailed": 0,
-    "searchInconclusive": 0,
-    "searchRequestsPassed": 0,
-    "searchZeroResults": 0,
+    "searchInconclusive": 2,
+    "searchRequestsPassed": 2,
+    "searchZeroResults": 2,
     "searchHasResultsButNoTitleMatch": 0,
     "readingSkippedForNoTitleMatch": 0,
-    "searchRetriesUsed": 0,
+    "searchRetriesUsed": 2,
     "chapterContentPassed": 0
   },
-  "results": []
+  "results": [
+    {
+      "id": "biquges123-web",
+      "name": "新笔趣阁（biquges123）",
+      "status": "environment-inconclusive",
+      "terms": {
+        "斗罗": {
+          "keyword": "斗罗",
+          "status": "search-inconclusive",
+          "searchStatus": "inconclusive",
+          "readingStatus": "not-tested",
+          "stages": [
+            {
+              "stage": "搜索",
+              "status": "inconclusive",
+              "detail": "连续 3 次请求仍未成功：书源服务器返回 HTTP 403。"
+            },
+            {
+              "stage": "目录",
+              "status": "skipped",
+              "detail": "搜索请求未成功或响应无法解析"
+            },
+            {
+              "stage": "详情",
+              "status": "skipped",
+              "detail": "没有可用搜索结果"
+            },
+            {
+              "stage": "正文",
+              "status": "skipped",
+              "detail": "没有可用搜索结果"
+            }
+          ],
+          "attempts": 3,
+          "error": "书源服务器返回 HTTP 403。"
+        },
+        "斗破": {
+          "keyword": "斗破",
+          "status": "search-inconclusive",
+          "searchStatus": "inconclusive",
+          "readingStatus": "not-tested",
+          "stages": [
+            {
+              "stage": "搜索",
+              "status": "inconclusive",
+              "detail": "连续 3 次请求仍未成功：书源服务器返回 HTTP 403。"
+            },
+            {
+              "stage": "目录",
+              "status": "skipped",
+              "detail": "搜索请求未成功或响应无法解析"
+            },
+            {
+              "stage": "详情",
+              "status": "skipped",
+              "detail": "没有可用搜索结果"
+            },
+            {
+              "stage": "正文",
+              "status": "skipped",
+              "detail": "没有可用搜索结果"
+            }
+          ],
+          "attempts": 3,
+          "error": "书源服务器返回 HTTP 403。"
+        }
+      }
+    },
+    {
+      "id": "kuwo-novels",
+      "name": "酷我小说（开放接口）",
+      "status": "search-or-catalog-only",
+      "terms": {
+        "斗罗": {
+          "keyword": "斗罗",
+          "status": "search-only",
+          "searchStatus": "passed",
+          "readingStatus": "not-tested",
+          "stages": [
+            {
+              "stage": "搜索",
+              "status": "passed",
+              "detail": "App 搜索请求及解析成功；返回 0 条结果；标题匹配关键词 0 条；尝试 1 次"
+            },
+            {
+              "stage": "目录",
+              "status": "skipped",
+              "detail": "搜索请求及解析成功，但本次关键词返回 0 条；按 App 搜索日志仍计为成功"
+            },
+            {
+              "stage": "详情",
+              "status": "skipped",
+              "detail": "没有搜索结果可供打开"
+            },
+            {
+              "stage": "正文",
+              "status": "skipped",
+              "detail": "没有搜索结果可供打开"
+            }
+          ],
+          "attempts": 1,
+          "resultCount": 0,
+          "matchingResultCount": 0,
+          "relevanceStatus": "zero-results"
+        },
+        "斗破": {
+          "keyword": "斗破",
+          "status": "search-only",
+          "searchStatus": "passed",
+          "readingStatus": "not-tested",
+          "stages": [
+            {
+              "stage": "搜索",
+              "status": "passed",
+              "detail": "App 搜索请求及解析成功；返回 0 条结果；标题匹配关键词 0 条；尝试 1 次"
+            },
+            {
+              "stage": "目录",
+              "status": "skipped",
+              "detail": "搜索请求及解析成功，但本次关键词返回 0 条；按 App 搜索日志仍计为成功"
+            },
+            {
+              "stage": "详情",
+              "status": "skipped",
+              "detail": "没有搜索结果可供打开"
+            },
+            {
+              "stage": "正文",
+              "status": "skipped",
+              "detail": "没有搜索结果可供打开"
+            }
+          ],
+          "attempts": 1,
+          "resultCount": 0,
+          "matchingResultCount": 0,
+          "relevanceStatus": "zero-results"
+        }
+      }
+    }
+  ]
 }
