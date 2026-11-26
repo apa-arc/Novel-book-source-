@@ -55,6 +55,8 @@ function buildSubscription(index, root, updatedAt = new Date().toISOString(), op
       categories: Array.isArray(meta.categories) ? meta.categories : [],
       metadataUrl: RAW_BASE + item.file, scriptUrl: RAW_BASE + meta.script,
       ...(meta.appConfig ? { appConfig: meta.appConfig } : {}),
+      ...(meta.validationStatus ? { validationStatus: meta.validationStatus } : {}),
+      ...(meta.validationNote ? { validationNote: meta.validationNote } : {}),
       ...(meta.testOnly === true ? { testOnly: true, testOnlyReason: meta.testOnlyReason } : {})
     });
   }
