@@ -3,8 +3,8 @@
   "id": "biquges123-web",
   "name": "新笔趣阁（biquges123）",
   "kind": "public-web",
-  "version": "1.0.0",
-  "description": "从清阅开源项目验证的新笔趣阁网页源；搜索结果封面使用真实 CDN 图片地址，支持详情、目录和正文。",
+  "version": "1.0.1",
+  "description": "从清阅开源项目验证的新笔趣阁网页源；搜索结果封面使用真实 CDN 图片地址，支持详情、目录和正文。 封面规则补全：搜索列表读取站点真实图片属性，详情页读取已配置的 og:image 或封面图片；不伪造无封面站点的图片。",
   "baseUrl": "https://www.biquges123.com/",
   "domains": [
     "www.biquges123.com",
@@ -35,7 +35,9 @@
       "detail": {
         "titleSelector": "h1.info_title",
         "authorSelector": ".info_ct > div:nth-child(2)",
-        "descriptionSelector": ".des"
+        "descriptionSelector": ".des",
+        "coverSelector": "img",
+        "coverAttribute": "src"
       },
       "chapters": {
         "itemSelector": ".list li",
