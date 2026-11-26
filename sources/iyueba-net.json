@@ -3,7 +3,7 @@
   "id": "iyueba-net",
   "name": "爱阅吧网",
   "kind": "public-web",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "baseUrl": "https://iyueba.net/",
   "domains": [
     "iyueba.net",
@@ -11,7 +11,7 @@
   ],
   "script": "scripts/iyueba-net.js",
   "enabled": true,
-  "description": "普通小说网页源；GET 搜索入口待修复，详情页已验证提供 og:image，解析器可从封面 CDN 提取真实封面。 封面规则补全：搜索列表读取站点真实图片属性，详情页读取已配置的 og:image 或封面图片；不伪造无封面站点的图片。",
+  "description": "普通小说网页源；GET 搜索入口仍待宿主实测确认，详情页 og:image 可提取真实封面。2026-11-26 补全脚本搜索列表 img[src] 封面字段；图片 CDN 域名已列入白名单。搜索页若无图片节点则由 App 侧封面兜底处理。",
   "licenseApproved": true,
   "licenseType": "self-owned",
   "licenseEvidence": "本仓库原创的声明式 GET/CSS 适配配置与解析器，不复制第三方脚本或小说正文。",
