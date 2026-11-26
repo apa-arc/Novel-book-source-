@@ -216,5 +216,28 @@ const http = { async get(url) { requests.push(url); return { url, document: root
   });
   assert.equal(dataSrcsetCoverResult[0].coverUrl, "https://example.test/data-cover.jpg");
 
+  const placeholderNames = [
+    "https://example.test/images/defaultimg.jpg",
+    "https://example.test/images/default-cover.png",
+    "https://example.test/images/book_default.jpg",
+    "https://example.test/images/no_cover.jpg",
+    "https://example.test/images/noimage.gif",
+    "https://example.test/images/nopic.gif",
+    "https://example.test/images/placeholder.png"
+  ];
+  for (const [index, placeholder] of placeholderNames.entries()) {
+    const placeholderRoot = node("main", {}, "", [
+      node("article", {}, "", [
+        node("a", { href: "/book/placeholder-" + index }, "占位封面测试" + index),
+        node("img", { src: placeholder, "data-lazy-src": "https://example.test/covers/real-" + index + ".jpg" })
+      ])
+    ]);
+    const placeholderResult = await srcsetCoverAdapter.search({
+      keyword: "占位封面",
+      http: { async get(url) { return { url, document: placeholderRoot }; } }
+    });
+    assert.equal(placeholderResult[0].coverUrl, "https://example.test/covers/real-" + index + ".jpg");
+  }
+
   console.log("Source adapter runtime fixture tests passed.");
 })().catch(error => { console.error(error); process.exitCode = 1; });
