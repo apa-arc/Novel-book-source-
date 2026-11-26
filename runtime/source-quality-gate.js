@@ -67,6 +67,16 @@ function validateSourceQuality(meta, root) {
     return { ok: true, skipped: true, testOnly: true };
   }
 
+  // New sources may be imported before live host/App verification, as declared
+  // by config/source-scan-import-rules.json. They must be explicitly labeled.
+  if (meta.hostValidated !== true) {
+    if (meta.validationStatus !== "imported-unverified" ||
+        typeof meta.validationNote !== "string" || !meta.validationNote.trim()) {
+      throw new Error("enabled-source-unverified-status-required:" + meta.id);
+    }
+    return { ok: true, skipped: false, unverified: true, status: "imported-unverified" };
+  }
+
   const reportPath = meta.qualityReport;
   if (typeof reportPath !== "string" || !reportPath.startsWith("quality-reports/") || reportPath.includes("..")) {
     throw new Error("enabled-source-quality-report-required:" + meta.id);
