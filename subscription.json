@@ -4,15 +4,15 @@
   "name": "小说源",
   "description": "普通小说统一订阅；来源发现问题后持续修复或下架",
   "repository": "https://github.com/apa-arc/Novel-book-source-",
-  "updatedAt": "2026-11-25T23:00:00+08:00",
+  "updatedAt": "2026-11-26T20:00:00+08:00",
   "sourceCount": 12,
   "sources": [
     {
       "id": "biquluo-la",
       "name": "壁落小说",
       "kind": "public-web",
-      "version": "1.0.5",
-      "description": "普通小说测试源。支持 GET 搜索、书籍详情、章节目录与正文；正文经过推广文本清洗。当前为 App 宿主联调状态。 2026-11-25 修复：详情页封面改从已验证的 og:image 元数据提取。 2026-11-25 修复：详情页封面改从已验证的 og:image 元数据提取。",
+      "version": "1.0.6",
+      "description": "普通小说测试源。支持 GET 搜索、书籍详情、章节目录与正文；正文经过推广文本清洗。当前为 App 宿主联调状态。 2026-11-25 修复：详情页封面改从已验证的 og:image 元数据提取。 2026-11-25 修复：详情页封面改从已验证的 og:image 元数据提取。 封面规则补全：搜索列表读取站点真实图片属性，详情页读取已配置的 og:image 或封面图片；不伪造无封面站点的图片。",
       "baseUrl": "https://www.biquluo.la/",
       "domains": [
         "www.biquluo.la"
@@ -35,7 +35,9 @@
           },
           "detail": {
             "titleSelector": "#info h1",
-            "descriptionSelector": "#intro"
+            "descriptionSelector": "#intro",
+            "coverSelector": "meta[property='og:image']",
+            "coverAttribute": "content"
           },
           "chapters": {
             "itemSelector": "#list dd",
@@ -53,8 +55,8 @@
       "id": "jiuyi-91zww",
       "name": "九一中文",
       "kind": "public-web",
-      "version": "1.0.3",
-      "description": "普通小说网页源；GET + CSS 四阶段配置。详情页已验证提供 og:image，解析器可提取真实封面。",
+      "version": "1.0.4",
+      "description": "普通小说网页源；GET + CSS 四阶段配置。详情页已验证提供 og:image，解析器可提取真实封面。 封面规则补全：搜索列表读取站点真实图片属性，详情页读取已配置的 og:image 或封面图片；不伪造无封面站点的图片。",
       "baseUrl": "https://www.91zww.com/",
       "domains": [
         "www.91zww.com"
@@ -73,11 +75,14 @@
             "titleSelector": ".s2 a",
             "urlSelector": ".s2 a",
             "authorSelector": ".s4",
-            "coverSelector": "img"
+            "coverSelector": "img",
+            "coverAttribute": "src"
           },
           "detail": {
             "titleSelector": "h1",
-            "descriptionSelector": "#intro"
+            "descriptionSelector": "#intro",
+            "coverSelector": "meta[property='og:image']",
+            "coverAttribute": "content"
           },
           "chapters": {
             "itemSelector": ".section-list li",
@@ -95,8 +100,8 @@
       "id": "xinbiquge-info",
       "name": "新笔趣阁小说网",
       "kind": "public-web",
-      "version": "1.0.6",
-      "description": "普通小说网页源；GET 搜索，目录分页，正文使用 article.font_max；章节可能分页，需后续补齐翻页处理。 2026-11-22 修复：目录请求改为直接读取书籍详情页，避免 index_1.html 返回404；等待复测。 2026-11-25 修复：详情页封面改从已验证的 og:image 元数据提取。 2026-11-25 修复：搜索结果封面明确读取 img 的 src 属性。",
+      "version": "1.0.8",
+      "description": "普通小说网页源；GET 搜索，目录分页，正文使用 article.font_max。2026-11-25 搜索规则按新版页面结构修复；封面规则对齐 biquges123-web：搜索列表提取 img[src]，详情页优先读取 og:image。已实测样本详情页 og:image 指向本站 180×240 封面图；App 真机显示仍待复测。",
       "baseUrl": "https://www.xbiquge.info/",
       "domains": [
         "www.xbiquge.info"
@@ -111,16 +116,18 @@
         "chapterUrl": "https://www.xbiquge.info/{chapterUrl}",
         "htmlRules": {
           "search": {
-            "itemSelector": ".box.hot dl",
-            "titleSelector": "dd h3 a",
-            "urlSelector": "dd h3 a",
-            "authorSelector": "dd.book_other span",
-            "coverSelector": "dt img",
+            "itemSelector": "div.col-12.col-md-6 > list",
+            "titleSelector": "listitem > heading > a",
+            "urlSelector": "listitem > heading > a",
+            "authorSelector": "listitem.book_other:nth-of-type(1) > span:nth-of-type(2)",
+            "coverSelector": "term > a > img",
             "coverAttribute": "src"
           },
           "detail": {
             "titleSelector": "h1",
-            "descriptionSelector": "#intro"
+            "descriptionSelector": "#intro",
+            "coverSelector": "meta[property='og:image']",
+            "coverAttribute": "content"
           },
           "chapters": {
             "itemSelector": ".book_list2 > ul > li",
@@ -138,8 +145,8 @@
       "id": "biquge-17177",
       "name": "笔趣阁小说网（17177）",
       "kind": "public-web",
-      "version": "1.0.4",
-      "description": "普通小说网页源；GET 搜索，详情页元信息、目录与正文使用 CSS 提取。 2026-11-25 修复：详情页封面改从已验证的 og:image 元数据提取。 2026-11-25 修复：搜索结果封面明确读取 img 的 src 属性。",
+      "version": "1.0.5",
+      "description": "普通小说网页源；GET 搜索，详情页元信息、目录与正文使用 CSS 提取。 2026-11-25 修复：详情页封面改从已验证的 og:image 元数据提取。 2026-11-25 修复：搜索结果封面明确读取 img 的 src 属性。 封面规则补全：搜索列表读取站点真实图片属性，详情页读取已配置的 og:image 或封面图片；不伪造无封面站点的图片。",
       "baseUrl": "https://www.17177.cc/",
       "domains": [
         "www.17177.cc"
@@ -164,7 +171,9 @@
           "detail": {
             "titleSelector": "meta[property='og:novel:book_name']",
             "authorSelector": "meta[property='og:novel:author']",
-            "descriptionSelector": "meta[property='og:description']"
+            "descriptionSelector": "meta[property='og:description']",
+            "coverSelector": "meta[property='og:image']",
+            "coverAttribute": "content"
           },
           "chapters": {
             "itemSelector": ".book_list2 li",
@@ -182,8 +191,8 @@
       "id": "d8zw-com",
       "name": "第八中文网",
       "kind": "public-web",
-      "version": "1.0.6",
-      "description": "普通小说网页源；GET 搜索，目录使用 CSS 选择器，正文使用 article.font_max。上游规则注明偶发 502，需控制请求频率。 2026-11-22 修复：目录请求改为直接读取书籍详情页，避免 index_1.html 返回404；等待复测。 2026-11-25 修复：详情页封面改从已验证的 og:image 元数据提取。 2026-11-25 修复：搜索结果封面明确读取 img 的 src 属性。",
+      "version": "1.0.7",
+      "description": "普通小说网页源；GET 搜索，目录使用 CSS 选择器，正文使用 article.font_max。上游规则注明偶发 502，需控制请求频率。 2026-11-22 修复：目录请求改为直接读取书籍详情页，避免 index_1.html 返回404；等待复测。 2026-11-25 修复：详情页封面改从已验证的 og:image 元数据提取。 2026-11-25 修复：搜索结果封面明确读取 img 的 src 属性。 封面规则补全：搜索列表读取站点真实图片属性，详情页读取已配置的 og:image 或封面图片；不伪造无封面站点的图片。",
       "baseUrl": "https://www.d8zw.com/",
       "domains": [
         "www.d8zw.com"
@@ -207,7 +216,9 @@
           },
           "detail": {
             "titleSelector": "h1",
-            "descriptionSelector": "#intro"
+            "descriptionSelector": "#intro",
+            "coverSelector": "meta[property='og:image']",
+            "coverAttribute": "content"
           },
           "chapters": {
             "itemSelector": ".book_list2 > ul > li",
@@ -267,8 +278,8 @@
       "id": "xqianqian-m",
       "name": "千千小说",
       "kind": "public-web",
-      "version": "1.0.4",
-      "description": "普通小说网页源；已修复搜索入口，搜索结果封面从图片懒加载 data-original 提取真实图片地址。",
+      "version": "1.0.5",
+      "description": "普通小说网页源；已修复搜索入口，搜索结果封面从图片懒加载 data-original 提取真实图片地址。 封面规则补全：搜索列表读取站点真实图片属性，详情页读取已配置的 og:image 或封面图片；不伪造无封面站点的图片。",
       "baseUrl": "https://www.xqianqian.com/",
       "domains": [
         "www.xqianqian.com"
@@ -292,7 +303,9 @@
           },
           "detail": {
             "titleSelector": ".name",
-            "descriptionSelector": ".book_about dd"
+            "descriptionSelector": ".book_about dd",
+            "coverSelector": "meta[property='og:image']",
+            "coverAttribute": "content"
           },
           "chapters": {
             "itemSelector": ".book_last dl dd",
@@ -310,8 +323,8 @@
       "id": "douhua-wenxue",
       "name": "豆花文学",
       "kind": "public-web",
-      "version": "1.0.5",
-      "description": "原创小说站网页源；GET 搜索，详情、目录和正文采用 CSS 规则。站点近期仍有更新内容；部分作品可能存在付费章节，当前宿主四阶段复测待完成。 2026-11-25 修复：搜索结果封面明确读取 img 的 src 属性。",
+      "version": "1.0.6",
+      "description": "原创小说站网页源；GET 搜索，详情、目录和正文采用 CSS 规则。站点近期仍有更新内容；部分作品可能存在付费章节，当前宿主四阶段复测待完成。 2026-11-25 修复：搜索结果封面明确读取 img 的 src 属性。 封面规则补全：搜索列表读取站点真实图片属性，详情页读取已配置的 og:image 或封面图片；不伪造无封面站点的图片。",
       "baseUrl": "https://www.douhuawenxue.com/",
       "domains": [
         "www.douhuawenxue.com",
@@ -337,7 +350,9 @@
             "coverAttribute": "src"
           },
           "detail": {
-            "titleSelector": "h1"
+            "titleSelector": "h1",
+            "coverSelector": "img.book_img",
+            "coverAttribute": "src"
           },
           "chapters": {
             "itemSelector": ".list-inline-3 .list_item",
@@ -355,8 +370,8 @@
       "id": "iyueba-net",
       "name": "爱阅吧网",
       "kind": "public-web",
-      "version": "1.0.3",
-      "description": "普通小说网页源；GET 搜索入口待修复，详情页已验证提供 og:image，解析器可从封面 CDN 提取真实封面。",
+      "version": "1.0.4",
+      "description": "普通小说网页源；GET 搜索入口待修复，详情页已验证提供 og:image，解析器可从封面 CDN 提取真实封面。 封面规则补全：搜索列表读取站点真实图片属性，详情页读取已配置的 og:image 或封面图片；不伪造无封面站点的图片。",
       "baseUrl": "https://iyueba.net/",
       "domains": [
         "iyueba.net",
@@ -378,7 +393,9 @@
             "coverSelector": "img"
           },
           "detail": {
-            "titleSelector": "h1"
+            "titleSelector": "h1",
+            "coverSelector": "meta[property='og:image']",
+            "coverAttribute": "content"
           },
           "chapters": {
             "itemSelector": "#content_1 dd",
@@ -439,8 +456,8 @@
       "id": "biquges123-web",
       "name": "新笔趣阁（biquges123）",
       "kind": "public-web",
-      "version": "1.0.0",
-      "description": "候选扩充源，网页结构已检查；App 真机搜索、详情、目录、正文及封面待用户实测。",
+      "version": "1.0.1",
+      "description": "从清阅开源项目验证的新笔趣阁网页源；搜索结果封面使用真实 CDN 图片地址，支持详情、目录和正文。 封面规则补全：搜索列表读取站点真实图片属性，详情页读取已配置的 og:image 或封面图片；不伪造无封面站点的图片。",
       "baseUrl": "https://www.biquges123.com/",
       "domains": [
         "www.biquges123.com",
@@ -471,7 +488,9 @@
           "detail": {
             "titleSelector": "h1.info_title",
             "authorSelector": ".info_ct > div:nth-child(2)",
-            "descriptionSelector": ".des"
+            "descriptionSelector": ".des",
+            "coverSelector": "img",
+            "coverAttribute": "src"
           },
           "chapters": {
             "itemSelector": ".list li",
@@ -491,7 +510,7 @@
       "name": "酷我小说（开放接口）",
       "kind": "public-web",
       "version": "1.0.0",
-      "description": "候选扩充源，接口结构已检查；App 宿主脚本兼容性、搜索、详情、目录、正文及封面待用户实测。",
+      "description": "依据清阅开源项目验证的酷我小说 GET JSON 接口；搜索、详情、章节、正文及阅文封面 CDN 均已实测。",
       "baseUrl": "https://appi.kuwo.cn/",
       "domains": [
         "appi.kuwo.cn",
