@@ -236,8 +236,8 @@
       "id": "bqg-info",
       "name": "笔趣阁info",
       "kind": "public-web",
-      "version": "1.0.5",
-      "description": "普通小说网页源；GET 搜索，书籍详情页内含章节目录，正文使用 #booktxt。 2026-11-25 修复：搜索结果封面位于 a.thumbnail 的 background-image，改为提取 style 中的真实图片 URL。 详情页封面规则：读取 img.img-thumbnail 的 src；站点 og:image 会错误重复拼接域名，因此不使用 og:image。搜索列表页当前无图片节点。",
+      "version": "1.0.6",
+      "description": "普通小说网页源；GET 搜索，书籍详情页内含章节目录，正文使用 #booktxt。2026-11-25 修复：搜索结果封面从 a.thumbnail 的 background-image 提取；站点 og:image 会错误重复拼接域名。2026-11-26 补全脚本详情页 img.img-thumbnail[src] 封面字段，避免脚本运行时漏掉详情封面。",
       "baseUrl": "https://www.bqg.info/",
       "domains": [
         "www.bqg.info"
@@ -372,8 +372,8 @@
       "id": "iyueba-net",
       "name": "爱阅吧网",
       "kind": "public-web",
-      "version": "1.0.4",
-      "description": "普通小说网页源；GET 搜索入口待修复，详情页已验证提供 og:image，解析器可从封面 CDN 提取真实封面。 封面规则补全：搜索列表读取站点真实图片属性，详情页读取已配置的 og:image 或封面图片；不伪造无封面站点的图片。",
+      "version": "1.0.5",
+      "description": "普通小说网页源；GET 搜索入口仍待宿主实测确认，详情页 og:image 可提取真实封面。2026-11-26 补全脚本搜索列表 img[src] 封面字段；图片 CDN 域名已列入白名单。搜索页若无图片节点则由 App 侧封面兜底处理。",
       "baseUrl": "https://iyueba.net/",
       "domains": [
         "iyueba.net",
