@@ -3,14 +3,14 @@
   "id": "xqianqian-m",
   "name": "千千小说",
   "kind": "public-web",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "baseUrl": "https://www.xqianqian.com/",
   "domains": [
     "www.xqianqian.com"
   ],
   "script": "scripts/xqianqian-m.js",
   "enabled": true,
-  "description": "普通小说网页源；已修复搜索入口，搜索结果封面从图片懒加载 data-original 提取真实图片地址。",
+  "description": "普通小说网页源；已修复搜索入口，搜索结果封面从图片懒加载 data-original 提取真实图片地址。 封面规则补全：搜索列表读取站点真实图片属性，详情页读取已配置的 og:image 或封面图片；不伪造无封面站点的图片。",
   "licenseApproved": true,
   "licenseType": "self-owned",
   "licenseEvidence": "本仓库原创的声明式 GET/CSS 适配配置与解析器，不复制第三方脚本或小说正文。",
@@ -32,7 +32,9 @@
       },
       "detail": {
         "titleSelector": ".name",
-        "descriptionSelector": ".book_about dd"
+        "descriptionSelector": ".book_about dd",
+        "coverSelector": "meta[property='og:image']",
+        "coverAttribute": "content"
       },
       "chapters": {
         "itemSelector": ".book_last dl dd",
