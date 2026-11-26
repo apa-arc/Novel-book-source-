@@ -4,7 +4,7 @@
   "name": "新笔趣阁（biquges123）",
   "kind": "public-web",
   "version": "1.0.1",
-  "description": "从清阅开源项目验证的新笔趣阁网页源；搜索结果封面使用真实 CDN 图片地址，支持详情、目录和正文。 封面规则补全：搜索列表读取站点真实图片属性，详情页读取已配置的 og:image 或封面图片；不伪造无封面站点的图片。 当前状态：已导入，待 App 真机完整验证；不代表已验证可读。",
+  "description": "新笔趣阁网页源；搜索、详情、目录和正文规则已配置，搜索封面读取站点图片属性，图片 CDN 在白名单内。GitHub Actions App 原生请求连续 HTTP 403，按环境不确定保留，不绕过站点验证。",
   "baseUrl": "https://www.biquges123.com/",
   "domains": [
     "www.biquges123.com",
@@ -57,5 +57,5 @@
   "licenseEvidence": "本仓库中的书源适配器、字段映射和请求解析代码由项目维护者在本仓库独立编写；不包含小说正文，也不主张拥有或授权目标网站收录的作品。该声明仅覆盖本仓库适配代码。",
   "licenseEvidenceUrl": "https://github.com/apa-arc/Novel-book-source-/blob/main/scripts/biquges123-web.js",
   "validationStatus": "imported-unverified",
-  "validationNote": "已通过静态 HTTPS 域名白名单、App 原生配置结构和解析器接口检查；尚未取得完整 iOS App 真机搜索、详情、目录、正文四阶段通过报告。"
+  "validationNote": "已通过静态 HTTPS 域名白名单、App 配置结构检查；GitHub Actions 中 App 原生请求对“斗罗”“斗破”均连续返回 HTTP 403，按访问环境不确定记录，不绕过站点验证；详情、目录、正文尚未测试。"
 }
