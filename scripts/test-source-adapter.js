@@ -179,5 +179,42 @@ const http = { async get(url) { requests.push(url); return { url, document: root
     { title: "单条 JSON 小说", bookUrl: "https://example.test/book/4" }
   ]);
 
+  const srcsetCoverRoot = node("main", {}, "", [
+    node("article", {}, "", [
+      node("a", { href: "/book/srcset" }, "srcset 封面测试"),
+      node("img", { src: "https://example.test/nopic.gif", srcset: "https://example.test/cover-2x.jpg 2x, https://example.test/cover-1x.jpg 1x" })
+    ])
+  ]);
+  const srcsetCoverAdapter = createAdapter({
+    baseUrl: "https://example.test",
+    domains: ["example.test"],
+    search: {
+      url: () => "https://example.test/search",
+      list: { engine: "css", query: "article", output: "all" },
+      fields: {
+        title: { engine: "css", query: "a", output: "text" },
+        bookUrl: { engine: "css", query: "a", output: "href" },
+        coverUrl: { engine: "css", query: "img", output: "src" }
+      }
+    }
+  });
+  const srcsetCoverResult = await srcsetCoverAdapter.search({
+    keyword: "srcset",
+    http: { async get(url) { return { url, document: srcsetCoverRoot }; } }
+  });
+  assert.equal(srcsetCoverResult[0].coverUrl, "https://example.test/cover-2x.jpg");
+
+  const dataSrcsetCoverRoot = node("main", {}, "", [
+    node("article", {}, "", [
+      node("a", { href: "/book/data-srcset" }, "data-srcset 封面测试"),
+      node("img", { src: "https://example.test/placeholder.png", "data-srcset": "https://example.test/data-cover.jpg 640w, https://example.test/data-cover-small.jpg 320w" })
+    ])
+  ]);
+  const dataSrcsetCoverResult = await srcsetCoverAdapter.search({
+    keyword: "data-srcset",
+    http: { async get(url) { return { url, document: dataSrcsetCoverRoot }; } }
+  });
+  assert.equal(dataSrcsetCoverResult[0].coverUrl, "https://example.test/data-cover.jpg");
+
   console.log("Source adapter runtime fixture tests passed.");
 })().catch(error => { console.error(error); process.exitCode = 1; });
