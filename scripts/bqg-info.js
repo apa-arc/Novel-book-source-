@@ -19,7 +19,7 @@ module.exports = createAdapter({
       }
     }
   },
-  bookInfo: { fields: { title: css("h1"), intro: css("#bookIntro") } },
+  bookInfo: { fields: { title: css("h1"), intro: css("#bookIntro"), coverUrl: css("img.img-thumbnail", "attr:src") } },
   toc: {
     list: css("dl#newlist > dd", "all"),
     fields: { title: css("a"), chapterUrl: css("a", "href") }
