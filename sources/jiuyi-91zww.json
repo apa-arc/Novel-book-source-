@@ -3,14 +3,14 @@
   "id": "jiuyi-91zww",
   "name": "九一中文",
   "kind": "public-web",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "baseUrl": "https://www.91zww.com/",
   "domains": [
     "www.91zww.com"
   ],
   "script": "scripts/jiuyi-91zww.js",
   "enabled": true,
-  "description": "普通小说网页源；GET + CSS 四阶段配置。详情页已验证提供 og:image，解析器可提取真实封面。",
+  "description": "普通小说网页源；GET + CSS 四阶段配置。详情页已验证提供 og:image，解析器可提取真实封面。 封面规则补全：搜索列表读取站点真实图片属性，详情页读取已配置的 og:image 或封面图片；不伪造无封面站点的图片。",
   "licenseApproved": true,
   "licenseType": "self-owned",
   "licenseEvidence": "本仓库自行编写的声明式适配配置与解析器，不包含小说正文。",
@@ -27,11 +27,14 @@
         "titleSelector": ".s2 a",
         "urlSelector": ".s2 a",
         "authorSelector": ".s4",
-        "coverSelector": "img"
+        "coverSelector": "img",
+        "coverAttribute": "src"
       },
       "detail": {
         "titleSelector": "h1",
-        "descriptionSelector": "#intro"
+        "descriptionSelector": "#intro",
+        "coverSelector": "meta[property='og:image']",
+        "coverAttribute": "content"
       },
       "chapters": {
         "itemSelector": ".section-list li",
