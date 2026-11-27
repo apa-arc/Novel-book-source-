@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-27T23:31:04.870Z",
+  "generatedAt": "2026-11-27T23:44:58.585Z",
   "keywords": [
     "斗罗大陆",
     "斗破苍穹"
@@ -25,7 +25,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 3407
+      "elapsedMs": 1566
     },
     {
       "id": "hotread-mobile",
@@ -39,7 +39,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 1239
+      "elapsedMs": 3401
     },
     {
       "id": "hotread-mobile",
@@ -53,7 +53,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 3000
+      "elapsedMs": 3338
     },
     {
       "id": "hotread-mobile",
@@ -67,7 +67,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 3000
+      "elapsedMs": 2006
     },
     {
       "id": "hotread-mobile",
@@ -81,7 +81,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 1474
+      "elapsedMs": 3438
     },
     {
       "id": "hotread-mobile",
@@ -95,7 +95,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 1463
+      "elapsedMs": 2257
     },
     {
       "id": "hotread-mobile",
@@ -109,7 +109,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 293
+      "elapsedMs": 317
     },
     {
       "id": "hotread-mobile",
@@ -123,7 +123,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 1526
+      "elapsedMs": 1596
     },
     {
       "id": "hotread-mobile",
@@ -137,7 +137,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 1515
+      "elapsedMs": 317
     },
     {
       "id": "hotread-mobile",
@@ -151,7 +151,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 1472
+      "elapsedMs": 324
     },
     {
       "id": "hotread-mobile",
@@ -165,7 +165,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 292
+      "elapsedMs": 847
     },
     {
       "id": "hotread-mobile",
@@ -179,7 +179,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 394
+      "elapsedMs": 323
     },
     {
       "id": "hotread-mobile",
@@ -193,7 +193,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 283
+      "elapsedMs": 412
     },
     {
       "id": "hotread-mobile",
@@ -207,7 +207,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 392
+      "elapsedMs": 332
     },
     {
       "id": "hotread-mobile",
@@ -221,7 +221,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 290
+      "elapsedMs": 330
     },
     {
       "id": "hotread-mobile",
@@ -235,7 +235,7 @@
       "hasKeyword": false,
       "links": [],
       "classification": "http-success-no-keyword-hit",
-      "elapsedMs": 386
+      "elapsedMs": 323
     },
     {
       "id": "luochu-mobile",
@@ -277,7 +277,7 @@
         }
       ],
       "classification": "redirect-target-no-keyword-hit",
-      "elapsedMs": 2309
+      "elapsedMs": 3053
     },
     {
       "id": "luochu-mobile",
@@ -319,7 +319,7 @@
         }
       ],
       "classification": "redirect-target-no-keyword-hit",
-      "elapsedMs": 2133
+      "elapsedMs": 2579
     },
     {
       "id": "luochu-mobile",
@@ -361,7 +361,7 @@
         }
       ],
       "classification": "redirect-target-no-keyword-hit",
-      "elapsedMs": 2271
+      "elapsedMs": 2219
     },
     {
       "id": "luochu-mobile",
@@ -403,7 +403,7 @@
         }
       ],
       "classification": "redirect-target-no-keyword-hit",
-      "elapsedMs": 2184
+      "elapsedMs": 2546
     },
     {
       "id": "luochu-mobile",
@@ -445,7 +445,7 @@
         }
       ],
       "classification": "redirect-target-no-keyword-hit",
-      "elapsedMs": 2521
+      "elapsedMs": 2592
     },
     {
       "id": "luochu-mobile",
@@ -487,7 +487,7 @@
         }
       ],
       "classification": "redirect-target-no-keyword-hit",
-      "elapsedMs": 2467
+      "elapsedMs": 2396
     },
     {
       "id": "luochu-mobile",
@@ -529,7 +529,7 @@
         }
       ],
       "classification": "redirect-target-no-keyword-hit",
-      "elapsedMs": 1284
+      "elapsedMs": 1346
     },
     {
       "id": "luochu-mobile",
@@ -571,7 +571,7 @@
         }
       ],
       "classification": "redirect-target-no-keyword-hit",
-      "elapsedMs": 1000
+      "elapsedMs": 1325
     }
   ]
 }
