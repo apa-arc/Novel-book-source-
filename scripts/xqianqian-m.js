@@ -7,7 +7,7 @@ module.exports = createAdapter({
   baseUrl: "https://www.xqianqian.com/",
   domains: ["www.xqianqian.com"],
   search: {
-    url: (keyword) => "https://www.xqianqian.com/search/?searchkey=" + encodeURIComponent(keyword),
+    url: keyword => "https://www.xqianqian.com/search/?searchkey=" + encodeURIComponent(keyword),
     list: css(".category-div", "all"),
     fields: {
       title: css(".commend-title h3"),
@@ -18,13 +18,13 @@ module.exports = createAdapter({
   },
   bookInfo: {
     fields: {
-      title: css("h1"),
-      description: css(".intro"),
+      title: css(".name"),
+      description: css(".book_about dd"),
       coverUrl: css("meta[property='og:image']", "attr:content")
     }
   },
   toc: {
-    list: css("#list dd", "all"),
+    list: css(".book_last dl dd", "all"),
     fields: {
       title: css("a"),
       chapterUrl: css("a", "href")
@@ -32,6 +32,6 @@ module.exports = createAdapter({
   },
   content: {
     title: css("h1"),
-    body: css("#content")
+    body: css("#chaptercontent")
   }
 });
