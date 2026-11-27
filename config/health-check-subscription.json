@@ -4,7 +4,7 @@
   "name": "小说源",
   "description": "例行健康扫描暂不复测用户已确认可用的10条基线源；新导入源另行登记扫描。",
   "repository": "https://github.com/apa-arc/Novel-book-source-",
-  "updatedAt": "2026-11-26T13:42:30.946Z",
+  "updatedAt": "2026-11-28T09:10:00+08:00",
   "sourceCount": 2,
   "sources": [
     {
@@ -64,8 +64,8 @@
       "id": "kuwo-novels",
       "name": "酷我小说（开放接口）",
       "kind": "public-web",
-      "version": "1.0.0",
-      "description": "依据清阅开源项目验证的酷我小说 GET JSON 接口；搜索、详情、章节、正文及阅文封面 CDN 均已实测。",
+      "version": "1.0.1",
+      "description": "酷我小说公开 GET JSON 接口；已同步正式订阅中的 book_id/chapter_id 模板，回归测试将覆盖详情、目录与正文。",
       "baseUrl": "https://appi.kuwo.cn/",
       "domains": [
         "appi.kuwo.cn",
@@ -79,9 +79,9 @@
       "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/kuwo-novels.js",
       "appConfig": {
         "searchUrl": "https://appi.kuwo.cn/novels/api/book/search?keyword={keyword}&pi={page}&ps=30",
-        "bookUrl": "https://appi.kuwo.cn/novels/api/book/{bookUrl}",
-        "chapterListUrl": "https://appi.kuwo.cn/novels/api/book/{bookUrl}/chapters?paging=0",
-        "chapterUrl": "https://appi.kuwo.cn/novels/api/book/{bookUrl}/chapters/{chapterUrl}"
+        "bookUrl": "https://appi.kuwo.cn/novels/api/book/{bookId}",
+        "chapterListUrl": "https://appi.kuwo.cn/novels/api/book/{bookId}/chapters?paging=0",
+        "chapterUrl": "https://appi.kuwo.cn/novels/api/book/{bookId}/chapters/{chapterId}"
       }
     }
   ]
