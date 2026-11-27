@@ -46,8 +46,26 @@ async function runOne(source: NovelSource, keyword: string, mode: typeof modes[n
     try {
       const response = await mode.fetchImpl(input, init);
       let bodyPreview = "";
+      let jsonShape: Record<string, unknown> | undefined;
       try {
-        bodyPreview = (await response.clone().text()).replace(/\s+/g, " ").slice(0, 360);
+        const body = await response.clone().text();
+        bodyPreview = body.replace(/\s+/g, " ").slice(0, 360);
+        if (requestUrl.includes("appi.kuwo.cn/novels/api/book/search")) {
+          try {
+            const payload = JSON.parse(body);
+            const first = Array.isArray(payload?.data) ? payload.data[0] : undefined;
+            jsonShape = {
+              rootKeys: payload && typeof payload === "object" ? Object.keys(payload) : [],
+              dataIsArray: Array.isArray(payload?.data),
+              firstRecordKeys: first && typeof first === "object" ? Object.keys(first) : [],
+              titleCandidates: first && typeof first === "object"
+                ? Object.fromEntries(["title", "name", "book_name", "bookName", "book_title", "novel_name", "novelName", "bookTitle"].map(key => [key, first[key] ?? null]))
+                : null,
+            };
+          } catch {
+            jsonShape = { parseError: true };
+          }
+        }
       } catch {
         bodyPreview = "[response body unavailable]";
       }
@@ -58,6 +76,7 @@ async function runOne(source: NovelSource, keyword: string, mode: typeof modes[n
         redirected: response.redirected,
         contentType: response.headers.get("content-type"),
         bodyPreview,
+        ...(jsonShape ? { jsonShape } : {}),
       });
       return response;
     } catch (error) {
