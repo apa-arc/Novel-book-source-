@@ -30,10 +30,11 @@ const d8zw = readText("scripts/d8zw-com.js");
 assert.ok(d8zw.includes('list: css(".book_list2 > ul > li", "all")'));
 assert.ok(!/toc:\s*\{\s*url\s*:/.test(d8zw), "D8ZW TOC must use the detail page URL");
 
-console.log("source adapter parity tests passed");
 
 const source17177 = readJson("sources/biquge-17177.json");
 const detail17177 = source17177.appConfig.htmlRules.detail;
 assert.equal(detail17177.titleAttribute, "content");
 assert.equal(detail17177.authorAttribute, "content");
 assert.equal(detail17177.descriptionAttribute, "content");
+
+console.log("source adapter parity tests passed");
