@@ -4,7 +4,7 @@
   "name": "小说源",
   "description": "普通小说统一订阅；来源发现问题后持续修复或下架",
   "repository": "https://github.com/apa-arc/Novel-book-source-",
-  "updatedAt": "2026-11-28T08:20:00+08:00",
+  "updatedAt": "2026-11-27T23:30:51.077Z",
   "sourceCount": 12,
   "sources": [
     {
@@ -533,7 +533,7 @@
         "chapterUrl": "https://appi.kuwo.cn/novels/api/book/{bookId}/chapters/{chapterId}"
       },
       "validationStatus": "imported-unverified",
-      "validationNote": "接口请求可正常完成，但当前 App 通用 JSON 搜索解析器未将 API 的 book_id 自动映射为书籍详情 URL，两个测试关键词均返回 0 条；需先增加 App JSON ID→URL 映射，再测试详情、目录、正文。"
+      "validationNote": "API ID 映射已纳入 App 开发分支回归测试；真实接口详情、目录和正文请求仍待 App 原生网络环境复测。"
     },
     {
       "id": "book-aliases",
