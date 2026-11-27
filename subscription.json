@@ -4,7 +4,7 @@
   "name": "小说源",
   "description": "普通小说统一订阅；来源发现问题后持续修复或下架",
   "repository": "https://github.com/apa-arc/Novel-book-source-",
-  "updatedAt": "2026-11-26T13:45:14.602Z",
+  "updatedAt": "2026-11-27T23:14:10.941Z",
   "sourceCount": 12,
   "sources": [
     {
@@ -56,7 +56,7 @@
       "name": "九一中文",
       "kind": "public-web",
       "version": "1.0.5",
-      "description": "普通小说网页源；保留已由用户真机验证可用的 GET 搜索入口，不因网页端改版贸然替换请求方式。2026-11-26 修复：搜索解析器补充 img[src] 封面提取，并由通用运行时兼容 data-src、data-original、srcset 等懒加载字段；详情页继续读取 og:image。新版 POST 搜索表单仍需宿主请求层支持后再接入。",
+      "description": "普通小说网页源；保留已由用户真机验证可用的 GET 搜索入口，不因网页端改版贸然替换请求方式。2026-11-26 补充搜索列表 img[src] 提取和详情页 og:image；旧版规则曾使用外部图片 CDN 拼接封面，但当前 CDN 尚未复核，因此不硬编码旧地址。若搜索结果没有图片节点，由 App 的 QQ 封面兜底处理。新版 POST 搜索表单仍待确认后接入。",
       "baseUrl": "https://www.91zww.com/",
       "domains": [
         "www.91zww.com"
@@ -534,6 +534,13 @@
       },
       "validationStatus": "imported-unverified",
       "validationNote": "接口请求可正常完成，但当前 App 通用 JSON 搜索解析器未将 API 的 book_id 自动映射为书籍详情 URL，两个测试关键词均返回 0 条；需先增加 App JSON ID→URL 映射，再测试详情、目录、正文。"
+    },
+    {
+      "id": "book-aliases",
+      "name": "小说推广名别名库",
+      "kind": "alias-dictionary",
+      "version": "1.0.0",
+      "dataUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/aliases/book-aliases.json"
     }
   ]
 }
