@@ -1,18 +1,39 @@
 "use strict";
+
 const { createAdapter } = require("../runtime/source-adapter");
 const css = (query, output = "text") => ({ engine: "css", query, output });
+
 module.exports = createAdapter({
-  baseUrl: "https://www.d8zw.com/", domains: ["www.d8zw.com"],
+  baseUrl: "https://www.d8zw.com/",
+  domains: ["www.d8zw.com"],
   search: {
     url: keyword => "https://www.d8zw.com/search.php?q=" + encodeURIComponent(keyword),
     list: css(".box.hot dl", "all"),
-    fields: { title: css("dd h3 a"), bookUrl: css("dd h3 a", "href"), author: css("dd.book_other span"), coverUrl: css("dt img", "src") }
+    fields: {
+      title: css("dd h3 a"),
+      bookUrl: css("dd h3 a", "href"),
+      author: css("dd.book_other span"),
+      coverUrl: css("dt img", "src")
+    }
   },
-  bookInfo: { fields: { title: css("h1"), intro: css("#intro"), coverUrl: css("meta[property='og:image']", "content"), } },
+  bookInfo: {
+    fields: {
+      title: css("h1"),
+      intro: css("#intro"),
+      coverUrl: css("meta[property='og:image']", "content")
+    }
+  },
   toc: {
-    url: bookUrl => "https://www.d8zw.com/" + String(bookUrl).replace(/^\//, "") + "index_1.html",
+    // The chapter list is on the book detail page; index_1.html was observed
+    // to return 404 for this source and must not be appended.
     list: css(".book_list2 > ul > li", "all"),
-    fields: { title: css("a"), chapterUrl: css("a", "href") }
+    fields: {
+      title: css("a"),
+      chapterUrl: css("a", "href")
+    }
   },
-  content: { title: css("h1"), body: css("article.font_max") }
+  content: {
+    title: css("h1"),
+    body: css("article.font_max")
+  }
 });
