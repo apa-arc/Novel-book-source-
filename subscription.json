@@ -4,7 +4,7 @@
   "name": "小说源",
   "description": "普通小说统一订阅；来源发现问题后持续修复或下架",
   "repository": "https://github.com/apa-arc/Novel-book-source-",
-  "updatedAt": "2026-11-28T07:10:00+08:00",
+  "updatedAt": "2026-11-28T08:00:00+08:00",
   "sourceCount": 12,
   "sources": [
     {
@@ -280,8 +280,8 @@
       "id": "xqianqian-m",
       "name": "千千小说",
       "kind": "public-web",
-      "version": "1.0.5",
-      "description": "普通小说网页源；已修复搜索入口，搜索结果封面从图片懒加载 data-original 提取真实图片地址。 封面规则补全：搜索列表读取站点真实图片属性，详情页读取已配置的 og:image 或封面图片；不伪造无封面站点的图片。",
+      "version": "1.0.6",
+      "description": "普通小说网页源；已修复搜索入口，搜索结果封面从图片懒加载 data-original 提取真实图片地址。 封面规则补全：搜索列表读取站点真实图片属性，详情页读取已配置的 og:image 或封面图片；不伪造无封面站点的图片。 2026-11-28 修复：脚本适配器详情、目录和正文选择器与 App 配置统一，避免脚本运行时取错章节容器。",
       "baseUrl": "https://www.xqianqian.com/",
       "domains": [
         "www.xqianqian.com"
