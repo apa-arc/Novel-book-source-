@@ -535,8 +535,9 @@
         "chapterListUrl": "https://appi.kuwo.cn/novels/api/book/{bookId}/chapters?paging=0",
         "chapterUrl": "https://appi.kuwo.cn/novels/api/book/{bookId}/chapters/{chapterId}"
       },
-      "validationStatus": "app-runtime-passed",
-      "validationNote": "2026-11-28 GitHub Actions 使用 AppleNovelApp v1.1.6-dev 的实际搜索/目录/详情/正文解析代码验证：搜索“斗罗”返回30条、目录173章、详情成功、首章正文2215字符；搜索“斗破”返回25条、目录1176章、详情成功、首章正文2305字符。该结果证明接口与 App 开发分支解析器兼容；仍不等同于用户 iPhone 当前网络环境的实机验证。"
+      "validationStatus": "imported-unverified",
+      "validationNote": "2026-11-28 GitHub Actions 使用 AppleNovelApp v1.1.6-dev 运行时验证通过：搜索“斗罗”返回30条、目录173章、详情成功、首章正文2215字符；搜索“斗破”返回25条、目录1176章、详情成功、首章正文2305字符。说明 App 搜索/详情/目录/正文解析链路已通过；但尚未完成独立质量报告（suspect/review/duplicates 扫描）及用户 iPhone 实机验证，因此暂不标记为正式 hostValidated。",
+      "hostValidated": false
     },
     {
       "id": "book-aliases",
