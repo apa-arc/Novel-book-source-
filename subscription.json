@@ -4,7 +4,7 @@
   "name": "小说源",
   "description": "普通小说统一订阅；来源发现问题后持续修复或下架",
   "repository": "https://github.com/apa-arc/Novel-book-source-",
-  "updatedAt": "2026-11-27T23:26:17.584Z",
+  "updatedAt": "2026-11-28T08:20:00+08:00",
   "sourceCount": 12,
   "sources": [
     {
@@ -513,8 +513,8 @@
       "id": "kuwo-novels",
       "name": "酷我小说（开放接口）",
       "kind": "public-web",
-      "version": "1.0.0",
-      "description": "酷我小说公开 GET JSON 接口适配器；接口字段和封面 CDN 已梳理。当前 App 通用 JSON 搜索解析器尚未把 book_id 映射为详情 URL，因此保留为已导入、待 App 解析器支持状态。",
+      "version": "1.0.1",
+      "description": "酷我小说公开 GET JSON 接口适配器；App 已增加 book_id→详情 URL、chapter_id→章节 URL 映射，使用显式 {bookId}/{chapterId} 模板；仍需 App 原生环境验证接口返回字段与正文可读性。",
       "baseUrl": "https://appi.kuwo.cn/",
       "domains": [
         "appi.kuwo.cn",
@@ -528,9 +528,9 @@
       "scriptUrl": "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/kuwo-novels.js",
       "appConfig": {
         "searchUrl": "https://appi.kuwo.cn/novels/api/book/search?keyword={keyword}&pi={page}&ps=30",
-        "bookUrl": "https://appi.kuwo.cn/novels/api/book/{bookUrl}",
-        "chapterListUrl": "https://appi.kuwo.cn/novels/api/book/{bookUrl}/chapters?paging=0",
-        "chapterUrl": "https://appi.kuwo.cn/novels/api/book/{bookUrl}/chapters/{chapterUrl}"
+        "bookUrl": "https://appi.kuwo.cn/novels/api/book/{bookId}",
+        "chapterListUrl": "https://appi.kuwo.cn/novels/api/book/{bookId}/chapters?paging=0",
+        "chapterUrl": "https://appi.kuwo.cn/novels/api/book/{bookId}/chapters/{chapterId}"
       },
       "validationStatus": "imported-unverified",
       "validationNote": "接口请求可正常完成，但当前 App 通用 JSON 搜索解析器未将 API 的 book_id 自动映射为书籍详情 URL，两个测试关键词均返回 0 条；需先增加 App JSON ID→URL 映射，再测试详情、目录、正文。"
