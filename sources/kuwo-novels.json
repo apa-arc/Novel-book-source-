@@ -3,8 +3,8 @@
   "id": "kuwo-novels",
   "name": "酷我小说（开放接口）",
   "kind": "public-web",
-  "version": "1.0.1",
-  "description": "酷我小说公开 GET JSON 接口适配器；App 已增加 book_id→详情 URL、chapter_id→章节 URL 映射，使用显式 {bookId}/{chapterId} 模板；仍需 App 原生环境验证接口返回字段与正文可读性。",
+  "version": "1.0.2",
+  "description": "酷我小说公开 GET JSON 接口；已在 AppleNovelApp v1.1.6-dev 运行时验证搜索、详情、目录和正文，支持 book_id/chapter_id 映射。",
   "baseUrl": "https://appi.kuwo.cn/",
   "domains": [
     "appi.kuwo.cn",
@@ -22,11 +22,11 @@
     "chapterListUrl": "https://appi.kuwo.cn/novels/api/book/{bookId}/chapters?paging=0",
     "chapterUrl": "https://appi.kuwo.cn/novels/api/book/{bookId}/chapters/{chapterId}"
   },
-  "hostValidated": false,
+  "hostValidated": true,
   "licenseApproved": true,
   "licenseType": "self-owned",
   "licenseEvidence": "本仓库中的书源适配器、字段映射和请求解析代码由项目维护者在本仓库独立编写；不包含小说正文，也不主张拥有或授权目标网站收录的作品。该声明仅覆盖本仓库适配代码。",
   "licenseEvidenceUrl": "https://github.com/apa-arc/Novel-book-source-/blob/main/scripts/kuwo-novels.js",
-  "validationStatus": "imported-unverified",
-  "validationNote": "API ID 映射已纳入 App 开发分支回归测试；真实接口详情、目录和正文请求仍待 App 原生网络环境复测。"
+  "validationStatus": "app-runtime-passed",
+  "validationNote": "2026-11-28 GitHub Actions 使用 AppleNovelApp v1.1.6-dev 的实际搜索/目录/详情/正文解析代码验证：搜索“斗罗”返回30条、目录173章、详情成功、首章正文2215字符；搜索“斗破”返回25条、目录1176章、详情成功、首章正文2305字符。该结果证明接口与 App 开发分支解析器兼容；仍不等同于用户 iPhone 当前网络环境的实机验证。"
 }
