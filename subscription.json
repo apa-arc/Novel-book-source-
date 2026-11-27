@@ -4,7 +4,7 @@
   "name": "小说源",
   "description": "普通小说统一订阅；来源发现问题后持续修复或下架",
   "repository": "https://github.com/apa-arc/Novel-book-source-",
-  "updatedAt": "2026-11-27T23:25:57.262Z",
+  "updatedAt": "2026-11-28T08:05:00+08:00",
   "sourceCount": 12,
   "sources": [
     {
@@ -191,8 +191,8 @@
       "id": "d8zw-com",
       "name": "第八中文网",
       "kind": "public-web",
-      "version": "1.0.7",
-      "description": "普通小说网页源；GET 搜索，目录使用 CSS 选择器，正文使用 article.font_max。上游规则注明偶发 502，需控制请求频率。 2026-11-22 修复：目录请求改为直接读取书籍详情页，避免 index_1.html 返回404；等待复测。 2026-11-25 修复：详情页封面改从已验证的 og:image 元数据提取。 2026-11-25 修复：搜索结果封面明确读取 img 的 src 属性。 封面规则补全：搜索列表读取站点真实图片属性，详情页读取已配置的 og:image 或封面图片；不伪造无封面站点的图片。",
+      "version": "1.0.8",
+      "description": "普通小说网页源；GET 搜索，目录使用 CSS 选择器，正文使用 article.font_max。上游规则注明偶发 502，需控制请求频率。 2026-11-22 修复：目录请求改为直接读取书籍详情页，避免 index_1.html 返回404；等待复测。 2026-11-25 修复：详情页封面改从已验证的 og:image 元数据提取。 2026-11-25 修复：搜索结果封面明确读取 img 的 src 属性。 封面规则补全：搜索列表读取站点真实图片属性，详情页读取已配置的 og:image 或封面图片；不伪造无封面站点的图片。 2026-11-28 修复：脚本目录请求同步改为直接读取书籍详情页，不再错误拼接 index_1.html。",
       "baseUrl": "https://www.d8zw.com/",
       "domains": [
         "www.d8zw.com"
