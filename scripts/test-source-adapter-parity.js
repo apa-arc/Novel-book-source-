@@ -36,6 +36,13 @@ assert.ok(d8zw.includes('list: css(".book_list2 > ul > li", "all")'));
 assert.ok(!/toc:\s*\{\s*url\s*:/.test(d8zw), "D8ZW TOC must use the detail page URL");
 
 
+const healthSubscription = readJson("config/health-check-subscription.json");
+const productionKuwo = subscription.sources.find(source => source.id === "kuwo-novels");
+const healthKuwo = healthSubscription.sources.find(source => source.id === "kuwo-novels");
+assert.ok(productionKuwo && healthKuwo, "Kuwo must exist in both subscriptions");
+assert.equal(healthKuwo.version, productionKuwo.version, "Kuwo health-check version must match production subscription");
+assert.deepEqual(healthKuwo.appConfig, productionKuwo.appConfig, "Kuwo health-check endpoints must match production subscription");
+
 const source17177 = readJson("sources/biquge-17177.json");
 const detail17177 = source17177.appConfig.htmlRules.detail;
 assert.equal(detail17177.titleAttribute, "content");
