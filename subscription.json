@@ -4,7 +4,7 @@
   "name": "小说源",
   "description": "普通小说统一订阅；来源发现问题后持续修复或下架",
   "repository": "https://github.com/apa-arc/Novel-book-source-",
-  "updatedAt": "2026-11-28T09:25:00+08:00",
+  "updatedAt": "2026-11-27T23:45:43.698Z",
   "sourceCount": 12,
   "sources": [
     {
@@ -536,8 +536,7 @@
         "chapterUrl": "https://appi.kuwo.cn/novels/api/book/{bookId}/chapters/{chapterId}"
       },
       "validationStatus": "imported-unverified",
-      "validationNote": "2026-11-28 GitHub Actions 使用 AppleNovelApp v1.1.6-dev 运行时验证通过：搜索“斗罗”返回30条、目录173章、详情成功、首章正文2215字符；搜索“斗破”返回25条、目录1176章、详情成功、首章正文2305字符。说明 App 搜索/详情/目录/正文解析链路已通过；但尚未完成独立质量报告（suspect/review/duplicates 扫描）及用户 iPhone 实机验证，因此暂不标记为正式 hostValidated。",
-      "hostValidated": false
+      "validationNote": "2026-11-28 GitHub Actions 使用 AppleNovelApp v1.1.6-dev 运行时验证通过：搜索“斗罗”返回30条、目录173章、详情成功、首章正文2215字符；搜索“斗破”返回25条、目录1176章、详情成功、首章正文2305字符。说明 App 搜索/详情/目录/正文解析链路已通过；但尚未完成独立质量报告（suspect/review/duplicates 扫描）及用户 iPhone 实机验证，因此暂不标记为正式 hostValidated。"
     },
     {
       "id": "book-aliases",
