@@ -4,7 +4,7 @@ function normalizeAlias(value) {
   return String(value || "")
     .normalize("NFKC")
     .toLocaleLowerCase("zh-CN")
-    .replace(/[\\s\\p{P}\\p{S}]+/gu, "");
+    .replace(/[\s\p{P}\p{S}]+/gu, "");
 }
 
 // Exact-only matching avoids silently resolving a promotional keyword to the wrong book.
