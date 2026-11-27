@@ -49,6 +49,10 @@ try {
   assert.equal(ordinary.sources[0].appConfig.searchUrl, "https://example.com/search?q={keyword}");
   assert.equal(ordinary.sources[0].appConfig.htmlRules.search.itemSelector, ".book");
   assert.equal(ordinary.sources[0].scriptUrl, "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/scripts/demo-source.js");
+  assert.equal(ordinary.sources[1].id, "book-aliases");
+  assert.equal(ordinary.sources[1].kind, "alias-dictionary");
+  assert.equal(ordinary.sources[1].dataUrl, "https://raw.githubusercontent.com/apa-arc/Novel-book-source-/main/aliases/book-aliases.json");
+  assert.equal(ordinary.sourceCount, 1, "alias dictionaries must not count as content sources");
   assert.equal(ordinary.updatedAt, "2026-11-20T00:00:00.000Z");
   const pendingMeta = {
     ...meta,
