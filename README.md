@@ -8,7 +8,7 @@
 
 | 入口 | 用途 |
 |---|---|
-| [小说源订阅](subscription.json) | 普通小说统一订阅 |\n| [小说别名库](aliases/book-aliases.json) | 搜索别名映射真实书名；独立于正文书源 |
+| [小说源订阅](subscription.json) | 普通小说统一订阅 |\n| [小说别名库](aliases/book-aliases.json) | 跨平台推广名映射真实书名；独立于正文书源 |\n| [推广名搜索规则](docs/alias-search.md) | 别名精确识别、全启用书源搜索与歧义处理 |
 | [文章质量扫描器](docs/text-quality.md) | 检查乱码、空章节、过短正文和重复内容 |
 | [正式启用质量门禁](docs/source-format.md#7-正式启用质量门禁) | 未通过许可、宿主联调和文章质量检查的源不能进入订阅 |
 | [书源四阶段功能测试器](docs/source-functional-testing.md) | 依次检查搜索、详情、目录和正文，输出质量报告 |
