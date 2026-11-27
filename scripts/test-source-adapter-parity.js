@@ -28,8 +28,8 @@ for (const selector of [
   'list: css(".book_last dl dd", "all")',
   'body: css("#chaptercontent")'
 ]) assert.ok(qianqian.includes(selector), "Qianqian adapter selector mismatch: " + selector);
-assert.ok(!qianqian.includes('title: css("h1")'));
-assert.ok(!qianqian.includes('body: css("#content")'));
+assert.ok(qianqian.includes('title: css(".name")'));
+assert.ok(qianqian.includes('body: css("#chaptercontent")'));
 
 const d8zw = readText("scripts/d8zw-com.js");
 assert.ok(d8zw.includes('list: css(".book_list2 > ul > li", "all")'));
