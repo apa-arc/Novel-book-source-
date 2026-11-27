@@ -60,10 +60,20 @@ function buildSubscription(index, root, updatedAt = new Date().toISOString(), op
       ...(meta.testOnly === true ? { testOnly: true, testOnlyReason: meta.testOnlyReason } : {})
     });
   }
+  // The alias registry resolves promotion names but is not a content source.
+  if (subscriptionId === "apa-arc-novel-book-source") {
+    sources.push({
+      id: "book-aliases",
+      name: "小说推广名别名库",
+      kind: "alias-dictionary",
+      version: "1.0.0",
+      dataUrl: RAW_BASE + "aliases/book-aliases.json"
+    });
+  }
   return {
     schemaVersion: 1, subscriptionId, name, description,
     repository: "https://github.com/apa-arc/Novel-book-source-",
-    updatedAt, sourceCount: sources.length, sources
+    updatedAt, sourceCount: sources.filter(source => source.kind !== "alias-dictionary").length, sources
   };
 }
 
