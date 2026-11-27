@@ -3,8 +3,8 @@
   "registryId": "apa-arc-novel-book-aliases",
   "name": "小说别名库",
   "description": "QQ阅读推广关键词别名库；仅收录已确认或待核验的推广关键词映射，不代表正文书源。",
-  "updatedAt": "2026-11-23T20:18:47.126Z",
-  "recordCount": 1,
+  "updatedAt": "2026-11-28T07:08:00+08:00",
+  "recordCount": 2,
   "records": [
     {
       "id": "douluo-wuhun-puti-tree-tangsan-mowanghu",
@@ -21,6 +21,23 @@
       },
       "verification": "user-supplied-unverified",
       "createdAt": "2026-11-24T00:00:00.000Z"
+    },
+    {
+      "id": "shuqi-jizhi-lanyin-douluo-jihuan",
+      "aliases": [
+        "极致蓝银"
+      ],
+      "title": "斗罗：魂环全选蓝银草，极致生命",
+      "author": "忍冬",
+      "platform": "书旗小说",
+      "description": "用户确认“极致蓝银”这一特殊推广名对应的书旗小说作品。",
+      "evidence": {
+        "type": "user-confirmed-mapping",
+        "platform": "书旗小说",
+        "note": "用户确认推广名“极致蓝银”对应本作品；作品标题与作者按已确认候选记录，后续可通过作品详情页或作品 ID 补充核验。"
+      },
+      "verification": "user-confirmed",
+      "createdAt": "2026-11-28T07:08:00+08:00"
     }
   ]
 }
