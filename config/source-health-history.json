@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-28T00:11:09.530Z",
+  "updatedAt": "2026-11-28T00:24:30.678Z",
   "policy": {
     "testKeywords": [
       "斗罗",
@@ -1321,9 +1321,9 @@
       }
     },
     "biquges123-web": {
-      "checks": 5,
+      "checks": 6,
       "userConfirmedWorking": false,
-      "lastCheckedAt": "2026-11-28T00:11:09.530Z",
+      "lastCheckedAt": "2026-11-28T00:24:30.678Z",
       "lastProbeStatus": "environment-inconclusive",
       "lastProbeResult": {
         "id": "biquges123-web",
@@ -1395,9 +1395,9 @@
       "sourceAvailabilityStatus": "requires-manual-verification"
     },
     "kuwo-novels": {
-      "checks": 5,
+      "checks": 6,
       "userConfirmedWorking": false,
-      "lastCheckedAt": "2026-11-28T00:11:09.530Z",
+      "lastCheckedAt": "2026-11-28T00:24:30.678Z",
       "lastProbeStatus": "search-or-catalog-only",
       "lastProbeResult": {
         "id": "kuwo-novels",
