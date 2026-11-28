@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-27T23:57:09.170Z",
+  "generatedAt": "2026-11-28T00:11:09.530Z",
   "testStandard": "AppleNovelApp search semantics + separately reported reading stages; each search retries up to 3 times; transient Node network errors are environment-inconclusive; title relevance is separate from request success; reading tests only use title-matching results; sources run sequentially with 1.2s cooldown",
   "keywords": [
     "斗罗",
@@ -11,17 +11,17 @@
     "appUnsupported": 0,
     "readableBoth": 0,
     "readableOne": 0,
-    "searchOrCatalogOnly": 0,
-    "environmentInconclusive": 2,
+    "searchOrCatalogOnly": 1,
+    "environmentInconclusive": 1,
     "failed": 0,
-    "searchPassed": 0,
+    "searchPassed": 2,
     "searchFailed": 0,
-    "searchInconclusive": 4,
-    "searchRequestsPassed": 0,
-    "searchZeroResults": 0,
+    "searchInconclusive": 2,
+    "searchRequestsPassed": 2,
+    "searchZeroResults": 2,
     "searchHasResultsButNoTitleMatch": 0,
     "readingSkippedForNoTitleMatch": 0,
-    "searchRetriesUsed": 4,
+    "searchRetriesUsed": 2,
     "chapterContentPassed": 0
   },
   "results": [
@@ -95,67 +95,71 @@
     {
       "id": "kuwo-novels",
       "name": "酷我小说（开放接口）",
-      "status": "environment-inconclusive",
+      "status": "search-or-catalog-only",
       "terms": {
         "斗罗": {
           "keyword": "斗罗",
-          "status": "search-inconclusive",
-          "searchStatus": "inconclusive",
+          "status": "search-only",
+          "searchStatus": "passed",
           "readingStatus": "not-tested",
           "stages": [
             {
               "stage": "搜索",
-              "status": "inconclusive",
-              "detail": "连续 3 次请求仍未成功：书源网络请求失败，请检查网络或站点状态。"
+              "status": "passed",
+              "detail": "App 搜索请求及解析成功；返回 0 条结果；标题匹配关键词 0 条；尝试 1 次"
             },
             {
               "stage": "目录",
               "status": "skipped",
-              "detail": "搜索请求未成功或响应无法解析"
+              "detail": "搜索请求及解析成功，但本次关键词返回 0 条；按 App 搜索日志仍计为成功"
             },
             {
               "stage": "详情",
               "status": "skipped",
-              "detail": "没有可用搜索结果"
+              "detail": "没有搜索结果可供打开"
             },
             {
               "stage": "正文",
               "status": "skipped",
-              "detail": "没有可用搜索结果"
+              "detail": "没有搜索结果可供打开"
             }
           ],
-          "attempts": 3,
-          "error": "书源网络请求失败，请检查网络或站点状态。"
+          "attempts": 1,
+          "resultCount": 0,
+          "matchingResultCount": 0,
+          "relevanceStatus": "zero-results"
         },
         "斗破": {
           "keyword": "斗破",
-          "status": "search-inconclusive",
-          "searchStatus": "inconclusive",
+          "status": "search-only",
+          "searchStatus": "passed",
           "readingStatus": "not-tested",
           "stages": [
             {
               "stage": "搜索",
-              "status": "inconclusive",
-              "detail": "连续 3 次请求仍未成功：书源网络请求失败，请检查网络或站点状态。"
+              "status": "passed",
+              "detail": "App 搜索请求及解析成功；返回 0 条结果；标题匹配关键词 0 条；尝试 1 次"
             },
             {
               "stage": "目录",
               "status": "skipped",
-              "detail": "搜索请求未成功或响应无法解析"
+              "detail": "搜索请求及解析成功，但本次关键词返回 0 条；按 App 搜索日志仍计为成功"
             },
             {
               "stage": "详情",
               "status": "skipped",
-              "detail": "没有可用搜索结果"
+              "detail": "没有搜索结果可供打开"
             },
             {
               "stage": "正文",
               "status": "skipped",
-              "detail": "没有可用搜索结果"
+              "detail": "没有搜索结果可供打开"
             }
           ],
-          "attempts": 3,
-          "error": "书源网络请求失败，请检查网络或站点状态。"
+          "attempts": 1,
+          "resultCount": 0,
+          "matchingResultCount": 0,
+          "relevanceStatus": "zero-results"
         }
       }
     }
